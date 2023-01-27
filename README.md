@@ -4,8 +4,17 @@ A new map-based search platform for SDOH data discovery that will curate and int
 ## Initial Discovery Datasets:
 
 - County Health Rankings 
+    - 2021 county (MK - Needs Review)
 - City Health Dashboard
+    - 2018 census tract (Sarthak - Needs Review)
 - Neighborhood Health Atlas (ADI)
+    - 2015 block group (Sarthak - Needs Review)
+    - 2020 block group (Sarthak - Needs Review)
 - SDOH Indices
+    - 2014 census tract
 - Opportunity Index
+    - most recent; census tract
+    - most recent; county
 - Social Vulnerability Index
+    - 2016 county (Sarthak - Needs Review)
+    - 2016 census tract (Sarthak - Needs Review)
