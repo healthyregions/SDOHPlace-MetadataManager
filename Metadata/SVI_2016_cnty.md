@@ -26,7 +26,7 @@ County-level FIPS code
 ## Rights
 
 ## Format
-CSV
+CSV, SHP
 
 ## Language
 English
