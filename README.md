@@ -4,6 +4,7 @@ A new map-based search platform for SDOH data discovery that will curate and int
 ## Metadata Schema
 
 OpenGeomMetaData : https://opengeometadata.org/docs/ogm-aardvark
+
 Custom metadata schema for this project: 
 - Spatial Resolution (=tract, zip code, county)
 
