@@ -1,6 +1,12 @@
 # PlaceProject-Search
 A new map-based search platform for SDOH data discovery that will curate and integrate validated geospatial data relevant to public health at multiple scales.
 
+## Metadata Schema
+
+OpenGeomMetaData : https://opengeometadata.org/docs/ogm-aardvark
+Custom metadata schema for this project: 
+- Spatial Resolution (=tract, zip code, county)
+
 ## Initial Discovery Datasets:
 
 - County Health Rankings 
