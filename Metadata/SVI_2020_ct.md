@@ -38,7 +38,7 @@ December 22, 2022
 Centers for Disease Control and Prevention/ Agency for Toxic Substances and Disease Registry/ Geospatial Research, Analysis, and Services Program. CDC/ATSDR Social Vulnerability Index [2020] Database [US]. https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html.
 
 ## Data Access
-January 20, 2023
+February 2, 2023
 
 ## Data Dictionary
 https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/pdf/SVI2020Documentation_08.05.22.pdf
