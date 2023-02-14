@@ -23,6 +23,9 @@ Social Vulnerability Index
 ## Spatial resolution
 Tract-level FIPS code 
 
+## Metadata Version
+GeoBlacklight: 1.0
+
 ## Rights
 
 ## Format
