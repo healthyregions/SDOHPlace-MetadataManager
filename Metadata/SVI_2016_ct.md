@@ -21,10 +21,10 @@ Vector Data
 Social Vulnerability Index
 
 ## Spatial resolution
-Tract-level FIPS code 
+Census Tract
 
 ## Metadata Version
-GeoBlacklight: 1.0
+Aardvark
 
 ## Rights
 
