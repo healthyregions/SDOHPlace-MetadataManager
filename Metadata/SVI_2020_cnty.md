@@ -31,6 +31,9 @@ CSV, SHP
 ## Language
 English
 
+## Metadata Version
+GeoBlacklight: 1.0
+
 ## Date added
 December 22, 2022
 
