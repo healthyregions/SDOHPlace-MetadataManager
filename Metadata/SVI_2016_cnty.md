@@ -20,6 +20,9 @@ Vector Data
 ## Subject
 Social Vulnerability Index
 
+## Is Part Of
+County Health Rankings (#)
+
 ## Spatial resolution
 County-level FIPS code  
 
