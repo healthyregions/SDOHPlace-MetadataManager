@@ -17,6 +17,9 @@ Census Tract: United States, 2020
 ## Resource type 
 Vector Data
 
+## Temporal Coverage
+2020
+
 ## Subject
 Social Vulnerability Index
 
