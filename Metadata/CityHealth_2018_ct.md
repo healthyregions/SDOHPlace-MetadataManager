@@ -926,6 +926,10 @@ Wisconsin,Waukesha
 Wisconsin,West Allis
 Wyoming,Casper
 Wyoming,Cheyenne
+
+## Temporal Coverage
+2018
+
 ## Spatial resolution
 City (FIPS)
 
