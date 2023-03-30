@@ -20,6 +20,9 @@ Vector Data
 ## Subject
 Social Vulnerability Index
 
+## Temporal Coverage
+2000-2016
+
 ## Spatial resolution
 Census Tract
 
