@@ -928,7 +928,7 @@ Wyoming,Casper
 Wyoming,Cheyenne
 
 ## Temporal Coverage
-2018
+2000-2018
 
 ## Spatial resolution
 City (FIPS)
