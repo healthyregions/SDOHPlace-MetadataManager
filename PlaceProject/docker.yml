@@ -1,0 +1,19 @@
+services:
+    nginx:
+        image: nginx
+        build:
+            context: .\nginx
+            dockerfile: Dockerfile
+        ports:
+            - 8080:8080
+        restart: always
+    flask:
+        depends_on:
+            - nginx
+        image: flask
+        build: .\ingest
+        restart: always
+        env_file: .\ingest\local.ini
+
+# docker-compose -f docker.yml up -d --build
+# docker-compose -f docker.yml down
