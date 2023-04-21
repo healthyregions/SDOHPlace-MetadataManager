@@ -1,11 +1,13 @@
+import os
 import pysolr
 
+SOLR_HOST = os.getenv('SOLR_HOST')
 
 class Solr:
 
 	def __init__(self):
 		self.solr = pysolr.Solr(
-			'http://3.139.235.189:8983/solr/',
+			SOLR_HOST,
 			always_commit=True
 		)
 

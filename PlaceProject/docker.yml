@@ -13,7 +13,7 @@ services:
         image: flask
         build: .\ingest
         restart: always
-        env_file: .\ingest\local.ini
+        env_file: ./ingest/.env
 
 # docker-compose -f docker.yml up -d --build
 # docker-compose -f docker.yml down
