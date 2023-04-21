@@ -1,3 +1,4 @@
 Flask==2.1.0
 Flask-Cors==3.0.10
 pysolr==3.9.0
+python-dotenv==1.0.0
