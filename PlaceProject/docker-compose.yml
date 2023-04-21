@@ -1,8 +1,9 @@
+version: "3"
 services:
     nginx:
         image: nginx
         build:
-            context: .\nginx
+            context: ./nginx
             dockerfile: Dockerfile
         ports:
             - 8080:8080
@@ -11,9 +12,9 @@ services:
         depends_on:
             - nginx
         image: flask
-        build: .\ingest
+        build: ./ingest
         restart: always
         env_file: ./ingest/.env
 
-# docker-compose -f docker.yml up -d --build
-# docker-compose -f docker.yml down
+# docker-compose up -d --build
+# docker-compose down
