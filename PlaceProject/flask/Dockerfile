@@ -10,6 +10,7 @@ WORKDIR /home/herop
 COPY --chown=herop:herop requirements.txt requirements.txt
 RUN pip3 --disable-pip-version-check install -U -r requirements.txt
 COPY --chown=herop:herop . .
+RUN pip3 install .
 
 EXPOSE 80
 CMD ["python3", "-u", "server.py"]

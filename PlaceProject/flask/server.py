@@ -1,15 +1,9 @@
 import os
 from dotenv import load_dotenv
-from flask import Flask
-from flask_cors import CORS
-from controller.ingest import ingest
+
+from app import app
 
 load_dotenv()
-
-app = Flask(__name__)
-CORS(app)
-
-app.register_blueprint(ingest)
 
 mode = os.getenv("MODE", "prod")
 
