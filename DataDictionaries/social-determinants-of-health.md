@@ -12,6 +12,18 @@ Survey
 
 ## Methods Variables
 
+# Socioeconomic Advantage
+Driven by classic measures of socioeconomic advantage, like poverty, minority status, health insurance status, single parent households, and educational level. The strong correlation between minority status and poverty may reflect the role that racial segregation has played in perpetuating environments that are associated with health disparities.
+
+# Limited Mobility
+Driven by areas with high proportions of seniors and persons with disabilities, and fewer children Reduced mobility issues are factors in both resource accessibility and social isolation needs, and reflect complex interactions between aging, disability, and transit. Ongoing research seeks to identify areas with a high concentration of older populations to improve transportation policy, social service facilities, and planning.
+
+# Urban Core Opportunity
+Dominated by population-dense areas with higher per capita income, more renters, higher rent burden, households without a vehicle, and fewer children. Characterized by compact geographies, dense urban centers, and strong economies. May be highly walkable and diverse, but higher cost of living may impact the vulnerable disportionately. 
+
+# Mixed Immigrant Cohesion & Accessibility
+Mostly immigrant or multilingual groups with traditional family structures and multiple accessibility stressors. Dominated by higher proportions of families with limited English proficiency, older adults and crowded housing, lack of health insurance, lower educational attainment, and fewer single parent households. 
+
 ## Data Variables
 (tract_fips, 10-digit FIPS code for tract)
 
