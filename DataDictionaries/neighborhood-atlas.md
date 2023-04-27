@@ -16,5 +16,12 @@ Medicare data were linked to 2000 census data to construct an ADI for each patie
 
 ## Data Variables
 
+GISJOIN: Key linkage field to the block group shapefile served by NHGIS
+
+FIPS: The block group Census ID
+
+ADI_NATRANK: National percentile of block group ADI score
+
+ADI_STATERNK: State-specific decile of block group ADI score
 
 ## Anything Else?
