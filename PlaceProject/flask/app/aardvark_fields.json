@@ -8,9 +8,10 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Descriptive"
+        "display_group": "Descriptive",
+        "slug": "title"
     },
-    "alternative-title": {
+    "alternative_title": {
         "label": "Alternative Title",
         "uri": "dct_alternative_sm",
         "data_type": "string",
@@ -19,7 +20,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Descriptive"
+        "display_group": "Descriptive",
+        "slug": "alternative-title"
     },
     "description": {
         "label": "Description",
@@ -30,7 +32,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Descriptive"
+        "display_group": "Descriptive",
+        "slug": "description"
     },
     "language": {
         "label": "Language",
@@ -39,11 +42,15 @@
         "multiple": true,
         "required": false,
         "controlled": true,
-        "controlled_options": ["eng", "spa"],
+        "controlled_options": [
+            "eng",
+            "spa"
+        ],
         "schema": "Aardvark",
-        "display_group": "Descriptive"
+        "display_group": "Descriptive",
+        "slug": "language"
     },
-    "display-note": {
+    "display_note": {
         "label": "Display Note",
         "uri": "gbl_displayNote_sm",
         "data_type": "string",
@@ -52,7 +59,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Descriptive"
+        "display_group": "Descriptive",
+        "slug": "display-note"
     },
     "creator": {
         "label": "Creator",
@@ -63,7 +71,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Credits"
+        "display_group": "Credits",
+        "slug": "creator"
     },
     "publisher": {
         "label": "Publisher",
@@ -74,7 +83,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Credits"
+        "display_group": "Credits",
+        "slug": "publisher"
     },
     "provider": {
         "label": "Provider",
@@ -85,9 +95,10 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Credits"
+        "display_group": "Credits",
+        "slug": "provider"
     },
-    "resource-class": {
+    "resource_class": {
         "label": "Resource Class",
         "uri": "gbl_resourceClass_sm",
         "data_type": "string",
@@ -104,9 +115,10 @@
             "Other"
         ],
         "schema": "Aardvark",
-        "display_group": "Categories"
+        "display_group": "Categories",
+        "slug": "resource-class"
     },
-    "resource-type": {
+    "resource_type": {
         "label": "Resource Type",
         "uri": "gbl_resourceType_sm",
         "data_type": "string",
@@ -197,7 +209,8 @@
             "Zoning maps"
         ],
         "schema": "Aardvark",
-        "display_group": "Categories"
+        "display_group": "Categories",
+        "slug": "resource-type"
     },
     "subject": {
         "label": "Subject",
@@ -208,7 +221,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Categories"
+        "display_group": "Categories",
+        "slug": "subject"
     },
     "theme": {
         "label": "Theme",
@@ -241,7 +255,8 @@
             "Utilities"
         ],
         "schema": "Aardvark",
-        "display_group": "Categories"
+        "display_group": "Categories",
+        "slug": "theme"
     },
     "keyword": {
         "label": "Keyword",
@@ -252,9 +267,10 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Categories"
+        "display_group": "Categories",
+        "slug": "keyword"
     },
-    "temporal-coverage": {
+    "temporal_coverage": {
         "label": "Temporal Coverage",
         "uri": "dct_temporal_sm",
         "data_type": "string",
@@ -263,9 +279,10 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Temporal"
+        "display_group": "Temporal",
+        "slug": "temporal-coverage"
     },
-    "date-issued": {
+    "date_issued": {
         "label": "Date Issued",
         "uri": "dct_issued_s",
         "data_type": "string",
@@ -274,9 +291,10 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Temporal"
+        "display_group": "Temporal",
+        "slug": "date-issued"
     },
-    "index-year": {
+    "index_year": {
         "label": "Index Year",
         "uri": "gbl_indexYear_im",
         "data_type": "integer",
@@ -285,9 +303,10 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Temporal"
+        "display_group": "Temporal",
+        "slug": "index-year"
     },
-    "date-range": {
+    "date_range": {
         "label": "Date Range",
         "uri": "gbl_dateRange_drsim",
         "data_type": "string",
@@ -296,9 +315,10 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Temporal"
+        "display_group": "Temporal",
+        "slug": "date-range"
     },
-    "spatial-coverage": {
+    "spatial_coverage": {
         "label": "Spatial Coverage",
         "uri": "dct_spatial_sm",
         "data_type": "string",
@@ -307,7 +327,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Spatial"
+        "display_group": "Spatial",
+        "slug": "spatial-coverage"
     },
     "geometry": {
         "label": "Geometry",
@@ -318,9 +339,10 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Spatial"
+        "display_group": "Spatial",
+        "slug": "geometry"
     },
-    "bounding-box": {
+    "bounding_box": {
         "label": "Bounding Box",
         "uri": "dcat_bbox",
         "data_type": "string",
@@ -329,7 +351,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Spatial"
+        "display_group": "Spatial",
+        "slug": "bounding-box"
     },
     "centroid": {
         "label": "Centroid",
@@ -340,7 +363,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Spatial"
+        "display_group": "Spatial",
+        "slug": "centroid"
     },
     "georeferenced": {
         "label": "Georeferenced",
@@ -351,7 +375,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Spatial"
+        "display_group": "Spatial",
+        "slug": "georeferenced"
     },
     "relation": {
         "label": "Relation",
@@ -362,9 +387,10 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Relations"
+        "display_group": "Relations",
+        "slug": "relation"
     },
-    "member-of": {
+    "member_of": {
         "label": "Member Of",
         "uri": "pcdm_memberOf_sm",
         "data_type": "string",
@@ -373,9 +399,10 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Relations"
+        "display_group": "Relations",
+        "slug": "member-of"
     },
-    "is-part-of": {
+    "is_part_of": {
         "label": "Is Part Of",
         "uri": "dct_isPartOf_sm",
         "data_type": "string",
@@ -384,7 +411,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Relations"
+        "display_group": "Relations",
+        "slug": "is-part-of"
     },
     "source": {
         "label": "Source",
@@ -395,9 +423,10 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Relations"
+        "display_group": "Relations",
+        "slug": "source"
     },
-    "is-version-of": {
+    "is_version_of": {
         "label": "Is Version Of",
         "uri": "dct_isVersionOf_sm",
         "data_type": "string",
@@ -406,7 +435,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Relations"
+        "display_group": "Relations",
+        "slug": "is-version-of"
     },
     "replaces": {
         "label": "Replaces",
@@ -417,9 +447,10 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Relations"
+        "display_group": "Relations",
+        "slug": "replaces"
     },
-    "is-replaced-by": {
+    "is_replaced_by": {
         "label": "Is Replaced By",
         "uri": "dct_isReplacedBy_sm",
         "data_type": "string",
@@ -428,7 +459,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Relations"
+        "display_group": "Relations",
+        "slug": "is-replaced-by"
     },
     "rights": {
         "label": "Rights Holder",
@@ -439,9 +471,10 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Rights"
+        "display_group": "Rights",
+        "slug": "rights"
     },
-    "rights-holder": {
+    "rights_holder": {
         "label": "Rights Holder",
         "uri": "dct_rightsHolder_sm",
         "data_type": "string",
@@ -450,7 +483,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Rights"
+        "display_group": "Rights",
+        "slug": "rights-holder"
     },
     "license": {
         "label": "License",
@@ -461,9 +495,10 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Rights"
+        "display_group": "Rights",
+        "slug": "license"
     },
-    "access-rights": {
+    "access_rights": {
         "label": "Access Rights",
         "uri": "dct_accessRights_s",
         "data_type": "string",
@@ -472,7 +507,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Rights"
+        "display_group": "Rights",
+        "slug": "access-rights"
     },
     "format": {
         "label": "Format",
@@ -483,9 +519,10 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Object"
+        "display_group": "Object",
+        "slug": "format"
     },
-    "file-size": {
+    "file_size": {
         "label": "File Size",
         "uri": "gbl_fileSize_s",
         "data_type": "string",
@@ -494,7 +531,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Object"
+        "display_group": "Object",
+        "slug": "file-size"
     },
     "references": {
         "label": "References",
@@ -505,9 +543,10 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Links"
+        "display_group": "Links",
+        "slug": "references"
     },
-    "wxs-indentifier": {
+    "wxs_indentifier": {
         "label": "WxS Identifier",
         "uri": "gbl_wxsIdentifier_s",
         "data_type": "string",
@@ -516,7 +555,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Links"
+        "display_group": "Links",
+        "slug": "wxs-indentifier"
     },
     "id": {
         "label": "ID",
@@ -527,7 +567,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Identifiers"
+        "display_group": "Identifiers",
+        "slug": "id"
     },
     "identifier": {
         "label": "Identifier",
@@ -538,7 +579,8 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Identifiers"
+        "display_group": "Identifiers",
+        "slug": "identifier"
     },
     "modified": {
         "label": "Modified",
@@ -549,18 +591,23 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "Aardvark",
-        "display_group": "Admin"
+        "display_group": "Admin",
+        "slug": "modified"
     },
-    "metadata-version": {
+    "metadata_version": {
         "label": "Metadata Version",
         "uri": "gbl_mdVersion_s",
         "data_type": "string",
         "multiple": false,
         "required": true,
         "controlled": true,
-        "controlled_options": ["Aardvark", "SDOH PlaceProject"],
+        "controlled_options": [
+            "Aardvark",
+            "SDOH PlaceProject"
+        ],
         "schema": "Aardvark",
-        "display_group": "Admin"
+        "display_group": "Admin",
+        "slug": "metadata-version"
     },
     "suppressed": {
         "label": "Suppressed",
@@ -570,6 +617,7 @@
         "required": false,
         "controlled": false,
         "controlled_options": [],
-        "schema": "Aardvark"
+        "schema": "Aardvark",
+        "slug": "suppressed"
     }
 }
