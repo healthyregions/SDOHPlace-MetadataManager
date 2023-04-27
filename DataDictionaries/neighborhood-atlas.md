@@ -4,6 +4,7 @@
 https://www.neighborhoodatlas.medicine.wisc.edu
 ## Study Type
 Index
+
 Atlas
 ## Methods Variables
 
