@@ -13,4 +13,4 @@ COPY --chown=herop:herop . .
 RUN pip3 install .
 
 EXPOSE 80
-CMD ["python3", "-u", "server.py"]
+CMD ["flask", "run", "-h", "0.0.0.0", "-p", "80"]
