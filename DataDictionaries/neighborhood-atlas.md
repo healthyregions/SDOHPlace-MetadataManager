@@ -16,4 +16,5 @@ Medicare data were linked to 2000 census data to construct an ADI for each patie
 
 ## Data Variables
 
+
 ## Anything Else?
