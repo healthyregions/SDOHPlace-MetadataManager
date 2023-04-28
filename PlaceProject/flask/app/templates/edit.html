@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %}Edit - {{ record['title'] }}{% endblock %}</h1>
+    <form method="post">
+        <button type="submit">Save</button>
+        {% for group_name, fields in field_groups.items() %}
+        <div style="background:light-grey;">
+            <h2>{{ group_name }}</h2>
+            {% for field in fields %}
+                {% include 'widgets/universal.html' %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </form>
+{% endblock %}

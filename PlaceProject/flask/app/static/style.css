@@ -1,0 +1,19 @@
+
+.message {
+    padding: 10px;
+    margin: 5px;
+    background-color: #f3f3f3
+}
+nav a {
+    color: #d64161;
+    font-size: 2em;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+.required {
+    color: darkred;
+}
+.suggested {
+    color: darkorange;
+}
