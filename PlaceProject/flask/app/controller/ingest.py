@@ -1,20 +1,20 @@
-import json
+import click
 
 from flask import Blueprint, request
 from flask_cors import CORS
 
-from service.ingest import Ingest
+from app.service.ingest import Ingest
 
 ingest = Blueprint('ingest', __name__)
 CORS(ingest)
 
+# experimenting with the addition of CLI commands here
+@ingest.cli.command('markdown')
+@click.argument('file_dir')
+def ingest_markdown_files(file_dir):
+	print(file_dir)
 
-@ingest.route("/", methods=["GET"])
-def index():
-	return json.dumps({})
-
-
-@ingest.route("/place", methods=["GET", "POST", "PATCH", "DELETE"])
+@ingest.route("/ingest", methods=["GET", "POST", "PATCH", "DELETE"])
 def place():
 	ingest = Ingest()
 	if request.method == "GET":

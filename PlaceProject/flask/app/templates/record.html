@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %}{{ record.title }}{% endblock %}</h1>
+    <a href="{{ url_for('manager.edit', id=record['id']) }}">edit</a>
+    {% for group_name, fields in field_groups.items() %}
+    <div>
+        <h2>{{ group_name }}</h2>
+        <table>
+            {% for field in fields %}
+            <tr class="{{ field['obligation'] }}">
+                <td>{{ field['label'] }}</td>
+                <td>{{ record[field['column_name']] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    {% endfor %}
+{% endblock %}

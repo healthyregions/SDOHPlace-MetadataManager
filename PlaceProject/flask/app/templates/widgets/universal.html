@@ -1,0 +1,26 @@
+<div class="{{ field['obligation'] }}" style="display:flex;">
+    <label for="{{ field['column_name'] }}">{{ field['label'] }}</label>
+    {% if field['data_type'] == "string" %}
+        {% if field['controlled'] %}
+        {{record[field['column_name']]}}
+        <select name="{{ field['column_name'] }}"
+            placeholder="" 
+            {% if record %}value="{{ record[field['column_name']] }}"{% endif %}
+            {% if field['multiple'] %}multiple{% endif %}
+            >
+            <option></option>
+            {% for choice in field['controlled_options'] %}
+            <option value="{{ choice }}" {% if choice in record[field['column_name']] %}selected=true{% endif %}>{{ choice }}</option>
+            {% endfor %}
+        </select>
+        {% else %}
+        <input type="text" name="{{ field['column_name'] }}"
+            placeholder="" {% if record %}value="{{ record[field['column_name']] }}"{% endif %}
+            ></input>
+        {% endif %}
+    {% elif field['data_type'] == "boolean" %}
+    <input type="checkbox" name="{{ field['column_name'] }}"
+        placeholder="" {% if record %}value="{{ record[field['column_name']] }}"{% endif %}
+        ></input>
+    {% endif %}
+</div>

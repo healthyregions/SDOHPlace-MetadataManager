@@ -3,12 +3,34 @@
 ## Configure
 
 ```
-cp ./ingest/.env.example ./ingest/.env
+cp ./flask/.env.example ./flask/.env
 ```
 
-Update `SOLR_HOST` appropriately in `./ingest/.env`.
+Required .env content:
 
-## Run
+`SOLR_HOST`: full url to Solr endpoint
+
+## Install/Run locally
+
+A dev deploy will serve the app on Flask's default port (5000).
+
+```
+python3 -m venv env
+source ./env/bin/activate
+pip install -e ./flask
+```
+
+Then
+
+```
+flask run --debug
+```
+
+`--debug` will auto-reload the app whenever a file is changed (though it seems like changes to HTML files requires the app to be stopped and restarted...).
+
+## Install/Run with Docker
+
+The Docker deploy will serve the app on port 8080 with nginx.
 
 Start containers
 

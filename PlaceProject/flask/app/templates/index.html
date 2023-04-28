@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %}SDOH Place Metadata{% endblock %}</h1>
+    <a href="{{ url_for('manager.create')}}">create new</a>
+    <table>
+        {% for record in records %}
+        <tr>
+            <th><a href="{{ url_for('manager.detail', id=record['id']) }}">{{record['title']}}</th>
+            <th><a href="{{ url_for('manager.edit', id=record['id']) }}">edit</th>
+            <th><a href="{{ url_for('manager.as_json', id=record['id']) }}">JSON</th>
+            <th><a href="{{ url_for('manager.as_solr', id=record['id']) }}">SOLR</th>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
