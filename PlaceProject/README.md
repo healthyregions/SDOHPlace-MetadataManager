@@ -22,7 +22,11 @@ pip install -e ./flask
 
 Then
 
-`flask run`
+```
+flask run --debug
+```
+
+`--debug` will auto-reload the app whenever a file is changed (though it seems like changes to HTML files requires the app to be stopped and restarted...).
 
 ## Install/Run with Docker
 
