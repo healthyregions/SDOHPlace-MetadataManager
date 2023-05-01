@@ -5,6 +5,7 @@ https://www.cityhealthdashboard.com
 
 ## Study Type
 Database
+
 Data Collection
 
 ## Methods Variables
