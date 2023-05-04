@@ -1,8 +1,8 @@
 from setuptools import setup
 
 setup(
-    name='PlaceProject',
-    packages=['app'],
+    name='MetadataManager',
+    packages=['manager'],
     include_package_data=True,
     install_requires=[
         'Flask',

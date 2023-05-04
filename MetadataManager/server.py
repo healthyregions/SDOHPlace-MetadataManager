@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 
-from app import app
+from manager.app import app
 
 load_dotenv()
 

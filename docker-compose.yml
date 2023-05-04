@@ -8,13 +8,13 @@ services:
         ports:
             - 8080:8080
         restart: always
-    flask:
+    MetadataManager:
         depends_on:
             - nginx
         image: flask
-        build: ./flask
+        build: ./MetadataManager
         restart: always
-        env_file: ./flask/.env
+        env_file: ./MetadataManager/.env
 
 # docker-compose up -d --build
 # docker-compose down

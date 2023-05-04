@@ -3,7 +3,7 @@ import click
 from flask import Blueprint, request
 from flask_cors import CORS
 
-from app.service.ingest import Ingest
+from manager.service.ingest import Ingest
 
 ingest = Blueprint('ingest', __name__)
 CORS(ingest)

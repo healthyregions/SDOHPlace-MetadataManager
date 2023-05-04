@@ -1,10 +1,9 @@
 import os
 from flask import Flask
 from flask_cors import CORS
-from app.controller.ingest import ingest
-from app.controller.manager import manager
-
-from app.schema import db
+from manager.controller.ingest import ingest
+from manager.controller.crud import crud
+from manager.schema import db
 
 app = Flask(__name__)
 CORS(app)
@@ -26,4 +25,4 @@ if not os.path.exists(database_file):
         db.create_all()
 
 app.register_blueprint(ingest)
-app.register_blueprint(manager)
+app.register_blueprint(crud)
