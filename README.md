@@ -1,5 +1,13 @@
 # PlaceProject
 
+## Metadata Markdown Files
+
+If you are looking for the Metadata or DataDictionary folders, these are now located in
+
+```
+MetadataManager/manager/metadata/
+```
+
 ## Configure
 
 ```
