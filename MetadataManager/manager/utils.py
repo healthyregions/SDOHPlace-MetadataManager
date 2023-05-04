@@ -7,7 +7,7 @@ def generate_field_lookup():
 	""" Aggregates the field definition JSON from one or more JSON files,
 	returns single dictionary."""
 	lookup = dict()
-	with open(os.path.join(project_dir, 'aardvark_fields.json'), 'r') as o:
+	with open(os.path.join(project_dir, 'metadata', 'Aardvark', 'aardvark_fields.json'), 'r') as o:
 		lookup.update(json.load(o))
 
 	return lookup

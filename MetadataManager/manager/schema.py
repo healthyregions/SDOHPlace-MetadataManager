@@ -1,7 +1,7 @@
 import json
 from flask_sqlalchemy import SQLAlchemy
 
-from app.utils import FIELD_LOOKUP
+from manager.utils import FIELD_LOOKUP
 
 db = SQLAlchemy()
 
