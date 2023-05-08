@@ -1,20 +1,22 @@
 import os
 import pysolr
 
-SOLR_HOST = os.getenv('SOLR_HOST')
+SOLR_HOST = os.getenv('SOLR_HOST', '').rstrip('/')
+SOLR_CORE = os.getenv('SOLR_CORE', '').rstrip('/')
+
+SOLR_URL = f"{SOLR_HOST}/{SOLR_CORE}/"
 
 class Solr:
 
 	def __init__(self):
 		self.solr = pysolr.Solr(
-			SOLR_HOST,
+			SOLR_URL,
 			always_commit=True
 		)
-
 		self.health_check()
 
-	def add(self, json):
-		self.solr.add([json])
+	def add(self, doc):
+		self.solr.add([doc])
 
 	def multi_add(self, arr):
 		self.solr.add(arr)

@@ -1,9 +1,13 @@
 import os
+
+from dotenv import load_dotenv
 from flask import Flask
 from flask_cors import CORS
 from manager.controller.ingest import ingest
 from manager.controller.crud import crud
 from manager.schema import db
+
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)

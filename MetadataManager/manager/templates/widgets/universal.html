@@ -1,26 +1,41 @@
-<div class="{{ field['obligation'] }}" style="display:flex;">
-    <label for="{{ field['column_name'] }}">{{ field['label'] }}</label>
-    {% if field['data_type'] == "string" %}
-        {% if field['controlled'] %}
-        {{record[field['column_name']]}}
-        <select name="{{ field['column_name'] }}"
-            placeholder="" 
-            {% if record %}value="{{ record[field['column_name']] }}"{% endif %}
-            {% if field['multiple'] %}multiple{% endif %}
-            >
-            <option></option>
-            {% for choice in field['controlled_options'] %}
-            <option value="{{ choice }}" {% if choice in record[field['column_name']] %}selected=true{% endif %}>{{ choice }}</option>
-            {% endfor %}
-        </select>
-        {% else %}
-        <input type="text" name="{{ field['column_name'] }}"
+<div class="{{ field['obligation'] }} form-group">
+    <div class="row">
+        <div class="col-3">
+            <label class="form-label" for="{{ field['column_name'] }}">
+                {{ field['label'] }}
+                {% if field['multiple'] %}+{% endif %}
+                <a href="https://opengeometadata.org/ogm-aardvark/#{{ field['column_name'] }}" target="_blank">&nearr;</a>
+            </label>
+        </div>
+        <div class="col-9">
+        {% if field['column_name'] == 'id' and record['id'] %}
+            <input class="form-control" type="text" name="{{ field['column_name'] }}" readonly="readonly"
+            {% if record %}value="{{ record[field['column_name']] }}"{% endif %}></input>
+        {% elif field['column_name'] == 'modified' %}
+        <input class="form-control" type="text" name="{{ field['column_name'] }}" disabled
+            {% if record %}value="{{ record[field['column_name']] }}"{% endif %}></input>
+        {% elif field['data_type'] == "string" %}
+            {% if field['controlled'] %}
+            <select class="form-select" name="{{ field['column_name'] }}"
+                placeholder="" 
+                {% if record %}value="{{ record[field['column_name']] }}"{% endif %}
+                {% if field['multiple'] %}multiple{% endif %}
+                >
+                <option></option>
+                {% for choice in field['controlled_options'] %}
+                <option value="{{ choice }}" {% if choice in record[field['column_name']] %}selected=true{% endif %}>{{ choice }}</option>
+                {% endfor %}
+            </select>
+            {% else %}
+            <input class="form-control" type="text" name="{{ field['column_name'] }}"
+                placeholder="" {% if record %}value="{{ record[field['column_name']] }}"{% endif %}
+                ></input>
+            {% endif %}
+        {% elif field['data_type'] == "boolean" %}
+        <input class="form-check-input" type="checkbox" name="{{ field['column_name'] }}"
             placeholder="" {% if record %}value="{{ record[field['column_name']] }}"{% endif %}
             ></input>
         {% endif %}
-    {% elif field['data_type'] == "boolean" %}
-    <input type="checkbox" name="{{ field['column_name'] }}"
-        placeholder="" {% if record %}value="{{ record[field['column_name']] }}"{% endif %}
-        ></input>
-    {% endif %}
+        </div>
+    </div>
 </div>
