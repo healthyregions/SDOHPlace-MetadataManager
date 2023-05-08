@@ -2,6 +2,7 @@ import json
 from sqlalchemy import func
 from flask_sqlalchemy import SQLAlchemy
 
+from manager.service.solr import Solr
 from manager.utils import FIELD_LOOKUP
 
 db = SQLAlchemy()
@@ -100,3 +101,20 @@ class Record(db.Model):
                 uri = FIELD_LOOKUP[i.name]['uri']
                 solr_doc[uri] = value
         return solr_doc
+    
+
+    def index(self):
+        solr_json = self.to_solr()
+        try:
+            s = Solr()
+            s.add(solr_json)
+            return {
+                "success": True,
+                "document": solr_json
+            }
+
+        except Exception as e:
+            return {
+                "success": False,
+                "error": str(e) 
+            }

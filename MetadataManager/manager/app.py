@@ -12,8 +12,9 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
-project_dir = os.path.dirname(os.path.abspath(__file__))
-database_file = f'sqlite:///{project_dir}/dev.db'
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+database_file = f'sqlite:///{PROJECT_DIR}/dev.db'
 
 # this tutorial has a more robust config class pattern
 # https://towardsdatascience.com/building-a-crud-app-with-flask-and-sqlalchemy-1d082741bc2b

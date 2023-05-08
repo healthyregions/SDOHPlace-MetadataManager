@@ -1,6 +1,7 @@
 import json
 import urllib.request
 
+from manager.utils import FIELD_LOOKUP
 
 class Ingest:
 
@@ -36,16 +37,26 @@ class Ingest:
 		return json.dumps({"error": "Failed to parse markdown file"})
 
 	def save(self, parsed):
-		print(parsed)
+		pass
 
-	def parse(self, md):
+	def parse(self, md_path):
 		parsed = {}
+
+		with open(md_path, "r") as o:
+			md = o.read()
 
 		sections = md.split("##")[1:]
 		for section in sections:
 			title, content = section.split("\n", 1)
-			# title = title.strip().lower().replace(" ", "-")
-			parsed[title] = content
+			title = title.lstrip().rstrip()
+			title_key = title.lower().replace(" ", "_")
+
+			content_list = content.split("\n")
+			content_cleaned = "\n".join([i.rstrip().rstrip("*").lstrip("*") for i in content_list if i])
+			if title_key in FIELD_LOOKUP:
+				parsed[title_key] = content_cleaned
+			else:
+				print(f"ERROR matching this section header: {title}")
 
 		return parsed
 

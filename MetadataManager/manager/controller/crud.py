@@ -5,7 +5,6 @@ from flask_cors import CORS
 
 from manager.schema import Record, db
 from manager.utils import GROUPED_FIELD_LOOKUP, clean_form_data
-from manager.service.solr import Solr
 
 crud = Blueprint('manager', __name__)
 CORS(crud)
@@ -68,17 +67,5 @@ def as_solr(id):
 def index_record(id):
 	
 	record = Record.query.get_or_404(id)
-	solr_json = record.to_solr()
-	try:
-		s = Solr()
-		s.add(solr_json)
-		return jsonify({
-			"success": True,
-			"document": solr_json
-		})
-
-	except Exception as e:
-		return jsonify({
-			"success": False,
-			"error": str(e) 
-		})
+	result = record.index()
+	return jsonify(result)

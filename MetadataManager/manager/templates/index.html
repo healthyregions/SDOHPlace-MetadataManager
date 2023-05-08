@@ -21,7 +21,7 @@
                 {% for record in records %}
                 <tr>
                     <td style="display:flex; justify-content: space-between;">
-                        <div><h3>{{record['title']}}</h3></div>
+                        <div><strong>{{record['title']}}</strong></div>
                         <div class="button-group">
                             <a href="{{ url_for('manager.detail', id=record['id']) }}" class="btn btn-primary">View</a>
                             <a href="{{ url_for('manager.edit', id=record['id']) }}" class="btn btn-primary">Edit</a>

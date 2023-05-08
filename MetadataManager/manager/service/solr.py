@@ -1,5 +1,8 @@
 import os
 import pysolr
+from dotenv import load_dotenv
+
+load_dotenv()
 
 SOLR_HOST = os.getenv('SOLR_HOST', '').rstrip('/')
 SOLR_CORE = os.getenv('SOLR_CORE', '').rstrip('/')
