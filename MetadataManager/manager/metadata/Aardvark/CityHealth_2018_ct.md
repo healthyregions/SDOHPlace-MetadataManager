@@ -19,7 +19,7 @@ Veector Data
 
 The City Health Dashboard allows you to see where cities across the U.S. stand on over 35 measures of health and factors affecting health across five areas: Health Behaviors, Social and Economic Factors, Physical Environment, Health Outcomes, and Clinical Care.
 
-## Geometry
+## Spatial Coverage
 Alabama,Auburn
 Alabama,Birmingham
 Alabama,Decatur
