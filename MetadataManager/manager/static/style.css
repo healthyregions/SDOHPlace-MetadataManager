@@ -1,14 +1,30 @@
 
+.form-group {
+    margin-top: 10px;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.main-content {
+    padding-top:20px;
+    height:calc(100vh - 60px);
+    overflow-y: auto;
+}
+
+.sidebar-content {
+    text-align:center;
+    margin:20px;
+    padding:10px;
+    background: rgb(222, 255, 239);
+    box-shadow: 5px 5px 5px 5px rgb(222, 255, 239);
+}
+
 .message {
     padding: 10px;
     margin: 5px;
     background-color: #f3f3f3
-}
-nav a {
-    color: #d64161;
-    font-size: 2em;
-    margin-left: 50px;
-    text-decoration: none;
 }
 
 .required {

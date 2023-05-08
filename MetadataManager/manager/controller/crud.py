@@ -1,8 +1,11 @@
+import json
+
 from flask import Blueprint, request, render_template, jsonify, url_for, redirect
 from flask_cors import CORS
 
 from manager.schema import Record, db
 from manager.utils import GROUPED_FIELD_LOOKUP, clean_form_data
+from manager.service.solr import Solr
 
 crud = Blueprint('manager', __name__)
 CORS(crud)
@@ -44,6 +47,8 @@ def edit(id):
 		cleaned_data = clean_form_data(request.form)
 		record = Record.query.get_or_404(request.form['id'])
 		for k, v in cleaned_data.items():
+			if k == "references":
+				v = json.loads(v.replace("'",'"'))
 			setattr(record, k, v)
 
 		db.session.commit()
@@ -58,3 +63,22 @@ def as_json(id):
 def as_solr(id):
 	record = Record.query.get_or_404(id)
 	return jsonify(record.to_solr())
+
+@crud.route("/record/<id>/index", methods=["POST", "DELETE"])
+def index_record(id):
+	
+	record = Record.query.get_or_404(id)
+	solr_json = record.to_solr()
+	try:
+		s = Solr()
+		s.add(solr_json)
+		return jsonify({
+			"success": True,
+			"document": solr_json
+		})
+
+	except Exception as e:
+		return jsonify({
+			"success": False,
+			"error": str(e) 
+		})

@@ -1,4 +1,5 @@
 import json
+from sqlalchemy import func
 from flask_sqlalchemy import SQLAlchemy
 
 from manager.utils import FIELD_LOOKUP
@@ -45,10 +46,10 @@ class Record(db.Model):
     access_rights = db.Column(db.String, nullable=False)
     format = db.Column(db.String)
     file_size = db.Column(db.String)
-    references = db.Column(db.String)
+    references = db.Column(db.JSON)
     wxs_indentifier = db.Column(db.String)
     identifier = db.Column(db.String)
-    modified = db.Column(db.String, nullable=False)
+    modified = db.Column(db.DateTime, server_default=func.current_timestamp(), onupdate=func.current_timestamp())
     metadata_version = db.Column(db.String, nullable=False)
     suppressed = db.Column(db.Boolean, nullable=True)
 
@@ -59,9 +60,12 @@ class Record(db.Model):
         result = {}
         for i in self.__table__.columns:
             value = getattr(self, i.name)
-            if i == "references" and value is not None:
-                value = json.loads(value)
-            if FIELD_LOOKUP[i.name]['multiple'] and value is not None:
+            if i.name == "references" and value is not None:
+                print(value)
+                # value = json.loads(value)
+            elif i.name == "modified" and value is not None:
+                value = value.strftime("%Y-%m-%dT%H:%M:%SZ")
+            elif FIELD_LOOKUP[i.name]['multiple'] and value is not None:
                 value = value.split("|")
             result[i.name] = value
         return result
@@ -81,13 +85,18 @@ class Record(db.Model):
         """A variation on to_json() that uses the SOLR uris instead, and
         omits empty fields. Plus some other value wrangling."""
 
+        # use self.to_json() to parse all values, and then insert them into
+        # a dictionary with the proper URIs as keys. The references field
+        # must still be handled specially.
+        json_doc = self.to_json()
         solr_doc = {}
         for i in self.__table__.columns:
             value = getattr(self, i.name)
             if value is not None:
-                if FIELD_LOOKUP[i.name]['multiple']:
-                    value = value.split("|")
-
+                if i.name == "references":
+                    value = json.dumps(json_doc[i.name])
+                else:
+                    value = json_doc[i.name]
                 uri = FIELD_LOOKUP[i.name]['uri']
                 solr_doc[uri] = value
         return solr_doc

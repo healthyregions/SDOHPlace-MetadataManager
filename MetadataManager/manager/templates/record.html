@@ -1,19 +1,35 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %}{{ record.title }}{% endblock %}</h1>
-    <a href="{{ url_for('manager.edit', id=record['id']) }}">edit</a>
-    {% for group_name, fields in field_groups.items() %}
-    <div>
-        <h2>{{ group_name }}</h2>
-        <table>
-            {% for field in fields %}
-            <tr class="{{ field['obligation'] }}">
-                <td>{{ field['label'] }}</td>
-                <td>{{ record[field['column_name']] }}</td>
-            </tr>
-            {% endfor %}
-        </table>
+<div class="row">
+    <div class="col-9 main-content">
+        <h1>{% block title %}{{ record.title }}{% endblock %}</h1>
+        {% for group_name, fields in field_groups.items() %}
+        <div>
+            <h2>{{ group_name }}</h2>
+            <table class="table table-striped">
+                <tbody style="overflow-x:auto;">
+                    {% for field in fields %}
+                    <tr class="{{ field['obligation'] }}">
+                        <td scope="row" style="width:250px;">{{ field['label'] }}</td>
+                        <td>{{ record[field['column_name']] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
+    <div class="col-3">
+        <div class="sidebar-content">
+            <h2>Actions</h2>
+            <div class="btn-group" role="group" aria-label="Action buttons">
+                <form action="{{ url_for('manager.index_record', id=record['id']) }}" method="post" target="_blank">
+                    <a href="{{ url_for('manager.edit', id=record['id']) }}" class="btn btn-primary" role="button">Edit</a>
+                    <button class="btn btn-info" name="index-btn" value="index">Index to SOLR</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

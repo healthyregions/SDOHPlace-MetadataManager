@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %}SDOH Place Metadata{% endblock %}</h1>
-    <a href="{{ url_for('manager.create')}}">create new</a>
-    <table>
+    
+    
+    <!-- <table>
         {% for record in records %}
         <tr>
             <th><a href="{{ url_for('manager.detail', id=record['id']) }}">{{record['title']}}</th>
@@ -12,5 +12,35 @@
             <th><a href="{{ url_for('manager.as_solr', id=record['id']) }}">SOLR</th>
         </tr>
         {% endfor %}
-    </table>
+    </table> -->
+<div class="row">
+    <div class="col-9 main-content">
+        <h1>{% block title %}SDOH Place Metadata Records{% endblock %}</h1>
+        <table class="table table-striped">
+            <tbody>
+                {% for record in records %}
+                <tr>
+                    <td style="display:flex; justify-content: space-between;">
+                        <div><h3>{{record['title']}}</h3></div>
+                        <div class="button-group">
+                            <a href="{{ url_for('manager.detail', id=record['id']) }}" class="btn btn-primary">View</a>
+                            <a href="{{ url_for('manager.edit', id=record['id']) }}" class="btn btn-primary">Edit</a>
+                            <a href="{{ url_for('manager.as_json', id=record['id']) }}" class="btn btn-primary">JSON</a>
+                            <a href="{{ url_for('manager.as_solr', id=record['id']) }}" class="btn btn-primary">SOLR</a>
+                        </div>
+                    <td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="col-3">
+        <div class="sidebar-content">
+            <h2>Actions</h2>
+            <div class="btn-group" role="group" aria-label="Action buttons">
+                <a href="{{ url_for('manager.create')}}" class="btn btn-primary">Create New Record</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
