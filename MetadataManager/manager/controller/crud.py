@@ -47,7 +47,7 @@ def edit(id):
 		cleaned_data = clean_form_data(request.form)
 		record = Record.query.get_or_404(request.form['id'])
 		for k, v in cleaned_data.items():
-			if k == "references":
+			if k == "references" and v:
 				v = json.loads(v.replace("'",'"'))
 			setattr(record, k, v)
 

@@ -28,6 +28,9 @@ def ingest_markdown_files(file_dir):
 	
 	for p in glob.glob(os.path.join(file_dir, "*.md")):
 		id = os.path.splitext(os.path.basename(p))[0].lower().replace(" ", "-").replace("_", "-")
+
+		if "template" in id:
+			continue
 		print(id)
 		record_data = i.parse(p)
 
@@ -47,7 +50,8 @@ def ingest_markdown_files(file_dir):
 		print(json.dumps(record_data, indent=1))
 		db.session.commit()
 
-		record.index()
+		result = record.index()
+		print(json.dumps(result, indent=1))
 
 @ingest.route("/ingest", methods=["GET", "POST", "PATCH", "DELETE"])
 def place():

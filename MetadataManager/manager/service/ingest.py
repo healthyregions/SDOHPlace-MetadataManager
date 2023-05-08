@@ -52,7 +52,7 @@ class Ingest:
 			title_key = title.lower().replace(" ", "_")
 
 			content_list = content.split("\n")
-			content_cleaned = "\n".join([i.rstrip().rstrip("*").lstrip("*") for i in content_list if i])
+			content_cleaned = "|".join([i.rstrip().rstrip("*").lstrip("*") for i in content_list if i])
 			if title_key in FIELD_LOOKUP:
 				parsed[title_key] = content_cleaned
 			else:
