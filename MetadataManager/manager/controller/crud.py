@@ -5,6 +5,7 @@ from flask_cors import CORS
 
 from manager.schema import Record, db
 from manager.utils import GROUPED_FIELD_LOOKUP, clean_form_data
+from manager.service.solr import Solr
 
 crud = Blueprint('manager', __name__)
 CORS(crud)
