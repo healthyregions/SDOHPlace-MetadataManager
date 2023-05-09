@@ -1,7 +1,10 @@
+import os
+import glob
 import json
 import urllib.request
 
 from manager.utils import FIELD_LOOKUP
+from manager.model import RecordModel, db
 
 class Ingest:
 
@@ -59,6 +62,33 @@ class Ingest:
 				print(f"ERROR matching this section header: {title}")
 
 		return parsed
+	
+	def process_aardvark_files(self, file_dir):
+
+		for p in glob.glob(os.path.join(file_dir, "*.md")):
+			id = os.path.splitext(os.path.basename(p))[0].lower().replace(" ", "-").replace("_", "-")
+
+			if "template" in id or "readme" in id:
+				continue
+			print(id)
+			record_data = self.parse(p)
+
+			record = RecordModel.query.get(id)
+			if not record:
+				record = RecordModel()
+				record.id = id
+				db.session.add(record)
+			print(record)
+			for k, v in record_data.items():
+				setattr(record, k, v)
+
+			record.resource_class = "Dataset"
+			record.access_rights = "Public"
+			# print(json.dumps(record_data, indent=1))
+			db.session.commit()
+
+			result = record.index()
+			# print(json.dumps(result, indent=1))
 
 	def update(self, request):
 		pass

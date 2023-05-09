@@ -4,7 +4,9 @@
             <label class="form-label" for="{{ field['column_name'] }}">
                 {{ field['label'] }}
                 {% if field['multiple'] %}+{% endif %}
+                {% if field['schema'] == "Aardvark" %}
                 <a href="https://opengeometadata.org/ogm-aardvark/#{{ field['slug'] }}" target="_blank">&nearr;</a>
+                {% endif %}
             </label>
         </div>
         <div class="col-9">

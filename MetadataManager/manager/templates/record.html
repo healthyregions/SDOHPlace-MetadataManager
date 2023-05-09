@@ -11,7 +11,11 @@
                 <tbody style="overflow-x:auto;">
                     {% for field in fields %}
                     <tr class="{{ field['obligation'] }}">
-                        <td scope="row" style="width:250px;">{{ field['label'] }}</td>
+                        <td scope="row" style="width:250px;">
+                            {{ field['label'] }}
+                            {% if field['multiple'] %}+{% endif %}
+                            <a href="https://opengeometadata.org/ogm-aardvark/#{{ field['slug'] }}" target="_blank">&nearr;</a>
+                        </td>
                         <td>{{ record[field['column_name']] }}</td>
                     </tr>
                     {% endfor %}
@@ -24,9 +28,10 @@
         <div class="sidebar-content">
             <h2>Actions</h2>
             <div class="btn-group" role="group" aria-label="Action buttons">
-                <form action="{{ url_for('manager.index_record', id=record['id']) }}" method="post" target="_blank">
-                    <a href="{{ url_for('manager.edit', id=record['id']) }}" class="btn btn-primary" role="button">Edit</a>
-                    <button class="btn btn-info" name="index-btn" value="index">Index to SOLR</button>
+                <form action="{{ url_for('manager.handle_solr', id=record['id']) }}" method="post" target="_blank">
+                    <a href="{{ url_for('manager.handle_record', id=record['id']) }}?edit=true" class="btn btn-primary" role="button">Edit</a>
+                    <button class="btn btn-info" name="index-btn" value="index">Reindex</button>
+                    <a href="{{ gbl_host }}/catalog/{{ record['id'] }}" class="btn btn-primary" role="button" target="_blank">View in GBL</a>
                 </form>
             </div>
         </div>

@@ -1,18 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    
-    
-    <!-- <table>
-        {% for record in records %}
-        <tr>
-            <th><a href="{{ url_for('manager.detail', id=record['id']) }}">{{record['title']}}</th>
-            <th><a href="{{ url_for('manager.edit', id=record['id']) }}">edit</th>
-            <th><a href="{{ url_for('manager.as_json', id=record['id']) }}">JSON</th>
-            <th><a href="{{ url_for('manager.as_solr', id=record['id']) }}">SOLR</th>
-        </tr>
-        {% endfor %}
-    </table> -->
+
 <div class="row">
     <div class="col-9 main-content">
         <h1>{% block title %}SDOH Place Metadata Records{% endblock %}</h1>
@@ -23,10 +12,10 @@
                     <td style="display:flex; justify-content: space-between;">
                         <div><strong>{{record['title']}}</strong></div>
                         <div class="button-group">
-                            <a href="{{ url_for('manager.detail', id=record['id']) }}" class="btn btn-primary">View</a>
-                            <a href="{{ url_for('manager.edit', id=record['id']) }}" class="btn btn-primary">Edit</a>
-                            <a href="{{ url_for('manager.as_json', id=record['id']) }}" class="btn btn-primary">JSON</a>
-                            <a href="{{ url_for('manager.as_solr', id=record['id']) }}" class="btn btn-primary">SOLR</a>
+                            <a href="{{ url_for('manager.handle_record', id=record['id']) }}" class="btn btn-primary">View</a>
+                            <a href="{{ url_for('manager.handle_record', id=record['id']) }}?edit=true" class="btn btn-primary">Edit</a>
+                            <a href="{{ url_for('manager.handle_record', id=record['id']) }}?f=json" class="btn btn-primary">JSON</a>
+                            <a href="{{ url_for('manager.handle_record', id=record['id']) }}?f=solr" class="btn btn-primary">SOLR</a>
                         </div>
                     <td>
                 </tr>
@@ -38,7 +27,10 @@
         <div class="sidebar-content">
             <h2>Actions</h2>
             <div class="btn-group" role="group" aria-label="Action buttons">
-                <a href="{{ url_for('manager.create')}}" class="btn btn-primary">Create New Record</a>
+                <a href="{{ url_for('manager.create_record')}}" class="btn btn-primary">Create New Record</a>
+            </div>
+            <div>
+                <a href="{{ gbl_host }}" target="_blank">Go to GeoBlacklight</a>
             </div>
         </div>
     </div>

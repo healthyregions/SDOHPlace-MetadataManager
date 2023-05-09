@@ -3,14 +3,17 @@ import os
 from dotenv import load_dotenv
 from flask import Flask
 from flask_cors import CORS
-from manager.controller.ingest import ingest
-from manager.controller.crud import crud
-from manager.schema import db
+
+from manager.routes import crud, ingest
+from manager.model import db
+from manager.commands import ingest_aardvark
 
 load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
+
+app.cli.add_command(ingest_aardvark)
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
