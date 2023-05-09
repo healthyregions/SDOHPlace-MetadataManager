@@ -88,7 +88,7 @@
     },
     "provider": {
         "label": "Provider",
-        "uri": "dct_provider_s",
+        "uri": "schema_provider_s",
         "data_type": "string",
         "multiple": false,
         "obligation": "suggested",

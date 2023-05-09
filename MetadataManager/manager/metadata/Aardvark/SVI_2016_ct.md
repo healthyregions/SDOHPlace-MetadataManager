@@ -48,3 +48,7 @@ January 20, 2023
 
 ## Data Dictionary
 https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/pdf/SVI2020Documentation_08.05.22.pdf
+
+## Metadata Version
+
+Aardvark

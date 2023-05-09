@@ -12,8 +12,9 @@ County Health Rankings
 County Health Rankings
 
 ## Resource class
+Datasets
 
-## Resource type (Ex - vector data)
+## Resource type
 Vector Data
 
 ## Subject
@@ -46,3 +47,7 @@ https://www.countyhealthrankings.org/sites/default/files/media/document/2021%20C
 
 ## Data Dictionary
 https://www.countyhealthrankings.org/sites/default/files/media/document/DataDictionary_2021.xlsx
+
+## Metadata Version
+
+Aardvark

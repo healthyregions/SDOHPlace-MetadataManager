@@ -17,7 +17,7 @@ University of Wisconsin School of Medicine and Public Health
 Datasets and Web services
 
 ## Resource type 
-Veector Data
+Vector Data
 
 ## Subject
 About the Area Deprivation Index 
@@ -46,3 +46,6 @@ https://www.neighborhoodatlas.medicine.wisc.edu/download
 ## Data Dictionary
 Metadatata available in README format 
 
+## Metadata Version
+
+Aardvark
