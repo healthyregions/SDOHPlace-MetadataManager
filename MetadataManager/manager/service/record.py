@@ -8,8 +8,9 @@ from manager.utils import clean_form_data
 class Record:
 
 	def get(self, id=None, format='html', edit=False):
-		record = None
-		if id is not None:
+		if id is None:
+			record = RecordModel()
+		else:
 			record = RecordModel.query.get_or_404(id)
 		if format == "html":
 			if edit:
