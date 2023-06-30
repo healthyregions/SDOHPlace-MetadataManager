@@ -1,0 +1,57 @@
+{
+    "spatial_resolution": {
+        "label": "Spatial Resolution",
+        "uri": "sdoh_spatial_resolution_sm",
+        "data_type": "string",
+        "multiple": true,
+        "obligation": "optional",
+        "controlled": true,
+        "controlled_options": [
+            "City",
+            "County",
+            "State",
+            "Census Tract",
+            "Census Block",
+            "Zip Code Tabulation Area (ZCTA)"
+        ],
+        "schema": "SDOH Place",
+        "display_group": "Extra",
+        "slug": "spatial-resolution"
+    },
+    "spatial_resolution_note": {
+        "label": "Spatial Resolution Note",
+        "uri": "sdoh_spatial_resolution_note_s",
+        "data_type": "string",
+        "multiple": false,
+        "obligation": "optional",
+        "controlled": false,
+        "controlled_options": [],
+        "schema": "SDOH Place",
+        "display_group": "Extra",
+        "slug": "spatial-resolution-note"
+    },
+    "methods_variables": {
+        "label": "Methods Variables",
+        "uri": "sdoh_methods_variables_sm",
+        "data_type": "string",
+        "multiple": true,
+        "obligation": "optional",
+        "controlled": false,
+        "controlled_options": [],
+        "schema": "SDOH Place",
+        "display_group": "Extra",
+        "slug": "methods-variables"
+    },
+    "data_variables": {
+        "label": "Data Variables",
+        "uri": "sdoh_data_variables_sm",
+        "data_type": "string",
+        "multiple": true,
+        "obligation": "optional",
+        "controlled": false,
+        "controlled_options": [],
+        "schema": "SDOH Place",
+        "display_group": "Extra",
+        "slug": "spatial-resolution"
+    }
+}
