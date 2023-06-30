@@ -1,0 +1,8 @@
+<tr class="{{ field['obligation'] }} display-group">
+    <td scope="row" style="width:250px;">
+        <span class="{{ field['obligation'] }}">{{ field['label'] }}</span>
+        {% if field['multiple'] %}+{% endif %}
+        <a href="https://opengeometadata.org/ogm-aardvark/#{{ field['slug'] }}" target="_blank">&nearr;</a>
+    </td>
+    <td>{{ record[field['column_name']] }}</td>
+</tr>
