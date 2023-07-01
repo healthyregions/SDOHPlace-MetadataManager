@@ -1,3 +1,4 @@
+import os
 import json
 from sqlalchemy import func
 from flask_sqlalchemy import SQLAlchemy
@@ -53,6 +54,11 @@ class RecordModel(db.Model):
     metadata_version = db.Column(db.String, nullable=False)
     suppressed = db.Column(db.Boolean, nullable=True)
 
+    spatial_resolution = db.Column(db.String)
+    spatial_resolution_note = db.Column(db.String)
+    methods_variables = db.Column(db.String)
+    data_variables = db.Column(db.String)
+
     def to_json(self):
         """ Full serialization of the record, splits multiple value fields
         to lists and converts the references JSON string to dict."""
@@ -100,3 +106,10 @@ class RecordModel(db.Model):
                 uri = FIELD_LOOKUP[i.name]['uri']
                 solr_doc[uri] = value
         return solr_doc
+
+    def export_to_staging(self):
+        from manager.app import PROJECT_DIR
+
+        path = os.path.join(PROJECT_DIR, 'metadata', 'staging', self.id + ".json")
+        with open(path, "w") as f:
+            json.dump(self.to_json(), f, indent=2)

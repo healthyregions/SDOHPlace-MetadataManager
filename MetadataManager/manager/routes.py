@@ -57,6 +57,11 @@ def handle_record(id):
 	if request.method == "GET":
 		f = request.args.get('f', 'html')
 		e = request.args.get('edit') == "true"
+		action = request.args.get('action')
+		if action == "export":
+			print('exporting')
+			rm = RecordModel.query.get(id)
+			rm.export_to_staging()
 		return r.get(id, f, edit=e)
 	elif request.method == "POST":
 		return r.post(request.form)

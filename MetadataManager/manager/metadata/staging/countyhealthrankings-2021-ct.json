@@ -1,0 +1,66 @@
+{
+  "id": "countyhealthrankings-2021-ct",
+  "title": "2021 County Health Rankings Data - v1",
+  "alternative_title": null,
+  "description": [
+    "The County Health Rankings provide a snapshot of a community\u2019s health and a starting point for investigating and discussing ways to improve health."
+  ],
+  "language": [
+    "English"
+  ],
+  "display_note": null,
+  "creator": [
+    "County Health Rankings"
+  ],
+  "publisher": null,
+  "provider": "County Health Rankings",
+  "resource_class": [
+    "Dataset"
+  ],
+  "resource_type": [
+    "Vector Data"
+  ],
+  "subject": [
+    "Community Health"
+  ],
+  "theme": null,
+  "keyword": null,
+  "temporal_coverage": [
+    "2021"
+  ],
+  "date_issued": null,
+  "index_year": null,
+  "date_range": null,
+  "spatial_coverage": null,
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    ""
+  ],
+  "rights_holder": null,
+  "license": null,
+  "access_rights": "Public",
+  "format": "CSV",
+  "file_size": null,
+  "references": null,
+  "wxs_indentifier": null,
+  "identifier": null,
+  "modified": "2023-06-30T22:00:42Z",
+  "metadata_version": "Aardvark",
+  "suppressed": null,
+  "spatial_resolution": [
+    "County (FIPS)"
+  ],
+  "spatial_resolution_note": null,
+  "methods_variables": null,
+  "data_variables": null
+}

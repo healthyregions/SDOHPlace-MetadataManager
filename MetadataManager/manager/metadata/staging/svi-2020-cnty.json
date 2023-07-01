@@ -1,0 +1,66 @@
+{
+  "id": "svi-2020-cnty",
+  "title": "CDC Social Vulnerability Index (SVI) By Census County: United States, 2020",
+  "alternative_title": null,
+  "description": [
+    "Social vulnerability refers to the potential negative effects on communities caused by external stresses on human health. Such stresses include natural or human-caused disasters, or disease outbreaks. Reducing social vulnerability can decrease both human suffering and economic loss."
+  ],
+  "language": [
+    "English"
+  ],
+  "display_note": null,
+  "creator": [
+    "Centers for Disease Control and Prevention/ Agency for Toxic Substances and Disease Registry/ Geospatial Research, Analysis, and Services Program."
+  ],
+  "publisher": null,
+  "provider": "Census Tract: United States, 2020",
+  "resource_class": [
+    "Dataset"
+  ],
+  "resource_type": [
+    "Vector Data"
+  ],
+  "subject": [
+    "Social Vulnerability Index"
+  ],
+  "theme": null,
+  "keyword": null,
+  "temporal_coverage": [
+    "2000-2020"
+  ],
+  "date_issued": null,
+  "index_year": null,
+  "date_range": null,
+  "spatial_coverage": null,
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    ""
+  ],
+  "rights_holder": null,
+  "license": null,
+  "access_rights": "Public",
+  "format": "CSV, SHP",
+  "file_size": null,
+  "references": null,
+  "wxs_indentifier": null,
+  "identifier": null,
+  "modified": "2023-06-30T22:00:43Z",
+  "metadata_version": "Aardvark",
+  "suppressed": null,
+  "spatial_resolution": [
+    "County-level FIPS code"
+  ],
+  "spatial_resolution_note": null,
+  "methods_variables": null,
+  "data_variables": null
+}

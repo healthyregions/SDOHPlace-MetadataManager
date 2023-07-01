@@ -2,6 +2,7 @@ import os
 import glob
 import json
 import urllib.request
+from datetime import datetime
 
 from manager.utils import FIELD_LOOKUP
 from manager.model import RecordModel, db
@@ -15,6 +16,7 @@ class Ingest:
 		pass
 
 	def set(self, request):
+		""" fairly sure this isn't needed at all """
 		print(request)
 		data = json.loads(request.data)
 
@@ -42,7 +44,7 @@ class Ingest:
 	def save(self, parsed):
 		pass
 
-	def parse(self, md_path):
+	def parse_markdown(self, md_path):
 		parsed = {}
 
 		with open(md_path, "r") as o:
@@ -63,7 +65,7 @@ class Ingest:
 
 		return parsed
 	
-	def process_aardvark_files(self, file_dir):
+	def process_aardvark_files(self, file_dir, staging_dir):
 
 		for p in glob.glob(os.path.join(file_dir, "*.md")):
 			id = os.path.splitext(os.path.basename(p))[0].lower().replace(" ", "-").replace("_", "-")
@@ -71,24 +73,41 @@ class Ingest:
 			if "template" in id or "readme" in id:
 				continue
 			print(id)
-			record_data = self.parse(p)
+			record_data = self.parse_markdown(p)
+			record_data['id'] = id
+			stage_path = os.path.join(staging_dir, id + ".json")
+			with open(stage_path, "w") as f:
+				json.dump(record_data, f, indent=2)
+
+	def load_from_staging(self, staging_dir):
+
+		for json_file in glob.glob(os.path.join(staging_dir, "*.json")):
+			with open(json_file, "r") as f:
+				record_data = json.load(f)
+				id = record_data.pop('id')
 
 			record = RecordModel.query.get(id)
 			if not record:
 				record = RecordModel()
 				record.id = id
 				db.session.add(record)
-			print(record)
+
 			for k, v in record_data.items():
+				if k == "modified":
+					v = datetime.strptime(v, "%Y-%m-%dT%H:%M:%SZ")
+				if isinstance(v, list):
+					v = "|".join(v)
 				setattr(record, k, v)
 
 			record.resource_class = "Dataset"
 			record.access_rights = "Public"
-			# print(json.dumps(record_data, indent=1))
+
 			db.session.commit()
 
-			result = record.index()
-			# print(json.dumps(result, indent=1))
+	def save_to_staging(self):
+
+		for record in RecordModel.query.all():
+			record.export_to_staging()
 
 	def update(self, request):
 		pass

@@ -6,14 +6,19 @@ from flask_cors import CORS
 
 from manager.routes import crud, ingest
 from manager.model import db
-from manager.commands import ingest_aardvark
-
+from manager.commands import (
+    migrate_legacy_markdown,
+    load_from_staging,
+    save_to_staging,
+)
 load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
 
-app.cli.add_command(ingest_aardvark)
+app.cli.add_command(migrate_legacy_markdown)
+app.cli.add_command(load_from_staging)
+app.cli.add_command(save_to_staging)
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
