@@ -2,8 +2,12 @@ import os
 import json
 from sqlalchemy import func
 from flask_sqlalchemy import SQLAlchemy
+from dotenv import load_dotenv
 
 from manager.utils import FIELD_LOOKUP
+
+load_dotenv()
+METADATA_DIR = os.getenv('METADATA_DIR')
 
 db = SQLAlchemy()
 
@@ -108,8 +112,7 @@ class RecordModel(db.Model):
         return solr_doc
 
     def export_to_staging(self):
-        from manager.app import PROJECT_DIR
 
-        path = os.path.join(PROJECT_DIR, 'metadata', 'staging', self.id + ".json")
+        path = os.path.join(METADATA_DIR, 'staging', self.id + ".json")
         with open(path, "w") as f:
             json.dump(self.to_json(), f, indent=2)

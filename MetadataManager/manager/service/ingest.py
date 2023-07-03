@@ -93,7 +93,7 @@ class Ingest:
 				db.session.add(record)
 
 			for k, v in record_data.items():
-				if k == "modified":
+				if k == "modified" and v:
 					v = datetime.strptime(v, "%Y-%m-%dT%H:%M:%SZ")
 				if isinstance(v, list):
 					v = "|".join(v)

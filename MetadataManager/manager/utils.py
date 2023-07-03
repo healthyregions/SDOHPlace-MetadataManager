@@ -1,15 +1,19 @@
 import os
 import json
 
-project_dir = os.path.dirname(os.path.abspath(__file__))
+from dotenv import load_dotenv
+
+load_dotenv()
+
+METADATA_DIR = os.getenv('METADATA_DIR')
 
 def generate_field_lookup():
 	""" Aggregates the field definition JSON from one or more JSON files,
 	returns single dictionary."""
 	lookup = dict()
 	schema_files = [
-		os.path.join(project_dir, 'metadata', 'aardvark_schema.json'),
-		os.path.join(project_dir, 'metadata', 'sdohplace_schema.json'),
+		os.path.join(METADATA_DIR, 'aardvark_schema.json'),
+		os.path.join(METADATA_DIR, 'sdohplace_schema.json'),
 	]
 	for path in schema_files:
 		with open(path, 'r') as o:
