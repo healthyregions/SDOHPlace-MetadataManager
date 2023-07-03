@@ -1,6 +1,8 @@
 # our SQLITE database files
 *.db
 
+.fuse*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
