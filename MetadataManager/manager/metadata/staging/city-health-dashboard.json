@@ -19,7 +19,7 @@
   ],
   "provider": "Healthy Regions + Policies Lab",
   "resource_class": [
-    "Datasets"
+    "Dataset"
   ],
   "resource_type": [
     "Point data"
