@@ -6,7 +6,9 @@
     "More than 80 percent of U.S. residents live in urban areas. But until recently, few measures have been available to assess health, the factors that shape health, and the drivers of health equity at the city level. That's where the City Health Dashboard comes in. Our goal is to provide communities and city leaders with an array of regularly updated data specific to neighborhood and/or city boundaries \u2013 such as life expectancy, park access, and children in poverty -- to improve the health and well-being of everyone in the community."
   ],
   "language": null,
-  "display_note": null,
+  "display_note": [
+    "Warning: This catalog record may be incomplete, as the SDOH Place data finder is still in development."
+  ],
   "creator": [
     "Department of Population Health, NYU Langone Health. City Health Dashboard"
   ],

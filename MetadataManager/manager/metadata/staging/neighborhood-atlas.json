@@ -1,0 +1,62 @@
+{
+  "id": "neighborhood-atlas",
+  "title": "Neighborhood Atlas",
+  "alternative_title": null,
+  "description": [
+    "The Neighborhood Atlas website was created in order to freely share measures of neighborhood disadvantage with the public, including educational institutions, health systems, not-for-profit organizations, and government agencies, in order to make these metrics available for use in research, program planning, and policy development. The site was launched May 1, 2018.', 'Area Deprivation Index (ADI):** It is based on a measure created by the Health Resources & Services Administration (HRSA) thirty years ago. It helps to rank neighborhoods on the basis of income, education, employment, and housing quality."
+  ],
+  "language": null,
+  "display_note": null,
+  "creator": [
+    "Kind AJH, Buckingham W. University of Wisconsin School of Medicine and Public Health"
+  ],
+  "publisher": [
+    "University of Wisconsin School of Medicine and Public Health"
+  ],
+  "provider": "Healthy Regions + Policies Lab",
+  "resource_class": [
+    "Datasets"
+  ],
+  "resource_type": [
+    "Polygon data"
+  ],
+  "subject": [
+    "Area Deprivation Index"
+  ],
+  "theme": null,
+  "keyword": null,
+  "temporal_coverage": null,
+  "date_issued": null,
+  "index_year": null,
+  "date_range": null,
+  "spatial_coverage": null,
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": null,
+  "rights_holder": null,
+  "license": null,
+  "access_rights": "Public",
+  "format": null,
+  "file_size": null,
+  "references": null,
+  "wxs_indentifier": null,
+  "identifier": null,
+  "modified": null,
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": null,
+  "spatial_resolution": [
+    "Zip Code Tabulation Area (ZCTA)"
+  ],
+  "spatial_resolution_note": null,
+  "methods_variables": null,
+  "data_variables": null
+}

@@ -1,30 +1,22 @@
 {
-  "id": "sdohindicestract",
-  "title": "US Social Determinants of Health",
+  "id": "neighborhood-atlas-2018",
+  "title": "Neighborhood Atlas 2018",
   "alternative_title": null,
-  "description": [
-    "These sample data are referenced in the tutorials for GeoDa, GeoDaSpace, and CAST."
-  ],
+  "description": null,
   "language": null,
-  "display_note": [
-    "Warning: This catalog record may be incomplete, as the SDOH Place data finder is still in development."
-  ],
-  "creator": [
-    "Center for Spatial Data Science"
-  ],
+  "display_note": null,
+  "creator": null,
   "publisher": null,
   "provider": null,
   "resource_class": [
     "Datasets"
   ],
   "resource_type": null,
-  "subject": [
-    "Neighborhood-Level Social Determinants of Health in the Continental United States. The variables are derived from the 2014 American Community Survey 5-year mean."
-  ],
+  "subject": null,
   "theme": null,
   "keyword": null,
   "temporal_coverage": null,
-  "date_issued": null,
+  "date_issued": "2018",
   "index_year": null,
   "date_range": null,
   "spatial_coverage": null,
@@ -36,22 +28,26 @@
   "member_of": null,
   "is_part_of": null,
   "source": null,
-  "is_version_of": null,
+  "is_version_of": [
+    "neighborhood-atlas"
+  ],
   "replaces": null,
   "is_replaced_by": null,
   "rights": null,
   "rights_holder": null,
   "license": null,
   "access_rights": "Public",
-  "format": "SHP|CSV",
+  "format": null,
   "file_size": null,
   "references": null,
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": null,
-  "metadata_version": "Aardvark",
+  "modified": "2023-07-05T22:49:27Z",
+  "metadata_version": "SDOH PlaceProject",
   "suppressed": null,
-  "spatial_resolution": null,
+  "spatial_resolution": [
+    "Zip Code Tabulation Area (ZCTA)"
+  ],
   "spatial_resolution_note": null,
   "methods_variables": null,
   "data_variables": null
