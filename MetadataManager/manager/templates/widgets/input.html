@@ -16,7 +16,7 @@
         {% elif field['column_name'] == 'modified' %}
         <input class="form-control" type="text" name="{{ field['column_name'] }}" disabled
             {% if record %}value="{{ record[field['column_name']] }}"{% endif %}></input>
-        {% elif field['data_type'] == "string" %}
+        {% elif field['data_type'] == "string" or field['data_type'] == "integer" %}
             {% if field['controlled'] %}
             <select class="form-select" name="{{ field['column_name'] }}"
                 placeholder="" 
@@ -25,7 +25,7 @@
                 >
                 <option></option>
                 {% for choice in field['controlled_options'] %}
-                <option value="{{ choice }}" {% if choice in record[field['column_name']] %}selected=true{% endif %}>{{ choice }}</option>
+                <option value="{{ choice }}" {% if choice in record[field['column_name']].split("|") %}selected=true{% endif %}>{{ choice }}</option>
                 {% endfor %}
             </select>
             {% else %}
@@ -35,7 +35,7 @@
             {% endif %}
         {% elif field['data_type'] == "boolean" %}
         <input class="form-check-input" type="checkbox" name="{{ field['column_name'] }}"
-            placeholder="" {% if record %}value="{{ record[field['column_name']] }}"{% endif %}
+            placeholder="" {% if record and record[field['column_name']] %}checked{% endif %}
             ></input>
         {% endif %}
         </div>

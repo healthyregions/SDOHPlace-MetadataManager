@@ -12,6 +12,7 @@
             "State",
             "Census Tract",
             "Census Block",
+            "Census Block Group",
             "Zip Code Tabulation Area (ZCTA)"
         ],
         "schema": "SDOH Place",

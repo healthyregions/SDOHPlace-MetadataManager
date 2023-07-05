@@ -1,4 +1,4 @@
-import json
+from datetime import datetime
 
 from flask import Blueprint, request, render_template, jsonify, url_for, redirect
 
@@ -33,6 +33,8 @@ class Record:
 			record.id = form['id']
 
 		cleaned_data = clean_form_data(form)
+
+		cleaned_data['modified'] = datetime.now()
 
 		for k, v in cleaned_data.items():
 			setattr(record, k, v)
