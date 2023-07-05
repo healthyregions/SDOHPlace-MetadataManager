@@ -44,4 +44,6 @@ class Record:
 
 		db.session.commit()
 
+		record.export_to_staging()
+
 		return redirect(url_for('manager.handle_record', id=record.id))

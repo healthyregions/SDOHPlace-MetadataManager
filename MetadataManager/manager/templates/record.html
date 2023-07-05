@@ -24,7 +24,6 @@
                 <form action="{{ url_for('manager.handle_solr', id=record['id']) }}" method="post" target="_blank">
                     <a href="{{ url_for('manager.handle_record', id=record['id']) }}?edit=true" class="btn btn-primary" role="button">Edit</a>
                     <button class="btn btn-info" name="index-btn" value="index" title="Index this record in SOLR (will overwrite existing record with same id)">Index</button>
-                    <a href="{{ url_for('manager.handle_record', id=record['id']) }}?action=export&f=json" class="btn btn-primary" role="button" target="_blank">Export</a>
                     <a href="{{ gbl_host }}/catalog/{{ record['id'] }}" class="btn btn-primary" role="button" target="_blank">View in GBL</a>
                 </form>
             </div>

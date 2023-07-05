@@ -43,7 +43,7 @@ def place():
 
 @crud.route("/", methods=["GET"])
 def index():
-	records = RecordModel.query.all()
+	records = RecordModel.query.order_by('title').all()
 	return render_template('index.html', records=records)
 
 @crud.route("/record/create", methods=["GET"])
@@ -57,11 +57,6 @@ def handle_record(id):
 	if request.method == "GET":
 		f = request.args.get('f', 'html')
 		e = request.args.get('edit') == "true"
-		action = request.args.get('action')
-		if action == "export":
-			print('exporting')
-			rm = RecordModel.query.get(id)
-			rm.export_to_staging()
 		return r.get(id, f, edit=e)
 	elif request.method == "POST":
 		return r.post(request.form)

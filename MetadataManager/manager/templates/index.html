@@ -14,7 +14,6 @@
                         <div class="button-group">
                             <a href="{{ url_for('manager.handle_record', id=record['id']) }}" class="btn btn-primary">View</a>
                             <a href="{{ url_for('manager.handle_record', id=record['id']) }}?edit=true" class="btn btn-primary">Edit</a>
-                            <a href="{{ url_for('manager.handle_record', id=record['id']) }}?f=json&action=export" class="btn btn-primary" target="_blank">Export</a>
                             <a href="{{ url_for('manager.handle_record', id=record['id']) }}?f=json" class="btn btn-primary">JSON</a>
                             <a href="{{ url_for('manager.handle_record', id=record['id']) }}?f=solr" class="btn btn-primary">SOLR</a>
                         </div>
