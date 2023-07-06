@@ -51,6 +51,9 @@ class Solr:
 
 	def multi_delete(self, identifiers):
 		return self.solr.delete(id=identifiers)
+	
+	def delete_all(self):
+		return self.solr.delete(q='*:*')
 
 	def health_check(self):
 		try:

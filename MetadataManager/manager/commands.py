@@ -25,10 +25,12 @@ def migrate_legacy_markdown(file_dir):
 
 @click.command()
 @with_appcontext
-def load_from_staging():
+@click.option('--clean-db', is_flag=True, default=False)
+@click.option('--clean-index', is_flag=True, default=False)
+def load_from_staging(clean_db, clean_index):
 
 	i = Ingest()
-	i.load_from_staging(os.path.join(METADATA_DIR, 'staging'))
+	i.load_from_staging(os.path.join(METADATA_DIR, 'staging'), clean_db=clean_db, clean_index=clean_index)
 
 @click.command()
 @with_appcontext

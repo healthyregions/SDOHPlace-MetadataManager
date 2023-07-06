@@ -6,6 +6,7 @@ from datetime import datetime
 
 from manager.utils import FIELD_LOOKUP
 from manager.model import RecordModel, db
+from manager.service.solr import Solr
 
 class Ingest:
 
@@ -17,7 +18,6 @@ class Ingest:
 
 	def set(self, request):
 		""" fairly sure this isn't needed at all """
-		print(request)
 		data = json.loads(request.data)
 
 		uuid = data.get("id", None)
@@ -79,9 +79,18 @@ class Ingest:
 			with open(stage_path, "w") as f:
 				json.dump(record_data, f, indent=2)
 
-	def load_from_staging(self, staging_dir):
+	def load_from_staging(self, staging_dir, clean_db=False, clean_index=False):
+
+		if clean_db:
+			db.session.query(RecordModel).delete()
+			db.session.commit()
+
+		s = Solr()
+		if clean_index:
+			s.delete_all()
 
 		for json_file in glob.glob(os.path.join(staging_dir, "*.json")):
+			print(os.path.basename(json_file))
 			with open(json_file, "r") as f:
 				record_data = json.load(f)
 				id = record_data.pop('id')
@@ -99,10 +108,8 @@ class Ingest:
 					v = "|".join(v)
 				setattr(record, k, v)
 
-			record.resource_class = "Dataset"
-			record.access_rights = "Public"
-
 			db.session.commit()
+			s.index_record(record.id)
 
 	def save_to_staging(self):
 
