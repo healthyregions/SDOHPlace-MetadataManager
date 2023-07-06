@@ -71,11 +71,10 @@ class RecordModel(db.Model):
         for i in self.__table__.columns:
             value = getattr(self, i.name)
             if i.name == "references" and value is not None:
-                print(value)
-                # value = json.loads(value)
+                pass
             elif i.name == "modified" and value is not None:
                 value = value.strftime("%Y-%m-%dT%H:%M:%SZ")
-            elif FIELD_LOOKUP[i.name]['multiple'] and value is not None:
+            elif FIELD_LOOKUP[i.name]['multiple'] and value is not None and not isinstance(value, int):
                 value = value.split("|")
             result[i.name] = value
         return result
