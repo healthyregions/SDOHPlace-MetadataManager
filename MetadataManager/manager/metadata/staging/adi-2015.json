@@ -1,34 +1,24 @@
 {
-  "id": "countyhealthrankings-2021-ct",
-  "title": "2021 County Health Rankings Data - v1",
+  "id": "adi-2015",
+  "title": "Area Deprivation Index (ADI) 2015",
   "alternative_title": null,
-  "description": [
-    "The County Health Rankings provide a snapshot of a community\u2019s health and a starting point for investigating and discussing ways to improve health."
-  ],
-  "language": [
-    "English"
-  ],
+  "description": null,
+  "language": null,
   "display_note": null,
-  "creator": [
-    "County Health Rankings"
-  ],
+  "creator": null,
   "publisher": null,
-  "provider": "County Health Rankings",
+  "provider": null,
   "resource_class": [
-    "Dataset"
+    "Datasets"
   ],
-  "resource_type": [
-    "Vector Data"
-  ],
+  "resource_type": null,
   "subject": [
-    "Community Health"
+    "Area Deprivation Index"
   ],
   "theme": null,
   "keyword": null,
-  "temporal_coverage": [
-    "2021"
-  ],
-  "date_issued": null,
+  "temporal_coverage": null,
+  "date_issued": "2015",
   "index_year": null,
   "date_range": null,
   "spatial_coverage": null,
@@ -40,25 +30,26 @@
   "member_of": null,
   "is_part_of": null,
   "source": null,
-  "is_version_of": null,
+  "is_version_of": [
+    "neighborhood-atlas"
+  ],
   "replaces": null,
   "is_replaced_by": null,
-  "rights": [
-    ""
-  ],
+  "rights": null,
   "rights_holder": null,
   "license": null,
   "access_rights": "Public",
-  "format": "CSV",
+  "format": null,
   "file_size": null,
   "references": null,
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": "2023-06-30T22:00:42Z",
-  "metadata_version": "Aardvark",
-  "suppressed": null,
+  "modified": "2023-07-05T19:10:48Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": true,
   "spatial_resolution": [
-    "County (FIPS)"
+    "Census Block Group",
+    "Zip Code Tabulation Area (ZCTA)"
   ],
   "spatial_resolution_note": null,
   "methods_variables": null,

@@ -1,21 +1,17 @@
 {
-  "id": "svi-2016-ct",
-  "title": "CDC Social Vulnerability Index (SVI) By Census Tract: United States, 2016",
+  "id": "svi-2010",
+  "title": "CDC Social Vulnerability Index (SVI) 2010",
   "alternative_title": null,
-  "description": [
-    "Social vulnerability refers to the potential negative effects on communities caused by external stresses on human health. Such stresses include natural or human-caused disasters, or disease outbreaks. Reducing social vulnerability can decrease both human suffering and economic loss."
-  ],
-  "language": [
-    "English"
-  ],
+  "description": null,
+  "language": null,
   "display_note": null,
   "creator": [
     "Centers for Disease Control and Prevention/ Agency for Toxic Substances and Disease Registry/ Geospatial Research, Analysis, and Services Program."
   ],
-  "publisher": null,
-  "provider": "Census Tract: United States, 2016",
+  "publisher": "Centers for Disease Control and Prevention",
+  "provider": "Healthy Regions + Policies Lab",
   "resource_class": [
-    "Dataset"
+    "Datasets"
   ],
   "resource_type": [
     "Vector Data"
@@ -25,11 +21,9 @@
   ],
   "theme": null,
   "keyword": null,
-  "temporal_coverage": [
-    "2000-2016"
-  ],
-  "date_issued": null,
-  "index_year": null,
+  "temporal_coverage": null,
+  "date_issued": "2010",
+  "index_year": "2010",
   "date_range": null,
   "spatial_coverage": null,
   "geometry": null,
@@ -40,25 +34,25 @@
   "member_of": null,
   "is_part_of": null,
   "source": null,
-  "is_version_of": null,
+  "is_version_of": "social-vulnerability-index",
   "replaces": null,
   "is_replaced_by": null,
-  "rights": [
-    ""
-  ],
+  "rights": null,
   "rights_holder": null,
   "license": null,
   "access_rights": "Public",
-  "format": "CSV",
+  "format": "SHP",
   "file_size": null,
-  "references": null,
+  "references": {
+    "http://lccn.loc.gov/sh85035852": "https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2010.html"
+  },
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": "2023-06-30T22:00:43Z",
+  "modified": "2023-07-06T02:44:40Z",
   "metadata_version": "Aardvark",
-  "suppressed": null,
+  "suppressed": true,
   "spatial_resolution": [
-    "Census Tract"
+    "County", "Census Tract"
   ],
   "spatial_resolution_note": null,
   "methods_variables": null,

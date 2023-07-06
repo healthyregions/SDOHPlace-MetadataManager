@@ -19,11 +19,9 @@
   ],
   "provider": "Healthy Regions + Policies Lab",
   "resource_class": [
-    "Dataset"
+    "Websites"
   ],
-  "resource_type": [
-    "Point data"
-  ],
+  "resource_type": null,
   "subject": [
     "Health Behaviors",
     "Social and Economic Factors",
@@ -969,7 +967,7 @@
   "references": null,
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": "2023-07-05T22:17:30Z",
+  "modified": "2023-07-05T19:39:44Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": null,
   "spatial_resolution": [
