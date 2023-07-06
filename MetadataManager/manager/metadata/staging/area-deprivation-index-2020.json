@@ -1,6 +1,6 @@
 {
-  "id": "neighborhood-atlas-2018",
-  "title": "Neighborhood Atlas 2018",
+  "id": "area-deprivation-index-2020",
+  "title": "Area Deprivation Index (ADI) 2020",
   "alternative_title": null,
   "description": null,
   "language": null,
@@ -12,11 +12,13 @@
     "Datasets"
   ],
   "resource_type": null,
-  "subject": null,
+  "subject": [
+    "Area Deprivation Index"
+  ],
   "theme": null,
   "keyword": null,
   "temporal_coverage": null,
-  "date_issued": "2018",
+  "date_issued": "2020",
   "index_year": null,
   "date_range": null,
   "spatial_coverage": null,
@@ -37,12 +39,12 @@
   "rights_holder": null,
   "license": null,
   "access_rights": "Public",
-  "format": "CSVinin",
+  "format": "CSV",
   "file_size": null,
   "references": null,
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": "2023-07-05T18:25:59Z",
+  "modified": "2023-07-05T18:33:07Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
