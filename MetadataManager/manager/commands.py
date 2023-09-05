@@ -3,6 +3,8 @@ import click
 from flask.cli import with_appcontext
 from dotenv import load_dotenv
 
+from .model import RecordModel
+
 load_dotenv()
 
 METADATA_DIR = os.getenv("METADATA_DIR")
@@ -13,8 +15,8 @@ from manager.service.ingest import Ingest
 @with_appcontext
 @click.option('--file_dir')
 def migrate_legacy_markdown(file_dir):
+	"""Parse and load the legacy metadata markdown files from 2022-23."""
 
-	
 	staging_dir = os.path.join(METADATA_DIR, 'staging')
 
 	i = Ingest()
@@ -28,6 +30,7 @@ def migrate_legacy_markdown(file_dir):
 @click.option('--clean-db', is_flag=True, default=False)
 @click.option('--clean-index', is_flag=True, default=False)
 def load_from_staging(clean_db, clean_index):
+	"""Reset all database content from the local JSON files."""
 
 	i = Ingest()
 	i.load_from_staging(os.path.join(METADATA_DIR, 'staging'), clean_db=clean_db, clean_index=clean_index)
@@ -37,3 +40,25 @@ def load_from_staging(clean_db, clean_index):
 def save_to_staging():
 
 	Ingest().save_to_staging()
+
+@click.command()
+@with_appcontext
+@click.option('--record_id')
+def add_spatial_coverage(record_id):
+
+	if record_id is None:
+		records = RecordModel.query.order_by('title').all()
+	else:
+		records = [RecordModel.query.order_by('title').get(record_id)]
+
+	sr_values = {}
+
+	for r in records:
+		resolutions = r.spatial_resolution
+		if resolutions is None:
+			continue
+		for sr in resolutions.split("|"):
+			pass
+			# if not sr in sr_values:
+			# 	val = get_spatial_coverage_values(sr)
+			# 	sr_values[sr] = val

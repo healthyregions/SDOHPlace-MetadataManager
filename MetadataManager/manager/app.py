@@ -10,6 +10,7 @@ from manager.commands import (
     migrate_legacy_markdown,
     load_from_staging,
     save_to_staging,
+    add_spatial_coverage,
 )
 load_dotenv()
 
@@ -19,6 +20,7 @@ CORS(app)
 app.cli.add_command(migrate_legacy_markdown)
 app.cli.add_command(load_from_staging)
 app.cli.add_command(save_to_staging)
+app.cli.add_command(add_spatial_coverage)
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 

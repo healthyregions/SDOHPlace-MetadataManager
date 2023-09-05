@@ -17,7 +17,8 @@
         ],
         "schema": "SDOH Place",
         "display_group": "Extra",
-        "slug": "spatial-resolution"
+        "slug": "spatial-resolution",
+        "widget": "select.html"
     },
     "spatial_resolution_note": {
         "label": "Spatial Resolution Note",
@@ -29,7 +30,8 @@
         "controlled_options": [],
         "schema": "SDOH Place",
         "display_group": "Extra",
-        "slug": "spatial-resolution-note"
+        "slug": "spatial-resolution-note",
+        "widget": "text-simple.html"
     },
     "methods_variables": {
         "label": "Methods Variables",
@@ -41,7 +43,8 @@
         "controlled_options": [],
         "schema": "SDOH Place",
         "display_group": "Extra",
-        "slug": "methods-variables"
+        "slug": "methods-variables",
+        "widget": "text-area.html"
     },
     "data_variables": {
         "label": "Data Variables",
@@ -53,6 +56,7 @@
         "controlled_options": [],
         "schema": "SDOH Place",
         "display_group": "Extra",
-        "slug": "spatial-resolution"
+        "slug": "spatial-resolution",
+        "widget": "text-area.html"
     }
 }

@@ -1,0 +1,6 @@
+{% extends 'widgets/_base.html' %}
+
+{% block input %}
+<textarea rows="5" cols="33" form="edit-form" name="{{field['column_name']}}">{% if record and record[field['column_name']] %}{{field['column_name']}}{% endif %}
+</textarea>
+{% endblock %}

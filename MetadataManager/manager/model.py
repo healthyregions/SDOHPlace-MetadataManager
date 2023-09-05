@@ -115,3 +115,8 @@ class RecordModel(db.Model):
         path = os.path.join(METADATA_DIR, 'staging', self.id + ".json")
         with open(path, "w") as f:
             json.dump(self.to_json(), f, indent=2)
+
+    def add_spatial_coverage(self):
+
+        print(self.spatial_resolution)
+

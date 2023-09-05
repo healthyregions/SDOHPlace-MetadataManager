@@ -1,0 +1,7 @@
+{% extends 'widgets/_base.html' %}
+
+{% block input %}
+<input class="form-control" type="text" name="{{ field['column_name'] }}"
+    placeholder="" {% if record %}value="{{ record[field['column_name']] }}"{% endif %}
+    ></input>
+{% endblock %}

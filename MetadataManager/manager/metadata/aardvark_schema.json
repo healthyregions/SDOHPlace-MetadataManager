@@ -9,7 +9,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Descriptive",
-        "slug": "title"
+        "slug": "title",
+        "widget": "text-simple.html"
     },
     "alternative_title": {
         "label": "Alternative Title",
@@ -21,7 +22,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Descriptive",
-        "slug": "alternative-title"
+        "slug": "alternative-title",
+        "widget": "text-simple.html"
     },
     "description": {
         "label": "Description",
@@ -33,7 +35,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Descriptive",
-        "slug": "description"
+        "slug": "description",
+        "widget": "text-area.html"
     },
     "language": {
         "label": "Language",
@@ -48,7 +51,8 @@
         ],
         "schema": "Aardvark",
         "display_group": "Descriptive",
-        "slug": "language"
+        "slug": "language",
+        "widget": "select.html"
     },
     "display_note": {
         "label": "Display Note",
@@ -60,7 +64,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Descriptive",
-        "slug": "display-note"
+        "slug": "display-note",
+        "widget": "text-simple.html"
     },
     "creator": {
         "label": "Creator",
@@ -72,7 +77,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Credits",
-        "slug": "creator"
+        "slug": "creator",
+        "widget": "text-simple.html"
     },
     "publisher": {
         "label": "Publisher",
@@ -84,7 +90,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Credits",
-        "slug": "publisher"
+        "slug": "publisher",
+        "widget": "text-simple.html"
     },
     "provider": {
         "label": "Provider",
@@ -96,7 +103,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Credits",
-        "slug": "provider"
+        "slug": "provider",
+        "widget": "text-simple.html"
     },
     "resource_class": {
         "label": "Resource Class",
@@ -116,7 +124,8 @@
         ],
         "schema": "Aardvark",
         "display_group": "Categories",
-        "slug": "resource-class"
+        "slug": "resource-class",
+        "widget": "select.html"
     },
     "resource_type": {
         "label": "Resource Type",
@@ -210,7 +219,8 @@
         ],
         "schema": "Aardvark",
         "display_group": "Categories",
-        "slug": "resource-type"
+        "slug": "resource-type",
+        "widget": "select.html"
     },
     "subject": {
         "label": "Subject",
@@ -222,7 +232,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Categories",
-        "slug": "subject"
+        "slug": "subject",
+        "widget": "text-simple.html"
     },
     "theme": {
         "label": "Theme",
@@ -256,7 +267,8 @@
         ],
         "schema": "Aardvark",
         "display_group": "Categories",
-        "slug": "theme"
+        "slug": "theme",
+        "widget": "select.html"
     },
     "keyword": {
         "label": "Keyword",
@@ -268,7 +280,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Categories",
-        "slug": "keyword"
+        "slug": "keyword",
+        "widget": "text-simple.html"
     },
     "temporal_coverage": {
         "label": "Temporal Coverage",
@@ -280,7 +293,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Temporal",
-        "slug": "temporal-coverage"
+        "slug": "temporal-coverage",
+        "widget": "text-simple.html"
     },
     "date_issued": {
         "label": "Date Issued",
@@ -292,7 +306,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Temporal",
-        "slug": "date-issued"
+        "slug": "date-issued",
+        "widget": "text-simple.html"
     },
     "index_year": {
         "label": "Index Year",
@@ -304,7 +319,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Temporal",
-        "slug": "index-year"
+        "slug": "index-year",
+        "widget": "text-simple.html"
     },
     "date_range": {
         "label": "Date Range",
@@ -316,7 +332,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Temporal",
-        "slug": "date-range"
+        "slug": "date-range",
+        "widget": "text-simple.html"
     },
     "spatial_coverage": {
         "label": "Spatial Coverage",
@@ -328,7 +345,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Spatial",
-        "slug": "spatial-coverage"
+        "slug": "spatial-coverage",
+        "widget": "text-area.html"
     },
     "geometry": {
         "label": "Geometry",
@@ -340,7 +358,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Spatial",
-        "slug": "geometry"
+        "slug": "geometry",
+        "widget": "text-simple.html"
     },
     "bounding_box": {
         "label": "Bounding Box",
@@ -352,7 +371,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Spatial",
-        "slug": "bounding-box"
+        "slug": "bounding-box",
+        "widget": "text-simple.html"
     },
     "centroid": {
         "label": "Centroid",
@@ -364,7 +384,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Spatial",
-        "slug": "centroid"
+        "slug": "centroid",
+        "widget": "text-simple.html"
     },
     "georeferenced": {
         "label": "Georeferenced",
@@ -376,7 +397,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Spatial",
-        "slug": "georeferenced"
+        "slug": "georeferenced",
+        "widget": "checkbox.html"
     },
     "relation": {
         "label": "Relation",
@@ -388,7 +410,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Relations",
-        "slug": "relation"
+        "slug": "relation",
+        "widget": "text-simple.html"
     },
     "member_of": {
         "label": "Member Of",
@@ -400,7 +423,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Relations",
-        "slug": "member-of"
+        "slug": "member-of",
+        "widget": "text-simple.html"
     },
     "is_part_of": {
         "label": "Is Part Of",
@@ -412,7 +436,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Relations",
-        "slug": "is-part-of"
+        "slug": "is-part-of",
+        "widget": "text-simple.html"
     },
     "source": {
         "label": "Source",
@@ -424,7 +449,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Relations",
-        "slug": "source"
+        "slug": "source",
+        "widget": "text-simple.html"
     },
     "is_version_of": {
         "label": "Is Version Of",
@@ -436,7 +462,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Relations",
-        "slug": "is-version-of"
+        "slug": "is-version-of",
+        "widget": "text-simple.html"
     },
     "replaces": {
         "label": "Replaces",
@@ -448,7 +475,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Relations",
-        "slug": "replaces"
+        "slug": "replaces",
+        "widget": "text-simple.html"
     },
     "is_replaced_by": {
         "label": "Is Replaced By",
@@ -460,7 +488,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Relations",
-        "slug": "is-replaced-by"
+        "slug": "is-replaced-by",
+        "widget": "text-simple.html"
     },
     "rights": {
         "label": "Rights",
@@ -472,7 +501,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Rights",
-        "slug": "rights"
+        "slug": "rights",
+        "widget": "text-simple.html"
     },
     "rights_holder": {
         "label": "Rights Holder",
@@ -484,7 +514,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Rights",
-        "slug": "rights-holder"
+        "slug": "rights-holder",
+        "widget": "text-simple.html"
     },
     "license": {
         "label": "License",
@@ -496,7 +527,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Rights",
-        "slug": "license"
+        "slug": "license",
+        "widget": "text-simple.html"
     },
     "access_rights": {
         "label": "Access Rights",
@@ -511,7 +543,8 @@
         ],
         "schema": "Aardvark",
         "display_group": "Rights",
-        "slug": "access-rights"
+        "slug": "access-rights",
+        "widget": "select.html"
     },
     "format": {
         "label": "Format",
@@ -523,7 +556,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Object",
-        "slug": "format"
+        "slug": "format",
+        "widget": "text-simple.html"
     },
     "file_size": {
         "label": "File Size",
@@ -535,7 +569,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Object",
-        "slug": "file-size"
+        "slug": "file-size",
+        "widget": "text-simple.html"
     },
     "references": {
         "label": "References",
@@ -547,7 +582,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Links",
-        "slug": "references"
+        "slug": "references",
+        "widget": "text-area.html"
     },
     "wxs_indentifier": {
         "label": "WxS Identifier",
@@ -559,7 +595,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Links",
-        "slug": "wxs-indentifier"
+        "slug": "wxs-indentifier",
+        "widget": "text-simple.html"
     },
     "id": {
         "label": "ID",
@@ -571,7 +608,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Identifiers",
-        "slug": "id"
+        "slug": "id",
+        "widget": "id.html"
     },
     "identifier": {
         "label": "Identifier",
@@ -583,7 +621,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Identifiers",
-        "slug": "identifier"
+        "slug": "identifier",
+        "widget": "text-simple.html"
     },
     "modified": {
         "label": "Modified",
@@ -595,7 +634,8 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Admin",
-        "slug": "modified"
+        "slug": "modified",
+        "widget": "text-disabled.html"
     },
     "metadata_version": {
         "label": "Metadata Version",
@@ -610,7 +650,8 @@
         ],
         "schema": "Aardvark",
         "display_group": "Admin",
-        "slug": "metadata-version"
+        "slug": "metadata-version",
+        "widget": "select.html"
     },
     "suppressed": {
         "label": "Suppressed",
@@ -622,6 +663,7 @@
         "controlled_options": [],
         "schema": "Aardvark",
         "display_group": "Admin",
-        "slug": "suppressed"
+        "slug": "suppressed",
+        "widget": "checkbox.html"
     }
 }
