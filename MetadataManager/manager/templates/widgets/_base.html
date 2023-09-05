@@ -1,0 +1,16 @@
+<div class="{{ field['obligation'] }} form-group">
+    <div class="row">
+        <div class="col-3">
+            <label class="form-label" for="{{ field['column_name'] }}">
+                {{ field['label'] }}
+                {% if field['multiple'] %}+{% endif %}
+                {% if field['schema'] == "Aardvark" %}
+                    <a href="https://opengeometadata.org/ogm-aardvark/#{{ field['slug'] }}" target="_blank">&nearr;</a>
+                {% endif %}
+            </label>
+        </div>
+        <div class="col-9">
+        {% block input %}{% endblock %}
+        </div>
+    </div>
+</div>

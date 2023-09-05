@@ -1,0 +1,14 @@
+{% extends 'widgets/_base.html' %}
+
+{% block input %}
+<select class="form-select" name="{{ field['column_name'] }}"
+    placeholder="" 
+    {% if record %}value="{{ record[field['column_name']] }}"{% endif %}
+    {% if field['multiple'] %}multiple{% endif %}
+    >
+    <option></option>
+    {% for choice in field['controlled_options'] %}
+    <option value="{{ choice }}" {% if choice in record[field['column_name']].split("|") %}selected=true{% endif %}>{{ choice }}</option>
+    {% endfor %}
+</select>
+{% endblock %}

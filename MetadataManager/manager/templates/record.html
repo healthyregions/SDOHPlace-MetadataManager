@@ -10,7 +10,16 @@
             <table class="table table-striped">
                 <tbody style="overflow-x:auto;">
                     {% for field in fields %}
-                        {% include 'widgets/display.html' %}
+                    <tr class="{{ field['obligation'] }} display-group">
+                        <td scope="row" style="width:250px;">
+                            <span class="{{ field['obligation'] }}">{{ field['label'] }}</span>
+                            {% if field['multiple'] %}+{% endif %}
+                            {% if field['schema'] == 'Aardvark' %}
+                                <a href="https://opengeometadata.org/ogm-aardvark/#{{ field['slug'] }}" target="_blank">&nearr;</a>
+                            {% endif %}
+                        </td>
+                        <td>{{ record[field['column_name']] }}</td>
+                    </tr>
                     {% endfor %}
                 </tbody>
             </table>
