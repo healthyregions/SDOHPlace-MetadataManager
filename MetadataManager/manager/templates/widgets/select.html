@@ -1,5 +1,11 @@
 {% extends 'widgets/_base.html' %}
 
+{% block note %}
+{% if field['multiple'] %}
+<p><em>ctrl + click to select/deselect</em></p>
+{% endif %}
+{% endblock %}
+
 {% block input %}
 <select class="form-select" name="{{ field['column_name'] }}"
     placeholder="" 

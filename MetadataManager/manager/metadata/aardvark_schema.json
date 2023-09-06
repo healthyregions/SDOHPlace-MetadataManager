@@ -583,7 +583,7 @@
         "schema": "Aardvark",
         "display_group": "Links",
         "slug": "references",
-        "widget": "text-area.html"
+        "widget": "references.html"
     },
     "wxs_indentifier": {
         "label": "WxS Identifier",
