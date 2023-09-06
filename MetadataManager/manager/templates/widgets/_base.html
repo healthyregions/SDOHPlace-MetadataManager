@@ -8,6 +8,7 @@
                     <a href="https://opengeometadata.org/ogm-aardvark/#{{ field['slug'] }}" target="_blank">&nearr;</a>
                 {% endif %}
             </label>
+            {% block note %}{% endblock %}
         </div>
         <div class="col-9">
         {% block input %}{% endblock %}

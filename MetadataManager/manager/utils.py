@@ -44,28 +44,50 @@ GROUPED_FIELD_LOOKUP = {
 for k, v in FIELD_LOOKUP.items():
 	GROUPED_FIELD_LOOKUP[v['display_group']].append(v)
 
+def get_clean_field_from_form(form, field, field_def):
+	""" This function has bespoke logic for handling specific fields. """
+
+	value = form.get(field)
+	if value == "":
+		return None
+
+	if field == "references":
+		value_dict = {}
+		items = [i.rstrip() for i in value.split("\n")]
+		items = [i for i in items if i]
+		for i in items:
+			if "::" in i:
+				kvs = i.split("::")
+				value_dict[kvs[0]] = kvs[1].lstrip().rstrip()
+		return value_dict
+
+	if field_def['multiple']:
+		if field_def.get('widget') == 'text-area.html':
+			value = form.get(field)
+			print(value)
+			value = [i.rstrip() for i in value.split("\n")]
+			value = [i for i in value if i]
+			value = "|".join([i for i in value if i])
+			return value
+		else:
+			return "|".join(form.getlist(field))
+
+	if field_def['data_type'] == "boolean":
+		if value == "on":
+			return True
+		elif value == "off":
+			return False
+
+	return value
+	# raise Exception(f"unhandled field: {field}")
+
 def clean_form_data(form):
 
 	out_data = {}
 	# interrogate the form by looking for all specific values in it
 	for field, field_def in FIELD_LOOKUP.items():
-		if field_def['multiple']:
-			value = "|".join(form.getlist(field))
-		else:
-			value = form.get(field)
-		if value == "" or value == []:
-			value = None
-
-		if field == "references" and value:
-			value = json.loads(value.replace("'",'"'))
-
-		if field_def['data_type'] == "boolean":
-			if value == "on":
-				value = True
-			elif value == "off":
-				value = False
-
-		out_data[field] = value
+		clean_value = get_clean_field_from_form(form, field, field_def)
+		out_data[field] = clean_value
 	
 	return out_data
 

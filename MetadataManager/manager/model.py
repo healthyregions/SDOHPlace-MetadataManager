@@ -70,9 +70,7 @@ class RecordModel(db.Model):
         result = {}
         for i in self.__table__.columns:
             value = getattr(self, i.name)
-            if i.name == "references" and value is not None:
-                pass
-            elif i.name == "modified" and value is not None:
+            if i.name == "modified" and value is not None:
                 value = value.strftime("%Y-%m-%dT%H:%M:%SZ")
             elif FIELD_LOOKUP[i.name]['multiple'] and value is not None and not isinstance(value, int):
                 value = value.split("|")
@@ -85,8 +83,16 @@ class RecordModel(db.Model):
         data = {}
         for k, v in self.to_json().items():
             value = "" if v is None else v
+            if k == "references" and isinstance(value, dict):
+                lines = ""
+                for x, y in value.items():
+                    lines += f"{x}:: {y}\n"
+                value = lines
             if FIELD_LOOKUP[k]['multiple'] and isinstance(value, list):
-                value = "|".join(value)
+                if FIELD_LOOKUP[k].get('widget') == "text-area.html":
+                    value = "\n".join(value)
+                else:
+                    value = "|".join(value)
             data[k] = value
         return data
 
