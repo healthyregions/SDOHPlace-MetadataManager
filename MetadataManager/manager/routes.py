@@ -68,6 +68,7 @@ def handle_solr(id):
 	s = Solr()
 	if request.method == "POST":
 		result = s.index_record(id)
-		return jsonify(result)
+		r = Record()
+		return r.get(id, 'html')
 	elif request.method == "DELETE":
 		pass

@@ -30,11 +30,15 @@
         <div class="sidebar-content">
             <h2>Actions</h2>
             <div class="btn-group" role="group" aria-label="Action buttons">
-                <form action="{{ url_for('manager.handle_solr', id=record['id']) }}" method="post" target="_blank">
+                <form action="{{ url_for('manager.handle_solr', id=record['id']) }}" method="post">
                     <a href="{{ url_for('manager.handle_record', id=record['id']) }}?edit=true" class="btn btn-primary" role="button">Edit</a>
                     <button class="btn btn-info" name="index-btn" value="index" title="Index this record in SOLR (will overwrite existing record with same id)">Index</button>
                     <a href="{{ gbl_host }}/catalog/{{ record['id'] }}" class="btn btn-primary" role="button" target="_blank">View in GBL</a>
                 </form>
+            </div>
+            <div class="btn-group" role="group" aria-label="View buttons">
+                <a href="{{ url_for('manager.handle_record', id=record['id']) }}?f=json" class="btn btn-primary">JSON</a>
+                <a href="{{ url_for('manager.handle_record', id=record['id']) }}?f=solr" class="btn btn-primary">SOLR</a>
             </div>
         </div>
     </div>
