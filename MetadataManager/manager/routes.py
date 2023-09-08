@@ -67,8 +67,17 @@ def handle_record(id):
 def handle_solr(id):
 	s = Solr()
 	if request.method == "POST":
-		result = s.index_record(id)
-		r = Record()
-		return r.get(id, 'html')
+		# ultimately, reindex-all should be calling a method on Solr()
+		# but leaving here for the moment.
+		if id == "reindex-all":
+			s.delete_all()
+			records = RecordModel.query.order_by('title').all()
+			for r in records:
+				s.index_record(r.id)
+			return render_template('index.html', records=records)
+		else:
+			s.index_record(id)
+			r = Record()
+			return r.get(id, 'html')
 	elif request.method == "DELETE":
 		pass
