@@ -26,11 +26,12 @@
     <div class="col-3">
         <div class="sidebar-content">
             <h2>Actions</h2>
-            <div class="btn-group" role="group" aria-label="Action buttons">
+            <div class="btn-list">
                 <a href="{{ url_for('manager.create_record')}}" class="btn btn-primary">Create New Record</a>
-            </div>
-            <div>
-                <a href="{{ gbl_host }}" target="_blank">Go to GeoBlacklight</a>
+                <form style="width:100%" action="{{ url_for('manager.handle_solr', id='reindex-all') }}" method="post">
+                    <button class="btn btn-primary" style="width:100%"  name="index-btn" value="index" title="Clean and recreate the entire SOLR index from current records">Re-index all in SOLR</button>
+                </form>
+                <a href="{{ gbl_host }}"  class="btn btn-primary" target="_blank">Data Discovery App &rarr;</a>
             </div>
         </div>
     </div>

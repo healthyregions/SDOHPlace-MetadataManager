@@ -1,3 +1,36 @@
+:root {
+    --primary-color: #ff9c77;
+    --light-color: #FFDBA8;
+    --lighter-color: #FFE6C2;
+}
+
+.btn:hover {
+    color: black;
+    background-color: var(--light-color);
+    border-color: var(--light-color);
+}
+
+.btn:active {
+    color: black !important;
+    background-color: var(--lighter-color) !important;
+    border-color: var(--lighter-color) !important;
+}
+
+.btn-primary {
+    color: black;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-list {
+    display: flex;
+    flex-direction: column;
+
+}
+.btn-list > * {
+    margin-bottom: 5px;
+}
+
 
 .form-group {
     margin-top: 10px;
@@ -17,8 +50,6 @@
     text-align:center;
     margin:20px;
     padding:10px;
-    background: rgb(222, 255, 239);
-    box-shadow: 5px 5px 5px 5px rgb(222, 255, 239);
 }
 
 .message {
