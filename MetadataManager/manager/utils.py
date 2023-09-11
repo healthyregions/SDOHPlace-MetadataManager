@@ -30,8 +30,8 @@ FIELD_LOOKUP = generate_field_lookup()
 GROUPED_FIELD_LOOKUP = {
 	"Identifiers": [],
 	"Descriptive": [],
+	"SDOH Place Project": [],
 	"Credits": [],
-	"Extra": [],
 	"Categories": [],
 	"Temporal": [],
 	"Spatial": [],
