@@ -9,72 +9,48 @@ Database
 Data Collection
 
 ## Methods Variables
+
 ### Health outcomes
 Breast Cancer Deaths
-
 COVID Local Risk Index
-
 Cardiovascular Disease Deaths
-
 Colorectal Cancer Deaths
-
 Diabetes
-
 Firearm Homicides
-
 Firearm Suicides
-
 Frequent Mental Distress
-
 Frequent Physical Distress
-
 High Blood Pressure
-
 Life Expectancy
-
 Low Birthweight
-
 Obesity
-
 Opioid Overdose Deaths
-
 Premature Deaths (All Causes)
 
 ### Health Behavior
+
 Binge Drinking
-
 Physical Inactivity
-
 Smoking
-
 Teen Births
 
 ### Physical Environment
+
 Air Pollution (Ozone)
-
 Air Pollution (Particulate Matter)
-
 Housing with Potential Lead Risk
-
 Lead Exposure Risk Index
-
 Limited Access to Healthy Foods
-
 Park Access
-
 Walkability
 
 ### Clinical Care
+
 Dental Care
-
 Prenatal Care
-
 Preventive Services 65+
-
 Routine Checkup 18+
-
 Uninsured
-
 
 ## Data Variables
 (state_abbr, State Abbreviation)

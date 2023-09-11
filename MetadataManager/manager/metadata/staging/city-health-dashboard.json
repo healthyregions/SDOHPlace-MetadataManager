@@ -21,7 +21,9 @@
   "resource_class": [
     "Websites"
   ],
-  "resource_type": null,
+  "resource_type": [
+    ""
+  ],
   "subject": [
     "Health Behaviors",
     "Social and Economic Factors",
@@ -29,7 +31,9 @@
     "Health Outcomes",
     "Clinical Care"
   ],
-  "theme": null,
+  "theme": [
+    ""
+  ],
   "keyword": null,
   "temporal_coverage": [
     "2000-2018"
@@ -967,7 +971,7 @@
   "references": null,
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": "2023-07-05T19:39:44Z",
+  "modified": "2023-09-07T11:48:27Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": null,
   "spatial_resolution": [
