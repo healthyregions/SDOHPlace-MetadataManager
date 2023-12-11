@@ -62,6 +62,7 @@ class RecordModel(db.Model):
     spatial_resolution_note = db.Column(db.String)
     methods_variables = db.Column(db.String)
     data_variables = db.Column(db.String)
+    data_usage_notes = db.Column(db.String)
 
     def to_json(self):
         """ Full serialization of the record, splits multiple value fields

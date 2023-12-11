@@ -74,7 +74,7 @@ def handle_solr(id):
 			records = RecordModel.query.order_by('title').all()
 			for r in records:
 				s.index_record(r.id)
-			return render_template('index.html', records=records)
+			return redirect('/')
 		else:
 			s.index_record(id)
 			r = Record()

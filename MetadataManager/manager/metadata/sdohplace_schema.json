@@ -4,7 +4,7 @@
         "uri": "sdoh_spatial_resolution_sm",
         "data_type": "string",
         "multiple": true,
-        "obligation": "optional",
+        "obligation": "required",
         "controlled": true,
         "controlled_options": [
             "City",
@@ -16,7 +16,7 @@
             "Zip Code Tabulation Area (ZCTA)"
         ],
         "schema": "SDOH Place",
-        "display_group": "Extra",
+        "display_group": "SDOH Place Project",
         "slug": "spatial-resolution",
         "widget": "select.html"
     },
@@ -29,7 +29,7 @@
         "controlled": false,
         "controlled_options": [],
         "schema": "SDOH Place",
-        "display_group": "Extra",
+        "display_group": "SDOH Place Project",
         "slug": "spatial-resolution-note",
         "widget": "text-simple.html"
     },
@@ -38,11 +38,11 @@
         "uri": "sdoh_methods_variables_sm",
         "data_type": "string",
         "multiple": true,
-        "obligation": "optional",
+        "obligation": "suggested",
         "controlled": false,
         "controlled_options": [],
         "schema": "SDOH Place",
-        "display_group": "Extra",
+        "display_group": "SDOH Place Project",
         "slug": "methods-variables",
         "widget": "text-area.html"
     },
@@ -51,12 +51,25 @@
         "uri": "sdoh_data_variables_sm",
         "data_type": "string",
         "multiple": true,
+        "obligation": "suggested",
+        "controlled": false,
+        "controlled_options": [],
+        "schema": "SDOH Place",
+        "display_group": "SDOH Place Project",
+        "slug": "spatial-resolution",
+        "widget": "text-area.html"
+    },
+    "data_usage_notes": {
+        "label": "Data Usage Notes",
+        "uri": "sdoh_data_usage_notes_s",
+        "data_type": "string",
+        "multiple": false,
         "obligation": "optional",
         "controlled": false,
         "controlled_options": [],
         "schema": "SDOH Place",
-        "display_group": "Extra",
-        "slug": "spatial-resolution",
+        "display_group": "SDOH Place Project",
+        "slug": "data-usage-notes",
         "widget": "text-area.html"
     }
 }

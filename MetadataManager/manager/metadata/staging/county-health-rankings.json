@@ -5,7 +5,9 @@
   "description": [
     "The County Health Rankings provide a snapshot of a community's health and a starting point for investigating and discussing ways to improve health."
   ],
-  "language": null,
+  "language": [
+    "eng"
+  ],
   "display_note": null,
   "creator": [
     "County Health Rankings"
@@ -18,11 +20,15 @@
     "Datasets",
     "Websites"
   ],
-  "resource_type": null,
+  "resource_type": [
+    ""
+  ],
   "subject": [
     "Community Health"
   ],
-  "theme": null,
+  "theme": [
+    ""
+  ],
   "keyword": null,
   "temporal_coverage": [
     "2010-2023"
@@ -65,20 +71,11 @@
   "file_size": null,
   "references": {
     "http://schema.org/url": "https://www.countyhealthrankings.org/",
-    "http://schema.org/downloadUrl": [
-      {
-        "url": "https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation/national-data-documentation-2010-2019",
-        "label": "2010-2020"
-      },
-      {
-        "url": "https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation",
-        "label": "2021-2023"
-      }
-    ]
+    "http://schema.org/downloadUrl": "[{'url': 'https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation/national-data-documentation-2010-2019', 'label': '2010-2020'}, {'url': 'https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation', 'label': '2021-2023'}]"
   },
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": "2023-07-05T20:48:02Z",
+  "modified": "2023-09-08T14:26:32Z",
   "metadata_version": "Aardvark",
   "suppressed": null,
   "spatial_resolution": [
