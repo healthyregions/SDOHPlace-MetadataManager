@@ -1,10 +1,18 @@
 import os
+import csv
+import sys
 import json
+from pathlib import Path
 from sqlalchemy import func
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
+import geopandas as gpd
+from shapely.geometry import Polygon, MultiPolygon
+from shapely import unary_union
 
 from manager.utils import METADATA_DIR, FIELD_LOOKUP, STATE_FP_LOOKUP, COUNTY_LSAD_LOOKUP
+
+csv.field_size_limit(sys.maxsize)
 
 load_dotenv()
 
@@ -63,9 +71,11 @@ class RecordModel(db.Model):
     data_variables = db.Column(db.String)
     data_usage_notes = db.Column(db.String)
 
-    def to_json(self):
+    def to_json(self, enhance_geom=True):
         """ Full serialization of the record, splits multiple value fields
-        to lists and converts the references JSON string to dict."""
+        to lists and converts the references JSON string to dict.
+
+        enhance_geom=True will add extra geometry info to the relevant fields."""
 
         result = {}
         for i in self.__table__.columns:
@@ -75,6 +85,61 @@ class RecordModel(db.Model):
             elif FIELD_LOOKUP[i.name]['multiple'] and value is not None and not isinstance(value, int):
                 value = value.split("|")
             result[i.name] = value
+
+        if enhance_geom:
+            sres = result.get('spatial_resolution')
+            if sres:
+
+                if "County" in sres:
+                    df = gpd.read_file("https://github.com/GeoDaCenter/opioid-policy-scan/raw/main/data_final/geometryFiles/county/counties2018.shp")
+                    print(df)
+                    
+                    def make_name(row):
+                        if row[0] is None:
+                            return ""
+                        else:
+                            return f'{row[0]}{" " + COUNTY_LSAD_LOOKUP[row[1]] if COUNTY_LSAD_LOOKUP[row[1]] else ""}, {STATE_FP_LOOKUP[row[2]]}'
+
+                    df['cty_name'] = df[["NAME", "LSAD", "STATEFP"]].apply(lambda row: make_name(row), axis=1)
+                    result['spatial_coverage'] = list(df['cty_name'])
+
+
+                    def groupby_multipoly(df, by, aggfunc="first"):
+                        data = df.drop(labels=df.geometry.name, axis=1)
+                        aggregated_data = data.groupby(by=by).agg(aggfunc)
+
+                        # Process spatial component
+                        def merge_geometries(block):
+                            return MultiPolygon(block.values)
+
+                        g = df.groupby(by=by, group_keys=False)[df.geometry.name].agg(
+                            merge_geometries
+                        )
+
+                        # Aggregate
+                        aggregated_geometry = gpd.GeoDataFrame(g, geometry=df.geometry.name, crs=df.crs)
+                        # Recombine
+                        aggregated = aggregated_geometry.join(aggregated_data)
+                        return aggregated
+
+                    # grouped = groupby_multipoly(df, by='a')
+                    def convert_polygons(geom):
+
+                        if geom.geometryType() == "Polygon":
+                            return MultiPolygon([geom])
+                        else:
+                            return geom
+                        # return MultiPolygon(block.values)
+                    
+                    # g = df[df.geometry.name].agg(
+                    #         merge_geometries
+                    #     )
+                    # df["multipolygon"] = df[df.geometry.name].apply(lambda g: convert_polygons(g))
+                    # print(list(df[df.geometry.name]))
+                    single_geom = unary_union(df[df.geometry.name])
+
+                    result['geometry'] = single_geom.wkt
+
         return result
     
     def to_form(self):
@@ -96,14 +161,14 @@ class RecordModel(db.Model):
             data[k] = value
         return data
 
-    def to_solr(self):
+    def to_solr(self, enhance_geom=False):
         """A variation on to_json() that uses the SOLR uris instead, and
         omits empty fields. Plus some other value wrangling."""
 
         # use self.to_json() to parse all values, and then insert them into
         # a dictionary with the proper URIs as keys. The references field
         # must still be handled specially.
-        json_doc = self.to_json()
+        json_doc = self.to_json(enhance_geom=enhance_geom)
         solr_doc = {}
         for i in self.__table__.columns:
             value = getattr(self, i.name)
@@ -121,8 +186,3 @@ class RecordModel(db.Model):
         path = os.path.join(METADATA_DIR, 'staging', self.id + ".json")
         with open(path, "w") as f:
             json.dump(self.to_json(), f, indent=2)
-
-    def add_spatial_coverage(self):
-
-        print(self.spatial_resolution)
-

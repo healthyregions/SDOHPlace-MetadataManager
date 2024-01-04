@@ -10,6 +10,7 @@ SOLR_HOST = os.getenv('SOLR_HOST', '').rstrip('/')
 SOLR_CORE = os.getenv('SOLR_CORE', '').rstrip('/')
 
 SOLR_URL = f"{SOLR_HOST}/{SOLR_CORE}/"
+print(SOLR_URL)
 
 class Solr:
 
@@ -23,7 +24,7 @@ class Solr:
 	def index_record(self, record_id):
 		record = RecordModel.query.filter_by(id=record_id).first()
 		if record is not None:
-			solr_json = record.to_solr()
+			solr_json = record.to_solr(enhance_geom=True)
 			try:
 				self.add(solr_json)
 				result = {
