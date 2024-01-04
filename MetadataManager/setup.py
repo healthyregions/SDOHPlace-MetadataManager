@@ -10,5 +10,7 @@ setup(
         'Flask-SQLAlchemy',
         'pysolr',
         'python-dotenv',
+        'geopandas',
+        'gunicorn',
     ],
 )
