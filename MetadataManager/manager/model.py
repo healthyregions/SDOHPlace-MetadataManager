@@ -4,10 +4,9 @@ from sqlalchemy import func
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
 
-from manager.utils import FIELD_LOOKUP
+from manager.utils import METADATA_DIR, FIELD_LOOKUP, STATE_FP_LOOKUP, COUNTY_LSAD_LOOKUP
 
 load_dotenv()
-METADATA_DIR = os.getenv('METADATA_DIR')
 
 db = SQLAlchemy()
 

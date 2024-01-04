@@ -5,11 +5,8 @@ from dotenv import load_dotenv
 
 from .model import RecordModel
 
-load_dotenv()
-
-METADATA_DIR = os.getenv("METADATA_DIR")
-
 from manager.service.ingest import Ingest
+from manager.utils import METADATA_DIR
 
 @click.command()
 @with_appcontext
