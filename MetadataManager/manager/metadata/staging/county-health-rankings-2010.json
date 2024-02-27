@@ -50,9 +50,9 @@
   },
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": "2023-09-08T15:11:31Z",
+  "modified": "2023-09-11T14:07:08Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": null,
   "spatial_resolution": [
     "County"
   ],
@@ -250,5 +250,6 @@
     "Contaminants in municipal water (WI) denominator",
     "Contaminants in municipal water (WI) CI low",
     "Contaminants in municipal water (WI) CI high"
-  ]
+  ],
+  "data_usage_notes": null
 }

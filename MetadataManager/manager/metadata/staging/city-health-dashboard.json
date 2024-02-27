@@ -971,7 +971,7 @@
   "references": null,
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": "2023-09-07T11:48:27Z",
+  "modified": "2024-02-07T21:06:15Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": null,
   "spatial_resolution": [
@@ -979,5 +979,6 @@
   ],
   "spatial_resolution_note": null,
   "methods_variables": null,
-  "data_variables": null
+  "data_variables": null,
+  "data_usage_notes": null
 }

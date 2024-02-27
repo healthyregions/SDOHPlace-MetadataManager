@@ -25,7 +25,7 @@
   "keyword": null,
   "temporal_coverage": null,
   "date_issued": "2015",
-  "index_year": null,
+  "index_year": 2015,
   "date_range": null,
   "spatial_coverage": null,
   "geometry": null,
@@ -50,7 +50,7 @@
   "references": null,
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": "2023-09-08T15:38:46Z",
+  "modified": "2024-01-30T20:17:25Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
