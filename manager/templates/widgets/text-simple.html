@@ -1,0 +1,13 @@
+{% extends 'widgets/_base.html' %}
+
+{% block note %}
+{% if field['multiple'] %}
+<p><em>use | to separate values</em></p>
+{% endif %}
+{% endblock %}
+
+{% block input %}
+<input class="form-control" type="text" name="{{ field['column_name'] }}"
+    placeholder="" {% if record %}value="{{ record[field['column_name']] }}"{% endif %}
+    ></input>
+{% endblock %}

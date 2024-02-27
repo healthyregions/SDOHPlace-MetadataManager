@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="post" id="edit-form">
+    <div class="row">
+        <div class="col-9 main-content">
+            <h1>{% block title %}{% if record['id'] %}Editing: {{ record['title'] }}{% else %}Create a new record{% endif %}{% endblock %}</h1>
+            {% for group_name, fields in field_groups.items() %}
+            <div class="mb-3">
+            <div style="background:light-grey;">
+                <h2>{{ group_name }}</h2>
+                {% for field in fields %}
+                    <!-- allow explict widget setting, but default to data type also -->
+                    {% if field['widget'] %}
+                        {% include 'widgets/' + field['widget'] %}
+                    {% else %}
+                        <span><em>(no widget configured, using default)</em></span>
+                        {% include 'widgets/text-simple.html' %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+        <div class="col-3">
+            <div class="sidebar-content">
+                <h2>Actions</h2>
+                <div class="btn-list">
+                    <button type="submit" style="width:100%;" class="btn btn-primary">Save</button>
+                    <a href="{{ url_for('manager.handle_record', id=record['id']) }}" class="btn btn-primary" role="button">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}

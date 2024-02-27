@@ -1,6 +1,0 @@
-{% extends 'widgets/_base.html' %}
-
-{% block input %}
-<input class="form-control" type="text" name="{{ field['column_name'] }}" {% if record['id'] %}readonly="readonly"{% endif %}
-    {% if record %}value="{{ record[field['column_name']] }}"{% endif %}></input>
-{% endblock %}
