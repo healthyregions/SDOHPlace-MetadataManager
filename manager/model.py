@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 from sqlalchemy import func
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import UserMixin
 from dotenv import load_dotenv
 import geopandas as gpd
 from shapely.geometry import Polygon, MultiPolygon
@@ -18,6 +19,11 @@ csv.field_size_limit(sys.maxsize)
 load_dotenv()
 
 db = SQLAlchemy()
+
+class User(UserMixin):
+    def __init__(self, email, password):
+        self.id = email
+        self.password = password
 
 class RecordModel(db.Model):
     __tablename__ = 'records'

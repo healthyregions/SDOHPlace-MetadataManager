@@ -4,6 +4,10 @@ from dotenv import load_dotenv
 
 from flask import Blueprint, request, render_template, jsonify, url_for, redirect
 from flask_cors import CORS
+from flask_login import (
+    current_user,
+    login_required,
+)
 
 from manager.model import RecordModel, db
 from manager.utils import GROUPED_FIELD_LOOKUP, clean_form_data
@@ -43,10 +47,13 @@ def place():
 
 @crud.route("/", methods=["GET"])
 def index():
+	print("user?")
+	print(current_user.is_authenticated)
 	records = RecordModel.query.order_by('title').all()
-	return render_template('index.html', records=records)
+	return render_template('index.html', records=records, user=current_user)
 
 @crud.route("/record/create", methods=["GET"])
+@login_required
 def create_record():
 	if request.method == "GET":
 		return Record().get(edit=True)
@@ -58,12 +65,14 @@ def handle_record(id):
 		f = request.args.get('f', 'html')
 		e = request.args.get('edit') == "true"
 		return r.get(id, f, edit=e)
-	elif request.method == "POST":
-		return r.post(request.form)
-	elif request.method == "DELETE":
-		pass
+	if current_user.is_authenticated:
+		if request.method == "POST":
+			return r.post(request.form)
+		elif request.method == "DELETE":
+			pass
 
 @crud.route("/solr/<id>", methods=["POST", "DELETE"])
+@login_required
 def handle_solr(id):
 	s = Solr()
 	if request.method == "POST":

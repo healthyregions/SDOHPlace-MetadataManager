@@ -3,6 +3,7 @@ scripts/.log
 
 # our SQLITE database files
 *.db
+users.json
 
 .fuse*
 

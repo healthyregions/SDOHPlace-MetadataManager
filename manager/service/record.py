@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from flask import Blueprint, request, render_template, jsonify, url_for, redirect
+from flask_login import current_user
 
 from manager.model import RecordModel, db
 from manager.utils import clean_form_data
@@ -14,9 +15,9 @@ class Record:
 			record = RecordModel.query.get_or_404(id)
 		if format == "html":
 			if edit:
-				return render_template('edit.html', record=record.to_form())
+				return render_template('edit.html', record=record.to_form(), user=current_user)
 			else:
-				return render_template('record.html', record=record.to_json())
+				return render_template('record.html', record=record.to_json(), user=current_user)
 		elif format == "json":
 			return jsonify(record.to_json())
 		elif format == "solr":
