@@ -11,6 +11,7 @@ from manager.commands import (
     load_from_staging,
     save_to_staging,
     add_spatial_coverage,
+    index,
 )
 load_dotenv()
 
@@ -19,6 +20,7 @@ CORS(app)
 
 app.cli.add_command(migrate_legacy_markdown)
 app.cli.add_command(load_from_staging)
+app.cli.add_command(index)
 app.cli.add_command(save_to_staging)
 app.cli.add_command(add_spatial_coverage)
 

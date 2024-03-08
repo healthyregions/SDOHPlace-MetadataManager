@@ -71,13 +71,12 @@ def handle_solr(id):
 		# but leaving here for the moment.
 		if id == "reindex-all":
 			s.delete_all()
-			records = RecordModel.query.order_by('title').all()
-			for r in records:
-				s.index_record(r.id)
+			records = [i.to_solr() for i in RecordModel.query.order_by('title').all()]
+			s.multi_add(records)
 			return redirect('/')
 		else:
-			s.index_record(id)
-			r = Record()
-			return r.get(id, 'html')
+			r = RecordModel.query.get(id)
+			r.index()
+			return Record().get(id, 'html')
 	elif request.method == "DELETE":
 		pass

@@ -1,9 +1,9 @@
 import os
 import click
 from flask.cli import with_appcontext
-from dotenv import load_dotenv
 
 from .model import RecordModel
+from .service.solr import Solr
 
 from manager.service.ingest import Ingest
 from manager.utils import METADATA_DIR
@@ -28,9 +28,25 @@ def migrate_legacy_markdown(file_dir):
 @click.option('--clean-index', is_flag=True, default=False)
 def load_from_staging(clean_db, clean_index):
 	"""Reset all database content from the local JSON files."""
-
 	i = Ingest()
 	i.load_from_staging(os.path.join(METADATA_DIR, 'staging'), clean_db=clean_db, clean_index=clean_index)
+
+@click.command()
+@with_appcontext
+@click.option('--all', is_flag=True, default=False)
+@click.option('--clean', is_flag=True, default=False)
+def index(all, clean):
+	"""Reset all database content from the local JSON files."""
+
+	s = Solr()
+	if clean:
+		s.delete_all()
+	records = RecordModel.query.all()
+	for r in records:
+		result = r.index(solr_instance=s)
+		if not result['success']:
+			print(result)
+			exit()
 
 @click.command()
 @with_appcontext

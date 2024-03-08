@@ -11,6 +11,7 @@ from shapely.geometry import Polygon, MultiPolygon
 from shapely import unary_union
 
 from manager.utils import METADATA_DIR, FIELD_LOOKUP, STATE_FP_LOOKUP, COUNTY_LSAD_LOOKUP
+from manager.service.solr import Solr
 
 csv.field_size_limit(sys.maxsize)
 
@@ -180,6 +181,23 @@ class RecordModel(db.Model):
                 uri = FIELD_LOOKUP[i.name]['uri']
                 solr_doc[uri] = value
         return solr_doc
+
+    def index(self, solr_instance=None):
+        solr_doc = self.to_solr()
+        if not solr_instance:
+            solr_instance = Solr()
+        try:
+            solr_instance.add(solr_doc)
+            result = {
+                "success": True,
+                "document": solr_doc
+            }
+        except Exception as e:
+            result = {
+                "success": False,
+                "error": str(e)
+            }
+        return result
 
     def export_to_staging(self):
 
