@@ -7,7 +7,6 @@ setup(
     install_requires=[
         'Flask',
         'Flask-Cors',
-        'Flask-SQLAlchemy',
         'Flask-Login',
         'pysolr',
         'python-dotenv',

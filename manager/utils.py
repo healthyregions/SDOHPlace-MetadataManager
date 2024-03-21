@@ -1,50 +1,10 @@
 import os
-import json
 
 from dotenv import load_dotenv
 
 load_dotenv()
 
 METADATA_DIR = os.path.join(os.path.dirname(__file__), "metadata")
-
-print(__file__)
-
-def generate_field_lookup():
-	""" Aggregates the field definition JSON from one or more JSON files,
-	returns single dictionary."""
-	lookup = dict()
-	schema_files = [
-		os.path.join(METADATA_DIR, 'aardvark_schema.json'),
-		os.path.join(METADATA_DIR, 'sdohplace_schema.json'),
-	]
-	for path in schema_files:
-		with open(path, 'r') as o:
-			lookup.update(json.load(o))
-
-	for k, v in lookup.items():
-		v['column_name'] = k
-	return lookup
-
-FIELD_LOOKUP = generate_field_lookup()
-
-# this allows us to set the order of the display groups
-# (we want the Identifiers group at the top)
-GROUPED_FIELD_LOOKUP = {
-	"Identifiers": [],
-	"Descriptive": [],
-	"SDOH Place Project": [],
-	"Credits": [],
-	"Categories": [],
-	"Temporal": [],
-	"Spatial": [],
-	"Relations": [],
-	"Rights": [],
-	"Object": [],
-	"Links": [],
-	"Admin": [],
-}
-for k, v in FIELD_LOOKUP.items():
-	GROUPED_FIELD_LOOKUP[v['display_group']].append(v)
 
 def get_clean_field_from_form(form, field, field_def):
 	""" This function has bespoke logic for handling specific fields. """
@@ -79,17 +39,6 @@ def get_clean_field_from_form(form, field, field_def):
 			return False
 
 	return value
-	# raise Exception(f"unhandled field: {field}")
-
-def clean_form_data(form):
-
-	out_data = {}
-	# interrogate the form by looking for all specific values in it
-	for field, field_def in FIELD_LOOKUP.items():
-		clean_value = get_clean_field_from_form(form, field, field_def)
-		out_data[field] = clean_value
-	
-	return out_data
 
 STATE_POSTAL = {
 	'alabama': 'al',

@@ -1,5 +1,4 @@
 import os
-import json
 from dotenv import load_dotenv
 
 from flask import Blueprint, request, render_template, jsonify, url_for, redirect
@@ -10,9 +9,8 @@ from flask_login import (
 )
 from werkzeug.exceptions import NotFound, Unauthorized
 
-from manager.model import RecordModel, db, Registry
-from manager.service.ingest import Ingest
-from manager.service.solr import Solr
+from manager.model import Registry
+from manager.solr import Solr
 
 
 load_dotenv()
@@ -27,30 +25,15 @@ SOLR_URL = f"{SOLR_HOST}/{SOLR_CORE}/"
 registry = Registry()
 
 crud = Blueprint('manager', __name__)
-ingest = Blueprint('ingest', __name__)
 
-CORS(ingest)
 CORS(crud)
 
-@ingest.context_processor
 @crud.context_processor
 def get_context():
 	return dict(
 		gbl_host=GBL_HOST,
 		field_groups=registry.get_grouped_schema_fields(),
 	)
-
-@ingest.route("/ingest", methods=["GET", "POST", "PATCH", "DELETE"])
-def place():
-	ingest = Ingest()
-	if request.method == "GET":
-		return ingest.get(request)
-	elif request.method == "POST":
-		return ingest.set(request)
-	elif request.method == "PATCH":
-		return ingest.update(request)
-	elif request.method == "DELETE":
-		return  ingest.delete(request)
 
 @crud.route("/", methods=["GET"])
 def index():
