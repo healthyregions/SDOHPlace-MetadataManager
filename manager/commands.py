@@ -75,3 +75,12 @@ def add_spatial_coverage(record_id):
 			# if not sr in sr_values:
 			# 	val = get_spatial_coverage_values(sr)
 			# 	sr_values[sr] = val
+
+@click.command()
+@with_appcontext
+def inspect_schema():
+
+	from .model import Registry
+
+	registry = Registry()
+	registry.get_all()

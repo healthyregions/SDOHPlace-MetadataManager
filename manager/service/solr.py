@@ -5,7 +5,6 @@ SOLR_HOST = os.getenv('SOLR_HOST', '').rstrip('/')
 SOLR_CORE = os.getenv('SOLR_CORE', '').rstrip('/')
 
 SOLR_URL = f"{SOLR_HOST}/{SOLR_CORE}/"
-print(SOLR_URL)
 
 class Solr:
 

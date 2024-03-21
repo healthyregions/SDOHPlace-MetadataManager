@@ -17,6 +17,8 @@
 }
 
 .btn-primary {
+    min-height: 30px;
+    padding: 2px 8px;
     color: black;
     background-color: var(--primary-color);
     border-color: var(--primary-color);

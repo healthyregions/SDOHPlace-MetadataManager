@@ -4,6 +4,7 @@ import sys
 import json
 from pathlib import Path
 from sqlalchemy import func
+from datetime import datetime
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
 from dotenv import load_dotenv
@@ -11,7 +12,7 @@ import geopandas as gpd
 from shapely.geometry import Polygon, MultiPolygon
 from shapely import unary_union
 
-from manager.utils import METADATA_DIR, FIELD_LOOKUP, STATE_FP_LOOKUP, COUNTY_LSAD_LOOKUP
+from manager.utils import METADATA_DIR, FIELD_LOOKUP, STATE_FP_LOOKUP, COUNTY_LSAD_LOOKUP, get_clean_field_from_form
 from manager.service.solr import Solr
 
 csv.field_size_limit(sys.maxsize)
@@ -24,6 +25,237 @@ class User(UserMixin):
     def __init__(self, email, password):
         self.id = email
         self.password = password
+
+class Field():
+
+    def __init__(self, **kwargs):
+        for k, v in kwargs.items():
+            self.__setattr__(k, v)
+
+    def validate(self, value):
+
+        errors = []
+        if isinstance(value, list):
+            values_list = value
+            if not self.multiple:
+                msg = f"{self.label} -- Multi-value not allowed. Got: {value}"
+                print(msg)
+                errors.append(msg)
+        else:
+            values_list = [value]
+        for val in values_list:
+            if val and (self.controlled and val not in self.controlled_options):
+                msg = f"{self.label} -- {val} not in list of acceptable values"
+                print(msg)
+                errors.append(msg)
+        return errors
+
+
+class RecordSchema():
+
+    lookup: dict = {}
+
+    @property
+    def fields(self):
+        return list(self.lookup.values())
+
+    def from_schema_files(self, file_list):
+
+        for path in file_list:
+            with open(path, 'r') as o:
+                schema_json = json.load(o)
+                for k, v in schema_json.items():
+                    f = Field(**v)
+                    self.lookup[k] = f
+
+        for k, v in self.lookup.items():
+            v.column_name = k
+
+        return self
+
+
+class Record():
+
+    schema: RecordSchema = None
+
+    def __init__(self, schema: RecordSchema, **kwargs):
+
+        self.schema = schema
+        for k, v in kwargs.items():
+            self.__setattr__(k, v)
+
+    def validate(self):
+        """ validate this record against its schema. """
+
+        errors = []
+        for key, field in self.schema.lookup.items():
+            value = self.get_value(key)
+            errors += field.validate(value)
+
+        return errors
+
+    def get_value(self, field_name):
+        try:
+            return self.__getattribute__(field_name)
+        except AttributeError:
+            return None
+
+    def to_json(self):
+        return {k: self.get_value(k) for k in self.schema.lookup.keys()}
+
+    def to_form(self):
+        """ Prepares the raw backend data to populate an html form. """
+
+        data = {}
+        for key, field in self.schema.lookup.items():
+            value = self.get_value(key)
+            if not value:
+                value = ""
+            if key == "references" and isinstance(value, dict):
+                lines = ""
+                for x, y in value.items():
+                    lines += f"{x}:: {y}\n"
+                value = lines
+            if field.multiple and isinstance(value, list):
+                if field.widget == "text-area.html":
+                    value = "\n".join(value)
+                else:
+                    value = "|".join(value)
+            data[key] = value
+        return data
+
+    def to_solr(self):
+        """A variation on to_json() that uses the SOLR uris instead, and
+        omits empty fields. Plus some other value wrangling."""
+
+        solr_doc = {}
+        for key, field in self.schema.lookup.items():
+            value = self.get_value(key)
+            if value is not None:
+                if key == "references":
+                    value = json.dumps(value)
+                solr_doc[field.uri] = value
+        return solr_doc
+
+    def save(self, index=True):
+
+        self.metadata_version = "SDOH PlaceProject"
+        self.modified = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
+        record_file = Path(METADATA_DIR, "staging", self.id+".json")
+        with open(record_file, "w") as o:
+            json.dump(self.to_json(), o, indent=2)
+        
+        if index:
+            self.index()
+
+    def index(self, solr_instance=None):
+        solr_doc = self.to_solr()
+        if not solr_instance:
+            solr_instance = Solr()
+        try:
+            solr_instance.add(solr_doc)
+            result = {
+                "success": True,
+                "document": solr_doc
+            }
+        except Exception as e:
+            result = {
+                "success": False,
+                "error": str(e)
+            }
+        return result
+
+
+class Registry():
+
+    def __init__(self):
+
+        schema = RecordSchema().from_schema_files([
+            os.path.join(METADATA_DIR, 'aardvark_schema.json'),
+            os.path.join(METADATA_DIR, 'sdohplace_schema.json'),
+        ])
+        self.schema = schema
+
+    def get_grouped_schema_fields(self):
+        grouped_lookup = {
+            "Identifiers": [],
+            "Descriptive": [],
+            "SDOH Place Project": [],
+            "Credits": [],
+            "Categories": [],
+            "Temporal": [],
+            "Spatial": [],
+            "Relations": [],
+            "Rights": [],
+            "Object": [],
+            "Links": [],
+            "Admin": [],
+        }
+        for k, v in self.schema.lookup.items():
+            grouped_lookup[v.display_group].append(v.__dict__)
+        return grouped_lookup
+
+    def load_record_from_file(self, file_path):
+
+        with open(file_path, "r") as o:
+            record_json = json.load(o)
+            record = Record(self.schema, **record_json)
+            errors = record.validate()
+            if errors:
+                print(errors)
+            return record
+
+    def load_record_from_form_data(self, form_data):
+
+        cleaned_data = {}
+        for field, field_def in self.schema.lookup.items():
+            clean_value = get_clean_field_from_form(form_data, field, field_def)
+            cleaned_data[field] = clean_value
+        record = Record(self.schema, **cleaned_data)
+
+        return record
+
+    def get(self, record_id, format: str = None):
+
+        record_file = Path(METADATA_DIR, "staging", record_id+".json")
+        if not record_file.is_file():
+            return None
+
+        record = self.load_record_from_file(record_file)
+        print(record)
+
+        if format == "json":
+            return record.to_json()
+        elif format == "solr":
+            return record.to_solr()
+        elif format == "form-data":
+            return record.to_form()
+        else:
+            return record
+
+    def get_all(self, format: str = None, sort_by: str = "title"):
+
+        files = Path(METADATA_DIR, "staging").glob("*.json")
+        ids = [i.stem for i in files]
+        records = [self.get(i, format=format) for i in ids]
+        records.sort(key=lambda x: x[sort_by])
+        return records
+    
+    def get_blank_record(self):
+
+        blank = {}
+        for k, v in self.schema.lookup.items():
+            if v.multiple:
+                val = []
+            elif k == "references":
+                val = {}
+            else:
+                val = None
+            blank[k] = val
+        record = Record(self.schema, **blank)
+
+        return record
+
 
 class RecordModel(db.Model):
     __tablename__ = 'records'

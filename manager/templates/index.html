@@ -12,12 +12,12 @@
                     <td style="display:flex; justify-content: space-between;">
                         <div><strong>{{record['title']}}</strong></div>
                         <div class="button-group">
-                            <a href="{{ url_for('manager.handle_record', id=record['id']) }}" class="btn btn-primary">View</a>
+                            <a href="{{ url_for('manager.handle_record', id=record.id) }}" class="btn btn-primary">View</a>
                             {% if user.is_authenticated %}
-                            <a href="{{ url_for('manager.handle_record', id=record['id']) }}?edit=true" class="btn btn-primary">Edit</a>
+                            <a href="{{ url_for('manager.handle_record', id=record.id) }}?edit=true" class="btn btn-primary">Edit</a>
                             {% endif %}
-                            <a href="{{ url_for('manager.handle_record', id=record['id']) }}?f=json" class="btn btn-primary">JSON</a>
-                            <a href="{{ url_for('manager.handle_record', id=record['id']) }}?f=solr" class="btn btn-primary">SOLR</a>
+                            <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=json" class="btn btn-primary">JSON</a>
+                            <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=solr" class="btn btn-primary">SOLR</a>
                         </div>
                     <td>
                 </tr>
@@ -32,10 +32,21 @@
                 <a href="{{ url_for('manager.create_record')}}" class="btn btn-primary">Create New Record</a>
                 {% if user.is_authenticated %}
                 <form style="width:100%" action="{{ url_for('manager.handle_solr', id='reindex-all') }}" method="post">
-                    <button class="btn btn-primary" style="width:100%"  name="index-btn" value="index" title="Clean and recreate the entire SOLR index from current records">Re-index all in SOLR</button>
+                    <button class="btn btn-primary" style="width:100%"  name="index-btn" value="index" title="Clean and recreate the entire Solr index from current records">Refresh Solr Index</button>
                 </form>
                 {% endif %}
-                <a href="{{ gbl_host }}"  class="btn btn-primary" target="_blank">Data Discovery App &rarr;</a>
+            </div>
+            <h2>Links</h2>
+            <div class="btn-list">
+                <a href="{{ gbl_host }}"  class="btn btn-primary" target="_blank">GeoBlacklight Install &rarr;</a>
+                <a href="https://sdohplace.org/search"  class="btn btn-primary" target="_blank">SDOH Place Data Discovery App &rarr;</a>
+            </div>
+            <h3>Info</h3>
+            <div style="font-size:.8em;">
+                {% if user.is_authenticated %}
+                Solr Host: {{ solr.host }}<br>
+                {% endif %}
+                Solr Core: {{ solr.core }}
             </div>
         </div>
     </div>

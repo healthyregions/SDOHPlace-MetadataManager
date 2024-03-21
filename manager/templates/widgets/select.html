@@ -1,22 +1,22 @@
 {% extends 'widgets/_base.html' %}
 
 {% block note %}
-{% if field['multiple'] %}
-<p><em>ctrl + click to select/deselect</em></p>
+{% if field.multiple %}
+<p><em>ctrl + click to select/deselect multiple items</em></p>
 {% endif %}
 {% endblock %}
 
 {% block input %}
-<select class="form-select" name="{{ field['column_name'] }}"
+<select class="form-select" name="{{ field.column_name }}"
     placeholder="" 
-    {% if record %}value="{{ record[field['column_name']] }}"{% endif %}
-    {% if field['multiple'] %}multiple{% endif %}
+    {% if record %}value="{{ record[field.column_name] }}"{% endif %}
+    {% if field.multiple %}multiple{% endif %}
     >
-    {% if not field['multiple'] %}
+    {% if not field.multiple %}
     <option></option>
     {% endif %}
-    {% for choice in field['controlled_options'] %}
-    <option value="{{ choice }}" {% if choice in record[field['column_name']].split("|") %}selected=true{% endif %}>{{ choice }}</option>
+    {% for choice in field.controlled_options %}
+    <option value="{{ choice }}" {% if choice in record[field.column_name].split("|") %}selected=true{% endif %}>{{ choice }}</option>
     {% endfor %}
 </select>
 {% endblock %}

@@ -63,18 +63,16 @@ def get_clean_field_from_form(form, field, field_def):
 				value_dict[kvs[0]] = kvs[1].lstrip().rstrip()
 		return value_dict
 
-	if field_def['multiple']:
-		if field_def.get('widget') == 'text-area.html':
+	if field_def.multiple:
+		if field_def.widget == "select.html":
+			value = form.getlist(field)
+		if field_def.widget == 'text-area.html':
 			value = form.get(field)
-			print(value)
 			value = [i.rstrip() for i in value.split("\n")]
 			value = [i for i in value if i]
-			value = "|".join([i for i in value if i])
 			return value
-		else:
-			return "|".join(form.getlist(field))
 
-	if field_def['data_type'] == "boolean":
+	if field_def.data_type == "boolean":
 		if value == "on":
 			return True
 		elif value == "off":

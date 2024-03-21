@@ -26,6 +26,7 @@ from manager.commands import (
     save_to_staging,
     add_spatial_coverage,
     index,
+    inspect_schema,
 )
 load_dotenv()
 
@@ -55,6 +56,7 @@ app.cli.add_command(load_from_staging)
 app.cli.add_command(index)
 app.cli.add_command(save_to_staging)
 app.cli.add_command(add_spatial_coverage)
+app.cli.add_command(inspect_schema)
 
 database_file = f'sqlite:///{PROJECT_DIR}/dev.db'
 

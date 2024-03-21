@@ -1,9 +1,8 @@
 {
-  "id": "adi-2020",
   "title": "Area Deprivation Index (ADI) 2020",
   "alternative_title": null,
   "description": null,
-  "language": null,
+  "language": [],
   "display_note": null,
   "creator": null,
   "publisher": null,
@@ -11,11 +10,9 @@
   "resource_class": [
     "Datasets"
   ],
-  "resource_type": null,
-  "subject": [
-    "Area Deprivation Index"
-  ],
-  "theme": null,
+  "resource_type": [],
+  "subject": "Area Deprivation Index",
+  "theme": [],
   "keyword": null,
   "temporal_coverage": null,
   "date_issued": "2020",
@@ -30,9 +27,7 @@
   "member_of": null,
   "is_part_of": null,
   "source": null,
-  "is_version_of": [
-    "neighborhood-atlas"
-  ],
+  "is_version_of": "neighborhood-atlas",
   "replaces": null,
   "is_replaced_by": null,
   "rights": null,
@@ -43,8 +38,9 @@
   "file_size": null,
   "references": null,
   "wxs_indentifier": null,
-  "identifier": null,
-  "modified": "2023-07-05T18:33:07Z",
+  "id": "adi-2020",
+  "identifier": "wdefefef",
+  "modified": "2024-03-21T17:31:51Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -53,5 +49,8 @@
   ],
   "spatial_resolution_note": null,
   "methods_variables": null,
-  "data_variables": null
+  "data_variables": [
+    "aef"
+  ],
+  "data_usage_notes": null
 }

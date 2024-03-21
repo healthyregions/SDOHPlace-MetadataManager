@@ -12,12 +12,12 @@
                     {% for field in fields %}
                     <tr class="display-group">
                         <td scope="row" style="width:250px;">
-                            <span class="{{ field['obligation'] }} form-label">
-                                {{ field['label'] }}
-                                {% if field['multiple'] %}+{% endif %}
+                            <span class="{{ field.obligation }} form-label">
+                                {{ field.label }}
+                                {% if field.multiple %}+{% endif %}
                             </span>
-                            {% if field['schema'] == 'Aardvark' %}
-                                <a href="https://opengeometadata.org/ogm-aardvark/#{{ field['slug'] }}" target="_blank">&nearr;</a>
+                            {% if field.schema == 'Aardvark' %}
+                                <a href="https://opengeometadata.org/ogm-aardvark/#{{ field.slug }}" target="_blank">&nearr;</a>
                             {% endif %}
                         </td>
                         <td>{{ record[field['column_name']] }}</td>
@@ -33,14 +33,14 @@
             <h2>Actions</h2>
             <div class="btn-list">
                 {% if user.is_authenticated %}
-                <a href="{{ url_for('manager.handle_record', id=record['id']) }}?edit=true" class="btn btn-primary" role="button">Edit this record</a>
-                <form style="width:100%" action="{{ url_for('manager.handle_solr', id=record['id']) }}" method="post">
+                <a href="{{ url_for('manager.handle_record', id=record.id) }}?edit=true" class="btn btn-primary" role="button">Edit this record</a>
+                <form style="width:100%" action="{{ url_for('manager.handle_solr', id=record.id) }}" method="post">
                     <button class="btn btn-primary" style="width:100%"  name="index-btn" value="index" title="Index this record in SOLR (will overwrite existing record with same id)">Re-index in SOLR</button>
                 </form>
                 {% endif %}
-                <a href="{{ url_for('manager.handle_record', id=record['id']) }}?f=json" class="btn btn-primary">View JSON document</a>
-                <a href="{{ url_for('manager.handle_record', id=record['id']) }}?f=solr" class="btn btn-primary">View SOLR document</a>
-                <a href="{{ gbl_host }}/catalog/{{ record['id'] }}" class="btn btn-primary" role="button" target="_blank">View in GBL</a>
+                <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=json" class="btn btn-primary">View JSON document</a>
+                <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=solr" class="btn btn-primary">View SOLR document</a>
+                <a href="{{ gbl_host }}/catalog/{{ record.id }}" class="btn btn-primary" role="button" target="_blank">View in GBL</a>
             </div>
         </div>
     </div>
