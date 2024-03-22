@@ -1,15 +1,18 @@
 # SDOH Place - Metadata Manager
 
-This is the metadata manager for SDOH Place, a new map-based search platform for SDOH data discovery that will curate and integrate validated geospatial data relevant to public health at multiple scales.
+This is the metadata manager for the SDOH & Place Project, a new map-based search platform for SDOH data discovery that will curate and integrate validated geospatial data relevant to public health at multiple scales.
 
 ## Preliminary Metadata Creation
 
 ### Schema
 
-OpenGeomMetaData : https://opengeometadata.org/docs/ogm-aardvark
+We are using the Aardvark schema from [OpenGeoMetadata (OGM) Aardvark Schema](https://opengeometadata.org/ogm-aardvark/), along with some extra fields specifically for our needs. These fields are:
 
 Custom metadata schema for this project:
 - Spatial Resolution (=tract, zip code, county)
+- Spatial Resolution Note
+- Data Variables
+- Methods Variables
 
 ### Initial Discovery Datasets:
 
@@ -39,7 +42,8 @@ Custom metadata schema for this project:
 - Marynia Kolak
 - Sarthak Joshi
 - Augustyn Crane
-
+- Adam Cox
+- Mandela Gadri
 
 ### Metadata Markdown Files
 
@@ -65,19 +69,44 @@ Required .env content:
 
 A dev deploy will serve the app on Flask's default port (5000).
 
+Create Python virtual environment:
+
 ```
 python3 -m venv env
 source ./env/bin/activate
-pip install -e ./MetadataManager
 ```
 
-Then
+Clone and install package
+
+```
+git clone https://github.com/healthyregions/SDOHPlace-MetadataManager
+cd SDOHPlace-MetadataManager
+pip install -e .
+```
+
+Run in debug mode:
 
 ```
 flask --app MetadataManager.manager.app run --debug
 ```
 
-`--debug` will auto-reload the app whenever a file is changed (though it seems like changes to HTML files requires the app to be stopped and restarted...).
+`--debug` will auto-reload the app whenever a file is changed (though it seems like changes to HTML or CSS files may require the app to be stopped and restarted...).
+
+To run as a background process with gunicorn, first set scripts to be executable:
+
+```
+sudo chmod +x ./scripts/*.sh
+```
+
+Then use
+
+```
+./scripts/start.sh
+./scripts/stop.sh
+./scripts/restart.sh
+```
+
+to control the application. A log will be created in `./scripts/.log`.
 
 ### Install/Run with Docker
 
