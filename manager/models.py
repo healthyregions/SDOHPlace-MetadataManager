@@ -7,6 +7,8 @@ from datetime import datetime
 from flask_login import UserMixin
 from dotenv import load_dotenv
 
+from flask_sqlalchemy import SQLAlchemy
+
 from manager.utils import METADATA_DIR, get_clean_field_from_form
 from manager.solr import Solr
 
@@ -14,10 +16,18 @@ csv.field_size_limit(sys.maxsize)
 
 load_dotenv()
 
-class User(UserMixin):
-    def __init__(self, email, password):
-        self.id = email
-        self.password = password
+db = SQLAlchemy()
+
+class User(UserMixin, db.Model):
+
+    id = db.Column(db.Integer, primary_key=True) # primary keys are required by SQLAlchemy
+    email = db.Column(db.String(100), unique=True)
+    password = db.Column(db.String(100))
+    name = db.Column(db.String(1000))
+
+    # def __init__(self, email, password):
+    #     self.id = email
+    #     self.password = password
 
 class Field():
 

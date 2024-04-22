@@ -8,6 +8,7 @@ setup(
         'Flask',
         'Flask-Cors',
         'Flask-Login',
+        'flask_sqlalchemy',
         'pysolr',
         'python-dotenv',
         'geopandas',

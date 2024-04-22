@@ -18,10 +18,11 @@
             </button>
             <div>
                 {% if user.is_authenticated %}
-                <span>{{user.id}}</span>
+                <span>{{user.name}}</span>
                 <a href="/logout">Logout</a>
                 {% else %}
                 <a href="/login">Login</a>
+                <a href="/signup">Create account</a>
                 {% endif %}
             </div>
         </div>

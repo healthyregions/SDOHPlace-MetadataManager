@@ -9,9 +9,8 @@ from flask_login import (
 )
 from werkzeug.exceptions import NotFound, Unauthorized
 
-from manager.model import Registry
+from manager.models import Registry
 from manager.solr import Solr
-
 
 load_dotenv()
 

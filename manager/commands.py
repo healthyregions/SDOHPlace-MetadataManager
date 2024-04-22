@@ -3,7 +3,7 @@ from flask.cli import with_appcontext
 
 from .solr import Solr
 
-from .model import Registry
+from .models import Registry
 
 registry = Registry()
 
