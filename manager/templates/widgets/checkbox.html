@@ -1,7 +1,0 @@
-{% extends 'widgets/_base.html' %}
-
-{% block input %}
-<input class="form-check-input" type="checkbox" name="{{ field.column_name }}"
-    placeholder="" {% if record and record[field.column_name] %}checked{% endif %}
-    ></input>
-{% endblock %}

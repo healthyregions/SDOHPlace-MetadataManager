@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block page_title %}{{ record.title }}{% endblock %}
+
+{% block sidebar %}
+<div class="buttons">
+    {% if user.is_authenticated %}
+    <a href="{{ url_for('manager.handle_record', id=record.id) }}?edit=true" class="button" role="button">Edit this record</a>
+    <form style="width:100%" action="{{ url_for('manager.handle_solr', id=record.id) }}" method="post">
+        <button class="button" style="width:100%"  name="index-btn" value="index" title="Index this record in SOLR (will overwrite existing record with same id)">Re-index in SOLR</button>
+    </form>
+    {% endif %}
+    <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=json" class="button">View JSON document</a>
+    <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=solr" class="button">View SOLR document</a>
+    <a href="{{ gbl_host }}/catalog/{{ record.id }}" class="button" role="button" target="_blank">View in GBL</a>
+</div>
+{% endblock %}
+
+{% block main_content %}
+<div class="tabs is-toggle is-small">
+    <ul>
+        {% for group_name, fields in field_groups.items() %}
+        <li><a href="#{{ group_name }}">{{ group_name }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="record-content">
+    {% for group_name, fields in field_groups.items() %}
+    <div>
+        <h2 id="{{ group_name }}" class="subtitle">{{ group_name }}</h2>
+        <table class="table table-striped is-fullwidth">
+            <tbody style="overflow-x:auto;">
+                {% for field in fields %}
+                <tr class="display-group">
+                    <td scope="row" style="width:250px;">
+                        <span class="{{ field.obligation }} form-label">
+                            {{ field.label }}
+                            {% if field.multiple %}+{% endif %}
+                        </span>
+                        {% if field.schema == 'Aardvark' %}
+                            <a href="https://opengeometadata.org/ogm-aardvark/#{{ field.slug }}" target="_blank">&nearr;</a>
+                        {% endif %}
+                    </td>
+                    <td>{{ record[field['column_name']] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

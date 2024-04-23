@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block page_title %}{% if record.id %}Editing: {{ record.title }}{% else %}Create a new record{% endif %}{% endblock %}
+
+{% block sidebar %}
+<div class="buttons">
+    <label class="button is-success is-fullwidth" for="submit-edit-form" tabindex="0" >Save</label>
+    <a href="{{ url_for('manager.index') }}" class="button is-fullwidth is-danger" role="button">Cancel</a>
+</div>
+{% endblock %}
+
+{% block main_content %}
+<div class="tabs is-toggle is-small">
+    <ul>
+        {% for group_name, fields in field_groups.items() %}
+        <li><a href="#{{ group_name }}">{{ group_name }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="record-content">
+    <form method="post" id="edit-form">
+        {% for group_name, fields in field_groups.items() %}
+        <div style="background:light-grey;">
+            <h2 id="{{ group_name }}" class="subtitle">{{ group_name }}</h2>
+            {% for field in fields %}
+                <!-- allow explict widget setting, but default to data type also -->
+                {% if field.widget %}
+                    {% include 'crud/widgets/' + field.widget %}
+                {% else %}
+                    <span><em>(no widget configured, using default)</em></span>
+                    {% include 'crud/widgets/text-simple.html' %}
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+        <input type="submit" id="submit-edit-form" class="hidden" />
+    </form>
+</div>
+{% endblock %}

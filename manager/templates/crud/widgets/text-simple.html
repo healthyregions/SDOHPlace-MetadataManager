@@ -1,0 +1,13 @@
+{% extends 'crud/widgets/_base.html' %}
+
+{% block input %}
+<input class="input" type="text" name="{{ field.column_name }}"
+placeholder="" {% if record %}value="{{ record[field.column_name] }}"{% endif %}
+></input>
+{% endblock %}
+
+{% if field['multiple'] %}
+    {% block note %}
+    use | to separate values
+    {% endblock %}
+{% endif %}

@@ -1,35 +1,22 @@
 {
-  "id": "svi-2000",
   "title": "CDC Social Vulnerability Index (SVI) 2000",
   "alternative_title": null,
   "description": null,
-  "language": [
-    ""
-  ],
+  "language": [],
   "display_note": null,
-  "creator": [
-    "Centers for Disease Control and Prevention/ Agency for Toxic Substances and Disease Registry/ Geospatial Research, Analysis, and Services Program."
-  ],
-  "publisher": [
-    "Centers for Disease Control and Prevention"
-  ],
+  "creator": "Centers for Disease Control and Prevention/ Agency for Toxic Substances and Disease Registry/ Geospatial Research, Analysis, and Services Program.",
+  "publisher": "Centers for Disease Control and Prevention",
   "provider": "Healthy Regions + Policies Lab",
   "resource_class": [
     "Datasets"
   ],
-  "resource_type": [
-    ""
-  ],
-  "subject": [
-    "Social Vulnerability Index"
-  ],
-  "theme": [
-    ""
-  ],
+  "resource_type": [],
+  "subject": "Social Vulnerability Index",
+  "theme": [],
   "keyword": null,
   "temporal_coverage": null,
   "date_issued": "2000",
-  "index_year": 2000,
+  "index_year": "2000",
   "date_range": null,
   "spatial_coverage": null,
   "geometry": null,
@@ -40,9 +27,7 @@
   "member_of": null,
   "is_part_of": null,
   "source": null,
-  "is_version_of": [
-    "social-vulnerability-index"
-  ],
+  "is_version_of": "social-vulnerability-index",
   "replaces": null,
   "is_replaced_by": null,
   "rights": null,
@@ -55,9 +40,10 @@
     "http://lccn.loc.gov/sh85035852": "https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2000.html"
   },
   "wxs_indentifier": null,
-  "identifier": null,
-  "modified": "2024-02-07T21:09:37Z",
-  "metadata_version": "Aardvark",
+  "id": "svi-2000",
+  "identifier": "DAF",
+  "modified": "2024-04-22T18:16:43Z",
+  "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
     "County",

@@ -1,7 +1,28 @@
 :root {
     --primary-color: #ff9c77;
-    --light-color: #FFDBA8;
+    --light-color: #ffe5c4;
     --lighter-color: #FFE6C2;
+    --highlight-color: #7e1cc4;
+}
+
+* {
+    --pico-font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    --pico-font-family: 'Fredoka', sans-serif;
+    --pico-color: black;
+}
+
+a {
+    /* color: var(--primary-color); */
+    font-weight: bolder;
+}
+
+
+.button.is-primary {
+    background-color: var(--highlight-color);
+    color: white;
 }
 
 .btn:hover {
@@ -42,9 +63,30 @@
     font-weight: 500;
 }
 
-.main-content {
-    padding-top:20px;
-    height:calc(100vh - 60px);
+.title-bar {
+    height: 40px;
+}
+
+.subtitle {
+    margin: 10px 0 !important;
+    font-weight: bold;
+}
+
+.label {
+    color: #393939;
+}
+
+.record-content {
+    height:calc(100vh - 196px);
+    overflow-y: auto;
+}
+
+.control {
+    margin-bottom: 5px;
+}
+
+.sidebar {
+    height:calc(100vh - 116px);
     overflow-y: auto;
 }
 

@@ -46,7 +46,7 @@ def index():
 def create_record():
 	if request.method == "GET":
 		record = registry.get_blank_record()
-		return render_template('edit.html', record=record.to_form(), user=current_user)
+		return render_template('crud/edit.html', record=record.to_form(), user=current_user)
 
 @crud.route("/record/<id>", methods=["GET", "POST", "DELETE"])
 def handle_record(id):
@@ -59,9 +59,9 @@ def handle_record(id):
 		edit = request.args.get('edit') == "true"
 		if format == "html":
 			if edit:
-				return render_template('edit.html', record=record.to_form(), user=current_user)
+				return render_template('crud/edit.html', record=record.to_form(), user=current_user)
 			else:
-				return render_template('record.html', record=record.to_json(), user=current_user)
+				return render_template('crud/view.html', record=record.to_json(), user=current_user)
 		elif format == "json":
 			return jsonify(record.to_json())
 		elif format == "solr":
