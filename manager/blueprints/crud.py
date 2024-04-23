@@ -1,4 +1,3 @@
-import os
 from dotenv import load_dotenv
 
 from flask import Blueprint, request, render_template, jsonify, url_for, redirect
@@ -14,32 +13,16 @@ from manager.solr import Solr
 
 load_dotenv()
 
-GBL_HOST = os.getenv("GBL_HOST").rstrip("/")
-
-SOLR_HOST = os.getenv('SOLR_HOST', '').rstrip('/')
-SOLR_CORE = os.getenv('SOLR_CORE', '').rstrip('/')
-
-SOLR_URL = f"{SOLR_HOST}/{SOLR_CORE}/"
-
 registry = Registry()
 
 crud = Blueprint('manager', __name__)
 
 CORS(crud)
 
-@crud.context_processor
-def get_context():
-	return dict(
-		gbl_host=GBL_HOST,
-		field_groups=registry.get_grouped_schema_fields(),
-	)
-
 @crud.route("/", methods=["GET"])
 def index():
-	print("user?")
-	print(current_user.is_authenticated)
 	records = registry.get_all(format='json')
-	return render_template('index.html', records=records, user=current_user, solr={"host":SOLR_HOST,"core":SOLR_CORE})
+	return render_template('index.html', records=records, user=current_user)
 
 @crud.route("/record/create", methods=["GET"])
 @login_required

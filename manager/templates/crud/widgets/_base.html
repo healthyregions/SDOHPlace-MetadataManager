@@ -1,5 +1,5 @@
-<div class="{{ field.obligation }} control">
-    <label class="label" for="{{ field.column_name }}">
+<div class="control">
+    <label class="label {{ field.obligation }}" for="{{ field.column_name }}">
         {{ field.label }}
         {% if field.multiple %}+{% endif %}
         {% if field.schema == "Aardvark" %}

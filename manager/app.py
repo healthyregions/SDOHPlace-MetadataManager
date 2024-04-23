@@ -7,7 +7,7 @@ from flask_login import LoginManager
 
 from manager.routes import crud
 from manager.auth import auth
-from manager.models import db, User
+from manager.models import db, User, Registry
 from manager.commands import (
     add_spatial_coverage,
     index,
@@ -15,7 +15,16 @@ from manager.commands import (
 )
 load_dotenv()
 
+registry = Registry()
+
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+GBL_HOST = os.getenv("GBL_HOST").rstrip("/")
+
+SOLR_HOST = os.getenv('SOLR_HOST', '').rstrip('/')
+SOLR_CORE = os.getenv('SOLR_CORE', '').rstrip('/')
+
+SOLR_URL = f"{SOLR_HOST}/{SOLR_CORE}/"
 
 app = Flask(__name__)
 
@@ -45,3 +54,11 @@ app.config['DEBUG'] = True
 
 app.register_blueprint(auth)
 app.register_blueprint(crud)
+
+@app.context_processor
+def get_context():
+	return dict(
+		gbl_host=GBL_HOST,
+		field_groups=registry.get_grouped_schema_fields(),
+		solr={"host":SOLR_HOST,"core":SOLR_CORE}
+	)

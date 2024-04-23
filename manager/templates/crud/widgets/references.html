@@ -1,17 +1,15 @@
 {% extends 'crud/widgets/_base.html' %}
 
 {% block note %}
-<p><em>put multiple references on separate lines, with this format:
-    <code>reference uri:: value</code>
-</em></p>
+put multiple references on separate lines, with this format: <code>reference uri:: value</code>
 {% endblock %}
 
 {% block input %}
 <textarea 
-    style="white-space:pre; overflow-wrap:normal; overflow-x:scroll; width:100%;"
-    rows="5"
-    cols="33"
-    form="edit-form"
-    name="{{field.column_name}}"
-    >{% if record and record[field.column_name] %}{{record[field.column_name]}}{% endif %}</textarea>
+style="white-space:pre; overflow-wrap:normal; overflow-x:scroll; width:100%;"
+rows="5"
+cols="33"
+form="edit-form"
+name="{{field.column_name}}"
+>{% if record and record[field.column_name] %}{{record[field.column_name]}}{% endif %}</textarea>
 {% endblock %}
