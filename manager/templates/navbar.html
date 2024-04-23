@@ -1,8 +1,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-        <img src="https://sdohplace.org/images/place-project-logo.png" />
-
+        <a class="navbar-item" href="https://sdohplace.org">
+            <img src="{{url_for('static', filename='images/place-project-logo-50px.png')}}" />
         </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -15,6 +14,9 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
+            <a class="navbar-item" href="/">
+                Records
+            </a>
             <button class="navbar-item js-modal-trigger" data-target="modal-js-example">
                 <strong>About</strong>
             </button>
@@ -23,9 +25,6 @@
                 Links
                 </a>
                 <div class="navbar-dropdown">
-                    <a class="navbar-item" href="https://sdohplace.org">
-                        SDOH & Place Home
-                    </a>
                     <a class="navbar-item" href="https://sdohplace.org/search">
                         SDOH & Place Data Discovery
                     </a>
