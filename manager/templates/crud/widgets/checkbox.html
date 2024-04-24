@@ -2,8 +2,8 @@
 
 {% block input %}
 <div class="checkbox">
-    <input class="form-check-input" type="checkbox" name="{{ field.column_name }}"
-        placeholder="" {% if record and record[field.column_name] %}checked{% endif %}
+    <input class="form-check-input" type="checkbox" name="{{ field.id }}"
+        placeholder="" {% if record and record[field.id] %}checked{% endif %}
         ></input>
 </div>
 {% endblock %}

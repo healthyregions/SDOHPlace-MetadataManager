@@ -6,12 +6,11 @@
 }
 
 * {
-    --pico-font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    --pico-font-family: 'Fredoka', sans-serif;
-    --pico-color: black;
+    font-family: 'Fredoka', sans-serif;
 }
 
 a {

@@ -1,5 +1,5 @@
 {
-  "title": "EVSVe",
+  "title": "aef",
   "alternative_title": null,
   "description": null,
   "language": [],
@@ -7,18 +7,13 @@
   "creator": null,
   "publisher": null,
   "provider": null,
-  "resource_class": [
-    "Collections",
-    "Datasets"
-  ],
-  "resource_type": [
-    "Aerial photographs"
-  ],
-  "subject": "Area Deprivation Index",
+  "resource_class": [],
+  "resource_type": [],
+  "subject": null,
   "theme": [],
   "keyword": null,
   "temporal_coverage": null,
-  "date_issued": "2020",
+  "date_issued": null,
   "index_year": null,
   "date_range": null,
   "spatial_coverage": null,
@@ -30,29 +25,30 @@
   "member_of": null,
   "is_part_of": null,
   "source": null,
-  "is_version_of": "neighborhood-atlas",
+  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": null,
   "rights_holder": null,
   "license": null,
   "access_rights": "Public",
-  "format": "CSV",
+  "format": null,
   "file_size": null,
   "references": null,
   "wxs_indentifier": null,
-  "id": "adi-2020",
-  "identifier": "rrrrrrrrwdefefefevevevev",
-  "modified": "2024-04-24T16:09:59Z",
+  "id": "a4aeg",
+  "identifier": "adfasdfdfsaafds",
+  "modified": "2024-04-24T12:35:06Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": null,
   "spatial_resolution": [
-    "County"
+    "City",
+    "County",
+    "State",
+    "Census Tract"
   ],
   "spatial_resolution_note": null,
   "methods_variables": null,
-  "data_variables": [
-    "aef"
-  ],
+  "data_variables": null,
   "data_usage_notes": null
 }

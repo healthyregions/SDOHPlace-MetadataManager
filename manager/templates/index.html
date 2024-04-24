@@ -11,13 +11,6 @@
         <button class="button" style="width:100%"  name="index-btn" value="index" title="Clean and recreate the entire Solr index from current records">Refresh Solr Index</button>
     </form>
 </div>
-<h3>Info</h3>
-<div style="font-size:.8em;">
-    {% if user.is_authenticated %}
-    Solr Host: {{ solr.host }}<br>
-    {% endif %}
-    Solr Core: {{ solr.core }}
-</div>
 {% endif %}
 {% endblock %}
 
@@ -28,12 +21,10 @@
         <tr>
             <td style="display:flex; justify-content: space-between;">
                 <div><a href="{{ url_for('manager.handle_record', id=record.id) }}">{{record['title']}}</a></div>
-                <div class="buttons are-small">
-                    {% if user.is_authenticated %}
-                    <a href="{{ url_for('manager.handle_record', id=record.id) }}?edit=true" class="button">Edit</a>
-                    {% endif %}
+                <div class="buttons are-small has-addons">
                     <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=json" class="button" data-tooltip="View this record as JSON">JSON</a>
                     <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=solr" class="button" data-tooltip="View this record's corresponding Solr document">Solr</a>
+                    <a href="{{ gbl_host }}/catalog/{{ record.id }}" class="button" role="button" target="_blank" data-tooltip="View this record in GeoBlacklight">GBL</a>
                 </div>
             </td>
         </tr>

@@ -1,11 +1,11 @@
+import os
 import click
 from flask.cli import with_appcontext
 
 from .solr import Solr
 
-from .models import Registry
-
-registry = Registry()
+from .models import db, Schema, Record
+from .utils import METADATA_DIR
 
 
 @click.command()
@@ -54,3 +54,34 @@ def add_spatial_coverage(record_id):
 def inspect_schema():
 
 	registry.get_all()
+
+
+@click.command()
+@with_appcontext
+@click.option('-s', '--source')
+@click.option('-n', '--name')
+def load_schema(source, name):
+
+	file_name = os.path.basename(source)
+	new_schema = Schema(
+		data_file=file_name,
+		slug=os.path.splitext(file_name)[0],
+		name=name,
+	)
+
+	db.session.add(new_schema)
+	db.session.commit()
+
+@click.command()
+@with_appcontext
+def load_records():
+
+	for file_name in os.listdir(os.path.join(METADATA_DIR, 'records')):
+		new_record = Record(
+			data_file=file_name,
+			schema_id=1,
+			last_modified_by=None,
+		)
+
+		db.session.add(new_record)
+		db.session.commit()

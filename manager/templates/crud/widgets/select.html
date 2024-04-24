@@ -8,16 +8,16 @@ ctrl + click to select/deselect multiple items
 
 {% block input %}
 <div class="select {% if field.multiple %}is-multiple{% endif %}">
-    <select name="{{ field.column_name }}"
+    <select name="{{ field.id }}"
         placeholder="" 
-        {% if record %}value="{{ record[field.column_name] }}"{% endif %}
+        {% if record %}value="{{ record[field.id] }}"{% endif %}
         {% if field.multiple %}multiple{% endif %}
         >
         {% if not field.multiple %}
         <option></option>
         {% endif %}
         {% for choice in field.controlled_options %}
-        <option value="{{ choice }}" {% if choice in record[field.column_name].split("|") %}selected=true{% endif %}>{{ choice }}</option>
+        <option value="{{ choice }}" {% if choice in record[field.id].split("|") %}selected=true{% endif %}>{{ choice }}</option>
         {% endfor %}
     </select>
 </div>

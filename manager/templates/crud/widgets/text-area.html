@@ -10,6 +10,6 @@ put multiple values on separate lines
     rows="5"
     cols="33"
     form="edit-form"
-    name="{{field.column_name}}"
-    >{% if record and record[field.column_name] %}{{record[field.column_name]}}{% endif %}</textarea>
+    name="{{field.id}}"
+    >{% if record and record[field.id] %}{{record[field.id]}}{% endif %}</textarea>
 {% endblock %}

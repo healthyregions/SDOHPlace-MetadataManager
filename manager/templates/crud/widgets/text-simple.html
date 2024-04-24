@@ -1,8 +1,8 @@
 {% extends 'crud/widgets/_base.html' %}
 
 {% block input %}
-<input class="input" type="text" name="{{ field.column_name }}"
-placeholder="" {% if record %}value="{{ record[field.column_name] }}"{% endif %}
+<input class="input" type="text" name="{{ field.id }}"
+placeholder="" {% if record %}value="{{ record[field.id] }}"{% endif %}
 ></input>
 {% endblock %}
 

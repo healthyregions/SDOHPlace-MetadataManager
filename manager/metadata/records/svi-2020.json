@@ -1,25 +1,21 @@
 {
-  "id": "svi-2020",
   "title": "CDC Social Vulnerability Index (SVI) 2020",
   "alternative_title": null,
-  "description": null,
-  "language": null,
-  "display_note": null,
-  "creator": [
-    "Centers for Disease Control and Prevention/ Agency for Toxic Substances and Disease Registry/ Geospatial Research, Analysis, and Services Program."
+  "description": [
+    "description 1",
+    "description 2"
   ],
+  "language": [],
+  "display_note": null,
+  "creator": "Centers for Disease Control and Prevention/ Agency for Toxic Substances and Disease Registry/ Geospatial Research, Analysis, and Services Program.",
   "publisher": "Centers for Disease Control and Prevention",
   "provider": "Healthy Regions + Policies Lab",
   "resource_class": [
     "Datasets"
   ],
-  "resource_type": [
-    "Vector Data"
-  ],
-  "subject": [
-    "Social Vulnerability Index"
-  ],
-  "theme": null,
+  "resource_type": [],
+  "subject": "Social Vulnerability Index",
+  "theme": [],
   "keyword": null,
   "temporal_coverage": null,
   "date_issued": "2020",
@@ -47,14 +43,17 @@
     "http://lccn.loc.gov/sh85035852": "https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2020.html"
   },
   "wxs_indentifier": null,
-  "identifier": null,
-  "modified": "2023-07-06T02:44:40Z",
-  "metadata_version": "Aardvark",
+  "id": "svi-2020",
+  "identifier": "araergawefawef",
+  "modified": "2024-04-24T10:21:57Z",
+  "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
-    "County", "Census Tract"
+    "County",
+    "Census Tract"
   ],
   "spatial_resolution_note": null,
   "methods_variables": null,
-  "data_variables": null
+  "data_variables": null,
+  "data_usage_notes": null
 }

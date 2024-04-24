@@ -3,10 +3,12 @@
 {% block page_title %}{% if record.id %}Editing: {{ record.title }}{% else %}Create a new record{% endif %}{% endblock %}
 
 {% block sidebar %}
-<div class="buttons">
-    <label class="button is-success is-fullwidth" for="submit-edit-form" tabindex="0" >Save</label>
-    <a href="{{ url_for('manager.index') }}" class="button is-fullwidth is-danger" role="button">Cancel</a>
+<h2 class="subtitle">Actions</h2>
+<div class="buttons are-small has-addons">
+    <label id="save-button-label" class="button is-warning" for="validate-edit-form" tabindex="0" >Validate</label>
+    <a href="{% if record.id %}{{ url_for('manager.handle_record', id=record.id) }}{% else %}{{ url_for('manager.index') }}{% endif %}" class="button is-danger" role="button">Cancel</a>
 </div>
+<div id="validate-result"></div>
 {% endblock %}
 
 {% block main_content %}
@@ -33,7 +35,70 @@
             {% endfor %}
         </div>
         {% endfor %}
-        <input type="submit" id="submit-edit-form" class="hidden" />
+        <input type="submit" id="validate-edit-form" class="hidden"
+            hx-post="/record/validate"
+            hx-trigger="click"
+            hx-target="#validate-result"
+            hx-swap="innerHTML"
+            hidden />
+        <input type="submit" id="submit-edit-form" class="hidden" hidden />
     </form>
 </div>
 {% endblock %}
+
+<script>
+// document.addEventListener('DOMContentLoaded', () => {
+
+//     // Get all "navbar-burger" elements
+//     const btn = document.getElementById("save-button-label")
+    
+//     console.log("asdfwfwfw")
+//     btn.addEventListener('click', () => {
+
+//         console.log("asdf")
+
+//     });
+
+    // // Functions to open and close a modal
+    // function openModal($el) {
+    // $el.classList.add('is-active');
+    // }
+
+    // function closeModal($el) {
+    // $el.classList.remove('is-active');
+    // }
+
+    // function closeAllModals() {
+    // (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+    // closeModal($modal);
+    // });
+    // }
+
+    // // Add a click event on buttons to open a specific modal
+    // (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+    // const modal = $trigger.dataset.target;
+    // const $target = document.getElementById(modal);
+
+    // $trigger.addEventListener('click', () => {
+    // openModal($target);
+    // });
+    // });
+
+    // // Add a click event on various child elements to close the parent modal
+    // (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+    // const $target = $close.closest('.modal');
+
+    // $close.addEventListener('click', () => {
+    // closeModal($target);
+    // });
+    // });
+
+    // // Add a keyboard event to close all modals
+    // document.addEventListener('keydown', (event) => {
+    // if(event.key === "Escape") {
+    // closeAllModals();
+    // }
+    // });
+
+// });
+</script>

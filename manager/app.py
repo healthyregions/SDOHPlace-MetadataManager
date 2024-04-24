@@ -3,19 +3,19 @@ import os
 from dotenv import load_dotenv
 from flask import Flask
 from flask_cors import CORS
-from flask_login import LoginManager
+from flask_login import LoginManager, current_user
 
-from manager.routes import crud
-from manager.auth import auth
-from manager.models import db, User, Registry
+from manager.blueprints.crud import crud
+from manager.blueprints.auth import auth
+from manager.models import db, User
 from manager.commands import (
     add_spatial_coverage,
     index,
     inspect_schema,
+    load_schema,
+    load_records,
 )
 load_dotenv()
-
-registry = Registry()
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -49,6 +49,8 @@ def load_user(user_id):
 app.cli.add_command(index)
 app.cli.add_command(add_spatial_coverage)
 app.cli.add_command(inspect_schema)
+app.cli.add_command(load_schema)
+app.cli.add_command(load_records)
 
 app.config['DEBUG'] = True
 
@@ -59,6 +61,6 @@ app.register_blueprint(crud)
 def get_context():
 	return dict(
 		gbl_host=GBL_HOST,
-		field_groups=registry.get_grouped_schema_fields(),
-		solr={"host":SOLR_HOST,"core":SOLR_CORE}
+		solr={"host":SOLR_HOST,"core":SOLR_CORE},
+        user=current_user,
 	)

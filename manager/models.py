@@ -2,12 +2,12 @@ import os
 import csv
 import sys
 import json
-from pathlib import Path
 from datetime import datetime
 from flask_login import UserMixin
 from dotenv import load_dotenv
 
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.orm import Mapped, mapped_column
 
 from manager.utils import METADATA_DIR, get_clean_field_from_form
 from manager.solr import Solr
@@ -20,98 +20,145 @@ db = SQLAlchemy()
 
 class User(UserMixin, db.Model):
 
-    id = db.Column(db.Integer, primary_key=True) # primary keys are required by SQLAlchemy
-    email = db.Column(db.String(100), unique=True)
-    password = db.Column(db.String(100))
-    name = db.Column(db.String(1000))
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(unique=True)
+    password: Mapped[str]
+    email: Mapped[str]
 
-    # def __init__(self, email, password):
-    #     self.id = email
-    #     self.password = password
+class Schema(db.Model):
 
-class Field():
+    id: Mapped[int] = mapped_column(primary_key=True)
+    data_file: Mapped[str] = mapped_column(unique=True)
+    slug: Mapped[str] = mapped_column(unique=True)
+    name: Mapped[str]
 
-    def __init__(self, **kwargs):
-        for k, v in kwargs.items():
-            self.__setattr__(k, v)
+    @property
+    def file_path(self):
+        return os.path.join(METADATA_DIR, 'schemas', self.data_file)
+    
+    @property
+    def schema_json(self):
+        schema_json = {}
+        with open(self.file_path, 'r') as o:
+            schema_json = json.load(o)
+        return schema_json
 
-    def validate(self, value):
+    @property
+    def lookup(self):
 
-        errors = []
-        if isinstance(value, list):
-            values_list = value
-            if not self.multiple:
-                msg = f"{self.label} -- Multi-value not allowed. Got: {value}"
-                print(msg)
-                errors.append(msg)
-        else:
-            values_list = [value]
-        for val in values_list:
-            if val and (self.controlled and val not in self.controlled_options):
-                msg = f"{self.label} -- {val} not in list of acceptable values"
-                print(msg)
-                errors.append(msg)
-        return errors
-
-
-class RecordSchema():
-
-    lookup: dict = {}
-
+        lookup_dict = {}
+        for f in self.schema_json['fields']:
+            field = Field(**f)
+            lookup_dict[f['id']] = field
+        return lookup_dict
+    
     @property
     def fields(self):
         return list(self.lookup.values())
 
-    def from_schema_files(self, file_list):
+    @property
+    def grouped_fields(self):
 
-        for path in file_list:
-            with open(path, 'r') as o:
-                schema_json = json.load(o)
-                for k, v in schema_json.items():
-                    f = Field(**v)
-                    self.lookup[k] = f
+        gl = {}
+        for f in self.schema_json['display_groups']:
+            gl[f] = [i for i in self.schema_json['fields'] if i['display_group'] == f]
 
+        return gl
+    
+    def get_blank_record(self):
+
+        blank = {}
         for k, v in self.lookup.items():
-            v.column_name = k
+            if v.multiple:
+                val = []
+            elif k == "references":
+                val = {}
+            else:
+                val = None
+            blank[k] = val
+        return blank
+    
+    def get_blank_form(self):
 
-        return self
+        form = self.get_blank_record()
+        for k in form.keys():
+            form[k] = ""
+        return form
+    
+    def validate_form_data(self, form_data):
 
-
-class Record():
-
-    schema: RecordSchema = None
-
-    def __init__(self, schema: RecordSchema, **kwargs):
-
-        self.schema = schema
-        for k, v in kwargs.items():
-            self.__setattr__(k, v)
-
-    def validate(self):
-        """ validate this record against its schema. """
-
+        cleaned_data = {}
+        for field, field_def in self.lookup.items():
+            clean_value = get_clean_field_from_form(form_data, field, field_def)
+            cleaned_data[field] = clean_value
         errors = []
-        for key, field in self.schema.lookup.items():
-            value = self.get_value(key)
+
+        for key, field in self.lookup.items():
+            value = cleaned_data.get(key)
             errors += field.validate(value)
 
         return errors
 
-    def get_value(self, field_name):
-        try:
-            return self.__getattribute__(field_name)
-        except AttributeError:
-            return None
 
+class Record(db.Model):
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    data_file: Mapped[str] = mapped_column(unique=True)
+    schema_id: Mapped[int] = mapped_column(db.ForeignKey('schema.id'))
+    last_modified_by: Mapped[str] = mapped_column(nullable=True)
+
+    data = None
+
+    def load_data(self):
+
+        print("loading data")
+        if self.data is None and self.file_path:
+            print("loading file")
+            with open(self.file_path, "r") as o:
+                self.data = json.load(o)
+
+    def save_data(self, index=False):
+        self.data['metadata_version'] = "SDOH PlaceProject"
+        self.data['modified'] = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
+        with open(self.file_path, "w") as o:
+            json.dump(self.to_json(), o, indent=2)
+        
+        if index:
+            self.index()
+
+    @property
+    def schema(self):
+        return Schema.query.get(self.schema_id)
+    
+    @property
+    def file_path(self):
+        path = None
+        if self.data_file:
+            path = os.path.join(METADATA_DIR, 'records', self.data_file)
+        return path
+
+    def get_value(self, field_name):
+        return self.data[field_name]
+
+    def validate(self):
+        """ validate this record against its schema. """
+        self.load_data()
+        errors = []
+        for key, field in self.schema.lookup.items():
+            value = self.data.get(key)
+            errors += field.validate(value)
+        return errors
+    
     def to_json(self):
-        return {k: self.get_value(k) for k in self.schema.lookup.keys()}
+        self.load_data()
+        return self.data
 
     def to_form(self):
         """ Prepares the raw backend data to populate an html form. """
-
-        data = {}
+        self.load_data()
+        form_data = {}
         for key, field in self.schema.lookup.items():
-            value = self.get_value(key)
+            value = self.data.get(key)
             if not value:
                 value = ""
             if key == "references" and isinstance(value, dict):
@@ -124,33 +171,22 @@ class Record():
                     value = "\n".join(value)
                 else:
                     value = "|".join(value)
-            data[key] = value
-        return data
-
+            form_data[key] = value
+        return form_data
+    
     def to_solr(self):
         """A variation on to_json() that uses the SOLR uris instead, and
         omits empty fields. Plus some other value wrangling."""
-
+        self.load_data()
         solr_doc = {}
         for key, field in self.schema.lookup.items():
-            value = self.get_value(key)
+            value = self.data.get(key)
             if value is not None:
                 if key == "references":
                     value = json.dumps(value)
                 solr_doc[field.uri] = value
         return solr_doc
-
-    def save(self, index=True):
-
-        self.metadata_version = "SDOH PlaceProject"
-        self.modified = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
-        record_file = Path(METADATA_DIR, "records", self.id+".json")
-        with open(record_file, "w") as o:
-            json.dump(self.to_json(), o, indent=2)
-        
-        if index:
-            self.index()
-
+    
     def index(self, solr_instance=None):
         solr_doc = self.to_solr()
         if not solr_instance:
@@ -167,96 +203,54 @@ class Record():
                 "error": str(e)
             }
         return result
-
-
-class Registry():
-
-    def __init__(self):
-
-        schema = RecordSchema().from_schema_files([
-            os.path.join(METADATA_DIR, 'schemas', 'aardvark_schema.json'),
-            os.path.join(METADATA_DIR, 'schemas', 'sdohplace_schema.json'),
-        ])
-        self.schema = schema
-
-    def get_grouped_schema_fields(self):
-        grouped_lookup = {
-            "Identifiers": [],
-            "Descriptive": [],
-            "SDOH Place Project": [],
-            "Credits": [],
-            "Categories": [],
-            "Temporal": [],
-            "Spatial": [],
-            "Relations": [],
-            "Rights": [],
-            "Object": [],
-            "Links": [],
-            "Admin": [],
-        }
-        for k, v in self.schema.lookup.items():
-            grouped_lookup[v.display_group].append(v.__dict__)
-        return grouped_lookup
-
-    def load_record_from_file(self, file_path):
-
-        with open(file_path, "r") as o:
-            record_json = json.load(o)
-            record = Record(self.schema, **record_json)
-            errors = record.validate()
-            if errors:
-                print(errors)
-            return record
-
-    def load_record_from_form_data(self, form_data):
-
+    
+    def save_from_form_data(self, form_data):
         cleaned_data = {}
         for field, field_def in self.schema.lookup.items():
             clean_value = get_clean_field_from_form(form_data, field, field_def)
             cleaned_data[field] = clean_value
-        record = Record(self.schema, **cleaned_data)
-
-        return record
-
-    def get(self, record_id, format: str = None):
-
-        record_file = Path(METADATA_DIR, "records", record_id+".json")
-        if not record_file.is_file():
-            return None
-
-        record = self.load_record_from_file(record_file)
-
-        if format == "json":
-            return record.to_json()
-        elif format == "solr":
-            return record.to_solr()
-        elif format == "form-data":
-            return record.to_form()
+        cleaned_data['metadata_version'] = "SDOH PlaceProject"
+        cleaned_data['modified'] = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
+        if self.data_file:
+            outpath = os.path.join(METADATA_DIR, 'records', self.data_file)
         else:
-            return record
+            self.data_file = cleaned_data['id'] + ".json"
+            outpath = os.path.join(METADATA_DIR, 'records', self.data_file)
+        with open(outpath, "w") as o:
+            json.dump(cleaned_data, o, indent=2)
 
-    def get_all(self, format: str = None, sort_by: str = "title"):
 
-        files = Path(METADATA_DIR, "records").glob("*.json")
-        ids = [i.stem for i in files]
-        records = [self.get(i, format=format) for i in ids]
-        records.sort(key=lambda x: x[sort_by])
-        return records
-    
-    def get_blank_record(self):
+class Field():
 
-        blank = {}
-        for k, v in self.schema.lookup.items():
-            if v.multiple:
-                val = []
-            elif k == "references":
-                val = {}
-            else:
-                val = None
-            blank[k] = val
-        record = Record(self.schema, **blank)
+    def __init__(self, **kwargs):
+        for k, v in kwargs.items():
+            self.__setattr__(k, v)
 
-        return record
+    def validate(self, value):
+
+        if self.label == "Modified":
+            return []
+
+        errors = []
+        if isinstance(value, list):
+            if self.obligation == "required" and not len(value) > 0:
+                msg = f"{self.label} -- missing required value"
+                errors.append(msg)
+            values_list = value
+            if not self.multiple:
+                msg = f"{self.label} -- Multi-value not allowed. Got: {value}"
+                errors.append(msg)
+        else:
+            values_list = [value]
+        for val in values_list:
+            if self.obligation == "required" and not val:
+                msg = f"{self.label} -- missing required value"
+                errors.append(msg)
+            if val and (self.controlled and val not in self.controlled_options):
+                msg = f"{self.label} -- {val} not in list of acceptable values"
+                errors.append(msg)
+        return errors
+
 
 """
 retain geom snippet

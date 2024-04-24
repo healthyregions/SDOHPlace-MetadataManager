@@ -18,7 +18,7 @@
                 Records
             </a>
             <button class="navbar-item js-modal-trigger" data-target="modal-js-example">
-                <strong>About</strong>
+                <strong style="font-weight:700">About</strong>
             </button>
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">
@@ -58,9 +58,8 @@
       <div class="box">
         <h2 class="title">About the metadata manager</h2>
         <h3 class="subtitle">Purpose</h3>
-        <p>This application handles the creation and management of metadata records used for the SDOH & Place Project's <a href="https://sdohplace.org/search">data discovery application</a>.</p>
-        <h3 class="subtitle">Solr</h3>
-        <p>This deployment is currently using a Solr backend at the following location:</p>
+        <p>This application handles the creation and management of metadata records used for the SDOH & Place Project's <a href="https://sdohplace.org/search">data discovery application</a>, which is currently in development.</p>
+        <h3 class="subtitle">Solr deployment details</h3>
         <p>
             {% if user.is_authenticated %}
             Host: <code>{{ solr.host }}</code><br>
