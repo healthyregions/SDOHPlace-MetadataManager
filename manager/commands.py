@@ -53,7 +53,11 @@ def add_spatial_coverage(record_id):
 @with_appcontext
 def inspect_schema():
 
-	registry.get_all()
+	s = Schema.query.get(1)
+	for k, v in s.grouped_fields.items():
+		print(f"\n## {k}")
+		for f in v:
+			print(f"- {f['label']}")
 
 
 @click.command()

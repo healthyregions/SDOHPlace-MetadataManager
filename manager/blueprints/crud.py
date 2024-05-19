@@ -20,6 +20,7 @@ CORS(crud)
 @crud.route("/", methods=["GET"])
 def index():
 	records = [r.to_json() for r in Record.query.all()]
+	records = sorted(records, key=lambda d: d['title'])
 	return render_template('index.html', records=records)
 
 @crud.route("/record/create", methods=["GET"])
