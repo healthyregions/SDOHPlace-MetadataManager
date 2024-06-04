@@ -18,32 +18,32 @@ def index(all, clean):
 	s = Solr()
 	if clean:
 		s.delete_all()
-	records = registry.get_all()
-	for r in records:
+
+	for r in Record.query.all():
 		result = r.index(solr_instance=s)
 		if not result['success']:
 			print(result)
 			exit()
 
 
-@click.command()
-@with_appcontext
-@click.option('--record_id')
-def add_spatial_coverage(record_id):
+# @click.command()
+# @with_appcontext
+# @click.option('--record_id')
+# def add_spatial_coverage(record_id):
 
-	if record_id is None:
-		records = registry.get_all()
-	else:
-		records = [registry.get(record_id)]
+# 	if record_id is None:
+# 		records = registry.get_all()
+# 	else:
+# 		records = [registry.get(record_id)]
 
-	sr_values = {}
+# 	sr_values = {}
 
-	for r in records:
-		resolutions = r.spatial_resolution
-		if resolutions is None:
-			continue
-		for sr in resolutions.split("|"):
-			pass
+# 	for r in records:
+# 		resolutions = r.spatial_resolution
+# 		if resolutions is None:
+# 			continue
+# 		for sr in resolutions.split("|"):
+# 			pass
 			# if not sr in sr_values:
 			# 	val = get_spatial_coverage_values(sr)
 			# 	sr_values[sr] = val
@@ -78,13 +78,21 @@ def load_schema(source, name):
 
 @click.command()
 @with_appcontext
-def load_records():
+def reset_records():
+	""" Removes all DB Record objects and recreates them from files on disk."""
 
+	confirm = input("delete all database records? This cannot be undone. Y/n ")
+	if confirm.lower().startswith("n"):
+		exit()
+
+	for record in Record.query.all():
+		db.session.delete(record)
+	db.session.commit()
 	for file_name in os.listdir(os.path.join(METADATA_DIR, 'records')):
 		new_record = Record(
 			data_file=file_name,
 			schema_id=1,
-			last_modified_by=None,
+			last_modified_by="Admin",
 		)
 
 		db.session.add(new_record)

@@ -9,11 +9,10 @@ from manager.blueprints.crud import crud
 from manager.blueprints.auth import auth
 from manager.models import db, User
 from manager.commands import (
-    add_spatial_coverage,
     index,
     inspect_schema,
     load_schema,
-    load_records,
+    reset_records,
 )
 load_dotenv()
 
@@ -47,10 +46,9 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 app.cli.add_command(index)
-app.cli.add_command(add_spatial_coverage)
 app.cli.add_command(inspect_schema)
 app.cli.add_command(load_schema)
-app.cli.add_command(load_records)
+app.cli.add_command(reset_records)
 
 app.config['DEBUG'] = True
 
