@@ -71,6 +71,8 @@ def handle_record(id):
 			record = Record.query.filter_by(data_file=id+".json").first()
 			if record:
 				record.save_from_form_data(request.form)
+				record.last_modified_by = current_user.name
+				db.session.commit()
 			else:
 				record = Record()
 				record.schema_id = 1

@@ -107,3 +107,13 @@ a {
 .suggested {
     color: darkorange;
 }
+
+.progress-100 {
+    background-color: #cff1cf;
+}
+.progress-gte75 {
+    background-color: #f6dac0;
+}
+.progress-lt75 {
+    background-color: #f2c3be;
+}

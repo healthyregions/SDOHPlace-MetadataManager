@@ -39,7 +39,7 @@
 </div>
 <div class="record-content">
     {% for group_name, fields in field_groups.items() %}
-    <div>
+    <section>
         <h2 id="{{ group_name }}" class="subtitle">{{ group_name }}</h2>
         <table class="table table-striped is-fullwidth">
             <tbody style="overflow-x:auto;">
@@ -54,12 +54,20 @@
                             <a href="https://opengeometadata.org/ogm-aardvark/#{{ field.slug }}" target="_blank">&nearr;</a>
                         {% endif %}
                     </td>
-                    <td>{{ record[field['id']] }}</td>
+                    <td>
+                    {% if field['id'] == "keyword" and record[field['id']] %}
+                        {% for keyword in record[field['id']] %}
+                        <span class="tag">{{ keyword }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {{ record[field['id']] }}
+                    {% endif %}
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
-    </div>
+    </section>
     {% endfor %}
 </div>
 {% endblock %}

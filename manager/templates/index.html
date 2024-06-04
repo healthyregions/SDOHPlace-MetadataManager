@@ -16,11 +16,27 @@
 
 {% block main_content %}
 <table class="table table-striped is-fullwidth">
-    <tbody>
+    <thead>
+        <tr>
+            <td>Title</td>
+            <td>Last Edit</td>
+            <td>Completess</td>
+            <td>View as...</td>
+        </tr>
+    </thead>
+    <tbody style="overflow-y:auto; max-height: calc(100vh - 110px);">
         {% for record in records %}
         <tr>
-            <td style="display:flex; justify-content: space-between;">
-                <div><a href="{{ url_for('manager.handle_record', id=record.id) }}">{{record['title']}}</a></div>
+            <td>
+                <a href="{{ url_for('manager.handle_record', id=record.id) }}">{{record['title']}}</a>
+            </td>
+            <td>
+                <span style="font-size:.8em;">{{record['meta']['last_modified_by']}}</span>
+            </td>
+            <td>
+                <span class="tag is-{{record['meta']['progress_class']}}">{{record['meta']['filled_pct']}}% ({{record['meta']['filled']}}/{{record['meta']['to_fill']}})</span>
+            </td>
+            <td>
                 <div class="buttons are-small has-addons">
                     <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=json" class="button" data-tooltip="View this record as JSON">JSON</a>
                     <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=solr" class="button" data-tooltip="View this record's corresponding Solr document">Solr</a>
