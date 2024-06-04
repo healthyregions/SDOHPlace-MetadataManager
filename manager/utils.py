@@ -26,6 +26,8 @@ def get_clean_field_from_form(form, field, field_def):
 	if field_def.multiple:
 		if field_def.widget == "select.html":
 			value = form.getlist(field)
+		if field_def.widget == 'text-simple.html':
+			value = [i.lstrip().rstrip() for i in form.get(field).split("|") if i]
 		if field_def.widget == 'text-area.html':
 			value = form.get(field)
 			value = [i.rstrip() for i in value.split("\n")]
