@@ -20,11 +20,15 @@
 {% else %}
 <p><em>You are not logged in.</em></p>
 {% endif %}
-<h2 class="subtitle">View as...</h2>
+<h2 class="subtitle">View record as...</h2>
 <div class="buttons are-small has-addons">
     <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=json" class="button">JSON</a>
     <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=solr" class="button">Solr</a>
-    <a href="{{ gbl_host }}/catalog/{{ record.id }}" class="button" role="button" target="_blank">GBL</a>
+</div>
+<h2 class="subtitle">View record in...</h2>
+<div class="buttons are-small has-addons">
+    <a href="{{ gbl_host }}/catalog/{{ record.id }}" class="button" role="button" target="_blank">GeoBlacklight</a>
+    <a href="{{ gbl_host }}/catalog/{{ record.id }}" class="button" disabled role="button" target="_blank">Data Discovery App</a>
 </div>
 <div id="reindex-result"></div>
 {% endblock %}
