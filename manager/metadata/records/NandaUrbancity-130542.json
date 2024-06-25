@@ -1,0 +1,106 @@
+{
+  "title": "National Neighborhood Data Archive (NaNDA): Urbanicity by Census Tract, United States, 2010",
+  "alternative_title": null,
+  "description": [
+    "This dataset contains measures of the urban/rural characteristics of each census tract in the United States. These include proportions of urban and rural population, population density, rural/urban commuting area (RUCA) codes, and RUCA-based four- and seven-category urbanicity scales."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "University of Michigan. Institute for Social Research"
+  ],
+  "publisher": null,
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Datasets"
+  ],
+  "resource_type": [
+    "Point data"
+  ],
+  "subject": null,
+  "theme": [
+    "Location"
+  ],
+  "keyword": null,
+  "temporal_coverage": [
+    "2010"
+  ],
+  "date_issued": null,
+  "index_year": [
+    "2010"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "United States"
+  ],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": [
+    "National Neighborhood Data Archive"
+  ],
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": null,
+  "rights_holder": null,
+  "license": null,
+  "access_rights": "Public",
+  "format": "csv | zip",
+  "file_size": "1.9 MB\t",
+  "references": {
+    "reference uri": "https://archive.icpsr.umich.edu/view/studies/38606?page=1"
+  },
+  "wxs_indentifier": null,
+  "id": "NandaUrbancity-130542",
+  "identifier": null,
+  "modified": "2024-07-01T19:34:05Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": true,
+  "spatial_resolution": [
+    "County",
+    "State",
+    "Census Tract"
+  ],
+  "spatial_resolution_note": null,
+  "methods_variables": [
+    "measures of urbanicity",
+    "urban/rural qualities of United States",
+    "census tracts",
+    "RUCA codes",
+    "population",
+    "urban",
+    " large rural",
+    " small rural",
+    " isolated primary",
+    "commuting flow",
+    "secondary commuting flow",
+    "Rural area"
+  ],
+  "data_variables": [
+    "tract_fips10",
+    "tot_pop_census",
+    "urban_pop",
+    "ua_pop",
+    "uc_pop",
+    "rural_pop",
+    "tract_urban_pct",
+    "tract_rural_pct",
+    "urbanicity",
+    "tot_pop_ruca",
+    "land_area_sqmiles",
+    "pop_density",
+    "ruca_primary",
+    "ruca_secondary",
+    "ruca_secondaryx10",
+    "ruca4",
+    "ruca7"
+  ],
+  "data_usage_notes": null
+}

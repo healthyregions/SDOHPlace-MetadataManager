@@ -1,26 +1,23 @@
 {
-  "title": "Area Deprivation Index (ADI) 2020",
+  "title": "Food Environment Atlas",
   "alternative_title": null,
-  "description": null,
+  "description": [
+    "The Food Access Research Atlas presents an overview of food access indicators for low-income and other census tracts using different measures of supermarket accessibility. It provides food access data for populations within census tracts and it offers census-tract-level data on food access that can be downloaded for community planning or research purposes."
+  ],
   "language": [],
   "display_note": null,
   "creator": null,
   "publisher": null,
   "provider": null,
   "resource_class": [
-    "Collections",
     "Datasets"
   ],
-  "resource_type": [
-    "Aerial photographs"
-  ],
-  "subject": [
-    "Area Deprivation Index"
-  ],
+  "resource_type": [],
+  "subject": null,
   "theme": [],
   "keyword": null,
   "temporal_coverage": null,
-  "date_issued": "2020",
+  "date_issued": null,
   "index_year": null,
   "date_range": null,
   "spatial_coverage": null,
@@ -32,31 +29,27 @@
   "member_of": null,
   "is_part_of": null,
   "source": null,
-  "is_version_of": [
-    "neighborhood-atlas"
-  ],
+  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": null,
   "rights_holder": null,
   "license": null,
   "access_rights": "Public",
-  "format": "CSV",
+  "format": null,
   "file_size": null,
-  "references": null,
+  "references": {},
   "wxs_indentifier": null,
-  "id": "adi-2020",
+  "id": "food_environment_atlas",
   "identifier": null,
-  "modified": "2024-06-11T20:38:55Z",
+  "modified": "2024-06-26T14:19:29Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": null,
   "spatial_resolution": [
-    "County"
+    "Census Tract"
   ],
   "spatial_resolution_note": null,
   "methods_variables": null,
-  "data_variables": [
-    "aef"
-  ],
+  "data_variables": null,
   "data_usage_notes": null
 }

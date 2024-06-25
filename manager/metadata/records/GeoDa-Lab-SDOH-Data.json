@@ -1,0 +1,106 @@
+{
+  "title": "GeoDa Lab SDOH Data",
+  "alternative_title": null,
+  "description": [
+    "The data explores four dimensions (Socioeconomic Advantage, Limited Mobility, Urban Core Opportunity, Mixed Immigrant Cohesion& Accessibility) of the social determinants of health of all census tracts at the neighborhood level across the continental United States. The data contain variables derived from the 2014 American Community Survey 5-year mean. It has 71,901 observations and 25 variables.  It looked at all the populated census tracts on the United States mainland to look for patterns across SDOH indicators."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "The University of Chicago Center for Spatial Data Science",
+    "The AHA Center for Health Innovation"
+  ],
+  "publisher": [
+    "The University of Chicago Center for Spatial Data Science"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Datasets"
+  ],
+  "resource_type": [
+    "Census data",
+    "Polygon data"
+  ],
+  "subject": null,
+  "theme": [
+    "Health",
+    "Society",
+    "Transportation"
+  ],
+  "keyword": null,
+  "temporal_coverage": [
+    "2014"
+  ],
+  "date_issued": "2014",
+  "index_year": [
+    "2014"
+  ],
+  "date_range": [
+    "2010-2014"
+  ],
+  "spatial_coverage": [
+    "United States"
+  ],
+  "geometry": "None",
+  "bounding_box": "None",
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    "None"
+  ],
+  "rights_holder": [
+    "None"
+  ],
+  "license": [
+    "None"
+  ],
+  "access_rights": "Public",
+  "format": "CSV | Shapefile",
+  "file_size": "47.7 mb",
+  "references": {
+    "reference uri": "https://geodacenter.github.io/data-and-lab/us-sdoh/"
+  },
+  "wxs_indentifier": null,
+  "id": "GeoDa-Lab-SDOH-Data",
+  "identifier": null,
+  "modified": "2024-06-28T18:07:50Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": true,
+  "spatial_resolution": [
+    "Census Tract"
+  ],
+  "spatial_resolution_note": null,
+  "methods_variables": [
+    "Percentage of persons below poverty estimate, 2010-2014 ACS",
+    "Percentage of civilian (age 16+) unemployed estimate, 2010-2014 ACS",
+    "Per capita income estimate, 2010-2014 ACS",
+    "Percentage of persons with no high school diploma (age 25+) estimate, 2010-2014 ACS",
+    "Percentage of single parent households with children under 18 estimate, 2010-2014 ACS",
+    "Percentage of persons (age 5+) who speak English \u201cless than well\u201d estimate, 2010-2014 ACS",
+    "Percentage of households with more people than rooms estimate, 2010-2014 ACS",
+    "Percentage of households with no vehicle available estimate, 2010-2014 ACS",
+    "Percentage of renters estimate, 2010-2014 ACS",
+    "Percentage of renters paying over 30% of income towards housing estimate, 2010-2014 ACS",
+    "Percentage of uninsured in the total civilian noninstitutionalized population estimate, 2010- 2014 ACS",
+    "Percentage minority (all persons except white, non-Hispanic) estimate, 2010-2014 ACS",
+    "Percentage of persons aged 65 and older estimate, 2010-2014 ACS",
+    "Percentage of persons aged 17 and younger estimate, 2010-2014 ACS",
+    "Percentage of civilian noninstitutionalized population with a disability estimate, 2010-2014 ACS"
+  ],
+  "data_variables": [
+    "Socioeconomic Advantage Index",
+    "Limited Mobility Index",
+    "Urban Core Opportunity Index",
+    "MICA Index"
+  ],
+  "data_usage_notes": null
+}

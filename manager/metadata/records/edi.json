@@ -1,14 +1,17 @@
 {
-  "title": "County Health Rankings",
+  "title": "Environmental Justice Index",
   "alternative_title": null,
-  "description": null,
+  "description": [
+    "The Environmental Justice Index (EJI) uses data from the U.S. Census Bureau, the U.S. Environmental Protection Agency, the U.S. Mine Safety and Health Administration, and the U.S. Centers for Disease Control and Prevention to rank the cumulative impacts of environmental injustice on health for every census tract. Census tracts are subdivisions of counties for which the Census collects statistical data. The EJI ranks each tract on 36 environmental, social, and health factors and groups them into three overarching modules and ten different domains."
+  ],
   "language": [],
   "display_note": null,
   "creator": null,
   "publisher": null,
   "provider": null,
   "resource_class": [
-    "Datasets"
+    "Datasets",
+    "Maps"
   ],
   "resource_type": [],
   "subject": null,
@@ -27,7 +30,7 @@
   "member_of": null,
   "is_part_of": null,
   "source": null,
-  "is_version_of": "county-health-rankings",
+  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": null,
@@ -36,11 +39,11 @@
   "access_rights": "Public",
   "format": null,
   "file_size": null,
-  "references": null,
+  "references": {},
   "wxs_indentifier": null,
-  "id": "county-health-rankings-2010",
+  "id": "edi",
   "identifier": null,
-  "modified": "2024-06-03T18:20:22Z",
+  "modified": "2024-06-26T14:11:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": null,
   "spatial_resolution": [
