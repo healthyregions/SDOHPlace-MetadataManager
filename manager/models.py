@@ -202,7 +202,7 @@ class Record(db.Model):
         solr_doc = {}
         for key, field in self.schema.lookup.items():
             value = self.data.get(key)
-            if value is not None:
+            if value is not None and str(value).lower() != "none":
                 if key == "references":
                     value = json.dumps(value)
                 solr_doc[field.uri] = value
