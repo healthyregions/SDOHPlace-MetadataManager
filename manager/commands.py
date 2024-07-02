@@ -1,10 +1,15 @@
 import os
+import random
+import string
+
 import click
 from flask.cli import with_appcontext
 
+from werkzeug.security import generate_password_hash, check_password_hash
+
 from .solr import Solr
 
-from .models import db, Schema, Record
+from .models import db, Schema, Record, User
 from .utils import METADATA_DIR
 
 
@@ -95,3 +100,19 @@ def reset_records():
 
 		db.session.add(new_record)
 		db.session.commit()
+
+@click.command()
+@with_appcontext
+@click.argument('email')
+def reset_user_password(email):
+        """ Set a user's password manually """
+
+        user = User.query.filter_by(email=email).first()
+
+        raw = ''.join(random.choices(string.ascii_uppercase +
+                             string.digits, k=6))
+
+        user.password = generate_password_hash(raw, method='pbkdf2:sha256')
+        db.session.commit()
+
+        print(raw)
