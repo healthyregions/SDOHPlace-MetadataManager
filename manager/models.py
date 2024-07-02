@@ -213,7 +213,7 @@ class Record(db.Model):
         if not solr_instance:
             solr_instance = Solr()
         try:
-            solr_instance.add(solr_doc)
+            r = solr_instance.add(solr_doc)
             result = {
                 "success": True,
                 "document": solr_doc

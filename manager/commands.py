@@ -17,14 +17,18 @@ from .utils import METADATA_DIR
 @with_appcontext
 @click.option('--all', is_flag=True, default=False)
 @click.option('--clean', is_flag=True, default=False)
-def index(all, clean):
+@click.option('--verbose', is_flag=True, default=False)
+def index(all, clean, verbose):
 	"""Reindex all Solr records from database content."""
 
-	s = Solr()
+	s = Solr(verbose=verbose)
 	if clean:
-		s.delete_all()
+		result = s.delete_all()
+		print(result)
+
 	for r in Record.query.all():
 		result = r.index(solr_instance=s)
+
 		if not result['success']:
 			print(result)
 
