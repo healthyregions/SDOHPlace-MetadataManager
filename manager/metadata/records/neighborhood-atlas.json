@@ -1,13 +1,10 @@
 {
-  "id": "neighborhood-atlas",
   "title": "Neighborhood Atlas",
   "alternative_title": null,
   "description": [
-    "The Neighborhood Atlas website was created in order to freely share measures of neighborhood disadvantage with the public, including educational institutions, health systems, not-for-profit organizations, and government agencies, in order to make these metrics available for use in research, program planning, and policy development. The Area Deprivation Index (ADI) is based on a measure created by the Health Resources & Services Administration (HRSA) thirty years ago. It helps to rank neighborhoods on the basis of income, education, employment, and housing quality."
+    "The <a href=\"https://www.neighborhoodatlas.medicine.wisc.edu\" target=\"_blank\">Neighborhood Atlas website</a> was created in order to freely share measures of neighborhood disadvantage with the public, including educational institutions, health systems, not-for-profit organizations, and government agencies, in order to make these metrics available for use in research, program planning, and policy development. The Area Deprivation Index (ADI) is based on a measure created by the Health Resources & Services Administration (HRSA) thirty years ago. It helps to rank neighborhoods on the basis of income, education, employment, and housing quality."
   ],
-  "language": [
-    ""
-  ],
+  "language": [],
   "display_note": null,
   "creator": [
     "Kind AJH, Buckingham W. University of Wisconsin School of Medicine and Public Health"
@@ -19,15 +16,11 @@
   "resource_class": [
     "Websites"
   ],
-  "resource_type": [
-    ""
-  ],
+  "resource_type": [],
   "subject": [
     "Area Deprivation Index"
   ],
-  "theme": [
-    ""
-  ],
+  "theme": [],
   "keyword": null,
   "temporal_coverage": null,
   "date_issued": "2018-05-01",
@@ -59,8 +52,9 @@
     "http://schema.org/url": "https://www.neighborhoodatlas.medicine.wisc.edu"
   },
   "wxs_indentifier": null,
+  "id": "neighborhood-atlas",
   "identifier": null,
-  "modified": "2023-09-08T15:39:06Z",
+  "modified": "2024-07-17T21:30:56Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": null,
   "spatial_resolution": [

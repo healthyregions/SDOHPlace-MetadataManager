@@ -1,0 +1,108 @@
+{
+  "title": "Smart Location Database",
+  "alternative_title": [
+    "None"
+  ],
+  "description": [
+    "EPA developed three data products(Smart Location Database, Access to Jobs and Workers Via Transit Tool, and National Walkability Index) that consistently measure the built environment and transit accessibility of neighborhoods across metropolitan regions and the United States. Users can download data, browse the data in interactive maps, or access the data through web services. Smart Location Database includes more than 90 attributes summarizing characteristics such as housing density, diversity of land use, neighborhood design, destination accessibility, transit service, employment, and demographics. Coverage is limited to metropolitan regions served by transit agencies that share their service data in a standard format called GTFS"
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": [
+    "Please review the Smart Location Database Technical Documentation and User Guide  (https://www.epa.gov/system/files/documents/2023-10/epa_sld_3.0_technicaldocumentationuserguide_may2021_0.pdf) for a full description of all available variables, data sources, data currency, and known limitations."
+  ],
+  "creator": [
+    "U.S. Environmental Protection Agency, Office of Sustainable Communities"
+  ],
+  "publisher": [
+    "U.S. Environmental Protection Agency"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Datasets",
+    "Web services"
+  ],
+  "resource_type": [
+    "Census data",
+    "Polygon data"
+  ],
+  "subject": null,
+  "theme": [
+    "Environment",
+    "Society",
+    "Transportation"
+  ],
+  "keyword": null,
+  "temporal_coverage": [
+    "2021"
+  ],
+  "date_issued": "2021",
+  "index_year": [
+    "2021"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "United States"
+  ],
+  "geometry": "None",
+  "bounding_box": "None",
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": [
+    "EPA-Travel-and-Built-Environment-Indicators"
+  ],
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    "None"
+  ],
+  "rights_holder": [
+    "None"
+  ],
+  "license": null,
+  "access_rights": "Public",
+  "format": "Geodatabase",
+  "file_size": null,
+  "references": {
+    "reference uri": "https://www.epa.gov/smartgrowth/smart-location-mapping"
+  },
+  "wxs_indentifier": null,
+  "id": "EPA-Travel-and-Built-Environment-Indicators",
+  "identifier": null,
+  "modified": "2024-06-24T04:51:26Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": true,
+  "spatial_resolution": [
+    "Census Block Group"
+  ],
+  "spatial_resolution_note": null,
+  "methods_variables": [
+    "Distance to nearest transit stop",
+    "Jobs within a 45-minute transit commute",
+    "Working-age population within a 45-minute transit commute",
+    "Jobs within a 45-minute drive",
+    "Working-age population within a 45-minute drive",
+    "Percentage of households with no car, 1 car, or 2 or more cars",
+    "Percentage of workers that are low, medium, or high wage (by home and work locations)"
+  ],
+  "data_variables": [
+    "Gross residential density (housing units per acre) on unprotected land",
+    "Gross population density (people per acre) on unprotected land",
+    "Gross employment density (jobs per acre) on unprotected land",
+    "Jobs per housing unit",
+    "Employment entropy (a measure of employment diversity)",
+    "Employment and housing entropy",
+    "Street intersections per square mile",
+    "High-speed road network density",
+    "Aggregate transit service frequency, afternoon peak period",
+    "Transit service density, afternoon peak period",
+    "Employment totals broken down by 5-tier classification scheme",
+    "Employment totals broken down by 8-tier classification scheme"
+  ],
+  "data_usage_notes": "The Smart Location Database summarizes more than 90 different indicators associated with the built environment and location efficiency. The Access to Jobs and Workers Via Transit Tool provides indicators of accessibility to destinations by public transit.The National Walkability Index provides walkability scores based on a simple formula that ranks selected indicators from the Smart Location Database that have been demonstrated to affect the propensity of walk trips."
+}

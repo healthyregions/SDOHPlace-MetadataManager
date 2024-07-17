@@ -1,0 +1,139 @@
+{
+  "title": "County Health Rankings (2020)",
+  "alternative_title": [
+    "County Health Rankings & Roadmaps (CHR&R)"
+  ],
+  "description": [
+    "Summarize the Health Outcome of Communities at the County-Level Health Data Across the US. The County Health Rankings & Roadmaps (CHR&R) draws attention to why there are differences in health within and across communities. CHR&R provides a snapshot of the health of nearly every county in the nation. Data for the 34 Select measures/ factors used to calculate Health Outcomes. This shows the 2020 release of the County Health Rankings"
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "Forum One",
+    "Robert Wood Johnson Foundation",
+    "University of Wisconsin Population Health Institute",
+    "Burness"
+  ],
+  "publisher": [
+    "University of Wisconsin Population Health Institute"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Datasets",
+    "Maps"
+  ],
+  "resource_type": [
+    "Polygon data"
+  ],
+  "subject": null,
+  "theme": [
+    "Health"
+  ],
+  "keyword": null,
+  "temporal_coverage": [
+    "2010-2024"
+  ],
+  "date_issued": "2020",
+  "index_year": [
+    "2010",
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'District of Columbia', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming"
+  ],
+  "geometry": "None",
+  "bounding_box": "None",
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": [
+    "County Health Rankings"
+  ],
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    "None"
+  ],
+  "rights_holder": [
+    "None"
+  ],
+  "license": null,
+  "access_rights": "Public",
+  "format": "CSV",
+  "file_size": "12.8 mb",
+  "references": {
+    "reference uri": "https://www.countyhealthrankings.org/health-data/methodology-and-sources/data-documentation/national-data-documentation-2010-2022"
+  },
+  "wxs_indentifier": null,
+  "id": "CHR-2020",
+  "identifier": null,
+  "modified": "2024-06-12T05:57:25Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": true,
+  "spatial_resolution": [
+    "County"
+  ],
+  "spatial_resolution_note": null,
+  "methods_variables": [
+    "Food environment index",
+    "Average Daily PM2.5"
+  ],
+  "data_variables": [
+    "Years of Potential Life Lost Rate",
+    "% Fair or Poor Health",
+    "Average Number of Physically Unhealthy Days",
+    "Average Number of Mentally Unhealthy Days",
+    "% Low Birthweight",
+    "% Smokers",
+    "% Adults with Obesity",
+    "% Physically Inactive",
+    "% With Access to Exercise Opportunities",
+    "% Excessive Drinking",
+    "% Driving Deaths with Alcohol Involvement",
+    "Chlamydia Rate",
+    "Teen Birth Rate",
+    "% Uninsured",
+    "Primary Care Physicians Rate",
+    "Primary Care Physicians Ratio",
+    "Dentist Rate",
+    "Dentist Ratio",
+    "Mental Health Provider Rate",
+    "Mental Health Provider Ratio",
+    "Preventable Hospitalization Rate",
+    "% With Annual Mammogram",
+    "% Vaccinated",
+    "High School Graduation Rate",
+    "% Some College",
+    "% Unemployed",
+    "% Children in Poverty",
+    "Income Ratio",
+    "% Single-Parent Households",
+    "Social Association Rate",
+    "Violent Crime Rate",
+    "Injury Death Rate",
+    "Presence of Water Violation",
+    "% Severe Housing Problems",
+    "% Drive Alone to Work",
+    "% Long Commute - Drives Alone"
+  ],
+  "data_usage_notes": "The data contains a breakdown of the measures used in calculating outcomes, data elements, descriptions, and ranking for each country."
+}

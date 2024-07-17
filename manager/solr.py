@@ -8,18 +8,24 @@ SOLR_URL = f"{SOLR_HOST}/{SOLR_CORE}/"
 
 class Solr:
 
-	def __init__(self):
+	def __init__(self, verbose=False):
 		self.solr = pysolr.Solr(
 			SOLR_URL,
 			always_commit=True
 		)
 		self.health_check()
+		self.verbose=verbose
+		if self.verbose:
+			print(f"Solr host: {SOLR_URL}")
 
 	def add(self, doc):
-		self.solr.add([doc])
+		if self.verbose:
+			print('Solr add document:')
+			print(doc)
+		return self.solr.add([doc])
 
 	def multi_add(self, arr):
-		self.solr.add(arr)
+		return self.solr.add(arr)
 
 	def search(self, query, filters=None):
 		return self.solr.search(query, **filters)

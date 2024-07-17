@@ -1,0 +1,97 @@
+{
+  "title": "Access to Jobs and Workers Via Transit Tool",
+  "alternative_title": [
+    "None"
+  ],
+  "description": [
+    "Access to Jobs and Workers Via Transit is a free geospatial data resource and web mapping tool for comparing the accessibility of neighborhoods via public transit service. Indicators summarize accessibility to jobs as well as accessibility by workers, households, and population. Coverage is limited to metropolitan regions served by transit agencies that share their service data in a standard format called GTFS."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "U.S. Environmental Protection Agency, Office of Sustainable Communities"
+  ],
+  "publisher": [
+    "U.S. Environmental Protection Agency"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Datasets",
+    "Web services"
+  ],
+  "resource_type": [
+    "Census data",
+    "Polygon data"
+  ],
+  "subject": null,
+  "theme": [
+    "Environment",
+    "Transportation"
+  ],
+  "keyword": null,
+  "temporal_coverage": [
+    "2021"
+  ],
+  "date_issued": "2021",
+  "index_year": [
+    "2021"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "United States"
+  ],
+  "geometry": "None",
+  "bounding_box": "None",
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": [
+    "EPA-Travel-and-Built-Environment-Indicators"
+  ],
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    "None"
+  ],
+  "rights_holder": [
+    "None"
+  ],
+  "license": null,
+  "access_rights": "Public",
+  "format": "Geodatabase| Shapefile | DBF",
+  "file_size": "shp 253 mb | gdb 120 | DBF 8mb",
+  "references": {
+    "reference uri": "https://www.epa.gov/smartgrowth/smart-location-mapping#Trans45"
+  },
+  "wxs_indentifier": null,
+  "id": "Access-to-Jobs-and-Workers-Via-Transit-Tool",
+  "identifier": null,
+  "modified": "2024-06-24T04:47:23Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": true,
+  "spatial_resolution": [
+    "Census Block"
+  ],
+  "spatial_resolution_note": null,
+  "methods_variables": [
+    "Population with access by transit",
+    "Percentage of population with access by transit",
+    "Jobs accessible by transit",
+    "Percentage of regional jobs accessible by transit",
+    "Workers with access by transit",
+    "Percentage of workers with access by transit",
+    "Low-wage workers with access by transit",
+    "Percentage of all low-wage workers in region with access by transit",
+    "Low-medium wage workers with access by transit",
+    "Percentage of all low-medium wage workers in region with access by transit"
+  ],
+  "data_variables": [
+    "Accessibility Index"
+  ],
+  "data_usage_notes": "The Access to Jobs and Workers Via Transit - Technical Documentation and User Guide (https://www.epa.gov/sites/default/files/2014-03/documents/sld_trans45_ug_0.pdf) includes a full list of those areas."
+}

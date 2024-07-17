@@ -1,10 +1,10 @@
 {
-  "title": "County Health Rankings (2010)",
+  "title": "County Health Rankings (2024)",
   "alternative_title": [
     "County Health Rankings & Roadmaps (CHR&R)"
   ],
   "description": [
-    "Summarize the Health Outcome of Communities at the County-Level Health Data Across the US. The County Health Rankings & Roadmaps (CHR&R) draws attention to why there are differences in health within and across communities. CHR&R provides a snapshot of the health of nearly every county in the nation. Data for the 34 Select measures/ factors used to calculate Health Outcomes. This shows the 2010 release of the County Health Rankings."
+    "Summarize the Health Outcome of Communities at the County-Level Health Data Across the US. The County Health Rankings & Roadmaps (CHR&R) draws attention to why there are differences in health within and across communities. CHR&R provides a snapshot of the health of nearly every county in the nation. Data for the 34 Select measures/ factors used to calculate Health Outcomes. This shows the 2024 release of the County Health Rankings."
   ],
   "language": [
     "eng"
@@ -27,9 +27,7 @@
   "resource_type": [
     "Polygon data"
   ],
-  "subject": [
-    "Community Health"
-  ],
+  "subject": null,
   "theme": [
     "Health"
   ],
@@ -37,7 +35,7 @@
   "temporal_coverage": [
     "2010-2024"
   ],
-  "date_issued": "2010",
+  "date_issued": "2024",
   "index_year": [
     "2010",
     "2011",
@@ -131,14 +129,14 @@
   "license": null,
   "access_rights": "Public",
   "format": "CSV",
-  "file_size": "4.8 mb",
+  "file_size": "15.1 mb",
   "references": {
-    "reference uri": "https://www.countyhealthrankings.org/health-data/methodology-and-sources/data-documentation/national-data-documentation-2010-2022"
+    "reference uri": "https://www.countyhealthrankings.org/health-data/methodology-and-sources/data-documentation"
   },
   "wxs_indentifier": null,
-  "id": "county-health-rankings",
+  "id": "CHR-2024",
   "identifier": null,
-  "modified": "2024-06-12T06:08:25Z",
+  "modified": "2024-06-12T05:51:25Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -146,38 +144,45 @@
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
-    "Average Daily PM2.5",
-    "Gini coefficient of household income inequality"
+    "Food Environment Index",
+    "Average Daily PM2.5"
   ],
   "data_variables": [
-    "Years of Potential Life-Lost Rate",
-    " % Fair/Poor",
-    " Physically Unhealthy Days",
-    " Mentally Unhealthy Days",
-    "% Low Birth Weight",
-    " % Smokers",
-    " '% Obese",
+    "Years of Potential Life Lost Rate",
+    "% Fair or Poor Health",
+    "Average Number of Physically Unhealthy Days",
+    "Average Number of Mentally Unhealthy Days",
+    "% Low birthweight",
+    "% Adults Reporting Currently Smoking",
+    "% Adults with Obesity",
     "% Physically Inactive",
-    "% Binge Drinking",
-    "Motor vehicle crash death rate",
-    "Chlamydia rate per 100,000",
+    "% With Access to Exercise Opportunities",
+    "% Excessive Drinking",
+    "% Driving Deaths with Alcohol Involvement",
+    "Chlamydia Rate",
     "Teen Birth Rate",
     "% Uninsured",
     "Primary Care Physicians Rate",
-    "Preventable Hosp. Rate",
-    "% Receiving HbA1c",
-    "% Hospice Use",
+    "Primary Care Physicians Ratio",
+    "Dentist Rate",
+    "Dentist Ratio",
+    "Mental Health Provider Rate",
+    "Mental Health Provider Ratio",
+    "Preventable Hospitalization Rate",
+    "% With Annual Mammogram",
+    "% Flu Vaccinated",
     "% Completed High School",
     "% Some College",
     "% Unemployed",
     "% Children in Poverty",
-    "% No Social-Emotional Support",
+    "Income Ratio",
     "% Children in Single-Parent Households",
-    "Violent Crime Rate",
-    "Homicide Rate",
-    "Ozone Days",
-    "%Access to healthy foods",
-    "Liquor Store Rate"
+    "Social Association Rate",
+    "Injury Death Rate",
+    "Presence of Water Violation",
+    "% Severe Housing Problems",
+    "% Drive Alone to Work",
+    "% Long Commute - Drives Alone"
   ],
   "data_usage_notes": "The data contains a breakdown of the measures used in calculating outcomes, data elements, descriptions, and ranking for each country."
 }

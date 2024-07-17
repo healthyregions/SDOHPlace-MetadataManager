@@ -1,0 +1,98 @@
+{
+  "title": "National Walkability Index",
+  "alternative_title": [
+    "EPA Walkability Index"
+  ],
+  "description": [
+    "EPA developed three data products(Smart Location Database, Access to Jobs and Workers Via Transit Tool, and National Walkability Index) that consistently measure the built environment and transit accessibility of neighborhoods across metropolitan regions and the United States. Users can download data, browse the data in interactive maps, or access the data through web services. The National Walkability Index includes dataset of walkability scores for all block groups as well as the underlying attributes that are used to rank the block groups."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "U.S. Environmental Protection Agency, Office of Sustainable Communities"
+  ],
+  "publisher": [
+    "U.S. Environmental Protection Agency"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Datasets",
+    "Web services"
+  ],
+  "resource_type": [
+    "Census data",
+    "Polygon data"
+  ],
+  "subject": null,
+  "theme": [
+    "Environment",
+    "Transportation"
+  ],
+  "keyword": null,
+  "temporal_coverage": [
+    "2021"
+  ],
+  "date_issued": "2021",
+  "index_year": [
+    "2021"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "United States"
+  ],
+  "geometry": "None",
+  "bounding_box": "None",
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": [
+    "EPA-Travel-and-Built-Environment-Indicators"
+  ],
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    "None"
+  ],
+  "rights_holder": [
+    "None"
+  ],
+  "license": null,
+  "access_rights": "Public",
+  "format": "Geodatabase",
+  "file_size": "406 mb",
+  "references": {
+    "reference uri": "https://https://www.epa.gov/smartgrowth/smart-location-mapping#walkability"
+  },
+  "wxs_indentifier": null,
+  "id": "NatWalkInd",
+  "identifier": null,
+  "modified": "2024-06-24T04:42:04Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": true,
+  "spatial_resolution": [
+    "Census Block Group"
+  ],
+  "spatial_resolution_note": null,
+  "methods_variables": [
+    "Population, 2018",
+    "Housing units, 2018",
+    "Households (occupied housing units), 2018",
+    "Workers- Count of workers in CBG (home location), 2017"
+  ],
+  "data_variables": [
+    "D2B_E8MIXA- 8-tier employment entropy (denominator set to the static 8 employment types in the CBG)",
+    "D2A_EPHHM- Employment and household entropy",
+    "D4A- Distance from the population-weighted centroid to the nearest transit stop (meters)",
+    "D3B- Street intersection density (weighted, auto-oriented intersections eliminated)",
+    "D2A_Ranked- Quantile ranked order (1-20) of [D2a_EpHHm] from lowest to highest",
+    "D2B_Ranked- Quantile ranked order (1-20) of [D2b_E8MixA] from lowest to highest",
+    "D3B_Ranked- Quantile ranked order (1-20) of [D3b] from lowest to highest",
+    "D4A_Ranked- Quantile ranked order (1,13-20)  of [D4a] from lowest to highest"
+  ],
+  "data_usage_notes": "The National Walkability Index User Guide and Methodology (https://www.epa.gov/sites/default/files/2021-06/documents/national_walkability_index_methodology_and_user_guide_june2021.pdf) describes how to use the index and the methodology used to derive the index and ranked scores for its inputs."
+}
