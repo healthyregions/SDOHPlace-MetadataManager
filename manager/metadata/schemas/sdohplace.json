@@ -22,7 +22,12 @@
             "name": "Spatial"
         },
         {
-            "name": "Relations"
+            "name": "Relations",
+            "help_text": [
+                "These fields allow you to relate this record to other records in the index. Typically, this is a done to create a \"parent/child\" relationship.",
+                "If this is a record for the specific release year of a dataset, use <strong>Is Version Of</strong> to relate to the parent record.",
+                "If this record is one of many in a collection, use <strong>Is Part Of</strong> to link to the parent record."
+            ]
         },
         {
             "name": "Rights"
@@ -50,7 +55,11 @@
             "display_group": "Descriptive",
             "slug": "title",
             "widget": "text-simple.html",
-            "id": "title"
+            "id": "title",
+            "help_text": [
+                "The main display title of the record.",
+                "For child records, use the same title as the parent record, and add (year) as suffix."
+            ]
         },
         {
             "label": "Alternative Title",
@@ -64,7 +73,10 @@
             "display_group": "Descriptive",
             "slug": "alternative-title",
             "widget": "text-simple.html",
-            "id": "alternative_title"
+            "id": "alternative_title",
+            "help_text": [
+                "Could include common abbreviations of the title."
+            ]
         },
         {
             "label": "Description",
@@ -78,7 +90,12 @@
             "display_group": "Descriptive",
             "slug": "description",
             "widget": "text-area.html",
-            "id": "description"
+            "id": "description",
+            "help_text": [
+                "Should be a full description of the purpose and use of this data source.",
+                "For child records, it can be a simple reference back to the parent record.",
+                "Examples: <strong>Parent</strong>: Full description of this data source. <strong>Child</strong>: \"2010 release of the County Health Rankings.\""
+            ]
         },
         {
             "label": "Language",
@@ -109,7 +126,12 @@
             "display_group": "Descriptive",
             "slug": "display-note",
             "widget": "text-simple.html",
-            "id": "display_note"
+            "id": "display_note",
+            "help_text": [
+                "These notes will be displayed in a callout box.",
+                "Optionally, a prefix can be added to the note to specifiy its type: this will determine the style of the box. The following prefixes are valid: \"Danger:\", \"Info:\", \"Tip:\", or \"Warning:\".",
+                "Example: \"Tip: This dataset can also be viewed directly in the organization's dashboard.\""
+            ]
         },
         {
             "label": "Creator",
@@ -123,7 +145,11 @@
             "display_group": "Credits",
             "slug": "creator",
             "widget": "text-simple.html",
-            "id": "creator"
+            "id": "creator",
+            "help_text": [
+                "If specific individuals are credited with the creation of this data set, add their names here.",
+                "If a data lab or consortium is credited, use that name here."
+            ]
         },
         {
             "label": "Publisher",
@@ -137,7 +163,11 @@
             "display_group": "Credits",
             "slug": "publisher",
             "widget": "text-simple.html",
-            "id": "publisher"
+            "id": "publisher",
+            "help_text": [
+                "The organization or agency that published this dataset.",
+                "Example: \"University of Wisconsin Population Health Institute\""
+            ]
         },
         {
             "label": "Provider",
@@ -151,7 +181,10 @@
             "display_group": "Credits",
             "slug": "provider",
             "widget": "text-simple.html",
-            "id": "provider"
+            "id": "provider",
+            "help_text": [
+                "This is the organization that created the metadata record, so we will use \"Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign\" for all records."
+            ]
         },
         {
             "label": "Resource Class",
@@ -347,7 +380,10 @@
             "display_group": "Temporal",
             "slug": "temporal-coverage",
             "widget": "text-simple.html",
-            "id": "temporal_coverage"
+            "id": "temporal_coverage",
+            "help_text": [
+                "This should be a single year \"2010\", or a range of years written like \"2010-2014\""
+            ]
         },
         {
             "label": "Date Issued",
@@ -361,7 +397,13 @@
             "display_group": "Temporal",
             "slug": "date-issued",
             "widget": "text-simple.html",
-            "id": "date_issued"
+            "id": "date_issued",
+            "help_text": [
+                "This field can be used to record a specific publication date, and can be expressed as a day, month, or year.",
+                "Use YYYY-MM-DD to record a day.",
+                "Use YYYY-MM to record a month.",
+                "Use YYYY to record a year."
+            ]
         },
         {
             "label": "Index Year",
@@ -375,7 +417,12 @@
             "display_group": "Temporal",
             "slug": "index-year",
             "widget": "text-simple.html",
-            "id": "index_year"
+            "id": "index_year",
+            "help_text": [
+                "This must be a single year, or, for a parent record with multiple releases, it must be a list of all child years, each separated by |.",
+                "Example (single year): \"2010\"",
+                "Example (multiple years): \"2010|2011|2012|2013|2014|2015|2016|2017|2018\""
+            ]
         },
         {
             "label": "Date Range",
@@ -389,7 +436,10 @@
             "display_group": "Temporal",
             "slug": "date-range",
             "widget": "text-simple.html",
-            "id": "date_range"
+            "id": "date_range",
+            "help_text": [
+                "Don't use this field."
+            ]
         },
         {
             "label": "Spatial Coverage",
@@ -403,7 +453,11 @@
             "display_group": "Spatial",
             "slug": "spatial-coverage",
             "widget": "text-area.html",
-            "id": "spatial_coverage"
+            "id": "spatial_coverage",
+            "help_text": [
+                "This field holds the names of locations that the dataset is relevant to.",
+                "The majority of our records have nation-wide coverage, so use \"United States\" in that case. For all others, list state names (\"Illinois\"), or city, state (\"Chicaco, Illinois\")."
+            ]
         },
         {
             "label": "Geometry",
@@ -417,7 +471,10 @@
             "display_group": "Spatial",
             "slug": "geometry",
             "widget": "text-simple.html",
-            "id": "geometry"
+            "id": "geometry",
+            "help_text": [
+                "Leave blank for now…"
+            ]
         },
         {
             "label": "Bounding Box",
@@ -431,7 +488,10 @@
             "display_group": "Spatial",
             "slug": "bounding-box",
             "widget": "text-simple.html",
-            "id": "bounding_box"
+            "id": "bounding_box",
+            "help_text": [
+                "Leave blank for now…"
+            ]
         },
         {
             "label": "Centroid",
@@ -445,7 +505,10 @@
             "display_group": "Spatial",
             "slug": "centroid",
             "widget": "text-simple.html",
-            "id": "centroid"
+            "id": "centroid",
+            "help_text": [
+                "Leave blank for now…"
+            ]
         },
         {
             "label": "Georeferenced",
@@ -459,7 +522,10 @@
             "display_group": "Spatial",
             "slug": "georeferenced",
             "widget": "checkbox.html",
-            "id": "georeferenced"
+            "id": "georeferenced",
+            "help_text": [
+                "Leave blank for now…"
+            ]
         },
         {
             "label": "Relation",
@@ -686,7 +752,13 @@
             "display_group": "Identifiers",
             "slug": "id",
             "widget": "id.html",
-            "id": "id"
+            "id": "id",
+            "help_text": [
+                "The id must be lowercase with no spaces or underscores, only dashes. It can be an abbreviation or long-form version of what goes in the Title field.",
+                "For child records that are different year releases of parent records, use the parent’s ID with the release year as suffix.",
+                "Example: <strong>Parent</strong> county-health-rankings <strong>Child</strong> county-health-rankings-2010",
+                "Note: There's a good chance we'll overhaul all IDs in the future, so don't spend too much time worrying about this field"
+            ]
         },
         {
             "label": "Identifier",
@@ -700,7 +772,10 @@
             "display_group": "Identifiers",
             "slug": "identifier",
             "widget": "text-simple.html",
-            "id": "identifier"
+            "id": "identifier",
+            "help_text": [
+                "Use this field for external identifiers that can be used for this item. For example, put DOIs in this field."
+            ]
         },
         {
             "label": "Modified",
@@ -767,7 +842,10 @@
             "display_group": "SDOH Place Project",
             "slug": "spatial-resolution",
             "widget": "select.html",
-            "id": "spatial_resolution"
+            "id": "spatial_resolution",
+            "help_text": [
+                "Select which spatial resolutions this data source is relevant for"
+            ]
         },
         {
             "label": "Spatial Resolution Note",
@@ -795,7 +873,11 @@
             "display_group": "SDOH Place Project",
             "slug": "methods-variables",
             "widget": "text-area.html",
-            "id": "methods_variables"
+            "id": "methods_variables",
+            "help_text": [
+                "List the names of variables that were used in the methodology.",
+                "Applicable for health indices, such as the Social Vulnerability Index."
+            ]
         },
         {
             "label": "Data Variables",
@@ -809,7 +891,11 @@
             "display_group": "SDOH Place Project",
             "slug": "spatial-resolution",
             "widget": "text-area.html",
-            "id": "data_variables"
+            "id": "data_variables",
+            "help_text": [
+                "List the variables that are available to users in the downloaded dataset.",
+                "Applicable if there is a downloadable dataset associated with this record."
+            ]
         },
         {
             "label": "Data Usage Notes",
@@ -823,7 +909,10 @@
             "display_group": "SDOH Place Project",
             "slug": "data-usage-notes",
             "widget": "text-area.html",
-            "id": "data_usage_notes"
+            "id": "data_usage_notes",
+            "help_text": [
+                "For suggestions on how this dataset should or should not be used."
+            ]
         }
     ]
 }
