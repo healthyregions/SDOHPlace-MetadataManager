@@ -34,7 +34,13 @@ def table_view():
 def create_record():
 	if request.method == "GET":
 		schema = Schema.query.get(1)
-		return render_template('crud/edit.html', record=schema.get_blank_form(), field_groups=schema.grouped_fields)
+		records = [r.to_json() for r in Record.query.all()]
+		relations_choices = [(r['id'], r['title']) for r in records]
+		return render_template('crud/edit.html',
+						 record=schema.get_blank_form(),
+						 field_groups=schema.grouped_fields,
+						 relations_choices=relations_choices,
+						 )
 
 @crud.route("/record/validate", methods=["POST"])
 @login_required
@@ -64,7 +70,9 @@ def handle_record(id):
 		edit = request.args.get('edit') == "true"
 		if format == "html":
 			if edit:
-				return render_template('crud/edit.html', record=record.to_form(), field_groups=record.schema.grouped_fields)
+				records = [r.to_json() for r in Record.query.all()]
+				relations_choices = [(r['id'], r['title']) for r in records]
+				return render_template('crud/edit.html', record=record.to_form(), field_groups=record.schema.grouped_fields, relations_choices=relations_choices)
 			else:
 				return render_template('crud/view.html', record=record.to_json(), field_groups=record.schema.grouped_fields)
 		elif format == "json":

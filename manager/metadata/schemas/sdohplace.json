@@ -448,7 +448,7 @@
             "schema": "Aardvark",
             "display_group": "Relations",
             "slug": "relation",
-            "widget": "text-simple.html",
+            "widget": "select-record.html",
             "id": "relation"
         },
         {
@@ -462,7 +462,7 @@
             "schema": "Aardvark",
             "display_group": "Relations",
             "slug": "member-of",
-            "widget": "text-simple.html",
+            "widget": "select-record.html",
             "id": "member_of"
         },
         {
@@ -476,7 +476,7 @@
             "schema": "Aardvark",
             "display_group": "Relations",
             "slug": "is-part-of",
-            "widget": "text-simple.html",
+            "widget": "select-record.html",
             "id": "is_part_of"
         },
         {
@@ -490,7 +490,7 @@
             "schema": "Aardvark",
             "display_group": "Relations",
             "slug": "source",
-            "widget": "text-simple.html",
+            "widget": "select-record.html",
             "id": "source"
         },
         {
@@ -504,7 +504,7 @@
             "schema": "Aardvark",
             "display_group": "Relations",
             "slug": "is-version-of",
-            "widget": "text-simple.html",
+            "widget": "select-record.html",
             "id": "is_version_of"
         },
         {
@@ -518,7 +518,7 @@
             "schema": "Aardvark",
             "display_group": "Relations",
             "slug": "replaces",
-            "widget": "text-simple.html",
+            "widget": "select-record.html",
             "id": "replaces"
         },
         {
@@ -532,7 +532,7 @@
             "schema": "Aardvark",
             "display_group": "Relations",
             "slug": "is-replaced-by",
-            "widget": "text-simple.html",
+            "widget": "select-record.html",
             "id": "is_replaced_by"
         },
         {
