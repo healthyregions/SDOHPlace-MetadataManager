@@ -59,13 +59,13 @@
   "access_rights": "Public",
   "format": "csv | dta",
   "file_size": "1.8 MB\t",
-  "references": {
-    "referrence uri": "https://www.openicpsr.org/openicpsr/project/134561/version/V1/view"
-  },
+  "references": {},
   "wxs_indentifier": null,
   "id": "nanda-1d1d1d1d",
-  "identifier": null,
-  "modified": "2024-06-28T18:23:55Z",
+  "identifier": [
+    "https://doi.org/10.3886/ICPSR38580.v2"
+  ],
+  "modified": "2024-07-17T15:35:06Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": null,
   "spatial_resolution": [

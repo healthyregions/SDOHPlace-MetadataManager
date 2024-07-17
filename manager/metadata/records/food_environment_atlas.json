@@ -1,26 +1,40 @@
 {
-  "title": "Food Environment Atlas",
+  "title": "Food Environment Atlas (FEA)",
   "alternative_title": null,
   "description": [
     "The Food Access Research Atlas presents an overview of food access indicators for low-income and other census tracts using different measures of supermarket accessibility. It provides food access data for populations within census tracts and it offers census-tract-level data on food access that can be downloaded for community planning or research purposes."
   ],
-  "language": [],
+  "language": [
+    "eng"
+  ],
   "display_note": null,
-  "creator": null,
-  "publisher": null,
-  "provider": null,
+  "creator": [
+    "Economic Research Service (ERS), U.S. Department of Agriculture (USDA)"
+  ],
+  "publisher": [
+    "U.S. Department of Agriculture (USDA)"
+  ],
+  "provider": "Healthy Regions + Policies Lab",
   "resource_class": [
     "Datasets"
   ],
-  "resource_type": [],
+  "resource_type": [
+    "Atlases"
+  ],
   "subject": null,
   "theme": [],
-  "keyword": null,
-  "temporal_coverage": null,
-  "date_issued": null,
+  "keyword": [
+    "US Census"
+  ],
+  "temporal_coverage": [
+    "2006-2019"
+  ],
+  "date_issued": "4/27/2021",
   "index_year": null,
   "date_range": null,
-  "spatial_coverage": null,
+  "spatial_coverage": [
+    "United States"
+  ],
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
@@ -36,13 +50,13 @@
   "rights_holder": null,
   "license": null,
   "access_rights": "Public",
-  "format": null,
+  "format": "Excel",
   "file_size": null,
-  "references": {},
+  "references": null,
   "wxs_indentifier": null,
   "id": "food_environment_atlas",
   "identifier": null,
-  "modified": "2024-06-26T14:19:29Z",
+  "modified": "2024-07-17T14:32:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": null,
   "spatial_resolution": [

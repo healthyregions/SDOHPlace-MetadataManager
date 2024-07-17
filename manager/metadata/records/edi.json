@@ -2,26 +2,40 @@
   "title": "Environmental Justice Index",
   "alternative_title": null,
   "description": [
-    "The Environmental Justice Index (EJI) uses data from the U.S. Census Bureau, the U.S. Environmental Protection Agency, the U.S. Mine Safety and Health Administration, and the U.S. Centers for Disease Control and Prevention to rank the cumulative impacts of environmental injustice on health for every census tract. Census tracts are subdivisions of counties for which the Census collects statistical data. The EJI ranks each tract on 36 environmental, social, and health factors and groups them into three overarching modules and ten different domains."
+    "Environmental justice is the fair treatment and meaningful The Environmental Justice Index uses data from the U.S. Census Bureau, the U.S. Environmental Protection Agency, the U.S. Mine Safety and Health Administration, and the U.S. Centers for Disease Control and Prevention to rank the cumulative impacts of environmental injustice on health for every census tract. Census tracts are subdivisions of counties for which the Census collects statistical data. The EJI ranks each tract on 36 environmental, social, and health factors and groups them into three overarching modules and ten different domains."
   ],
-  "language": [],
+  "language": [
+    "eng"
+  ],
   "display_note": null,
-  "creator": null,
-  "publisher": null,
-  "provider": null,
+  "creator": [
+    "Centers for Disease Control and Prevention and Agency for Toxic Substances Disease Registry"
+  ],
+  "publisher": [
+    "Centers for Disease Control and Prevention and Agency for Toxic Substances Disease Registry"
+  ],
+  "provider": "Centers for Disease Control and Prevention and Agency for Toxic Substances Disease Registry",
   "resource_class": [
     "Datasets",
     "Maps"
   ],
-  "resource_type": [],
+  "resource_type": [
+    "Polygon data"
+  ],
   "subject": null,
   "theme": [],
-  "keyword": null,
-  "temporal_coverage": null,
-  "date_issued": null,
+  "keyword": [
+    "US Census"
+  ],
+  "temporal_coverage": [
+    "2014-2021"
+  ],
+  "date_issued": "8/10/22 ",
   "index_year": null,
   "date_range": null,
-  "spatial_coverage": null,
+  "spatial_coverage": [
+    "United States"
+  ],
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
@@ -37,20 +51,24 @@
   "rights_holder": null,
   "license": null,
   "access_rights": "Public",
-  "format": null,
-  "file_size": null,
+  "format": "CSV, Geodatabase",
+  "file_size": "51.7 MB",
   "references": {},
   "wxs_indentifier": null,
   "id": "edi",
   "identifier": null,
-  "modified": "2024-06-26T14:11:30Z",
+  "modified": "2024-07-17T14:14:04Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": null,
   "spatial_resolution": [
-    "County"
+    "Census Tract"
   ],
   "spatial_resolution_note": null,
-  "methods_variables": null,
-  "data_variables": null,
+  "methods_variables": [
+    "'EBM', 'SVI', 'HVM'"
+  ],
+  "data_variables": [
+    "\u2018Population estimate, 2014-2018 ACS', 'Population estimate MOE, 2014-2018 ACS', 'Adjunct variable - Estimated daytime population, LandScan 2018', 'Summation of the HVM, EBI, and SVI module percentile rank', 'Percentile ranks of SPL_EJI', 'Summation of the EB, and SV module percentile ranks', 'Percentile ranks of SPL_SER'"
+  ],
   "data_usage_notes": null
 }

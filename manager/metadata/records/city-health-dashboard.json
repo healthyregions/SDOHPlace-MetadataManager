@@ -972,12 +972,12 @@
   "format": "CSV",
   "file_size": "23.1 mb",
   "references": {
-    "reference uri": "https://www.cityhealthdashboard.com/data-access?chdash_survey_completed=true"
+    "http://lccn.loc.gov/sh85035852": "https://www.cityhealthdashboard.com/data-access?chdash_survey_completed=true"
   },
   "wxs_indentifier": null,
   "id": "city-health-dashboard",
   "identifier": null,
-  "modified": "2024-06-28T19:57:01Z",
+  "modified": "2024-07-17T15:39:26Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
