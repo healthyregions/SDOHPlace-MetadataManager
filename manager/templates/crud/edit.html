@@ -26,9 +26,13 @@
             <div class="grouped-title">
                 <h2 id="{{ group['name'] }}" class="subtitle">{{ group['name'] }}</h2>
                 {% if group['help_text'] %}
-                <details>
+                <details class="content">
                     <summary>More about this group...</summary>
-                    {{ group['help_text'] }}
+                    <ul style="margin-top: .25em;">
+                        {% for text in group['help_text'] %}
+                        <li>{{ text | safe }}</li>
+                        {% endfor %}
+                    </ul>
                 </details>
                 {% endif %}
             </div>
