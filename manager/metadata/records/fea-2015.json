@@ -1,24 +1,38 @@
 {
-  "title": "National Neighborhood Data Archive (NaNDA)",
+  "title": "Food Environment Atlas (FEA) 2015",
   "alternative_title": null,
   "description": null,
-  "language": [],
-  "display_note": null,
-  "creator": null,
-  "publisher": null,
-  "provider": null,
-  "resource_class": [
-    "Collections"
+  "language": [
+    "eng"
   ],
-  "resource_type": [],
+  "display_note": null,
+  "creator": [
+    "Economic Research Service (ERS), U.S. Department of Agriculture (USDA)"
+  ],
+  "publisher": [
+    "U.S. Department of Agriculture (USDA)"
+  ],
+  "provider": "Healthy Regions + Policies Lab",
+  "resource_class": [
+    "Datasets"
+  ],
+  "resource_type": [
+    "Atlases"
+  ],
   "subject": null,
   "theme": [],
   "keyword": null,
-  "temporal_coverage": null,
+  "temporal_coverage": [
+    "2015"
+  ],
   "date_issued": null,
-  "index_year": null,
+  "index_year": [
+    "2015"
+  ],
   "date_range": null,
-  "spatial_coverage": null,
+  "spatial_coverage": [
+    "United States"
+  ],
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
@@ -27,29 +41,26 @@
   "member_of": null,
   "is_part_of": null,
   "source": null,
-  "is_version_of": null,
+  "is_version_of": [
+    "food_environment_atlas"
+  ],
   "replaces": null,
   "is_replaced_by": null,
   "rights": null,
   "rights_holder": null,
   "license": null,
   "access_rights": "Public",
-  "format": null,
-  "file_size": null,
-  "references": null,
+  "format": "Zip",
+  "file_size": "72.1 MB",
+  "references": {},
   "wxs_indentifier": null,
-  "id": "nanda",
+  "id": "fea-2015",
   "identifier": null,
-  "modified": "2024-07-15T19:39:02Z",
+  "modified": "2024-07-17T14:40:06Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": null,
+  "suppressed": true,
   "spatial_resolution": [
-    "County",
-    "State",
-    "Census Tract",
-    "Census Block",
-    "Census Block Group",
-    "Zip Code Tabulation Area (ZCTA)"
+    "Census Tract"
   ],
   "spatial_resolution_note": null,
   "methods_variables": null,

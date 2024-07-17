@@ -8,22 +8,29 @@
     "eng"
   ],
   "display_note": null,
-  "creator": [
-    "University of Michigan. Institute for Social Research"
+  "creator": null,
+  "publisher": [
+    "University of Michigan. Institute for Social Research."
   ],
-  "publisher": null,
   "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
     "Datasets"
   ],
   "resource_type": [
-    "Point data"
+    "Polygon data"
   ],
   "subject": null,
   "theme": [
-    "Location"
+    "Land Cover",
+    "Society"
   ],
-  "keyword": null,
+  "keyword": [
+    "census tract level",
+    "geography",
+    "population density",
+    "rural areas",
+    "urban areas"
+  ],
   "temporal_coverage": [
     "2010"
   ],
@@ -41,31 +48,31 @@
   "georeferenced": null,
   "relation": null,
   "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": [
-    "National Neighborhood Data Archive"
+  "is_part_of": [
+    "nanda"
   ],
+  "source": null,
+  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": null,
   "rights_holder": null,
   "license": null,
   "access_rights": "Public",
-  "format": "csv | zip",
-  "file_size": "1.9 MB\t",
+  "format": "csv|zip",
+  "file_size": "1.9 MB",
   "references": {
-    "reference uri": "https://archive.icpsr.umich.edu/view/studies/38606?page=1"
+    "http://schema.org/url": "https://archive.icpsr.umich.edu/view/studies/38606?page=1"
   },
   "wxs_indentifier": null,
   "id": "NandaUrbancity-130542",
-  "identifier": null,
-  "modified": "2024-07-01T19:34:05Z",
+  "identifier": [
+    "https://doi.org/10.3886/ICPSR38606.v1"
+  ],
+  "modified": "2024-07-15T15:54:52Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
-    "County",
-    "State",
     "Census Tract"
   ],
   "spatial_resolution_note": null,
