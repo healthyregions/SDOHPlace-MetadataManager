@@ -55,13 +55,13 @@ class Schema(db.Model):
     @property
     def fields(self):
         return list(self.lookup.values())
-
+    
     @property
-    def grouped_fields(self):
-
-        gl = {}
+    def display_groups(self):
+        gl = []
         for f in self.schema_json['display_groups']:
-            gl[f] = [i for i in self.schema_json['fields'] if i['display_group'] == f]
+            f['fields'] = [i for i in self.schema_json['fields'] if i['display_group'] == f['name']]
+            gl.append(f)
 
         return gl
     

@@ -1,17 +1,41 @@
 {
     "display_groups": [
-        "Identifiers",
-        "Descriptive",
-        "SDOH Place Project",
-        "Credits",
-        "Categories",
-        "Temporal",
-        "Spatial",
-        "Relations",
-        "Rights",
-        "Links",
-        "Object",
-        "Admin"
+        {
+            "name": "Identifiers"
+        },
+        {
+            "name": "Descriptive"
+        },
+        {
+            "name": "SDOH Place Project"
+        },
+        {
+            "name": "Credits"
+        },
+        {
+            "name": "Categories"
+        },
+        {
+            "name": "Temporal"
+        },
+        {
+            "name": "Spatial"
+        },
+        {
+            "name": "Relations"
+        },
+        {
+            "name": "Rights"
+        },
+        {
+            "name": "Links"
+        },
+        {
+            "name": "Object"
+        },
+        {
+            "name": "Admin"
+        }
     ],
     "fields": [
         {

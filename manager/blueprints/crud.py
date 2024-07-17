@@ -38,7 +38,7 @@ def create_record():
 		relations_choices = [(r['id'], r['title']) for r in records]
 		return render_template('crud/edit.html',
 						 record=schema.get_blank_form(),
-						 field_groups=schema.grouped_fields,
+						 display_groups=schema.display_groups,
 						 relations_choices=relations_choices,
 						 )
 
@@ -73,9 +73,17 @@ def handle_record(id):
 				records = [r.to_json() for r in Record.query.all()]
 				records = sorted(records, key=lambda d: d['title'])
 				relations_choices = [(r['id'], r['title']) for r in records]
-				return render_template('crud/edit.html', record=record.to_form(), field_groups=record.schema.grouped_fields, relations_choices=relations_choices)
+				return render_template('crud/edit.html',
+					record=record.to_form(),
+					relations_choices=relations_choices,
+					display_groups=record.schema.display_groups,
+				)
 			else:
-				return render_template('crud/view.html', record=record.to_json(), field_groups=record.schema.grouped_fields)
+				return render_template(
+					'crud/view.html',
+					record=record.to_json(),
+					display_groups=record.schema.display_groups,
+				)
 		elif format == "json":
 			return jsonify(record.to_json())
 		elif format == "solr":
