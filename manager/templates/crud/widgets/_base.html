@@ -1,14 +1,19 @@
-<div class="control">
-    <label class="label {{ field.obligation }}" for="{{ field.id }}">
+<div class="control" style="margin-top:5px;">
+    <label class="label {{ field.obligation }}" for="{{ field.id }}" style="margin-bottom:0;">
         {{ field.label }}
         {% if field.multiple %}+{% endif %}
         {% if field.schema == "Aardvark" %}
             <a href="https://opengeometadata.org/ogm-aardvark/#{{ field.slug }}" target="_blank">&nearr;</a>
         {% endif %}
     </label>
-    
+    <p style="font-size:.8em;"><em>{% block note %}{% endblock %}</em></p>
     <div>
         {% block input %}{% endblock %}
     </div>
-    <p style="font-size:.8em;"><em>{% block note %}{% endblock %}</em></p>
+    {% if field.help_text %}
+    <details style="padding-left:10px; font-size:.9em;">
+        <summary>More about this field...</summary>
+        {{ field.help_text }}
+    </details>
+    {% endif %}
 </div>

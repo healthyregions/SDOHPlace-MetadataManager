@@ -6,8 +6,8 @@ placeholder="" {% if record %}value="{{ record[field.id] }}"{% endif %}
 ></input>
 {% endblock %}
 
-{% if field['multiple'] %}
-    {% block note %}
+{% block note %}
+{% if field.multiple %}
     use | to separate values
-    {% endblock %}
 {% endif %}
+{% endblock %}
