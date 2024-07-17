@@ -157,7 +157,7 @@ class Record(db.Model):
         rs_fields = [i for i in self.schema.fields if i.obligation in obligations]
         required_filled = len([i for i in rs_fields if data[i.id]])
         filled_pct = int(round((required_filled / len(rs_fields)) * 100, 2))
-        if filled_pct == 100:
+        if filled_pct >= 90:
             css_color = "success"
         elif filled_pct >= 75:
             css_color = "warning"

@@ -8,6 +8,6 @@ placeholder="" {% if record %}value="{{ record[field.id] }}"{% endif %}
 
 {% block note %}
 {% if field.multiple %}
-    use | to separate values
+    use | to separate mutliple values, for example: <code>value 1|value 2</code>
 {% endif %}
 {% endblock %}

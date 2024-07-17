@@ -1,11 +1,5 @@
 {% extends 'crud/widgets/_base.html' %}
 
-{% block note %}
-{% if field.multiple %}
-ctrl + click to select/deselect multiple items
-{% endif %}
-{% endblock %}
-
 {% block input %}
 <div class="select">
     <select name="{{ field.id }}"
