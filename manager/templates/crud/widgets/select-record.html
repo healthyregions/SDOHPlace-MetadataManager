@@ -14,7 +14,7 @@ ctrl + click to select/deselect multiple items
         >
         <option></option>
         {% for choice in relations_choices %}
-        <option value="{{ choice.0 }}" {% if choice.0 in record[field.id].split("|") %}selected=true{% endif %}>{{ choice.1 }} ({{ choice.0 }})</option>
+        <option value="{{ choice.0 }}" {% if choice.0 in record[field.id].split("|") %}selected=true{% endif %}>{{ choice.1 }} [{{ choice.0 }}]</option>
         {% endfor %}
     </select>
 </div>

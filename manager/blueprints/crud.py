@@ -71,6 +71,7 @@ def handle_record(id):
 		if format == "html":
 			if edit:
 				records = [r.to_json() for r in Record.query.all()]
+				records = sorted(records, key=lambda d: d['title'])
 				relations_choices = [(r['id'], r['title']) for r in records]
 				return render_template('crud/edit.html', record=record.to_form(), field_groups=record.schema.grouped_fields, relations_choices=relations_choices)
 			else:
