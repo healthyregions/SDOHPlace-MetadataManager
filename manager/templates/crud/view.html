@@ -28,7 +28,7 @@
 <h2 class="subtitle">View record in...</h2>
 <div class="buttons are-small has-addons">
     <a href="{{ gbl_host }}/catalog/{{ record.id }}" class="button" role="button" target="_blank">GeoBlacklight</a>
-    <a href="{{ gbl_host }}/catalog/{{ record.id }}" class="button" disabled role="button" target="_blank">Data Discovery App</a>
+    <a href="{{ discovery_app_url }}/search/?show={{ record.id }}" class="button" role="button" target="_blank">Data Discovery App</a>
 </div>
 <div id="reindex-result"></div>
 {% endblock %}
