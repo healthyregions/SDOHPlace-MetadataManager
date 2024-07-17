@@ -23,6 +23,12 @@ def index():
 	records = sorted(records, key=lambda d: d['title'])
 	return render_template('index.html', records=records)
 
+@crud.route("/table", methods=["GET"])
+def table_view():
+	records = [r.to_json() for r in Record.query.all()]
+	records = sorted(records, key=lambda d: d['title'])
+	return render_template('full_table.html', records=records)
+
 @crud.route("/record/create", methods=["GET"])
 @login_required
 def create_record():
