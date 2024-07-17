@@ -17,6 +17,7 @@
 </head>
 <body>
     {% include 'navbar.html' %}
+    {% block full_width_content %}
     <div class="container">
         {% with messages = get_flashed_messages(with_categories=True) %}
         {% if messages %}
@@ -43,5 +44,6 @@
         </div>
         {% endblock %}
     </div>
+    {% endblock %}
 </body>
 </html>

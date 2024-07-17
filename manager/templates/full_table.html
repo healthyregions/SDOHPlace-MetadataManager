@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block page_title %}SDOH Place Metadata Records{% endblock %}
+
+{% block sidebar %}
+{% if user.is_authenticated %}
+<h2 class="subtitle">Actions</h2>
+<div class="buttons are-small">
+    <a href="{{ url_for('manager.create_record')}}" class="button">Create New Record</a>
+    <form style="width:100%" action="{{ url_for('manager.handle_solr', id='reindex-all') }}" method="post">
+        <button class="button" style="width:100%"  name="index-btn" value="index" title="Clean and recreate the entire Solr index from current records">Refresh Solr Index</button>
+    </form>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block full_width_content %}
+<table class="table table-striped is-fullwidth" style="display:block; max-height: calc(100vh - 56px); overflow:auto;">
+    <thead>
+        <tr>
+            {% for key in records.0.keys() %}
+            <td style="position:sticky; top:0; background:white; border-bottom: 2px solid gray;">{{key}}</td>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody >
+        {% for record in records %}
+        <tr>
+            {% for key, value in record.items() %}
+            <td>{{ value }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
