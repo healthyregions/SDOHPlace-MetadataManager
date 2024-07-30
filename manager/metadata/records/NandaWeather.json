@@ -54,11 +54,11 @@
   "georeferenced": null,
   "relation": null,
   "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": [
-    "National Neighborhood Data Archive"
+  "is_part_of": [
+    "nanda"
   ],
+  "source": null,
+  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": null,
@@ -75,7 +75,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38858.v1"
   ],
-  "modified": "2024-07-17T21:28:38Z",
+  "modified": "2024-07-18T22:13:46Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

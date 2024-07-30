@@ -9,9 +9,7 @@
   "language": [
     "eng"
   ],
-  "display_note": [
-    "Please review the Smart Location Database Technical Documentation and User Guide  (https://www.epa.gov/system/files/documents/2023-10/epa_sld_3.0_technicaldocumentationuserguide_may2021_0.pdf) for a full description of all available variables, data sources, data currency, and known limitations."
-  ],
+  "display_note": null,
   "creator": [
     "U.S. Environmental Protection Agency, Office of Sustainable Communities"
   ],
@@ -69,12 +67,12 @@
   "format": "Geodatabase",
   "file_size": null,
   "references": {
-    "reference uri": "https://www.epa.gov/smartgrowth/smart-location-mapping"
+    "http://lccn.loc.gov/sh85035852": "https://www.epa.gov/smartgrowth/smart-location-mapping"
   },
   "wxs_indentifier": null,
   "id": "EPA-Travel-and-Built-Environment-Indicators",
   "identifier": null,
-  "modified": "2024-06-24T04:51:26Z",
+  "modified": "2024-07-18T02:54:20Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

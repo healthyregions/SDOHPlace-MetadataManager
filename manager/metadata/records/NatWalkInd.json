@@ -66,12 +66,12 @@
   "format": "Geodatabase",
   "file_size": "406 mb",
   "references": {
-    "reference uri": "https://https://www.epa.gov/smartgrowth/smart-location-mapping#walkability"
+    "http://lccn.loc.gov/sh85035852": "https://https://www.epa.gov/smartgrowth/smart-location-mapping#walkability"
   },
   "wxs_indentifier": null,
   "id": "NatWalkInd",
   "identifier": null,
-  "modified": "2024-06-24T04:42:04Z",
+  "modified": "2024-07-18T02:54:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -94,5 +94,5 @@
     "D3B_Ranked- Quantile ranked order (1-20) of [D3b] from lowest to highest",
     "D4A_Ranked- Quantile ranked order (1,13-20)  of [D4a] from lowest to highest"
   ],
-  "data_usage_notes": "The National Walkability Index User Guide and Methodology (https://www.epa.gov/sites/default/files/2021-06/documents/national_walkability_index_methodology_and_user_guide_june2021.pdf) describes how to use the index and the methodology used to derive the index and ranked scores for its inputs."
+  "data_usage_notes": null
 }

@@ -1,0 +1,143 @@
+{
+  "title": "National Neighborhood Data Archive (NaNDA): Socioeconomic Status and Demographic Characteristics of Census Tracts and ZIP Code Tabulation Areas, United States, 2000-2020",
+  "alternative_title": null,
+  "description": [
+    "These datasets contain measures of socioeconomic and demographic characteristics by US census tract for the years 2000-2020 and ZIP code tabulation area (ZCTA) for the years 2008-2020. Example measures include population density; population distribution by race, ethnicity, age, and income; income inequality by race and ethnicity; and proportion of population living below the poverty level, receiving public assistance, and female-headed or single parent families with kids. The datasets also contain a set of theoretically derived measures capturing neighborhood socioeconomic disadvantage and affluence, as well as a neighborhood index of Hispanic, foreign born, and limited English."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "Philippa Clarke",
+    "Grace Noppert",
+    "Robert Melendez",
+    "Megan Chenoweth",
+    "Lindsay Gypin"
+  ],
+  "publisher": [
+    "University of Michigan. Institute for Social Research"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Datasets"
+  ],
+  "resource_type": [
+    "Polygon data"
+  ],
+  "subject": [
+    "demographic characteristics",
+    "affluence",
+    "neighborhoods",
+    "poverty",
+    "socioeconomic status"
+  ],
+  "theme": [],
+  "keyword": [
+    "census",
+    "neighborhoods",
+    "socioeconomic status"
+  ],
+  "temporal_coverage": [
+    "2000-2020"
+  ],
+  "date_issued": "2022-09-15",
+  "index_year": [
+    "2000",
+    "2001",
+    "2002",
+    "2003",
+    "2004",
+    "2005",
+    "2006",
+    "2007",
+    "2008",
+    "2009",
+    "2010",
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "United States"
+  ],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": [
+    "nanda"
+  ],
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": null,
+  "rights_holder": null,
+  "license": null,
+  "access_rights": "Public",
+  "format": null,
+  "file_size": null,
+  "references": {
+    "http://schema.org/url": "https://doi.org/10.3886/ICPSR38528.v3"
+  },
+  "wxs_indentifier": null,
+  "id": "NandaSocioEcoStat-38528",
+  "identifier": [
+    "https://doi.org/10.3886/ICPSR38528.v3"
+  ],
+  "modified": "2024-07-22T21:34:14Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": true,
+  "spatial_resolution": [
+    "Census Tract",
+    "Zip Code Tabulation Area (ZCTA)"
+  ],
+  "spatial_resolution_note": null,
+  "methods_variables": [
+    "high levels of poverty, unemployment, female-headed families, households receiving public assistance income, college education; with incomes>75K, ethnic and immigrant concentration, race, ethnicity, age, income level, employment, poverty, home ownership, Longitudinal,"
+  ],
+  "data_variables": [
+    "aland20, totpop20, popden16_20, phispanic16_20, pnhwhite16_20, pnhblack16_20, pfborn16_20, plimeng16_20, ped1_16_20,",
+    "ped3_16_20,",
+    "pfaminclt40k16_20,",
+    "pfamincge40lt75k16_20,",
+    "pfamincge75lt125k16_20,",
+    "pfamincge125k16_20,",
+    "pnvmar16_20,",
+    "p18yr_16_20, p18_29_16_20,",
+    "p30_39_16_20,",
+    "p40_49_16_20,",
+    "p50_69_16_20,",
+    "pge70_16_20,",
+    "punemp16_20,",
+    "pprof16_20,",
+    "ppov16_20,",
+    "ppubas16_20,",
+    "pfhfam16_20,",
+    "psngpnt16_20,",
+    "pownoc16_20,",
+    "affluence16_20 mean of ped3_16_20, pfamincge125k16_20, and pprof16_20",
+    "disadvantage16_20 mean of pfaminclt40k16_20, ppov16_20, and ppubas16_20",
+    "hispan_forborn_limeng16_20, phispanic16_20, pfborn16_20, and plimeng16_20",
+    "medfaminc16_20,",
+    "medfaminc_nhwhite16_20,",
+    "Median Family Income,",
+    "medfaminc_black16_20,",
+    "Median Family Income,",
+    "medfaminc_hispanic16_20,",
+    "ratio_medfaminc_nhwtob16_20 , NH-White / Black",
+    "ratio_medfaminc_nh, wtohisp16_20"
+  ],
+  "data_usage_notes": "These datasets were created to measure the socioeconomic and demographic characteristics by US census tract for the years 2000-2020 and ZIP code tabulation area (ZCTA) for the years 2008-2020.\r\n\r\nUsers should be aware that ZCTAs are not equivalent to ZIP codes. ZIP codes are linear\r\nmail delivery routes created by the US Postal Service. ZIP code tabulation areas are\r\nspatial features consisting of census blocks grouped by the predominant ZIP code found\r\non the block (United States Census Bureau, 2020)."
+}
