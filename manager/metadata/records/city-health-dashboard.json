@@ -16,7 +16,7 @@
   "publisher": [
     "Website was developed by Forum One, under the direction of the Department of Population Health at NYU Langone Health"
   ],
-  "provider": "Healthy Regions + Policies Lab",
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
     "Websites"
   ],
@@ -28,18 +28,20 @@
     "Health Outcomes",
     "Clinical Care"
   ],
-  "theme": [],
+  "theme": [
+    "Environment",
+    "Health",
+    "Society",
+    "Transportation"
+  ],
   "keyword": null,
   "temporal_coverage": [
-    "2010-2023"
+    "2010-2020"
   ],
   "date_issued": null,
   "index_year": [
-    "2018",
-    "2020",
-    "2021",
-    "2022",
-    "2023"
+    "2010",
+    "2020"
   ],
   "date_range": null,
   "spatial_coverage": [
@@ -977,13 +979,13 @@
   "wxs_indentifier": null,
   "id": "city-health-dashboard",
   "identifier": null,
-  "modified": "2024-07-17T15:39:26Z",
+  "modified": "2024-07-30T16:36:39Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
     "City"
   ],
-  "spatial_resolution_note": "note 1|note 2",
+  "spatial_resolution_note": "note 1 | note 2",
   "methods_variables": null,
   "data_variables": null,
   "data_usage_notes": null

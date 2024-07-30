@@ -115,9 +115,7 @@
   "member_of": null,
   "is_part_of": null,
   "source": null,
-  "is_version_of": [
-    "County Health Rankings"
-  ],
+  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": [
@@ -131,12 +129,12 @@
   "format": "CSV",
   "file_size": "15.1 mb",
   "references": {
-    "reference uri": "https://www.countyhealthrankings.org/health-data/methodology-and-sources/data-documentation"
+    "http://lccn.loc.gov/sh85035852": "https://www.countyhealthrankings.org/health-data/methodology-and-sources/data-documentation"
   },
   "wxs_indentifier": null,
   "id": "CHR-2024",
   "identifier": null,
-  "modified": "2024-06-12T05:51:25Z",
+  "modified": "2024-07-18T02:51:33Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

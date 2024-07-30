@@ -1,0 +1,103 @@
+{
+  "title": "National Neighborhood Data Archive (NaNDA): Voter Registration, Turnout, and Partisanship by County, United States, 2004-2018",
+  "alternative_title": null,
+  "description": [
+    "This dataset contains counts of voter registration and voter turnout for all counties in the United States for the years 2004-2018. It also contains measures of each county's Democratic and Republican partisanship, including six-year longitudinal partisan indices for 2006-2016."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "Chenoweth, Megan",
+    "Li, Mao",
+    "Gomez-Lopez, Iris N.",
+    "Kollman, Ken"
+  ],
+  "publisher": [
+    "University of Michigan. Institute for Social Research"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Datasets"
+  ],
+  "resource_type": [
+    "Table data"
+  ],
+  "subject": null,
+  "theme": [
+    "Society"
+  ],
+  "keyword": [
+    "political partisanship",
+    "voter registration",
+    "voter turnout",
+    "voters"
+  ],
+  "temporal_coverage": [
+    "2004-2018"
+  ],
+  "date_issued": "2022-08-31",
+  "index_year": [
+    "2004",
+    "2005",
+    "2006",
+    "2007",
+    "2007",
+    "2009",
+    "2010",
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+    "2018"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "United States"
+  ],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": [
+    "nanda"
+  ],
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": null,
+  "rights_holder": null,
+  "license": null,
+  "access_rights": "Public",
+  "format": "CSV",
+  "file_size": "2.7 MB",
+  "references": {
+    "http://schema.org/url": "https://doi.org/10.3886/ICPSR38506.v1"
+  },
+  "wxs_indentifier": null,
+  "id": "nanda-voting-3850",
+  "identifier": [
+    "https://doi.org/10.3886/ICPSR38506.v1"
+  ],
+  "modified": "2024-07-22T19:49:09Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": true,
+  "spatial_resolution": [
+    "County"
+  ],
+  "spatial_resolution_note": "Warning: Alaska and island territories are excluded in this dataset",
+  "methods_variables": [
+    "Registered voters, Ballots cast, Voting population, CVAP, Voter turnout, voter registration, PRES_DEM_VOTES, PRES_REP_VOTES, SEN_DEM_VOTES, SEN_REP_VOTES, PRES_DEM_RATIO, PRES_REP_RATIO, SEN_DEM_RATIO, SEN_REP_RATIO, Longitudinal, Time Unit"
+  ],
+  "data_variables": [
+    "REG_VOTER_TURNOUT_PCT, REG_VOTERS, VOTER_TURNOUT_PCT, REG_VOTERS_PCT, CVAP: Citizen voting age population, PARTISAN_INDEX_DEM, PARTISAN_INDEX_REP, SEN_REP_RATIO"
+  ],
+  "data_usage_notes": "This dataset was created to explore the relationship between voter engagement (as expressed through registration and turnout rates), partisan political leanings, community health, and public policy.\r\n\r\n"
+}

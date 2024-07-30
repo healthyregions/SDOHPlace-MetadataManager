@@ -1,0 +1,79 @@
+{
+  "title": "ParkServe",
+  "alternative_title": null,
+  "description": [
+    "Urban park data for over 15,000 cities and towns across the U.S. Included in the data downloads are park polygons, park 10-minute walk service areas, park priority areas, trails and playgrounds in parks."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "Trust for Public Land"
+  ],
+  "publisher": [
+    "Trust for Public Land"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Collections"
+  ],
+  "resource_type": [
+    "Line data",
+    "Polygon data"
+  ],
+  "subject": null,
+  "theme": [
+    "Land Cover"
+  ],
+  "keyword": null,
+  "temporal_coverage": [
+    "2023"
+  ],
+  "date_issued": "2024",
+  "index_year": [
+    "2024"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "United States"
+  ],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    "\"\u00a9 2024 The Trust for Public Land, 101 Montgomery Street, Suite 900, San Francisco, California 94104 U.S.A. All rights reserved. Other parties may hold or claim proprietary, trademark, service mark and copyright interests in material on or delivered from this website. Materials on this website may not be copied, reproduced, modified, published, uploaded, posted, transmitted, or distributed in any way, without the prior written consent of The Trust for Public Land and/or the party holding rights to such material. Notwithstanding the previous sentence, you may download one copy of the information on this website for personal, non-commercial use. If you download, you may not modify the materials, use them for a commercial purpose or for public display, remove any copyright or trademark information, transfer the materials to another person, or allow unauthorized copying of the materials.\""
+  ],
+  "rights_holder": [
+    "Trust for Public Land"
+  ],
+  "license": null,
+  "access_rights": "Public",
+  "format": null,
+  "file_size": null,
+  "references": {
+    "http://schema.org/url": "https://www.tpl.org/ParkServe/About"
+  },
+  "wxs_indentifier": null,
+  "id": "parkserve",
+  "identifier": null,
+  "modified": "2024-07-30T17:58:33Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": null,
+  "spatial_resolution": [
+    "Census Tract",
+    "Census Block Group"
+  ],
+  "spatial_resolution_note": "Resolution varies by dataset and field",
+  "methods_variables": null,
+  "data_variables": null,
+  "data_usage_notes": null
+}
