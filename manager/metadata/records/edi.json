@@ -31,7 +31,9 @@
     "2014-2021"
   ],
   "date_issued": "8/10/22 ",
-  "index_year": null,
+  "index_year": [
+    "2022"
+  ],
   "date_range": null,
   "spatial_coverage": [
     "United States"
@@ -53,11 +55,13 @@
   "access_rights": "Public",
   "format": "CSV, Geodatabase",
   "file_size": "51.7 MB",
-  "references": {},
+  "references": {
+    "http://schema.org/url": "https://www.atsdr.cdc.gov/placeandhealth/eji/eji-data-download.html"
+  },
   "wxs_indentifier": null,
   "id": "edi",
   "identifier": null,
-  "modified": "2024-07-17T14:14:04Z",
+  "modified": "2024-08-08T14:41:47Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": null,
   "spatial_resolution": [
@@ -65,10 +69,10 @@
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
-    "'EBM', 'SVI', 'HVM'"
+    "'Racial/Ethnic Status: Minority Status', 'Poverty', 'No High School Deploma', 'Unempoyment', 'Housing Tenure', 'Housing Burdened, Lower-Income Households', 'Lack of Health Insurance', Lack of Internet Access', 'Age 65 and Older', 'Age 17 and younger', 'Civilian with a Disability', 'Speaks English (Less than Well)', 'Group Quarters', 'Mobile Homes', 'Ozone', 'PM2.5', 'Diesel Particulate Matter', 'Air Toxic Cancer Risk', 'National Priority List Sites', 'Toxic Release Incentory Sites', 'Treatment, Storage, and Disposal Facilities', 'Risk Management Plan Sites', 'Coal Mines', 'Lead Mines', 'Lack of Recreational Parks', 'Housing Built Pre-1980', 'Lack of Walkability', 'High Volume Roads', 'Railways', 'Airports', 'High Estimated Prevalence of Asthma', 'High Estimated Prevalence of Cancer', 'High Estimated Prevalence of High Blood Pressure', 'High Estimated Prevalence of Diabetes', 'High Estimated Prevalence of Poor Mental Health'"
   ],
   "data_variables": [
-    "\u2018Population estimate, 2014-2018 ACS', 'Population estimate MOE, 2014-2018 ACS', 'Adjunct variable - Estimated daytime population, LandScan 2018', 'Summation of the HVM, EBI, and SVI module percentile rank', 'Percentile ranks of SPL_EJI', 'Summation of the EB, and SV module percentile ranks', 'Percentile ranks of SPL_SER'"
+    "\u2018Population estimate, 2014-2018 ACS', 'Population estimate MOE, 2014-2018 ACS', 'Adjunct variable - Estimated daytime population, LandScan 2018'"
   ],
   "data_usage_notes": null
 }

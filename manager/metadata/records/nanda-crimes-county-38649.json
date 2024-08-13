@@ -1,0 +1,120 @@
+{
+  "title": "National Neighborhood Data Archive (NaNDA): Crimes by County, United States, 2002-2014",
+  "alternative_title": null,
+  "description": [
+    "This dataset contains county-level totals for the years 2002-2014 for eight types of crime: murder, rape, robbery, aggravated assault, burglary, larceny, motor vehicle theft, and arson. These crimes are classed as Part I criminal offenses by the United States Federal Bureau of Investigations (FBI) in their Uniform Crime Reporting (UCR) program. Each record in the dataset represents the total of each type of criminal offense reported in (or, in the case of missing data, attributed to) the county in a given year."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": [
+    "The purpose of this study was to aggregate county-level Uniform Crime Reporting (UCR) data for the years 2002-2014."
+  ],
+  "creator": [
+    "Philippa Clarke",
+    "Robert Melendez",
+    "Megan Chenoweth"
+  ],
+  "publisher": [
+    "University of Michigan. Institute for Social Research"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Datasets"
+  ],
+  "resource_type": [
+    "Point data",
+    "Table data"
+  ],
+  "subject": [
+    "Crime"
+  ],
+  "theme": [
+    "Location"
+  ],
+  "keyword": [
+    "Arson",
+    "Assault",
+    "Auto theft",
+    "Burglary",
+    "Crime",
+    "FBI",
+    "Larceny",
+    "Murder",
+    "Robbery",
+    "Uniform Crime Reports",
+    "Violent crime statistics"
+  ],
+  "temporal_coverage": [
+    "2002-2014"
+  ],
+  "date_issued": "2023-01-30",
+  "index_year": [
+    "2002",
+    "2003",
+    "2004",
+    "2005",
+    "2006",
+    "2007",
+    "2008",
+    "2009",
+    "2010",
+    "2011",
+    "2012",
+    "2013",
+    "2014"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "United States"
+  ],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": [
+    "nanda"
+  ],
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": null,
+  "rights_holder": null,
+  "license": null,
+  "access_rights": "Public",
+  "format": "tsv",
+  "file_size": "3.6 MB",
+  "references": {
+    "http://schema.org/url": "https://doi.org/10.3886/ICPSR38649.v1"
+  },
+  "wxs_indentifier": null,
+  "id": "nanda-crimes-county-38649",
+  "identifier": [
+    "https://doi.org/10.3886/ICPSR38649.v1"
+  ],
+  "modified": "2024-08-06T20:36:13Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": null,
+  "spatial_resolution": [
+    "County"
+  ],
+  "spatial_resolution_note": null,
+  "methods_variables": [
+    "multi-jurisdiction reporting agencies",
+    "county-level crime data",
+    "years",
+    "crime longitudinally"
+  ],
+  "data_variables": [
+    "AGASSLT",
+    "ROBBERY",
+    "BURGLRY",
+    "LARCENY",
+    "MVTHEFT",
+    "ARSON"
+  ],
+  "data_usage_notes": null
+}

@@ -1,0 +1,98 @@
+{
+  "title": "USGS Land Cover",
+  "alternative_title": null,
+  "description": [
+    "\"The National Land Cover Database (NLCD) provides nationwide data on land cover and land cover change at a 30m resolution with a 16-class legend based on a modified Anderson Level II classification system. The database is designed to provide cyclical updates of United States land cover and associated changes. Systematically aligned over time, the database provides the ability to understand both current and historical land cover and land cover change, and enables monitoring and trend assessments. The latest evolution of NLCD products are designed for widespread application in biology, climate, education, land management, hydrology, environmental planning, risk and disease analysis, telecommunications and visualization.\"",
+    "\"NLCD 2021 offers 9 integrated epochs of land cover for years 2001, 2004, 2006, 2008, 2011, 2013, 2016, 2019, and 2021. chs (2001 \u2013 2021) and are directly comparable across the full time series and suitable for multi-temporal analysis... NLCD 2021 does not yet contain updated products for Alaska, Hawaii and Puerto Rico.\""
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "US Geological Survey"
+  ],
+  "publisher": [
+    "US Geological Survey"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Imagery"
+  ],
+  "resource_type": [
+    "Raster data"
+  ],
+  "subject": null,
+  "theme": [
+    "Land Cover"
+  ],
+  "keyword": null,
+  "temporal_coverage": [
+    "2001",
+    "2004",
+    "2005",
+    "2006",
+    "2008",
+    "2011",
+    "2013",
+    "2016",
+    "2019",
+    "2021"
+  ],
+  "date_issued": null,
+  "index_year": [
+    "2001",
+    "2004",
+    "2005",
+    "2006",
+    "2008",
+    "2011",
+    "2013",
+    "2016",
+    "2019",
+    "2021"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "United States, Puerto Rico"
+  ],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    "No use restrictions"
+  ],
+  "rights_holder": [
+    "US Geological Survey"
+  ],
+  "license": null,
+  "access_rights": "Public",
+  "format": null,
+  "file_size": null,
+  "references": {
+    "http://schema.org/url": "https://www.mrlc.gov/data?f%5B0%5D=category%3ALand%20Cover"
+  },
+  "wxs_indentifier": null,
+  "id": "usgs-land-cover",
+  "identifier": null,
+  "modified": "2024-08-02T18:11:42Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": null,
+  "spatial_resolution": [
+    "Census Block Group"
+  ],
+  "spatial_resolution_note": "30m resolution",
+  "methods_variables": null,
+  "data_variables": [
+    "Land cover type"
+  ],
+  "data_usage_notes": null
+}

@@ -43,14 +43,12 @@
   "centroid": null,
   "georeferenced": null,
   "relation": null,
-  "member_of": [
+  "member_of": null,
+  "is_part_of": [
     "nanda"
   ],
-  "is_part_of": null,
   "source": null,
-  "is_version_of": [
-    "National-Neighborhood-Data-Archive-NaNDA"
-  ],
+  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": null,
@@ -59,13 +57,13 @@
   "access_rights": "Public",
   "format": "csv | dta",
   "file_size": "1.8 MB\t",
-  "references": {},
+  "references": null,
   "wxs_indentifier": null,
   "id": "nanda-1d1d1d1d",
   "identifier": [
     "https://doi.org/10.3886/ICPSR38580.v2"
   ],
-  "modified": "2024-07-17T15:35:06Z",
+  "modified": "2024-08-05T19:16:03Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": null,
   "spatial_resolution": [

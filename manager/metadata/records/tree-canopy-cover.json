@@ -1,0 +1,89 @@
+{
+  "title": "Tree Canopy Cover",
+  "alternative_title": null,
+  "description": [
+    "\"NLCD tree canopy cover geospatial datasets with spatial resolutions of 30 m are produced by the USDA Forest Service. Tree canopy cover is derived from multi-spectral satellite imagery and other available ground and ancillary information. Tree canopy products for the period 2011-2021 are available for the conterminous United States, and coastal south east Alaska, Hawaii, Puerto Rico, and U.S. Virgin Islands.\""
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "USDA Forest Service"
+  ],
+  "publisher": [
+    "US Geological Survey"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Collections"
+  ],
+  "resource_type": [
+    "Raster data"
+  ],
+  "subject": null,
+  "theme": [
+    "Land Cover"
+  ],
+  "keyword": null,
+  "temporal_coverage": [
+    "2011-2021"
+  ],
+  "date_issued": null,
+  "index_year": [
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "United States, Puerto Rico, US Virgin Islands"
+  ],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    "No use restrictions"
+  ],
+  "rights_holder": [
+    "US Geological Survey"
+  ],
+  "license": null,
+  "access_rights": "Public",
+  "format": null,
+  "file_size": null,
+  "references": {
+    "http://schema.org/url": "https://www.mrlc.gov/data?f%5B0%5D=category%3Atree%20canopy"
+  },
+  "wxs_indentifier": null,
+  "id": "tree-canopy-cover",
+  "identifier": null,
+  "modified": "2024-08-01T15:50:14Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": null,
+  "spatial_resolution": [
+    "Census Block Group"
+  ],
+  "spatial_resolution_note": "30m resolution",
+  "methods_variables": null,
+  "data_variables": [
+    "Percent tree canopy cover"
+  ],
+  "data_usage_notes": null
+}

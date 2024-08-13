@@ -1,8 +1,8 @@
 {
-  "title": "ParkServe",
+  "title": "ParkServe (Priority Areas)",
   "alternative_title": null,
   "description": [
-    "Urban park data for over 15,000 cities and towns across the U.S. Included in the data downloads are park polygons, park 10-minute walk service areas, park priority areas, trails and playgrounds in parks."
+    "\"To help planners prioritize where to address park access gaps first, TPL provides a prioritization index for all populated areas that are not within a 10-minute walk to a park. The prioritization index is calculated for census block groups and is based on a comprehensive index of six equally weighted demographic and environmental metrics. The six variables are: 1. Population density 2. Density of low-income households... 3. Density of people of color 4. Community health... 5. Urban heat islands... 6. Pollution burden\""
   ],
   "language": [
     "eng"
@@ -18,15 +18,13 @@
   ],
   "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
-    "Collections"
+    "Datasets"
   ],
   "resource_type": [
-    "Line data",
     "Polygon data"
   ],
   "subject": null,
   "theme": [
-    "Land Cover",
     "Society"
   ],
   "keyword": null,
@@ -47,7 +45,9 @@
   "georeferenced": null,
   "relation": null,
   "member_of": null,
-  "is_part_of": null,
+  "is_part_of": [
+    "parkserve"
+  ],
   "source": null,
   "is_version_of": null,
   "replaces": null,
@@ -67,17 +67,21 @@
     "http://lccn.loc.gov/sh85035852": "https://www.tpl.org/ParkServe/About"
   },
   "wxs_indentifier": null,
-  "id": "parkserve",
+  "id": "parkserve-priority-areas",
   "identifier": null,
-  "modified": "2024-08-08T17:04:26Z",
+  "modified": "2024-08-08T17:05:37Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": null,
+  "suppressed": true,
   "spatial_resolution": [
     "Census Tract",
     "Census Block Group"
   ],
-  "spatial_resolution_note": "Resolution varies by dataset and field",
-  "methods_variables": null,
-  "data_variables": null,
+  "spatial_resolution_note": null,
+  "methods_variables": [
+    "ID, Population per acre, Urban area ID, Rate of physical inactivity, Rate of poor mental health, Respiratory hazard, Density of low-income households, Density of people of color, ID of the city, Low-income households (%), People of color (%), People per acre rank, Physical inactivity rank, Poor mental health rank, Average land surface temperature rank, Respiratory hazard rank, Density of people of color rank, People of color (%) rank, Low-income households (%) rank, Density of low-income households rank, Average of physical inactivity rank and poor mental health rank, Urban heat island anomaly"
+  ],
+  "data_variables": [
+    "Park priority, Park priority rank, Outside 10 minute walk service area"
+  ],
   "data_usage_notes": null
 }

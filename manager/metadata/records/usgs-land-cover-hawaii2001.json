@@ -1,39 +1,41 @@
 {
-  "title": "Food Environment Atlas (FEA) 2019",
+  "title": "USGS Land Cover (Hawaii 2001)",
   "alternative_title": null,
-  "description": null,
+  "description": [
+    "2001 land cover data for Hawaii"
+  ],
   "language": [
     "eng"
   ],
   "display_note": null,
   "creator": [
-    "Economic Research Service (ERS), U.S. Department of Agriculture (USDA)"
+    "US Geological Survey"
   ],
   "publisher": [
-    "U.S. Department of Agriculture (USDA)"
+    "US Geological Survey"
   ],
-  "provider": "Healthy Regions + Policies Lab",
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
-    "Datasets"
+    "Imagery"
   ],
   "resource_type": [
-    "Atlases"
+    "Raster data"
   ],
   "subject": null,
-  "theme": [],
-  "keyword": [
-    "US Census"
+  "theme": [
+    "Land Cover"
   ],
+  "keyword": null,
   "temporal_coverage": [
-    "2019"
+    "2001"
   ],
   "date_issued": null,
   "index_year": [
-    "2019"
+    "2001"
   ],
   "date_range": null,
   "spatial_coverage": [
-    "United States"
+    "Hawaii"
   ],
   "geometry": null,
   "bounding_box": null,
@@ -44,30 +46,36 @@
   "is_part_of": null,
   "source": null,
   "is_version_of": [
-    "food_environment_atlas"
+    "usgs-land-cover"
   ],
   "replaces": null,
   "is_replaced_by": null,
-  "rights": null,
-  "rights_holder": null,
+  "rights": [
+    "No use restrictions"
+  ],
+  "rights_holder": [
+    "US Geological Survey"
+  ],
   "license": null,
   "access_rights": "Public",
-  "format": "Excel",
-  "file_size": "81.8 MB",
+  "format": null,
+  "file_size": null,
   "references": {
-    "http://schema.org/url": "https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/"
+    "http://schema.org/url": "https://www.mrlc.gov/data/nlcd-2001-land-cover-hawaii-0"
   },
   "wxs_indentifier": null,
-  "id": "fea-2019",
+  "id": "usgs-land-cover-hawaii2001",
   "identifier": null,
-  "modified": "2024-08-08T16:04:01Z",
+  "modified": "2024-08-02T18:08:59Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
-    "Census Tract"
+    "Census Block Group"
   ],
-  "spatial_resolution_note": null,
+  "spatial_resolution_note": "30m resolution",
   "methods_variables": null,
-  "data_variables": null,
+  "data_variables": [
+    "Land cover type"
+  ],
   "data_usage_notes": null
 }

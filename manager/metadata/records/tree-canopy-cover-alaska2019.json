@@ -1,29 +1,31 @@
 {
-  "title": "Food Environment Atlas (FEA) 2019",
+  "title": "Tree Canopy Cover (Alaska 2019)",
   "alternative_title": null,
-  "description": null,
+  "description": [
+    "2019 tree canopy cover data for southeast coastal Alaska"
+  ],
   "language": [
     "eng"
   ],
   "display_note": null,
   "creator": [
-    "Economic Research Service (ERS), U.S. Department of Agriculture (USDA)"
+    "USDA Forest Service"
   ],
   "publisher": [
-    "U.S. Department of Agriculture (USDA)"
+    "US Geological Survey"
   ],
-  "provider": "Healthy Regions + Policies Lab",
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
-    "Datasets"
+    "Imagery"
   ],
   "resource_type": [
-    "Atlases"
+    "Raster data"
   ],
   "subject": null,
-  "theme": [],
-  "keyword": [
-    "US Census"
+  "theme": [
+    "Land Cover"
   ],
+  "keyword": null,
   "temporal_coverage": [
     "2019"
   ],
@@ -33,7 +35,7 @@
   ],
   "date_range": null,
   "spatial_coverage": [
-    "United States"
+    "Southeast coastal Alaska"
   ],
   "geometry": null,
   "bounding_box": null,
@@ -44,30 +46,36 @@
   "is_part_of": null,
   "source": null,
   "is_version_of": [
-    "food_environment_atlas"
+    "tree-canopy-cover"
   ],
   "replaces": null,
   "is_replaced_by": null,
-  "rights": null,
-  "rights_holder": null,
+  "rights": [
+    "No use restrictions"
+  ],
+  "rights_holder": [
+    "US Geological Survey"
+  ],
   "license": null,
   "access_rights": "Public",
-  "format": "Excel",
-  "file_size": "81.8 MB",
+  "format": null,
+  "file_size": null,
   "references": {
-    "http://schema.org/url": "https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/"
+    "http://schema.org/url": "https://www.mrlc.gov/data/nlcd-2019-usfs-tree-canopy-cover-alaska"
   },
   "wxs_indentifier": null,
-  "id": "fea-2019",
+  "id": "tree-canopy-cover-alaska2019",
   "identifier": null,
-  "modified": "2024-08-08T16:04:01Z",
+  "modified": "2024-08-01T17:41:53Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
-    "Census Tract"
+    "Census Block Group"
   ],
-  "spatial_resolution_note": null,
+  "spatial_resolution_note": "30m resolution",
   "methods_variables": null,
-  "data_variables": null,
+  "data_variables": [
+    "Percent tree canopy cover"
+  ],
   "data_usage_notes": null
 }

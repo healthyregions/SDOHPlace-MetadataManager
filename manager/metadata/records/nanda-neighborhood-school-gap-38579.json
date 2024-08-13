@@ -1,0 +1,107 @@
+{
+  "title": "National Neighborhood Data Archive (NaNDA): Neighborhood-School Gap by Census Tract and ZIP Code Tabulation Area, United States, 2009-2010 and 2015-2016 ",
+  "alternative_title": null,
+  "description": [
+    "This study contains measures of neighborhood-school gap for 2009-2010 and 2015-2016. Neighborhood-school gap (NS gap) refers to the discrepancy between the demographics of a public school and its surrounding community. For example, if 60 percent of a school's student body is Black, but 30 percent of the neighborhood population is Black, the school has a positive Black neighborhood-school gap. These datasets measure gaps in race and poverty between elementary school student populations and the census tracts and ZIP code tabulation areas (ZCTAs) that those elementary schools serve. Data is at the census tract and ZCTA level. Supplemental data containing component variables used to calculate NS gap at the school and block group level is also available."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "Iris Gomez-Lopez",
+    "Min Hee Kim",
+    "Mao Li",
+    "Dominique Sylvers",
+    "Michael Esposito",
+    "Philippa Clarke",
+    "Megan Chenoweth"
+  ],
+  "publisher": [
+    "University of Michigan. Institute for Social Research"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Datasets"
+  ],
+  "resource_type": [
+    "Point data"
+  ],
+  "subject": [
+    "Disparities",
+    "Education",
+    "Block",
+    "Boundary"
+  ],
+  "theme": [
+    "Boundaries",
+    "Society"
+  ],
+  "keyword": [
+    "education",
+    "private schools",
+    "public schools",
+    "school choice",
+    "school enrollments"
+  ],
+  "temporal_coverage": [
+    "2009",
+    "2010",
+    "2015",
+    "2016"
+  ],
+  "date_issued": "2022-10-27",
+  "index_year": [
+    "2009",
+    "2010",
+    "2015",
+    "2016"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "United States"
+  ],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": [
+    "nanda"
+  ],
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": null,
+  "rights_holder": null,
+  "license": null,
+  "access_rights": "Public",
+  "format": "CSV",
+  "file_size": "15.5 MB",
+  "references": {
+    "http://schema.org/url": "https://doi.org/10.3886/ICPSR38579.v2"
+  },
+  "wxs_indentifier": null,
+  "id": "nanda-neighborhood-school-gap-38579",
+  "identifier": [
+    "https://doi.org/10.3886/ICPSR38579.v2"
+  ],
+  "modified": "2024-08-05T19:12:13Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": true,
+  "spatial_resolution": [
+    "Census Tract",
+    "Zip Code Tabulation Area (ZCTA)"
+  ],
+  "spatial_resolution_note": "These data measure discrepancies between the school environment and that of the surrounding community. The collection aims to contribute to the discussion about the causes and the consequences of variations in educational context across geographies.",
+  "methods_variables": [
+    "Cross-sectional",
+    "Census tracts and ZIP code tabulation areas (ZCTAs) in the United States, including U.S. island territories.",
+    "Census block group demographics",
+    "School attendance boundaries"
+  ],
+  "data_variables": null,
+  "data_usage_notes": null
+}

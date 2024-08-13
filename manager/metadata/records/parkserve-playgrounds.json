@@ -1,8 +1,8 @@
 {
-  "title": "ParkServe",
+  "title": "ParkServe (Playgrounds)",
   "alternative_title": null,
   "description": [
-    "Urban park data for over 15,000 cities and towns across the U.S. Included in the data downloads are park polygons, park 10-minute walk service areas, park priority areas, trails and playgrounds in parks."
+    "\"Crowd-sourced trails and playground data were retrieved from Open Street Map (OSM) in February of 2024 and clipped to ParkServe\u00ae park boundaries.\""
   ],
   "language": [
     "eng"
@@ -18,16 +18,14 @@
   ],
   "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
-    "Collections"
+    "Datasets"
   ],
   "resource_type": [
-    "Line data",
     "Polygon data"
   ],
   "subject": null,
   "theme": [
-    "Land Cover",
-    "Society"
+    "Structure"
   ],
   "keyword": null,
   "temporal_coverage": [
@@ -47,7 +45,9 @@
   "georeferenced": null,
   "relation": null,
   "member_of": null,
-  "is_part_of": null,
+  "is_part_of": [
+    "parkserve"
+  ],
   "source": null,
   "is_version_of": null,
   "replaces": null,
@@ -67,17 +67,18 @@
     "http://lccn.loc.gov/sh85035852": "https://www.tpl.org/ParkServe/About"
   },
   "wxs_indentifier": null,
-  "id": "parkserve",
+  "id": "parkserve-playgrounds",
   "identifier": null,
-  "modified": "2024-08-08T17:04:26Z",
+  "modified": "2024-08-08T17:05:28Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": null,
+  "suppressed": true,
   "spatial_resolution": [
-    "Census Tract",
     "Census Block Group"
   ],
-  "spatial_resolution_note": "Resolution varies by dataset and field",
+  "spatial_resolution_note": null,
   "methods_variables": null,
-  "data_variables": null,
+  "data_variables": [
+    "OSM ID, Code, Class, Name, Shape length, Shape area"
+  ],
   "data_usage_notes": null
 }

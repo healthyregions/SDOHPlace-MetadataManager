@@ -1,8 +1,8 @@
 {
-  "title": "Housing +Transportation Index",
+  "title": "Housing +Transportation Index 2016",
   "alternative_title": null,
   "description": [
-    "The Housing and Transportation (H+T\u00ae) Affordability Index provides a comprehensive view of affordability, one that includes the cost of housing and transportation at the neighborhood level. The Index is part of a broader effort to explore urban sustainability through location efficiency."
+    "The Housing and Transportation (H+T\u00ae) Affordability Index provides a comprehensive view of affordability, one that includes the cost of housing and transportation at the neighborhood level. The Index is part of a broader effort to explore urban sustainability through location efficiency"
   ],
   "language": [
     "eng"
@@ -30,13 +30,11 @@
   ],
   "keyword": null,
   "temporal_coverage": [
-    "2016 -2020"
+    "2016"
   ],
   "date_issued": null,
   "index_year": [
-    "2016",
-    "2019",
-    "2020"
+    "2016"
   ],
   "date_range": null,
   "spatial_coverage": [
@@ -92,9 +90,9 @@
     "Wisconsin",
     "Wyoming"
   ],
-  "geometry": "None",
-  "bounding_box": "None",
-  "centroid": "None",
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
   "georeferenced": null,
   "relation": null,
   "member_of": null,
@@ -113,15 +111,15 @@
     "None"
   ],
   "access_rights": "Public",
-  "format": null,
+  "format": "CSV",
   "file_size": null,
   "references": {
     "http://schema.org/url": "https://htaindex.cnt.org/download/data.php"
   },
   "wxs_indentifier": null,
-  "id": "h+t index",
+  "id": "h+t index -2016",
   "identifier": null,
-  "modified": "2024-08-01T20:46:25Z",
+  "modified": "2024-08-02T03:23:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

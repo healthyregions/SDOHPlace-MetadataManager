@@ -30,7 +30,9 @@
     "2006-2019"
   ],
   "date_issued": "4/27/2021",
-  "index_year": null,
+  "index_year": [
+    "2021"
+  ],
   "date_range": null,
   "spatial_coverage": [
     "United States"
@@ -52,18 +54,24 @@
   "access_rights": "Public",
   "format": "Excel",
   "file_size": null,
-  "references": null,
+  "references": {
+    "http://schema.org/url": "https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/"
+  },
   "wxs_indentifier": null,
   "id": "food_environment_atlas",
   "identifier": null,
-  "modified": "2024-07-17T14:32:22Z",
+  "modified": "2024-08-08T16:03:51Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": null,
   "spatial_resolution": [
     "Census Tract"
   ],
   "spatial_resolution_note": null,
-  "methods_variables": null,
-  "data_variables": null,
+  "methods_variables": [
+    "'Low income and low access tract measured at different miles for urban areas and rural areas', 'Low Viechle Access', 'Poverty rate', 'Median Family Income', 'Low access tract at different mile for urban areas and rural areas', 'Low access tract at different miles', 'Low access tract using vehicle access and at 20 miles in rural areas', 'Low access population at different mile for urban areas and rural areas', 'Low access low-income population at different mile for urban areas and rural areas', 'Low Access Population at different miles (1/2, 1, 10 miles)', 'Low access low-income population at different miles (1/2, 1, 10 miles)', 'Low access children age 0-17 at different miles (1/2, 1, 10 miles)'. 'Low access senior age 65+ at 1/2 mile', 'Low access white population', 'Low access balck or African American population at different miles (1/2, 1, 10 miles)', 'Low access Asian population at 1/2 mile', 'Low access Native Hawaiian or Other Pacific Islander population at different miles (1/2, 1, 10 miles)', 'Low access American Indian or Alaska Native population at different miles (1/2, 1, 10 miles)', 'Low access Other/Multiple race population at different miles (1/2, 1, 10 miles)', 'Low access Hispanic or Latino population at different miles (1/2, 1, 10 miles)', 'Vehicle access housing units without and low access at different miles (1/2, 1, 10 miles)', 'Low access housing units receiving SNAP benefits at different miles (1/2, 1, 10 miles)', ''"
+  ],
+  "data_variables": [
+    "'Population', 'Housing Units', 'Low-Income Population', 'Children Age 0-17', 'Seniors Age 65+', 'White Population', 'Balck or African American Population', 'Asian Population', 'Native Hawaiian or Other Pacific Islander Population', 'American Indian or Alaska Native Population', 'Other/Multiple Race Population', 'Hispanic or Latino Population', 'Housing Units without a Vehicle', 'Housing units Receiving SNAP Benefits'"
+  ],
   "data_usage_notes": null
 }

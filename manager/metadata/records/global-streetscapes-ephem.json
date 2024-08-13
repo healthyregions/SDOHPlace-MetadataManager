@@ -1,0 +1,90 @@
+{
+  "title": "Global Streetscapes (Ephem)",
+  "alternative_title": null,
+  "description": [
+    "Contains the temporal information of each image calculated using the python package 'PyEphem' with regards to the time of day."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "Yujun Hou",
+    "Matias Quintana",
+    "Maxim Khomiakov",
+    "Winston Yap",
+    "Jiani Ouyang",
+    "Koichi Ito",
+    "Zeyu Wang",
+    "Tianhong Zhao",
+    "Filip Biljecki"
+  ],
+  "publisher": [
+    "National University of Singapore Urban Analytics Lab"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Datasets"
+  ],
+  "resource_type": [
+    "Streetview photographs",
+    "Table data"
+  ],
+  "subject": null,
+  "theme": [
+    "Imagery",
+    "Society",
+    "Structure"
+  ],
+  "keyword": null,
+  "temporal_coverage": null,
+  "date_issued": null,
+  "index_year": [
+    "2024"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "Global"
+  ],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": [
+    "global-streetscapes"
+  ],
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    "No use restrictions"
+  ],
+  "rights_holder": [
+    "Hou et al (2024)"
+  ],
+  "license": null,
+  "access_rights": "Public",
+  "format": null,
+  "file_size": null,
+  "references": {
+    "http://schema.org/url": "https://huggingface.co/datasets/NUS-UAL/global-streetscapes/tree/main/data"
+  },
+  "wxs_indentifier": null,
+  "id": "global-streetscapes-ephem",
+  "identifier": null,
+  "modified": "2024-08-05T18:53:10Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": true,
+  "spatial_resolution": [
+    "City"
+  ],
+  "spatial_resolution_note": null,
+  "methods_variables": null,
+  "data_variables": [
+    "Unique image ID, Source (Mapillary or KartaView), Orginal ID (by Mapillary or KartaView), Timezone, UTC offset in seconds, Calculated day or night, Hours after sunrise, Hours after sunset"
+  ],
+  "data_usage_notes": null
+}

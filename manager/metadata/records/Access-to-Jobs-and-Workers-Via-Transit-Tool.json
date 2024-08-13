@@ -66,12 +66,12 @@
   "format": "Geodatabase| Shapefile | DBF",
   "file_size": "shp 253 mb | gdb 120 | DBF 8mb",
   "references": {
-    "http://lccn.loc.gov/sh85035852": "https://www.epa.gov/smartgrowth/smart-location-mapping#Trans45"
+    "http://lccn.loc.gov/sh85035852": "https://www.epa.gov/smartgrowth/smart-location-mapping#walkability"
   },
   "wxs_indentifier": null,
   "id": "Access-to-Jobs-and-Workers-Via-Transit-Tool",
   "identifier": null,
-  "modified": "2024-07-18T02:10:27Z",
+  "modified": "2024-08-01T19:35:27Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

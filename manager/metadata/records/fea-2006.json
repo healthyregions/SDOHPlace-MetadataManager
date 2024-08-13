@@ -54,11 +54,13 @@
   "access_rights": "Public",
   "format": "Zip",
   "file_size": "453 KB",
-  "references": {},
+  "references": {
+    "http://schema.org/url": "https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/"
+  },
   "wxs_indentifier": null,
   "id": "fea-2006",
   "identifier": null,
-  "modified": "2024-07-17T14:44:41Z",
+  "modified": "2024-08-08T16:04:51Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

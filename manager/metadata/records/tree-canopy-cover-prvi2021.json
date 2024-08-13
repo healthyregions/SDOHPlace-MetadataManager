@@ -1,0 +1,81 @@
+{
+  "title": "Tree Canopy Cover (PR & USVI 2021)",
+  "alternative_title": null,
+  "description": [
+    "2021 tree canopy cover data for Puerto Rico and the US Virgin Islands"
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "USDA Forest Service"
+  ],
+  "publisher": [
+    "US Geological Survey"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Imagery"
+  ],
+  "resource_type": [
+    "Raster data"
+  ],
+  "subject": null,
+  "theme": [
+    "Land Cover"
+  ],
+  "keyword": null,
+  "temporal_coverage": [
+    "2021"
+  ],
+  "date_issued": null,
+  "index_year": [
+    "2021"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "Puerto Rico and the US Virgin Islands"
+  ],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": [
+    "tree-canopy-cover"
+  ],
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    "No use restrictions"
+  ],
+  "rights_holder": [
+    "US Geological Survey"
+  ],
+  "license": null,
+  "access_rights": "Public",
+  "format": null,
+  "file_size": null,
+  "references": {
+    "http://schema.org/url": "https://www.mrlc.gov/data/nlcd-2021-usfs-tree-canopy-cover-puerto-rico-us-virgin-islands"
+  },
+  "wxs_indentifier": null,
+  "id": "tree-canopy-cover-prvi2021",
+  "identifier": null,
+  "modified": "2024-08-02T16:59:53Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": true,
+  "spatial_resolution": [
+    "Census Block Group"
+  ],
+  "spatial_resolution_note": "30m resolution",
+  "methods_variables": null,
+  "data_variables": [
+    "Percent tree canopy cover"
+  ],
+  "data_usage_notes": null
+}
