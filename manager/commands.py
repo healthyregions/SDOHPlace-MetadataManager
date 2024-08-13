@@ -61,9 +61,9 @@ def index(all, clean, verbose):
 def inspect_schema():
 
 	s = Schema.query.get(1)
-	for k, v in s.grouped_fields.items():
-		print(f"\n## {k}")
-		for f in v:
+	for dg in s.display_groups:
+		print(f"\n## {dg['name']}")
+		for f in dg['fields']:
 			print(f"- {f['label']}")
 
 

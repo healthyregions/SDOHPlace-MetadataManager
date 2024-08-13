@@ -1,0 +1,15 @@
+{% extends 'crud/widgets/_base.html' %}
+
+{% block input %}
+<div class="select">
+    <select name="{{ field.id }}"
+        placeholder="" 
+        {% if record %}value="{{ record[field.id] }}"{% endif %}
+        >
+        <option></option>
+        {% for choice in relations_choices %}
+        <option value="{{ choice.0 }}" {% if choice.0 in record[field.id].split("|") %}selected=true{% endif %}>{{ choice.1 }} [{{ choice.0 }}]</option>
+        {% endfor %}
+    </select>
+</div>
+{% endblock %}

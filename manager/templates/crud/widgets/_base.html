@@ -1,14 +1,23 @@
 <div class="control">
-    <label class="label {{ field.obligation }}" for="{{ field.id }}">
-        {{ field.label }}
+    <label class="label {{ field.obligation }}" for="{{ field.id }}" style="margin-bottom:0;">
+        <span style="font-weight: bold">{{ field.label }}</span>
         {% if field.multiple %}+{% endif %}
         {% if field.schema == "Aardvark" %}
             <a href="https://opengeometadata.org/ogm-aardvark/#{{ field.slug }}" target="_blank">&nearr;</a>
         {% endif %}
     </label>
-    
     <div>
         {% block input %}{% endblock %}
     </div>
     <p style="font-size:.8em;"><em>{% block note %}{% endblock %}</em></p>
+    {% if field.help_text %}
+    <details class="field-help content">
+        <summary>How to fill out this field...</summary>
+        <ul style="margin-top: .25em;">
+            {% for text in field.help_text %}
+            <li>{{ text | safe }}</li>
+            {% endfor %}
+        </ul>
+    </details>
+    {% endif %}
 </div>

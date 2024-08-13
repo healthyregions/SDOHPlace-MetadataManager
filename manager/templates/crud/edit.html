@@ -14,17 +14,30 @@
 {% block main_content %}
 <div class="tabs is-toggle is-small">
     <ul>
-        {% for group_name, fields in field_groups.items() %}
-        <li><a href="#{{ group_name }}">{{ group_name }}</a></li>
+        {% for group in display_groups %}
+        <li><a href="#{{ group['name'] }}">{{ group['name'] }}</a></li>
         {% endfor %}
     </ul>
 </div>
 <div class="record-content">
     <form method="post" id="edit-form">
-        {% for group_name, fields in field_groups.items() %}
+        {% for group in display_groups %}
         <div style="background:light-grey;">
-            <h2 id="{{ group_name }}" class="subtitle">{{ group_name }}</h2>
-            {% for field in fields %}
+            <div class="grouped-title">
+                <h2 id="{{ group['name'] }}" class="subtitle">{{ group['name'] }}</h2>
+                {% if group['help_text'] %}
+                <details class="content">
+                    <summary>More about this group...</summary>
+                    <ul style="margin-top: .25em;">
+                        {% for text in group['help_text'] %}
+                        <li>{{ text | safe }}</li>
+                        {% endfor %}
+                    </ul>
+                </details>
+                {% endif %}
+            </div>
+            <div class="grouped-fields">
+            {% for field in group['fields'] %}
                 <!-- allow explict widget setting, but default to data type also -->
                 {% if field.widget %}
                     {% include 'crud/widgets/' + field.widget %}
@@ -33,6 +46,7 @@
                     {% include 'crud/widgets/text-simple.html' %}
                 {% endif %}
             {% endfor %}
+            </div>
         </div>
         {% endfor %}
         <input type="submit" id="validate-edit-form" class="hidden"

@@ -55,13 +55,13 @@ class Schema(db.Model):
     @property
     def fields(self):
         return list(self.lookup.values())
-
+    
     @property
-    def grouped_fields(self):
-
-        gl = {}
+    def display_groups(self):
+        gl = []
         for f in self.schema_json['display_groups']:
-            gl[f] = [i for i in self.schema_json['fields'] if i['display_group'] == f]
+            f['fields'] = [i for i in self.schema_json['fields'] if i['display_group'] == f['name']]
+            gl.append(f)
 
         return gl
     
@@ -157,7 +157,7 @@ class Record(db.Model):
         rs_fields = [i for i in self.schema.fields if i.obligation in obligations]
         required_filled = len([i for i in rs_fields if data[i.id]])
         filled_pct = int(round((required_filled / len(rs_fields)) * 100, 2))
-        if filled_pct == 100:
+        if filled_pct >= 90:
             css_color = "success"
         elif filled_pct >= 75:
             css_color = "warning"
