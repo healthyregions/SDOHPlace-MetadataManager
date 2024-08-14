@@ -35,7 +35,6 @@ def get_clean_field_from_form(form, field, field_def):
 			value = form.get(field)
 			value = [i.rstrip() for i in value.split("\n")]
 			value = [i for i in value if i]
-			return value
 
 	if field_def.data_type == "boolean":
 		if value == "on":

@@ -111,9 +111,7 @@ class Record(db.Model):
 
     def load_data(self):
 
-        print("loading data")
         if self.data is None and self.file_path:
-            print("loading file")
             with open(self.file_path, "r") as o:
                 self.data = json.load(o)
 
