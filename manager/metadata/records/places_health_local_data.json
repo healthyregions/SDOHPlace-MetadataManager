@@ -34,7 +34,7 @@
     "2021"
   ],
   "date_range": [
-    "2017-2021"
+    "[2017 TO 2021]"
   ],
   "spatial_coverage": [
     "United States"
@@ -64,7 +64,7 @@
   "wxs_indentifier": null,
   "id": "places_health_local_data",
   "identifier": null,
-  "modified": "2024-08-08T14:42:29Z",
+  "modified": "2024-08-13T19:59:11Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": null,
   "spatial_resolution": [

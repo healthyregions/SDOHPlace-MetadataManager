@@ -96,7 +96,9 @@
   "georeferenced": null,
   "relation": null,
   "member_of": null,
-  "is_part_of": null,
+  "is_part_of": [
+    "h+t index"
+  ],
   "source": null,
   "is_version_of": null,
   "replaces": null,
@@ -119,7 +121,7 @@
   "wxs_indentifier": null,
   "id": "h+t index -2019",
   "identifier": null,
-  "modified": "2024-08-02T03:23:57Z",
+  "modified": "2024-08-14T23:53:44Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

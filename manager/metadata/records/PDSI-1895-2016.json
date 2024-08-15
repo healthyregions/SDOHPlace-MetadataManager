@@ -1,0 +1,93 @@
+{
+  "title": "Palmer Drought Severity Index",
+  "alternative_title": null,
+  "description": [
+    "The Palmer Drought Severity Index (PDSI) is a standardized index that uses readily available temperature and precipitation data to estimate relative dryness. It has been reasonably successful at quantifying long-term drought. As it uses temperature data and a physical water balance model, it can capture the basic effect of global warming on drought through changes in potential evapotranspiration. The dataset includes monthly values for every contiguous US county and the District of Columbia from 1895-2016. The dataset has been compiled to estimate wetness and dryness of a particular area. This is important for the agriculture as well as health sectors. The data can be used to examine local and national trends in drought information."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "Environmental Public Health Tracking Network",
+    "Centers for Disease Control and Prevention",
+    "National Oceanic and Atmospheric Administration  (NOAA)"
+  ],
+  "publisher": [
+    "Centers for Disease Control and Prevention"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Datasets",
+    "Web services"
+  ],
+  "resource_type": [
+    "Point data"
+  ],
+  "subject": null,
+  "theme": [
+    "Climate",
+    "Environment",
+    "Health"
+  ],
+  "keyword": [
+    "drought",
+    "environmental health"
+  ],
+  "temporal_coverage": [
+    "1895-2016"
+  ],
+  "date_issued": "2018-07-26",
+  "index_year": [
+    "2016"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "United States"
+  ],
+  "geometry": "None",
+  "bounding_box": "None",
+  "centroid": "None",
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    "None"
+  ],
+  "rights_holder": [
+    "None"
+  ],
+  "license": [
+    "None"
+  ],
+  "access_rights": "Public",
+  "format": "CSV | RSS | RDF | XML",
+  "file_size": "93.1 mb",
+  "references": {
+    "http://schema.org/url ": "https://climatedataguide.ucar.edu/climate-data/palmer-drought-severity-index-pdsi",
+    "http://lccn.loc.gov/sh85035852": "https://data.cdc.gov/Environmental-Health-Toxicology/Palmer-Drought-Severity-Index-1895-2016/en5r-5ds4/data_preview"
+  },
+  "wxs_indentifier": null,
+  "id": "PDSI-1895-2016",
+  "identifier": null,
+  "modified": "2024-08-15T06:08:24Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": true,
+  "spatial_resolution": [
+    "County"
+  ],
+  "spatial_resolution_note": null,
+  "methods_variables": [
+    "year",
+    "month"
+  ],
+  "data_variables": [
+    "Palmer Drought Severity Index (PDSI)"
+  ],
+  "data_usage_notes": "Data were downloaded from the National Oceanic and Atmospheric Administration (NOAA) server and were originally provided as monthly values for a climate division (typically 5-10 divisions per state). Distance weighting functions were applied to constrain the drought values to a specific US county."
+}
