@@ -1,0 +1,77 @@
+{
+  "title": "Opportunity Insights: Neighborhood Characteristics",
+  "alternative_title": null,
+  "description": [
+    "This data provides multiple levels (census tract, county, and conmmunity zone) covariates used throughout the paper or shown in the Opportunity Atlas as neighborhood characteristics. All variables other than czname are numeric. The statistics reported in this table have been cleared by the Census Bureau's Disclosure Review Board release authorization number CBDRB-FY18-319."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "Opportunity Insights"
+  ],
+  "publisher": [
+    "Opportunity Insights"
+  ],
+  "provider": "Healthy Regions + Policies Lab",
+  "resource_class": [
+    "Datasets"
+  ],
+  "resource_type": [
+    "Atlases",
+    "Census data"
+  ],
+  "subject": null,
+  "theme": [],
+  "keyword": null,
+  "temporal_coverage": [
+    "2000-2015"
+  ],
+  "date_issued": null,
+  "index_year": null,
+  "date_range": null,
+  "spatial_coverage": [
+    "United States"
+  ],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    "Oppotunity Insights"
+  ],
+  "rights_holder": [
+    "Oppotunity Insights"
+  ],
+  "license": [
+    "Oppotunity Insights"
+  ],
+  "access_rights": "Public",
+  "format": "STATA, Excel",
+  "file_size": "264KB - 23.7MB",
+  "references": {
+    "http://schema.org/url": "https://opportunityinsights.org/data/?geographic_level=0&topic=0&paper_id=1652#resource-listing"
+  },
+  "wxs_indentifier": null,
+  "id": "oi-neighborhood-characteristics",
+  "identifier": null,
+  "modified": "2024-09-01T20:59:57Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": null,
+  "spatial_resolution": [
+    "County",
+    "Census Tract"
+  ],
+  "spatial_resolution_note": "Community Zone",
+  "methods_variables": null,
+  "data_variables": null,
+  "data_usage_notes": null
+}

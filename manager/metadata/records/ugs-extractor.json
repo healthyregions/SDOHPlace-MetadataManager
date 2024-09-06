@@ -1,0 +1,97 @@
+{
+  "title": "UGS Extractor",
+  "alternative_title": null,
+  "description": [
+    "A web-based application for the automatic extraction of urban greenspace (UGS) given user inputs of Area of Interest and Date of Interest. To accommodate various types of green spaces, such as parks or lawns, the application additionally allows users to set parameters for the minimum size of each UGS and the Minimum Urban Neighbor Density, enabling customization of what qualifies as UGS. Primary datasource is Dynamic World, a collection of global near real-time LULC derived from Sentinel 2-imagery. Greenspace defined as pixels classified as Trees or Grass by Dynamic World."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "Ian Estacio",
+    "Cristian Roman-Palacios",
+    "Joseph Hoover",
+    "Xiaojiang Li",
+    "Chris Lim"
+  ],
+  "publisher": [
+    "Data Diversity Lab"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Datasets",
+    "Web services"
+  ],
+  "resource_type": [
+    "Polygon data"
+  ],
+  "subject": null,
+  "theme": [
+    "Land Cover"
+  ],
+  "keyword": null,
+  "temporal_coverage": [
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024"
+  ],
+  "date_issued": null,
+  "index_year": [
+    "2024"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "Global"
+  ],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    "No use restrictions"
+  ],
+  "rights_holder": [
+    "Estacio et al (2024)"
+  ],
+  "license": null,
+  "access_rights": "Public",
+  "format": null,
+  "file_size": null,
+  "references": {
+    "http://schema.org/url": "https://ee-geotools.projects.earthengine.app/view/theugsextractor"
+  },
+  "wxs_indentifier": null,
+  "id": "ugs-extractor",
+  "identifier": null,
+  "modified": "2024-08-28T17:32:49Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": null,
+  "spatial_resolution": [
+    "City",
+    "Census Tract",
+    "Census Block",
+    "Census Block Group",
+    "Zip Code Tabulation Area (ZCTA)"
+  ],
+  "spatial_resolution_note": "10m resolution, with a minimum 3000m area for UGS",
+  "methods_variables": null,
+  "data_variables": [
+    "ID, Percent classified as Grass, Percent classified as Trees, Count, Labels"
+  ],
+  "data_usage_notes": null
+}

@@ -1,0 +1,131 @@
+{
+  "title": "CDC National Environmental Public Health Tracking Network",
+  "alternative_title": null,
+  "description": [
+    "The National Environmental Public Health Tracking Network (Tracking Network) brings together health data and environmental data from national, state, and city sources and provides supporting information to make the data easier to understand. The Tracking Network has data and information on environments and hazards, health effects, and population health."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "Environmental Public Health Tracking Network",
+    "Centers for Disease Control and Prevention",
+    "National Oceanic and Atmospheric Administration  (NOAA)"
+  ],
+  "publisher": [
+    "Centers for Disease Control and Prevention"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Datasets",
+    "Web services"
+  ],
+  "resource_type": [
+    "Point data"
+  ],
+  "subject": null,
+  "theme": [
+    "Climate",
+    "Environment",
+    "Health"
+  ],
+  "keyword": null,
+  "temporal_coverage": [
+    "2005- 2019"
+  ],
+  "date_issued": null,
+  "index_year": [
+    "2005",
+    "2006",
+    "2007",
+    "2008",
+    "2009",
+    "2010",
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "United States"
+  ],
+  "geometry": "None",
+  "bounding_box": "None",
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    "None"
+  ],
+  "rights_holder": [
+    "None"
+  ],
+  "license": [
+    "None"
+  ],
+  "access_rights": "Public",
+  "format": null,
+  "file_size": null,
+  "references": {
+    "http://schema.org/url ": "https://ephtracking.cdc.gov/DataExplorer/#/"
+  },
+  "wxs_indentifier": null,
+  "id": "CDCNPHTN",
+  "identifier": null,
+  "modified": "2024-08-19T04:09:33Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": true,
+  "spatial_resolution": [
+    "County",
+    "State",
+    "Census Tract"
+  ],
+  "spatial_resolution_note": null,
+  "methods_variables": [
+    "Air quality",
+    "Asthma",
+    "Biomonitoring: Population Exposures",
+    "Birth defects",
+    "Built environment",
+    "Cancer",
+    "Childhood Cancers",
+    "Childhood lead poisoning",
+    "Chronic Obstructive Pulmonary Disease",
+    "Covid-19",
+    "Demographics and Socioeconomics",
+    "Development  disabilities",
+    "Drinking water",
+    "Drought",
+    "Environmental Justices",
+    "Health Status",
+    "Heart disease and stroke",
+    "Heat and heat-related illness",
+    "Hormone disorder",
+    "Lifestyle risk factors",
+    "Pesticide exposures",
+    "Precipitation and flooding",
+    "Public health policy",
+    "Radon",
+    "Reproductive and birth outcomes",
+    "Sunlight and Ultraviolet",
+    "Tornadoes",
+    "Toxic Substances releases",
+    "Transportation",
+    "Unintentional Carbon Monoxide Poisoning"
+  ],
+  "data_variables": null,
+  "data_usage_notes": null
+}

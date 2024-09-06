@@ -1,0 +1,86 @@
+{
+  "title": "MODIS Combined 16-Day NDVI (Google Earth Engine)",
+  "alternative_title": null,
+  "description": [
+    "The Normalized Difference Vegetation Index is generated from the Near-IR and Red bands of each scene as (NIR - Red) / (NIR + Red), and ranges in value from -1.0 to 1.0. This product is generated from the MODIS/006/MCD43A4 surface reflectance composites. Accessed through Google Earth Engine."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": [
+    "Google Earth Engine is free to use for research, education, and nonprofit use. Original data can be found through NASA's LP DAAC."
+  ],
+  "creator": [
+    "Kamel Didan"
+  ],
+  "publisher": [
+    "Land Processes Distributed Active Archive Center"
+  ],
+  "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
+  "resource_class": [
+    "Datasets",
+    "Imagery"
+  ],
+  "resource_type": [
+    "Raster data"
+  ],
+  "subject": null,
+  "theme": [
+    "Land Cover"
+  ],
+  "keyword": null,
+  "temporal_coverage": [
+    "2000-2023"
+  ],
+  "date_issued": null,
+  "index_year": null,
+  "date_range": null,
+  "spatial_coverage": [
+    "Global"
+  ],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    "MODIS data and products acquired through the LP DAAC have no restrictions on subsequent use, sale, or redistribution."
+  ],
+  "rights_holder": [
+    "LP DAAC"
+  ],
+  "license": null,
+  "access_rights": "Public",
+  "format": null,
+  "file_size": null,
+  "references": {
+    "http://schema.org/url": "https://developers.google.com/earth-engine/datasets/catalog/MODIS_MCD43A4_006_NDVI#description"
+  },
+  "wxs_indentifier": null,
+  "id": "ndvi-gee",
+  "identifier": null,
+  "modified": "2024-08-26T18:37:17Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": null,
+  "spatial_resolution": [
+    "City",
+    "County",
+    "State",
+    "Census Tract",
+    "Census Block",
+    "Census Block Group",
+    "Zip Code Tabulation Area (ZCTA)"
+  ],
+  "spatial_resolution_note": "463m resolution",
+  "methods_variables": null,
+  "data_variables": [
+    "NDVI"
+  ],
+  "data_usage_notes": null
+}
