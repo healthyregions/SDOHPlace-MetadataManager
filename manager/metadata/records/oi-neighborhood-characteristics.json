@@ -63,7 +63,7 @@
   "wxs_indentifier": null,
   "id": "oi-neighborhood-characteristics",
   "identifier": null,
-  "modified": "2024-09-01T20:59:57Z",
+  "modified": "2024-09-09T16:45:55Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": null,
   "spatial_resolution": [
@@ -71,7 +71,12 @@
     "Census Tract"
   ],
   "spatial_resolution_note": "Community Zone",
-  "methods_variables": null,
-  "data_variables": null,
+  "methods_variables": [
+    "\u2018Average annualized job growth rate\u2019, \u2018rate of employment computed as total",
+    "employed population\u2019, \u2018Number of foreign born residents\u2019, \u2018Number of people aged 25 or older who have a bachelor's degree, master's degree, professional school degree, or doctorate degree\u2019, \u2018Number of jobs with earnings greater than $3,333 per month in own and neighboring tracts whose centroids fall within a radius of 5 miles\u2019, \u2018Total number of jobs in own and neighboring tracts whose centroids fall within a radius of 5 miles\u2019, \u2018Wage growth for high school graduates\u2019, \u20182010 Census return rate\u2019, \u2018Mean commute time for workers over 16 years old\u2019, \u2018Share of individuals in the tract below the federal poverty line\u2019, \u2018Number of residents per square mile\u2019, \u2018The median gross rent for renter-occupied housing units with two bedrooms that pay cash rent\u2019, \u2018Racial Shares\u2019, \u2018The number of households with females heads (and no husband present) or male heads (and no wife present) with own children under 18 years old present\u2019, \u2018Share of workers 16 years and over who do not work at home whose commute is shorter than 15 minutes\u2019, \u2018Wharton Residential Land Use Regulatory Index\u2019"
+  ],
+  "data_variables": [
+    "\u2018Total population 16 years and over\u2019, \u2018Sum of native and foreign born residents\u2019, \u2018total number of people aged 25 or older\u2019, \u2018Mean 3rd grade math test scores\u2019, \u2018Mean household income\u2019, \u2018Median household income\u2019, \u2018Number of jobs per square mile\u2019"
+  ],
   "data_usage_notes": null
 }

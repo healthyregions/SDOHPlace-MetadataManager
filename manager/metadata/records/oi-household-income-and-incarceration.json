@@ -1,0 +1,81 @@
+{
+  "title": "Opportunity Insights: Household Income and Incarceration for Children from Low-Income Households",
+  "alternative_title": null,
+  "description": [
+    "This table reports predicted outcomes for children by three spatial resolutions (census tract, county, community zone), race and gender. We provide data for children born between 1978 and 1989. We provide predicted outcomes for children whose parents were at the 25th percentile of the national income distribution. Parents are ranked relative to other parents with children in the same birth cohort. For income variables children are ranked against other children in the same birth cohort. To protect privacy, a small amount of noise is added to each of the estimates; this noise is typically less than one-tenth the standard error of the estimate itself. The standard errors reported below incorporate both sampling error and the noise that was added to the point estimates to protect privacy."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "Opportunity Insights"
+  ],
+  "publisher": [
+    "Opportunity Insights"
+  ],
+  "provider": "Healthy Regions + Policies Lab",
+  "resource_class": [
+    "Datasets"
+  ],
+  "resource_type": [
+    "Atlases",
+    "Census data"
+  ],
+  "subject": null,
+  "theme": [],
+  "keyword": null,
+  "temporal_coverage": [
+    "1984-2015"
+  ],
+  "date_issued": null,
+  "index_year": null,
+  "date_range": null,
+  "spatial_coverage": [
+    "United States"
+  ],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": null,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": [
+    "Oppotunity Insights"
+  ],
+  "rights_holder": [
+    "Oppotunity Insights"
+  ],
+  "license": [
+    "Oppotunity Insights"
+  ],
+  "access_rights": "Public",
+  "format": "STATA, Excel",
+  "file_size": "438KB - 32.8MB",
+  "references": {
+    "http://schema.org/url": "https://opportunityinsights.org/data/?geographic_level=0&topic=0&paper_id=1652#resource-listing"
+  },
+  "wxs_indentifier": null,
+  "id": "oi-household-income-and-incarceration",
+  "identifier": null,
+  "modified": "2024-09-12T15:48:48Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": null,
+  "spatial_resolution": [
+    "County",
+    "Census Tract"
+  ],
+  "spatial_resolution_note": "Community Zone",
+  "methods_variables": [
+    "\u2018Mean household income rank for children whose parents were at the 25th percentile of the national income distribution\u2019, \u2018Fraction of children born in 1984-1989 birth cohorts with parents at the 25th percentile of the national income distribution who were incarcerated on April 1 st, 2010\u2019"
+  ],
+  "data_variables": [
+    "\u2018Number of children under 18 living in the given area with parents whose household income was below the national median\u2019"
+  ],
+  "data_usage_notes": null
+}
