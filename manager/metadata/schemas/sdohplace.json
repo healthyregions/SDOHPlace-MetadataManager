@@ -862,6 +862,23 @@
             ]
         },
         {
+            "label": "Highlight IDs",
+            "uri": "sdoh_highlight_ids_sm",
+            "data_type": "string",
+            "multiple": true,
+            "obligation": "optional",
+            "controlled": false,
+            "controlled_options": [],
+            "schema": "SDOH Place",
+            "display_group": "SDOH Place Project",
+            "slug": "highlight-ids",
+            "widget": "text-area.html",
+            "id": "highlight_ids",
+            "help_text": [
+                "HEROP_IDs corresponding to specific units that this resource represents. Used to drive highlighted units in the map view."
+            ]
+        },
+        {
             "label": "Spatial Resolution Note",
             "uri": "sdoh_spatial_resolution_note_s",
             "data_type": "string",
