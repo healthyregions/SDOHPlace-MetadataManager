@@ -11,7 +11,10 @@
     "Datasets"
   ],
   "resource_type": [],
-  "subject": "Social Vulnerability Index",
+  "subject": [
+    "Economic Stability",
+    "Social and Community Context"
+  ],
   "theme": [],
   "keyword": null,
   "temporal_coverage": null,

@@ -14,7 +14,10 @@
     "Datasets"
   ],
   "resource_type": [],
-  "subject": "Area Deprivation Index",
+  "subject": [
+    "Economic Stability",
+    "Social and Community Context"
+  ],
   "theme": [],
   "keyword": null,
   "temporal_coverage": null,
