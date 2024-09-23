@@ -15,6 +15,7 @@ def get_clean_field_from_form(form, field, field_def):
 
 	if field_def.widget == 'checkboxes.html':
 		value = [k.split("--")[1] for k,v  in form.items() if k.split("--")[0] == field and v == "on"]
+		value = [i.lstrip().rstrip() for i in value]
 
 	if field == "references":
 		value_dict = {}
@@ -39,7 +40,7 @@ def get_clean_field_from_form(form, field, field_def):
 	if field_def.data_type == "boolean":
 		if value == "on":
 			return True
-		elif value == "off":
+		elif value == "off" or not value:
 			return False
 
 	return value
