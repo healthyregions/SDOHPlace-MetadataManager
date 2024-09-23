@@ -24,7 +24,7 @@
   "resource_type": [
     "Point data"
   ],
-  "subject": null,
+  "subject": [],
   "theme": [
     "Climate",
     "Environment",
@@ -49,7 +49,7 @@
   "geometry": "None",
   "bounding_box": "None",
   "centroid": "None",
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": [
@@ -78,12 +78,13 @@
   "wxs_indentifier": null,
   "id": "PDSI-1895-2016",
   "identifier": null,
-  "modified": "2024-08-19T04:16:37Z",
+  "modified": "2024-09-23T16:43:41Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
+  "highlight_ids": null,
   "spatial_resolution_note": null,
   "methods_variables": [
     "year",

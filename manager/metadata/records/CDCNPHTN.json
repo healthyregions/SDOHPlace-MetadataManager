@@ -24,7 +24,7 @@
   "resource_type": [
     "Point data"
   ],
-  "subject": null,
+  "subject": [],
   "theme": [
     "Climate",
     "Environment",
@@ -59,7 +59,7 @@
   "geometry": "None",
   "bounding_box": "None",
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -85,14 +85,15 @@
   "wxs_indentifier": null,
   "id": "CDCNPHTN",
   "identifier": null,
-  "modified": "2024-08-19T04:09:33Z",
+  "modified": "2024-09-23T16:40:28Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "County",
     "State",
     "Census Tract"
   ],
+  "highlight_ids": null,
   "spatial_resolution_note": null,
   "methods_variables": [
     "Air quality",
