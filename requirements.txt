@@ -21,3 +21,4 @@ zipp==3.15.0
 geopandas
 gunicorn
 Flask-Login==0.6.3
+Flask-SQLAlchemy==3.1.1
