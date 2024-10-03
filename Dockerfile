@@ -10,7 +10,7 @@ WORKDIR /home/herop
 COPY --chown=herop:herop requirements.txt requirements.txt
 RUN pip3 --disable-pip-version-check install -U -r requirements.txt
 COPY --chown=herop:herop . .
-RUN pip3 install . --disable-pip-version-check install
+RUN pip3 install . --disable-pip-version-check
 
-EXPOSE 80
-CMD ["flask", "--app", "manager.app", "run", "-h", "0.0.0.0", "-p", "80"]
+EXPOSE 8000
+CMD ["flask", "--app", "manager.app", "run", "-h", "0.0.0.0", "-p", "8000"]

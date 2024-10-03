@@ -1,0 +1,38 @@
+services:
+  solr:
+    container_name: sdoh-solr
+    image: 'solr:slim'
+    ports:
+    - 8983:8983
+    healthcheck:
+      test: ["CMD-SHELL", "bin/solr status"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      timeout: 10s
+    volumes:
+      - ./solr/solr.in.sh:/etc/default/solr.in.sh
+      - ./solr/conf/:/var/solr/
+    entrypoint: ['/bin/bash', '-c', 'solr-precreate blacklight-core-dev -n data_driven_schema_configs']
+
+  manager:
+    container_name: sdoh-manager
+    image: herop/sdoh-metadata-manager
+    build:
+      context: .
+    depends_on:
+      solr:
+        condition: service_healthy
+        restart: true
+    env_file: .env
+    ports:
+    - 8000:8000
+
+  dashboard:
+    container_name: sdoh-dashboard
+    image: herop/sdoh-place
+    build:
+      # TODO: Source from GitHub? subrepo? pre-built image?
+      context: ../SDOHPlace
+    ports:
+    - 8080:80
