@@ -28,11 +28,3 @@ services:
     ports:
     - 8000:8000
 
-  dashboard:
-    container_name: sdoh-dashboard
-    image: herop/sdoh-place
-    build:
-      # TODO: Source from GitHub? subrepo? pre-built image?
-      context: ../SDOHPlace
-    ports:
-    - 8080:80
