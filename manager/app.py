@@ -14,6 +14,7 @@ from manager.commands import (
     load_schema,
     reset_records,
     reset_user_password,
+    bulk_update,
 )
 load_dotenv()
 
@@ -53,6 +54,7 @@ app.cli.add_command(inspect_schema)
 app.cli.add_command(load_schema)
 app.cli.add_command(reset_records)
 app.cli.add_command(reset_user_password)
+app.cli.add_command(bulk_update)
 
 app.config['DEBUG'] = True
 

@@ -1,6 +1,8 @@
 import os
+import json
 import random
 import string
+from pathlib import Path
 
 import click
 from flask.cli import with_appcontext
@@ -12,6 +14,29 @@ from .solr import Solr
 from .models import db, Schema, Record, User
 from .utils import METADATA_DIR
 
+
+@click.command()
+@with_appcontext
+@click.option('-f', '--field')
+@click.option('--old-value')
+@click.option('--new-value')
+def bulk_update(field, old_value, new_value):
+	"""Bulk update a field across all records"""
+	print(field)
+	record_files = Path(METADATA_DIR, 'records').glob("*.json")
+	ct = 0
+	for i in record_files:
+		print(i)
+		with open(i, "r") as o:
+			try:
+				data = json.load(o)
+			except json.decoder.JSONDecodeError:
+				print("error reading that file")
+				continue
+		old_val = data.get(field)
+		if old_value and str(old_val) == old_value:
+			ct+=1
+	print(ct)
 
 @click.command()
 @with_appcontext
