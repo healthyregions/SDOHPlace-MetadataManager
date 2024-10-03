@@ -85,7 +85,7 @@
   "identifier": null,
   "modified": "2024-08-02T18:11:42Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": null,
+  "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
   ],

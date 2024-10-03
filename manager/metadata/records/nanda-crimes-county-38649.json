@@ -97,7 +97,7 @@
   ],
   "modified": "2024-08-06T20:36:13Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": null,
+  "suppressed": false,
   "spatial_resolution": [
     "County"
   ],

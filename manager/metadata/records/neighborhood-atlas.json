@@ -56,7 +56,7 @@
   "identifier": null,
   "modified": "2024-07-19T19:38:58Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": null,
+  "suppressed": false,
   "spatial_resolution": [
     "Census Block Group",
     "Zip Code Tabulation Area (ZCTA)"
