@@ -8,12 +8,14 @@ services:
       test: ["CMD-SHELL", "bin/solr status"]
       interval: 10s
       retries: 5
-      start_period: 60s
+      start_period: 120s
       timeout: 10s
     volumes:
       - ./solr/solr.in.sh:/etc/default/solr.in.sh
-      - ./solr/conf:/var/solr/data/blacklight-core-dev/conf
-    entrypoint: [ '/bin/sh', '-c', 'solr-precreate blacklight-core-dev -n data_driven_schema_configs' ]
+      - ./solr:/var/solr/
+    # TODO: do we need -n data_driven_schema_configs here?
+    command: [ '/bin/sh', '-c', 'solr-precreate blacklight-core-dev' ]     # -n data_driven_schema_configs' ]
+
 
   manager:
     container_name: sdoh-manager
@@ -27,4 +29,4 @@ services:
     env_file: .env
     ports:
     - 8000:8000
-    entrypoint: [ '/bin/sh', '-c', 'flask load-schema -s manager/metadata/schemas/sdohplace.json -n sdohplace &&       flask reset-records --force &&       flask index &&       flask --app manager.app run -h 0.0.0.0 -p 8000' ]
+    entrypoint: [ '/bin/sh', '-c', 'flask load-schema -s manager/metadata/schemas/sdohplace.json -n sdohplace &&       flask reset-records --force &&       flask index --verbose &&       flask --app manager.app run -h 0.0.0.0 -p 8000' ]
