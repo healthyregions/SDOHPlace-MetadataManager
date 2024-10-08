@@ -1,6 +1,12 @@
 scripts/.pid
 scripts/.log
 
+# Solr data from Docker Compose
+solr/data/
+solr/logs/
+solr/log4j2.xml
+
+
 # IDE configuration
 .idea/
 
