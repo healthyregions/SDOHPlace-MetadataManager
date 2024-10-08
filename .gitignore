@@ -1,6 +1,9 @@
 scripts/.pid
 scripts/.log
 
+# IDE configuration
+.idea/
+
 # our SQLITE database files
 *.db
 users.json
