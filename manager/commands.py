@@ -85,12 +85,14 @@ def load_schema(source, name):
 
 @click.command()
 @with_appcontext
-def reset_records():
+@click.option('-f', '--force', is_flag=True, default=False)
+def reset_records(force=False):
 	""" Removes all DB Record objects and recreates them from files on disk."""
 
-	confirm = input("delete all database records? This cannot be undone. Y/n ")
-	if confirm.lower().startswith("n"):
-		exit()
+	if not force:
+		confirm = input("delete all database records? This cannot be undone. Y/n ")
+		if confirm.lower().startswith("n"):
+			exit()
 
 	for record in Record.query.all():
 		db.session.delete(record)
