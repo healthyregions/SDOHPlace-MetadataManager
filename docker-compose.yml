@@ -26,7 +26,7 @@ services:
       solr:
         condition: service_healthy
         restart: true
-    env_file: .env
+    env_file: .env.docker
     ports:
     - 8000:8000
-    entrypoint: [ '/bin/sh', '-c', 'flask load-schema -s manager/metadata/schemas/sdohplace.json -n sdohplace &&       flask reset-records --force &&       flask index --verbose &&       flask --app manager.app run -h 0.0.0.0 -p 8000' ]
+    entrypoint: [ '/bin/sh', '-c', 'flask load-schema -s manager/metadata/schemas/sdohplace.json -n sdohplace &&       flask reset-records --force &&       flask index --clean --verbose &&       flask --app manager.app run -h 0.0.0.0 -p 8000' ]
