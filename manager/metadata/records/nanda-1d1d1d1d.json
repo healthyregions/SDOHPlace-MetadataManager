@@ -65,7 +65,7 @@
   ],
   "modified": "2024-08-05T19:16:03Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": null,
+  "suppressed": false,
   "spatial_resolution": [
     "Zip Code Tabulation Area (ZCTA)"
   ],
