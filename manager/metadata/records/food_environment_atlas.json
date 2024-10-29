@@ -21,17 +21,25 @@
   "resource_type": [
     "Atlases"
   ],
-  "subject": null,
-  "theme": [],
+  "subject": [
+    "Food Environment"
+  ],
+  "theme": [
+    "Health"
+  ],
   "keyword": [
-    "US Census"
+    "US Census",
+    "Access"
   ],
   "temporal_coverage": [
     "2006-2019"
   ],
   "date_issued": "4/27/2021",
   "index_year": [
-    "2021"
+    "2019",
+    "2015",
+    "2010",
+    "2006"
   ],
   "date_range": null,
   "spatial_coverage": [
@@ -40,7 +48,7 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -60,12 +68,13 @@
   "wxs_indentifier": null,
   "id": "food_environment_atlas",
   "identifier": null,
-  "modified": "2024-08-08T16:03:51Z",
+  "modified": "2024-10-10T18:02:31Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract"
   ],
+  "highlight_ids": null,
   "spatial_resolution_note": null,
   "methods_variables": [
     "'Low income and low access tract measured at different miles for urban areas and rural areas', 'Low Viechle Access', 'Poverty rate', 'Median Family Income', 'Low access tract at different mile for urban areas and rural areas', 'Low access tract at different miles', 'Low access tract using vehicle access and at 20 miles in rural areas', 'Low access population at different mile for urban areas and rural areas', 'Low access low-income population at different mile for urban areas and rural areas', 'Low Access Population at different miles (1/2, 1, 10 miles)', 'Low access low-income population at different miles (1/2, 1, 10 miles)', 'Low access children age 0-17 at different miles (1/2, 1, 10 miles)'. 'Low access senior age 65+ at 1/2 mile', 'Low access white population', 'Low access balck or African American population at different miles (1/2, 1, 10 miles)', 'Low access Asian population at 1/2 mile', 'Low access Native Hawaiian or Other Pacific Islander population at different miles (1/2, 1, 10 miles)', 'Low access American Indian or Alaska Native population at different miles (1/2, 1, 10 miles)', 'Low access Other/Multiple race population at different miles (1/2, 1, 10 miles)', 'Low access Hispanic or Latino population at different miles (1/2, 1, 10 miles)', 'Vehicle access housing units without and low access at different miles (1/2, 1, 10 miles)', 'Low access housing units receiving SNAP benefits at different miles (1/2, 1, 10 miles)', ''"

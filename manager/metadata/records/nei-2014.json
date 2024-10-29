@@ -1,0 +1,87 @@
+{
+  "title": "National Emissions Inventory (NEI) 2014",
+  "alternative_title": null,
+  "description": [
+    "The NEI database includes air emissions sources of both criteria of both criteria and hazardous air pollutants.  Data are available for many facilities and as county totals.  The 2014 NEI is the next inventory on the three-year cycle and the EPA will create it using data provided by State, Local and Tribal air agencies.  The Emissions Inventory System (EIS) helps the EPA to build the NEI."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "U.S. Environmental Protection Agency (EPA)"
+  ],
+  "publisher": [
+    "U.S. Environmental Protection Agency (EPA)"
+  ],
+  "provider": "Healthy Regions + Policies Lab",
+  "resource_class": [
+    "Datasets"
+  ],
+  "resource_type": [
+    "Point data",
+    "Table data"
+  ],
+  "subject": [
+    "Safety",
+    "Transportation and Infrastructure"
+  ],
+  "theme": [
+    "Environment",
+    "Health",
+    "Location"
+  ],
+  "keyword": [
+    "pollutant",
+    "emissiont",
+    "air problem"
+  ],
+  "temporal_coverage": [
+    "2014"
+  ],
+  "date_issued": "2017",
+  "index_year": [
+    "2014"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "United States"
+  ],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": false,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": [
+    "national_emission_inventory"
+  ],
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": null,
+  "rights_holder": null,
+  "license": null,
+  "access_rights": "Public",
+  "format": "ZIP, CSV",
+  "file_size": null,
+  "references": {
+    "http://schema.org/url": "https://www.epa.gov/air-emissions-inventories/2014-national-emissions-inventory-nei-data"
+  },
+  "wxs_indentifier": null,
+  "id": "nei-2014",
+  "identifier": null,
+  "modified": "2024-10-10T17:51:35Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": true,
+  "spatial_resolution": [
+    "County",
+    "State"
+  ],
+  "highlight_ids": null,
+  "spatial_resolution_note": null,
+  "methods_variables": null,
+  "data_variables": null,
+  "data_usage_notes": null
+}

@@ -21,9 +21,16 @@
   "resource_type": [
     "Census data"
   ],
-  "subject": null,
-  "theme": [],
+  "subject": [
+    "Health and Healthcare",
+    "Social and Community Context"
+  ],
+  "theme": [
+    "Health",
+    "Society"
+  ],
   "keyword": [
+    "SDOH",
     "US Census"
   ],
   "temporal_coverage": [
@@ -42,7 +49,7 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -64,7 +71,7 @@
   "wxs_indentifier": null,
   "id": "places_health_local_data",
   "identifier": null,
-  "modified": "2024-08-13T19:59:11Z",
+  "modified": "2024-10-10T17:53:54Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -73,6 +80,7 @@
     "Census Tract",
     "Zip Code Tabulation Area (ZCTA)"
   ],
+  "highlight_ids": null,
   "spatial_resolution_note": "This data includes multiple spatial resolution",
   "methods_variables": [
     "'Crowding among housing units', 'Persons living below 150% of the poverty level', 'No high school diploma among adults aged 25 years or older', 'Persons of racial or ethic minority status', 'Persons aged 65 years or older', 'Housing cost burden among households', 'Unemployment among people 16 years and older in the labot force', 'No broadband internet subscription among households'"

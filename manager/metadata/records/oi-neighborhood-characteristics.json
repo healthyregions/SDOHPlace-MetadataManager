@@ -22,9 +22,24 @@
     "Atlases",
     "Census data"
   ],
-  "subject": null,
-  "theme": [],
-  "keyword": null,
+  "subject": [
+    "Demographics",
+    "Economic Stability",
+    "Employment",
+    "Education",
+    "Housing",
+    "Social and Community Context"
+  ],
+  "theme": [
+    "Economy",
+    "Property",
+    "Society"
+  ],
+  "keyword": [
+    "Mobility",
+    "Income",
+    "Inequality"
+  ],
   "temporal_coverage": [
     "2000-2015"
   ],
@@ -37,7 +52,7 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -63,13 +78,14 @@
   "wxs_indentifier": null,
   "id": "oi-neighborhood-characteristics",
   "identifier": null,
-  "modified": "2024-09-09T16:45:55Z",
+  "modified": "2024-10-10T18:08:00Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "County",
     "Census Tract"
   ],
+  "highlight_ids": null,
   "spatial_resolution_note": "Community Zone",
   "methods_variables": [
     "\u2018Average annualized job growth rate\u2019, \u2018rate of employment computed as total",

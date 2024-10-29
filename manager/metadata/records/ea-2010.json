@@ -19,10 +19,15 @@
   "resource_type": [
     "Atlases"
   ],
-  "subject": null,
-  "theme": [],
+  "subject": [
+    "Food Environment"
+  ],
+  "theme": [
+    "Health"
+  ],
   "keyword": [
-    "US Census"
+    "US Census",
+    "Access"
   ],
   "temporal_coverage": [
     "2010"
@@ -38,7 +43,7 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -60,12 +65,13 @@
   "wxs_indentifier": null,
   "id": "ea-2010",
   "identifier": null,
-  "modified": "2024-08-08T16:04:27Z",
+  "modified": "2024-10-10T18:00:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
     "Census Tract"
   ],
+  "highlight_ids": null,
   "spatial_resolution_note": null,
   "methods_variables": null,
   "data_variables": null,

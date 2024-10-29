@@ -1,0 +1,87 @@
+{
+  "title": "National Emissions Inventory (NEI) 2008",
+  "alternative_title": null,
+  "description": [
+    "The 2008 NEI Technical Support Document is a draft and using an improved format from past documents.  Although in draft form, this version provides all of the documentation available in past 2008 NEI releases as well as additional analysis about the sources of data used the NEI.  Placeholder sections are included so that major section numbers will not change in future versions.  This draft document will be replaced with updated versions as they become available."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": null,
+  "creator": [
+    "U.S. Environmental Protection Agency (EPA)"
+  ],
+  "publisher": [
+    "U.S. Environmental Protection Agency (EPA)"
+  ],
+  "provider": "Healthy Regions + Policies Lab",
+  "resource_class": [
+    "Datasets"
+  ],
+  "resource_type": [
+    "Point data",
+    "Table data"
+  ],
+  "subject": [
+    "Safety",
+    "Transportation and Infrastructure"
+  ],
+  "theme": [
+    "Environment",
+    "Health",
+    "Location"
+  ],
+  "keyword": [
+    "pollutant",
+    "emissiont",
+    "air problem"
+  ],
+  "temporal_coverage": [
+    "2008"
+  ],
+  "date_issued": "2011",
+  "index_year": [
+    "2008"
+  ],
+  "date_range": null,
+  "spatial_coverage": [
+    "United States"
+  ],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": false,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": [
+    "national_emission_inventory"
+  ],
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": null,
+  "rights_holder": null,
+  "license": null,
+  "access_rights": "Public",
+  "format": "ZIP, CSV",
+  "file_size": null,
+  "references": {
+    "http://schema.org/url": "https://www.epa.gov/air-emissions-inventories/2008-national-emissions-inventory-nei-data"
+  },
+  "wxs_indentifier": null,
+  "id": "nei-2008",
+  "identifier": null,
+  "modified": "2024-10-10T17:51:16Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": true,
+  "spatial_resolution": [
+    "County",
+    "State"
+  ],
+  "highlight_ids": null,
+  "spatial_resolution_note": null,
+  "methods_variables": null,
+  "data_variables": null,
+  "data_usage_notes": null
+}

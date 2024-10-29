@@ -1,5 +1,5 @@
 {
-  "title": "Food Environment Atlas (FEA) 2019",
+  "title": "National Emissions Inventory (NEI) 1998",
   "alternative_title": null,
   "description": null,
   "language": [
@@ -7,34 +7,39 @@
   ],
   "display_note": null,
   "creator": [
-    "Economic Research Service (ERS), U.S. Department of Agriculture (USDA)"
+    "U.S. Environmental Protection Agency (EPA)"
   ],
   "publisher": [
-    "U.S. Department of Agriculture (USDA)"
+    "U.S. Environmental Protection Agency (EPA)"
   ],
   "provider": "Healthy Regions + Policies Lab",
   "resource_class": [
     "Datasets"
   ],
   "resource_type": [
-    "Atlases"
+    "Point data",
+    "Table data"
   ],
   "subject": [
-    "Food Environment"
+    "Safety",
+    "Transportation and Infrastructure"
   ],
   "theme": [
-    "Health"
+    "Environment",
+    "Health",
+    "Location"
   ],
   "keyword": [
-    "US Census",
-    "Access"
+    "pollutant",
+    "emissiont",
+    "air problem"
   ],
   "temporal_coverage": [
-    "2019"
+    "1998"
   ],
-  "date_issued": null,
+  "date_issued": "2005",
   "index_year": [
-    "2019"
+    "1998"
   ],
   "date_range": null,
   "spatial_coverage": [
@@ -46,30 +51,30 @@
   "georeferenced": false,
   "relation": null,
   "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": [
-    "food_environment_atlas"
+  "is_part_of": [
+    "national_emission_inventory"
   ],
+  "source": null,
+  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": null,
   "rights_holder": null,
   "license": null,
   "access_rights": "Public",
-  "format": "Excel",
-  "file_size": "81.8 MB",
+  "format": "ZIP",
+  "file_size": null,
   "references": {
-    "http://schema.org/url": "https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/"
+    "http://schema.org/url": "https://gaftp.epa.gov/air/nei/nei_criteria_summaries/1998criteriasummaryfiles/"
   },
   "wxs_indentifier": null,
-  "id": "fea-2019",
+  "id": "nei-1998",
   "identifier": null,
-  "modified": "2024-10-10T18:01:46Z",
+  "modified": "2024-10-10T17:49:53Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
-    "Census Tract"
+    "State"
   ],
   "highlight_ids": null,
   "spatial_resolution_note": null,
