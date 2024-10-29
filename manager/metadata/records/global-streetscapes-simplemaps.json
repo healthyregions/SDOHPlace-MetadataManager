@@ -75,7 +75,7 @@
   "wxs_indentifier": null,
   "id": "global-streetscapes-simplemaps",
   "identifier": null,
-  "modified": "2024-08-06T18:27:21Z",
+  "modified": "2024-10-29T17:24:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -86,5 +86,12 @@
   "data_variables": [
     "Unique image ID, Source (Mapillary or KartaView), Orginal ID (by Mapillary or KartaView), City, City ASCII, City ID, City latitude, City longitude, Country, ISO2, ISO3, Administration region name, Capital, Population, Continent"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "_meta": {
+    "last_modified_by": "Admin",
+    "filled": 17,
+    "to_fill": 23,
+    "filled_pct": 73,
+    "progress_class": "danger"
+  }
 }

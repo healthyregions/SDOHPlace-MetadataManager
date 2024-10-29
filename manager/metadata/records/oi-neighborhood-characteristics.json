@@ -78,7 +78,7 @@
   "wxs_indentifier": null,
   "id": "oi-neighborhood-characteristics",
   "identifier": null,
-  "modified": "2024-10-10T18:08:00Z",
+  "modified": "2024-10-29T17:24:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -94,5 +94,12 @@
   "data_variables": [
     "\u2018Total population 16 years and over\u2019, \u2018Sum of native and foreign born residents\u2019, \u2018total number of people aged 25 or older\u2019, \u2018Mean 3rd grade math test scores\u2019, \u2018Mean household income\u2019, \u2018Median household income\u2019, \u2018Number of jobs per square mile\u2019"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "_meta": {
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 23,
+    "filled_pct": 78,
+    "progress_class": "warning"
+  }
 }

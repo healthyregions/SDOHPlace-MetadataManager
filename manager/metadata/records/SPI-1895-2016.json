@@ -78,7 +78,7 @@
   "wxs_indentifier": null,
   "id": "SPI-1895-2016",
   "identifier": null,
-  "modified": "2024-08-19T04:15:31Z",
+  "modified": "2024-10-29T17:24:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -92,5 +92,12 @@
   "data_variables": [
     "Standard Precipitation Index (SPI)"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "_meta": {
+    "last_modified_by": "Admin",
+    "filled": 21,
+    "to_fill": 23,
+    "filled_pct": 91,
+    "progress_class": "success"
+  }
 }

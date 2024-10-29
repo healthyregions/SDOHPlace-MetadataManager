@@ -72,7 +72,7 @@
   "wxs_indentifier": null,
   "id": "DCTLOC-2001-2005",
   "identifier": null,
-  "modified": "2024-08-19T04:10:01Z",
+  "modified": "2024-10-29T17:24:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -87,5 +87,12 @@
     "Mean estimated 8-hour average ozone concentration in parts per billion (ppb) within 3 meters of the surface of the earth",
     "Standard error of the estimated ozone concentration"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "_meta": {
+    "last_modified_by": "Admin",
+    "filled": 21,
+    "to_fill": 23,
+    "filled_pct": 91,
+    "progress_class": "success"
+  }
 }

@@ -54,11 +54,18 @@
   },
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": "2023-07-05T22:37:43Z",
-  "metadata_version": "Aardvark",
+  "modified": "2024-10-29T17:24:30Z",
+  "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": null,
   "spatial_resolution_note": null,
   "methods_variables": null,
-  "data_variables": null
+  "data_variables": null,
+  "_meta": {
+    "last_modified_by": "Admin",
+    "filled": 10,
+    "to_fill": 23,
+    "filled_pct": 43,
+    "progress_class": "danger"
+  }
 }

@@ -978,7 +978,7 @@
   "wxs_indentifier": null,
   "id": "city-health-dashboard",
   "identifier": null,
-  "modified": "2024-09-19T21:12:44Z",
+  "modified": "2024-10-29T17:24:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -989,5 +989,12 @@
   "spatial_resolution_note": "note 1 | note 2",
   "methods_variables": null,
   "data_variables": null,
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "_meta": {
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 23,
+    "filled_pct": 78,
+    "progress_class": "warning"
+  }
 }

@@ -86,7 +86,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38579.v2"
   ],
-  "modified": "2024-08-05T19:12:13Z",
+  "modified": "2024-10-29T17:24:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -101,5 +101,12 @@
     "School attendance boundaries"
   ],
   "data_variables": null,
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "_meta": {
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 23,
+    "filled_pct": 78,
+    "progress_class": "warning"
+  }
 }

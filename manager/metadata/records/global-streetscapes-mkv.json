@@ -75,7 +75,7 @@
   "wxs_indentifier": null,
   "id": "global-streetscapes-mkv",
   "identifier": null,
-  "modified": "2024-08-06T17:36:54Z",
+  "modified": "2024-10-29T17:24:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -86,5 +86,12 @@
   "data_variables": [
     "Unique image ID, Source (Mapillary or KartaView), Orginal ID (by Mapillary or KartaView), Datetime in GMT, Quality details, Quality level, Quality status, Image processing result, Image processing status, Date added, Date processed, Distance from previous image, Field of view, Filepath, Filepath large thumbnail, Filepath processed image, Filepath small thumbnail, File URL, File URL large thumbnail, File URL processed image, File URL small thumbnail, From, GPS accuracy, Has OBD, Headers, Image projection, Is wrapped, Is unwrapped, Match latitude, Match longitude, Match segment ID, Name of image, Org code, Yaw axis projection, Raw data ID, Status, Storage, To, Unwrap version, Video ID, Video index, Visibility, Way ID, Wrap version, Address, Country code, Device name, Distance of sequence, Sequence type, User"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "_meta": {
+    "last_modified_by": "Admin",
+    "filled": 17,
+    "to_fill": 23,
+    "filled_pct": 73,
+    "progress_class": "danger"
+  }
 }

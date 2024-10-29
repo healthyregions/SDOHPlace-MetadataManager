@@ -75,7 +75,7 @@
   "wxs_indentifier": null,
   "id": "global-streetscapes-speed",
   "identifier": null,
-  "modified": "2024-08-06T18:31:56Z",
+  "modified": "2024-10-29T17:24:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -86,5 +86,12 @@
   "data_variables": [
     "Unique image ID, Source (Mapillary or KartaView), Orginal ID (by Mapillary or KartaView), Sequence distance meters, Sequence distance kilometers, Sequence time hours, Sequence speed kph, Sequence image count, Segment mean speed kph, Segment speed variance kph, Segment maximum speed kph, Segment mean of 5 maximum speeds kph, Distance from previous image meters, Distance from previous image kilometers, Time from previous image seconds, Time from previous image hours, Average speed from previous image kph"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "_meta": {
+    "last_modified_by": "Admin",
+    "filled": 17,
+    "to_fill": 23,
+    "filled_pct": 73,
+    "progress_class": "danger"
+  }
 }

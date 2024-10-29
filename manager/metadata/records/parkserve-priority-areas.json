@@ -69,7 +69,7 @@
   "wxs_indentifier": null,
   "id": "parkserve-priority-areas",
   "identifier": null,
-  "modified": "2024-08-08T17:05:37Z",
+  "modified": "2024-10-29T17:24:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -83,5 +83,12 @@
   "data_variables": [
     "Park priority, Park priority rank, Outside 10 minute walk service area"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "_meta": {
+    "last_modified_by": "Admin",
+    "filled": 19,
+    "to_fill": 23,
+    "filled_pct": 82,
+    "progress_class": "warning"
+  }
 }

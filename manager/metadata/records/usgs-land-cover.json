@@ -83,7 +83,7 @@
   "wxs_indentifier": null,
   "id": "usgs-land-cover",
   "identifier": null,
-  "modified": "2024-08-02T18:11:42Z",
+  "modified": "2024-10-29T17:24:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -94,5 +94,12 @@
   "data_variables": [
     "Land cover type"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "_meta": {
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 23,
+    "filled_pct": 78,
+    "progress_class": "warning"
+  }
 }

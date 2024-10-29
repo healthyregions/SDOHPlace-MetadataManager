@@ -81,7 +81,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38579.v2"
   ],
-  "modified": "2024-08-05T21:03:01Z",
+  "modified": "2024-10-29T17:24:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -101,5 +101,12 @@
     "Poverty_gap",
     "twoormore_gap"
   ],
-  "data_usage_notes": "These data measure discrepancies between the school environment and that of the surrounding community. The collection aims to contribute to the discussion about the causes and the consequences of variations in educational context across geographies.\r\n\r\n"
+  "data_usage_notes": "These data measure discrepancies between the school environment and that of the surrounding community. The collection aims to contribute to the discussion about the causes and the consequences of variations in educational context across geographies.\r\n\r\n",
+  "_meta": {
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 23,
+    "filled_pct": 78,
+    "progress_class": "warning"
+  }
 }

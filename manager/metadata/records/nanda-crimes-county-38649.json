@@ -95,7 +95,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38649.v1"
   ],
-  "modified": "2024-08-06T20:36:13Z",
+  "modified": "2024-10-29T17:24:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -116,5 +116,12 @@
     "MVTHEFT",
     "ARSON"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "_meta": {
+    "last_modified_by": "Admin",
+    "filled": 19,
+    "to_fill": 23,
+    "filled_pct": 82,
+    "progress_class": "warning"
+  }
 }

@@ -70,7 +70,7 @@
   "wxs_indentifier": null,
   "id": "parkserve-parks",
   "identifier": null,
-  "modified": "2024-08-08T17:05:20Z",
+  "modified": "2024-10-29T17:24:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -82,5 +82,12 @@
   "data_variables": [
     "Park ID, Park name, Park designation, Park owner type,  Park local owner,  Park manager type, Park local manager, Park access, Park status, Park land acquisition, Park establishment date, Park size (acres), Park address, Park state, Park state FIPS, Park county, Park county FIPS, Park place, Park place FIPS, Park urban area, Park urban area ID, Park zipcode, Park boundary source, Data provider, Park date added, Total population within a 10-minute walk (2022), Total population < 20 years of age within a 10-minute walk (2022), Total population > 20 and < 65 years of age of within a 10-minute walk (2022), Total population > 64 years of age within a 10-minute walk (2022), Total number of low income households (<75% urban area median income) within a 10-minute walk (2022), Total number of middle income households (75% - 125% urban area median income) within a 10-minute walk (2022), Total number of high income households (>125% urban area median income) within a 10-minute walk (2022), Total White Non-Hispanic population within a 10-minute walk (2022), Total Black Non-Hispanic population within a 10-minute walk (2022), Total Native American Non-Hispanic population within a 10-minute walk (2022), Total Asian Non-Hispanic population within a 10-minute walk (2022), Total Pacific Islander Non-Hispanic population within a 10-minute walk (2022), Total population of 2 or more races (Non-Hispanic) within a 10-minute walk (2022), Total population of other races (Non-Hispanic) within a 10-minute walk (2022), Total Hispanic population within a 10-minute walk (2022)"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "_meta": {
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 23,
+    "filled_pct": 78,
+    "progress_class": "warning"
+  }
 }

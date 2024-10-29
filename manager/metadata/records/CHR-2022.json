@@ -138,7 +138,7 @@
   "identifier": [
     "None"
   ],
-  "modified": "2024-08-14T23:50:38Z",
+  "modified": "2024-10-29T17:24:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -187,5 +187,12 @@
     "% Drive Alone to Work",
     "% Long Commute - Drives Alone"
   ],
-  "data_usage_notes": "The data contains a breakdown of the measures used in calculating outcomes, data elements, descriptions, and ranking for each country."
+  "data_usage_notes": "The data contains a breakdown of the measures used in calculating outcomes, data elements, descriptions, and ranking for each country.",
+  "_meta": {
+    "last_modified_by": "Admin",
+    "filled": 21,
+    "to_fill": 23,
+    "filled_pct": 91,
+    "progress_class": "success"
+  }
 }

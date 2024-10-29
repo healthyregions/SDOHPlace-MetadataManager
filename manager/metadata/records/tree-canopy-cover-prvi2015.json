@@ -66,7 +66,7 @@
   "wxs_indentifier": null,
   "id": "tree-canopy-cover-prvi2015",
   "identifier": null,
-  "modified": "2024-08-02T16:49:14Z",
+  "modified": "2024-10-29T17:24:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -77,5 +77,12 @@
   "data_variables": [
     "Percent tree canopy cover"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "_meta": {
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 23,
+    "filled_pct": 78,
+    "progress_class": "warning"
+  }
 }
