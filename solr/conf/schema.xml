@@ -27,6 +27,14 @@
     <!-- Spatial Field Type: Internal field used for overlap ratio boosting. -->
     <field name="solr_bboxtype" type="bbox" stored="true" indexed="true"/>
 
+    <!-- Updated suggestion -->
+    <field name="suggest" type="text_suggest" indexed="true" stored="true" multiValued="true"/>
+    <field name="weight" type="float" indexed="true" stored="true" default="1.0"/>
+    <field name="gbl_suppressed_b" type="boolean" indexed="true" stored="true"/>
+    <field name="suggest_context" type="text_context" indexed="true" stored="true" multiValued="true"/>
+    <field name="title_context" type="text_context" indexed="true" stored="true"/>
+    <field name="description_context" type="text_context" indexed="true" stored="true"/>
+
     <!-- dynamic field with simple types by suffix -->
     <dynamicField name="*_b"    type="boolean" stored="true"  indexed="true"/>
     <dynamicField name="*_d"    type="double"  stored="true"  indexed="true"/>
@@ -167,10 +175,27 @@
     <fieldType name="bbox" class="solr.BBoxField"
            geo="true" distanceUnits="kilometers" numberType="pdouble" />
     <fieldType name="pdouble" class="solr.DoublePointField" docValues="true"/>
+
+    <!-- Updated suggest -->
+    <fieldtype name="text_suggest" class="solr.TextField">
+      <analyzer>
+      <tokenizer class="solr.KeywordTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.TrimFilterFactory"/>
+      </analyzer>
+    </fieldtype>
+    <fieldType name="text_context" class="solr.TextField" positionIncrementGap="100">
+     <analyzer>
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt"/>
+      <filter class="solr.RemoveDuplicatesTokenFilterFactory"/>
+    </analyzer>
+    </fieldType>
   </types>
 
   <!-- for scoring formula -->
-  <copyField source="dct_spatial_sm"     dest="dct_spatial_tmi"     maxChars="10000"/>
+  <!-- <copyField source="dct_spatial_sm"     dest="dct_spatial_tmi"     maxChars="10000"/> -->
   <copyField source="dct_temporal_sm"    dest="dct_temporal_tmi"    maxChars="10000"/>
   <copyField source="dct_creator_sm"      dest="dct_creator_tmi"      maxChars="1000"/>
   <copyField source="dct_description_sm"   dest="dct_description_tmi"   maxChars="10000"/>
@@ -201,15 +226,21 @@
   <copyField source="dct_spatial_sm" dest="spell"/>
 
   <!-- for suggestions (default GBL setup) -->
-  <copyField source="dct_title_s" dest="suggest"/>
-  <copyField source="dct_creator_sm" dest="suggest"/>
+  <copyField source="dct_title_s" dest="suggest" boost="100"/>
+  <copyField source="dct_description_sm" dest="suggest" boost="80"/>
+  <!-- <copyField source="dct_creator_sm" dest="suggest"/>
   <copyField source="dct_publisher_sm" dest="suggest"/>
   <copyField source="schema_provider_s" dest="suggest"/>
-  <copyField source="dct_subject_sm" dest="suggest"/>
-  <copyField source="dct_spatial_sm" dest="suggest"/>
+  <copyField source="dct_subject_sm" dest="suggest"/> -->
+  <copyField source="dct_spatial_sm" dest="suggest" maxChars="1"/>
   <!-- add some SDOH fields to the default suggester -->
   <copyField source="sdoh_methods_variables_sm" dest="suggest"/>
   <copyField source="sdoh_data_variables_sm" dest="suggest"/>
+
+  <!-- for context (not using now) -->
+  <copyField source="dct_title_s" dest="title_context"/>
+  <copyField source="dct_description_s" dest="description_context"/>
+  <copyField source="*_context" dest="suggest_context"/>
 
   <!-- for the new SDOH suggestions -->
   <copyField source="dct_random_sm" dest="sdoh_suggestions"/>
