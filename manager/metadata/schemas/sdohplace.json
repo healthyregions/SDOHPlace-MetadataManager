@@ -920,12 +920,29 @@
             "controlled_options": [],
             "schema": "SDOH Place",
             "display_group": "SDOH Place Project",
-            "slug": "spatial-resolution",
+            "slug": "data-variables",
             "widget": "text-area.html",
             "id": "data_variables",
             "help_text": [
                 "List the variables that are available to users in the downloaded dataset.",
                 "Applicable if there is a downloadable dataset associated with this record."
+            ]
+        },
+        {
+            "label": "Featured Variable",
+            "uri": "sdoh_featured_variable_s",
+            "data_type": "string",
+            "multiple": false,
+            "obligation": "suggested",
+            "controlled": false,
+            "controlled_options": [],
+            "schema": "SDOH Place",
+            "display_group": "SDOH Place Project",
+            "slug": "featured-variable",
+            "widget": "text-simple.html",
+            "id": "featured_variable",
+            "help_text": [
+                "The single featured variable from this data source (not always applicable)."
             ]
         },
         {
