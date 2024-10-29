@@ -27,7 +27,9 @@ def index():
 def table_view():
 	records = [r.to_json() for r in Record.query.all()]
 	records = sorted(records, key=lambda d: d['title'])
-	return render_template('full_table.html', records=records)
+	schema = Schema.query.get(1)
+	fields = schema.schema_json['fields']
+	return render_template('full_table.html', records=records, fields=fields)
 
 @crud.route("/record/create", methods=["GET"])
 @login_required

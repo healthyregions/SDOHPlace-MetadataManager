@@ -19,8 +19,8 @@
     <table class="table table-striped is-fullwidth all-records-table">
         <thead>
             <tr>
-                {% for key in records.0.keys() %}
-                <td style="position:sticky; top:0; background:white; border-bottom: 2px solid gray;">{{key}}</td>
+                {% for field in fields %}
+                <td style="position:sticky; top:0; background:white; border-bottom: 2px solid gray;">{{field.id}}</td>
                 {% endfor %}
             </tr>
         </thead>
@@ -28,10 +28,10 @@
             {% for record in records %}
             <tr title="{{ record.title }}">
                 <td style="min-width:400px"><div class="row-item"><a href="/record/{{record.id}}">{{ record.title }}</a></div></td>
-                {% for key in records.0.keys() %}
-                {% if key != 'title' %}
-                <td><div class="row-item">{{ record[key] }}</div></td>
-                {% endif %}
+                {% for field in fields %}
+                    {% if field.id != 'title' %}
+                    <td><div class="row-item">{{ record[field.id] }}</div></td>
+                    {% endif %}
                 {% endfor %}
             </tr>
             {% endfor %}
