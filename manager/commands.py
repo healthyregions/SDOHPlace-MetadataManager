@@ -1,6 +1,8 @@
 import os
+import json
 import random
 import string
+from pathlib import Path
 
 import click
 from flask.cli import with_appcontext
@@ -12,6 +14,61 @@ from .solr import Solr
 from .models import db, Schema, Record, User
 from .utils import METADATA_DIR
 
+
+@click.command()
+@with_appcontext
+@click.option('-f', '--field', help="name of field to update, as it is stored in the JSON data")
+#@click.option('--overwrite', is_flag=True, default=False, help="overwrite existing values in this field")
+@click.option('--dry-run', is_flag=True, default=False, help="do not change any data")
+@click.option('--old-value', help="the new value to save to the records")
+@click.option('--new-value', help="only update fields that match this old value")
+def bulk_update(
+		field: str,
+		#overwrite: bool=False,
+		dry_run: bool=False,
+		old_value: str=None,
+		new_value: str=None,
+	):
+	"""Bulk update a field across all records. Optionally only update records with
+	a specific existing value. When specifying values:
+
+	"True" | "False"  will be cast as boolean values
+	"None" will be cast as None (null)
+	"""
+
+	print(f"update this field: {field}")
+	record_files = Path(METADATA_DIR, 'records').glob("*.json")
+	updated_ct = 0
+	to_update = []
+	for f in record_files:
+		print(f)
+		with open(f, "r") as o:
+			try:
+				data = json.load(o)
+			except json.decoder.JSONDecodeError:
+				print("error reading that file, skipping")
+				continue
+		val = data.get(field, "<NOT PRESENT>")
+
+		if val == "<NOT PRESENT>":
+			to_update.append(f)
+		else:
+			if old_value and str(val) != old_value:
+				continue
+			to_update.append(f)
+	print(f"{len(to_update)} records to update")
+	if dry_run or not new_value:
+		print("exit dry run, no records updated")
+		return
+	if new_value in ("None", "True", "False"):
+		new_value = eval(new_value)
+	for f in to_update:
+		with open(f, "r") as o:
+			data = json.load(o)
+		data[field] = new_value
+		with open(f, "w") as o:
+			json.dump(data, o, indent=2)
+	print("done")
 
 @click.command()
 @with_appcontext
