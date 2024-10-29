@@ -12,7 +12,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from .solr import Solr
 
 from .models import db, Schema, Record, User
-from .utils import METADATA_DIR
+from .utils import METADATA_DIR, generate_id
 
 
 @click.command()
@@ -126,6 +126,46 @@ def inspect_schema():
 
 @click.command()
 @with_appcontext
+def set_all_ids():
+
+	print("WARNING: this command is in development and will change files. Aborting for now...")
+	exit()
+
+	relation_fields = [
+		"relation",
+		"member_of",
+		"is_part_of",
+		"source",
+		"is_version_of",
+		"replaces",
+		"is_replaced_by",
+	]
+
+	id_lookup = {}
+	for r in Record.query.all():
+		r.load_data()
+		id = r.data["id"]
+		id_lookup[id] = generate_id()
+
+	for r in Record.query.all():
+		r.load_data()
+		r.data["id"] = id_lookup[r.data["id"]]
+		for f in relation_fields:
+			if isinstance(r.data[f], list):
+				r.data[f] = [id_lookup[i] for i in r.data[f]]
+		r.data_file = f"{r.data['id']}.json"
+		db.session.commit()
+		r.save_data()
+
+		# if r.data['id'] == "edi":
+		# 	r.data["alternative_title"] = None
+		# 	r.save_data()
+		# 	print(r.data_file)
+	print(id_lookup)
+
+
+@click.command()
+@with_appcontext
 @click.option('-s', '--source')
 @click.option('-n', '--name')
 def load_schema(source, name):
@@ -164,16 +204,45 @@ def reset_records():
 
 @click.command()
 @with_appcontext
+def save_records():
+	""" For all records load data and re-saves it, does not alter any SQLite rows. Helpful during development. """
+
+	for record in Record.query.all():
+		record.load_data()
+		record.save_data()
+
+@click.command()
+@with_appcontext
 @click.argument('email')
 def reset_user_password(email):
-        """ Set a user's password manually """
+	""" Set a user's password manually """
 
-        user = User.query.filter_by(email=email).first()
+	user = User.query.filter_by(email=email).first()
 
-        raw = ''.join(random.choices(string.ascii_uppercase +
-                             string.digits, k=6))
+	raw = ''.join(random.choices(string.ascii_uppercase +
+							string.digits, k=6))
 
-        user.password = generate_password_hash(raw, method='pbkdf2:sha256')
-        db.session.commit()
+	user.password = generate_password_hash(raw, method='pbkdf2:sha256')
+	db.session.commit()
 
-        print(raw)
+	print(raw)
+
+@click.command()
+@with_appcontext
+@click.argument('name')
+@click.argument('email')
+@click.argument('password')
+def create_user(name: str, email: str, password: str):
+	""" Create a user """
+
+	hashed = generate_password_hash(password, method='pbkdf2:sha256')
+
+	new_user = User(
+		name=name,
+		email=email,
+		password=hashed
+	)
+	db.session.add(new_user)
+	db.session.commit()
+
+	print(email, hashed)

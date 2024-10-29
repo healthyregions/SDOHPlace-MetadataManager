@@ -12,9 +12,12 @@ from manager.commands import (
     index,
     inspect_schema,
     load_schema,
+    save_records,
     reset_records,
     reset_user_password,
     bulk_update,
+    set_all_ids,
+    create_user,
 )
 load_dotenv()
 
@@ -52,9 +55,12 @@ def load_user(user_id):
 app.cli.add_command(index)
 app.cli.add_command(inspect_schema)
 app.cli.add_command(load_schema)
+app.cli.add_command(save_records)
 app.cli.add_command(reset_records)
+app.cli.add_command(create_user)
 app.cli.add_command(reset_user_password)
 app.cli.add_command(bulk_update)
+app.cli.add_command(set_all_ids)
 
 app.config['DEBUG'] = True
 
