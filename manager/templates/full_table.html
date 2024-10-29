@@ -15,22 +15,24 @@
 {% endblock %}
 
 {% block full_width_content %}
-<table class="table table-striped is-fullwidth" style="display:block; max-height: calc(100vh - 56px); overflow:auto;">
-    <thead>
-        <tr>
-            {% for key in records.0.keys() %}
-            <td style="position:sticky; top:0; background:white; border-bottom: 2px solid gray;">{{key}}</td>
+<div class="table-container">
+    <table class="table table-striped is-fullwidth all-records-table">
+        <thead>
+            <tr>
+                {% for key in records.0.keys() %}
+                <td style="position:sticky; top:0; background:white; border-bottom: 2px solid gray;">{{key}}</td>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody >
+            {% for record in records %}
+            <tr title="{{ record.title }}">
+                {% for key, value in record.items() %}
+                <td><div class="row-item">{{ value }}</div></td>
+                {% endfor %}
+            </tr>
             {% endfor %}
-        </tr>
-    </thead>
-    <tbody >
-        {% for record in records %}
-        <tr>
-            {% for key, value in record.items() %}
-            <td>{{ value }}</td>
-            {% endfor %}
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+        </tbody>
+    </table>
+</div>
 {% endblock %}
