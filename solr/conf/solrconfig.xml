@@ -224,7 +224,6 @@
       <str name="suggestAnalyzerFieldType">textSuggest</str>
       <str name="buildOnCommit">true</str>
       <str name="field">suggest</str>
-      <!-- new props -->
       <str name="preserveSep">false</str>
       <str name="payloadField">sdoh_data_variables_sm</str>
     </lst> 
