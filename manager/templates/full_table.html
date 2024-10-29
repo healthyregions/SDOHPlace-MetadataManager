@@ -27,8 +27,11 @@
         <tbody >
             {% for record in records %}
             <tr title="{{ record.title }}">
-                {% for key, value in record.items() %}
-                <td><div class="row-item">{{ value }}</div></td>
+                <td style="min-width:400px"><div class="row-item"><a href="/record/{{record.id}}">{{ record.title }}</a></div></td>
+                {% for key in records.0.keys() %}
+                {% if key != 'title' %}
+                <td><div class="row-item">{{ record[key] }}</div></td>
+                {% endif %}
                 {% endfor %}
             </tr>
             {% endfor %}

@@ -163,6 +163,7 @@ class Record(db.Model):
             css_color = "danger"
 
         data['meta'] = {
+            # 'created_by': self.data['meta'].get("created_by"),
             'last_modified_by': self.last_modified_by,
             'filled': required_filled,
             'to_fill': len(rs_fields),
