@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <!--
  Licensed to the Apache Software Foundation (ASF) under one or more
  contributor license agreements.  See the NOTICE file distributed with
@@ -108,7 +107,7 @@
       <int name="indent">2</int>
       <str name="defType">edismax</str>
       <str name="echoParams">all</str>
-      <str name="mm">6&lt;-1 6&lt;90%</str>
+      <str name="mm">90%</str>
       <int name="qs">1</int>
       <int name="ps">0</int>
       <float name="tie">0.01</float>
@@ -230,27 +229,19 @@
     -->
     <!-- This is a new suggester for SDOH project -->
     <lst name="suggester">
-      <str name="name">sdohSuggester</str>
-      <str name="lookupImpl">BlendedInfixLookupFactory</str>
-      <str name="dictionaryImpl">DocumentDictionaryFactory</str>
-      <str name="field">suggest</str>
-      <str name="suggestAnalyzerFieldType">text_suggest</str>
-      <str name="weightField">weight</str>
-      <str name="buildOnStartup">true</str>
-      <str name="buildOnCommit">true</str>
-      <bool name="exactMatchFirst">false</bool>
-      <int name="minPrefixChars">1</int>
-      <bool name="highlight">true</bool>
-      <str name="payloadField">dct_title_s</str>
-      <str name="contextField">gbl_suppressed_b</str>
-      <bool name="contextBoost">true</bool>
-      <float name="suggest.contextBoostFactor">5.0</float>
-      <bool name="suggestFilter">true</bool>
-      <str name="suggestFilterField">gbl_suppressed_b</str>
-      <str name="suggestFilterValue">false</str>
-      <int name="numFactor">1</int>
-      <float name="blendFactor">0.1</float>
-      <str name="normalizeWeight">false</str>
+        <str name="name">sdohSuggester</str>
+        <str name="lookupImpl">AnalyzingInfixLookupFactory</str>
+        <str name="dictionaryImpl">HighFrequencyDictionaryFactory</str>
+        <str name="field">suggest</str>
+        <str name="suggestAnalyzerFieldType">text_suggest</str>
+        <str name="weightField">score</str>
+        <bool name="exactMatchFirst">false</bool>
+        <str name="buildOnStartup">true</str>
+        <str name="buildOnCommit">true</str>
+        <int name="minPrefixChars">1</int>
+        <bool name="highlight">true</bool>
+        <bool name="allTermsRequired">true</bool>
+        <str name="payloadField">dct_title_s</str>
     </lst>
   </searchComponent> 
 
