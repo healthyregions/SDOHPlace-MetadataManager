@@ -196,7 +196,7 @@
   </types>
 
   <!-- for scoring formula -->
-  <!-- <copyField source="dct_spatial_sm"     dest="dct_spatial_tmi"     maxChars="10000"/> -->
+  <copyField source="dct_spatial_sm"     dest="dct_spatial_tmi"     maxChars="10000"/>
   <copyField source="dct_temporal_sm"    dest="dct_temporal_tmi"    maxChars="10000"/>
   <copyField source="dct_creator_sm"      dest="dct_creator_tmi"      maxChars="1000"/>
   <copyField source="dct_description_sm"   dest="dct_description_tmi"   maxChars="10000"/>
@@ -228,20 +228,30 @@
 
   <!-- for suggestions (default GBL setup) -->
   <copyField source="dct_title_s" dest="suggest" boost="100"/>
-  <copyField source="dct_description_sm" dest="suggest" boost="80"/>
+  <copyField source="dct_description_sm" dest="suggest" boost="100"/>
   <copyField source="dct_subject_sm" dest="suggest" boost="30"/>
   <copyField source="dct_spatial_sm" dest="suggest" boost="0.1"/>
   <copyField source="dct_creator_sm" dest="suggest" boost="20"/>
   <copyField source="dct_publisher_sm" dest="suggest" boost="20"/>
   <copyField source="schema_provider_s" dest="suggest" boost="20"/>
+    <copyField source="dct_keyword_sm" dest="suggest" boost="30"/>
 
   <copyField source="dct_title_s" dest="score" boost="100"/>
-  <copyField source="dct_description_sm" dest="score" boost="80"/>
+  <copyField source="dct_description_sm" dest="score" boost="100"/>
   <copyField source="dct_subject_sm" dest="score" boost="30"/>
   <copyField source="dct_spatial_sm" dest="score" boost="0.1"/>
   <copyField source="dct_creator_sm" dest="score" boost="20"/>
   <copyField source="dct_publisher_sm" dest="score" boost="20"/>
   <copyField source="schema_provider_s" dest="score" boost="20"/>
+  <copyField source="dct_keyword_sm" dest="score" boost="30"/>
+
+  <!-- add some SDOH fields to the default suggester -->
+  <copyField source="sdoh_data_usage_notes_s" dest="suggest" boost="100"/>
+  <copyField source="sdoh_methods_variables_sm" dest="suggest" boost="50"/>
+  <copyField source="sdoh_data_variables_sm" dest="suggest" boost="50"/>
+  <copyField source="sdoh_data_usage_notes_s" dest="score" boost="100"/>
+  <copyField source="sdoh_methods_variables_sm" dest="score" boost="50"/>
+  <copyField source="sdoh_data_variables_sm" dest="score" boost="50"/>
 
   <!-- for payload -->
   <copyField source="dct_title_s" dest="payload"/>
