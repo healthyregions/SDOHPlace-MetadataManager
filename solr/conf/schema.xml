@@ -31,7 +31,7 @@
     <field name="suggest" type="text_suggest" indexed="true" stored="true" multiValued="true"/>
     <field name="score" type="float" indexed="true" stored="true" default="100"/>
     <field name="payload" type="string" indexed="true" stored="true"/>
-    <field name="dct_description_sm" type="text_suggest" indexed="true" stored="true" multiValued="true" />
+    <field name="dct_description_sm" type="text_general" indexed="true" stored="true" multiValued="true" />
 
     <!-- dynamic field with simple types by suffix -->
     <dynamicField name="*_b"    type="boolean" stored="true"  indexed="true"/>
@@ -175,13 +175,23 @@
     <fieldType name="pdouble" class="solr.DoublePointField" docValues="true"/>
 
     <!-- Updated suggest -->
-    <fieldtype name="text_suggest" class="solr.TextField">
-      <analyzer>
-      <tokenizer class="solr.KeywordTokenizerFactory"/>
-      <filter class="solr.LowerCaseFilterFactory"/>
-      <filter class="solr.TrimFilterFactory"/>
+    <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100">
+      <analyzer type="index">
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
       </analyzer>
-    </fieldtype>
+      <analyzer type="query">
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+      </analyzer>
+    </fieldType>
+    <fieldType name="text_suggest" class="solr.TextField">
+        <analyzer>
+            <tokenizer class="solr.StandardTokenizerFactory"/> <!-- Correct tokenizer class -->
+            <filter class="solr.LowerCaseFilterFactory"/>
+            <filter class="solr.TrimFilterFactory"/>
+        </analyzer>
+    </fieldType>
     <fieldType name="text_context" class="solr.TextField" positionIncrementGap="100">
      <analyzer>
       <tokenizer class="solr.StandardTokenizerFactory"/>
@@ -239,16 +249,15 @@
 
   <!-- for suggestions (new SDOH setup). Boost is still not working, but any term that comes from fields not present below will not be returned-->
   <copyField source="dct_title_s" dest="suggest" boost="100"/>
-  <copyField source="dct_description_sm" dest="suggest" boost="100"/>
-  <copyField source="dct_subject_sm" dest="suggest" boost="30"/>
-  <copyField source="dct_spatial_sm" dest="suggest" boost="0.1"/>
   <copyField source="dct_creator_sm" dest="suggest" boost="20"/>
   <copyField source="dct_publisher_sm" dest="suggest" boost="20"/>
   <copyField source="schema_provider_s" dest="suggest" boost="20"/>
   <copyField source="dct_keyword_sm" dest="suggest" boost="30"/>
+  <copyField source="dct_subject_sm" dest="suggest" boost="30"/>
   <copyField source="sdoh_data_usage_notes_s" dest="suggest" boost="100"/>
   <copyField source="sdoh_methods_variables_sm" dest="suggest" boost="50"/>
   <copyField source="sdoh_data_variables_sm" dest="suggest" boost="50"/>
+  <copyField source="dct_description_sm" dest="suggest" boost="100"/>
 
   <!-- Unused booster -->
    <!--
