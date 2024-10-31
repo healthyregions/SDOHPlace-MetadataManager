@@ -29,12 +29,9 @@
 
     <!-- Updated suggestion -->
     <field name="suggest" type="text_suggest" indexed="true" stored="true" multiValued="true"/>
-    <field name="gbl_suppressed_b" type="boolean" indexed="true" stored="true"/>
-    <field name="suggest_context" type="text_context" indexed="true" stored="true" multiValued="true"/>
-    <field name="title_context" type="text_context" indexed="true" stored="true"/>
-    <field name="description_context" type="text_context" indexed="true" stored="true"/>
     <field name="score" type="float" indexed="true" stored="true" default="100"/>
     <field name="payload" type="string" indexed="true" stored="true"/>
+    <field name="dct_description_sm" type="text_suggest" indexed="true" stored="true" multiValued="true" />
 
     <!-- dynamic field with simple types by suffix -->
     <dynamicField name="*_b"    type="boolean" stored="true"  indexed="true"/>
@@ -227,6 +224,20 @@
   <copyField source="dct_spatial_sm" dest="spell"/>
 
   <!-- for suggestions (default GBL setup) -->
+  <!-- 
+  <copyField source="dct_title_s" dest="suggest"/>
+  <copyField source="dct_creator_sm" dest="suggest"/>
+  <copyField source="dct_publisher_sm" dest="suggest"/>
+  <copyField source="schema_provider_s" dest="suggest"/>
+  <copyField source="dct_subject_sm" dest="suggest"/>
+  <copyField source="dct_spatial_sm" dest="suggest"/>-->
+  <!-- add some SDOH fields to the default suggester -->
+  <!-- 
+  <copyField source="sdoh_methods_variables_sm" dest="suggest"/>
+  <copyField source="sdoh_data_variables_sm" dest="suggest"/>
+   -->
+
+  <!-- for suggestions (new SDOH setup). Boost is still not working, but any term that comes from fields not present below will not be returned-->
   <copyField source="dct_title_s" dest="suggest" boost="100"/>
   <copyField source="dct_description_sm" dest="suggest" boost="100"/>
   <copyField source="dct_subject_sm" dest="suggest" boost="30"/>
@@ -234,8 +245,13 @@
   <copyField source="dct_creator_sm" dest="suggest" boost="20"/>
   <copyField source="dct_publisher_sm" dest="suggest" boost="20"/>
   <copyField source="schema_provider_s" dest="suggest" boost="20"/>
-    <copyField source="dct_keyword_sm" dest="suggest" boost="30"/>
+  <copyField source="dct_keyword_sm" dest="suggest" boost="30"/>
+  <copyField source="sdoh_data_usage_notes_s" dest="suggest" boost="100"/>
+  <copyField source="sdoh_methods_variables_sm" dest="suggest" boost="50"/>
+  <copyField source="sdoh_data_variables_sm" dest="suggest" boost="50"/>
 
+  <!-- Unused booster -->
+   <!--
   <copyField source="dct_title_s" dest="score" boost="100"/>
   <copyField source="dct_description_sm" dest="score" boost="100"/>
   <copyField source="dct_subject_sm" dest="score" boost="30"/>
@@ -244,21 +260,15 @@
   <copyField source="dct_publisher_sm" dest="score" boost="20"/>
   <copyField source="schema_provider_s" dest="score" boost="20"/>
   <copyField source="dct_keyword_sm" dest="score" boost="30"/>
-
-  <!-- add some SDOH fields to the default suggester -->
-  <copyField source="sdoh_data_usage_notes_s" dest="suggest" boost="100"/>
-  <copyField source="sdoh_methods_variables_sm" dest="suggest" boost="50"/>
   <copyField source="sdoh_data_variables_sm" dest="suggest" boost="50"/>
   <copyField source="sdoh_data_usage_notes_s" dest="score" boost="100"/>
   <copyField source="sdoh_methods_variables_sm" dest="score" boost="50"/>
   <copyField source="sdoh_data_variables_sm" dest="score" boost="50"/>
 
+  -->
+
   <!-- for payload -->
   <copyField source="dct_title_s" dest="payload"/>
-  <!-- for context (not using now) -->
-  <copyField source="dct_title_s" dest="title_context"/>
-  <copyField source="dct_description_s" dest="description_context"/>
-  <copyField source="*_context" dest="suggest_context"/>
 
   <!-- for the new SDOH suggestions -->
   <copyField source="dct_random_sm" dest="sdoh_suggestions"/>

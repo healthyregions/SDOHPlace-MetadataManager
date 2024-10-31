@@ -185,21 +185,21 @@ text^1 dct_description_ti^2 dct_creator_tmi^3 dct_publisher_ti^3 dct_isPartOf_tm
     </lst> 
     -->
     <!-- This is a new suggester for SDOH project -->
-     <lst name="suggester">
-    <str name="name">sdohSuggester</str>
-    <str name="lookupImpl">BlendedInfixLookupFactory</str>
-    <str name="dictionaryImpl">DocumentDictionaryFactory</str>
-    <str name="field">suggest</str>
-    <str name="suggestAnalyzerFieldType">text_suggest</str>
-    <str name="weightField">score</str>
-    <str name="payloadField">dct_title_s</str>
-    <bool name="exactMatchFirst">false</bool>
-    <float name="blendFactor">0.1</float>
-    <str name="buildOnStartup">true</str>
-    <str name="buildOnCommit">true</str>
-    <int name="minPrefixChars">1</int>
-    <bool name="highlight">true</bool>
-</lst>
+    <lst name="suggester">
+      <str name="name">sdohSuggester</str>
+      <str name="lookupImpl">BlendedInfixLookupFactory</str>
+      <str name="dictionaryImpl">DocumentDictionaryFactory</str>
+      <str name="field">suggest</str>
+      <str name="suggestAnalyzerFieldType">text_suggest</str>
+      <str name="weightField">score</str>
+      <str name="payloadField">dct_title_s</str>
+      <bool name="exactMatchFirst">false</bool>
+      <float name="blendFactor">0.1</float>
+      <str name="buildOnStartup">true</str>
+      <str name="buildOnCommit">true</str>
+      <int name="minPrefixChars">1</int>
+      <bool name="highlight">true</bool>
+  </lst>
     <!-- HighFrequencyDictionaryFactory version with different score but no payloads. Not use this one for now -->
     <!-- <lst name="suggester">
         <str name="name">sdohSuggester</str>
