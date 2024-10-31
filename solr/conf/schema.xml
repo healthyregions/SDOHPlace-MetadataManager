@@ -247,7 +247,7 @@
   <copyField source="sdoh_data_variables_sm" dest="suggest"/>
    -->
 
-  <!-- for suggestions (new SDOH setup). Boost is still not working, but any term that comes from fields not present below will not be returned-->
+  <!-- for suggestions (new SDOH setup) -->
   <copyField source="dct_title_s" dest="suggest" boost="100"/>
   <copyField source="dct_creator_sm" dest="suggest" boost="20"/>
   <copyField source="dct_publisher_sm" dest="suggest" boost="20"/>
