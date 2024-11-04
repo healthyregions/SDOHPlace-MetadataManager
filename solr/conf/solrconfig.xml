@@ -192,7 +192,7 @@ text^1 dct_description_ti^2 dct_creator_tmi^3 dct_publisher_ti^3 dct_isPartOf_tm
       <str name="field">suggest</str>
       <str name="suggestAnalyzerFieldType">text_suggest</str>
       <str name="weightField">score</str>
-      <str name="payloadField">dct_title_s</str>
+      <str name="payloadField">gbl_suppressed_s</str>
       <bool name="exactMatchFirst">false</bool>
       <float name="blendFactor">0.1</float>
       <str name="buildOnStartup">true</str>
