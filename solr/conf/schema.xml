@@ -4,14 +4,14 @@
   <fields>
     <field name="_version_" type="long" stored="true" indexed="true" />
     <field name="timestamp" type="date" stored="true" indexed="true" default="NOW" />
-    <field name="id" type="string" stored="true" indexed="true" required="true" />
+    <field name="id"    type="string" stored="true" indexed="true" required="true" />
 
     <!-- core generated fields -->
     <field name="text" type="text_en" stored="false" indexed="true" multiValued="true"
-      termVectors="true" termPositions="true" termOffsets="true" />
+                       termVectors="true" termPositions="true" termOffsets="true" />
 
-    <!-- Spatial Field Type: Represents the exent of the resource and powers map search
-    functionality.
+    <!-- Spatial Field Type: Represents the exent of the resource and powers map search functionality.
+     
       Value can be any valid WKT or ENVELOPE String:
         <field name="locn_geometry">POLYGON((1 8, 1 9, 2 9, 2 8, 1 8))</field>
         <field name="locn_geometry">ENVELOPE(-117.312, -115.39, 84.31, 83.1)</field> -->
