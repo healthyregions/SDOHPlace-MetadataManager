@@ -215,7 +215,7 @@
     </lst>
   </searchComponent>
 
-  <searchComponent name="suggest" class="solr.SuggestComponent">
+<searchComponent name="suggest" class="solr.SuggestComponent">
     <!-- This is the default GeoBlacklight suggester -->
     <lst name="suggester">
       <str name="name">mySuggester</str>
@@ -227,16 +227,38 @@
       <str name="preserveSep">false</str>
       <str name="payloadField">sdoh_data_variables_sm</str>
     </lst>
-    <!-- This is a new suggester for SDOH project -->
-    <!--
-    <lst name="suggester">
+     <!--This is a new suggester for SDOH project-->
+     <lst name="suggester">
       <str name="name">sdohSuggester</str>
-      <str name="lookupImpl">BlendedInfixLookupFactory</str> 
-      <str name="field">sdoh_suggestions</str>
-      <str name="highlight">false</str>
-      <str name="suggestAnalyzerFieldType">sdohTextSuggest</str>
+      <str name="lookupImpl">BlendedInfixLookupFactory</str>
+      <str name="dictionaryImpl">DocumentDictionaryFactory</str>
+      <str name="field">suggest</str>
+      <str name="suggestAnalyzerFieldType">text_suggest</str>
+      <str name="weightField">score</str>
+      <str name="payloadField">gbl_suppressed_s</str>
+      <bool name="exactMatchFirst">false</bool>
+      <float name="blendFactor">0.1</float>
+      <str name="buildOnStartup">true</str>
+      <str name="buildOnCommit">true</str>
+      <int name="minPrefixChars">1</int>
+      <bool name="highlight">true</bool>
     </lst>
-    -->
+    <!--HighFrequencyDictionaryFactory version with different score but no payloads. Not use this one for now-->
+    <!--<lst name="suggester">
+        <str name="name">sdohSuggester</str>
+        <str name="lookupImpl">AnalyzingInfixLookupFactory</str>
+        <str name="dictionaryImpl">HighFrequencyDictionaryFactory</str>
+        <str name="field">suggest</str>
+        <str name="suggestAnalyzerFieldType">text_suggest</str>
+        <str name="weightField">score</str>
+        <bool name="exactMatchFirst">false</bool>
+        <str name="buildOnStartup">true</str>
+        <str name="buildOnCommit">true</str>
+        <int name="minPrefixChars">1</int>
+        <bool name="highlight">true</bool>
+        <bool name="allTermsRequired">true</bool>
+        <str name="payloadField">dct_title_s</str>
+    </lst>-->
   </searchComponent> 
 
   <!-- Here's another suggester to try for internal matching, based on this SE answer:
@@ -257,8 +279,8 @@
   <requestHandler name="/suggest" class="solr.SearchHandler" startup="lazy">
     <lst name="defaults">
       <str name="suggest">true</str>
-      <str name="suggest.count">10</str>
-      <str name="suggest.dictionary">mySuggester</str>
+      <str name="suggest.count">200</str>
+      <str name="suggest.dictionary">sdohSuggester</str>
     </lst>
     <arr name="components">
       <str>suggest</str>
