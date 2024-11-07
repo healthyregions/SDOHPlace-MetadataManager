@@ -20,6 +20,7 @@ sudo mkdir -p /var/solr/data/$1/data
 sudo touch /var/solr/data/$1/data/server-enabled.txt
 sudo chown -R solr:solr /var/solr/data/$1/data
 
-sudo service solr restart
+sudo systemctl stop solr
+sudo systemctl start solr
 
 echo "Successfully created core $1 and enabled PING"
