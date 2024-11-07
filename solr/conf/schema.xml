@@ -261,13 +261,11 @@
   <copyField source="dct_title_s" dest="suggest" boost="100" />
   <copyField source="dct_creator_sm" dest="suggest" boost="20" />
   <copyField source="dct_publisher_sm" dest="suggest" boost="20" />
-  <copyField source="schema_provider_s" dest="suggest" boost="20" />
   <copyField source="dct_keyword_sm" dest="suggest" boost="30" />
   <copyField source="dct_subject_sm" dest="suggest" boost="30" />
   <copyField source="sdoh_data_usage_notes_s" dest="suggest" boost="100" />
   <copyField source="sdoh_methods_variables_sm" dest="suggest" boost="50" />
   <copyField source="sdoh_data_variables_sm" dest="suggest" boost="50" />
-  <copyField source="dct_description_sm" dest="suggest" boost="100" />
 
   <!-- Unused booster -->
   <!--
