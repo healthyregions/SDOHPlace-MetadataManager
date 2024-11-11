@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 21,
+    "to_fill": 23,
+    "filled_pct": 91,
+    "progress_class": "success"
+  },
   "title": "CDC National Environmental Public Health Tracking Network: Palmer Drought Severity Index 1895-2016",
   "alternative_title": null,
   "description": [
@@ -78,7 +86,7 @@
   "wxs_indentifier": null,
   "id": "PDSI-1895-2016",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T16:07:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -93,12 +101,5 @@
   "data_variables": [
     "Palmer Drought Severity Index (PDSI)"
   ],
-  "data_usage_notes": "Data were downloaded from the National Oceanic and Atmospheric Administration (NOAA) server and were originally provided as monthly values for a climate division (typically 5-10 divisions per state). Distance weighting functions were applied to constrain the drought values to a specific US county.",
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 21,
-    "to_fill": 23,
-    "filled_pct": 91,
-    "progress_class": "success"
-  }
+  "data_usage_notes": "Data were downloaded from the National Oceanic and Atmospheric Administration (NOAA) server and were originally provided as monthly values for a climate division (typically 5-10 divisions per state). Distance weighting functions were applied to constrain the drought values to a specific US county."
 }

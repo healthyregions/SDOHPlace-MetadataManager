@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 21,
+    "to_fill": 23,
+    "filled_pct": 91,
+    "progress_class": "success"
+  },
   "title": "CDC National Environmental Public Health Tracking Network: Population-Weighted Global Horizontal Irradiance 1991-2012",
   "alternative_title": null,
   "description": [
@@ -80,7 +88,7 @@
   "wxs_indentifier": null,
   "id": "PWGHI-1991-2012",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T16:07:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -95,12 +103,5 @@
   "data_variables": [
     "county-level population weighted daily GHI in wh/m2 (ghi)"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 21,
-    "to_fill": 23,
-    "filled_pct": 91,
-    "progress_class": "success"
-  }
+  "data_usage_notes": null
 }

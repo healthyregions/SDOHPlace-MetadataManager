@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 17,
+    "to_fill": 23,
+    "filled_pct": 73,
+    "progress_class": "danger"
+  },
   "title": "National Neighborhood Data Archive (NaNDA): Weather by County, United States, 2003-2016",
   "alternative_title": null,
   "description": [
@@ -75,7 +83,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38858.v1"
   ],
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T16:07:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -86,12 +94,5 @@
   "data_variables": [
     "COLD_DAY_P1_L180"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 17,
-    "to_fill": 23,
-    "filled_pct": 73,
-    "progress_class": "danger"
-  }
+  "data_usage_notes": null
 }

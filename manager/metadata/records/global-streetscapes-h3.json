@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 17,
+    "to_fill": 23,
+    "filled_pct": 73,
+    "progress_class": "danger"
+  },
   "title": "Global Streetscapes (H3)",
   "alternative_title": null,
   "description": [
@@ -75,7 +83,7 @@
   "wxs_indentifier": null,
   "id": "global-streetscapes-h3",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T16:07:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -86,12 +94,5 @@
   "data_variables": [
     "Unique image ID, Source (Mapillary or KartaView), Orginal ID (by Mapillary or KartaView), Unique index of the hexagonal cell containing the location of the image at level 0, Unique index of the hexagonal cell containing the location of the image at level 1, Unique index of the hexagonal cell containing the location of the image at level 2, Unique index of the hexagonal cell containing the location of the image at level 3, Unique index of the hexagonal cell containing the location of the image at level 4, Unique index of the hexagonal cell containing the location of the image at level 5, Unique index of the hexagonal cell containing the location of the image at level 6, Unique index of the hexagonal cell containing the location of the image at level 7, Unique index of the hexagonal cell containing the location of the image at level 8, Unique index of the hexagonal cell containing the location of the image at level 9, Unique index of the hexagonal cell containing the location of the image at level 10, Unique index of the hexagonal cell containing the location of the image at level 11, Unique index of the hexagonal cell containing the location of the image at level 12, Unique index of the hexagonal cell containing the location of the image at level 13, Unique index of the hexagonal cell containing the location of the image at level 14, Unique index of the hexagonal cell containing the location of the image at level 15"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 17,
-    "to_fill": 23,
-    "filled_pct": 73,
-    "progress_class": "danger"
-  }
+  "data_usage_notes": null
 }

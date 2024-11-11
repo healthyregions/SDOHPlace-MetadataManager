@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 23,
+    "filled_pct": 78,
+    "progress_class": "warning"
+  },
   "title": "Food Environment Atlas (FEA)",
   "alternative_title": null,
   "description": [
@@ -68,7 +76,7 @@
   "wxs_indentifier": null,
   "id": "food_environment_atlas",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T16:07:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -82,12 +90,5 @@
   "data_variables": [
     "'Population', 'Housing Units', 'Low-Income Population', 'Children Age 0-17', 'Seniors Age 65+', 'White Population', 'Balck or African American Population', 'Asian Population', 'Native Hawaiian or Other Pacific Islander Population', 'American Indian or Alaska Native Population', 'Other/Multiple Race Population', 'Hispanic or Latino Population', 'Housing Units without a Vehicle', 'Housing units Receiving SNAP Benefits'"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 18,
-    "to_fill": 23,
-    "filled_pct": 78,
-    "progress_class": "warning"
-  }
+  "data_usage_notes": null
 }

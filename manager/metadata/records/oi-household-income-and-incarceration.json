@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 23,
+    "filled_pct": 78,
+    "progress_class": "warning"
+  },
   "title": "Opportunity Insights: Household Income and Incarceration for Children from Low-Income Households",
   "alternative_title": null,
   "description": [
@@ -78,7 +86,7 @@
   "wxs_indentifier": null,
   "id": "oi-household-income-and-incarceration",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T16:07:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -93,12 +101,5 @@
   "data_variables": [
     "\u2018Number of children under 18 living in the given area with parents whose household income was below the national median\u2019"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 18,
-    "to_fill": 23,
-    "filled_pct": 78,
-    "progress_class": "warning"
-  }
+  "data_usage_notes": null
 }

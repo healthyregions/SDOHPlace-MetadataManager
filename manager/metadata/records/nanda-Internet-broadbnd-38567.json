@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 19,
+    "to_fill": 23,
+    "filled_pct": 82,
+    "progress_class": "warning"
+  },
   "title": "National Neighborhood Data Archive (NaNDA): Broadband Internet Availability, Speed, and Adoption by Census Tract and ZIP Code Tabulation Area, United States, 2014-2020",
   "alternative_title": null,
   "description": [
@@ -80,7 +88,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38567.v1"
   ],
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T16:07:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -101,12 +109,5 @@
     "residential_fixed_connections",
     "zcta"
   ],
-  "data_usage_notes": "These data bring together measures of broadband accessibility and residential adoption across the United States for the period 2014-2018 (data file Broadband Internet Availability, Speed, and Adoption by Census Tract) and measures of broadband accessibility and speed across the United States for the period 2014-2020 (data file Broadband Internet Availability and Speed by ZIP Code Tabulation Area).\r\n\r\n",
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 19,
-    "to_fill": 23,
-    "filled_pct": 82,
-    "progress_class": "warning"
-  }
+  "data_usage_notes": "These data bring together measures of broadband accessibility and residential adoption across the United States for the period 2014-2018 (data file Broadband Internet Availability, Speed, and Adoption by Census Tract) and measures of broadband accessibility and speed across the United States for the period 2014-2020 (data file Broadband Internet Availability and Speed by ZIP Code Tabulation Area).\r\n\r\n"
 }

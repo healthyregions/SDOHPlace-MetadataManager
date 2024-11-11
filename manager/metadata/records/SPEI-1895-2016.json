@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 21,
+    "to_fill": 23,
+    "filled_pct": 91,
+    "progress_class": "success"
+  },
   "title": "CDC National Environmental Public Health Tracking Network: Standardized Precipitation Evapotranspiration Index 1895-2016",
   "alternative_title": null,
   "description": [
@@ -79,7 +87,7 @@
   "wxs_indentifier": null,
   "id": "SPEI-1895-2016",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T16:07:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -93,12 +101,5 @@
   "data_variables": [
     "Standard Precipitation Evapotranspiration Index (SPEI)"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 21,
-    "to_fill": 23,
-    "filled_pct": 91,
-    "progress_class": "success"
-  }
+  "data_usage_notes": null
 }

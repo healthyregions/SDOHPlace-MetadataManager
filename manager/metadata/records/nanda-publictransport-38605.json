@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 19,
+    "to_fill": 23,
+    "filled_pct": 82,
+    "progress_class": "warning"
+  },
   "title": "National Neighborhood Data Archive (NaNDA): Public Transit Stops by Census Tract and ZIP Code Tabulation Area, United States, 2016-2018 ",
   "alternative_title": null,
   "description": [
@@ -81,7 +89,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38605.v1"
   ],
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T16:07:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -113,12 +121,5 @@
     "stops_per_sqmile",
     "stops_per_sqmile"
   ],
-  "data_usage_notes": "The purpose this study is to measure the number of public transit stops per United States census tract or ZIP code tabulation area (ZCTA) based on data from the National Transit Map (NTM).",
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 19,
-    "to_fill": 23,
-    "filled_pct": 82,
-    "progress_class": "warning"
-  }
+  "data_usage_notes": "The purpose this study is to measure the number of public transit stops per United States census tract or ZIP code tabulation area (ZCTA) based on data from the National Transit Map (NTM)."
 }

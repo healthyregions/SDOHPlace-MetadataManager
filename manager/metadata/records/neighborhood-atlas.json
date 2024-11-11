@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 13,
+    "to_fill": 23,
+    "filled_pct": 56,
+    "progress_class": "danger"
+  },
   "title": "Neighborhood Atlas",
   "alternative_title": null,
   "description": [
@@ -54,7 +62,7 @@
   "wxs_indentifier": null,
   "id": "neighborhood-atlas",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T16:07:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -64,12 +72,5 @@
   "spatial_resolution_note": null,
   "methods_variables": null,
   "data_variables": null,
-  "data_usage_notes": "### Area Deprivation and Widening Inequalities in US Mortality, 1969-1998\r\nA census-based area deprivation index was linked to county mortality data.\r\n\r\n### Neighborhood Socioeconomic Disadvantage and 30-day Rehospitalization\r\nMedicare data were linked to 2000 census data to construct an ADI for each patient's census block group, which were then sorted into percentiles by increasing ADI. Relationships between neighborhood ADI grouping and 30-day rehospitalization were evaluated using multivariate logistic regression models, controlling for patient sociodemographic characteristics, comorbid conditions and severity, and index hospital characteristics.\r\n\r\n### ADI\r\n\r\nThe ADIs on this website are provided in national percentile rankings at the block group level from 1 to 100. The percentiles are constructed by ranking the ADI from low to high for the nation and grouping the block groups/neighborhoods into bins corresponding to each 1% range of the ADI. Group 1 is the lowest ADI and group 100 is the highest ADI. A block group with a ranking of 1 indicates the lowest level of \"disadvantage\" within the nation and an ADI with a ranking of 100 indicates the highest level of \"disadvantage\".",
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 13,
-    "to_fill": 23,
-    "filled_pct": 56,
-    "progress_class": "danger"
-  }
+  "data_usage_notes": "### Area Deprivation and Widening Inequalities in US Mortality, 1969-1998\r\nA census-based area deprivation index was linked to county mortality data.\r\n\r\n### Neighborhood Socioeconomic Disadvantage and 30-day Rehospitalization\r\nMedicare data were linked to 2000 census data to construct an ADI for each patient's census block group, which were then sorted into percentiles by increasing ADI. Relationships between neighborhood ADI grouping and 30-day rehospitalization were evaluated using multivariate logistic regression models, controlling for patient sociodemographic characteristics, comorbid conditions and severity, and index hospital characteristics.\r\n\r\n### ADI\r\n\r\nThe ADIs on this website are provided in national percentile rankings at the block group level from 1 to 100. The percentiles are constructed by ranking the ADI from low to high for the nation and grouping the block groups/neighborhoods into bins corresponding to each 1% range of the ADI. Group 1 is the lowest ADI and group 100 is the highest ADI. A block group with a ranking of 1 indicates the lowest level of \"disadvantage\" within the nation and an ADI with a ranking of 100 indicates the highest level of \"disadvantage\"."
 }

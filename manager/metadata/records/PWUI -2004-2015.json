@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 21,
+    "to_fill": 23,
+    "filled_pct": 91,
+    "progress_class": "success"
+  },
   "title": "CDC National Environmental Public Health Tracking Network: Population-Weighted Ultraviolet Irradiance 2004-2015",
   "alternative_title": null,
   "description": [
@@ -81,7 +89,7 @@
   "wxs_indentifier": null,
   "id": "PWUI -2004-2015",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T16:07:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -101,12 +109,5 @@
     "daily county-level population weighted spectral irradiance at local solar noon time at 324 nm, with the unit of mW/m2/nm",
     "daily county-level population weighted spectral irradiance at local solar noon time at 380 nm, with the unit of mW/m2/nm"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 21,
-    "to_fill": 23,
-    "filled_pct": 91,
-    "progress_class": "success"
-  }
+  "data_usage_notes": null
 }

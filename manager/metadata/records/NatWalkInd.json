@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 21,
+    "to_fill": 23,
+    "filled_pct": 91,
+    "progress_class": "success"
+  },
   "title": "National Walkability Index",
   "alternative_title": [
     "EPA Walkability Index"
@@ -71,7 +79,7 @@
   "wxs_indentifier": null,
   "id": "NatWalkInd",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T16:07:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -94,12 +102,5 @@
     "D3B_Ranked- Quantile ranked order (1-20) of [D3b] from lowest to highest",
     "D4A_Ranked- Quantile ranked order (1,13-20)  of [D4a] from lowest to highest"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 21,
-    "to_fill": 23,
-    "filled_pct": 91,
-    "progress_class": "success"
-  }
+  "data_usage_notes": null
 }

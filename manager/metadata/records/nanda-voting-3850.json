@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 19,
+    "to_fill": 23,
+    "filled_pct": 82,
+    "progress_class": "warning"
+  },
   "title": "National Neighborhood Data Archive (NaNDA): Voter Registration, Turnout, and Partisanship by County, United States, 2004-2018",
   "alternative_title": null,
   "description": [
@@ -86,7 +94,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38506.v1"
   ],
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T16:07:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -99,12 +107,5 @@
   "data_variables": [
     "REG_VOTER_TURNOUT_PCT, REG_VOTERS, VOTER_TURNOUT_PCT, REG_VOTERS_PCT, CVAP: Citizen voting age population, PARTISAN_INDEX_DEM, PARTISAN_INDEX_REP, SEN_REP_RATIO"
   ],
-  "data_usage_notes": "This dataset was created to explore the relationship between voter engagement (as expressed through registration and turnout rates), partisan political leanings, community health, and public policy.\r\n\r\n",
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 19,
-    "to_fill": 23,
-    "filled_pct": 82,
-    "progress_class": "warning"
-  }
+  "data_usage_notes": "This dataset was created to explore the relationship between voter engagement (as expressed through registration and turnout rates), partisan political leanings, community health, and public policy.\r\n\r\n"
 }

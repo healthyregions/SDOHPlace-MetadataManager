@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 23,
+    "filled_pct": 78,
+    "progress_class": "warning"
+  },
   "title": "Opportunity Insights: All Outcomes",
   "alternative_title": null,
   "description": [
@@ -78,7 +86,7 @@
   "wxs_indentifier": null,
   "id": "oi-all-outcomes",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T16:07:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -93,12 +101,5 @@
   "data_variables": [
     "\u2018Number of children of race and gender\u2019\u2019, \u2018Count of children under 18 of race and gender\u2019"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 18,
-    "to_fill": 23,
-    "filled_pct": 78,
-    "progress_class": "warning"
-  }
+  "data_usage_notes": null
 }

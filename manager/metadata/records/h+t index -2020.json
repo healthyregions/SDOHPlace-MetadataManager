@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 22,
+    "to_fill": 23,
+    "filled_pct": 95,
+    "progress_class": "success"
+  },
   "title": "Housing +Transportation Index 2020",
   "alternative_title": null,
   "description": [
@@ -123,7 +131,7 @@
   "identifier": [
     "None"
   ],
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T16:07:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -177,12 +185,5 @@
     "Transportation Costs as a Percent of Household Income",
     "Vehicle Miles Traveled (VMT)"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 22,
-    "to_fill": 23,
-    "filled_pct": 95,
-    "progress_class": "success"
-  }
+  "data_usage_notes": null
 }
