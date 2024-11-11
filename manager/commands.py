@@ -6,13 +6,16 @@ from pathlib import Path
 
 import click
 from flask.cli import with_appcontext
+from flask.cli import AppGroup
 
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from .solr import Solr
-
-from .models import db, Schema, Record, User
+from .registry import Registry
+from .models import db, User
 from .utils import METADATA_DIR, generate_id
+
+registry = Registry()
 
 
 @click.command()
@@ -83,7 +86,7 @@ def index(all, clean, verbose):
 		result = s.delete_all()
 		print(result)
 
-	for r in Record.query.all():
+	for r in registry.records:
 		result = r.index(solr_instance=s)
 
 		if not result['success']:
@@ -116,8 +119,7 @@ def index(all, clean, verbose):
 @click.command()
 @with_appcontext
 def inspect_schema():
-
-	s = Schema.query.get(1)
+	s = Registry().schema
 	for dg in s.display_groups:
 		print(f"\n## {dg['name']}")
 		for f in dg['fields']:
@@ -129,7 +131,7 @@ def inspect_schema():
 def set_all_ids():
 
 	print("WARNING: this command is in development and will change files. Aborting for now...")
-	exit()
+	# exit()
 
 	relation_fields = [
 		"relation",
@@ -142,74 +144,66 @@ def set_all_ids():
 	]
 
 	id_lookup = {}
-	for r in Record.query.all():
-		r.load_data()
+	for r in registry.records:
 		id = r.data["id"]
 		id_lookup[id] = generate_id()
 
-	for r in Record.query.all():
-		r.load_data()
+	for r in registry.records:
 		r.data["id"] = id_lookup[r.data["id"]]
 		for f in relation_fields:
 			if isinstance(r.data[f], list):
 				r.data[f] = [id_lookup[i] for i in r.data[f]]
-		r.data_file = f"{r.data['id']}.json"
-		db.session.commit()
 		r.save_data()
 
-		# if r.data['id'] == "edi":
-		# 	r.data["alternative_title"] = None
-		# 	r.save_data()
-		# 	print(r.data_file)
 	print(id_lookup)
 
 
-@click.command()
-@with_appcontext
-@click.option('-s', '--source')
-@click.option('-n', '--name')
-def load_schema(source, name):
+# @click.command()
+# @with_appcontext
+# @click.option('-s', '--source')
+# @click.option('-n', '--name')
+# def load_schema(source, name):
 
-	file_name = os.path.basename(source)
-	new_schema = Schema(
-		data_file=file_name,
-		slug=os.path.splitext(file_name)[0],
-		name=name,
-	)
+# 	file_name = os.path.basename(source)
+# 	new_schema = Schema(
+# 		data_file=file_name,
+# 		slug=os.path.splitext(file_name)[0],
+# 		name=name,
+# 	)
 
-	db.session.add(new_schema)
-	db.session.commit()
+# 	db.session.add(new_schema)
+# 	db.session.commit()
 
-@click.command()
-@with_appcontext
-def reset_records():
-	""" Removes all DB Record objects and recreates them from files on disk."""
+# @click.command()
+# @with_appcontext
+# def reset_records():
+# 	""" Removes all DB Record objects and recreates them from files on disk."""
 
-	confirm = input("delete all database records? This cannot be undone. Y/n ")
-	if confirm.lower().startswith("n"):
-		exit()
+# 	confirm = input("delete all database records? This cannot be undone. Y/n ")
+# 	if confirm.lower().startswith("n"):
+# 		exit()
 
-	for record in Record.query.all():
-		db.session.delete(record)
-	db.session.commit()
-	for file_name in os.listdir(os.path.join(METADATA_DIR, 'records')):
-		new_record = Record(
-			data_file=file_name,
-			schema_id=1,
-			last_modified_by="Admin",
-		)
+# 	for record in Record.query.all():
+# 		db.session.delete(record)
+# 	db.session.commit()
+# 	for file_name in os.listdir(os.path.join(METADATA_DIR, 'records')):
+# 		new_record = Record(
+# 			data_file=file_name,
+# 			schema_id=1,
+# 			last_modified_by="Admin",
+# 		)
 
-		db.session.add(new_record)
-		db.session.commit()
+# 		db.session.add(new_record)
+# 		db.session.commit()
 
-@click.command()
-@with_appcontext
-def save_records():
-	""" For all records load data and re-saves it, does not alter any SQLite rows. Helpful during development. """
+# @click.command()
+# @with_appcontext
+# def save_records():
+# 	""" For all records load data and re-saves it, does not alter any SQLite rows. Helpful during development. """
 
-	for record in Record.query.all():
-		record.load_data()
-		record.save_data()
+# 	for record in Record.query.all():
+# 		record.load_data()
+# 		record.save_data()
 
 @click.command()
 @with_appcontext
@@ -246,3 +240,18 @@ def create_user(name: str, email: str, password: str):
 	db.session.commit()
 
 	print(email, hashed)
+
+
+registry_grp = AppGroup('registry')
+
+@registry_grp.command()
+@with_appcontext
+def get_records():
+
+	registry = Registry()
+	for i in registry.records:
+		# if not "_meta" in i.data:
+		# 	print("meta missing")
+		# i.data = {**dict([i.data.popitem()]), **i.data}
+		# i.data['_meta'] = {**dict([i.data['_meta'].popitem()]), **i.data['_meta']}
+		i.save_data()

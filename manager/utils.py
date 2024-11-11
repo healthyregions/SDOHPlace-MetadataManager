@@ -1,12 +1,18 @@
 import os
+import json
 import string
 import random
+from pathlib import Path
 
 from dotenv import load_dotenv
 
 load_dotenv()
 
 METADATA_DIR = os.path.join(os.path.dirname(__file__), "metadata")
+
+def load_json(path: Path):
+	with open(path, "r") as o:
+		return json.load(o)
 
 def generate_id(length=6):
 	return "herop-" + ''.join(random.choices(string.ascii_lowercase, k=length))
