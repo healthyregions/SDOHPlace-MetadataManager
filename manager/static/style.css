@@ -9,12 +9,15 @@
     font-family: 'Nunito', sans-serif;
 }
 
+.title {
+    --bulma-title-weight: 400;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Fredoka', sans-serif;
 }
 
 a {
-    /* color: var(--primary-color); */
     font-weight: bolder;
 }
 
@@ -82,7 +85,6 @@ details {
 
 .subtitle {
     margin: 10px 0 0 0 !important;
-    font-weight: bold;
 }
 
 .label {
