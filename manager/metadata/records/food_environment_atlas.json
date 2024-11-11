@@ -74,9 +74,9 @@
     "http://schema.org/url": "https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/"
   },
   "wxs_indentifier": null,
-  "id": "food_environment_atlas",
+  "id": "herop-htraln",
   "identifier": null,
-  "modified": "2024-11-11T16:07:22Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

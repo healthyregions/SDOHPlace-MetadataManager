@@ -57,7 +57,7 @@
   "relation": null,
   "member_of": null,
   "is_part_of": [
-    "EPA-Travel-and-Built-Environment-Indicators"
+    "herop-ppvuzl"
   ],
   "source": null,
   "is_version_of": null,
@@ -77,9 +77,9 @@
     "http://lccn.loc.gov/sh85035852": "https://https://www.epa.gov/smartgrowth/smart-location-mapping#walkability"
   },
   "wxs_indentifier": null,
-  "id": "NatWalkInd",
+  "id": "herop-jjsukv",
   "identifier": null,
-  "modified": "2024-11-11T16:07:22Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

@@ -63,7 +63,7 @@
   "is_part_of": null,
   "source": null,
   "is_version_of": [
-    "global-streetscapes"
+    "herop-blhoja"
   ],
   "replaces": null,
   "is_replaced_by": null,
@@ -81,9 +81,9 @@
     "http://schema.org/url": "https://huggingface.co/datasets/NUS-UAL/global-streetscapes/tree/main/data"
   },
   "wxs_indentifier": null,
-  "id": "global-streetscapes-gadm",
+  "id": "herop-wcfrct",
   "identifier": null,
-  "modified": "2024-11-11T16:07:22Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

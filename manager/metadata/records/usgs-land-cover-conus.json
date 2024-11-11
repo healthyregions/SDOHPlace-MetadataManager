@@ -70,7 +70,7 @@
   "is_part_of": null,
   "source": null,
   "is_version_of": [
-    "usgs-land-cover"
+    "herop-iviplg"
   ],
   "replaces": null,
   "is_replaced_by": null,
@@ -88,9 +88,9 @@
     "http://schema.org/url": "https://www.mrlc.gov/data/nlcd-land-cover-conus-all-years"
   },
   "wxs_indentifier": null,
-  "id": "usgs-land-cover-conus",
+  "id": "herop-cxuyoz",
   "identifier": null,
-  "modified": "2024-11-11T16:07:22Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

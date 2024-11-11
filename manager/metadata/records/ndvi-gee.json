@@ -71,9 +71,9 @@
     "http://schema.org/url": "https://developers.google.com/earth-engine/datasets/catalog/MODIS_MCD43A4_006_NDVI#description"
   },
   "wxs_indentifier": null,
-  "id": "ndvi-gee",
+  "id": "herop-eflmqc",
   "identifier": null,
-  "modified": "2024-11-11T16:07:22Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

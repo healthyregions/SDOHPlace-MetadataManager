@@ -9,7 +9,7 @@ load_dotenv()
 METADATA_DIR = os.path.join(os.path.dirname(__file__), "metadata")
 
 def generate_id(length=6):
-	return "HEROP-" + ''.join(random.choices(string.ascii_uppercase + string.digits, k=length))
+	return "herop-" + ''.join(random.choices(string.ascii_lowercase, k=length))
 
 def get_clean_field_from_form(form, field, field_def):
 	""" This function has bespoke logic for handling specific fields. """

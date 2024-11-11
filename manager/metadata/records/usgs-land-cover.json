@@ -89,9 +89,9 @@
     "http://schema.org/url": "https://www.mrlc.gov/data?f%5B0%5D=category%3ALand%20Cover"
   },
   "wxs_indentifier": null,
-  "id": "usgs-land-cover",
+  "id": "herop-iviplg",
   "identifier": null,
-  "modified": "2024-11-11T16:07:22Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

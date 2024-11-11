@@ -53,7 +53,7 @@
   "relation": null,
   "member_of": null,
   "is_part_of": [
-    "nanda"
+    "herop-zrurpe"
   ],
   "source": null,
   "is_version_of": null,
@@ -67,11 +67,11 @@
   "file_size": "1.8 MB\t",
   "references": null,
   "wxs_indentifier": null,
-  "id": "nanda-1d1d1d1d",
+  "id": "herop-kgnhrw",
   "identifier": [
     "https://doi.org/10.3886/ICPSR38580.v2"
   ],
-  "modified": "2024-11-11T16:07:22Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

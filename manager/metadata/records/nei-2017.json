@@ -64,7 +64,7 @@
   "is_part_of": null,
   "source": null,
   "is_version_of": [
-    "national_emission_inventory"
+    "herop-odfmer"
   ],
   "replaces": null,
   "is_replaced_by": null,
@@ -78,9 +78,9 @@
     "http://schema.org/url": "https://www.epa.gov/air-emissions-inventories/2017-national-emissions-inventory-nei-data"
   },
   "wxs_indentifier": null,
-  "id": "nei-2017",
+  "id": "herop-getwnt",
   "identifier": null,
-  "modified": "2024-11-11T16:07:22Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

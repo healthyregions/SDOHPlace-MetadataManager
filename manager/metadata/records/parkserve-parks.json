@@ -55,7 +55,7 @@
   "relation": null,
   "member_of": null,
   "is_part_of": [
-    "parkserve"
+    "herop-fhfxqq"
   ],
   "source": null,
   "is_version_of": null,
@@ -76,9 +76,9 @@
     "http://lccn.loc.gov/sh85035852": "https://www.tpl.org/ParkServe/About"
   },
   "wxs_indentifier": null,
-  "id": "parkserve-parks",
+  "id": "herop-dbsktp",
   "identifier": null,
-  "modified": "2024-11-11T16:07:22Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
