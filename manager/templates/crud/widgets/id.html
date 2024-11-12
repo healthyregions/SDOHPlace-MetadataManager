@@ -1,6 +1,6 @@
 {% extends 'crud/widgets/_base.html' %}
 
 {% block input %}
-<input class="input" type="text" name="{{ field.id }}" {% if record.id %}readonly="readonly"{% endif %}
+<input class="input is-static" type="text" name="{{ field.id }}" readonly="readonly"
     {% if record %}value="{{ record[field.id] }}"{% endif %}></input>
 {% endblock %}

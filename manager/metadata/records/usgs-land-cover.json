@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 23,
+    "filled_pct": 78,
+    "progress_class": "warning"
+  },
   "title": "USGS Land Cover",
   "alternative_title": null,
   "description": [
@@ -81,9 +89,9 @@
     "http://schema.org/url": "https://www.mrlc.gov/data?f%5B0%5D=category%3ALand%20Cover"
   },
   "wxs_indentifier": null,
-  "id": "usgs-land-cover",
+  "id": "herop-iviplg",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -94,12 +102,5 @@
   "data_variables": [
     "Land cover type"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 18,
-    "to_fill": 23,
-    "filled_pct": 78,
-    "progress_class": "warning"
-  }
+  "data_usage_notes": null
 }

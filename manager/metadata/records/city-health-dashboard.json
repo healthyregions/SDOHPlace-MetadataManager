@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 23,
+    "filled_pct": 78,
+    "progress_class": "warning"
+  },
   "title": "City Health Dashboard",
   "alternative_title": null,
   "description": [
@@ -976,9 +984,9 @@
     "http://lccn.loc.gov/sh85035852": "https://www.cityhealthdashboard.com/data-access?chdash_survey_completed=true"
   },
   "wxs_indentifier": null,
-  "id": "city-health-dashboard",
+  "id": "herop-xtoqlx",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -989,12 +997,5 @@
   "spatial_resolution_note": "note 1 | note 2",
   "methods_variables": null,
   "data_variables": null,
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 18,
-    "to_fill": 23,
-    "filled_pct": 78,
-    "progress_class": "warning"
-  }
+  "data_usage_notes": null
 }

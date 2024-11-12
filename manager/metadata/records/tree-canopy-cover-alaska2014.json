@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 23,
+    "filled_pct": 78,
+    "progress_class": "warning"
+  },
   "title": "Tree Canopy Cover (Alaska 2014)",
   "alternative_title": null,
   "description": [
@@ -46,7 +54,7 @@
   "is_part_of": null,
   "source": null,
   "is_version_of": [
-    "tree-canopy-cover"
+    "herop-qwqgwc"
   ],
   "replaces": null,
   "is_replaced_by": null,
@@ -64,9 +72,9 @@
     "http://schema.org/url": "https://www.mrlc.gov/data/nlcd-2014-usfs-tree-canopy-cover-alaska"
   },
   "wxs_indentifier": null,
-  "id": "tree-canopy-cover-alaska2014",
+  "id": "herop-kzuzny",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -77,12 +85,5 @@
   "data_variables": [
     "Percent tree canopy cover"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 18,
-    "to_fill": 23,
-    "filled_pct": 78,
-    "progress_class": "warning"
-  }
+  "data_usage_notes": null
 }

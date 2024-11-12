@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 17,
+    "to_fill": 23,
+    "filled_pct": 73,
+    "progress_class": "danger"
+  },
   "title": "Global Streetscapes (Contextual)",
   "alternative_title": null,
   "description": [
@@ -55,7 +63,7 @@
   "is_part_of": null,
   "source": null,
   "is_version_of": [
-    "global-streetscapes"
+    "herop-blhoja"
   ],
   "replaces": null,
   "is_replaced_by": null,
@@ -73,9 +81,9 @@
     "http://schema.org/url": "https://huggingface.co/datasets/NUS-UAL/global-streetscapes/tree/main/data"
   },
   "wxs_indentifier": null,
-  "id": "global-streetscapes-contextual",
+  "id": "herop-dztiqw",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -86,12 +94,5 @@
   "data_variables": [
     "Unique image ID, Source (Mapillary or KartaView), Orginal ID (by Mapillary or KartaView), Platform, Weather, View direction, Lighting condition, Glare, Quality, Reflection, Panoramic status"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 17,
-    "to_fill": 23,
-    "filled_pct": 73,
-    "progress_class": "danger"
-  }
+  "data_usage_notes": null
 }

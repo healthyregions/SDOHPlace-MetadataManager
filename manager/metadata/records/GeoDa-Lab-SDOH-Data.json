@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 21,
+    "to_fill": 23,
+    "filled_pct": 91,
+    "progress_class": "success"
+  },
   "title": "GeoDa Lab SDOH Data",
   "alternative_title": null,
   "description": [
@@ -68,9 +76,9 @@
     "reference uri": "https://geodacenter.github.io/data-and-lab/us-sdoh/"
   },
   "wxs_indentifier": null,
-  "id": "GeoDa-Lab-SDOH-Data",
+  "id": "herop-guqlrr",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -100,12 +108,5 @@
     "Urban Core Opportunity Index",
     "MICA Index"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 21,
-    "to_fill": 23,
-    "filled_pct": 91,
-    "progress_class": "success"
-  }
+  "data_usage_notes": null
 }

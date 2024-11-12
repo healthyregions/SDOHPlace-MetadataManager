@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 21,
+    "to_fill": 23,
+    "filled_pct": 91,
+    "progress_class": "success"
+  },
   "title": "CDC National Environmental Public Health Tracking Network: Daily Census Tract-Level PM2.5 Concentrations 2006-2010",
   "alternative_title": null,
   "description": [
@@ -49,7 +57,7 @@
   "relation": null,
   "member_of": null,
   "is_part_of": [
-    "CDCNPHTN"
+    "herop-lukhbw"
   ],
   "source": null,
   "is_version_of": null,
@@ -72,9 +80,9 @@
     "http://lccn.loc.gov/sh85035852": "https://data.cdc.gov/Environmental-Health-Toxicology/Daily-Census-Tract-Level-PM2-5-Concentrations-2006/ujra-cbx5/data_preview"
   },
   "wxs_indentifier": null,
-  "id": "DCTLPM2.5C 2006-2010",
+  "id": "herop-rvnufn",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -89,12 +97,5 @@
     "Mean estimated 24-hour average PM2.5 concentration in \u03bcg/m3",
     "Standard error of the estimated PM2.5 concentration"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 21,
-    "to_fill": 23,
-    "filled_pct": 91,
-    "progress_class": "success"
-  }
+  "data_usage_notes": null
 }

@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 16,
+    "to_fill": 23,
+    "filled_pct": 69,
+    "progress_class": "danger"
+  },
   "title": "National Emissions Inventory (NEI) 2014",
   "alternative_title": null,
   "description": [
@@ -56,7 +64,7 @@
   "is_part_of": null,
   "source": null,
   "is_version_of": [
-    "national_emission_inventory"
+    "herop-odfmer"
   ],
   "replaces": null,
   "is_replaced_by": null,
@@ -70,9 +78,9 @@
     "http://schema.org/url": "https://www.epa.gov/air-emissions-inventories/2014-national-emissions-inventory-nei-data"
   },
   "wxs_indentifier": null,
-  "id": "nei-2014",
+  "id": "herop-njfpkj",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -83,12 +91,5 @@
   "spatial_resolution_note": null,
   "methods_variables": null,
   "data_variables": null,
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 16,
-    "to_fill": 23,
-    "filled_pct": 69,
-    "progress_class": "danger"
-  }
+  "data_usage_notes": null
 }

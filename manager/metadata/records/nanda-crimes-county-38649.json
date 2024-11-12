@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 19,
+    "to_fill": 23,
+    "filled_pct": 82,
+    "progress_class": "warning"
+  },
   "title": "National Neighborhood Data Archive (NaNDA): Crimes by County, United States, 2002-2014",
   "alternative_title": null,
   "description": [
@@ -75,7 +83,7 @@
   "relation": null,
   "member_of": null,
   "is_part_of": [
-    "nanda"
+    "herop-zrurpe"
   ],
   "source": null,
   "is_version_of": null,
@@ -91,11 +99,11 @@
     "http://schema.org/url": "https://doi.org/10.3886/ICPSR38649.v1"
   },
   "wxs_indentifier": null,
-  "id": "nanda-crimes-county-38649",
+  "id": "herop-fdevuz",
   "identifier": [
     "https://doi.org/10.3886/ICPSR38649.v1"
   ],
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -116,12 +124,5 @@
     "MVTHEFT",
     "ARSON"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 19,
-    "to_fill": 23,
-    "filled_pct": 82,
-    "progress_class": "warning"
-  }
+  "data_usage_notes": null
 }

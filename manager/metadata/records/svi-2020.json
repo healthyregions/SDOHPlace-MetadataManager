@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 14,
+    "to_fill": 23,
+    "filled_pct": 60,
+    "progress_class": "danger"
+  },
   "title": "CDC Social Vulnerability Index (SVI) 2020",
   "alternative_title": null,
   "description": [
@@ -46,9 +54,9 @@
     "http://lccn.loc.gov/sh85035852": "https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2020.html"
   },
   "wxs_indentifier": null,
-  "id": "svi-2020",
+  "id": "herop-atdwvg",
   "identifier": "araergawefawef",
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -58,12 +66,5 @@
   "spatial_resolution_note": null,
   "methods_variables": null,
   "data_variables": null,
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 14,
-    "to_fill": 23,
-    "filled_pct": 60,
-    "progress_class": "danger"
-  }
+  "data_usage_notes": null
 }

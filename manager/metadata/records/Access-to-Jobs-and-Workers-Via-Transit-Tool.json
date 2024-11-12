@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Adam Cox",
+    "filled": 21,
+    "to_fill": 23,
+    "filled_pct": 91,
+    "progress_class": "success"
+  },
   "title": "Access to Jobs and Workers Via Transit",
   "alternative_title": [
     "None"
@@ -56,7 +64,7 @@
   "relation": null,
   "member_of": null,
   "is_part_of": [
-    "EPA-Travel-and-Built-Environment-Indicators"
+    "herop-ppvuzl"
   ],
   "source": null,
   "is_version_of": null,
@@ -76,9 +84,9 @@
     "http://lccn.loc.gov/sh85035852": "https://www.epa.gov/smartgrowth/smart-location-mapping#walkability"
   },
   "wxs_indentifier": null,
-  "id": "Access-to-Jobs-and-Workers-Via-Transit-Tool",
+  "id": "herop-bnohpx",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -101,12 +109,5 @@
   "data_variables": [
     "Accessibility Index"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Adam Cox",
-    "filled": 21,
-    "to_fill": 23,
-    "filled_pct": 91,
-    "progress_class": "success"
-  }
+  "data_usage_notes": null
 }

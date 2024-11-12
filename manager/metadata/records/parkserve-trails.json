@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 23,
+    "filled_pct": 78,
+    "progress_class": "warning"
+  },
   "title": "ParkServe (Trails)",
   "alternative_title": null,
   "description": [
@@ -47,7 +55,7 @@
   "relation": null,
   "member_of": null,
   "is_part_of": [
-    "parkserve"
+    "herop-fhfxqq"
   ],
   "source": null,
   "is_version_of": null,
@@ -68,9 +76,9 @@
     "http://lccn.loc.gov/sh85035852": "https://www.tpl.org/ParkServe/About"
   },
   "wxs_indentifier": null,
-  "id": "parkserve-trails",
+  "id": "herop-eqojtg",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -81,12 +89,5 @@
   "data_variables": [
     "Permanent ID, Name, Trail number, Source feature, Source data, Source origin, Load date, Trail type, Hiker/pedestrian, Bicycle, Packsaddle, ATV, Motorcycle, OHV over 50in, Snowshoe, Cross count, Dogsled, Snowmobile, National trail, Global ID, OSM ID, Code, Class, Oneway, Max speed, Bridge, Tunnel, Length"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 18,
-    "to_fill": 23,
-    "filled_pct": 78,
-    "progress_class": "warning"
-  }
+  "data_usage_notes": null
 }

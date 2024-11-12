@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 23,
+    "filled_pct": 78,
+    "progress_class": "warning"
+  },
   "title": "National Neighborhood Data Archive (NaNDA): Neighborhood-School Gap by Census Tract and ZIP Code Tabulation Area, United States, 2009-2010 and 2015-2016 ",
   "alternative_title": null,
   "description": [
@@ -63,7 +71,7 @@
   "relation": null,
   "member_of": null,
   "is_part_of": [
-    "nanda"
+    "herop-zrurpe"
   ],
   "source": null,
   "is_version_of": null,
@@ -77,11 +85,11 @@
   "file_size": null,
   "references": {},
   "wxs_indentifier": null,
-  "id": "nanda-school-gap-38579",
+  "id": "herop-rkcyhr",
   "identifier": [
     "https://doi.org/10.3886/ICPSR38579.v2"
   ],
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -101,12 +109,5 @@
     "Poverty_gap",
     "twoormore_gap"
   ],
-  "data_usage_notes": "These data measure discrepancies between the school environment and that of the surrounding community. The collection aims to contribute to the discussion about the causes and the consequences of variations in educational context across geographies.\r\n\r\n",
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 18,
-    "to_fill": 23,
-    "filled_pct": 78,
-    "progress_class": "warning"
-  }
+  "data_usage_notes": "These data measure discrepancies between the school environment and that of the surrounding community. The collection aims to contribute to the discussion about the causes and the consequences of variations in educational context across geographies.\r\n\r\n"
 }

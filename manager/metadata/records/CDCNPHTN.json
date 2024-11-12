@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 20,
+    "to_fill": 23,
+    "filled_pct": 86,
+    "progress_class": "warning"
+  },
   "title": "CDC National Environmental Public Health Tracking Network",
   "alternative_title": null,
   "description": [
@@ -83,9 +91,9 @@
     "http://schema.org/url ": "https://ephtracking.cdc.gov/DataExplorer/#/"
   },
   "wxs_indentifier": null,
-  "id": "CDCNPHTN",
+  "id": "herop-lukhbw",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -128,12 +136,5 @@
     "Unintentional Carbon Monoxide Poisoning"
   ],
   "data_variables": null,
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 20,
-    "to_fill": 23,
-    "filled_pct": 86,
-    "progress_class": "warning"
-  }
+  "data_usage_notes": null
 }

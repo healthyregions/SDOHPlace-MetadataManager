@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
-{% block page_title %}{% if record.id %}Editing: {{ record.title }}{% else %}Create a new record{% endif %}{% endblock %}
+{% block page_title %}{% if not create_new %}Editing: {{ record.title }}{% else %}Create a new record{% endif %}{% endblock %}
 
 {% block sidebar %}
 <h2 class="subtitle">Actions</h2>
 <div class="buttons are-small has-addons">
     <label id="save-button-label" class="button is-warning" for="validate-edit-form" tabindex="0" >Validate</label>
-    <a href="{% if record.id %}{{ url_for('manager.handle_record', id=record.id) }}{% else %}{{ url_for('manager.index') }}{% endif %}" class="button is-danger" role="button">Cancel</a>
+    <a href="{% if not create_new %}{{ url_for('manager.handle_record', id=record.id) }}{% else %}{{ url_for('manager.index') }}{% endif %}" class="button is-danger" role="button">Cancel</a>
 </div>
 <div id="validate-result"></div>
 {% endblock %}

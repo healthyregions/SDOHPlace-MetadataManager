@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 23,
+    "filled_pct": 78,
+    "progress_class": "warning"
+  },
   "title": "USGS Land Cover (Alaska 2016)",
   "alternative_title": null,
   "description": [
@@ -46,7 +54,7 @@
   "is_part_of": null,
   "source": null,
   "is_version_of": [
-    "usgs-land-cover"
+    "herop-iviplg"
   ],
   "replaces": null,
   "is_replaced_by": null,
@@ -64,9 +72,9 @@
     "http://schema.org/url": "https://www.mrlc.gov/data/nlcd-2016-land-cover-alaska"
   },
   "wxs_indentifier": null,
-  "id": "usgs-land-cover-alaska2016",
+  "id": "herop-wqbzfv",
   "identifier": null,
-  "modified": "2024-10-29T17:24:30Z",
+  "modified": "2024-11-11T17:27:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -77,12 +85,5 @@
   "data_variables": [
     "Land cover type"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "last_modified_by": "Admin",
-    "filled": 18,
-    "to_fill": 23,
-    "filled_pct": 78,
-    "progress_class": "warning"
-  }
+  "data_usage_notes": null
 }
