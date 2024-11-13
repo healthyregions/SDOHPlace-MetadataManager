@@ -75,22 +75,26 @@ def bulk_update(
 
 @click.command()
 @with_appcontext
-@click.option('--all', is_flag=True, default=False)
+@click.option('--id')
 @click.option('--clean', is_flag=True, default=False)
 @click.option('--verbose', is_flag=True, default=False)
-def index(all, clean, verbose):
+def index(id, clean, verbose):
 	"""Reindex all Solr records from database content."""
 
 	s = Solr(verbose=verbose)
 	if clean:
-		result = s.delete_all()
+		del_result = s.delete_all()
+		print(del_result)
+
+	if id:
+		record = registry.get_record(id)
+		result = record.index(solr_instance=s)
+	else:
+		for r in registry.records:
+			result = r.index(solr_instance=s)
+
+	if not result['success']:
 		print(result)
-
-	for r in registry.records:
-		result = r.index(solr_instance=s)
-
-		if not result['success']:
-			print(result)
 
 
 # @click.command()

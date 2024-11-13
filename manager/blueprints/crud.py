@@ -1,6 +1,7 @@
+import logging
 from dotenv import load_dotenv
 
-from flask import Blueprint, request, render_template, jsonify, url_for, redirect, flash
+from flask import Blueprint, request, render_template, jsonify, url_for, redirect, flash, current_app
 from flask_cors import CORS
 from flask_login import (
     current_user,
@@ -18,6 +19,8 @@ crud = Blueprint('manager', __name__)
 registry = Registry()
 
 CORS(crud)
+
+logger = logging.getLogger(__name__)
 
 @crud.route("/", methods=["GET"])
 def index():
@@ -120,13 +123,16 @@ def handle_solr(id):
 			s.multi_add(records)
 			return redirect('/')
 		else:
+			current_app.logger.info(f"indexing {id}")
 			try:
 				record = registry.get_record(id)
 				if not record:
 					raise NotFound
-				record.index()
+				result = record.index(solr_instance=s)
+				current_app.logger.debug(result)
 				return f'<div class="notification is-success">{record.data["title"]} re-indexed successfully</div>'
 			except Exception as e:
+				current_app.logger.error(e)
 				return f'<div class="notification is-success">Error while re-indexing record: {e}</div>'
 	elif request.method == "DELETE":
 		pass

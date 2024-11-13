@@ -98,8 +98,15 @@ class Registry():
         self.records.sort(key=lambda d: d.data['title'])
 
     def get_record(self, id):
-        return self.record_lookup.get(id, None)
- 
+        files = Path(METADATA_DIR, "records").glob("*.json")
+        record = None
+        for f in files:
+            loaded = Record(self.schema).load_from_file(f)
+            if loaded.data['id'] == id:
+                record = loaded
+                break
+        return record
+
 class Record():
 
     def __init__(self, schema: Schema):

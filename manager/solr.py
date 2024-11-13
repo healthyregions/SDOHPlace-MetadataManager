@@ -1,6 +1,8 @@
 import os
 import pysolr
 
+from flask import current_app
+
 SOLR_HOST = os.getenv('SOLR_HOST', '').rstrip('/')
 SOLR_CORE = os.getenv('SOLR_CORE', '').rstrip('/')
 
@@ -17,6 +19,7 @@ class Solr:
 		self.verbose=verbose
 		if self.verbose:
 			print(f"Solr host: {SOLR_URL}")
+		current_app.logger.debug(f"solr client initialized. core: {SOLR_URL}")
 
 	def add(self, doc):
 		if self.verbose:
@@ -35,7 +38,7 @@ class Solr:
 
 	def multi_delete(self, identifiers):
 		return self.solr.delete(id=identifiers)
-	
+
 	def delete_all(self):
 		return self.solr.delete(q='*:*')
 
