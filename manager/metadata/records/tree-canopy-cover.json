@@ -29,7 +29,7 @@
   "resource_type": [
     "Raster data"
   ],
-  "subject": null,
+  "subject": [],
   "theme": [
     "Land Cover"
   ],
@@ -58,7 +58,7 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -82,7 +82,7 @@
   "wxs_indentifier": null,
   "id": "herop-qwqgwc",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-13T16:47:08Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -91,7 +91,9 @@
   "spatial_resolution_note": "30m resolution",
   "methods_variables": null,
   "data_variables": [
-    "Percent tree canopy cover"
+    "Percent Tree Canopy Cover"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null
 }

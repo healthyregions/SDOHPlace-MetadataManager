@@ -76,7 +76,7 @@
   "wxs_indentifier": null,
   "id": "herop-htraln",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-13T01:42:35Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -85,10 +85,43 @@
   "highlight_ids": null,
   "spatial_resolution_note": null,
   "methods_variables": [
-    "'Low income and low access tract measured at different miles for urban areas and rural areas', 'Low Viechle Access', 'Poverty rate', 'Median Family Income', 'Low access tract at different mile for urban areas and rural areas', 'Low access tract at different miles', 'Low access tract using vehicle access and at 20 miles in rural areas', 'Low access population at different mile for urban areas and rural areas', 'Low access low-income population at different mile for urban areas and rural areas', 'Low Access Population at different miles (1/2, 1, 10 miles)', 'Low access low-income population at different miles (1/2, 1, 10 miles)', 'Low access children age 0-17 at different miles (1/2, 1, 10 miles)'. 'Low access senior age 65+ at 1/2 mile', 'Low access white population', 'Low access balck or African American population at different miles (1/2, 1, 10 miles)', 'Low access Asian population at 1/2 mile', 'Low access Native Hawaiian or Other Pacific Islander population at different miles (1/2, 1, 10 miles)', 'Low access American Indian or Alaska Native population at different miles (1/2, 1, 10 miles)', 'Low access Other/Multiple race population at different miles (1/2, 1, 10 miles)', 'Low access Hispanic or Latino population at different miles (1/2, 1, 10 miles)', 'Vehicle access housing units without and low access at different miles (1/2, 1, 10 miles)', 'Low access housing units receiving SNAP benefits at different miles (1/2, 1, 10 miles)', ''"
+    "Low-income population",
+    "Housing units without a vehicle",
+    "Housing units receiving SNAP benefits",
+    "Low income and low access tract measured at different miles for urban areas and rural areas",
+    "Low vehicle access",
+    "Poverty rate",
+    "Low access tract at different miles for urban areas and rural areas",
+    "Low access tract using vehicle access and at 20 miles in rural areas",
+    "Vehicle access housing units without and low access at different miles (1/2, 1, 10 miles)",
+    "Low access population at different miles for urban areas and rural areas",
+    "Low access low-income population at different miles for urban areas and rural areas",
+    "Low access population at different miles (1/2, 1, 10 miles)",
+    "Low access low-income population at different miles (1/2, 1, 10 miles)",
+    "Low access children age 0-17 at different miles (1/2, 1, 10 miles)",
+    "Low access senior age 65+ at 1/2 mile",
+    "Low access white population",
+    "Low access Black or African American population at different miles (1/2, 1, 10 miles)",
+    "Low access Asian population at 1/2 mile",
+    "Low access Native Hawaiian or Other Pacific Islander population at different miles (1/2, 1, 10 miles)",
+    "Low access American Indian or Alaska Native population at different miles (1/2, 1, 10 miles)",
+    "Low access Other/Multiple race population at different miles (1/2, 1, 10 miles)",
+    "Low access Hispanic or Latino population at different miles (1/2, 1, 10 miles)",
+    "Low access housing units receiving SNAP benefits at different miles (1/2, 1, 10 miles)"
   ],
   "data_variables": [
-    "'Population', 'Housing Units', 'Low-Income Population', 'Children Age 0-17', 'Seniors Age 65+', 'White Population', 'Balck or African American Population', 'Asian Population', 'Native Hawaiian or Other Pacific Islander Population', 'American Indian or Alaska Native Population', 'Other/Multiple Race Population', 'Hispanic or Latino Population', 'Housing Units without a Vehicle', 'Housing units Receiving SNAP Benefits'"
+    "Population",
+    "Housing units",
+    "Children age 0-17",
+    "Seniors age 65+",
+    "White population",
+    "Black or African American population",
+    "Asian population",
+    "Native Hawaiian or Other Pacific Islander population",
+    "American Indian or Alaska Native population",
+    "Other/Multiple race population",
+    "Hispanic or Latino population"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "featured_variable": null
 }

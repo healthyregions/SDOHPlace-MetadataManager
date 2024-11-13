@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 21,
+    "filled": 22,
     "to_fill": 23,
-    "filled_pct": 91,
+    "filled_pct": 95,
     "progress_class": "success"
   },
   "title": "GeoDa Lab SDOH Data",
@@ -31,7 +31,7 @@
     "Census data",
     "Polygon data"
   ],
-  "subject": null,
+  "subject": [],
   "theme": [
     "Health",
     "Society",
@@ -52,7 +52,7 @@
   "geometry": "None",
   "bounding_box": "None",
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -78,7 +78,7 @@
   "wxs_indentifier": null,
   "id": "herop-guqlrr",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-13T02:22:08Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -86,6 +86,11 @@
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
+    "Limited Mobility Index",
+    "Urban Core Opportunity Index",
+    "MICA Index"
+  ],
+  "data_variables": [
     "Percentage of persons below poverty estimate, 2010-2014 ACS",
     "Percentage of civilian (age 16+) unemployed estimate, 2010-2014 ACS",
     "Per capita income estimate, 2010-2014 ACS",
@@ -96,17 +101,13 @@
     "Percentage of households with no vehicle available estimate, 2010-2014 ACS",
     "Percentage of renters estimate, 2010-2014 ACS",
     "Percentage of renters paying over 30% of income towards housing estimate, 2010-2014 ACS",
-    "Percentage of uninsured in the total civilian noninstitutionalized population estimate, 2010- 2014 ACS",
+    "Percentage of uninsured in the total civilian noninstitutionalized population estimate, 2010-2014 ACS",
     "Percentage minority (all persons except white, non-Hispanic) estimate, 2010-2014 ACS",
     "Percentage of persons aged 65 and older estimate, 2010-2014 ACS",
     "Percentage of persons aged 17 and younger estimate, 2010-2014 ACS",
     "Percentage of civilian noninstitutionalized population with a disability estimate, 2010-2014 ACS"
   ],
-  "data_variables": [
-    "Socioeconomic Advantage Index",
-    "Limited Mobility Index",
-    "Urban Core Opportunity Index",
-    "MICA Index"
-  ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": "Socioeconomic Advantage Index"
 }

@@ -86,7 +86,7 @@
   "wxs_indentifier": null,
   "id": "herop-cpeeor",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-13T01:52:43Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -96,10 +96,12 @@
   "highlight_ids": null,
   "spatial_resolution_note": "Community Zone",
   "methods_variables": [
-    "\u2018Mean household income rank for children whose parents were at the 25th percentile of the national income distribution\u2019, \u2018Fraction of children born in 1984-1989 birth cohorts with parents at the 25th percentile of the national income distribution who were incarcerated on April 1 st, 2010\u2019"
+    "Mean household income rank for children whose parents were at the 25th percentile of the national income distribution",
+    "Fraction of children born in 1984-1989 birth cohorts with parents at the 25th percentile of the national income distribution who were incarcerated on April 1st, 2010"
   ],
   "data_variables": [
-    "\u2018Number of children under 18 living in the given area with parents whose household income was below the national median\u2019"
+    "Number of children under 18 living in the given area with parents whose household income was below the national median"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "featured_variable": null
 }

@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 21,
+    "filled": 22,
     "to_fill": 23,
-    "filled_pct": 91,
+    "filled_pct": 95,
     "progress_class": "success"
   },
   "title": "National Walkability Index",
@@ -33,7 +33,7 @@
     "Census data",
     "Polygon data"
   ],
-  "subject": null,
+  "subject": [],
   "theme": [
     "Environment",
     "Transportation"
@@ -53,7 +53,7 @@
   "geometry": "None",
   "bounding_box": "None",
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": [
@@ -79,7 +79,7 @@
   "wxs_indentifier": null,
   "id": "herop-jjsukv",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-13T02:15:25Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -87,20 +87,22 @@
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
+    "D2B_E8MIXA - 8-tier employment entropy (denominator set to the static 8 employment types in the CBG)",
+    "D2A_EPHHM - Employment and household entropy",
+    "D4A - Distance from the population-weighted centroid to the nearest transit stop (meters)",
+    "D3B - Street intersection density (weighted, auto-oriented intersections eliminated)",
+    "D2A_Ranked - Quantile ranked order (1-20) of [D2a_EpHHm] from lowest to highest",
+    "D2B_Ranked - Quantile ranked order (1-20) of [D2b_E8MixA] from lowest to highest",
+    "D3B_Ranked - Quantile ranked order (1-20) of [D3b] from lowest to highest",
+    "D4A_Ranked - Quantile ranked order (1,13-20) of [D4a] from lowest to highest"
+  ],
+  "data_variables": [
     "Population, 2018",
     "Housing units, 2018",
     "Households (occupied housing units), 2018",
-    "Workers- Count of workers in CBG (home location), 2017"
+    "Workers - Count of workers in CBG (home location), 2017"
   ],
-  "data_variables": [
-    "D2B_E8MIXA- 8-tier employment entropy (denominator set to the static 8 employment types in the CBG)",
-    "D2A_EPHHM- Employment and household entropy",
-    "D4A- Distance from the population-weighted centroid to the nearest transit stop (meters)",
-    "D3B- Street intersection density (weighted, auto-oriented intersections eliminated)",
-    "D2A_Ranked- Quantile ranked order (1-20) of [D2a_EpHHm] from lowest to highest",
-    "D2B_Ranked- Quantile ranked order (1-20) of [D2b_E8MixA] from lowest to highest",
-    "D3B_Ranked- Quantile ranked order (1-20) of [D3b] from lowest to highest",
-    "D4A_Ranked- Quantile ranked order (1,13-20)  of [D4a] from lowest to highest"
-  ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": "National Walkability Index"
 }

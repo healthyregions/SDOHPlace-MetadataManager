@@ -91,7 +91,7 @@
   "wxs_indentifier": null,
   "id": "herop-odfmer",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-13T01:45:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -101,10 +101,18 @@
   "highlight_ids": null,
   "spatial_resolution_note": null,
   "methods_variables": [
-    "\u201cPollutant Type\u201d, EIS Sector, \u201cSource Description\u201d,  \u201cSCC Level 1\u201d, \u201cSCC Level 2\u201d, SCC Level 3\u201d, \u201cSCC Level 4\u201d, \u201cEPA Region\u201d"
+    "Pollutant (e.g., Carbon Dioxide, Methane, Nitrogen Oxides)",
+    "Pollutant Type (e.g., GHG, CAP, HAP, which categorize pollutants by type)",
+    "EIS Sector (e.g., Mobile - On-Road Diesel Heavy Duty Vehicles)",
+    "Source (e.g., Onroad, identifying the source category)",
+    "SCC LEVEL 1 (e.g., Mobile Sources, first-level classification in SCC)",
+    "SCC LEVEL 2 (e.g., Highway Vehicles - Diesel, second-level classification in SCC)",
+    "SCC LEVEL 3 (e.g., Combination Short-haul, third-level classification in SCC)",
+    "SCC LEVEL 4 (e.g., All on-road or all off-network, fourth-level classification in SCC)"
   ],
   "data_variables": [
-    "\u201cPollutant\u201d, \u201cEmissions Value (tons)\u201c"
+    "Emissions (Tons)"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "featured_variable": null
 }

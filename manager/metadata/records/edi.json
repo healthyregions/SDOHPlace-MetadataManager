@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 18,
+    "filled": 19,
     "to_fill": 23,
-    "filled_pct": 78,
+    "filled_pct": 82,
     "progress_class": "warning"
   },
   "title": "Environmental Justice Index",
@@ -81,7 +81,7 @@
   "wxs_indentifier": null,
   "id": "herop-oqxqog",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-13T01:43:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -90,10 +90,48 @@
   "highlight_ids": null,
   "spatial_resolution_note": null,
   "methods_variables": [
-    "'Racial/Ethnic Status: Minority Status', 'Poverty', 'No High School Deploma', 'Unempoyment', 'Housing Tenure', 'Housing Burdened, Lower-Income Households', 'Lack of Health Insurance', Lack of Internet Access', 'Age 65 and Older', 'Age 17 and younger', 'Civilian with a Disability', 'Speaks English (Less than Well)', 'Group Quarters', 'Mobile Homes', 'Ozone', 'PM2.5', 'Diesel Particulate Matter', 'Air Toxic Cancer Risk', 'National Priority List Sites', 'Toxic Release Incentory Sites', 'Treatment, Storage, and Disposal Facilities', 'Risk Management Plan Sites', 'Coal Mines', 'Lead Mines', 'Lack of Recreational Parks', 'Housing Built Pre-1980', 'Lack of Walkability', 'High Volume Roads', 'Railways', 'Airports', 'High Estimated Prevalence of Asthma', 'High Estimated Prevalence of Cancer', 'High Estimated Prevalence of High Blood Pressure', 'High Estimated Prevalence of Diabetes', 'High Estimated Prevalence of Poor Mental Health'"
+    "Racial/Ethnic Status: Minority Status",
+    "Poverty",
+    "No High School Diploma",
+    "Unemployment",
+    "Housing Tenure",
+    "Housing Burdened, Lower-Income Households",
+    "Lack of Health Insurance",
+    "Lack of Internet Access",
+    "Age 65 and Older",
+    "Age 17 and Younger",
+    "Civilian with a Disability",
+    "Speaks English (Less than Well)",
+    "Group Quarters",
+    "Mobile Homes",
+    "Ozone",
+    "PM2.5",
+    "Diesel Particulate Matter",
+    "Air Toxic Cancer Risk",
+    "National Priority List Sites",
+    "Toxic Release Inventory Sites",
+    "Treatment, Storage, and Disposal Facilities",
+    "Risk Management Plan Sites",
+    "Coal Mines",
+    "Lead Mines",
+    "Lack of Recreational Parks",
+    "Housing Built Pre-1980",
+    "Lack of Walkability",
+    "High Volume Roads",
+    "Railways",
+    "Airports",
+    "High Estimated Prevalence of Asthma",
+    "High Estimated Prevalence of Cancer",
+    "High Estimated Prevalence of High Blood Pressure",
+    "High Estimated Prevalence of Diabetes",
+    "High Estimated Prevalence of Poor Mental Health"
   ],
   "data_variables": [
-    "\u2018Population estimate, 2014-2018 ACS', 'Population estimate MOE, 2014-2018 ACS', 'Adjunct variable - Estimated daytime population, LandScan 2018'"
+    "Population estimate, 2014-2018 ACS",
+    "Population estimate MOE, 2014-2018 ACS",
+    "Estimated daytime population",
+    "LandScan 2018"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "featured_variable": "Environmental Justice Index"
 }

@@ -31,7 +31,7 @@
   "resource_type": [
     "Polygon data"
   ],
-  "subject": null,
+  "subject": [],
   "theme": [
     "Structure"
   ],
@@ -50,7 +50,7 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": [
@@ -77,9 +77,9 @@
   "wxs_indentifier": null,
   "id": "herop-yoizdf",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-13T20:36:45Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
   ],
@@ -88,5 +88,7 @@
   "data_variables": [
     "OSM ID, Code, Class, Name, Shape length, Shape area"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null
 }

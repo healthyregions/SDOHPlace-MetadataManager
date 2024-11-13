@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 21,
+    "filled": 22,
     "to_fill": 23,
-    "filled_pct": 91,
+    "filled_pct": 95,
     "progress_class": "success"
   },
   "title": "Housing +Transportation Index",
@@ -30,7 +30,7 @@
   "resource_type": [
     "Point data"
   ],
-  "subject": null,
+  "subject": [],
   "theme": [
     "Climate",
     "Environment",
@@ -103,7 +103,7 @@
   "geometry": "None",
   "bounding_box": "None",
   "centroid": "None",
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -129,7 +129,7 @@
   "wxs_indentifier": null,
   "id": "herop-ddydvt",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-13T01:34:42Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -142,29 +142,30 @@
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
-    "Population",
-    "Households"
-  ],
-  "data_variables": [
-    "Annual GHG per Household",
-    "Annual GHG per Acre",
     "Area Median Income",
     "Auto Ownership Costs",
     "Auto Use Costs",
-    "Autos per Household",
     "Average Available Transit Trips per Week",
+    "Compact Neighborhood Score",
+    "Employment Access Index",
+    "Employment Mix Index",
+    "Intersection Density",
+    "Job Access Score",
+    "Transit Access Score",
+    "Transit Connectivity Index"
+  ],
+  "data_variables": [
+    "Population",
+    "Households",
+    "Annual GHG per Household",
+    "Annual GHG per Acre",
+    "Autos per Household",
     "Average Commuters per Household",
     "Average Household Size",
     "Average Monthly Housing Costs",
     "Average Regional Gas Price",
     "Carbon Dioxide (CO2) Emissions",
-    "Compact Neighborhood Score",
-    "Employment Access Index",
-    "Employment Mix Index",
     "Housing Costs as a Percent of Household Income",
-    "Housing + Transportation (H + T) Costs as a Percent of Household Income",
-    "Intersection Density",
-    "Job Access Score",
     "Jobs within Transit Access Shed",
     "Median Gross Rent",
     "Median Household Income",
@@ -176,12 +177,12 @@
     "Regional Household Intensity",
     "Regional Moderate Household",
     "Regional Typical Household",
-    "Transit Access Score",
-    "Transit Connectivity Index",
     "Transit Use Costs",
     "Transportation Costs",
     "Transportation Costs as a Percent of Household Income",
     "Vehicle Miles Traveled (VMT)"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": "Housing + Transportation (H + T) Costs as a Percent of Household Income"
 }
