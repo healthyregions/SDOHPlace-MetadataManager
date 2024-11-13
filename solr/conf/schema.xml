@@ -264,6 +264,7 @@
   <copyField source="dct_keyword_sm" dest="suggest" boost="30" />
   <copyField source="dct_subject_sm" dest="suggest" boost="30" />
   <copyField source="sdoh_data_usage_notes_s" dest="suggest" boost="100" />
+  <copyField source="sdoh_featured_variable_s" dest="suggest" boost="80" />
   <copyField source="sdoh_methods_variables_sm" dest="suggest" boost="50" />
   <copyField source="sdoh_data_variables_sm" dest="suggest" boost="50" />
 
