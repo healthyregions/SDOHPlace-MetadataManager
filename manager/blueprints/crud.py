@@ -118,13 +118,16 @@ def handle_solr(id):
 		# ultimately, reindex-all should be calling a method on Solr()
 		# but leaving here for the moment.
 		if id == "reindex-all":
+			current_app.logger.info(f"reindexing all records...")
 			s.delete_all()
+			registry = Registry()
 			records = [i.to_solr() for i in registry.records]
 			s.multi_add(records)
 			return redirect('/')
 		else:
 			current_app.logger.info(f"indexing {id}")
 			try:
+				registry = Registry()
 				record = registry.get_record(id)
 				if not record:
 					raise NotFound

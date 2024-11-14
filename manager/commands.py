@@ -250,12 +250,8 @@ registry_grp = AppGroup('registry')
 
 @registry_grp.command()
 @with_appcontext
-def get_records():
+def resave_records():
 
 	registry = Registry()
 	for i in registry.records:
-		# if not "_meta" in i.data:
-		# 	print("meta missing")
-		# i.data = {**dict([i.data.popitem()]), **i.data}
-		# i.data['_meta'] = {**dict([i.data['_meta'].popitem()]), **i.data['_meta']}
 		i.save_data()

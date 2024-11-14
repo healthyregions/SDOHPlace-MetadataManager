@@ -22,12 +22,11 @@ class Solr:
 		current_app.logger.debug(f"solr client initialized. core: {SOLR_URL}")
 
 	def add(self, doc):
-		if self.verbose:
-			print('Solr add document:')
-			print(doc)
+		current_app.logger.debug(f"Solr add document: {doc['id']}")
 		return self.solr.add([doc])
 
 	def multi_add(self, arr):
+		current_app.logger.debug(f"Solr adding {len(arr)} documents.")
 		return self.solr.add(arr)
 
 	def search(self, query, filters=None):
