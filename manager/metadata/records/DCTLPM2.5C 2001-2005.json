@@ -3,9 +3,9 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 21,
-    "to_fill": 23,
-    "filled_pct": 91,
-    "progress_class": "success"
+    "to_fill": 24,
+    "filled_pct": 87,
+    "progress_class": "warning"
   },
   "title": "CDC Daily Census Tract-Level PM2.5 Concentrations 2001-2005",
   "alternative_title": null,
@@ -82,9 +82,9 @@
   "wxs_indentifier": null,
   "id": "herop-pvsgwe",
   "identifier": null,
-  "modified": "2024-11-14T04:44:27Z",
+  "modified": "2024-11-14T15:15:27Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "Census Tract"
   ],

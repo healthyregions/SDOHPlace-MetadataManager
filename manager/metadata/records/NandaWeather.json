@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 17,
-    "to_fill": 23,
-    "filled_pct": 73,
+    "to_fill": 24,
+    "filled_pct": 70,
     "progress_class": "danger"
   },
   "title": "NaNDA Weather by County, United States, 2003-2016",
@@ -83,9 +83,9 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38858.v1"
   ],
-  "modified": "2024-11-14T04:46:05Z",
+  "modified": "2024-11-14T15:15:27Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "County"
   ],

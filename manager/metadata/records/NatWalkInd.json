@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 22,
-    "to_fill": 23,
-    "filled_pct": 95,
+    "to_fill": 24,
+    "filled_pct": 91,
     "progress_class": "success"
   },
   "title": "National Walkability Index",
@@ -79,9 +79,9 @@
   "wxs_indentifier": null,
   "id": "herop-jjsukv",
   "identifier": null,
-  "modified": "2024-11-13T02:15:25Z",
+  "modified": "2024-11-14T15:15:27Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
   ],

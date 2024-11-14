@@ -2,10 +2,10 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 17,
-    "to_fill": 23,
-    "filled_pct": 73,
-    "progress_class": "danger"
+    "filled": 19,
+    "to_fill": 25,
+    "filled_pct": 76,
+    "progress_class": "warning"
   },
   "title": "Global Streetscapes (Climate)",
   "alternative_title": null,
@@ -38,13 +38,17 @@
     "Streetview photographs",
     "Table data"
   ],
-  "subject": null,
+  "subject": [
+    "Neighborhood and Built Environment"
+  ],
   "theme": [
     "Imagery",
     "Society",
     "Structure"
   ],
-  "keyword": null,
+  "keyword": [
+    "climate"
+  ],
   "temporal_coverage": null,
   "date_issued": null,
   "index_year": [
@@ -57,14 +61,14 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": [
+  "is_part_of": [
     "herop-blhoja"
   ],
+  "source": null,
+  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": [
@@ -83,9 +87,9 @@
   "wxs_indentifier": null,
   "id": "herop-wyksjq",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-14T15:21:09Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "City"
   ],
@@ -94,5 +98,7 @@
   "data_variables": [
     "Unique image ID, Source (Mapillary or KartaView), Orginal ID (by Mapillary or KartaView), Koppen Geiger zone, Zone description"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null
 }

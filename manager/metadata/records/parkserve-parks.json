@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 18,
-    "to_fill": 23,
-    "filled_pct": 78,
+    "to_fill": 24,
+    "filled_pct": 75,
     "progress_class": "warning"
   },
   "title": "Parks (ParkServe)",
@@ -78,7 +78,7 @@
   "wxs_indentifier": null,
   "id": "herop-dbsktp",
   "identifier": null,
-  "modified": "2024-11-14T04:54:46Z",
+  "modified": "2024-11-14T15:15:27Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

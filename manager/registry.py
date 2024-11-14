@@ -124,6 +124,11 @@ class Record():
         self.data['metadata_version'] = "SDOH PlaceProject"
         self.data['modified'] = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
 
+        if self.data['is_version_of']:
+            self.data['suppressed'] = True
+        else:
+            self.data['suppressed'] = False
+
         if not self.file_path:
             self.file_path = Path(METADATA_DIR, 'records', self.data['id'] + ".json")
 

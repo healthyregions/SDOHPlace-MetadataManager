@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 7,
-    "to_fill": 23,
-    "filled_pct": 30,
+    "to_fill": 24,
+    "filled_pct": 29,
     "progress_class": "danger"
   },
   "title": "NaNDA (National Neighborhood Data Archive)",
@@ -48,7 +48,7 @@
   "wxs_indentifier": null,
   "id": "herop-zrurpe",
   "identifier": null,
-  "modified": "2024-11-14T04:50:36Z",
+  "modified": "2024-11-14T15:15:27Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

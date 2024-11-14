@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 19,
-    "to_fill": 23,
-    "filled_pct": 82,
+    "to_fill": 24,
+    "filled_pct": 79,
     "progress_class": "warning"
   },
   "title": "Housing +Transportation Index 2016",
@@ -129,9 +129,9 @@
   "wxs_indentifier": null,
   "id": "herop-xkziex",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-14T15:15:27Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "City",
     "County",

@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 18,
-    "to_fill": 23,
-    "filled_pct": 78,
+    "to_fill": 24,
+    "filled_pct": 75,
     "progress_class": "warning"
   },
   "title": "Tree Canopy Cover (Alaska 2013)",
@@ -74,7 +74,7 @@
   "wxs_indentifier": null,
   "id": "herop-ufxhyu",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-14T15:15:27Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

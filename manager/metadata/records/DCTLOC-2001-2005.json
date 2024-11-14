@@ -3,9 +3,9 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 21,
-    "to_fill": 23,
-    "filled_pct": 91,
-    "progress_class": "success"
+    "to_fill": 24,
+    "filled_pct": 87,
+    "progress_class": "warning"
   },
   "title": "CDC Daily Census Tract-Level Ozone Concentrations 2001-2005",
   "alternative_title": null,
@@ -80,7 +80,7 @@
   "wxs_indentifier": null,
   "id": "herop-ojodli",
   "identifier": null,
-  "modified": "2024-11-14T14:41:06Z",
+  "modified": "2024-11-14T15:15:27Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
