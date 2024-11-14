@@ -83,7 +83,7 @@
             "uri": "dct_description_sm",
             "data_type": "string",
             "multiple": true,
-            "obligation": "suggested",
+            "obligation": "required",
             "controlled": false,
             "controlled_options": [],
             "schema": "Aardvark",
@@ -138,7 +138,7 @@
             "uri": "dct_creator_sm",
             "data_type": "string",
             "multiple": true,
-            "obligation": "suggested",
+            "obligation": "required",
             "controlled": false,
             "controlled_options": [],
             "schema": "Aardvark",
@@ -156,7 +156,7 @@
             "uri": "dct_publisher_sm",
             "data_type": "string",
             "multiple": true,
-            "obligation": "suggested",
+            "obligation": "required",
             "controlled": false,
             "controlled_options": [],
             "schema": "Aardvark",
@@ -309,7 +309,7 @@
             "uri": "dct_subject_sm",
             "data_type": "string",
             "multiple": true,
-            "obligation": "optional",
+            "obligation": "required",
             "controlled": true,
             "controlled_options": [
                 "Demographics",
@@ -373,7 +373,7 @@
             "uri": "dcat_keyword_sm",
             "data_type": "string",
             "multiple": true,
-            "obligation": "optional",
+            "obligation": "required",
             "controlled": false,
             "controlled_options": [],
             "schema": "Aardvark",
@@ -644,7 +644,7 @@
             "uri": "dct_rights_sm",
             "data_type": "string",
             "multiple": true,
-            "obligation": "suggested",
+            "obligation": "required",
             "controlled": false,
             "controlled_options": [],
             "schema": "Aardvark",
@@ -831,7 +831,10 @@
             "display_group": "Admin",
             "slug": "suppressed",
             "widget": "checkbox.html",
-            "id": "suppressed"
+            "id": "suppressed",
+            "help_text": [
+                "This field is read-only and will be set automatically."
+            ]
         },
         {
             "label": "Spatial Resolution",
