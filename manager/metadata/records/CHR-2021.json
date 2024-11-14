@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 21,
-    "to_fill": 24,
-    "filled_pct": 87,
+    "to_fill": 25,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
   "title": "County Health Rankings (2021)",
@@ -35,7 +35,7 @@
   "resource_type": [
     "Polygon data"
   ],
-  "subject": null,
+  "subject": [],
   "theme": [
     "Health"
   ],
@@ -118,14 +118,14 @@
   "geometry": "None",
   "bounding_box": "None",
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
-  "is_part_of": [
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": [
     "herop-cfmkuz"
   ],
-  "source": null,
-  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": [
@@ -144,9 +144,9 @@
   "wxs_indentifier": null,
   "id": "herop-wtpufz",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-14T16:22:25Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": false,
+  "suppressed": true,
   "spatial_resolution": [
     "County"
   ],
@@ -193,5 +193,7 @@
     "% Drive Alone to Work",
     "% Long Commute - Drives Alone"
   ],
-  "data_usage_notes": "The data contains a breakdown of the measures used in calculating outcomes, data elements, descriptions, and ranking for each country."
+  "data_usage_notes": "The data contains a breakdown of the measures used in calculating outcomes, data elements, descriptions, and ranking for each country.",
+  "highlight_ids": null,
+  "featured_variable": null
 }

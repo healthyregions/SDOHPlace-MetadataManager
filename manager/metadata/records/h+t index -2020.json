@@ -2,12 +2,12 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
-    "to_fill": 24,
-    "filled_pct": 91,
+    "filled": 23,
+    "to_fill": 25,
+    "filled_pct": 92,
     "progress_class": "success"
   },
-  "title": "Housing +Transportation Index 2020",
+  "title": "Housing + Transportation Index 2020",
   "alternative_title": null,
   "description": [
     "The Housing and Transportation (H+T\u00ae) Affordability Index provides a comprehensive view of affordability, one that includes the cost of housing and transportation at the neighborhood level. The Index is part of a broader effort to explore urban sustainability through location efficiency."
@@ -30,13 +30,18 @@
   "resource_type": [
     "Point data"
   ],
-  "subject": null,
+  "subject": [
+    "Housing",
+    "Transportation and Infrastructure"
+  ],
   "theme": [
     "Climate",
     "Environment",
     "Transportation"
   ],
-  "keyword": null,
+  "keyword": [
+    "housing"
+  ],
   "temporal_coverage": [
     "2020"
   ],
@@ -101,14 +106,14 @@
   "geometry": "None",
   "bounding_box": "None",
   "centroid": "None",
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
-  "is_part_of": [
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": [
     "herop-ddydvt"
   ],
-  "source": null,
-  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": [
@@ -128,12 +133,10 @@
   },
   "wxs_indentifier": null,
   "id": "herop-adtyqz",
-  "identifier": [
-    "None"
-  ],
-  "modified": "2024-11-14T15:15:27Z",
+  "identifier": null,
+  "modified": "2024-11-14T15:32:27Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": false,
+  "suppressed": true,
   "spatial_resolution": [
     "City",
     "County",
@@ -185,5 +188,7 @@
     "Transportation Costs as a Percent of Household Income",
     "Vehicle Miles Traveled (VMT)"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null
 }

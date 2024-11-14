@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 16,
-    "to_fill": 24,
-    "filled_pct": 66,
+    "filled": 17,
+    "to_fill": 25,
+    "filled_pct": 68,
     "progress_class": "danger"
   },
   "title": "National Emissions Inventory (NEI) 1998",
@@ -59,11 +59,11 @@
   "georeferenced": false,
   "relation": null,
   "member_of": null,
-  "is_part_of": [
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": [
     "herop-odfmer"
   ],
-  "source": null,
-  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": null,
@@ -78,9 +78,9 @@
   "wxs_indentifier": null,
   "id": "herop-ccmkcj",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-14T16:26:42Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": false,
+  "suppressed": true,
   "spatial_resolution": [
     "State"
   ],
@@ -88,5 +88,6 @@
   "spatial_resolution_note": null,
   "methods_variables": null,
   "data_variables": null,
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "featured_variable": null
 }

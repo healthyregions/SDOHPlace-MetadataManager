@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 20,
-    "to_fill": 24,
-    "filled_pct": 83,
+    "to_fill": 25,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
   "title": "Opportunity Index 2016",
@@ -30,7 +30,7 @@
   "resource_type": [
     "Point data"
   ],
-  "subject": null,
+  "subject": [],
   "theme": [
     "Economy",
     "Society"
@@ -50,14 +50,14 @@
   "geometry": "None",
   "bounding_box": "None",
   "centroid": "None",
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
-  "is_part_of": [
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": [
     "herop-yumqkc"
   ],
-  "source": null,
-  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": [
@@ -79,9 +79,9 @@
   "wxs_indentifier": null,
   "id": "herop-ufegqd",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-14T15:52:46Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": false,
+  "suppressed": true,
   "spatial_resolution": [
     "County",
     "State"
@@ -106,5 +106,7 @@
     "Doctors (per 100,000 population)",
     "Grocery stores and produce vendors (per 10,000 population)"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null
 }

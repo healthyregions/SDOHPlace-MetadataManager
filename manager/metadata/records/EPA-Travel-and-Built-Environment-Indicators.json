@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 21,
-    "to_fill": 24,
-    "filled_pct": 87,
+    "to_fill": 25,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
   "title": "Smart Location Database",
@@ -33,7 +33,7 @@
     "Census data",
     "Polygon data"
   ],
-  "subject": null,
+  "subject": [],
   "theme": [
     "Environment",
     "Society",
@@ -54,14 +54,12 @@
   "geometry": "None",
   "bounding_box": "None",
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
   "source": null,
-  "is_version_of": [
-    "herop-ppvuzl"
-  ],
+  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": [
@@ -80,9 +78,9 @@
   "wxs_indentifier": null,
   "id": "herop-ppvuzl",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-14T15:53:34Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
   ],
@@ -110,5 +108,7 @@
     "Employment totals broken down by 5-tier classification scheme",
     "Employment totals broken down by 8-tier classification scheme"
   ],
-  "data_usage_notes": "The Smart Location Database summarizes more than 90 different indicators associated with the built environment and location efficiency. The Access to Jobs and Workers Via Transit Tool provides indicators of accessibility to destinations by public transit.The National Walkability Index provides walkability scores based on a simple formula that ranks selected indicators from the Smart Location Database that have been demonstrated to affect the propensity of walk trips."
+  "data_usage_notes": "The Smart Location Database summarizes more than 90 different indicators associated with the built environment and location efficiency. The Access to Jobs and Workers Via Transit Tool provides indicators of accessibility to destinations by public transit.The National Walkability Index provides walkability scores based on a simple formula that ranks selected indicators from the Smart Location Database that have been demonstrated to affect the propensity of walk trips.",
+  "highlight_ids": null,
+  "featured_variable": null
 }
