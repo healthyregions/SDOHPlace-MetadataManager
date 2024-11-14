@@ -7,7 +7,7 @@
     "filled_pct": 78,
     "progress_class": "warning"
   },
-  "title": "Opportunity Insights: All Outcomes",
+  "title": "Opportunity Insights All Outcomes",
   "alternative_title": null,
   "description": [
     "This table reports predicted outcomes for children by four different spatial resolusions (census tract, county, community zone, and national level), race and gender. The data is organized long on different spatial resolusions and wide on race, gender and parent income percentile rank, so that there is exactly one row per tract, and a variable for each race/gender/parent income percentile rank combination. To protect privacy, a small amount of noise is added to each of the estimates; this noise is typically less than one-tenth the size of the standard error of the estimate itself. The standard errors reported below incorporate both sampling error and the noise that was added to the point estimates to protect privacy.  We provide the tract-level unconditional means as well as predictions at five percentiles of the parent national income distribution among parents with children in the same birth cohort (referred to as \u201c[pctile]\u201d in the codebook). In particular, we consider the 1st, 25th, 50th, 75th, and 100th percentiles."
@@ -86,7 +86,7 @@
   "wxs_indentifier": null,
   "id": "herop-siawey",
   "identifier": null,
-  "modified": "2024-11-13T01:51:12Z",
+  "modified": "2024-11-14T04:50:55Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

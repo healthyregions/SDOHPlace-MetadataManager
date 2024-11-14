@@ -7,7 +7,7 @@
     "filled_pct": 73,
     "progress_class": "danger"
   },
-  "title": "National Neighborhood Data Archive (NaNDA): Street Connectivity by ZIP Code Tabulation Area, United States, 2010",
+  "title": "NaNDA Street Connectivity by ZIP Code Tabulation Area, United States, 2010",
   "alternative_title": [
     "NanDA Street Connectivity by ZIP/Tabulation Area US 2010"
   ],
@@ -29,7 +29,7 @@
   "resource_type": [
     "Point data"
   ],
-  "subject": null,
+  "subject": [],
   "theme": [
     "Structure",
     "Transportation"
@@ -49,7 +49,7 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": [
@@ -71,7 +71,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38580.v2"
   ],
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-14T04:46:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -85,5 +85,7 @@
     "block density, block length, streets, nodes, zcta, n_streets , n_nodes, n_realnodes, zcta_area_sqmiles, sum_strintlen, n_blocks, linkNodeRatio, Alpha index ratio of actual circuits to maximum circuits, Gamma index ratio of total links fully in the ZCTA to the maximum possible number of",
     "links in the ZCTA"
   ],
-  "data_usage_notes": "This dataset contains measures of street connectivity (how well streets connect) within United States ZIP code tabulation areas (ZCTAs). This includes measures of the number of street segments (links) and intersections (nodes) per ZCTA, street length within ZCTAs, and indices representing overall connectivity within the ZCTA."
+  "data_usage_notes": "This dataset contains measures of street connectivity (how well streets connect) within United States ZIP code tabulation areas (ZCTAs). This includes measures of the number of street segments (links) and intersections (nodes) per ZCTA, street length within ZCTAs, and indices representing overall connectivity within the ZCTA.",
+  "highlight_ids": null,
+  "featured_variable": null
 }

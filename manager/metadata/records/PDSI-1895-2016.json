@@ -7,7 +7,7 @@
     "filled_pct": 91,
     "progress_class": "success"
   },
-  "title": "CDC National Environmental Public Health Tracking Network: Palmer Drought Severity Index 1895-2016",
+  "title": "CDC Palmer Drought Severity Index 1895-2016",
   "alternative_title": null,
   "description": [
     "The Palmer Drought Severity Index (PDSI) is a standardized index that uses readily available temperature and precipitation data to estimate relative dryness. It has been reasonably successful at quantifying long-term drought. As it uses temperature data and a physical water balance model, it can capture the basic effect of global warming on drought through changes in potential evapotranspiration. The dataset includes monthly values for every contiguous US county and the District of Columbia from 1895-2016. The dataset has been compiled to estimate wetness and dryness of a particular area. This is important for the agriculture as well as health sectors. The data can be used to examine local and national trends in drought information."
@@ -86,7 +86,7 @@
   "wxs_indentifier": null,
   "id": "herop-fhlnqe",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-14T04:42:16Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -101,5 +101,6 @@
   "data_variables": [
     "Palmer Drought Severity Index (PDSI)"
   ],
-  "data_usage_notes": "Data were downloaded from the National Oceanic and Atmospheric Administration (NOAA) server and were originally provided as monthly values for a climate division (typically 5-10 divisions per state). Distance weighting functions were applied to constrain the drought values to a specific US county."
+  "data_usage_notes": "Data were downloaded from the National Oceanic and Atmospheric Administration (NOAA) server and were originally provided as monthly values for a climate division (typically 5-10 divisions per state). Distance weighting functions were applied to constrain the drought values to a specific US county.",
+  "featured_variable": null
 }

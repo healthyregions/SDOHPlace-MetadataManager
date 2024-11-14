@@ -7,7 +7,7 @@
     "filled_pct": 78,
     "progress_class": "warning"
   },
-  "title": "Opportunity Insights: Household Income and Incarceration for Children from Low-Income Households",
+  "title": "Opportunity Insights Household Income and Incarceration for Children from Low-Income Households",
   "alternative_title": null,
   "description": [
     "This table reports predicted outcomes for children by three spatial resolutions (census tract, county, community zone), race and gender. We provide data for children born between 1978 and 1989. We provide predicted outcomes for children whose parents were at the 25th percentile of the national income distribution. Parents are ranked relative to other parents with children in the same birth cohort. For income variables children are ranked against other children in the same birth cohort. To protect privacy, a small amount of noise is added to each of the estimates; this noise is typically less than one-tenth the standard error of the estimate itself. The standard errors reported below incorporate both sampling error and the noise that was added to the point estimates to protect privacy."
@@ -86,7 +86,7 @@
   "wxs_indentifier": null,
   "id": "herop-cpeeor",
   "identifier": null,
-  "modified": "2024-11-13T01:52:43Z",
+  "modified": "2024-11-14T04:51:33Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

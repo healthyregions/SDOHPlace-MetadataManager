@@ -7,7 +7,7 @@
     "filled_pct": 78,
     "progress_class": "warning"
   },
-  "title": "ParkServe (10MWSA)",
+  "title": "10MWSA (ParkServe)",
   "alternative_title": null,
   "description": [
     "\"We calculate a ten-minute walk service area for each park in the database by creating a half-mile \u2018walkable\u2019 service area from each of the park\u2019s public access points. This service area is created using Esri\u2019s Street Map Premium network dataset, which allows us to account for physical barriers such as highways, train tracks, or rivers without bridges.\""
@@ -31,7 +31,7 @@
   "resource_type": [
     "Polygon data"
   ],
-  "subject": null,
+  "subject": [],
   "theme": [
     "Society"
   ],
@@ -50,7 +50,7 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": [
@@ -77,9 +77,9 @@
   "wxs_indentifier": null,
   "id": "herop-jxbloa",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-14T04:53:29Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "City",
     "Census Tract",
@@ -92,5 +92,7 @@
   "data_variables": [
     "Park ID, Park Name, Park Size, Shape Length, Shape Area"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null
 }

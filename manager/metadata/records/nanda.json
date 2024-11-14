@@ -7,7 +7,7 @@
     "filled_pct": 30,
     "progress_class": "danger"
   },
-  "title": "National Neighborhood Data Archive (NaNDA)",
+  "title": "NaNDA (National Neighborhood Data Archive)",
   "alternative_title": null,
   "description": null,
   "language": [],
@@ -19,7 +19,7 @@
     "Collections"
   ],
   "resource_type": [],
-  "subject": null,
+  "subject": [],
   "theme": [],
   "keyword": null,
   "temporal_coverage": null,
@@ -30,7 +30,7 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -48,7 +48,7 @@
   "wxs_indentifier": null,
   "id": "herop-zrurpe",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-14T04:50:36Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -62,5 +62,7 @@
   "spatial_resolution_note": null,
   "methods_variables": null,
   "data_variables": null,
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null
 }

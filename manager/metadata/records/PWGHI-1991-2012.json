@@ -7,7 +7,7 @@
     "filled_pct": 91,
     "progress_class": "success"
   },
-  "title": "CDC National Environmental Public Health Tracking Network: Population-Weighted Global Horizontal Irradiance 1991-2012",
+  "title": "CDC Population-Weighted Global Horizontal Irradiance 1991-2012",
   "alternative_title": null,
   "description": [
     "Global Horizontal Irradiance (GHI) is the total amount of shortwave radiation received by a horizontal surface from above. The available county-level data show the temporal and spatial trends of population-weighted irradiance levels throughout the contiguous United States from 1991 to 2012. The GHI data is provided by the Environmental Remote Sensing group at the Rollins School of Public Health at Emory University, led by Prof. Yang Liu. The 1991-1997 data are calculated based on the GHI data from the National Solar Radiation Data Base  (NSRDB), and the 1998-2012 data are calculated based on the GHI data from SolarAnywhere irradiance data."
@@ -32,7 +32,7 @@
   "resource_type": [
     "Point data"
   ],
-  "subject": null,
+  "subject": [],
   "theme": [
     "Climate",
     "Environment",
@@ -59,7 +59,7 @@
   "geometry": "None",
   "bounding_box": "None",
   "centroid": "None",
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": [
@@ -88,7 +88,7 @@
   "wxs_indentifier": null,
   "id": "herop-efqkhv",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-14T04:42:49Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -103,5 +103,7 @@
   "data_variables": [
     "county-level population weighted daily GHI in wh/m2 (ghi)"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null
 }

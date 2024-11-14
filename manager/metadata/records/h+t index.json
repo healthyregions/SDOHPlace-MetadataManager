@@ -2,12 +2,12 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
-    "to_fill": 23,
+    "filled": 23,
+    "to_fill": 24,
     "filled_pct": 95,
     "progress_class": "success"
   },
-  "title": "Housing +Transportation Index",
+  "title": "Housing + Transportation Index",
   "alternative_title": null,
   "description": [
     "The Housing and Transportation (H+T\u00ae) Affordability Index provides a comprehensive view of affordability, one that includes the cost of housing and transportation at the neighborhood level. The Index is part of a broader effort to explore urban sustainability through location efficiency."
@@ -30,7 +30,10 @@
   "resource_type": [
     "Point data"
   ],
-  "subject": [],
+  "subject": [
+    "Housing",
+    "Transportation and Infrastructure"
+  ],
   "theme": [
     "Climate",
     "Environment",
@@ -129,9 +132,9 @@
   "wxs_indentifier": null,
   "id": "herop-ddydvt",
   "identifier": null,
-  "modified": "2024-11-13T01:34:42Z",
+  "modified": "2024-11-14T15:12:58Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "City",
     "County",

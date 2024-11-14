@@ -7,7 +7,7 @@
     "filled_pct": 78,
     "progress_class": "warning"
   },
-  "title": "Opportunity Insights: Neighborhood Characteristics",
+  "title": "Opportunity Insights Neighborhood Characteristics",
   "alternative_title": null,
   "description": [
     "This data provides multiple levels (census tract, county, and conmmunity zone) covariates used throughout the paper or shown in the Opportunity Atlas as neighborhood characteristics. All variables other than czname are numeric. The statistics reported in this table have been cleared by the Census Bureau's Disclosure Review Board release authorization number CBDRB-FY18-319."
@@ -86,7 +86,7 @@
   "wxs_indentifier": null,
   "id": "herop-wtfiks",
   "identifier": null,
-  "modified": "2024-11-13T01:54:17Z",
+  "modified": "2024-11-14T04:51:12Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

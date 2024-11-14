@@ -7,7 +7,7 @@
     "filled_pct": 91,
     "progress_class": "success"
   },
-  "title": "CDC National Environmental Public Health Tracking Network: Population-Weighted Ultraviolet Irradiance 2004-2015",
+  "title": "CDC Population-Weighted Ultraviolet Irradiance 2004-2015",
   "alternative_title": null,
   "description": [
     "The data are compiled to show the temporal and spatial trends of population-weighted ultraviolet (UV) irradiance levels throughout the continental U.S. from October 2004 to",
@@ -33,7 +33,7 @@
   "resource_type": [
     "Point data"
   ],
-  "subject": null,
+  "subject": [],
   "theme": [
     "Climate",
     "Environment",
@@ -60,7 +60,7 @@
   "geometry": "None",
   "bounding_box": "None",
   "centroid": "None",
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": [
@@ -89,9 +89,9 @@
   "wxs_indentifier": null,
   "id": "herop-drwddq",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-14T14:42:23Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
@@ -109,5 +109,7 @@
     "daily county-level population weighted spectral irradiance at local solar noon time at 324 nm, with the unit of mW/m2/nm",
     "daily county-level population weighted spectral irradiance at local solar noon time at 380 nm, with the unit of mW/m2/nm"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null
 }

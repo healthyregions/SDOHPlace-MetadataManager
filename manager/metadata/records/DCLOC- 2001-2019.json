@@ -7,7 +7,7 @@
     "filled_pct": 91,
     "progress_class": "success"
   },
-  "title": "CDC National Environmental Public Health Tracking Network: Daily County-Level Ozone Concentrations 2001-2019",
+  "title": "CDC Daily County-Level Ozone Concentrations 2001-2019",
   "alternative_title": null,
   "description": [
     "This dataset provides modeled predictions of ozone levels from the EPA's Downscaler model. These data are used by the CDC's National Environmental Public Health Tracking Network to generate air quality measures. Data are at the county levels for 2001-2014. The dataset includes the maximum, median, mean, and population-weighted mean concentration."
@@ -32,7 +32,7 @@
   "resource_type": [
     "Point data"
   ],
-  "subject": null,
+  "subject": [],
   "theme": [
     "Climate",
     "Environment",
@@ -62,7 +62,7 @@
   "geometry": "None",
   "bounding_box": "None",
   "centroid": "None",
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": [
@@ -91,7 +91,7 @@
   "wxs_indentifier": null,
   "id": "herop-qgbmwc",
   "identifier": null,
-  "modified": "2024-11-11T17:27:58Z",
+  "modified": "2024-11-14T04:41:52Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -109,5 +109,7 @@
     "Mean estimated 8-hour average ozone concentration in parts per billion (ppb) within 3 meters of the surface of the earth for the county",
     "Population-weighted estimated 8-hour average ozone concentration in parts per billion (ppb) within 3 meters of the surface of the earth for the county"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null
 }

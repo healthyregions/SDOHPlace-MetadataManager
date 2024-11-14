@@ -7,7 +7,7 @@
     "filled_pct": 78,
     "progress_class": "warning"
   },
-  "title": "ParkServe (Playgrounds)",
+  "title": "Playgrounds (ParkServe)",
   "alternative_title": null,
   "description": [
     "\"Crowd-sourced trails and playground data were retrieved from Open Street Map (OSM) in February of 2024 and clipped to ParkServe\u00ae park boundaries.\""
@@ -77,7 +77,7 @@
   "wxs_indentifier": null,
   "id": "herop-yoizdf",
   "identifier": null,
-  "modified": "2024-11-13T20:36:45Z",
+  "modified": "2024-11-14T04:55:11Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
