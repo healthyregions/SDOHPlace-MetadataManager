@@ -90,9 +90,16 @@ def index(id, clean, verbose):
 		record = registry.get_record(id)
 		result = record.index(solr_instance=s)
 	else:
-		for r in registry.records:
-			result = r.index(solr_instance=s)
-
+		records = [r.to_solr() for r in registry.records]
+		result = {
+			"success": True,
+			"document": f"{len(records)} records",
+		}
+		try:
+			s.multi_add(records)
+		except Exception as e:
+			result['success'] = False
+			result['error'] = e
 	if not result['success']:
 		print(result)
 
