@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 10,
-    "to_fill": 24,
-    "filled_pct": 41,
+    "to_fill": 25,
+    "filled_pct": 40,
     "progress_class": "danger"
   },
   "title": "Area Deprivation Index (ADI) 2015",
@@ -30,7 +30,12 @@
   "keyword": null,
   "temporal_coverage": null,
   "date_issued": "2015",
-  "index_year": "2015",
+  "index_year": [
+    2,
+    0,
+    1,
+    5
+  ],
   "date_range": null,
   "spatial_coverage": null,
   "geometry": null,
@@ -54,7 +59,7 @@
   "wxs_indentifier": null,
   "id": "herop-hqhyud",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-19T12:33:11Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

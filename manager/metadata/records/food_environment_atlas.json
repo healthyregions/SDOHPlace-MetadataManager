@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 19,
-    "to_fill": 24,
-    "filled_pct": 79,
+    "filled": 20,
+    "to_fill": 25,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
   "title": "Food Environment Atlas (FEA)",
@@ -44,10 +44,10 @@
   ],
   "date_issued": "4/27/2021",
   "index_year": [
-    "2019",
-    "2015",
-    "2010",
-    "2006"
+    2019,
+    2015,
+    2010,
+    2006
   ],
   "date_range": null,
   "spatial_coverage": [
@@ -76,7 +76,7 @@
   "wxs_indentifier": null,
   "id": "herop-htraln",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-19T12:33:11Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

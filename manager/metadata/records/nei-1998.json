@@ -47,7 +47,7 @@
   ],
   "date_issued": "2005",
   "index_year": [
-    "1998"
+    1998
   ],
   "date_range": null,
   "spatial_coverage": [
@@ -78,7 +78,7 @@
   "wxs_indentifier": null,
   "id": "herop-ccmkcj",
   "identifier": null,
-  "modified": "2024-11-14T16:26:42Z",
+  "modified": "2024-11-19T12:33:11Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

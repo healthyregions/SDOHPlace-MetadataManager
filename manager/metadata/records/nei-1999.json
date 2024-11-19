@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 16,
-    "to_fill": 24,
-    "filled_pct": 66,
+    "filled": 17,
+    "to_fill": 25,
+    "filled_pct": 68,
     "progress_class": "danger"
   },
   "title": "National Emissions Inventory (NEI) 1999",
@@ -47,7 +47,7 @@
   ],
   "date_issued": "2005",
   "index_year": [
-    "1999"
+    1999
   ],
   "date_range": null,
   "spatial_coverage": [
@@ -78,7 +78,7 @@
   "wxs_indentifier": null,
   "id": "herop-sdiwma",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-19T12:33:11Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

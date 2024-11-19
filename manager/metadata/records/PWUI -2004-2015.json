@@ -55,7 +55,7 @@
   ],
   "date_issued": "2018-08-01",
   "index_year": [
-    "2015"
+    2015
   ],
   "date_range": null,
   "spatial_coverage": [
@@ -93,7 +93,7 @@
   "wxs_indentifier": null,
   "id": "herop-drwddq",
   "identifier": null,
-  "modified": "2024-11-16T17:25:18Z",
+  "modified": "2024-11-19T12:33:11Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

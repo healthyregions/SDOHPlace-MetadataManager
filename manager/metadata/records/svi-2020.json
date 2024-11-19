@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 15,
-    "to_fill": 24,
-    "filled_pct": 62,
+    "to_fill": 25,
+    "filled_pct": 60,
     "progress_class": "danger"
   },
   "title": "CDC Social Vulnerability Index (SVI) 2020",
@@ -30,7 +30,12 @@
   "keyword": null,
   "temporal_coverage": null,
   "date_issued": "2020",
-  "index_year": "2020",
+  "index_year": [
+    2,
+    0,
+    2,
+    0
+  ],
   "date_range": null,
   "spatial_coverage": null,
   "geometry": null,
@@ -56,7 +61,7 @@
   "wxs_indentifier": null,
   "id": "herop-atdwvg",
   "identifier": "araergawefawef",
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-19T12:33:11Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

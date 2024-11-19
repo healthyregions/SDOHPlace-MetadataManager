@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 17,
-    "to_fill": 24,
-    "filled_pct": 70,
+    "to_fill": 25,
+    "filled_pct": 68,
     "progress_class": "danger"
   },
   "title": "Global Streetscapes (MLY1)",
@@ -48,7 +48,7 @@
   "temporal_coverage": null,
   "date_issued": null,
   "index_year": [
-    "2024"
+    2024
   ],
   "date_range": null,
   "spatial_coverage": [
@@ -83,7 +83,7 @@
   "wxs_indentifier": null,
   "id": "herop-tbulnk",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-19T12:33:11Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

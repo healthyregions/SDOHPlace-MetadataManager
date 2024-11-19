@@ -48,7 +48,7 @@
   "temporal_coverage": null,
   "date_issued": null,
   "index_year": [
-    "2014"
+    2014
   ],
   "date_range": null,
   "spatial_coverage": null,
@@ -75,7 +75,7 @@
   },
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": "2024-11-16T18:30:52Z",
+  "modified": "2024-11-19T12:33:11Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [],

@@ -58,19 +58,19 @@
   ],
   "date_issued": "2023-01-30",
   "index_year": [
-    "2002",
-    "2003",
-    "2004",
-    "2005",
-    "2006",
-    "2007",
-    "2008",
-    "2009",
-    "2010",
-    "2011",
-    "2012",
-    "2013",
-    "2014"
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014
   ],
   "date_range": null,
   "spatial_coverage": [
@@ -103,7 +103,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38649.v1"
   ],
-  "modified": "2024-11-16T19:15:22Z",
+  "modified": "2024-11-19T12:33:11Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

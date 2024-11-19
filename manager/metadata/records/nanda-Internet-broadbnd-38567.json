@@ -52,13 +52,13 @@
   ],
   "date_issued": "2022-11-14",
   "index_year": [
-    "2014",
-    "2015",
-    "2016",
-    "2017",
-    "2018",
-    "2019",
-    "2020"
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020
   ],
   "date_range": null,
   "spatial_coverage": [
@@ -91,7 +91,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38567.v1"
   ],
-  "modified": "2024-11-16T19:15:00Z",
+  "modified": "2024-11-19T12:33:11Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
