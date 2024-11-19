@@ -197,7 +197,7 @@ class Record():
                 if field.widget == "text-area.html":
                     value = "\n".join(value)
                 else:
-                    value = "|".join(value)
+                    value = "|".join([str(i) for i in value])
             form_data[key] = value
         return form_data
     
