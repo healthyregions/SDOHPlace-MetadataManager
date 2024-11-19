@@ -129,6 +129,9 @@ class Record():
         else:
             self.data['suppressed'] = False
 
+        if self.data['index_year']:
+            self.data['index_year'] = [int(i) for i in self.data['index_year']]
+
         if not self.file_path:
             self.file_path = Path(METADATA_DIR, 'records', self.data['id'] + ".json")
 
