@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 18,
-    "to_fill": 24,
-    "filled_pct": 75,
+    "filled": 20,
+    "to_fill": 25,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
   "title": "USGS Land Cover",
@@ -30,11 +30,17 @@
   "resource_type": [
     "Raster data"
   ],
-  "subject": [],
+  "subject": [
+    "Greenspaces"
+  ],
   "theme": [
     "Land Cover"
   ],
-  "keyword": null,
+  "keyword": [
+    "Land Cover",
+    "Remote Sensing",
+    "Sateliite Data"
+  ],
   "temporal_coverage": [
     "2001",
     "2004",
@@ -91,7 +97,7 @@
   "wxs_indentifier": null,
   "id": "herop-iviplg",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-16T18:19:56Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

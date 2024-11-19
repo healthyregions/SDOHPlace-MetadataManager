@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 19,
-    "to_fill": 24,
-    "filled_pct": 79,
+    "filled": 21,
+    "to_fill": 25,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
   "title": "NaNDA Broadband Internet Availability, Speed, and Adoption by Census Tract and ZIP Code Tabulation Area, United States, 2014-2020",
@@ -34,7 +34,10 @@
     "Point data",
     "Table data"
   ],
-  "subject": [],
+  "subject": [
+    "Neighborhood and Built Environment",
+    "Social and Community Context"
+  ],
   "theme": [
     "Location",
     "Society"
@@ -88,7 +91,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38567.v1"
   ],
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-16T19:15:00Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

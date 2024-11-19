@@ -2,10 +2,10 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 21,
+    "filled": 23,
     "to_fill": 25,
-    "filled_pct": 84,
-    "progress_class": "warning"
+    "filled_pct": 92,
+    "progress_class": "success"
   },
   "title": "Smart Location Database",
   "alternative_title": [
@@ -33,13 +33,21 @@
     "Census data",
     "Polygon data"
   ],
-  "subject": [],
+  "subject": [
+    "Demographics",
+    "Housing",
+    "Neighborhood and Built Environment"
+  ],
   "theme": [
     "Environment",
+    "Location",
     "Society",
     "Transportation"
   ],
-  "keyword": null,
+  "keyword": [
+    "Accessibility",
+    "Land Use"
+  ],
   "temporal_coverage": [
     "2021"
   ],
@@ -78,7 +86,7 @@
   "wxs_indentifier": null,
   "id": "herop-ppvuzl",
   "identifier": null,
-  "modified": "2024-11-14T15:53:34Z",
+  "modified": "2024-11-16T18:52:08Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

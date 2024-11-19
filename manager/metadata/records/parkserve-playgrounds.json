@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 18,
-    "to_fill": 24,
-    "filled_pct": 75,
+    "filled": 20,
+    "to_fill": 25,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
   "title": "Playgrounds (ParkServe)",
@@ -31,11 +31,16 @@
   "resource_type": [
     "Polygon data"
   ],
-  "subject": [],
+  "subject": [
+    "Greenspaces"
+  ],
   "theme": [
     "Structure"
   ],
-  "keyword": null,
+  "keyword": [
+    "Urban Environment",
+    "Park"
+  ],
   "temporal_coverage": [
     "2023"
   ],
@@ -77,7 +82,7 @@
   "wxs_indentifier": null,
   "id": "herop-yoizdf",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-16T18:59:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

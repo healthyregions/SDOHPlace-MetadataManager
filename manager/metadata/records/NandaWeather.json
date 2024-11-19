@@ -2,10 +2,10 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 17,
-    "to_fill": 24,
-    "filled_pct": 70,
-    "progress_class": "danger"
+    "filled": 20,
+    "to_fill": 25,
+    "filled_pct": 80,
+    "progress_class": "warning"
   },
   "title": "NaNDA Weather by County, United States, 2003-2016",
   "alternative_title": null,
@@ -19,7 +19,9 @@
   "creator": [
     "University of Michigan Institute for Social Research"
   ],
-  "publisher": null,
+  "publisher": [
+    "University of Michigan Institute for Social Research"
+  ],
   "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
     "Datasets"
@@ -27,11 +29,17 @@
   "resource_type": [
     "Table data"
   ],
-  "subject": [],
+  "subject": [
+    "Health and Healthcare",
+    "Safety"
+  ],
   "theme": [
     "Climate"
   ],
-  "keyword": null,
+  "keyword": [
+    "Climate",
+    "Temperature"
+  ],
   "temporal_coverage": [
     "2003-2016"
   ],
@@ -83,7 +91,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38858.v1"
   ],
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-16T19:28:34Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

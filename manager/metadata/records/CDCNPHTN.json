@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 20,
-    "to_fill": 24,
-    "filled_pct": 83,
+    "filled": 22,
+    "to_fill": 25,
+    "filled_pct": 88,
     "progress_class": "warning"
   },
   "title": "CDC National Environmental Public Health Tracking Network",
@@ -32,13 +32,20 @@
   "resource_type": [
     "Point data"
   ],
-  "subject": [],
+  "subject": [
+    "Neighborhood and Built Environment"
+  ],
   "theme": [
     "Climate",
     "Environment",
     "Health"
   ],
-  "keyword": null,
+  "keyword": [
+    "Environment Data",
+    "Health Outcomes",
+    "Transportation",
+    "Diseases"
+  ],
   "temporal_coverage": [
     "2005- 2019"
   ],
@@ -93,7 +100,7 @@
   "wxs_indentifier": null,
   "id": "herop-lukhbw",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-16T17:22:15Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -136,5 +143,6 @@
     "Unintentional Carbon Monoxide Poisoning"
   ],
   "data_variables": null,
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "featured_variable": null
 }

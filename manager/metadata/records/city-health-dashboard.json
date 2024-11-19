@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 19,
-    "to_fill": 24,
-    "filled_pct": 79,
+    "filled": 20,
+    "to_fill": 25,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
   "title": "City Health Dashboard",
@@ -41,7 +41,12 @@
     "Society",
     "Transportation"
   ],
-  "keyword": null,
+  "keyword": [
+    "Health Equity",
+    "Urban Health",
+    "SDOH",
+    "US Census"
+  ],
   "temporal_coverage": [
     "2010-2020"
   ],
@@ -962,7 +967,7 @@
   "geometry": "None",
   "bounding_box": "None",
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -986,7 +991,7 @@
   "wxs_indentifier": null,
   "id": "herop-xtoqlx",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-16T17:33:01Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -997,5 +1002,6 @@
   "spatial_resolution_note": "note 1 | note 2",
   "methods_variables": null,
   "data_variables": null,
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "featured_variable": null
 }

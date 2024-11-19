@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
-    "to_fill": 24,
-    "filled_pct": 91,
+    "filled": 24,
+    "to_fill": 25,
+    "filled_pct": 96,
     "progress_class": "success"
   },
   "title": "Opportunity Index",
@@ -30,14 +30,24 @@
   "resource_type": [
     "Point data"
   ],
-  "subject": [],
+  "subject": [
+    "Demographics",
+    "Economic Stability",
+    "Employment",
+    "Health and Healthcare",
+    "Social and Community Context"
+  ],
   "theme": [
     "Economy",
     "Health",
     "Society",
     "Structure"
   ],
-  "keyword": null,
+  "keyword": [
+    "Community Development",
+    "Affodability",
+    "SDOH"
+  ],
   "temporal_coverage": [
     "2016-2019"
   ],
@@ -78,7 +88,7 @@
   "wxs_indentifier": null,
   "id": "herop-yumqkc",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-16T18:08:04Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

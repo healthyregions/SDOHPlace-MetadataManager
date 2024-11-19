@@ -36,13 +36,18 @@
     "Polygon data"
   ],
   "subject": [
-    "Health and Healthcare"
+    "Health and Healthcare",
+    "Housing",
+    "Transportation and Infrastructure"
   ],
   "theme": [
-    "Health"
+    "Health",
+    "Transportation"
   ],
   "keyword": [
-    "health index"
+    "health index",
+    "housing",
+    "commute"
   ],
   "temporal_coverage": [
     "2010-2024"
@@ -92,7 +97,7 @@
   "wxs_indentifier": null,
   "id": "herop-cfmkuz",
   "identifier": null,
-  "modified": "2024-11-14T16:10:13Z",
+  "modified": "2024-11-16T17:35:11Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

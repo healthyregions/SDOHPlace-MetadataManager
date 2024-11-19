@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 18,
-    "to_fill": 24,
-    "filled_pct": 75,
+    "filled": 20,
+    "to_fill": 25,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
   "title": "NaNDA Neighborhood-School Gap by Census Tract and ZIP Code Tabulation Area, United States, 2009-2010 and 2015-2016 ",
@@ -36,7 +36,10 @@
     "Point data",
     "Table data"
   ],
-  "subject": [],
+  "subject": [
+    "Education",
+    "Neighborhood and Built Environment"
+  ],
   "theme": [
     "Boundaries",
     "Location",
@@ -89,7 +92,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38579.v2"
   ],
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-16T19:16:20Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

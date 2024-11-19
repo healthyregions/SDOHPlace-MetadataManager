@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 20,
-    "to_fill": 24,
-    "filled_pct": 83,
+    "filled": 21,
+    "to_fill": 25,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
   "title": "NaNDA Socioeconomic Status and Demographic Characteristics of Census Tracts and ZIP Code Tabulation Areas, United States, 2000-2020",
@@ -39,7 +39,10 @@
     "Employment",
     "Social and Community Context"
   ],
-  "theme": [],
+  "theme": [
+    "Economy",
+    "Society"
+  ],
   "keyword": [
     "census",
     "neighborhoods",
@@ -103,7 +106,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38528.v3"
   ],
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-16T19:20:07Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

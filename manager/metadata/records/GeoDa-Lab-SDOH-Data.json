@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
-    "to_fill": 24,
-    "filled_pct": 91,
+    "filled": 24,
+    "to_fill": 25,
+    "filled_pct": 96,
     "progress_class": "success"
   },
   "title": "GeoDa Lab SDOH Data",
@@ -31,13 +31,22 @@
     "Census data",
     "Polygon data"
   ],
-  "subject": [],
+  "subject": [
+    "Health and Healthcare",
+    "Social and Community Context"
+  ],
   "theme": [
     "Health",
     "Society",
     "Transportation"
   ],
-  "keyword": null,
+  "keyword": [
+    "ACS",
+    "US Census",
+    "Health Equity",
+    "Socioeconomic Asvantages",
+    "SDOH"
+  ],
   "temporal_coverage": [
     "2014"
   ],
@@ -78,7 +87,7 @@
   "wxs_indentifier": null,
   "id": "herop-guqlrr",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-16T17:41:11Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

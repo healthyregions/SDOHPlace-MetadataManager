@@ -47,7 +47,8 @@
     "Structure"
   ],
   "keyword": [
-    "climate"
+    "climate",
+    "urban environment"
   ],
   "temporal_coverage": null,
   "date_issued": null,
@@ -87,7 +88,7 @@
   "wxs_indentifier": null,
   "id": "herop-wyksjq",
   "identifier": null,
-  "modified": "2024-11-14T15:21:09Z",
+  "modified": "2024-11-16T17:44:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

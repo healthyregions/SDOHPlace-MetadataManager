@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 18,
-    "to_fill": 24,
-    "filled_pct": 75,
+    "filled": 20,
+    "to_fill": 25,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
   "title": "USGS Land Cover (Alaska 2001)",
@@ -29,11 +29,17 @@
   "resource_type": [
     "Raster data"
   ],
-  "subject": null,
+  "subject": [
+    "Greenspaces"
+  ],
   "theme": [
     "Land Cover"
   ],
-  "keyword": null,
+  "keyword": [
+    "Land Cover",
+    "Remote Sensing",
+    "Satellite Data"
+  ],
   "temporal_coverage": [
     "2001"
   ],
@@ -48,7 +54,7 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -74,7 +80,7 @@
   "wxs_indentifier": null,
   "id": "herop-ehphnq",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-16T18:17:29Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -85,5 +91,7 @@
   "data_variables": [
     "Land cover type"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null
 }

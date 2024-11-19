@@ -2,10 +2,10 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 21,
-    "to_fill": 24,
-    "filled_pct": 87,
-    "progress_class": "warning"
+    "filled": 23,
+    "to_fill": 25,
+    "filled_pct": 92,
+    "progress_class": "success"
   },
   "title": "CDC Daily Census Tract-Level Ozone Concentrations 2006-2010",
   "alternative_title": null,
@@ -32,13 +32,20 @@
   "resource_type": [
     "Point data"
   ],
-  "subject": [],
+  "subject": [
+    "Neighborhood and Built Environment"
+  ],
   "theme": [
     "Climate",
     "Environment",
     "Health"
   ],
-  "keyword": null,
+  "keyword": [
+    "US Census",
+    "Air Quality",
+    "Environment Data",
+    "Ozone"
+  ],
   "temporal_coverage": [
     "2006-2010"
   ],
@@ -82,7 +89,7 @@
   "wxs_indentifier": null,
   "id": "herop-dnnjyy",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-16T17:15:28Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

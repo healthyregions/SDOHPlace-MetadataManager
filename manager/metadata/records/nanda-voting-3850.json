@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 19,
-    "to_fill": 24,
-    "filled_pct": 79,
+    "filled": 21,
+    "to_fill": 25,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
   "title": "NaNDA Voter Registration, Turnout, and Partisanship by County, United States, 2004-2018",
@@ -32,7 +32,10 @@
   "resource_type": [
     "Table data"
   ],
-  "subject": [],
+  "subject": [
+    "Demographics",
+    "Social and Community Context"
+  ],
   "theme": [
     "Society"
   ],
@@ -94,7 +97,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38506.v1"
   ],
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-16T19:27:27Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

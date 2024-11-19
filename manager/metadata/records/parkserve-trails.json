@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 18,
-    "to_fill": 24,
-    "filled_pct": 75,
+    "filled": 20,
+    "to_fill": 25,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
   "title": "ParkServe (Trails)",
@@ -31,12 +31,17 @@
   "resource_type": [
     "Line data"
   ],
-  "subject": null,
+  "subject": [
+    "Greenspaces"
+  ],
   "theme": [
     "Society",
     "Structure"
   ],
-  "keyword": null,
+  "keyword": [
+    "Urban Environment",
+    "Park"
+  ],
   "temporal_coverage": [
     "2023"
   ],
@@ -51,7 +56,7 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": [
@@ -78,7 +83,7 @@
   "wxs_indentifier": null,
   "id": "herop-eqojtg",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-16T18:58:39Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -89,5 +94,7 @@
   "data_variables": [
     "Permanent ID, Name, Trail number, Source feature, Source data, Source origin, Load date, Trail type, Hiker/pedestrian, Bicycle, Packsaddle, ATV, Motorcycle, OHV over 50in, Snowshoe, Cross count, Dogsled, Snowmobile, National trail, Global ID, OSM ID, Code, Class, Oneway, Max speed, Bridge, Tunnel, Length"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null
 }

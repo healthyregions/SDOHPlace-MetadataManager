@@ -2,10 +2,10 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 17,
-    "to_fill": 24,
-    "filled_pct": 70,
-    "progress_class": "danger"
+    "filled": 19,
+    "to_fill": 25,
+    "filled_pct": 76,
+    "progress_class": "warning"
   },
   "title": "MODIS Combined 16-Day NDVI (Google Earth Engine)",
   "alternative_title": null,
@@ -32,11 +32,22 @@
   "resource_type": [
     "Raster data"
   ],
-  "subject": null,
+  "subject": [
+    "Food Environment",
+    "Health and Healthcare",
+    "Neighborhood and Built Environment",
+    "Greenspaces"
+  ],
   "theme": [
     "Land Cover"
   ],
-  "keyword": null,
+  "keyword": [
+    "Remote Sensing",
+    "Vegetation",
+    "Satellite Data",
+    "Surface",
+    "Vegetation"
+  ],
   "temporal_coverage": [
     "2000-2023"
   ],
@@ -49,7 +60,7 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -73,7 +84,7 @@
   "wxs_indentifier": null,
   "id": "herop-eflmqc",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-16T18:04:14Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -90,5 +101,7 @@
   "data_variables": [
     "NDVI"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null
 }

@@ -2,10 +2,10 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 21,
-    "to_fill": 24,
-    "filled_pct": 87,
-    "progress_class": "warning"
+    "filled": 23,
+    "to_fill": 25,
+    "filled_pct": 92,
+    "progress_class": "success"
   },
   "title": "CDC Standardized Precipitation Index 1895-2016",
   "alternative_title": null,
@@ -32,7 +32,11 @@
   "resource_type": [
     "Point data"
   ],
-  "subject": [],
+  "subject": [
+    "Health and Healthcare",
+    "Neighborhood and Built Environment",
+    "Safety"
+  ],
   "theme": [
     "Climate",
     "Environment",
@@ -86,7 +90,7 @@
   "wxs_indentifier": null,
   "id": "herop-fsqjns",
   "identifier": null,
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-16T17:29:18Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

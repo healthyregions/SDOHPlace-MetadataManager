@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 18,
-    "to_fill": 24,
-    "filled_pct": 75,
+    "filled": 21,
+    "to_fill": 25,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
   "title": "NaNDA Urbanicity by Census Tract, United States, 2010",
@@ -16,7 +16,9 @@
     "eng"
   ],
   "display_note": null,
-  "creator": null,
+  "creator": [
+    "University of Michigan. Institute for Social Research."
+  ],
   "publisher": [
     "University of Michigan. Institute for Social Research."
   ],
@@ -27,7 +29,9 @@
   "resource_type": [
     "Polygon data"
   ],
-  "subject": [],
+  "subject": [
+    "Neighborhood and Built Environment"
+  ],
   "theme": [
     "Land Cover",
     "Society"
@@ -77,7 +81,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38606.v1"
   ],
-  "modified": "2024-11-14T15:15:27Z",
+  "modified": "2024-11-16T19:26:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
