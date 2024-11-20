@@ -41,7 +41,9 @@
   "member_of": null,
   "is_part_of": null,
   "source": null,
-  "is_version_of": null,
+  "is_version_of": [
+    "herop-rkcyhr"
+  ],
   "replaces": null,
   "is_replaced_by": null,
   "rights": null,
@@ -54,9 +56,9 @@
   "wxs_indentifier": null,
   "id": "herop-zrurpe",
   "identifier": null,
-  "modified": "2024-11-19T12:33:11Z",
+  "modified": "2024-11-19T21:18:26Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": false,
+  "suppressed": true,
   "spatial_resolution": [
     "County",
     "State",

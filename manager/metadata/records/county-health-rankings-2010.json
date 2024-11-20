@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 20,
+    "filled": 21,
     "to_fill": 25,
-    "filled_pct": 80,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
   "title": "County Health Rankings",
@@ -93,11 +93,13 @@
   "access_rights": "Public",
   "format": null,
   "file_size": null,
-  "references": null,
+  "references": {
+    "http://lccn.loc.gov/sh85035852": "https://www.countyhealthrankings.org/health-data/methodology-and-sources/data-documentation/national-data-documentation-2010-2022"
+  },
   "wxs_indentifier": null,
   "id": "herop-cfmkuz",
   "identifier": null,
-  "modified": "2024-11-19T12:33:11Z",
+  "modified": "2024-11-19T21:15:38Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
