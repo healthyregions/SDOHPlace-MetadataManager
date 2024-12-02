@@ -8,6 +8,7 @@ from manager.utils import (
     METADATA_DIR,
     get_clean_field_from_form,
     load_json,
+    load_text_geometry,
     generate_id,
 )
 from manager.solr import Solr
@@ -134,6 +135,20 @@ class Record():
 
         if not self.file_path:
             self.file_path = Path(METADATA_DIR, 'records', self.data['id'] + ".json")
+
+
+        coverages = [i.lower() for i in self.data['spatial_coverage']] if self.data['spatial_coverage'] else []
+        geom_str = None
+        if "united states" in coverages:
+            geom_str = load_text_geometry("full_us.wkt")
+        elif "contiguous us" in coverages:
+            geom_str = load_text_geometry("contiguous.wkt")
+        elif "alaska" in coverages:
+            geom_str = load_text_geometry("alaska.wkt")
+        elif "hawaii" in coverages:
+            geom_str = load_text_geometry("hawaii.wkt")
+        if geom_str and (not self.data['geometry'] or self.data['geometry'] == "None"):
+            self.data["geometry"] = geom_str
 
         with open(self.file_path, "w") as o:
             json.dump(self.to_json(), o, indent=2)

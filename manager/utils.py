@@ -14,6 +14,12 @@ def load_json(path: Path):
 	with open(path, "r") as o:
 		return json.load(o)
 
+def load_text_geometry(filename: str):
+	path = Path(METADATA_DIR, "geometries", filename)
+	with open(path, "r") as o:
+		data = o.read()
+	return data
+
 def batch_list(lst, n):
     """Yield successive n-sized chunks from lst."""
     for i in range(0, len(lst), n):

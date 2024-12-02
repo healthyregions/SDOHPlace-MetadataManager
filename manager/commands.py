@@ -73,38 +73,6 @@ def bulk_update(
 			json.dump(data, o, indent=2)
 	print("done")
 
-@click.command()
-@with_appcontext
-@click.option('--id')
-@click.option('--clean', is_flag=True, default=False)
-@click.option('--verbose', is_flag=True, default=False)
-def index(id, clean, verbose):
-	"""Reindex all Solr records from database content."""
-
-	s = Solr(verbose=verbose)
-	if clean:
-		del_result = s.delete_all()
-		print(del_result)
-
-	if id:
-		record = registry.get_record(id)
-		result = record.index(solr_instance=s)
-	else:
-		records = [r.to_solr() for r in registry.records]
-		for batch in batch_list(records, 50):
-			result = {
-				"success": True,
-				"document": f"{len(batch)} records",
-			}
-			try:
-				s.multi_add(batch)
-			except Exception as e:
-				result['success'] = False
-				result['error'] = e
-	if not result['success']:
-		print(result)
-
-
 # @click.command()
 # @with_appcontext
 # @click.option('--record_id')
@@ -254,12 +222,52 @@ def create_user(name: str, email: str, password: str):
 	print(email, hashed)
 
 
-registry_grp = AppGroup('registry')
+registry_grp = AppGroup('registry',
+	help="A set of commands for managing and indexing (to Solr) records in the registry."
+)
 
 @registry_grp.command()
 @with_appcontext
-def resave_records():
+@click.option('--id')
+def resave_records(id):
 
 	registry = Registry()
-	for i in registry.records:
-		i.save_data()
+
+	if id:
+		record = registry.get_record(id)
+		record.save_data()
+	else:
+		for i in registry.records:
+			i.save_data()
+
+
+@registry_grp.command()
+@with_appcontext
+@click.option('--id')
+@click.option('--clean', is_flag=True, default=False)
+@click.option('--verbose', is_flag=True, default=False)
+def index(id, clean, verbose):
+	"""Reindex all Solr records from database content."""
+
+	s = Solr(verbose=verbose)
+	if clean:
+		del_result = s.delete_all()
+		print(del_result)
+
+	if id:
+		record = registry.get_record(id)
+		result = record.index(solr_instance=s)
+	else:
+		records = [r.to_solr() for r in registry.records]
+		for batch in batch_list(records, 50):
+			result = {
+				"success": True,
+				"document": f"{len(batch)} records",
+			}
+			try:
+				s.multi_add(batch)
+			except Exception as e:
+				result['success'] = False
+				result['error'] = e
+	if not result['success']:
+		print(result)
