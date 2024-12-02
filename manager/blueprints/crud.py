@@ -126,16 +126,17 @@ def handle_solr(id):
 			return redirect('/')
 		else:
 			current_app.logger.info(f"indexing {id}")
-			try:
-				registry = Registry()
-				record = registry.get_record(id)
-				if not record:
-					raise NotFound
-				result = record.index(solr_instance=s)
-				current_app.logger.debug(result)
+			registry = Registry()
+			record = registry.get_record(id)
+			if not record:
+				raise NotFound
+			result = record.index(solr_instance=s)
+			if result["success"]:
+				current_app.logger.info(f"record {id} indexed successfully")
+				current_app.logger.debug(result["document"])
 				return f'<div class="notification is-success">{record.data["title"]} re-indexed successfully</div>'
-			except Exception as e:
-				current_app.logger.error(e)
-				return f'<div class="notification is-success">Error while re-indexing record: {e}</div>'
+			else:
+				current_app.logger.error(result["error"])
+				return f'<div class="notification is-danger">Error while re-indexing record: {result["error"]}</div>'
 	elif request.method == "DELETE":
 		pass
