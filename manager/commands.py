@@ -13,7 +13,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from .solr import Solr
 from .registry import Registry
 from .models import db, User
-from .utils import METADATA_DIR, generate_id
+from .utils import METADATA_DIR, generate_id, batch_list
 
 registry = Registry()
 
@@ -91,15 +91,16 @@ def index(id, clean, verbose):
 		result = record.index(solr_instance=s)
 	else:
 		records = [r.to_solr() for r in registry.records]
-		result = {
-			"success": True,
-			"document": f"{len(records)} records",
-		}
-		try:
-			s.multi_add(records)
-		except Exception as e:
-			result['success'] = False
-			result['error'] = e
+		for batch in batch_list(records, 50):
+			result = {
+				"success": True,
+				"document": f"{len(batch)} records",
+			}
+			try:
+				s.multi_add(batch)
+			except Exception as e:
+				result['success'] = False
+				result['error'] = e
 	if not result['success']:
 		print(result)
 

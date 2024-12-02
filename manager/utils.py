@@ -14,6 +14,11 @@ def load_json(path: Path):
 	with open(path, "r") as o:
 		return json.load(o)
 
+def batch_list(lst, n):
+    """Yield successive n-sized chunks from lst."""
+    for i in range(0, len(lst), n):
+        yield lst[i:i + n]
+
 def generate_id(length=6):
 	return "herop-" + ''.join(random.choices(string.ascii_lowercase, k=length))
 
