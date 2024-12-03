@@ -8,7 +8,7 @@ from manager.utils import (
     METADATA_DIR,
     get_clean_field_from_form,
     load_json,
-    load_text_geometry,
+    get_wkt_from_geojson,
     generate_id,
 )
 from manager.solr import Solr
@@ -138,17 +138,18 @@ class Record():
 
 
         coverages = [i.lower() for i in self.data['spatial_coverage']] if self.data['spatial_coverage'] else []
-        geom_str = None
+        wkt = None
         if "united states" in coverages:
-            geom_str = load_text_geometry("full_us.wkt")
+            wkt = get_wkt_from_geojson("full-us-simplified.geojson")
         elif "contiguous us" in coverages:
-            geom_str = load_text_geometry("contiguous.wkt")
+            wkt = get_wkt_from_geojson("contiguous-us-simplified.geojson")
         elif "alaska" in coverages:
-            geom_str = load_text_geometry("alaska.wkt")
+            wkt = get_wkt_from_geojson("alaska-simplified.geojson")
         elif "hawaii" in coverages:
-            geom_str = load_text_geometry("hawaii.wkt")
-        if geom_str and (not self.data['geometry'] or self.data['geometry'] == "None"):
-            self.data["geometry"] = geom_str
+            wkt = get_wkt_from_geojson("hawaii-simplified.geojson")
+
+        if wkt and (not self.data['geometry'] or self.data['geometry'] == "None"):
+            self.data["geometry"] = wkt
 
         with open(self.file_path, "w") as o:
             json.dump(self.to_json(), o, indent=2)

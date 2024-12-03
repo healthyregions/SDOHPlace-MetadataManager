@@ -3,8 +3,18 @@ import json
 import string
 import random
 from pathlib import Path
+from typing import Union
 
 from dotenv import load_dotenv
+from shapely import (
+    from_geojson,
+    to_wkt,
+	is_ccw,
+    Point,
+    Polygon,
+    MultiPoint,
+    MultiPolygon,
+)
 
 load_dotenv()
 
@@ -14,11 +24,20 @@ def load_json(path: Path):
 	with open(path, "r") as o:
 		return json.load(o)
 
-def load_text_geometry(filename: str):
+def load_geojson_geometry(filename: str) -> Union[Point, Polygon, MultiPoint, MultiPolygon]:
 	path = Path(METADATA_DIR, "geometries", filename)
 	with open(path, "r") as o:
 		data = o.read()
-	return data
+	geom = from_geojson(data)
+	return geom
+
+def get_wkt_from_geojson(filename: str) -> str:
+	geom = load_geojson_geometry(filename)
+	if not is_ccw(geom):
+		geom = geom.reverse()
+	print("ok")
+	print(geom)
+	return to_wkt(geom, rounding_precision=3)
 
 def batch_list(lst, n):
     """Yield successive n-sized chunks from lst."""
