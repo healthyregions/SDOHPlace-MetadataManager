@@ -469,8 +469,12 @@
             "widget": "text-area.html",
             "id": "spatial_coverage",
             "help_text": [
-                "This field holds the names of locations that the dataset is relevant to.",
-                "The majority of our records have nation-wide coverage, so use \"United States\" in that case. For all others, list state names (\"Illinois\"), or city, state (\"Chicaco, Illinois\")."
+                "This field holds the names of locations that the dataset is relevant to. In the following cases, its value is used to auto-populate the Geometry field:",
+                "United States -- full coverage of the US, including AK, HI and Puerto Rico",
+                "Contiguous US -- only coverage of the contiguous 48 states, excluding AK, HI and Puerto Rico",
+                "Alaska -- only coverage of Alaska",
+                "Alaska -- only coverage of Hawaii",
+                "For all other cases, just list state names (\"Illinois\"), or city, state (\"Chicaco, Illinois\")."
             ]
         },
         {
@@ -487,7 +491,8 @@
             "widget": "text-simple.html",
             "id": "geometry",
             "help_text": [
-                "Leave blank for now…"
+                "If left blank, an attempt will be made to fill this field based on presence of one of these terms in the Spatial Coverage field: United States, Contiguous US, Alaska, Hawaii.",
+                "Alternatively, any geometry in \"well-known text\" format can be pasted into this field"
             ]
         },
         {

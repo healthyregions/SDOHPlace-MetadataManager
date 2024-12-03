@@ -9,7 +9,6 @@ from manager.blueprints.crud import crud
 from manager.blueprints.auth import auth
 from manager.models import db, User
 from manager.commands import (
-    index,
     inspect_schema,
     reset_user_password,
     bulk_update,
@@ -50,7 +49,6 @@ login_manager.init_app(app)
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-app.cli.add_command(index)
 app.cli.add_command(inspect_schema)
 app.cli.add_command(create_user)
 app.cli.add_command(reset_user_password)

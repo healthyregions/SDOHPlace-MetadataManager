@@ -8,6 +8,7 @@ from manager.utils import (
     METADATA_DIR,
     get_clean_field_from_form,
     load_json,
+    get_wkt_from_geojson,
     generate_id,
 )
 from manager.solr import Solr
@@ -134,6 +135,21 @@ class Record():
 
         if not self.file_path:
             self.file_path = Path(METADATA_DIR, 'records', self.data['id'] + ".json")
+
+
+        coverages = [i.lower() for i in self.data['spatial_coverage']] if self.data['spatial_coverage'] else []
+        wkt = None
+        if "united states" in coverages:
+            wkt = get_wkt_from_geojson("full-us-simplified.geojson")
+        elif "contiguous us" in coverages:
+            wkt = get_wkt_from_geojson("contiguous-us-simplified.geojson")
+        elif "alaska" in coverages:
+            wkt = get_wkt_from_geojson("alaska-simplified.geojson")
+        elif "hawaii" in coverages:
+            wkt = get_wkt_from_geojson("hawaii-simplified.geojson")
+
+        if wkt and (not self.data['geometry'] or self.data['geometry'] == "None"):
+            self.data["geometry"] = wkt
 
         with open(self.file_path, "w") as o:
             json.dump(self.to_json(), o, indent=2)
