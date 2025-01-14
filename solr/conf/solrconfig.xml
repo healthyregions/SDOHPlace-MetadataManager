@@ -116,36 +116,27 @@
       <str name="sort">score desc, dct_title_sort asc</str>
       <str name="q.alt">*:*</str>
       <str name="qf">
-        text^1
-        dct_description_ti^2
+        text^10
+        text_with_relationships^9
+        dct_description_ti^9
         dct_creator_tmi^3
         dct_publisher_ti^3
         dct_isPartOf_tmi^4
         dct_subject_tmi^5
         dct_spatial_tmi^5
-        dct_temporal_tmi^5
-        dct_title_ti^6
+        dct_temporal_tmi^6
+        dct_title_ti^10
         dct_accessRights_ti^7
-        dct_provider_ti^8
-        layer_geom_type_ti^9
-        layer_slug_ti^10
-        dct_identifier_ti^10
+        dct_provider_ti^4
+        layer_geom_type_ti^3
+        layer_slug_ti^2
+        dct_identifier_ti^2
       </str>
       <str name="pf"><!-- phrase boost within result set -->
-        text^1
-        dct_description_ti^2
-        dct_creator_tmi^3
-        dct_publisher_ti^3
-        dct_isPartOf_tmi^4
-        dct_subject_tmi^5
-        dct_spatial_tmi^5
-        dct_temporal_tmi^5
-        dct_title_ti^6
-        dct_accessRights_ti^7
-        dct_provider_ti^8
-        layer_geom_type_ti^9
-        layer_slug_ti^10
-        dct_identifier_ti^10
+        text^10
+        text_with_relationships^9
+        dct_description_ti^9
+        dct_title_ti^10
       </str>
       <bool name="facet">true</bool>
       <int name="facet.mincount">1</int>
@@ -161,7 +152,21 @@
       <str name="facet.field">dct_subject_sm</str>
       <str name="facet.field">locn_geometry_s</str>
       <str name="facet.field">gbl_indexYear_im</str>
-
+      <!-- highlights -->
+      <str name="hl">true</str>
+      <str name="hl.fl">*</str>
+      <str name="hl.method">unified</str>
+      <str name="hl.simple.pre">
+      <![CDATA[ <strong> ]]>
+      </str>
+      <str name="hl.simple.post">
+      <![CDATA[ </strong> ]]>
+      </str>
+      <str name="hl.snippets">5</str>
+      <str name="hl.fragsize">300</str>
+      <str name="hl.maxAnalyzedChars">100000</str>
+      <str name="hl.alternateField">dct_title_s</str>
+      <!-- spellcheck -->
       <str name="spellcheck">true</str>
     </lst>
     <arr name="last-components">
@@ -216,17 +221,16 @@
   </searchComponent>
 
 <searchComponent name="suggest" class="solr.SuggestComponent">
-    <!-- This is the default GeoBlacklight suggester -->
+    <!-- This is the default GeoBlacklight suggester
     <lst name="suggester">
       <str name="name">mySuggester</str>
       <str name="lookupImpl">FuzzyLookupFactory</str>
       <str name="suggestAnalyzerFieldType">textSuggest</str>
       <str name="buildOnCommit">true</str>
       <str name="field">suggest</str>
-      <!-- new props -->
       <str name="preserveSep">false</str>
       <str name="payloadField">sdoh_data_variables_sm</str>
-    </lst>
+    </lst>-->
      <!--This is a new suggester for SDOH project-->
      <lst name="suggester">
       <str name="name">sdohSuggester</str>
@@ -243,39 +247,7 @@
       <int name="minPrefixChars">1</int>
       <bool name="highlight">true</bool>
     </lst>
-    <!--HighFrequencyDictionaryFactory version with different score but no payloads. Not use this one for now-->
-    <!--<lst name="suggester">
-        <str name="name">sdohSuggester</str>
-        <str name="lookupImpl">AnalyzingInfixLookupFactory</str>
-        <str name="dictionaryImpl">HighFrequencyDictionaryFactory</str>
-        <str name="field">suggest</str>
-        <str name="suggestAnalyzerFieldType">text_suggest</str>
-        <str name="weightField">score</str>
-        <bool name="exactMatchFirst">false</bool>
-        <str name="buildOnStartup">true</str>
-        <str name="buildOnCommit">true</str>
-        <int name="minPrefixChars">1</int>
-        <bool name="highlight">true</bool>
-        <bool name="allTermsRequired">true</bool>
-        <str name="payloadField">dct_title_s</str>
-    </lst>-->
-  </searchComponent> 
-
-  <!-- Here's another suggester to try for internal matching, based on this SE answer:
-  https://stackoverflow.com/a/40185213 -->
-  <!--
-  <searchComponent name="suggest" class="solr.SuggestComponent">
-    <lst name="suggester">
-      <str name="name">infixSuggester</str>
-      <str name="lookupImpl">AnalyzingInfixLookupFactory</str>
-      <str name="dictionaryImpl">DocumentDictionaryFactory</str>
-      <str name="field">suggest_field</str>
-      <str name="weightField">price</str>
-      <str name="suggestAnalyzerFieldType">suggest_type</str>
-      <str name="buildOnStartup">false</str>
-    </lst>
   </searchComponent>
-  -->
   <requestHandler name="/suggest" class="solr.SearchHandler" startup="lazy">
     <lst name="defaults">
       <str name="suggest">true</str>
