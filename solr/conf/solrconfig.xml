@@ -133,7 +133,6 @@
         dct_identifier_ti^2
       </str>
       <str name="pf"><!-- phrase boost within result set -->
-        text^10
         text_with_relationships^9
         dct_description_ti^9
         dct_title_ti^10
@@ -154,7 +153,8 @@
       <str name="facet.field">gbl_indexYear_im</str>
       <!-- highlights -->
       <str name="hl">true</str>
-      <str name="hl.fl">*</str>
+      <str name="hl.fl"> dct_subject_sm,sdoh_featured_variable_s,text_with_relationships,dct_description_sm,dct_title_s,dct_keyword_sm, sdoh_methods_variables_sm, sdoh_data_usage_notes_s, sdoh_data_variables_sm, dct_creator_sm, dct_publisher_s</str>
+      <str name="hl.bs.type">WORD</str>
       <str name="hl.method">unified</str>
       <str name="hl.simple.pre">
       <![CDATA[ <strong> ]]>
@@ -165,7 +165,11 @@
       <str name="hl.snippets">5</str>
       <str name="hl.fragsize">300</str>
       <str name="hl.maxAnalyzedChars">100000</str>
-      <str name="hl.alternateField">dct_title_s</str>
+      <str name="hl.highlightMultiTerm">true</str>
+      <str name="hl.usePhraseHighlighter">true</str>
+      <str name="hl.mergeContiguous">true</str>
+      <str name="hl.preserveMulti">true</str>
+      <str name="hl.multiTermQuery">rewrite</str>
       <!-- spellcheck -->
       <str name="spellcheck">true</str>
     </lst>

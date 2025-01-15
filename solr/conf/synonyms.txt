@@ -11,7 +11,22 @@
 # limitations under the License.
 
 # SDOH bidirectional synonyms
-sdoh,social determinants of health,social determinants
+sdoh,social determinants of health,social determinants,health determinants
+health equity,healthcare equity,health equality
+economic stability,income stability,financial security,economic security
+education access,educational opportunity,education quality
+healthcare access,health care access,access to care,healthcare availability
+neighborhood environment,built environment,environmental conditions
+social context,social support,community context
+food security,food access,food availability
+housing stability,housing security,housing access
+transportation access,transit access,transportation availability
 
 # SDOH hierarchical relationship (unidirectional)
-sdoh => sdoh,social vulnerability
+sdoh => social vulnerability,health equity
+poverty => economic stability,income stability,financial hardship
+literacy => education access,education quality,educational attainment
+healthcare disparities => health equity,healthcare access,care availability
+environmental justice => neighborhood environment,built environment,environmental health
+social vulnerability => sdoh,health equity,social determinants of health
+health disparities => sdoh,health equity,healthcare access
