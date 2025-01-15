@@ -7,5 +7,4 @@ sudo cp $THIS_DIR/../solr/conf /var/solr/data/$1/ -r
 
 sudo sed -i -e "s/{{SOLR_CORE}}/$1/g" /var/solr/data/$1/conf/solrconfig.xml
 
-sudo service solr restart
-
+curl "http://localhost:8983/solr/admin/cores?action=RELOAD&core=$1"
