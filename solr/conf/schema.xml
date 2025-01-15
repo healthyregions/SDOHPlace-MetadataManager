@@ -258,6 +258,7 @@
   <copyField source="dct_title_s"         dest="dct_title_ti"         maxChars="1000"/>
   <copyField source="dct_isPartOf_sm"    dest="dct_isPartOf_tmi"    maxChars="1000"/>
   <copyField source="id"       dest="layer_slug_ti"       maxChars="100"/>
+  <copyField source="dct_keyword_sm" dest="dct_keyword_tmi"  maxChars="1000" />
    <copyField source="sdoh_featured_variable_s" dest="sdoh_featured_variable_ti" maxChars="1000"/>
   
   <!-- core text search -->
@@ -284,7 +285,7 @@
   <copyField source="dct_isPartOf_sm"    dest="spell"/>
   <copyField source="sdoh_methods_variables_sm" dest="spell"/>
   <copyField source="sdoh_data_variables_sm" dest="spell"/>
-   <copyField source="sdoh_featured_variable_s" dest=
+  <copyField source="sdoh_featured_variable_s" dest="spell" />
 
   <!-- for suggestions (new SDOH setup) -->
   <copyField source="dct_title_s" dest="suggest" boost="100" />
@@ -296,7 +297,6 @@
   <copyField source="sdoh_featured_variable_s" dest="suggest" boost="80" />
   <copyField source="sdoh_methods_variables_sm" dest="suggest" boost="50" />
   <copyField source="sdoh_data_variables_sm" dest="suggest" boost="50" />
-   <copyField source="sdoh_featured_variable_s" dest="suggest" boost="80" />
 
   <!-- for payload -->
   <copyField source="gbl_suppressed_b" dest="gbl_suppressed_s"/>
