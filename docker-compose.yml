@@ -12,9 +12,9 @@ services:
       timeout: 10s
     volumes:
       - ./solr/solr.in.sh:/etc/default/solr.in.sh
-      - ./solr:/var/solr/
+      - ./solr:/solr-configset
     # TODO: do we need -n data_driven_schema_configs here?
-    command: [ '/bin/sh', '-c', 'solr-precreate blacklight-core-dev' ]     # -n data_driven_schema_configs' ]
+    command: [ '/bin/sh', '-c', 'solr-precreate blacklight-core-dev /solr-configset -n data_driven_schema_configs' ]
 
 
   manager:
@@ -27,6 +27,8 @@ services:
         condition: service_healthy
         restart: true
     env_file: .env.docker
+    volumes:
+      - ./manager:/home/herop/manager
     ports:
     - 8000:8000
-    entrypoint: [ '/bin/sh', '-c', 'flask load-schema -s manager/metadata/schemas/sdohplace.json -n sdohplace &&       flask reset-records --force &&       flask index --clean --verbose &&       flask --app manager.app run -h 0.0.0.0 -p 8000' ]
+    #entrypoint: [ '/bin/sh', '-c', 'flask load-schema -s manager/metadata/schemas/sdohplace.json -n sdohplace &&       flask reset-records --force &&       flask index --clean --verbose &&       flask --app manager.app run -h 0.0.0.0 -p 8000' ]
