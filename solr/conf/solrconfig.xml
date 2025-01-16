@@ -116,36 +116,27 @@
       <str name="sort">score desc, dct_title_sort asc</str>
       <str name="q.alt">*:*</str>
       <str name="qf">
-        text^1
-        dct_description_ti^2
+        text^10
+        text_with_relationships^9
+        dct_description_ti^9
         dct_creator_tmi^3
         dct_publisher_ti^3
         dct_isPartOf_tmi^4
         dct_subject_tmi^5
         dct_spatial_tmi^5
         dct_temporal_tmi^5
-        dct_title_ti^6
-        dct_accessRights_ti^7
-        dct_provider_ti^8
-        layer_geom_type_ti^9
-        layer_slug_ti^10
-        dct_identifier_ti^10
+        dct_title_ti^10
+        dct_accessRights_ti^6
+        dct_provider_ti^4
+        layer_geom_type_ti^3
+        layer_slug_ti^2
+        dct_identifier_ti^2
+        dct_keyword_sm_tmi^7
       </str>
       <str name="pf"><!-- phrase boost within result set -->
-        text^1
-        dct_description_ti^2
-        dct_creator_tmi^3
-        dct_publisher_ti^3
-        dct_isPartOf_tmi^4
-        dct_subject_tmi^5
-        dct_spatial_tmi^5
-        dct_temporal_tmi^5
-        dct_title_ti^6
-        dct_accessRights_ti^7
-        dct_provider_ti^8
-        layer_geom_type_ti^9
-        layer_slug_ti^10
-        dct_identifier_ti^10
+        text_with_relationships^9
+        dct_description_ti^9
+        dct_title_ti^10
       </str>
       <bool name="facet">true</bool>
       <int name="facet.mincount">1</int>
@@ -161,7 +152,26 @@
       <str name="facet.field">dct_subject_sm</str>
       <str name="facet.field">locn_geometry_s</str>
       <str name="facet.field">gbl_indexYear_im</str>
-
+      <!-- highlights -->
+      <str name="hl">true</str>
+      <str name="hl.fl"> dct_subject_sm,sdoh_featured_variable_s,text_with_relationships,dct_description_sm,dct_title_s,dct_keyword_sm, sdoh_methods_variables_sm, sdoh_data_usage_notes_s, sdoh_data_variables_sm, dct_creator_sm, dct_publisher_s</str>
+      <str name="hl.bs.type">WORD</str>
+      <str name="hl.method">unified</str>
+      <str name="hl.simple.pre">
+      <![CDATA[ <strong> ]]>
+      </str>
+      <str name="hl.simple.post">
+      <![CDATA[ </strong> ]]>
+      </str>
+      <str name="hl.snippets">5</str>
+      <str name="hl.fragsize">300</str>
+      <str name="hl.maxAnalyzedChars">100000</str>
+      <str name="hl.highlightMultiTerm">true</str>
+      <str name="hl.usePhraseHighlighter">true</str>
+      <str name="hl.mergeContiguous">true</str>
+      <str name="hl.preserveMulti">true</str>
+      <str name="hl.multiTermQuery">rewrite</str>
+      <!-- spellcheck -->
       <str name="spellcheck">true</str>
     </lst>
     <arr name="last-components">
@@ -215,50 +225,39 @@
     </lst>
   </searchComponent>
 
-  <searchComponent name="suggest" class="solr.SuggestComponent">
-    <!-- This is the default GeoBlacklight suggester -->
+<searchComponent name="suggest" class="solr.SuggestComponent">
+    <!-- This is the default GeoBlacklight suggester
     <lst name="suggester">
       <str name="name">mySuggester</str>
       <str name="lookupImpl">FuzzyLookupFactory</str>
       <str name="suggestAnalyzerFieldType">textSuggest</str>
       <str name="buildOnCommit">true</str>
       <str name="field">suggest</str>
-      <!-- new props -->
       <str name="preserveSep">false</str>
       <str name="payloadField">sdoh_data_variables_sm</str>
-    </lst>
-    <!-- This is a new suggester for SDOH project -->
-    <!--
-    <lst name="suggester">
+    </lst>-->
+     <!--This is a new suggester for SDOH project-->
+     <lst name="suggester">
       <str name="name">sdohSuggester</str>
-      <str name="lookupImpl">BlendedInfixLookupFactory</str> 
-      <str name="field">sdoh_suggestions</str>
-      <str name="highlight">false</str>
-      <str name="suggestAnalyzerFieldType">sdohTextSuggest</str>
-    </lst>
-    -->
-  </searchComponent> 
-
-  <!-- Here's another suggester to try for internal matching, based on this SE answer:
-  https://stackoverflow.com/a/40185213 -->
-  <!--
-  <searchComponent name="suggest" class="solr.SuggestComponent">
-    <lst name="suggester">
-      <str name="name">infixSuggester</str>
-      <str name="lookupImpl">AnalyzingInfixLookupFactory</str>
+      <str name="lookupImpl">BlendedInfixLookupFactory</str>
       <str name="dictionaryImpl">DocumentDictionaryFactory</str>
-      <str name="field">suggest_field</str>
-      <str name="weightField">price</str>
-      <str name="suggestAnalyzerFieldType">suggest_type</str>
-      <str name="buildOnStartup">false</str>
+      <str name="field">suggest</str>
+      <str name="suggestAnalyzerFieldType">text_suggest</str>
+      <str name="weightField">score</str>
+      <str name="payloadField">gbl_suppressed_s</str>
+      <bool name="exactMatchFirst">false</bool>
+      <float name="blendFactor">0.1</float>
+      <str name="buildOnStartup">true</str>
+      <str name="buildOnCommit">true</str>
+      <int name="minPrefixChars">1</int>
+      <bool name="highlight">true</bool>
     </lst>
   </searchComponent>
-  -->
   <requestHandler name="/suggest" class="solr.SearchHandler" startup="lazy">
     <lst name="defaults">
       <str name="suggest">true</str>
-      <str name="suggest.count">10</str>
-      <str name="suggest.dictionary">mySuggester</str>
+      <str name="suggest.count">200</str>
+      <str name="suggest.dictionary">sdohSuggester</str>
     </lst>
     <arr name="components">
       <str>suggest</str>

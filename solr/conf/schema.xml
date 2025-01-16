@@ -27,6 +27,17 @@
     <!-- Spatial Field Type: Internal field used for overlap ratio boosting. -->
     <field name="solr_bboxtype" type="bbox" stored="true" indexed="true"/>
 
+    <!-- Updated suggestion -->
+    <field name="suggest" type="text_suggest" indexed="true" stored="true" multiValued="true" />
+    <field name="score" type="float" indexed="true" stored="true" default="100" />
+    <field name="payload" type="string" indexed="true" stored="true" />
+    <field name="gbl_suppressed_s" type="string" stored="true" indexed="true"/>
+    <field name="dct_description_sm" type="text_general" indexed="true" stored="true"
+      multiValued="true" />
+    
+    <!-- highlights and selections -->
+    <field name="text_with_relationships" type="text_with_relationships" indexed="true" stored="true" multiValued="true" />
+
     <!-- dynamic field with simple types by suffix -->
     <dynamicField name="*_b"    type="boolean" stored="true"  indexed="true"/>
     <dynamicField name="*_d"    type="double"  stored="true"  indexed="true"/>
@@ -167,6 +178,70 @@
     <fieldType name="bbox" class="solr.BBoxField"
            geo="true" distanceUnits="kilometers" numberType="pdouble" />
     <fieldType name="pdouble" class="solr.DoublePointField" docValues="true"/>
+
+    <!-- Updated suggest -->
+    <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100">
+      <analyzer type="index">
+        <tokenizer class="solr.StandardTokenizerFactory" />
+        <filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.StandardTokenizerFactory" />
+        <filter class="solr.LowerCaseFilterFactory" />
+      </analyzer>
+    </fieldType>
+    <fieldType name="text_suggest" class="solr.TextField">
+      <analyzer>
+        <tokenizer class="solr.StandardTokenizerFactory" /> <!-- Correct tokenizer class -->
+        <filter class="solr.LowerCaseFilterFactory" />
+        <filter class="solr.TrimFilterFactory" />
+      </analyzer>
+    </fieldType>
+    <fieldType name="text_context" class="solr.TextField" positionIncrementGap="100">
+      <analyzer>
+        <tokenizer class="solr.StandardTokenizerFactory" />
+        <filter class="solr.LowerCaseFilterFactory" />
+        <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" />
+        <filter class="solr.RemoveDuplicatesTokenFilterFactory" />
+      </analyzer>
+    </fieldType>
+
+    <!-- For payload -->
+    <fieldType name="bool_as_string" class="solr.TextField">
+      <analyzer>
+        <tokenizer class="solr.KeywordTokenizerFactory" />
+        <filter class="solr.PatternReplaceFilterFactory"
+          pattern="true|false"
+          replacement="$0"
+          replace="all" />
+      </analyzer>
+    </fieldType>
+
+    <!--   For relation handling   -->
+    <fieldType name="text_with_relationships" class="solr.TextField">
+      <analyzer type="index">
+        <tokenizer class="solr.StandardTokenizerFactory" />
+        <filter class="solr.LowerCaseFilterFactory" />
+        <filter class="solr.WordDelimiterGraphFilterFactory" generateWordParts="1"
+          generateNumberParts="1" catenateWords="1" catenateNumbers="1" stemEnglishPossessive="1"
+          preserveOriginal="1" splitOnCaseChange="1"/>
+        <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" />
+        <filter class="solr.EnglishMinimalStemFilterFactory" />
+        <filter class="solr.SynonymGraphFilterFactory" synonyms="synonyms.txt" ignoreCase="true"
+          expand="true" />
+        <filter class="solr.FlattenGraphFilterFactory" />
+      </analyzer>
+      <analyzer type="query">
+        <tokenizer class="solr.StandardTokenizerFactory" />
+        <filter class="solr.LowerCaseFilterFactory" />
+        <filter class="solr.WordDelimiterGraphFilterFactory" generateWordParts="1"
+          generateNumberParts="1" catenateWords="1" catenateNumbers="1" stemEnglishPossessive="1"
+          preserveOriginal="1" />
+        <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt" />
+        <filter class="solr.SynonymGraphFilterFactory" synonyms="synonyms.txt" ignoreCase="true"
+          expand="true" />
+      </analyzer>
+    </fieldType>
   </types>
 
   <!-- for scoring formula -->
@@ -183,7 +258,9 @@
   <copyField source="dct_title_s"         dest="dct_title_ti"         maxChars="1000"/>
   <copyField source="dct_isPartOf_sm"    dest="dct_isPartOf_tmi"    maxChars="1000"/>
   <copyField source="id"       dest="layer_slug_ti"       maxChars="100"/>
-
+  <copyField source="dct_keyword_sm" dest="dct_keyword_tmi"  maxChars="1000" />
+   <copyField source="sdoh_featured_variable_s" dest="sdoh_featured_variable_ti" maxChars="1000"/>
+  
   <!-- core text search -->
   <copyField source="*_s"                dest="text" />
   <copyField source="*_sm"               dest="text" />
@@ -199,21 +276,50 @@
   <copyField source="schema_provider_s" dest="spell"/>
   <copyField source="dct_subject_sm" dest="spell"/>
   <copyField source="dct_spatial_sm" dest="spell"/>
+  <copyField source="dct_temporal_sm"    dest="spell"/>
+  <copyField source="dct_description_sm"   dest="spell"/>
+  <copyField source="dct_format_s"        dest="spell"/>
+  <copyField source="dct_identifier_sm"    dest="spell"/>
+  <copyField source="dct_publisher_sm"     dest="spell"/>
+  <copyField source="dct_accessRights_s"        dest="spell"/>
+  <copyField source="dct_isPartOf_sm"    dest="spell"/>
+  <copyField source="sdoh_methods_variables_sm" dest="spell"/>
+  <copyField source="sdoh_data_variables_sm" dest="spell"/>
+  <copyField source="sdoh_featured_variable_s" dest="spell" />
 
-  <!-- for suggestions (default GBL setup) -->
-  <copyField source="dct_title_s" dest="suggest"/>
-  <copyField source="dct_creator_sm" dest="suggest"/>
-  <copyField source="dct_publisher_sm" dest="suggest"/>
-  <copyField source="schema_provider_s" dest="suggest"/>
-  <copyField source="dct_subject_sm" dest="suggest"/>
-  <copyField source="dct_spatial_sm" dest="suggest"/>
-  <!-- add some SDOH fields to the default suggester -->
-  <copyField source="sdoh_methods_variables_sm" dest="suggest"/>
-  <copyField source="sdoh_data_variables_sm" dest="suggest"/>
+  <!-- for suggestions (new SDOH setup) -->
+  <copyField source="dct_title_s" dest="suggest" boost="100" />
+  <copyField source="dct_creator_sm" dest="suggest" boost="20" />
+  <copyField source="dct_publisher_sm" dest="suggest" boost="20" />
+  <copyField source="dct_keyword_sm" dest="suggest" boost="30" />
+  <copyField source="dct_subject_sm" dest="suggest" boost="30" />
+  <copyField source="sdoh_data_usage_notes_s" dest="suggest" boost="100" />
+  <copyField source="sdoh_featured_variable_s" dest="suggest" boost="80" />
+  <copyField source="sdoh_methods_variables_sm" dest="suggest" boost="50" />
+  <copyField source="sdoh_data_variables_sm" dest="suggest" boost="50" />
+
+  <!-- for payload -->
+  <copyField source="gbl_suppressed_b" dest="gbl_suppressed_s"/>
+  <copyField source="gbl_suppressed_s" dest="payload"/>
 
   <!-- for the new SDOH suggestions -->
   <copyField source="dct_random_sm" dest="sdoh_suggestions"/>
 
   <!-- for bbox value -->
   <copyField source="dcat_bbox" dest="solr_bboxtype"/>
+
+  <!--   for relationship handle  -->
+  <copyField source="dct_title_s" dest="text_with_relationships" />
+  <copyField source="dct_description_sm" dest="text_with_relationships" />
+  <copyField source="dct_subject_sm" dest="text_with_relationships" />
+  <copyField source="dct_creator_sm" dest="text_with_relationships" />
+  <copyField source="dct_publisher_sm" dest="text_with_relationships" />
+  <copyField source="dct_spatial_sm" dest="text_with_relationships" />
+  <copyField source="dct_temporal_sm" dest="text_with_relationships" />
+  <copyField source="dct_isPartOf_sm" dest="text_with_relationships" />
+  <copyField source="sdoh_data_variables_sm" dest="text_with_relationships" />
+  <copyField source="sdoh_data_usage_notes_s" dest="text_with_relationships" />
+  <copyField source="sdoh_methods_variables_sm" dest="text_with_relationships" />
+  <copyField source="dct_keyword_sm" dest="text_with_relationships" />
+  <copyField source="sdoh_featured_variable_s" dest="text_with_relationships"/>
 </schema>

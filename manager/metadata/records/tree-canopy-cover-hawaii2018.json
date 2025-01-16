@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 19,
+    "to_fill": 25,
+    "filled_pct": 76,
+    "progress_class": "warning"
+  },
   "title": "Tree Canopy Cover (Hawaii 2018)",
   "alternative_title": null,
   "description": [
@@ -31,13 +39,13 @@
   ],
   "date_issued": null,
   "index_year": [
-    "2018"
+    2018
   ],
   "date_range": null,
   "spatial_coverage": [
     "Hawaii"
   ],
-  "geometry": null,
+  "geometry": "POLYGON ((-159.58 22.22, -160.1 22.03, -160.1 22.03, -160.23 21.89, -160.23 21.89, -160.25 21.85, -160.25 21.83, -160.25 21.81, -160.25 21.81, -160.24 21.81, -160.23 21.79, -160.23 21.79, -160.21 21.78, -160.2 21.78, -159.44 21.87, -158.11 21.3, -158.1 21.3, -156.97 20.73, -156.68 20.51, -156.06 19.73, -155.92 19.11, -155.91 19.08, -155.88 19.04, -155.88 19.03, -155.68 18.91, -155.68 18.91, -155.68 18.91, -155.67 18.91, -155.65 18.92, -154.97 19.35, -154.89 19.42, -154.86 19.44, -154.84 19.46, -154.83 19.47, -154.82 19.48, -154.81 19.52, -154.81 19.52, -154.81 19.53, -155.09 19.86, -155.09 19.86, -155.12 19.9, -155.14 19.92, -156 20.79, -156.01 20.8, -156.23 20.93, -156.24 20.94, -156.74 21.17, -157.97 21.71, -159.35 22.22, -159.4 22.23, -159.49 22.23, -159.56 22.23, -159.58 22.22))",
   "bounding_box": null,
   "centroid": null,
   "georeferenced": null,
@@ -46,7 +54,7 @@
   "is_part_of": null,
   "source": null,
   "is_version_of": [
-    "tree-canopy-cover"
+    "herop-qwqgwc"
   ],
   "replaces": null,
   "is_replaced_by": null,
@@ -64,9 +72,9 @@
     "http://schema.org/url": "https://www.mrlc.gov/data/nlcd-2018-usfs-tree-canopy-cover-hawaii"
   },
   "wxs_indentifier": null,
-  "id": "tree-canopy-cover-hawaii2018",
+  "id": "herop-zbfstv",
   "identifier": null,
-  "modified": "2024-08-01T18:24:54Z",
+  "modified": "2024-12-03T12:15:00Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

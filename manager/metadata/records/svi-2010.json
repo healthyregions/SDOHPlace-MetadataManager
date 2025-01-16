@@ -1,5 +1,13 @@
 {
-  "id": "svi-2010",
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 14,
+    "to_fill": 25,
+    "filled_pct": 56,
+    "progress_class": "danger"
+  },
+  "id": "herop-bzjhiq",
   "title": "CDC Social Vulnerability Index (SVI) 2010",
   "alternative_title": null,
   "description": null,
@@ -24,7 +32,12 @@
   "keyword": null,
   "temporal_coverage": null,
   "date_issued": "2010",
-  "index_year": "2010",
+  "index_year": [
+    2,
+    0,
+    1,
+    0
+  ],
   "date_range": null,
   "spatial_coverage": null,
   "geometry": null,
@@ -49,11 +62,12 @@
   },
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": "2023-07-06T02:44:40Z",
-  "metadata_version": "Aardvark",
+  "modified": "2024-12-03T12:14:59Z",
+  "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
-    "County", "Census Tract"
+    "County",
+    "Census Tract"
   ],
   "spatial_resolution_note": null,
   "methods_variables": null,

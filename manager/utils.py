@@ -1,10 +1,51 @@
 import os
+import json
+import string
+import random
+from pathlib import Path
+from typing import Union
 
 from dotenv import load_dotenv
+from shapely import (
+    from_geojson,
+    to_wkt,
+	is_ccw,
+    Point,
+    Polygon,
+    MultiPoint,
+    MultiPolygon,
+)
 
 load_dotenv()
 
 METADATA_DIR = os.path.join(os.path.dirname(__file__), "metadata")
+
+def load_json(path: Path):
+	with open(path, "r") as o:
+		return json.load(o)
+
+def load_geojson_geometry(filename: str) -> Union[Point, Polygon, MultiPoint, MultiPolygon]:
+	path = Path(METADATA_DIR, "geometries", filename)
+	with open(path, "r") as o:
+		data = o.read()
+	geom = from_geojson(data)
+	return geom
+
+def get_wkt_from_geojson(filename: str) -> str:
+	geom = load_geojson_geometry(filename)
+	if not is_ccw(geom):
+		geom = geom.reverse()
+	print("ok")
+	print(geom)
+	return to_wkt(geom, rounding_precision=3)
+
+def batch_list(lst, n):
+    """Yield successive n-sized chunks from lst."""
+    for i in range(0, len(lst), n):
+        yield lst[i:i + n]
+
+def generate_id(length=6):
+	return "herop-" + ''.join(random.choices(string.ascii_lowercase, k=length))
 
 def get_clean_field_from_form(form, field, field_def):
 	""" This function has bespoke logic for handling specific fields. """

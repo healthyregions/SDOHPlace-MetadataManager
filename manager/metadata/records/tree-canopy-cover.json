@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 20,
+    "to_fill": 25,
+    "filled_pct": 80,
+    "progress_class": "warning"
+  },
   "title": "Tree Canopy Cover",
   "alternative_title": null,
   "description": [
@@ -21,27 +29,33 @@
   "resource_type": [
     "Raster data"
   ],
-  "subject": null,
+  "subject": [
+    "Greenspaces"
+  ],
   "theme": [
     "Land Cover"
   ],
-  "keyword": null,
+  "keyword": [
+    "Green Space",
+    "Tree Canopy",
+    "Satellite Data"
+  ],
   "temporal_coverage": [
     "2011-2021"
   ],
   "date_issued": null,
   "index_year": [
-    "2011",
-    "2012",
-    "2013",
-    "2014",
-    "2015",
-    "2016",
-    "2017",
-    "2018",
-    "2019",
-    "2020",
-    "2021"
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
   ],
   "date_range": null,
   "spatial_coverage": [
@@ -50,7 +64,7 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -72,9 +86,9 @@
     "http://schema.org/url": "https://www.mrlc.gov/data?f%5B0%5D=category%3Atree%20canopy"
   },
   "wxs_indentifier": null,
-  "id": "tree-canopy-cover",
+  "id": "herop-qwqgwc",
   "identifier": null,
-  "modified": "2024-08-01T15:50:14Z",
+  "modified": "2024-12-03T12:15:00Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -83,7 +97,9 @@
   "spatial_resolution_note": "30m resolution",
   "methods_variables": null,
   "data_variables": [
-    "Percent tree canopy cover"
+    "Percent Tree Canopy Cover"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null
 }

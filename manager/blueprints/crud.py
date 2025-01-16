@@ -1,6 +1,7 @@
+import logging
 from dotenv import load_dotenv
 
-from flask import Blueprint, request, render_template, jsonify, url_for, redirect, flash
+from flask import Blueprint, request, render_template, jsonify, url_for, redirect, flash, current_app
 from flask_cors import CORS
 from flask_login import (
     current_user,
@@ -8,45 +9,51 @@ from flask_login import (
 )
 from werkzeug.exceptions import NotFound, Unauthorized
 
-from manager.models import db, Record, Schema
+from manager.registry import Registry, Record
 from manager.solr import Solr
 
 load_dotenv()
 
 crud = Blueprint('manager', __name__)
 
+registry = Registry()
+
 CORS(crud)
+
+logger = logging.getLogger(__name__)
 
 @crud.route("/", methods=["GET"])
 def index():
-	records = [r.to_json() for r in Record.query.all()]
-	records = sorted(records, key=lambda d: d['title'])
+	registry = Registry()
+	records = [r.to_json() for r in registry.records]
 	return render_template('index.html', records=records)
 
 @crud.route("/table", methods=["GET"])
 def table_view():
-	records = [r.to_json() for r in Record.query.all()]
-	records = sorted(records, key=lambda d: d['title'])
-	return render_template('full_table.html', records=records)
+	records = [r.to_json() for r in registry.records]
+	schema = registry.schema
+	fields = schema.schema_json['fields']
+	return render_template('full_table.html', records=records, fields=fields)
 
 @crud.route("/record/create", methods=["GET"])
 @login_required
 def create_record():
 	if request.method == "GET":
-		schema = Schema.query.get(1)
-		records = [r.to_json() for r in Record.query.all()]
+		schema = Registry().schema
+		records = [r.to_json() for r in registry.records]
 		relations_choices = [(r['id'], r['title']) for r in records]
 		return render_template('crud/edit.html',
-						 record=schema.get_blank_form(),
-						 display_groups=schema.display_groups,
-						 relations_choices=relations_choices,
-						 )
+			create_new=True,
+			record=schema.get_blank_form(),
+			display_groups=schema.display_groups,
+			relations_choices=relations_choices,
+		)
 
 @crud.route("/record/validate", methods=["POST"])
 @login_required
 def validate_record():
 	if request.method == "POST":
-		schema = Schema.query.get(1)
+		schema = registry.schema
 		form_errors = schema.validate_form_data(request.form)
 		if form_errors:
 			html = "<ul>"
@@ -61,17 +68,15 @@ def validate_record():
 def handle_record(id):
 
 	if request.method == "GET":
-		r = Record.query.filter_by(data_file=id+".json")
-		if r:
-			record = r[0]
-		else:
-			return NotFound
+		registry = Registry()
+		record = registry.get_record(id)
+		if not record:
+			raise NotFound
 		format = request.args.get('f', 'html')
 		edit = request.args.get('edit') == "true"
 		if format == "html":
 			if edit:
-				records = [r.to_json() for r in Record.query.all()]
-				records = sorted(records, key=lambda d: d['title'])
+				records = [r.to_json() for r in registry.records]
 				relations_choices = [(r['id'], r['title']) for r in records]
 				return render_template('crud/edit.html',
 					record=record.to_form(),
@@ -90,22 +95,18 @@ def handle_record(id):
 			return jsonify(record.to_solr())
 
 	if request.method == "POST":
+		registry = Registry()
 		if current_user.is_authenticated:
-			record = Record.query.filter_by(data_file=id+".json").first()
+			record = registry.get_record(id)
 			if record:
 				record.save_from_form_data(request.form)
 				record.last_modified_by = current_user.name
-				db.session.commit()
 			else:
-				record = Record()
-				record.schema_id = 1
+				record = Record(registry.schema)
 				record.save_from_form_data(request.form)
-				db.session.add(record)
-				db.session.commit()
-			record.load_data()
 			return redirect(url_for('manager.handle_record', id=record.data['id']))
 		else:
-			return Unauthorized
+			raise Unauthorized
 	elif request.method == "DELETE":
 		pass
 
@@ -117,16 +118,25 @@ def handle_solr(id):
 		# ultimately, reindex-all should be calling a method on Solr()
 		# but leaving here for the moment.
 		if id == "reindex-all":
+			current_app.logger.info(f"reindexing all records...")
 			s.delete_all()
-			records = [i.to_solr() for i in Record.query.all()]
+			registry = Registry()
+			records = [i.to_solr() for i in registry.records]
 			s.multi_add(records)
 			return redirect('/')
 		else:
-			try:
-				record = Record.query.filter_by(data_file=id+".json")[0]
-				record.index()
+			current_app.logger.info(f"indexing {id}")
+			registry = Registry()
+			record = registry.get_record(id)
+			if not record:
+				raise NotFound
+			result = record.index(solr_instance=s)
+			if result["success"]:
+				current_app.logger.info(f"record {id} indexed successfully")
+				current_app.logger.debug(result["document"])
 				return f'<div class="notification is-success">{record.data["title"]} re-indexed successfully</div>'
-			except Exception as e:
-				return f'<div class="notification is-success">Error while re-indexing record: {e}</div>'
+			else:
+				current_app.logger.error(result["error"])
+				return f'<div class="notification is-danger">Error while re-indexing record: {result["error"]}</div>'
 	elif request.method == "DELETE":
 		pass

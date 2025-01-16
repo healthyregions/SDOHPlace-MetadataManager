@@ -1,5 +1,13 @@
 {
-  "title": "National Neighborhood Data Archive (NaNDA)",
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 9,
+    "to_fill": 25,
+    "filled_pct": 36,
+    "progress_class": "danger"
+  },
+  "title": "NaNDA (National Neighborhood Data Archive)",
   "alternative_title": null,
   "description": null,
   "language": [],
@@ -11,9 +19,15 @@
     "Collections"
   ],
   "resource_type": [],
-  "subject": null,
-  "theme": [],
-  "keyword": null,
+  "subject": [
+    "Neighborhood and Built Environment"
+  ],
+  "theme": [
+    "Society"
+  ],
+  "keyword": [
+    "Neighborhood Data"
+  ],
   "temporal_coverage": null,
   "date_issued": null,
   "index_year": null,
@@ -22,12 +36,14 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
   "source": null,
-  "is_version_of": null,
+  "is_version_of": [
+    "herop-rkcyhr"
+  ],
   "replaces": null,
   "is_replaced_by": null,
   "rights": null,
@@ -38,11 +54,11 @@
   "file_size": null,
   "references": null,
   "wxs_indentifier": null,
-  "id": "nanda",
+  "id": "herop-zrurpe",
   "identifier": null,
-  "modified": "2024-07-30T22:51:13Z",
+  "modified": "2024-12-03T12:15:00Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": false,
+  "suppressed": true,
   "spatial_resolution": [
     "County",
     "State",
@@ -54,5 +70,7 @@
   "spatial_resolution_note": null,
   "methods_variables": null,
   "data_variables": null,
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null
 }

@@ -1,35 +1,61 @@
 {
-  "id": "sdoh-indices",
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 14,
+    "to_fill": 25,
+    "filled_pct": 56,
+    "progress_class": "danger"
+  },
+  "id": "herop-yvjqrx",
   "title": "US Social Determinants of Health",
   "alternative_title": null,
   "description": [
     "Neighborhood-Level Social Determinants of Health in the Continental United States. The variables are derived from the 2014 American Community Survey 5-year mean. These sample data are referenced in the tutorials for GeoDa, GeoDaSpace, and CAST."
   ],
-  "language": null,
+  "language": [],
   "display_note": [
     "Warning: This catalog record may be incomplete, as the SDOH Place data finder is still in development."
   ],
   "creator": [
     "Center for Spatial Data Science"
   ],
-  "publisher": null,
+  "publisher": [
+    "Center for Spatial Data Science"
+  ],
   "provider": null,
   "resource_class": [
     "Datasets"
   ],
-  "resource_type": null,
-  "subject": null,
-  "theme": null,
-  "keyword": null,
+  "resource_type": [
+    "Census data"
+  ],
+  "subject": [
+    "Demographics",
+    "Health and Healthcare",
+    "Social and Community Context"
+  ],
+  "theme": [
+    "Economy",
+    "Health",
+    "Society"
+  ],
+  "keyword": [
+    "US Census",
+    "Health Equity",
+    "SDOHSocioeconomic Data"
+  ],
   "temporal_coverage": null,
   "date_issued": null,
-  "index_year": 2014,
+  "index_year": [
+    2014
+  ],
   "date_range": null,
   "spatial_coverage": null,
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -45,20 +71,18 @@
   "file_size": null,
   "references": {
     "http://schema.org/url": "https://geodacenter.github.io/data-and-lab/us-sdoh/",
-    "http://schema.org/downloadUrl": [
-      {
-        "url": "https://geodacenter.github.io/data-and-lab/data/us-sdoh-2014.zip",
-        "label": "ZIP Archive"
-      }
-    ]
+    "http://schema.org/downloadUrl": "[{'url': 'https://geodacenter.github.io/data-and-lab/data/us-sdoh-2014.zip', 'label': 'ZIP Archive'}]"
   },
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": "2023-07-05T22:37:43Z",
-  "metadata_version": "Aardvark",
+  "modified": "2024-12-03T12:15:00Z",
+  "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
-  "spatial_resolution": null,
+  "spatial_resolution": [],
   "spatial_resolution_note": null,
   "methods_variables": null,
-  "data_variables": null
+  "data_variables": null,
+  "highlight_ids": null,
+  "featured_variable": null,
+  "data_usage_notes": null
 }

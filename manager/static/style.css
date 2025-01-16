@@ -9,12 +9,15 @@
     font-family: 'Nunito', sans-serif;
 }
 
+.title {
+    --bulma-title-weight: 400;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Fredoka', sans-serif;
 }
 
 a {
-    /* color: var(--primary-color); */
     font-weight: bolder;
 }
 
@@ -82,7 +85,6 @@ details {
 
 .subtitle {
     margin: 10px 0 0 0 !important;
-    font-weight: bold;
 }
 
 .label {
@@ -130,4 +132,28 @@ details {
 }
 .progress-lt75 {
     background-color: #f2c3be;
+}
+
+.all-records-table {
+    display:block;
+    max-height: calc(100vh - 56px);
+    overflow:auto;
+}
+
+.all-records-table > tbody > tr > td > div.row-title {
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: auto;
+    width: 250px;
+}
+
+.all-records-table > tbody > tr > td > div.row-item {
+    height: 50px;
+    overflow-y: auto
+}
+
+.home-table > tbody > tr > td > div.row-item {
+    min-height: 2em;
+    /* overflow-y: auto */
 }

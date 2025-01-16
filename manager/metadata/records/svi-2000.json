@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 14,
+    "to_fill": 25,
+    "filled_pct": 56,
+    "progress_class": "danger"
+  },
   "title": "CDC Social Vulnerability Index (SVI) 2000",
   "alternative_title": null,
   "description": null,
@@ -19,7 +27,12 @@
   "keyword": null,
   "temporal_coverage": null,
   "date_issued": "2000",
-  "index_year": "2000",
+  "index_year": [
+    2,
+    0,
+    0,
+    0
+  ],
   "date_range": null,
   "spatial_coverage": null,
   "geometry": null,
@@ -43,9 +56,9 @@
     "http://lccn.loc.gov/sh85035852": "https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2000.html"
   },
   "wxs_indentifier": null,
-  "id": "svi-2000",
+  "id": "herop-wuknpz",
   "identifier": "DAF",
-  "modified": "2024-04-22T18:16:43Z",
+  "modified": "2024-12-03T12:14:59Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

@@ -2,11 +2,9 @@
 
 THIS_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
-sudo su - solr -c "/opt/solr/bin/solr create -c $1 -n data_driven_schema_configs"
-
-sudo mv /var/solr/data/$1/conf /var/solr/data/$1/conf-backup
+sudo mv /var/solr/data/$1/conf /var/solr/data/$1/conf-backup-$(date +"%Y%m%d%H%M")
 sudo cp $THIS_DIR/../solr/conf /var/solr/data/$1/ -r
 
-sudo service solr restart
+sudo sed -i -e "s/{{SOLR_CORE}}/$1/g" /var/solr/data/$1/conf/solrconfig.xml
 
-$THIS_DIR/../env/bin/flask index --clean
+curl "http://localhost:8983/solr/admin/cores?action=RELOAD&core=$1"

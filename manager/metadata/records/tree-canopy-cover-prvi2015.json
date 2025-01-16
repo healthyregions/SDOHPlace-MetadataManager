@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 25,
+    "filled_pct": 72,
+    "progress_class": "danger"
+  },
   "title": "Tree Canopy Cover (PR & USVI 2015)",
   "alternative_title": null,
   "description": [
@@ -31,7 +39,7 @@
   ],
   "date_issued": null,
   "index_year": [
-    "2015"
+    2015
   ],
   "date_range": null,
   "spatial_coverage": [
@@ -46,7 +54,7 @@
   "is_part_of": null,
   "source": null,
   "is_version_of": [
-    "tree-canopy-cover"
+    "herop-qwqgwc"
   ],
   "replaces": null,
   "is_replaced_by": null,
@@ -64,9 +72,9 @@
     "http://schema.org/url": "https://www.mrlc.gov/data/nlcd-2015-usfs-tree-canopy-cover-puerto-rico-us-virgin-islands"
   },
   "wxs_indentifier": null,
-  "id": "tree-canopy-cover-prvi2015",
+  "id": "herop-sbpeai",
   "identifier": null,
-  "modified": "2024-08-02T16:49:14Z",
+  "modified": "2024-12-03T12:15:00Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

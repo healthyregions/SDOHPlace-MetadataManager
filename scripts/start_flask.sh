@@ -13,4 +13,5 @@ $THIS_DIR/../env/bin/gunicorn -w 4 manager.app:app \
     --pid $PIDFILE \
     --log-file $LOGFILE \
     --log-level DEBUG \
-    --bind 0.0.0.0:$PORT
+    --bind 0.0.0.0:$PORT \
+    --capture-output

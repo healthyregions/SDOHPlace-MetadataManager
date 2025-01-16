@@ -10,22 +10,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#-----------------------------------------------------------------------
-#some test synonym mappings unlikely to appear in real input text
-aaa => aaaa
-bbb => bbbb1 bbbb2
-ccc => cccc1,cccc2
-a\=>a => b\=>b
-a\,a => b\,b
-fooaaa,baraaa,bazaaa
+# SDOH bidirectional synonyms
+sdoh,social determinants of health,social determinants,health determinants
+health equity,healthcare equity,health equality
+economic stability,income stability,financial security,economic security
+education access,educational opportunity,education quality
+healthcare access,health care access,access to care,healthcare availability
+neighborhood environment,built environment,environmental conditions
+social context,social support,community context
+food security,food access,food availability
+housing stability,housing security,housing access
+transportation access,transit access,transportation availability
 
-# Some synonym groups specific to this example
-GB,gib,gigabyte,gigabytes
-MB,mib,megabyte,megabytes
-Television, Televisions, TV, TVs
-#notice we use "gib" instead of "GiB" so any WordDelimiterFilter coming
-#after us won't split it into two words.
-
-# Synonym mappings can be used for spelling correction too
-pixima => pixma
-
+# SDOH hierarchical relationship (unidirectional)
+sdoh => social vulnerability,health equity
+poverty => economic stability,income stability,financial hardship
+literacy => education access,education quality,educational attainment
+healthcare disparities => health equity,healthcare access,care availability
+environmental justice => neighborhood environment,built environment,environmental health
+social vulnerability => sdoh,health equity,social determinants of health
+health disparities => sdoh,health equity,healthcare access

@@ -1,4 +1,12 @@
 {
+  "_meta": {
+    "created_by": "",
+    "last_modified_by": "Admin",
+    "filled": 18,
+    "to_fill": 25,
+    "filled_pct": 72,
+    "progress_class": "danger"
+  },
   "title": "USGS Land Cover (CONUS)",
   "alternative_title": null,
   "description": [
@@ -39,15 +47,15 @@
   ],
   "date_issued": null,
   "index_year": [
-    "2001",
-    "2004",
-    "2006",
-    "2008",
-    "2011",
-    "2013",
-    "2016",
-    "2019",
-    "2021"
+    2001,
+    2004,
+    2006,
+    2008,
+    2011,
+    2013,
+    2016,
+    2019,
+    2021
   ],
   "date_range": null,
   "spatial_coverage": [
@@ -62,7 +70,7 @@
   "is_part_of": null,
   "source": null,
   "is_version_of": [
-    "usgs-land-cover"
+    "herop-iviplg"
   ],
   "replaces": null,
   "is_replaced_by": null,
@@ -80,9 +88,9 @@
     "http://schema.org/url": "https://www.mrlc.gov/data/nlcd-land-cover-conus-all-years"
   },
   "wxs_indentifier": null,
-  "id": "usgs-land-cover-conus",
+  "id": "herop-cxuyoz",
   "identifier": null,
-  "modified": "2024-08-02T18:04:11Z",
+  "modified": "2024-12-03T12:15:00Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [

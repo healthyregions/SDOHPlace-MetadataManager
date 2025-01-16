@@ -15,43 +15,52 @@
 {% endblock %}
 
 {% block main_content %}
-<table class="table table-striped is-fullwidth">
+<table class="table table-striped is-fullwidth home-table">
     <thead>
         <tr>
             <td>Title</td>
-            <td>Last Edit</td>
+            <td style="white-space:nowrap;">Created by</td>
             <td>Completeness</td>
             <td></td>
+            <td style="white-space:nowrap;">View as...</td>
         </tr>
     </thead>
     <tbody style="overflow-y:auto; max-height: calc(100vh - 110px);">
         {% for record in records %}
         <tr>
             <td>
-                <a href="{{ url_for('manager.handle_record', id=record.id) }}">{{record['title']}}</a>
+                <div class="row-item">
+                    <a href="{{ url_for('manager.handle_record', id=record.id) }}">{{record['title']}}</a>
+                </div>
             </td>
             <td>
-                <span style="font-size:.8em;">{{record['meta']['last_modified_by']}}</span>
+                <div class="row-item">
+                    <span style="font-size:.8em; white-space:nowrap;">{{record['_meta']['created_by']}}</span>
+                </div>
             </td>
             <td>
-                <span class="tag is-{{record['meta']['progress_class']}}">{{record['meta']['filled_pct']}}% ({{record['meta']['filled']}}/{{record['meta']['to_fill']}})</span>
+                <div class="row-item">
+                    <span class="tag is-{{record['_meta']['progress_class']}}">{{record['_meta']['filled_pct']}}% ({{record['_meta']['filled']}}/{{record['_meta']['to_fill']}})</span>
+                </div>
             </td>
-            <td style="width:40px;">
-                <div class="dropdown is-hoverable">
-                    <div class="dropdown-trigger">
-                      <button class="button is-small" aria-haspopup="true" aria-controls="{{record.id}}-dropdown-menu">
-                        <span>︙</span>
-                      </button>
-                    </div>
-                    <div class="dropdown-menu" id="{{record.id}}-dropdown-menu" role="menu">
-                        <div class="buttons are-small is-left has-addons">
-                            <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=json" class="button is-link" data-tooltip="View this record as JSON">JSON</a>
-                            <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=solr" class="button is-link" data-tooltip="View this record's corresponding Solr document">Solr</a>
-                            <a href="{{ gbl_host }}/catalog/{{ record.id }}" class="button is-link" role="button" target="_blank" data-tooltip="View this record in GeoBlacklight">GBL</a>
-                        </div>
+            <td>
+                <div class="row-item">
+                    {% if record['suppressed'] %}
+                    <span class="tag is-dark">hidden</span>
+                    {% endif %}
+                </div>
+            </td>
+            <td>
+                <div class="row-item" style="width:100px">
+                    <div class="field has-addons">
+                        <p class="control">
+                            <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=json" class="button is-link is-small" data-tooltip="View this record as JSON">JSON</a>
+                        </p>
+                        <p class="control">
+                        <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=solr" class="button is-link is-small" data-tooltip="View this record's corresponding Solr document">Solr</a>
+                        </p>
                     </div>
                 </div>
-                
             </td>
         </tr>
         {% endfor %}
