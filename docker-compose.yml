@@ -1,3 +1,6 @@
+volumes:
+  solr-data:
+
 services:
   solr:
     container_name: sdoh-solr
@@ -13,6 +16,7 @@ services:
     volumes:
       - ./solr/solr.in.sh:/etc/default/solr.in.sh
       - ./solr:/solr-configset
+      - solr-data:/var/solr
     # TODO: do we need -n data_driven_schema_configs here?
     command: [ '/bin/sh', '-c', 'solr-precreate blacklight-core-dev /solr-configset -n data_driven_schema_configs' ]
 
