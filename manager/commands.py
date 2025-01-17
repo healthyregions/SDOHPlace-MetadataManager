@@ -123,6 +123,17 @@ def set_all_ids():
 		"is_replaced_by",
 	]
 
+@click.command()
+@with_appcontext
+@click.option('-f', '--force', is_flag=True, default=False)
+def reset_records(force=False):
+	""" Removes all DB Record objects and recreates them from files on disk."""
+
+	if not force:
+		confirm = input("delete all database records? This cannot be undone. Y/n ")
+		if confirm.lower().startswith("n"):
+			exit()
+
 	id_lookup = {}
 	for r in registry.records:
 		id = r.data["id"]

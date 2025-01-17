@@ -110,7 +110,7 @@ to control the application. A log will be created in `./scripts/.log`.
 
 ### Install/Run with Docker
 
-The Docker deploy will serve the app on port 8080 with nginx.
+The Docker deploy will serve the app on port 8000 with nginx, and an instance of Solr on port 8983.
 
 Start containers
 
@@ -118,8 +118,22 @@ Start containers
 docker-compose up -d --build
 ```
 
+After startup, run the following to index the data into SQLite
+
+```
+docker exec -it sdoh-manager flask registry index --clean
+```
+
 Stop containers
 
 ```
 docker-compose down
+```
+
+Stopping the containers does not destroy Solr data.
+
+To clean out Solr and delete the existing data, you can run the following:
+
+```
+docker compose down --volumes
 ```
