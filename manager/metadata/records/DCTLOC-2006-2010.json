@@ -89,7 +89,7 @@
   "wxs_indentifier": null,
   "id": "herop-dnnjyy",
   "identifier": null,
-  "modified": "2024-12-03T12:14:59Z",
+  "modified": "2025-01-17T15:56:56Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -105,6 +105,8 @@
     "Mean estimated 8-hour average ozone concentration in parts per billion (ppb) within 3 meters of the surface of the earth"
   ],
   "data_usage_notes": null,
-  "highlight_ids": null,
+  "highlight_ids": [
+    "140US*"
+  ],
   "featured_variable": null
 }

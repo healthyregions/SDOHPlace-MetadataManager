@@ -136,7 +136,7 @@
   "wxs_indentifier": null,
   "id": "herop-ddydvt",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-01-17T16:15:49Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -190,6 +190,8 @@
     "Vehicle Miles Traveled (VMT)"
   ],
   "data_usage_notes": null,
-  "highlight_ids": null,
+  "highlight_ids": [
+    "150US*"
+  ],
   "featured_variable": "Housing + Transportation (H + T) Costs as a Percent of Household Income"
 }

@@ -91,7 +91,7 @@
   "wxs_indentifier": null,
   "id": "herop-uyrmqd",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-01-17T16:15:11Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -111,6 +111,8 @@
     "Labels"
   ],
   "data_usage_notes": null,
-  "highlight_ids": null,
+  "highlight_ids": [
+    "150US*"
+  ],
   "featured_variable": null
 }

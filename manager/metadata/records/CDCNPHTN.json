@@ -100,7 +100,7 @@
   "wxs_indentifier": null,
   "id": "herop-lukhbw",
   "identifier": null,
-  "modified": "2024-12-03T12:14:59Z",
+  "modified": "2025-01-17T16:21:20Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -108,7 +108,9 @@
     "State",
     "Census Tract"
   ],
-  "highlight_ids": null,
+  "highlight_ids": [
+    "140US*"
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Air quality",

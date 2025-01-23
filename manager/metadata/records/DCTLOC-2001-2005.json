@@ -86,7 +86,7 @@
   "wxs_indentifier": null,
   "id": "herop-ojodli",
   "identifier": null,
-  "modified": "2024-12-03T12:14:59Z",
+  "modified": "2025-01-17T15:56:37Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -102,6 +102,8 @@
     "Standard error of the estimated ozone concentration"
   ],
   "data_usage_notes": null,
-  "highlight_ids": null,
+  "highlight_ids": [
+    "140US*"
+  ],
   "featured_variable": null
 }

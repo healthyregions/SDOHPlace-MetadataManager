@@ -93,7 +93,7 @@
   "wxs_indentifier": null,
   "id": "herop-qgbmwc",
   "identifier": null,
-  "modified": "2024-12-03T12:14:59Z",
+  "modified": "2025-01-17T15:58:16Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -112,6 +112,8 @@
     "Population-weighted estimated 8-hour average ozone concentration in parts per billion (ppb) within 3 meters of the surface of the earth for the county"
   ],
   "data_usage_notes": null,
-  "highlight_ids": null,
+  "highlight_ids": [
+    "050US*"
+  ],
   "featured_variable": null
 }

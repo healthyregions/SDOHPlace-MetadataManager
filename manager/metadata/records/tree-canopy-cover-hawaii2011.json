@@ -74,7 +74,7 @@
   "wxs_indentifier": null,
   "id": "herop-wnmlru",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-01-17T16:12:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -86,6 +86,8 @@
     "Percent tree canopy cover"
   ],
   "data_usage_notes": null,
-  "highlight_ids": null,
+  "highlight_ids": [
+    "150US15*"
+  ],
   "featured_variable": null
 }

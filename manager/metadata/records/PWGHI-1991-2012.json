@@ -92,7 +92,7 @@
   "wxs_indentifier": null,
   "id": "herop-efqkhv",
   "identifier": null,
-  "modified": "2024-12-03T12:14:59Z",
+  "modified": "2025-01-17T16:10:23Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -108,6 +108,8 @@
     "county-level population weighted daily GHI in wh/m2 (ghi)"
   ],
   "data_usage_notes": null,
-  "highlight_ids": null,
+  "highlight_ids": [
+    "050US*"
+  ],
   "featured_variable": null
 }

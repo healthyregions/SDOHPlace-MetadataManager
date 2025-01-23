@@ -88,13 +88,19 @@
   "wxs_indentifier": null,
   "id": "herop-fhlnqe",
   "identifier": null,
-  "modified": "2024-12-03T12:14:59Z",
+  "modified": "2025-01-17T16:35:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
-  "highlight_ids": null,
+  "highlight_ids": [
+    "050US17089",
+    "050US17043",
+    "050US17031",
+    "050US17093",
+    "050US17197"
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "year",
