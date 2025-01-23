@@ -31,6 +31,14 @@
     <a href="{{ discovery_app_url }}/search/?show={{ record.id }}" class="button" role="button" target="_blank">Data Discovery App</a>
 </div>
 <div id="reindex-result"></div>
+<h2 class="subtitle">Jump to</h2>
+<div class="content">
+    <ul style="font-size:.8em; list-style:none; margin-left:0">
+        {% for link in link_list %}
+        <li><a href="/record/{{link.id}}">{{link.title}}</a></li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}
 
 {% block main_content %}

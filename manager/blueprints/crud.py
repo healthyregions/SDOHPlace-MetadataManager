@@ -78,18 +78,21 @@ def handle_record(id):
 		format = request.args.get('f', 'html')
 		edit = request.args.get('edit') == "true"
 		if format == "html":
+			records = [r.to_json() for r in registry.records]
+			link_list = [{"id": r['id'], "title": r['title']} for r in records if not r["suppressed"]]
 			if edit:
-				records = [r.to_json() for r in registry.records]
 				relations_choices = [(r['id'], r['title']) for r in records]
 				return render_template('crud/edit.html',
 					record=record.to_form(),
 					relations_choices=relations_choices,
+					link_list=link_list,
 					display_groups=record.schema.display_groups,
 				)
 			else:
 				return render_template(
 					'crud/view.html',
 					record=record.to_json(),
+					link_list=link_list,
 					display_groups=record.schema.display_groups,
 				)
 		elif format == "json":
@@ -121,7 +124,7 @@ def handle_solr(id):
 		# ultimately, reindex-all should be calling a method on Solr()
 		# but leaving here for the moment.
 		if id == "reindex-all":
-			current_app.logger.info(f"reindexing all records...")
+			current_app.logger.info("reindexing all records...")
 			s.delete_all()
 			registry = Registry()
 			records = [i.to_solr() for i in registry.records]
