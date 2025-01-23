@@ -23,9 +23,9 @@
             <td>Completeness</td>
             <td>
                 {% if show_hidden %}
-                <a href="/">hide suppressed</a>
+                <a href="/" title="hide suppressed records">hide suppressed</a>
                 {% else %}
-                <a href="/?show-hidden=true">show suppressed</a>
+                <a href="/?show-hidden=true" title="show all records including those marked 'suppressed'">show all</a>
                 {% endif %}
             </td>
             <td style="white-space:nowrap;">View as...</td>
@@ -59,10 +59,10 @@
             <td>
                 <div class="row-item" style="width:100px">
                     <div class="field has-addons">
-                        <p class="control">
+                        <p class="control" style="margin:0;">
                             <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=json" class="button is-link is-small" data-tooltip="View this record as JSON">JSON</a>
                         </p>
-                        <p class="control">
+                        <p class="control" style="margin:0;">
                         <a href="{{ url_for('manager.handle_record', id=record.id) }}?f=solr" class="button is-link is-small" data-tooltip="View this record's corresponding Solr document">Solr</a>
                         </p>
                     </div>

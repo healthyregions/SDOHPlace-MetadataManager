@@ -150,10 +150,15 @@ details {
 
 .all-records-table > tbody > tr > td > div.row-item {
     height: 50px;
-    overflow-y: auto
+    overflow-y: auto;
+}
+
+.home-table > tbody > tr > td {
+    padding: 2px 5px;
 }
 
 .home-table > tbody > tr > td > div.row-item {
+    display: inline;
     min-height: 2em;
-    /* overflow-y: auto */
+    vertical-align: middle;
 }
