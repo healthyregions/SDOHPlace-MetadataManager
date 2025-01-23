@@ -25,8 +25,11 @@ logger = logging.getLogger(__name__)
 @crud.route("/", methods=["GET"])
 def index():
 	registry = Registry()
+	show_hidden = True if request.args.get('show-hidden') == "true" else False
 	records = [r.to_json() for r in registry.records]
-	return render_template('index.html', records=records)
+	if show_hidden is False:
+		records = [r for r in records if r['suppressed'] is not True]
+	return render_template('index.html', records=records, show_hidden=show_hidden)
 
 @crud.route("/table", methods=["GET"])
 def table_view():

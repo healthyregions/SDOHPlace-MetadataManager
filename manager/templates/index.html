@@ -21,7 +21,13 @@
             <td>Title</td>
             <td style="white-space:nowrap;">Created by</td>
             <td>Completeness</td>
-            <td></td>
+            <td>
+                {% if show_hidden %}
+                <a href="/">hide suppressed</a>
+                {% else %}
+                <a href="/?show-hidden=true">show suppressed</a>
+                {% endif %}
+            </td>
             <td style="white-space:nowrap;">View as...</td>
         </tr>
     </thead>
