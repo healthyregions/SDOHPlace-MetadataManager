@@ -473,8 +473,8 @@
                 "United States -- full coverage of the US, including AK, HI and Puerto Rico",
                 "Contiguous US -- only coverage of the contiguous 48 states, excluding AK, HI and Puerto Rico",
                 "Alaska -- only coverage of Alaska",
-                "Alaska -- only coverage of Hawaii",
-                "For all other cases, just list state names (\"Illinois\"), or city, state (\"Chicaco, Illinois\")."
+                "Hawaii -- only coverage of Hawaii",
+                "For all other cases, just list state names (\"Illinois\"), or city, state (\"Chicago, Illinois\")."
             ]
         },
         {
