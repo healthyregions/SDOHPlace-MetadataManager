@@ -5,7 +5,8 @@ from flask import current_app
 
 SOLR_HOST = os.getenv('SOLR_HOST', '').rstrip('/')
 SOLR_CORE = os.getenv('SOLR_CORE', '').rstrip('/')
-
+SOLR_USERNAME = os.getenv('SOLR_USERNAME', '')
+SOLR_PASSWORD = os.getenv('SOLR_PASSWORD', '')
 SOLR_URL = f"{SOLR_HOST}/{SOLR_CORE}/"
 
 class Solr:
@@ -13,7 +14,8 @@ class Solr:
 	def __init__(self, verbose=False):
 		self.solr = pysolr.Solr(
 			SOLR_URL,
-			always_commit=True
+			always_commit=True,
+                        auth=(SOLR_USERNAME, SOLR_PASSWORD)
 		)
 		self.health_check()
 		self.verbose=verbose
