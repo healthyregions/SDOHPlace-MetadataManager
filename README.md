@@ -110,16 +110,27 @@ to control the application. A log will be created in `./scripts/.log`.
 
 ### Install/Run with Docker
 
-The Docker deploy will serve the app on port 8080 with nginx.
+The Docker deploy will serve the app with NGINX: http://localhost:8000
 
-Start containers
+It will also run Solr at http://localhost:8983 and will automatically create a core named `blacklight-core-dev`
 
+Start containers:
+```bash
+docker compose up -d --build
 ```
-docker-compose up -d --build
+This will build a Docker image and run a container from that image.
+
+Populate Solr:
+```bash
+docker compose exec -it manager flask registry index --clean 
 ```
 
-Stop containers
-
+Point your SDOHPlace Discovery App at this instance by editing the `.env` for that project:
+```env
+NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-dev'
 ```
-docker-compose down
+
+Shutdown containers:
+```bash
+docker compose down
 ```
