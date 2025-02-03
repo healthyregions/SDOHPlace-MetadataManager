@@ -96,7 +96,7 @@ class Registry():
         for f in files:
             record = Record(self.schema).load_from_file(f)
             self.records.append(record)
-        self.records.sort(key=lambda d: d.data['title'])
+        self.records.sort(key=lambda d: d.data['title'] if d.data['title'] else d.data['id'])
 
     def get_record(self, id):
         files = Path(METADATA_DIR, "records").glob("*.json")
