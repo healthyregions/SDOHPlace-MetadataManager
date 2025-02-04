@@ -7,8 +7,10 @@
     "filled_pct": 92,
     "progress_class": "success"
   },
-  "title": "CDC Population-Weighted Ultraviolet Irradiance 2004-2015",
-  "alternative_title": null,
+  "title": "Ultraviolet Irradiance, 2004-2015 (CDC)",
+  "alternative_title": [
+    "CDC Population-Weighted Ultraviolet Irradiance 2004-2015"
+  ],
   "description": [
     "The data are compiled to show the temporal and spatial trends of population-weighted ultraviolet (UV) irradiance levels throughout the continental U.S. from October 2004 to",
     "December 2015.  The county-level population-weighted irradiance data are provided by the Environmental Remote Sensing group at the Rollins School of Public Health at Emory University, led by Prof. Yang Liu. The original irradiance data are from Ozone Monitoring Instrument (OMI) Level 2 Surface UV Irradiance Product from October 2004 to the end of 2015 provided by University of Iowa."
@@ -87,13 +89,13 @@
   "format": "CSV | RSS | RDF | XML",
   "file_size": null,
   "references": {
-    "http://schema.org/url ": "https://ephtracking.cdc.gov/DataExplorer/#/",
+    "http://schema.org/url ": "https://healthdata.gov/dataset/Population-Weighted-Ultraviolet-Irradiance-2004-20/mt9t-8zb9/about_data",
     "http://lccn.loc.gov/sh85035852": "https://data.cdc.gov/Environmental-Health-Toxicology/Population-Weighted-Ultraviolet-Irradiance-2004-20/h28b-t43q/data_preview"
   },
   "wxs_indentifier": null,
   "id": "herop-drwddq",
   "identifier": null,
-  "modified": "2024-12-03T12:14:59Z",
+  "modified": "2025-01-27T20:59:06Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

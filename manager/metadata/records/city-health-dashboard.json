@@ -2,21 +2,21 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 20,
+    "filled": 23,
     "to_fill": 25,
-    "filled_pct": 80,
-    "progress_class": "warning"
+    "filled_pct": 92,
+    "progress_class": "success"
   },
   "title": "City Health Dashboard",
   "alternative_title": null,
   "description": [
-    "More than 80 percent of U.S. residents live in urban areas. But until recently, few measures have been available to assess health, the factors that shape health, and the drivers of health equity at the city level. That's where the City Health Dashboard comes in. Our goal is to provide communities and city leaders with an array of regularly updated data specific to neighborhood and/or city boundaries \u2013 such as life expectancy, park access, and children in poverty -- to improve the health and well-being of everyone in the community."
+    "The goal of the City Health Dashboard is to provide communities and city leaders with an array of regularly updated data specific to neighborhood and/or city boundaries\u2014such as life expectancy, park access, and children in poverty\u2014to improve the health and well-being of everyone in the community. The database and interactive web tool enables exploration of the factors that shape health and the drivers of health equity at the city level."
   ],
   "language": [
     "eng"
   ],
   "display_note": [
-    "Warning: This database is still in development, and this record may be incomplete."
+    "Warning: Some of the measures included are <i> modeled</I> predictions at the small area level. Care should be take in interpretation at finer resolutions to ensure that variations in measures are due to change in measure of interest, and not due to the methodology generated to establish measure. Modeled data should be used with tremendous caution in analytical work."
   ],
   "creator": [
     "Department of Population Health, NYU Langone Health"
@@ -26,20 +26,24 @@
   ],
   "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
+    "Datasets",
     "Websites"
   ],
-  "resource_type": [],
+  "resource_type": [
+    "Wall maps"
+  ],
   "subject": [
-    "Economic Stability",
+    "Demographics",
+    "Employment",
     "Health and Healthcare",
     "Neighborhood and Built Environment",
+    "Physical Activity and Lifestyle",
     "Social and Community Context"
   ],
   "theme": [
+    "Economy",
     "Environment",
-    "Health",
-    "Society",
-    "Transportation"
+    "Health"
   ],
   "keyword": [
     "Health Equity",
@@ -986,12 +990,13 @@
   "format": "CSV",
   "file_size": "23.1 mb",
   "references": {
-    "http://lccn.loc.gov/sh85035852": "https://www.cityhealthdashboard.com/data-access?chdash_survey_completed=true"
+    "http://lccn.loc.gov/sh85035852": "https://www.cityhealthdashboard.com/data-access",
+    "http://schema.org/downloadUrl": "https://assets.ctfassets.net/2b49co28d55u/1FdfgsUln2VB4gQsRtaiQQ/4944489a6852656bcebe47989c9a4ef2/City_Health_Dashboard_-_Technical_Document_-_12.03.24.pdf"
   },
   "wxs_indentifier": null,
   "id": "herop-xtoqlx",
   "identifier": null,
-  "modified": "2025-01-17T16:49:17Z",
+  "modified": "2025-02-03T22:19:25Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -30306,8 +30311,69 @@
     "140US15003011105"
   ],
   "spatial_resolution_note": "note 1 | note 2",
-  "methods_variables": null,
-  "data_variables": null,
+  "methods_variables": [
+    "Dental Care",
+    "Prenatal Care",
+    "Routine",
+    "Checkup, 18+",
+    "Uninsured",
+    "Binge Drinking",
+    "Physical Inactivity",
+    "Smoking",
+    "Teen Births",
+    "Breast Cancer Deaths",
+    "Cardiovascular Disease Deaths",
+    "Colorectal Cancer Deaths",
+    "Diabetes",
+    "Firearm Homicides",
+    "Firearm Suicides",
+    "Frequent Mental Distress",
+    "Frequent Physical Distress",
+    "High Blood Pressure",
+    "Independent Living Difficulty",
+    "Life Expectancy",
+    "Low Birthweight",
+    "Obesity",
+    "Opioid Overdose Deaths",
+    "Premature Deaths (All Causes)",
+    "Air Pollution - Ozone",
+    "Air Pollution -Particulate Matter",
+    "Housing with Potential Lead Risk",
+    "Lead Exposure Risk Index",
+    "Park Access",
+    "Walkability",
+    "Broadband Connection",
+    "Children in Poverty",
+    "Chronic Absenteeism",
+    "Credit Insecurity Index",
+    "High School Completion",
+    "Income Inequality",
+    "Neighborhood Racial/Ethnic Segregation",
+    "Racial/Ethnic Diversity",
+    "Rent Burden",
+    "Third-Grade Reading Scores",
+    "Unemployment - Annual, Neighborhood-Level",
+    "Unemployment - Current, City-Level",
+    "Voter Turnout",
+    "Youth Not in Work or School"
+  ],
+  "data_variables": [
+    "period type",
+    "group name",
+    "data period",
+    "census parent shape year",
+    "metric name",
+    "geography level",
+    "estimate",
+    "geography name",
+    "aggregate indicator",
+    "source name",
+    "data indicator",
+    "numerator",
+    "denomerator",
+    "lower confidence interval",
+    "upper confidence interval"
+  ],
   "data_usage_notes": null,
   "featured_variable": null
 }

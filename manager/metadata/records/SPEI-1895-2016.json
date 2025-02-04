@@ -7,8 +7,10 @@
     "filled_pct": 92,
     "progress_class": "success"
   },
-  "title": "CDC Standardized Precipitation Evapotranspiration Index 1895-2016",
-  "alternative_title": null,
+  "title": "Standardized Precipitation Evapotranspiration Index, 1895-2016 (CDC)",
+  "alternative_title": [
+    "CDC Standardized Precipitation Evapotranspiration Index 1895-2016"
+  ],
   "description": [
     "The Standardized Precipitation Evapotranspiration Index (SPEI) is an extension of the",
     "widely used Standardized Precipitation Index (SPI). The SPEI is designed to take into account both precipitation and potential evapotranspiration (PET) in determining drought. Thus, unlike the SPI, the SPEI captures the main impact of increased temperatures on water demand. Like the SPI, the SPEI can be calculated on a range of timescales from 1-48 months. At longer timescales (>~18 months), the SPEI has been shown to correlate with the self-calibrating PDSI (sc-PDSI). If only limited data are available, such as temperature and precipitation, PET can be estimated with the simple Thornthwaite method. In this simplified approach, variables that can affect PET such as wind speed, surface humidity and solar radiation are not accounted for. The dataset includes one-month SPEI values for every contiguous US county and the District of Columbia monthly from 1895-2016. The dataset has been compiled to estimate wetness and dryness of a particular area. This is important for the agriculture as well as health sectors. The data can be used to examine local and national trends in drought information."
@@ -91,7 +93,7 @@
   "wxs_indentifier": null,
   "id": "herop-bllwns",
   "identifier": null,
-  "modified": "2024-12-03T12:14:59Z",
+  "modified": "2025-01-25T16:13:17Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

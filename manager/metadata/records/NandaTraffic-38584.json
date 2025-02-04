@@ -7,8 +7,10 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
-  "title": "NaNDA Traffic Volume by Census Tract and ZIP Code Tabulation Area, United States, 1963-2019",
-  "alternative_title": null,
+  "title": "Traffic Volume, 1963-2019",
+  "alternative_title": [
+    "NaNDA Traffic Volume by Census Tract and ZIP Code Tabulation Area, United States, 1963-2019"
+  ],
   "description": [
     "This dataset contains measures of traffic volume per census tract and ZIP code tabulation area (ZCTA) in the United States from 1963 to 2019 (primarily 1997 to 2019). High traffic volume may be used as a proxy for heavy traffic, high traffic speeds, and impediments to walking or biking. The dataset contains measures of the average, maximum, and minimum traffic volume per year or per ZCTA per year. These figures are available for all streets, highways, and non-highways. In the ZCTA dataset, data is collected intermittently across locations over time, therefore traffic volume has been interpolated for years in which no measures are available. Data Source: Traffic volume measurements are derived from Kalibrate's TrafficMetrix database accessed via Esri Demographics. Census tract boundaries come from the 2010 TIGER/Line shapefiles. ZCTA boundaries come from the 2019 TIGER/Line shapefiles."
   ],
@@ -149,7 +151,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38584.v2"
   ],
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-01-26T15:13:03Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

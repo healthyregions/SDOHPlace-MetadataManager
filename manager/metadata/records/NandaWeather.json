@@ -7,8 +7,10 @@
     "filled_pct": 84,
     "progress_class": "warning"
   },
-  "title": "NaNDA Weather by County, United States, 2003-2016",
-  "alternative_title": null,
+  "title": "Weather, 2003-2016",
+  "alternative_title": [
+    "NaNDA Weather by County, United States, 2003-2016"
+  ],
   "description": [
     "\"These datasets contain measures of weather by county in the United States for the years 2003-2016. Measures include average daily temperature, freezing days, cold days, hot days, rainy days, and snowy days.\""
   ],
@@ -91,7 +93,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38858.v1"
   ],
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-01-26T15:13:59Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

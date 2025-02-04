@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 17,
+    "filled": 18,
     "to_fill": 25,
-    "filled_pct": 68,
+    "filled_pct": 72,
     "progress_class": "danger"
   },
   "title": "The National Neighborhood Data Archive",
@@ -43,7 +43,9 @@
     "Socioeconomic Disadvantage",
     "Equity"
   ],
-  "temporal_coverage": null,
+  "temporal_coverage": [
+    "2019-2024"
+  ],
   "date_issued": null,
   "index_year": [
     2019,
@@ -78,7 +80,7 @@
   "wxs_indentifier": null,
   "id": "herop-gfxyto",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-01-30T00:59:08Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

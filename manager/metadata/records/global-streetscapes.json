@@ -2,15 +2,15 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 18,
+    "filled": 19,
     "to_fill": 25,
-    "filled_pct": 72,
-    "progress_class": "danger"
+    "filled_pct": 76,
+    "progress_class": "warning"
   },
   "title": "Global Streetscapes",
   "alternative_title": null,
   "description": [
-    "\"A comprehensively enriched and labelled SVI dataset, named Global Streetscapes, to advance the use of SVI in urban science research. The open data repository we developed consists of metadata about over 10 million entirely crowdsourced SVIs obtained from Mapillary and KartaView, sampled from 688 cities worldwide. All images are enriched with extensive geographical, temporal, contextual, semantic, and perceptual information in addition to their original metadata (totalling 346 attributes) to facilitate their use and to promote their integration with other data. Specifically, images are merged with other global geospatial datasets based on their locations and have further temporal attributes calculated based on their capture timestamps.\""
+    "A comprehensively enriched and labelled SVI dataset, named Global Streetscapes, to advance the use of SVI in urban science research. The open data repository we developed consists of metadata about over 10 million entirely crowdsourced SVIs obtained from Mapillary and KartaView, sampled from 688 cities worldwide. All images are enriched with extensive geographical, temporal, contextual, semantic, and perceptual information in addition to their original metadata (totalling 346 attributes) to facilitate their use and to promote their integration with other data. Specifically, images are merged with other global geospatial datasets based on their locations and have further temporal attributes calculated based on their capture timestamps."
   ],
   "language": [
     "eng"
@@ -51,7 +51,9 @@
   "keyword": [
     "Urban Environment"
   ],
-  "temporal_coverage": null,
+  "temporal_coverage": [
+    "2024"
+  ],
   "date_issued": null,
   "index_year": [
     2024
@@ -87,7 +89,7 @@
   "wxs_indentifier": null,
   "id": "herop-blhoja",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-01-28T18:00:55Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

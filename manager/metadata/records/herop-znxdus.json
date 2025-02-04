@@ -1,0 +1,79 @@
+{
+  "title": "Childhood Opportunity Index (COI)",
+  "alternative_title": [
+    "Childhood Opportunity Index (COI)"
+  ],
+  "description": null,
+  "language": [],
+  "display_note": null,
+  "creator": null,
+  "publisher": null,
+  "provider": null,
+  "resource_class": [],
+  "resource_type": [],
+  "subject": [],
+  "theme": [],
+  "keyword": null,
+  "temporal_coverage": [
+    "2012-2021"
+  ],
+  "date_issued": null,
+  "index_year": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+  ],
+  "date_range": null,
+  "spatial_coverage": null,
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": false,
+  "relation": null,
+  "member_of": null,
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": null,
+  "replaces": null,
+  "is_replaced_by": null,
+  "rights": null,
+  "rights_holder": null,
+  "license": null,
+  "access_rights": null,
+  "format": null,
+  "file_size": null,
+  "references": {
+    "http://lccn.loc.gov/sh85035852": "https://www.diversitydatakids.org/sites/default/files/file/COI30_TechDoc_20241004.pdf"
+  },
+  "wxs_indentifier": null,
+  "id": "herop-znxdus",
+  "identifier": null,
+  "modified": "2025-02-03T23:21:16Z",
+  "metadata_version": "SDOH PlaceProject",
+  "suppressed": false,
+  "spatial_resolution": [],
+  "highlight_ids": null,
+  "spatial_resolution_note": null,
+  "methods_variables": null,
+  "data_variables": [
+    "Percentage of 3- and 4-year-olds enrolled in private nursery school, preschool or kindergarten",
+    "Percentage of 3- and 4-year-olds enrolled in public nursery school, preschool or kindergarten",
+    "Standardized test scores in math and reading/language arts"
+  ],
+  "featured_variable": null,
+  "data_usage_notes": null,
+  "_meta": {
+    "to_fill": 26,
+    "filled": 8,
+    "filled_pct": 30,
+    "progress_class": "danger"
+  },
+  "preferred_citation": null
+}

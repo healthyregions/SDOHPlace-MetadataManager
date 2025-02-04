@@ -7,10 +7,10 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
-  "title": "Environmental Justice Index",
+  "title": "Environmental Justice Index (CDC)",
   "alternative_title": null,
   "description": [
-    "Environmental justice is the fair treatment and meaningful The Environmental Justice Index uses data from the U.S. Census Bureau, the U.S. Environmental Protection Agency, the U.S. Mine Safety and Health Administration, and the U.S. Centers for Disease Control and Prevention to rank the cumulative impacts of environmental injustice on health for every census tract. Census tracts are subdivisions of counties for which the Census collects statistical data. The EJI ranks each tract on 36 environmental, social, and health factors and groups them into three overarching modules and ten different domains."
+    "The Environmental Justice Index (EJI) is a part of the EPA\u2019s EJSCREEN platform, is a data-driven tool designed to identify and analyze environmental justice concerns across the United States. The EJI combines environmental, demographic, and health data to assess communities disproportionately impacted by environmental burdens and social vulnerabilities. Indicators include air quality, proximity to hazardous facilities, and exposure to pollutants, along with demographic factors like income, race, and linguistic isolation. In addition to the core EJI, the EPA incorporates Supplemental Indexes to enhance its analytical capabilities. These indexes include the Climate Change Index, which identifies communities vulnerable to the impacts of climate change, and the Health Disparities Index, which highlights areas with existing health challenges that may exacerbate environmental risks. While both EJI and EJSCREEN are tools for assessing environmental justice, they are designed for slightly different purposes. EJSCREEN is a screening and mapping tool primarily intended for community engagement, highlighting potential environmental and demographic concerns to guide further investigation. The EJI, on the other hand, goes beyond screening by integrating additional health and climate vulnerability data to create indexes tailored for more in-depth analysis and decision-making."
   ],
   "language": [
     "eng"
@@ -52,7 +52,7 @@
   ],
   "date_issued": "8/10/22 ",
   "index_year": [
-    2022
+    2021
   ],
   "date_range": null,
   "spatial_coverage": [
@@ -76,12 +76,14 @@
   "format": "CSV, Geodatabase",
   "file_size": "51.7 MB",
   "references": {
-    "http://schema.org/url": "https://www.atsdr.cdc.gov/placeandhealth/eji/eji-data-download.html"
+    "http://schema.org/downloadUrl": "https://www.epa.gov/ejscreen/download-ejscreen-data",
+    "http://schema.org/url": "https://www.epa.gov/ejscreen/ej-and-supplemental-indexes-ejscreen#EJ",
+    "http://lccn.loc.gov/sh85035852": "https://www.epa.gov/ejscreen/technical-information-and-data-downloads"
   },
   "wxs_indentifier": null,
   "id": "herop-oqxqog",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-02-03T22:18:27Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -90,48 +92,11 @@
   "highlight_ids": null,
   "spatial_resolution_note": null,
   "methods_variables": [
-    "Racial/Ethnic Status: Minority Status",
-    "Poverty",
-    "No High School Diploma",
-    "Unemployment",
-    "Housing Tenure",
-    "Housing Burdened, Lower-Income Households",
-    "Lack of Health Insurance",
-    "Lack of Internet Access",
-    "Age 65 and Older",
-    "Age 17 and Younger",
-    "Civilian with a Disability",
-    "Speaks English (Less than Well)",
-    "Group Quarters",
-    "Mobile Homes",
-    "Ozone",
-    "PM2.5",
-    "Diesel Particulate Matter",
-    "Air Toxic Cancer Risk",
-    "National Priority List Sites",
-    "Toxic Release Inventory Sites",
-    "Treatment, Storage, and Disposal Facilities",
-    "Risk Management Plan Sites",
-    "Coal Mines",
-    "Lead Mines",
-    "Lack of Recreational Parks",
-    "Housing Built Pre-1980",
-    "Lack of Walkability",
-    "High Volume Roads",
-    "Railways",
-    "Airports",
-    "High Estimated Prevalence of Asthma",
-    "High Estimated Prevalence of Cancer",
-    "High Estimated Prevalence of High Blood Pressure",
-    "High Estimated Prevalence of Diabetes",
-    "High Estimated Prevalence of Poor Mental Health"
+    "Demographic Index (average of low-income and people of color percentages); Supplemental Demographic Index (average of five socioeconomic factors: low income, unemployment, limited English, less than high school education, low life expectancy); Percentiles for each environmental indicator combined with demographic factors, including: PM2.5 (Particulate Matter); Ozone levels; Nitrogen dioxide levels; Diesel particulate matter; Toxic releases to air; Traffic proximity and volume; Lead paint exposure risk; Superfund site proximity; Risk Management Plan (RMP) facility proximity; Hazardous waste facility proximity; Underground storage tank proximity; Wastewater discharge proximity; Drinking water non-compliance."
   ],
   "data_variables": [
-    "Population estimate, 2014-2018 ACS",
-    "Population estimate MOE, 2014-2018 ACS",
-    "Estimated daytime population",
-    "LandScan 2018"
+    "Total population; Low-income population percentage; Population with less than high school education; Unemployed population percentage; Population with disabilities percentage; People of color percentage; Limited English-speaking population percentage; Population under age 5 percentage; Population over age 64 percentage; Life expectancy; Levels of PM2.5 (Particulate Matter); Ozone levels; Nitrogen dioxide levels; Diesel particulate matter levels; Toxic releases to air concentrations; Traffic volume and proximity to major roads; Percentage of housing units with potential lead paint exposure; Proximity to Superfund sites; Proximity to Risk Management Plan (RMP) facilities; Proximity to hazardous waste facilities; Proximity to underground storage tanks; Wastewater discharge concentration; Drinking water non-compliance violations."
   ],
   "data_usage_notes": null,
-  "featured_variable": "Environmental Justice Index"
+  "featured_variable": "Environmental Justice Index for PM2.5 (Particulate Matter); Environmental Justice Index for ozone levels; Environmental Justice Index for nitrogen dioxide levels; Environmental Justice Index for diesel particulate matter levels; Environmental Justice Index for toxic releases to air; Environmental Justice Index for traffic proximity and volume; Environmental Justice Index for lead paint exposure risk; Environmental Justice Index for Superfund site proximity; Environmental Justice Index for Risk Management Plan (RMP) facility proximity; Environmental Justice Index for hazardous waste facility proximity; Environmental Justice Index for underground storage tank proximity; Environmental Justice Index for wastewater discharge proximity; Environmental Justice Index for drinking water non-compliance."
 }

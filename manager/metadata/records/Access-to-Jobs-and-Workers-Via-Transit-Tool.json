@@ -2,14 +2,14 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Adam Cox",
-    "filled": 23,
+    "filled": 24,
     "to_fill": 25,
-    "filled_pct": 92,
+    "filled_pct": 96,
     "progress_class": "success"
   },
   "title": "Access to Jobs and Workers Via Transit",
   "alternative_title": [
-    "None"
+    "Access to Jobs and Workers Via Transit"
   ],
   "description": [
     "Access to Jobs and Workers Via Transit is a free geospatial data resource and web mapping tool for comparing the accessibility of neighborhoods via public transit service. Indicators summarize accessibility to jobs as well as accessibility by workers, households, and population. Coverage is limited to metropolitan regions served by transit agencies that share their service data in a standard format called GTFS."
@@ -39,7 +39,7 @@
     "Transportation and Infrastructure"
   ],
   "theme": [
-    "Environment",
+    "Economy",
     "Transportation"
   ],
   "keyword": [
@@ -86,14 +86,14 @@
   "wxs_indentifier": null,
   "id": "herop-bnohpx",
   "identifier": null,
-  "modified": "2025-01-17T16:00:57Z",
+  "modified": "2025-02-03T15:21:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block"
   ],
   "highlight_ids": [
-    "150US*"
+    "050US*"
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
@@ -109,8 +109,18 @@
     "Percentage of all low-medium wage workers in region with access by transit"
   ],
   "data_variables": [
-    "Accessibility Index"
+    "Accessibility Index - Transit to working-age population",
+    "Population with access by transit",
+    "Percentage of population with access by transit",
+    "Jobs accessible by transit",
+    "Percentage of regional jobs accessible by transit",
+    "Workers with access by transit",
+    "Percentage of workers with access by transit",
+    "Low-wage workers with access by transit",
+    "Percentage of all low-wage workers in region with access by transit",
+    "Low-medium wage workers with access by transit",
+    "Percentage of all low-medium wage workers in region with access by transit"
   ],
   "data_usage_notes": null,
-  "featured_variable": null
+  "featured_variable": "Accessibility Index - Transit to working-age population"
 }

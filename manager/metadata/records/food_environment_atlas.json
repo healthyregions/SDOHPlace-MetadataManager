@@ -2,12 +2,12 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 21,
+    "filled": 22,
     "to_fill": 25,
-    "filled_pct": 84,
+    "filled_pct": 88,
     "progress_class": "warning"
   },
-  "title": "Food Environment Atlas (FEA)",
+  "title": "Food Environment Atlas (USDA)",
   "alternative_title": null,
   "description": [
     "The Food Access Research Atlas presents an overview of food access indicators for low-income and other census tracts using different measures of supermarket accessibility. It provides food access data for populations within census tracts and it offers census-tract-level data on food access that can be downloaded for community planning or research purposes."
@@ -44,10 +44,7 @@
   ],
   "date_issued": "4/27/2021",
   "index_year": [
-    2019,
-    2015,
-    2010,
-    2006
+    2019
   ],
   "date_range": null,
   "spatial_coverage": [
@@ -68,15 +65,18 @@
   "rights_holder": null,
   "license": null,
   "access_rights": "Public",
-  "format": "Excel",
+  "format": "XLSX, ZIP, CSV",
   "file_size": null,
   "references": {
-    "http://schema.org/url": "https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/"
+    "http://schema.org/downloadUrl": "https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data",
+    "http://schema.org/url": "https://www.ers.usda.gov/data-products/food-access-research-atlas/about-the-atlas",
+    "http://lccn.loc.gov/sh85035852": "https://www.ers.usda.gov/data-products/food-access-research-atlas/documentation",
+    "archive-url": "https://uofi.app.box.com/s/fqtslnfkpmgi32pb1cah1eyvmimvp740/folder/305464316550"
   },
   "wxs_indentifier": null,
   "id": "herop-htraln",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-02-03T22:17:46Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -85,43 +85,11 @@
   "highlight_ids": null,
   "spatial_resolution_note": null,
   "methods_variables": [
-    "Low-income population",
-    "Housing units without a vehicle",
-    "Housing units receiving SNAP benefits",
-    "Low income and low access tract measured at different miles for urban areas and rural areas",
-    "Low vehicle access",
-    "Poverty rate",
-    "Low access tract at different miles for urban areas and rural areas",
-    "Low access tract using vehicle access and at 20 miles in rural areas",
-    "Vehicle access housing units without and low access at different miles (1/2, 1, 10 miles)",
-    "Low access population at different miles for urban areas and rural areas",
-    "Low access low-income population at different miles for urban areas and rural areas",
-    "Low access population at different miles (1/2, 1, 10 miles)",
-    "Low access low-income population at different miles (1/2, 1, 10 miles)",
-    "Low access children age 0-17 at different miles (1/2, 1, 10 miles)",
-    "Low access senior age 65+ at 1/2 mile",
-    "Low access white population",
-    "Low access Black or African American population at different miles (1/2, 1, 10 miles)",
-    "Low access Asian population at 1/2 mile",
-    "Low access Native Hawaiian or Other Pacific Islander population at different miles (1/2, 1, 10 miles)",
-    "Low access American Indian or Alaska Native population at different miles (1/2, 1, 10 miles)",
-    "Low access Other/Multiple race population at different miles (1/2, 1, 10 miles)",
-    "Low access Hispanic or Latino population at different miles (1/2, 1, 10 miles)",
-    "Low access housing units receiving SNAP benefits at different miles (1/2, 1, 10 miles)"
+    "Urban tracts; Group quarters, tract with a high share; Tracts with low vehicle access; Flags for low-income and low-access tracts using 1 mile and 10 miles thresholds; Flags for low-access tracts using 20-mile thresholds in rural areas."
   ],
   "data_variables": [
-    "Population",
-    "Housing units",
-    "Children age 0-17",
-    "Seniors age 65+",
-    "White population",
-    "Black or African American population",
-    "Asian population",
-    "Native Hawaiian or Other Pacific Islander population",
-    "American Indian or Alaska Native population",
-    "Other/Multiple race population",
-    "Hispanic or Latino population"
+    "Housing units, total; Population with low access at 1 mile for urban areas and 10 miles for rural areas; Population with low access at 1/2 mile for urban areas and 10 miles for rural areas; Population with low access at 1 mile for urban areas and 20 miles for rural areas; Low-income population with low access at 1 mile for urban areas and 10 miles for rural areas; Low-income population with low access at 1/2 mile for urban areas and 10 miles for rural areas; Low-income population with low access at 1 mile for urban areas and 20 miles for rural areas; Population with low access at 1/2 mile; Population share with low access at 1/2 mile; Low-income population with low access at 1/2 mile; Share of low-income population with low access at 1/2 mile; Children (age 0-17) with low access at 1/2 mile; Share of children (age 0-17) with low access at 1/2 mile; Seniors (age 65+) with low access at 1/2 mile; Share of seniors (age 65+) with low access at 1/2 mile; White population with low access at 1/2 mile; Share of White population with low access at 1/2 mile; Black or African American population with low access at 1/2 mile; Share of Black or African American population with low access at 1/2 mile; Hispanic or Latino population with low access at 1 mile; Share of Hispanic or Latino population with low access at 1 mile; Housing units receiving SNAP benefits and with low access at 10 miles; Share of housing units receiving SNAP benefits and with low access at 10 miles."
   ],
   "data_usage_notes": null,
-  "featured_variable": null
+  "featured_variable": "Low-income and low-access tracts at 1 mile for urban areas and 10 miles for rural areas; Low-income and low-access tracts at 1/2 mile for urban areas and 10 miles for rural areas; Low-income and low-access tracts at 1 mile for urban areas and 20 miles for rural areas; Tracts with low vehicle access and low income at 20 miles in rural areas."
 }

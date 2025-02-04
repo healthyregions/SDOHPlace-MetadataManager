@@ -7,8 +7,10 @@
     "filled_pct": 92,
     "progress_class": "success"
   },
-  "title": "CDC Standardized Precipitation Index 1895-2016",
-  "alternative_title": null,
+  "title": "Standardized Precipitation Index, 1895-2016 (CDC)",
+  "alternative_title": [
+    "CDC Standardized Precipitation Index 1895-2016"
+  ],
   "description": [
     "The Standardized Precipitation Index (SPI) is a widely used index to characterize meteorological drought on a range of timescales. On short timescales, the SPI is closely related to soil moisture, while at longer timescales, the SPI can be related to groundwater and reservoir storage. The SPI can be compared across regions with markedly different climates. It quantifies observed precipitation as a standardized departure from a selected probability distribution function that models the raw precipitation data. The raw precipitation data are typically fitted to a gamma or a Pearson Type III distribution and then transformed to a normal distribution. The SPI values can be interpreted as the number of standard deviations by which the observed anomaly deviates from the long-term mean. The SPI can be created for differing periods of 1-to-36 months using monthly input data. For the operational community, the SPI has been recognized as the standard index that should be available worldwide for quantifying and reporting meteorological drought. The dataset includes one-month SPI values for every contiguous US county and the District of Columbia monthly from 1895-2016. The dataset has been compiled to estimate wetness and dryness of a particular area. This is important for the agriculture as well as health sectors. The data can be used to examine local and national trends in drought information."
   ],
@@ -90,7 +92,7 @@
   "wxs_indentifier": null,
   "id": "herop-fsqjns",
   "identifier": null,
-  "modified": "2024-12-03T12:14:59Z",
+  "modified": "2025-01-25T17:34:03Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

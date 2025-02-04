@@ -7,8 +7,10 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
-  "title": "NaNDA Voter Registration, Turnout, and Partisanship by County, United States, 2004-2018",
-  "alternative_title": null,
+  "title": "Voter Registration, Turnout, and Partisanship, 2004-2018",
+  "alternative_title": [
+    "NaNDA Voter Registration, Turnout, and Partisanship by County, United States, 2004-2018"
+  ],
   "description": [
     "This dataset contains counts of voter registration and voter turnout for all counties in the United States for the years 2004-2018. It also contains measures of each county's Democratic and Republican partisanship, including six-year longitudinal partisan indices for 2006-2016."
   ],
@@ -97,7 +99,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38506.v1"
   ],
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-01-26T14:59:29Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
