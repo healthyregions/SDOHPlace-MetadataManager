@@ -137,6 +137,11 @@ class Record():
         if not self.file_path:
             self.file_path = Path(METADATA_DIR, 'records', self.data['id'] + ".json")
 
+        if self.data["references"]:
+            cleaned_references = {}
+            for k, v, in self.data["references"].items():
+                cleaned_references[k.rstrip().lstrip()] = v.rstrip().lstrip()
+            self.data["references"] = cleaned_references
 
         coverages = [i.lower() for i in self.data['spatial_coverage']] if self.data['spatial_coverage'] else []
         wkt = None
@@ -169,7 +174,7 @@ class Record():
             print(key, field, value)
             errors += field.validate(value)
         return errors
-    
+
     def to_json(self):
 
         obligations = ['required', 'suggested']
