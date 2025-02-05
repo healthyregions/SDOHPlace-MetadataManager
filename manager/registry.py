@@ -125,10 +125,11 @@ class Record():
         self.data['metadata_version'] = "SDOH PlaceProject"
         self.data['modified'] = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
 
-        if self.data['is_version_of']:
-            self.data['suppressed'] = True
-        else:
-            self.data['suppressed'] = False
+        ## Feb 5th 2025, we may need to show some child records afterall, removing this hard coding
+        # if self.data['is_version_of']:
+        #     self.data['suppressed'] = True
+        # else:
+        #     self.data['suppressed'] = False
 
         if self.data['index_year']:
             self.data['index_year'] = [int(i) for i in self.data['index_year']]
