@@ -16,171 +16,172 @@ from .utils import METADATA_DIR, batch_list
 
 registry = Registry()
 
-user_grp = AppGroup('user',
-	help="A set of commands for managing users."
-)
+user_grp = AppGroup("user", help="A set of commands for managing users.")
+
 
 @user_grp.command()
 @with_appcontext
-@click.argument('name')
-@click.argument('email')
-@click.argument('password')
+@click.argument("name")
+@click.argument("email")
+@click.argument("password")
 def create(name: str, email: str, password: str):
-	""" Create a user """
+    """Create a user"""
 
-	hashed = generate_password_hash(password, method='pbkdf2:sha256')
+    hashed = generate_password_hash(password, method="pbkdf2:sha256")
 
-	new_user = User(
-		name=name,
-		email=email,
-		password=hashed
-	)
-	db.session.add(new_user)
-	db.session.commit()
+    new_user = User(name=name, email=email, password=hashed)
+    db.session.add(new_user)
+    db.session.commit()
 
-	print(email, hashed)
+    print(email, hashed)
+
 
 @user_grp.command()
 @with_appcontext
-@click.argument('email')
+@click.argument("email")
 def reset_password(email):
-	""" Resets a user's password to a random 6 character string """
+    """Resets a user's password to a random 6 character string"""
 
-	user = User.query.filter_by(email=email).first()
+    user = User.query.filter_by(email=email).first()
 
-	raw = ''.join(random.choices(string.ascii_uppercase +
-							string.digits, k=6))
+    raw = "".join(random.choices(string.ascii_uppercase + string.digits, k=6))
 
-	user.password = generate_password_hash(raw, method='pbkdf2:sha256')
-	db.session.commit()
+    user.password = generate_password_hash(raw, method="pbkdf2:sha256")
+    db.session.commit()
 
-	print(raw)
+    print(raw)
+
 
 @user_grp.command()
 @with_appcontext
-@click.argument('email')
-@click.argument('password')
+@click.argument("email")
+@click.argument("password")
 def change_password(email, password):
-	""" Changes a users password """
+    """Changes a users password"""
 
-	user = User.query.filter_by(email=email).first()
+    user = User.query.filter_by(email=email).first()
 
-	user.password = generate_password_hash(password, method='pbkdf2:sha256')
-	db.session.commit()
+    user.password = generate_password_hash(password, method="pbkdf2:sha256")
+    db.session.commit()
 
 
-registry_grp = AppGroup('registry',
-	help="A set of commands for managing and indexing (to Solr) records in the registry."
+registry_grp = AppGroup(
+    "registry",
+    help="A set of commands for managing and indexing (to Solr) records in the registry.",
 )
 
+
 @registry_grp.command()
 @with_appcontext
-@click.option('--id')
+@click.option("--id")
 def resave_records(id):
-	""" Loads all records and performs save_data() on each one. Use this to trigger
-	revalidation of all fields. """
-	registry = Registry()
+    """Loads all records and performs save_data() on each one. Use this to trigger
+    revalidation of all fields."""
+    registry = Registry()
 
-	if id:
-		record = registry.get_record(id)
-		record.save_data()
-	else:
-		for i in registry.records:
-			i.save_data()
+    if id:
+        record = registry.get_record(id)
+        record.save_data()
+    else:
+        for i in registry.records:
+            i.save_data()
 
 
 @registry_grp.command()
 @with_appcontext
-@click.option('--id')
-@click.option('--clean', is_flag=True, default=False)
-@click.option('--verbose', is_flag=True, default=False)
+@click.option("--id")
+@click.option("--clean", is_flag=True, default=False)
+@click.option("--verbose", is_flag=True, default=False)
 def index(id, clean, verbose):
-	"""Reindex all Solr records from database content."""
+    """Reindex all Solr records from database content."""
 
-	s = Solr(verbose=verbose)
-	if clean:
-		del_result = s.delete_all()
-		print(del_result)
+    s = Solr(verbose=verbose)
+    if clean:
+        del_result = s.delete_all()
+        print(del_result)
 
-	if id:
-		record = registry.get_record(id)
-		result = record.index(solr_instance=s)
-	else:
-		records = [r.to_solr() for r in registry.records]
-		for batch in batch_list(records, 50):
-			result = {
-				"success": True,
-				"document": f"{len(batch)} records",
-			}
-			try:
-				s.multi_add(batch)
-			except Exception as e:
-				result['success'] = False
-				result['error'] = e
-	if not result['success']:
-		print(result)
+    if id:
+        record = registry.get_record(id)
+        result = record.index(solr_instance=s)
+    else:
+        records = [r.to_solr() for r in registry.records]
+        for batch in batch_list(records, 50):
+            result = {
+                "success": True,
+                "document": f"{len(batch)} records",
+            }
+            try:
+                s.multi_add(batch)
+            except Exception as e:
+                result["success"] = False
+                result["error"] = e
+    if not result["success"]:
+        print(result)
 
 
 @registry_grp.command()
 @with_appcontext
-@click.option('-f', '--field', help="name of field to update, as it is stored in the JSON data")
-#@click.option('--overwrite', is_flag=True, default=False, help="overwrite existing values in this field")
-@click.option('--dry-run', is_flag=True, default=False, help="do not change any data")
-@click.option('--old-value', help="the new value to save to the records")
-@click.option('--new-value', help="only update fields that match this old value")
+@click.option(
+    "-f", "--field", help="name of field to update, as it is stored in the JSON data"
+)
+# @click.option('--overwrite', is_flag=True, default=False, help="overwrite existing values in this field")
+@click.option("--dry-run", is_flag=True, default=False, help="do not change any data")
+@click.option("--old-value", help="the new value to save to the records")
+@click.option("--new-value", help="only update fields that match this old value")
 def bulk_update(
-		field: str,
-		#overwrite: bool=False,
-		dry_run: bool=False,
-		old_value: str=None,
-		new_value: str=None,
-	):
-	"""Bulk update a field across all records. Optionally only update records with
-	a specific existing value. When specifying values:
+    field: str,
+    # overwrite: bool=False,
+    dry_run: bool = False,
+    old_value: str = None,
+    new_value: str = None,
+):
+    """Bulk update a field across all records. Optionally only update records with
+    a specific existing value. When specifying values:
 
-	"True" | "False"  will be cast as boolean values
-	"None" will be cast as None (null)
-	"""
+    "True" | "False"  will be cast as boolean values
+    "None" will be cast as None (null)
+    """
 
-	print(f"update this field: {field}")
-	record_files = Path(METADATA_DIR, 'records').glob("*.json")
-	to_update = []
-	for f in record_files:
-		print(f)
-		with open(f, "r") as o:
-			try:
-				data = json.load(o)
-			except json.decoder.JSONDecodeError:
-				print("error reading that file, skipping")
-				continue
-		val = data.get(field, "<NOT PRESENT>")
+    print(f"update this field: {field}")
+    record_files = Path(METADATA_DIR, "records").glob("*.json")
+    to_update = []
+    for f in record_files:
+        print(f)
+        with open(f, "r") as o:
+            try:
+                data = json.load(o)
+            except json.decoder.JSONDecodeError:
+                print("error reading that file, skipping")
+                continue
+        val = data.get(field, "<NOT PRESENT>")
 
-		if val == "<NOT PRESENT>":
-			to_update.append(f)
-		else:
-			if old_value and str(val) != old_value:
-				continue
-			to_update.append(f)
-	print(f"{len(to_update)} records to update")
-	if dry_run or not new_value:
-		print("exit dry run, no records updated")
-		return
-	if new_value in ("None", "True", "False"):
-		new_value = eval(new_value)
-	for f in to_update:
-		with open(f, "r") as o:
-			data = json.load(o)
-		data[field] = new_value
-		with open(f, "w") as o:
-			json.dump(data, o, indent=2)
-	print("done")
+        if val == "<NOT PRESENT>":
+            to_update.append(f)
+        else:
+            if old_value and str(val) != old_value:
+                continue
+            to_update.append(f)
+    print(f"{len(to_update)} records to update")
+    if dry_run or not new_value:
+        print("exit dry run, no records updated")
+        return
+    if new_value in ("None", "True", "False"):
+        new_value = eval(new_value)
+    for f in to_update:
+        with open(f, "r") as o:
+            data = json.load(o)
+        data[field] = new_value
+        with open(f, "w") as o:
+            json.dump(data, o, indent=2)
+    print("done")
+
 
 @registry_grp.command()
 @with_appcontext
 def inspect_schema():
-	""" Print a representation of the schema. """
-	s = Registry().schema
-	for dg in s.display_groups:
-		print(f"\n## {dg['name']}")
-		for f in dg['fields']:
-			print(f"- {f['label']}")
+    """Print a representation of the schema."""
+    s = Registry().schema
+    for dg in s.display_groups:
+        print(f"\n## {dg['name']}")
+        for f in dg["fields"]:
+            print(f"- {f['label']}")
