@@ -856,7 +856,8 @@
                 "Census Tract",
                 "Census Block",
                 "Census Block Group",
-                "Zip Code Tabulation Area (ZCTA)"
+                "Zip Code Tabulation Area (ZCTA)",
+                "Other"
             ],
             "schema": "SDOH Place",
             "display_group": "SDOH Place Project",
@@ -938,14 +939,14 @@
             "label": "Featured Variable(s)",
             "uri": "sdoh_featured_variable_s",
             "data_type": "string",
-            "multiple": false,
+            "multiple": true,
             "obligation": "suggested",
             "controlled": false,
             "controlled_options": [],
             "schema": "SDOH Place",
             "display_group": "SDOH Place Project",
             "slug": "featured-variable",
-            "widget": "text-simple.html",
+            "widget": "text-area.html",
             "id": "featured_variable",
             "help_text": [
                 "The single featured variable from this data source (not always applicable)."
