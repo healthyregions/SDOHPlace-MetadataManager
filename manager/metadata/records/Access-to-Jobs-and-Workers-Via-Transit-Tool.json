@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Adam Cox",
     "filled": 24,
-    "to_fill": 25,
-    "filled_pct": 96,
+    "to_fill": 26,
+    "filled_pct": 92,
     "progress_class": "success"
   },
   "title": "Access to Jobs and Workers Via Transit",
@@ -27,12 +27,14 @@
   "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
     "Datasets",
-    "Web services"
+    "Web services",
+    "Websites"
   ],
   "resource_type": [
     "Census data",
     "Digital maps",
-    "Polygon data"
+    "Polygon data",
+    "Table data"
   ],
   "subject": [
     "Employment",
@@ -44,7 +46,10 @@
   ],
   "keyword": [
     "jobs",
-    "transit"
+    "transit",
+    "public transit",
+    "transportation",
+    "job opportunities"
   ],
   "temporal_coverage": [
     "2021"
@@ -81,12 +86,15 @@
   "format": "Geodatabase| Shapefile | DBF",
   "file_size": "shp 253 mb | gdb 120 | DBF 8mb",
   "references": {
-    "http://lccn.loc.gov/sh85035852": "https://www.epa.gov/smartgrowth/smart-location-mapping#walkability"
+    "http://schema.org/url ": "https://www.epa.gov/smartgrowth/smart-location-mapping#walkability",
+    "http://schema.org/downloadUrl ": "https://www.epa.gov/smartgrowth/smart-location-mapping#Trans45",
+    "http://lccn.loc.gov/sh85035852": "https://www.epa.gov/sites/default/files/2014-03/documents/sld_trans45_ug_0.pdf",
+    "archive-url": "https://uofi.app.box.com/s/fqtslnfkpmgi32pb1cah1eyvmimvp740/folder/305406383348"
   },
   "wxs_indentifier": null,
   "id": "herop-bnohpx",
   "identifier": null,
-  "modified": "2025-02-03T15:21:58Z",
+  "modified": "2025-02-04T23:04:23Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -97,16 +105,12 @@
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
-    "Population with access by transit",
-    "Percentage of population with access by transit",
-    "Jobs accessible by transit",
-    "Percentage of regional jobs accessible by transit",
-    "Workers with access by transit",
-    "Percentage of workers with access by transit",
-    "Low-wage workers with access by transit",
-    "Percentage of all low-wage workers in region with access by transit",
-    "Low-medium wage workers with access by transit",
-    "Percentage of all low-medium wage workers in region with access by transit"
+    "Distance from the population-weighted centroid to nearest transit stop (meters)-D4a",
+    "Proportion of CBG employment within \u00bc mile of fixed-guideway transit stop- D4b025",
+    "Proportion of CBG employment within \u00bd mile of fixed-guideway transit stop- D4b050",
+    "Aggregate frequency of transit service within 0.25 miles of CBG boundary per hour during evening peak period-D4c",
+    "Aggregate frequency of transit service [D4c] per square mile",
+    "Aggregate frequency of transit service [D4c] per capita"
   ],
   "data_variables": [
     "Accessibility Index - Transit to working-age population",
@@ -119,8 +123,19 @@
     "Low-wage workers with access by transit",
     "Percentage of all low-wage workers in region with access by transit",
     "Low-medium wage workers with access by transit",
+    "Percentage of all low-medium wage workers in region with access by transit",
+    "Population with access by transit",
+    "Percentage of population with access by transit",
+    "Jobs accessible by transit",
+    "Percentage of regional jobs accessible by transit",
+    "Workers with access by transit",
+    "Percentage of workers with access by transit",
+    "Low-wage workers with access by transit",
+    "Percentage of all low-wage workers in region with access by transit",
+    "Low-medium wage workers with access by transit",
     "Percentage of all low-medium wage workers in region with access by transit"
   ],
   "data_usage_notes": null,
-  "featured_variable": "Accessibility Index - Transit to working-age population"
+  "featured_variable": "Accessibility Index - Transit to working-age population",
+  "preferred_citation": null
 }

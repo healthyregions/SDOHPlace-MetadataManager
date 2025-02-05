@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 24,
-    "to_fill": 25,
-    "filled_pct": 96,
+    "to_fill": 26,
+    "filled_pct": 92,
     "progress_class": "success"
   },
   "title": "National Walkability Index",
@@ -12,7 +12,7 @@
     "EPA Walkability Index"
   ],
   "description": [
-    "EPA developed three data products(Smart Location Database, Access to Jobs and Workers Via Transit Tool, and National Walkability Index) that consistently measure the built environment and transit accessibility of neighborhoods across metropolitan regions and the United States. Users can download data, browse the data in interactive maps, or access the data through web services. The National Walkability Index includes dataset of walkability scores for all block groups as well as the underlying attributes that are used to rank the block groups."
+    "EPA developed three data products(Smart Location Database, Access to Jobs and Workers Via Transit Tool, and National Walkability Index) that consistently measure the built environment and transit accessibility of neighborhoods across metropolitan regions and the United States. Users can download data, browse the data in interactive maps, or access the data through web services. The National Walkability is based on measures of the built environment that affect the probability of whether people walk as a mode of transportation: street intersection density, proximity to transit stops, and diversity of land uses. The National Walkability Index data are available at the block group level, a unit of census geography that is smaller than a census tract and larger than a census block"
   ],
   "language": [
     "eng"
@@ -30,8 +30,8 @@
     "Web services"
   ],
   "resource_type": [
-    "Census data",
-    "Polygon data"
+    "Polygon data",
+    "Table data"
   ],
   "subject": [
     "Neighborhood and Built Environment"
@@ -81,12 +81,13 @@
   "format": "Geodatabase",
   "file_size": "406 mb",
   "references": {
-    "http://lccn.loc.gov/sh85035852": "https://https://www.epa.gov/smartgrowth/smart-location-mapping#walkability"
+    "http://lccn.loc.gov/sh85035852": "https://https://www.epa.gov/smartgrowth/smart-location-mapping#walkability",
+    "http://schema.org/downloadUrl": "https://www.epa.gov/sites/default/files/2021-06/documents/national_walkability_index_methodology_and_user_guide_june2021.pdf"
   },
   "wxs_indentifier": null,
   "id": "herop-jjsukv",
   "identifier": null,
-  "modified": "2025-02-03T21:45:48Z",
+  "modified": "2025-02-04T20:28:20Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -94,22 +95,27 @@
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
-    "D2B_E8MIXA - 8-tier employment entropy (denominator set to the static 8 employment types in the CBG)",
-    "D2A_EPHHM - Employment and household entropy",
-    "D4A - Distance from the population-weighted centroid to the nearest transit stop (meters)",
-    "D3B - Street intersection density (weighted, auto-oriented intersections eliminated)",
-    "D2A_Ranked - Quantile ranked order (1-20) of [D2a_EpHHm] from lowest to highest",
-    "D2B_Ranked - Quantile ranked order (1-20) of [D2b_E8MixA] from lowest to highest",
-    "D3B_Ranked - Quantile ranked order (1-20) of [D3b] from lowest to highest",
-    "D4A_Ranked - Quantile ranked order (1,13-20) of [D4a] from lowest to highest"
+    "Intersection density (D3b)",
+    "Proximity to transit stops (D4a)",
+    "Employment mix (D2b_E8MixA)",
+    "Employment and household mix (D2a_EpHHm)"
   ],
   "data_variables": [
-    "Population, 2018",
-    "Housing units, 2018",
-    "Households (occupied housing units), 2018",
-    "Workers - Count of workers in CBG (home location), 2017"
+    "Population 2018",
+    "Housing units 2018",
+    "Households (occupied housing units) 2018",
+    "Workers - Count of workers in CBG (home location), 2017",
+    " 8-tier employment entropy (denominator set to the static 8 employment types in the CBG)-D2B_E8MIXA",
+    " Employment and household entropy-D2A_EPHHM",
+    "Distance from the population-weighted centroid to the nearest transit stop (meters)-D4A",
+    "Street intersection density (weighted, auto-oriented intersections eliminated)- D3B",
+    "Quantile ranked order (1-20) of [D2a_EpHHm] from lowest to highest- D2A_Ranked",
+    "Quantile ranked order (1-20) of [D2b_E8MixA] from lowest to highest-D2B_Ranked",
+    "Quantile ranked order (1-20) of [D3b] from lowest to highest- D3B_Ranked",
+    "Quantile ranked order (1,13-20) of [D4a] from lowest to highest- D4A_Ranked"
   ],
   "data_usage_notes": null,
   "highlight_ids": null,
-  "featured_variable": "National Walkability Index"
+  "featured_variable": "National Walkability Index",
+  "preferred_citation": null
 }

@@ -3,9 +3,9 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 23,
-    "to_fill": 25,
-    "filled_pct": 92,
-    "progress_class": "success"
+    "to_fill": 26,
+    "filled_pct": 88,
+    "progress_class": "warning"
   },
   "title": "Daily PM2.5 Concentrations, 2001-2005 (CDC)",
   "alternative_title": [
@@ -32,7 +32,7 @@
     "Web services"
   ],
   "resource_type": [
-    "Point data"
+    "Table data"
   ],
   "subject": [
     "Neighborhood and Built Environment"
@@ -91,7 +91,7 @@
   "wxs_indentifier": null,
   "id": "herop-pvsgwe",
   "identifier": null,
-  "modified": "2025-02-03T19:37:36Z",
+  "modified": "2025-02-04T20:05:31Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -122,5 +122,6 @@
   "highlight_ids": [
     "140US*"
   ],
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": null
 }

@@ -3,12 +3,14 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 20,
-    "to_fill": 25,
-    "filled_pct": 80,
+    "to_fill": 26,
+    "filled_pct": 76,
     "progress_class": "warning"
   },
   "title": "Tree Canopy Cover",
-  "alternative_title": null,
+  "alternative_title": [
+    "Tree Canopy Cover"
+  ],
   "description": [
     "\"NLCD tree canopy cover geospatial datasets with spatial resolutions of 30 m are produced by the USDA Forest Service. Tree canopy cover is derived from multi-spectral satellite imagery and other available ground and ancillary information. Tree canopy products for the period 2011-2021 are available for the conterminous United States, and coastal south east Alaska, Hawaii, Puerto Rico, and U.S. Virgin Islands.\""
   ],
@@ -88,7 +90,7 @@
   "wxs_indentifier": null,
   "id": "herop-qwqgwc",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-02-04T13:43:16Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -101,5 +103,6 @@
   ],
   "data_usage_notes": null,
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": null
 }

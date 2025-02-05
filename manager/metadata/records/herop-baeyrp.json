@@ -1,6 +1,8 @@
 {
   "title": "Congressional District Health Dashboard",
-  "alternative_title": null,
+  "alternative_title": [
+    "Congressional District Health Dashboard"
+  ],
   "description": null,
   "language": [],
   "display_note": null,
@@ -38,7 +40,7 @@
   "wxs_indentifier": null,
   "id": "herop-baeyrp",
   "identifier": null,
-  "modified": "2025-02-03T17:09:44Z",
+  "modified": "2025-02-04T13:40:13Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [],
@@ -49,9 +51,10 @@
   "featured_variable": null,
   "data_usage_notes": null,
   "_meta": {
-    "to_fill": 25,
+    "to_fill": 26,
     "filled": 4,
-    "filled_pct": 16,
+    "filled_pct": 15,
     "progress_class": "danger"
-  }
+  },
+  "preferred_citation": null
 }

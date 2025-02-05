@@ -3,12 +3,14 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 22,
-    "to_fill": 25,
-    "filled_pct": 88,
+    "to_fill": 26,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
   "title": "Environmental Justice Index (CDC)",
-  "alternative_title": null,
+  "alternative_title": [
+    "Environmental Justice Index (CDC)"
+  ],
   "description": [
     "The Environmental Justice Index (EJI) is a part of the EPA\u2019s EJSCREEN platform, is a data-driven tool designed to identify and analyze environmental justice concerns across the United States. The EJI combines environmental, demographic, and health data to assess communities disproportionately impacted by environmental burdens and social vulnerabilities. Indicators include air quality, proximity to hazardous facilities, and exposure to pollutants, along with demographic factors like income, race, and linguistic isolation. In addition to the core EJI, the EPA incorporates Supplemental Indexes to enhance its analytical capabilities. These indexes include the Climate Change Index, which identifies communities vulnerable to the impacts of climate change, and the Health Disparities Index, which highlights areas with existing health challenges that may exacerbate environmental risks. While both EJI and EJSCREEN are tools for assessing environmental justice, they are designed for slightly different purposes. EJSCREEN is a screening and mapping tool primarily intended for community engagement, highlighting potential environmental and demographic concerns to guide further investigation. The EJI, on the other hand, goes beyond screening by integrating additional health and climate vulnerability data to create indexes tailored for more in-depth analysis and decision-making."
   ],
@@ -83,7 +85,7 @@
   "wxs_indentifier": null,
   "id": "herop-oqxqog",
   "identifier": null,
-  "modified": "2025-02-03T22:18:27Z",
+  "modified": "2025-02-04T13:40:46Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -98,5 +100,6 @@
     "Total population; Low-income population percentage; Population with less than high school education; Unemployed population percentage; Population with disabilities percentage; People of color percentage; Limited English-speaking population percentage; Population under age 5 percentage; Population over age 64 percentage; Life expectancy; Levels of PM2.5 (Particulate Matter); Ozone levels; Nitrogen dioxide levels; Diesel particulate matter levels; Toxic releases to air concentrations; Traffic volume and proximity to major roads; Percentage of housing units with potential lead paint exposure; Proximity to Superfund sites; Proximity to Risk Management Plan (RMP) facilities; Proximity to hazardous waste facilities; Proximity to underground storage tanks; Wastewater discharge concentration; Drinking water non-compliance violations."
   ],
   "data_usage_notes": null,
-  "featured_variable": "Environmental Justice Index for PM2.5 (Particulate Matter); Environmental Justice Index for ozone levels; Environmental Justice Index for nitrogen dioxide levels; Environmental Justice Index for diesel particulate matter levels; Environmental Justice Index for toxic releases to air; Environmental Justice Index for traffic proximity and volume; Environmental Justice Index for lead paint exposure risk; Environmental Justice Index for Superfund site proximity; Environmental Justice Index for Risk Management Plan (RMP) facility proximity; Environmental Justice Index for hazardous waste facility proximity; Environmental Justice Index for underground storage tank proximity; Environmental Justice Index for wastewater discharge proximity; Environmental Justice Index for drinking water non-compliance."
+  "featured_variable": "Environmental Justice Index for PM2.5 (Particulate Matter); Environmental Justice Index for ozone levels; Environmental Justice Index for nitrogen dioxide levels; Environmental Justice Index for diesel particulate matter levels; Environmental Justice Index for toxic releases to air; Environmental Justice Index for traffic proximity and volume; Environmental Justice Index for lead paint exposure risk; Environmental Justice Index for Superfund site proximity; Environmental Justice Index for Risk Management Plan (RMP) facility proximity; Environmental Justice Index for hazardous waste facility proximity; Environmental Justice Index for underground storage tank proximity; Environmental Justice Index for wastewater discharge proximity; Environmental Justice Index for drinking water non-compliance.",
+  "preferred_citation": null
 }

@@ -3,12 +3,14 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 20,
-    "to_fill": 25,
-    "filled_pct": 80,
+    "to_fill": 26,
+    "filled_pct": 76,
     "progress_class": "warning"
   },
   "title": "ParkServe",
-  "alternative_title": null,
+  "alternative_title": [
+    "ParkServe"
+  ],
   "description": [
     "Urban park data for over 15,000 cities and towns across the U.S. Included in the data downloads are park polygons, park 10-minute walk service areas, park priority areas, trails and playgrounds in parks."
   ],
@@ -82,7 +84,7 @@
   "wxs_indentifier": null,
   "id": "herop-fhfxqq",
   "identifier": null,
-  "modified": "2025-01-30T01:42:20Z",
+  "modified": "2025-02-04T13:41:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -94,5 +96,6 @@
   "data_variables": null,
   "data_usage_notes": null,
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": null
 }

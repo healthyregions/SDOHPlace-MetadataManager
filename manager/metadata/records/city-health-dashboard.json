@@ -3,9 +3,9 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 23,
-    "to_fill": 25,
-    "filled_pct": 92,
-    "progress_class": "success"
+    "to_fill": 26,
+    "filled_pct": 88,
+    "progress_class": "warning"
   },
   "title": "City Health Dashboard",
   "alternative_title": null,
@@ -30,7 +30,7 @@
     "Websites"
   ],
   "resource_type": [
-    "Wall maps"
+    "Table data"
   ],
   "subject": [
     "Demographics",
@@ -996,7 +996,7 @@
   "wxs_indentifier": null,
   "id": "herop-xtoqlx",
   "identifier": null,
-  "modified": "2025-02-03T22:19:25Z",
+  "modified": "2025-02-04T20:01:36Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -30375,5 +30375,6 @@
     "upper confidence interval"
   ],
   "data_usage_notes": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": null
 }
