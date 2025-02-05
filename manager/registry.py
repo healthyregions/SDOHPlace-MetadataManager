@@ -1,4 +1,3 @@
-import os
 import json
 from pathlib import Path
 from datetime import datetime
@@ -240,7 +239,7 @@ class Record():
         if not solr_instance:
             solr_instance = Solr()
         try:
-            r = solr_instance.add(solr_doc)
+            solr_instance.add(solr_doc)
             result = {
                 "success": True,
                 "document": solr_doc

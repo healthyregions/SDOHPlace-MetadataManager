@@ -1,7 +1,7 @@
 import logging
 from dotenv import load_dotenv
 
-from flask import Blueprint, request, render_template, jsonify, url_for, redirect, flash, current_app
+from flask import Blueprint, request, render_template, jsonify, url_for, redirect, current_app
 from flask_cors import CORS
 from flask_login import (
     current_user,

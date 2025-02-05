@@ -35,8 +35,6 @@ def get_wkt_from_geojson(filename: str) -> str:
 	geom = load_geojson_geometry(filename)
 	if not is_ccw(geom):
 		geom = geom.reverse()
-	print("ok")
-	print(geom)
 	return to_wkt(geom, rounding_precision=3)
 
 def batch_list(lst, n):
