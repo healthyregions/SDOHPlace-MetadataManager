@@ -1,0 +1,26 @@
+services:
+  sdoh-coverage:
+    # Set image / container name
+    container_name: sdoh-coverage
+    image: herop/coverage-checker
+
+    # How to build the image
+    build:
+      context: .
+
+    # Pass in environment variables
+    env_file:
+      - .env
+
+    # Mount in volumes at runtime
+    volumes:
+      # Uncomment to map in full director
+      # Dev/debug only
+      - .:/usr/app
+
+      # Map in data directory
+      - ./data:/usr/app/data
+
+    # Run container as interactive shell
+    #tty: true
+    #stdin_open: true
