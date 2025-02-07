@@ -324,7 +324,8 @@
                 "Safety",
                 "Social and Community Context",
                 "Transportation and Infrastructure",
-                "Greenspaces"
+                "Greenspaces",
+                "Composite Index"
             ],
             "schema": "Aardvark",
             "display_group": "Categories",
@@ -473,8 +474,8 @@
                 "United States -- full coverage of the US, including AK, HI and Puerto Rico",
                 "Contiguous US -- only coverage of the contiguous 48 states, excluding AK, HI and Puerto Rico",
                 "Alaska -- only coverage of Alaska",
-                "Alaska -- only coverage of Hawaii",
-                "For all other cases, just list state names (\"Illinois\"), or city, state (\"Chicaco, Illinois\")."
+                "Hawaii -- only coverage of Hawaii",
+                "For all other cases, just list state names (\"Illinois\"), or city, state (\"Chicago, Illinois\")."
             ]
         },
         {
@@ -855,7 +856,8 @@
                 "Census Tract",
                 "Census Block",
                 "Census Block Group",
-                "Zip Code Tabulation Area (ZCTA)"
+                "Zip Code Tabulation Area (ZCTA)",
+                "Other"
             ],
             "schema": "SDOH Place",
             "display_group": "SDOH Place Project",
@@ -934,20 +936,37 @@
             ]
         },
         {
-            "label": "Featured Variable",
+            "label": "Featured Variable(s)",
             "uri": "sdoh_featured_variable_s",
             "data_type": "string",
-            "multiple": false,
+            "multiple": true,
             "obligation": "suggested",
             "controlled": false,
             "controlled_options": [],
             "schema": "SDOH Place",
             "display_group": "SDOH Place Project",
             "slug": "featured-variable",
-            "widget": "text-simple.html",
+            "widget": "text-area.html",
             "id": "featured_variable",
             "help_text": [
                 "The single featured variable from this data source (not always applicable)."
+            ]
+        },
+        {
+            "label": "Preferred Citation",
+            "uri": "sdoh_preferred_citation_s",
+            "data_type": "string",
+            "multiple": false,
+            "obligation": "required",
+            "controlled": false,
+            "controlled_options": [],
+            "schema": "SDOH Place",
+            "display_group": "SDOH Place Project",
+            "slug": "preferred-citation",
+            "widget": "text-simple.html",
+            "id": "preferred_citation",
+            "help_text": [
+                "Please enter a citation line for this data source, preferable directly from the source website itself."
             ]
         },
         {

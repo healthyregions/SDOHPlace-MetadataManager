@@ -7,8 +7,10 @@
     "filled_pct": 84,
     "progress_class": "warning"
   },
-  "title": "NaNDA Neighborhood-School Gap by Census Tract and ZIP Code Tabulation Area, United States, 2009-2010 and 2015-2016 ",
-  "alternative_title": null,
+  "title": "Neighborhood-School Gap, 2009-2010 and 2015-2016 ",
+  "alternative_title": [
+    "NaNDA Neighborhood-School Gap by Census Tract and ZIP Code Tabulation Area, United States, 2009-2010 and 2015-2016"
+  ],
   "description": [
     "This study contains measures of neighborhood-school gap for 2009-2010 and 2015-2016. Neighborhood-school gap (NS gap) refers to the discrepancy between the demographics of a public school and its surrounding community. For example, if 60 percent of a school's student body is Black, but 30 percent of the neighborhood population is Black, the school has a positive Black neighborhood-school gap. These datasets measure gaps in race and poverty between elementary school student populations and the census tracts and ZIP code tabulation areas (ZCTAs) that those elementary schools serve. Data is at the census tract and ZCTA level. Supplemental data containing component variables used to calculate NS gap at the school and block group level is also available."
   ],
@@ -94,7 +96,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38579.v2"
   ],
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-01-26T15:00:43Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

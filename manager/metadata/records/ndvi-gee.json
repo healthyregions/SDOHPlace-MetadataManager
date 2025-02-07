@@ -8,7 +8,9 @@
     "progress_class": "warning"
   },
   "title": "MODIS Combined 16-Day NDVI (Google Earth Engine)",
-  "alternative_title": null,
+  "alternative_title": [
+    "MODIS Combined 16-Day NDVI (Google Earth Engine)"
+  ],
   "description": [
     "The Normalized Difference Vegetation Index is generated from the Near-IR and Red bands of each scene as (NIR - Red) / (NIR + Red), and ranges in value from -1.0 to 1.0. This product is generated from the MODIS/006/MCD43A4 surface reflectance composites. Accessed through Google Earth Engine."
   ],
@@ -86,7 +88,7 @@
   "wxs_indentifier": null,
   "id": "herop-eflmqc",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-01-26T15:16:26Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

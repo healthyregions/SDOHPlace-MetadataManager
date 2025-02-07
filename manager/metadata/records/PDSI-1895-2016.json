@@ -7,8 +7,10 @@
     "filled_pct": 92,
     "progress_class": "success"
   },
-  "title": "CDC Palmer Drought Severity Index 1895-2016",
-  "alternative_title": null,
+  "title": "Palmer Drought Severity Index, 1895-2016 (CDC)",
+  "alternative_title": [
+    "CDC Palmer Drought Severity Index 1895-2016"
+  ],
   "description": [
     "The Palmer Drought Severity Index (PDSI) is a standardized index that uses readily available temperature and precipitation data to estimate relative dryness. It has been reasonably successful at quantifying long-term drought. As it uses temperature data and a physical water balance model, it can capture the basic effect of global warming on drought through changes in potential evapotranspiration. The dataset includes monthly values for every contiguous US county and the District of Columbia from 1895-2016. The dataset has been compiled to estimate wetness and dryness of a particular area. This is important for the agriculture as well as health sectors. The data can be used to examine local and national trends in drought information."
   ],
@@ -88,13 +90,19 @@
   "wxs_indentifier": null,
   "id": "herop-fhlnqe",
   "identifier": null,
-  "modified": "2024-12-03T12:14:59Z",
+  "modified": "2025-01-25T16:10:54Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
-  "highlight_ids": null,
+  "highlight_ids": [
+    "050US17089",
+    "050US17043",
+    "050US17031",
+    "050US17093",
+    "050US17197"
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "year",

@@ -7,9 +7,9 @@
     "filled_pct": 84,
     "progress_class": "warning"
   },
-  "title": "NaNDA Street Connectivity by ZIP Code Tabulation Area, United States, 2010",
+  "title": "Street Connectivity, 2010",
   "alternative_title": [
-    "NanDA Street Connectivity by ZIP/Tabulation Area US 2010"
+    "NaNDA Street Connectivity by ZIP Code Tabulation Area, United States, 2010"
   ],
   "description": [
     "This dataset contains measures of street connectivity (how well streets connect with one another) within all United States ZIP code tabulation areas (ZCTAs). This includes measures of the number of street segments (links) and intersections (nodes) per ZCTA, street length within ZCTA, and indices representing overall connectivity within the ZCTA."
@@ -79,7 +79,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38580.v2"
   ],
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-01-26T15:15:02Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

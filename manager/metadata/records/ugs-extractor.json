@@ -45,19 +45,19 @@
     "Satellite Data"
   ],
   "temporal_coverage": [
-    "2015",
-    "2016",
-    "2017",
-    "2018",
-    "2019",
-    "2020",
-    "2021",
-    "2022",
-    "2023",
-    "2024"
+    "2015-2024"
   ],
   "date_issued": null,
   "index_year": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
     2024
   ],
   "date_range": null,
@@ -91,7 +91,7 @@
   "wxs_indentifier": null,
   "id": "herop-uyrmqd",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-01-30T00:56:12Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -111,6 +111,8 @@
     "Labels"
   ],
   "data_usage_notes": null,
-  "highlight_ids": null,
+  "highlight_ids": [
+    "150US*"
+  ],
   "featured_variable": null
 }

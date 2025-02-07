@@ -7,8 +7,10 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
-  "title": "NaNDA Urbanicity by Census Tract, United States, 2010",
-  "alternative_title": null,
+  "title": "Urbanicity by Census Tract, 2010",
+  "alternative_title": [
+    "NaNDA Urbanicity by Census Tract, United States, 2010"
+  ],
   "description": [
     "This dataset contains measures of the urban/rural characteristics of each census tract in the United States. These include proportions of urban and rural population, population density, rural/urban commuting area (RUCA) codes, and RUCA-based four- and seven-category urbanicity scales."
   ],
@@ -81,7 +83,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38606.v1"
   ],
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-01-26T15:10:06Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

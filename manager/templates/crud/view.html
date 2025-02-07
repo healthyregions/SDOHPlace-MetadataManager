@@ -31,6 +31,14 @@
     <a href="{{ discovery_app_url }}/search/?show={{ record.id }}" class="button" role="button" target="_blank">Data Discovery App</a>
 </div>
 <div id="reindex-result"></div>
+<h2 class="subtitle">Jump to</h2>
+<div class="content" style="height:100%">
+    <ul style="font-size:.8em; list-style:none; margin-left:0">
+        {% for link in link_list %}
+        <li><a href="/record/{{link.id}}">{{link.title}}</a></li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}
 
 {% block main_content %}
@@ -64,7 +72,14 @@
                         <span class="tag">{{ keyword }}</span>
                         {% endfor %}
                     {% else %}
+                        {% if record[field['id']] and record[field['id']]|length > 100 %}
+                        <details>
+                            <summary>show full (this value is very long)</summary>
+                            {{ record[field['id']] }}
+                        </details>
+                        {% else %}
                         {{ record[field['id']] }}
+                        {% endif %}
                     {% endif %}
                     </td>
                 </tr>

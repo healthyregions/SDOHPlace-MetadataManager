@@ -55,6 +55,38 @@ MetadataManager/manager/metadata/
 
 ## MetadataManager Flask App
 
+### Management Commands
+
+Use `flask [command] [subcommand] --help` to see the specific arguments for each command. A general summary of usage for each command follows below.
+
+#### Registry
+
+`flask registry index`
+
+Index a specific record (provide the id), or all records, into Solr. Use `--clean` to remove all existing documents from the Solr core before indexing (for a full refresh).
+
+`flask registry resave-records`
+
+Loads all records and then runs "save_data()" on each one, triggers whatever data cleaning is applied to each field.
+
+`flask registry bulk-update`
+
+Provides the capability of updating all instances of a specific value in a field with a new value (use with caution!).
+
+#### Users
+
+`flask user create`
+
+Create a new user with their name, email, and password.
+
+`flask user reset-password`
+
+Sets the specified user's password to a random 6 character string.
+
+`flask user change-password`
+
+Update a user's password to the provided string.
+
 ### Configure
 
 ```

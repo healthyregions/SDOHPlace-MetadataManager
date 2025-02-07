@@ -1,4 +1,3 @@
-import os
 import json
 from pathlib import Path
 from datetime import datetime
@@ -15,36 +14,35 @@ from manager.solr import Solr
 
 load_dotenv()
 
-class Schema():
 
+class Schema:
     def __init__(self, file_path: Path):
-
         self.schema_json = load_json(file_path)
 
     @property
     def lookup(self):
-
         lookup_dict = {}
-        for f in self.schema_json['fields']:
+        for f in self.schema_json["fields"]:
             field = Field(**f)
-            lookup_dict[f['id']] = field
+            lookup_dict[f["id"]] = field
         return lookup_dict
-    
+
     @property
     def fields(self):
         return list(self.lookup.values())
-    
+
     @property
     def display_groups(self):
         gl = []
-        for f in self.schema_json['display_groups']:
-            f['fields'] = [i for i in self.schema_json['fields'] if i['display_group'] == f['name']]
+        for f in self.schema_json["display_groups"]:
+            f["fields"] = [
+                i for i in self.schema_json["fields"] if i["display_group"] == f["name"]
+            ]
             gl.append(f)
 
         return gl
-    
-    def get_blank_record(self):
 
+    def get_blank_record(self):
         blank = {}
         for k, v in self.lookup.items():
             if v.multiple:
@@ -55,9 +53,8 @@ class Schema():
                 val = None
             blank[k] = val
         return blank
-    
-    def get_blank_form(self):
 
+    def get_blank_form(self):
         form = self.get_blank_record()
         for k in form.keys():
             if k == "id":
@@ -65,9 +62,8 @@ class Schema():
             else:
                 form[k] = ""
         return form
-    
-    def validate_form_data(self, form_data):
 
+    def validate_form_data(self, form_data):
         cleaned_data = {}
         for field, field_def in self.lookup.items():
             clean_value = get_clean_field_from_form(form_data, field, field_def)
@@ -79,39 +75,37 @@ class Schema():
             errors += field.validate(value)
 
         return errors
-    
 
-class Registry():
 
+class Registry:
     def __init__(self):
-
         self.schema: Schema = Schema(Path(METADATA_DIR, "schemas", "sdohplace.json"))
         self.records: list[Record] = []
         self.load_all_records()
         self.record_lookup = {i.data["id"]: i for i in self.records}
 
     def load_all_records(self):
-
         files = Path(METADATA_DIR, "records").glob("*.json")
         for f in files:
             record = Record(self.schema).load_from_file(f)
             self.records.append(record)
-        self.records.sort(key=lambda d: d.data['title'])
+        self.records.sort(
+            key=lambda d: d.data["title"] if d.data["title"] else d.data["id"]
+        )
 
     def get_record(self, id):
         files = Path(METADATA_DIR, "records").glob("*.json")
         record = None
         for f in files:
             loaded = Record(self.schema).load_from_file(f)
-            if loaded.data['id'] == id:
+            if loaded.data["id"] == id:
                 record = loaded
                 break
         return record
 
-class Record():
 
+class Record:
     def __init__(self, schema: Schema):
-
         self.file_path = None
         self.schema = schema
         self.data = {}
@@ -122,22 +116,35 @@ class Record():
         return self
 
     def save_data(self, index=False):
-        self.data['metadata_version'] = "SDOH PlaceProject"
-        self.data['modified'] = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
+        self.data["metadata_version"] = "SDOH PlaceProject"
+        self.data["modified"] = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
 
-        if self.data['is_version_of']:
-            self.data['suppressed'] = True
-        else:
-            self.data['suppressed'] = False
+        ## Feb 5th 2025, we may need to show some child records afterall, removing this hard coding
+        # if self.data['is_version_of']:
+        #     self.data['suppressed'] = True
+        # else:
+        #     self.data['suppressed'] = False
 
-        if self.data['index_year']:
-            self.data['index_year'] = [int(i) for i in self.data['index_year']]
+        if self.data["index_year"]:
+            self.data["index_year"] = [int(i) for i in self.data["index_year"]]
 
         if not self.file_path:
-            self.file_path = Path(METADATA_DIR, 'records', self.data['id'] + ".json")
+            self.file_path = Path(METADATA_DIR, "records", self.data["id"] + ".json")
 
+        if self.data["references"]:
+            cleaned_references = {}
+            for (
+                k,
+                v,
+            ) in self.data["references"].items():
+                cleaned_references[k.rstrip().lstrip()] = v.rstrip().lstrip()
+            self.data["references"] = cleaned_references
 
-        coverages = [i.lower() for i in self.data['spatial_coverage']] if self.data['spatial_coverage'] else []
+        coverages = (
+            [i.lower() for i in self.data["spatial_coverage"]]
+            if self.data["spatial_coverage"]
+            else []
+        )
         wkt = None
         if "united states" in coverages:
             wkt = get_wkt_from_geojson("full-us-simplified.geojson")
@@ -148,7 +155,7 @@ class Record():
         elif "hawaii" in coverages:
             wkt = get_wkt_from_geojson("hawaii-simplified.geojson")
 
-        if wkt and (not self.data['geometry'] or self.data['geometry'] == "None"):
+        if wkt and (not self.data["geometry"] or self.data["geometry"] == "None"):
             self.data["geometry"] = wkt
 
         with open(self.file_path, "w") as o:
@@ -161,17 +168,16 @@ class Record():
         return self.data[field_name]
 
     def validate(self):
-        """ validate this record against its schema. """
+        """validate this record against its schema."""
         errors = []
         for key, field in self.schema.lookup.items():
             value = self.data.get(key)
             print(key, field, value)
             errors += field.validate(value)
         return errors
-    
-    def to_json(self):
 
-        obligations = ['required', 'suggested']
+    def to_json(self):
+        obligations = ["required", "suggested"]
         rs_fields = [i for i in self.schema.fields if i.obligation in obligations]
         required_filled = len([i for i in rs_fields if self.data.get(i.id)])
         filled_pct = int(round((required_filled / len(rs_fields)) * 100, 2))
@@ -182,12 +188,15 @@ class Record():
         else:
             css_color = "danger"
 
-        meta = self.data.get("_meta", {
-            "to_fill": "",
-            "filled": "",
-            "filled_pct": "",
-            "progress_class": "",
-        })
+        meta = self.data.get(
+            "_meta",
+            {
+                "to_fill": "",
+                "filled": "",
+                "filled_pct": "",
+                "progress_class": "",
+            },
+        )
         meta["to_fill"] = len(rs_fields)
         meta["filled"] = required_filled
         meta["filled_pct"] = filled_pct
@@ -198,7 +207,7 @@ class Record():
         return self.data
 
     def to_form(self):
-        """ Prepares the raw backend data to populate an html form. """
+        """Prepares the raw backend data to populate an html form."""
         form_data = {}
         for key, field in self.schema.lookup.items():
             value = self.data.get(key)
@@ -216,7 +225,7 @@ class Record():
                     value = "|".join([str(i) for i in value])
             form_data[key] = value
         return form_data
-    
+
     def to_solr(self):
         """A variation on to_json() that uses the SOLR uris instead, and
         omits empty fields. Plus some other value wrangling."""
@@ -228,44 +237,36 @@ class Record():
                     value = json.dumps(value)
                 solr_doc[field.uri] = value
         return solr_doc
-    
+
     def index(self, solr_instance=None):
         solr_doc = self.to_solr()
         if not solr_instance:
             solr_instance = Solr()
         try:
-            r = solr_instance.add(solr_doc)
-            result = {
-                "success": True,
-                "document": solr_doc
-            }
+            solr_instance.add(solr_doc)
+            result = {"success": True, "document": solr_doc}
         except Exception as e:
-            result = {
-                "success": False,
-                "error": str(e)
-            }
+            result = {"success": False, "error": str(e)}
         return result
-    
+
     def save_from_form_data(self, form_data):
         cleaned_data = {}
         for field, field_def in self.schema.lookup.items():
             clean_value = get_clean_field_from_form(form_data, field, field_def)
             cleaned_data[field] = clean_value
-        cleaned_data['metadata_version'] = "SDOH PlaceProject"
-        cleaned_data['modified'] = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
+        cleaned_data["metadata_version"] = "SDOH PlaceProject"
+        cleaned_data["modified"] = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
 
         self.data.update(cleaned_data)
         self.save_data()
 
 
-class Field():
-
+class Field:
     def __init__(self, **kwargs):
         for k, v in kwargs.items():
             self.__setattr__(k, v)
 
     def validate(self, value):
-
         if self.label == "Modified":
             return []
 

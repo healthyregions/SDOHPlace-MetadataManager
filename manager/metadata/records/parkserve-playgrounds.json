@@ -3,12 +3,14 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 21,
-    "to_fill": 25,
-    "filled_pct": 84,
+    "to_fill": 26,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
   "title": "Playgrounds (ParkServe)",
-  "alternative_title": null,
+  "alternative_title": [
+    "Playgrounds (ParkServe)"
+  ],
   "description": [
     "\"Crowd-sourced trails and playground data were retrieved from Open Street Map (OSM) in February of 2024 and clipped to ParkServe\u00ae park boundaries.\""
   ],
@@ -42,7 +44,7 @@
     "Park"
   ],
   "temporal_coverage": [
-    "2023"
+    "2024"
   ],
   "date_issued": "2024",
   "index_year": [
@@ -82,7 +84,7 @@
   "wxs_indentifier": null,
   "id": "herop-yoizdf",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-02-04T13:41:29Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -95,5 +97,6 @@
   ],
   "data_usage_notes": null,
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": null
 }

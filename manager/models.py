@@ -13,8 +13,8 @@ load_dotenv()
 
 db = SQLAlchemy()
 
-class User(UserMixin, db.Model):
 
+class User(UserMixin, db.Model):
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(unique=True)
     password: Mapped[str]

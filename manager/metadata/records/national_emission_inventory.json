@@ -3,12 +3,14 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 21,
-    "to_fill": 25,
-    "filled_pct": 84,
+    "to_fill": 26,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
   "title": "National Emissions Inventory (NEI)",
-  "alternative_title": null,
+  "alternative_title": [
+    "National Emissions Inventory (NEI)"
+  ],
   "description": [
     "The National Emissions Inventory (NEI) is a comprehensive and detailed estimate of air emissions of criteria pollutants, criteria precursors, and hazardous air pollutants from air emissions sources. The NEI is released every three years based primarily upon data provided by State, Local, and Tribal air agencies for sources in their jurisdictions and supplemented by data developed by the US EPA. The NEI is built using the Emissions Inventory System (EIS) first to collect the data from State, Local, and Tribal air agencies and then to blend that data with other data sources."
   ],
@@ -91,7 +93,7 @@
   "wxs_indentifier": null,
   "id": "herop-odfmer",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-02-04T13:42:51Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -114,5 +116,6 @@
     "Emissions (Tons)"
   ],
   "data_usage_notes": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": null
 }

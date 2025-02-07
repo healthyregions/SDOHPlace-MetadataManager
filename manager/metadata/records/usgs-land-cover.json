@@ -42,16 +42,7 @@
     "Sateliite Data"
   ],
   "temporal_coverage": [
-    "2001",
-    "2004",
-    "2005",
-    "2006",
-    "2008",
-    "2011",
-    "2013",
-    "2016",
-    "2019",
-    "2021"
+    "2000-2021"
   ],
   "date_issued": null,
   "index_year": [
@@ -97,7 +88,7 @@
   "wxs_indentifier": null,
   "id": "herop-iviplg",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-01-30T00:54:01Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

@@ -7,8 +7,10 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
-  "title": "NaNDA Socioeconomic Status and Demographic Characteristics of Census Tracts and ZIP Code Tabulation Areas, United States, 2000-2020",
-  "alternative_title": null,
+  "title": "Socioeconomic Status and Demographic Characteristics, 2000-2020",
+  "alternative_title": [
+    "NaNDA Socioeconomic Status and Demographic Characteristics of Census Tracts and ZIP Code Tabulation Areas, United States, 2000-2020"
+  ],
   "description": [
     "These datasets contain measures of socioeconomic and demographic characteristics by US census tract for the years 2000-2020 and ZIP code tabulation area (ZCTA) for the years 2008-2020. Example measures include population density; population distribution by race, ethnicity, age, and income; income inequality by race and ethnicity; and proportion of population living below the poverty level, receiving public assistance, and female-headed or single parent families with kids. The datasets also contain a set of theoretically derived measures capturing neighborhood socioeconomic disadvantage and affluence, as well as a neighborhood index of Hispanic, foreign born, and limited English."
   ],
@@ -106,7 +108,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38528.v3"
   ],
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-01-26T15:10:55Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

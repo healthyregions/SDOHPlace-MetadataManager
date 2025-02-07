@@ -7,8 +7,10 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
-  "title": "NaNDA Crimes by County, United States, 2002-2014",
-  "alternative_title": null,
+  "title": "Crimes, 2002-2014",
+  "alternative_title": [
+    "NaNDA Crimes by County, United States, 2002-2014"
+  ],
   "description": [
     "This dataset contains county-level totals for the years 2002-2014 for eight types of crime: murder, rape, robbery, aggravated assault, burglary, larceny, motor vehicle theft, and arson. These crimes are classed as Part I criminal offenses by the United States Federal Bureau of Investigations (FBI) in their Uniform Crime Reporting (UCR) program. Each record in the dataset represents the total of each type of criminal offense reported in (or, in the case of missing data, attributed to) the county in a given year."
   ],
@@ -31,14 +33,13 @@
     "Datasets"
   ],
   "resource_type": [
-    "Point data",
     "Table data"
   ],
   "subject": [
     "Safety"
   ],
   "theme": [
-    "Location"
+    "Environment"
   ],
   "keyword": [
     "Arson",
@@ -103,7 +104,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38649.v1"
   ],
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-02-03T15:57:46Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

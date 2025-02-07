@@ -3,16 +3,16 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 23,
-    "to_fill": 25,
-    "filled_pct": 92,
-    "progress_class": "success"
+    "to_fill": 26,
+    "filled_pct": 88,
+    "progress_class": "warning"
   },
   "title": "Smart Location Database",
   "alternative_title": [
     "None"
   ],
   "description": [
-    "EPA developed three data products(Smart Location Database, Access to Jobs and Workers Via Transit Tool, and National Walkability Index) that consistently measure the built environment and transit accessibility of neighborhoods across metropolitan regions and the United States. Users can download data, browse the data in interactive maps, or access the data through web services. Smart Location Database includes more than 90 attributes summarizing characteristics such as housing density, diversity of land use, neighborhood design, destination accessibility, transit service, employment, and demographics. Coverage is limited to metropolitan regions served by transit agencies that share their service data in a standard format called GTFS"
+    "EPA developed three data products(Smart Location Database, Access to Jobs and Workers Via Transit Tool, and National Walkability Index) that consistently measure the built environment and transit accessibility of neighborhoods across metropolitan regions and the United States. Users can download data, browse the data in interactive maps, or access the data through web services. Smart Location Database summarizes more than 90 different indicators associated with the built environment and location efficiency. Indicators include density of development, diversity of land use, street network design, and accessibility to destinations as well as various demographic and employment statistics. Most attributes are available for all U.S. block groups."
   ],
   "language": [
     "eng"
@@ -86,7 +86,7 @@
   "wxs_indentifier": null,
   "id": "herop-ppvuzl",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-02-04T20:39:27Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -118,5 +118,6 @@
   ],
   "data_usage_notes": "The Smart Location Database summarizes more than 90 different indicators associated with the built environment and location efficiency. The Access to Jobs and Workers Via Transit Tool provides indicators of accessibility to destinations by public transit.The National Walkability Index provides walkability scores based on a simple formula that ranks selected indicators from the Smart Location Database that have been demonstrated to affect the propensity of walk trips.",
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": null
 }

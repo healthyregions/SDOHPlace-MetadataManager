@@ -3,12 +3,14 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 23,
-    "to_fill": 25,
-    "filled_pct": 92,
-    "progress_class": "success"
+    "to_fill": 26,
+    "filled_pct": 88,
+    "progress_class": "warning"
   },
-  "title": "CDC Daily Census Tract-Level Ozone Concentrations 2011-2015",
-  "alternative_title": null,
+  "title": "Daily Ozone Concentrations, 2011-2015 (CDC)",
+  "alternative_title": [
+    "CDC Daily Census Tract-Level Ozone Concentrations 2011-2015"
+  ],
   "description": [
     "This dataset provides modeled predictions of ozone levels from the EPA's Downscaler model. Data are at the census tract level for 2001-2005. These data are used by the CDC's National Environmental Public Health Tracking Network to generate air quality measures. Census tract-level datasets contain estimates of the mean predicted concentration and associated standard error."
   ],
@@ -30,7 +32,7 @@
     "Web services"
   ],
   "resource_type": [
-    "Point data"
+    "Table data"
   ],
   "subject": [
     "Neighborhood and Built Environment"
@@ -89,7 +91,7 @@
   "wxs_indentifier": null,
   "id": "herop-afseug",
   "identifier": null,
-  "modified": "2024-12-03T12:14:59Z",
+  "modified": "2025-02-04T20:04:47Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -97,14 +99,29 @@
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
-    "Year of estimate",
-    "Date (day-month-year) of estimate"
+    "Annual average air concentration estimates of selected pollutants(ug/m3)",
+    "Annual average cancer risk estimates per 1,000,000 population",
+    "Annual average total cancer risk estimates",
+    "Percent of cancer risk estimates by source",
+    "percent of cancer estimates from all sources",
+    "O3: Number of days air quality standard (monitor + modeled data)",
+    "O3: Number of days air quality standard(monitor data)",
+    "PM2.5: Percent of days over air quality standard (monitor + modeled data)",
+    "PM2.5: Percent of days over air quality standard (monitor data)",
+    "Areas and populations vulnerable to predicted smoke from wildland fires",
+    "PM2.5 Highest annual average concentration (monitor + modeled data)",
+    "PM2.5 Highest annual average concentration (monitor data)"
   ],
   "data_variables": [
+    "Year of estimate",
+    "Date (day-month-year) of estimate",
     "Standard error of the estimated ozone concentration",
     "Mean estimated 8-hour average ozone concentration in parts per billion (ppb) within 3 meters of the surface of the earth"
   ],
   "data_usage_notes": null,
-  "highlight_ids": null,
-  "featured_variable": null
+  "highlight_ids": [
+    "140US*"
+  ],
+  "featured_variable": null,
+  "preferred_citation": null
 }
