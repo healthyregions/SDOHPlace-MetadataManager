@@ -11,6 +11,7 @@ from manager.models import db, User
 from manager.commands import (
     user_grp,
     registry_grp,
+    coverage_grp
 )
 
 load_dotenv()
@@ -50,6 +51,7 @@ def load_user(user_id):
 
 app.cli.add_command(user_grp)
 app.cli.add_command(registry_grp)
+app.cli.add_command(coverage_grp)
 
 app.config["DEBUG"] = True
 

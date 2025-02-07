@@ -2,10 +2,10 @@
 import os
 import logging
 import pandas as pd
-from utils import SpatialResolution
+from .utils import SpatialResolution
 
-STUDY_DATASET_DIRECTORY = os.getenv('STUDY_DATASET_DIRECTORY', './data/test/')
-MASTER_GEOGRAPHY_DIRECTORY = os.getenv('MASTER_GEOGRAPHY_DIRECTORY', './data/master/')
+STUDY_DATASET_DIRECTORY = os.getenv('STUDY_DATASET_DIRECTORY', 'manager/data/test')
+MASTER_GEOGRAPHY_DIRECTORY = os.getenv('MASTER_GEOGRAPHY_DIRECTORY', 'manager/data/master')
 
 # Mapping of dataset to verify -> master file used for verification
 # TODO:  Map all files from Box?
