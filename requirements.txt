@@ -22,3 +22,6 @@ geopandas
 gunicorn
 Flask-Login==0.6.3
 Flask-SQLAlchemy==3.1.1
+
+# Coverage checker
+pandas==2.0.3
