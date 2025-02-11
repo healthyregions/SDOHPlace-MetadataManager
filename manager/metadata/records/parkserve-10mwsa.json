@@ -2,15 +2,17 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 21,
+    "filled": 22,
     "to_fill": 26,
-    "filled_pct": 80,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
-  "title": "10MWSA (ParkServe)",
-  "alternative_title": null,
+  "title": "10-minute walk service areas (10MWSA)",
+  "alternative_title": [
+    "10-minute walk service areas (ParkServe Dataset)"
+  ],
   "description": [
-    "We calculate a ten-minute walk service area for each park in the database by creating a half-mile \u2018walkable\u2019 service area from each of the park\u2019s public access points. This service area is created using Esri\u2019s Street Map Premium network dataset, which allows us to account for physical barriers such as highways, train tracks, or rivers without bridges."
+    "Park accessibility is analyzed by calculating ten-minute walk service areas for each park in its database. This is achieved by generating a half-mile \u2018walkable\u2019 service area from each park\u2019s designated public access points. Utilizing Esri\u2019s StreetMap Premium network dataset, the analysis accounts for physical barriers such as highways, train tracks, and rivers without bridges, ensuring a more accurate representation of pedestrian access."
   ],
   "language": [
     "eng"
@@ -31,13 +33,16 @@
   "resource_type": [
     "Polygon data"
   ],
-  "subject": [],
+  "subject": [
+    "Neighborhood and Built Environment",
+    "Physical Activity and Lifestyle"
+  ],
   "theme": [
     "Society"
   ],
   "keyword": [
-    "Walkability",
-    "Network Dataset"
+    "Park accessibility",
+    "Service areas"
   ],
   "temporal_coverage": [
     "2023"
@@ -56,11 +61,11 @@
   "georeferenced": false,
   "relation": null,
   "member_of": null,
-  "is_part_of": [
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": [
     "herop-fhfxqq"
   ],
-  "source": null,
-  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": [
@@ -75,12 +80,13 @@
   "file_size": null,
   "references": {
     "http://schema.org/url": "https://www.tpl.org/park-data-downloads",
+    "http://schema.org/downloadUrl": "https://www.tpl.org/park-data-downloads",
     "http://lccn.loc.gov/sh85035852": "https://www.tpl.org/ParkServe/About"
   },
   "wxs_indentifier": null,
   "id": "herop-jxbloa",
   "identifier": null,
-  "modified": "2025-02-03T22:56:29Z",
+  "modified": "2025-02-11T16:56:47Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -95,7 +101,7 @@
   "data_variables": [
     "Park ID, Park Name, Park Size, Shape Length, Shape Area"
   ],
-  "data_usage_notes": null,
+  "data_usage_notes": "The ParkServe dataset is designed for spatial analysis and GIS applications to evaluate urban park accessibility. While it provides geospatial files (e.g., shapefiles, GeoJSON, and other GIS-compatible formats), it may not include detailed attribute data such as park addresses, ownership details, or facility descriptions. Users should integrate it with additional datasets if such information is needed for analysis.\r\n\r\nAvailable Data Formats:\r\nShapefile (.shp)\r\nGeoJSON (.geojson)\r\nFile Geodatabase (.gdb)\r\nKML (.kml) (depending on availability)",
   "highlight_ids": [
     "150US*"
   ],

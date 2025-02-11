@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 22,
-    "to_fill": 25,
-    "filled_pct": 88,
+    "to_fill": 26,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
   "title": "Broadband Internet Availability, Speed, and Adoption, 2014-2020",
@@ -17,7 +17,9 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [
+    "Users analyzing broadband accessibility trends can integrate ACS-derived internet adoption variables with FCC-derived availability data from the corresponding year. However, when comparing provider numbers or connection speed, note that FCC data includes both DSL/cable and satellite providers. The most comparable ACS-derived variables for adoption patterns are n/p_broadband_dsl_cable_sub (households with DSL/cable broadband) and n/p_broadband_satellite_sub (households with satellite broadband)."
+  ],
   "creator": [
     "Mao Li",
     "Iris Gomez-Lopez",
@@ -83,15 +85,15 @@
   "file_size": "27.2 MB",
   "references": {
     "http://schema.org/url'": "https://doi.org/10.3886/ICPSR38567.v1",
-    "http://schema.org/downloadUrl ": "https://www.openicpsr.org/openicpsr/project/117866/version/V2/view",
-    "http://lccn.loc.gov/sh85035852 ": "https://www.openicpsr.org/openicpsr/project/117866/version/V2/view?path=/openicpsr/117866/fcr:versions/V2.6/NaNDA_Broadband_Availability_by_Census_Tract_2014-2020_v1-1.pdf&type=file"
+    "http://schema.org/downloadUrl": "https://www.openicpsr.org/openicpsr/project/117866/version/V2/view",
+    "http://lccn.loc.gov/sh85035852": "https://www.openicpsr.org/openicpsr/project/117866/version/V2/view?path=/openicpsr/117866/fcr:versions/V2.6/NaNDA_Broadband_Availability_by_Census_Tract_2014-2020_v1-1.pdf&type=file"
   },
   "wxs_indentifier": null,
   "id": "herop-pnjasf",
   "identifier": [
     "https://doi.org/10.3886/ICPSR38567.v1"
   ],
-  "modified": "2025-02-03T15:50:34Z",
+  "modified": "2025-02-06T23:25:33Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -100,18 +102,40 @@
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
-    "availability",
-    "broadband connection coverage",
-    "census tract",
-    "socioeconomic",
-    "average download speed"
+    "tract_fips10 (string): Census tract FIPS code, 2010"
   ],
   "data_variables": [
-    "total_household_providers",
-    "residential_providers",
-    "residential_fixed_connections"
+    "tract_fips10 (string): Census tract FIPS code, 2010",
+    "households (int): Number of households in the tract",
+    "n_internet_sub (int): Households with any type of internet subscription",
+    "n_broadband_any_sub (int): Households with any type of broadband (DSL/cable, satellite, or cellular)",
+    "n_broadband_dsl_cable_sub (int): Households with DSL/cable broadband",
+    "n_broadband_satellite_sub (int): Households with satellite internet",
+    "n_broadband_cellular_sub (int): Households with a cellular data plan",
+    "n_internet_no_sub (int): Households with internet access but no subscription",
+    "n_no_internet_acc (int): Households with no internet access",
+    "n_computer_with_broadband (int): Households with a computing device and broadband access",
+    "n_computer (int): Households with any computing device (laptop/desktop or smartphone/tablet)",
+    "n_laptop_desktop (int): Households with a laptop/desktop computer",
+    "n_smartphone_tablet (int): Households with a smartphone or tablet",
+    "n_no_computer (int): Households with no computing device",
+    "p_internet_sub (float): % of households with an internet subscription",
+    "p_broadband_any_sub (float): % of households with any type of broadband (DSL/cable, satellite, or cellular)",
+    "p_broadband_fixed_sub (float): % of households with DSL/cable broadband",
+    "p_broadband_satellite_sub (float): % of households with satellite internet",
+    "p_broadband_cellular_sub (float): % of households with a cellular data plan",
+    "p_internet_no_sub (float): % of households with internet access but no subscription",
+    "p_no_internet_acc (float): % of households with no internet access",
+    "p_computer_with_broadband (float): % of households with a computing device and broadband access",
+    "p_computer (float): % of households with any computing device (laptop/desktop or smartphone/tablet)",
+    "p_laptop_desktop (float): % of households with a laptop/desktop computer",
+    "p_smartphone_tablet (float): % of households with a smartphone or tablet",
+    "p_no_computer (float): % of households with no computing device"
   ],
-  "data_usage_notes": null,
+  "data_usage_notes": "This dataset supplements the National Neighborhood Data Archive (NaNDA): Broadband Internet Availability, Speed, and Adoption by Census Tract, United States, 2014-2020, which provides broadband availability data from the Federal Communications Commission (FCC).\r\n\r\nKey differences exist between these datasets. The FCC-derived data is longitudinal (2014\u20132020) and focuses on broadband availability, whereas the American Community Survey (ACS)-derived data represents a single measure for 2015\u20132019 and focuses on household-level internet access and usage.\r\n\r\n",
   "highlight_ids": null,
-  "featured_variable": "Average upload and download speed of fixed broadband connections, Number of internet service providers, Number of actual connections per 1000 households"
+  "featured_variable": [
+    "Average upload and download speed of fixed broadband connections, Number of internet service providers, Number of actual connections per 1000 households"
+  ],
+  "preferred_citation": null
 }

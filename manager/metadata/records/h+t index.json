@@ -8,7 +8,9 @@
     "progress_class": "success"
   },
   "title": "Housing + Transportation Index",
-  "alternative_title": null,
+  "alternative_title": [
+    "H+T Index"
+  ],
   "description": [
     "The Housing and Transportation (H+T\u00ae) Affordability Index provides a comprehensive view of affordability, one that includes the cost of housing and transportation at the neighborhood level. The Index is part of a broader effort to explore urban sustainability through location efficiency."
   ],
@@ -133,12 +135,13 @@
   "references": {
     "http://schema.org/url": "https://htaindex.cnt.org/download/data.php",
     "http://lccn.loc.gov/sh85035852": "https://htaindex.cnt.org/about/",
-    "http://schema.org/downloadUrl": "https://htaindex.cnt.org/about/method-2022.pdf"
+    "http://schema.org/downloadUrl": "https://htaindex.cnt.org/about/method-2022.pdf",
+    "archive-url": "https://uofi.app.box.com/folder/305406383348"
   },
   "wxs_indentifier": null,
   "id": "herop-ddydvt",
   "identifier": null,
-  "modified": "2025-02-04T19:59:33Z",
+  "modified": "2025-02-06T18:07:03Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -223,6 +226,8 @@
   "highlight_ids": [
     "150US*"
   ],
-  "featured_variable": "Housing + Transportation (H + T) Costs as a Percent of Household Income",
+  "featured_variable": [
+    "Housing + Transportation (H + T) Costs as a Percent of Household Income"
+  ],
   "preferred_citation": null
 }

@@ -7,9 +7,9 @@
     "filled_pct": 84,
     "progress_class": "warning"
   },
-  "title": "Food Environment Atlas (USDA)",
+  "title": "Food Access Research Atlas (USDA)",
   "alternative_title": [
-    "Food Environment Atlas (USDA)"
+    "Food Access Research Atlas (USDA)"
   ],
   "description": [
     "The Food Access Research Atlas presents an overview of food access indicators for low-income and other census tracts using different measures of supermarket accessibility. It provides food access data for populations within census tracts and it offers census-tract-level data on food access that can be downloaded for community planning or research purposes."
@@ -78,13 +78,15 @@
   "wxs_indentifier": null,
   "id": "herop-htraln",
   "identifier": null,
-  "modified": "2025-02-04T13:40:57Z",
+  "modified": "2025-02-07T16:28:00Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract"
   ],
-  "highlight_ids": null,
+  "highlight_ids": [
+    "140US*"
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Urban tracts; Group quarters, tract with a high share; Tracts with low vehicle access; Flags for low-income and low-access tracts using 1 mile and 10 miles thresholds; Flags for low-access tracts using 20-mile thresholds in rural areas."
@@ -93,6 +95,8 @@
     "Housing units, total; Population with low access at 1 mile for urban areas and 10 miles for rural areas; Population with low access at 1/2 mile for urban areas and 10 miles for rural areas; Population with low access at 1 mile for urban areas and 20 miles for rural areas; Low-income population with low access at 1 mile for urban areas and 10 miles for rural areas; Low-income population with low access at 1/2 mile for urban areas and 10 miles for rural areas; Low-income population with low access at 1 mile for urban areas and 20 miles for rural areas; Population with low access at 1/2 mile; Population share with low access at 1/2 mile; Low-income population with low access at 1/2 mile; Share of low-income population with low access at 1/2 mile; Children (age 0-17) with low access at 1/2 mile; Share of children (age 0-17) with low access at 1/2 mile; Seniors (age 65+) with low access at 1/2 mile; Share of seniors (age 65+) with low access at 1/2 mile; White population with low access at 1/2 mile; Share of White population with low access at 1/2 mile; Black or African American population with low access at 1/2 mile; Share of Black or African American population with low access at 1/2 mile; Hispanic or Latino population with low access at 1 mile; Share of Hispanic or Latino population with low access at 1 mile; Housing units receiving SNAP benefits and with low access at 10 miles; Share of housing units receiving SNAP benefits and with low access at 10 miles."
   ],
   "data_usage_notes": null,
-  "featured_variable": "Low-income and low-access tracts at 1 mile for urban areas and 10 miles for rural areas; Low-income and low-access tracts at 1/2 mile for urban areas and 10 miles for rural areas; Low-income and low-access tracts at 1 mile for urban areas and 20 miles for rural areas; Tracts with low vehicle access and low income at 20 miles in rural areas.",
+  "featured_variable": [
+    "Low-income and low-access tracts at 1 mile for urban areas and 10 miles for rural areas; Low-income and low-access tracts at 1/2 mile for urban areas and 10 miles for rural areas; Low-income and low-access tracts at 1 mile for urban areas and 20 miles for rural areas; Tracts with low vehicle access and low income at 20 miles in rural areas."
+  ],
   "preferred_citation": null
 }

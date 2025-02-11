@@ -3,11 +3,11 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 21,
-    "to_fill": 25,
-    "filled_pct": 84,
+    "to_fill": 26,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
-  "title": "ParkServe (Trails)",
+  "title": "Trails (ParkServe)",
   "alternative_title": null,
   "description": [
     "\"Crowd-sourced trails and playground data were retrieved from Open Street Map (OSM) in February of 2024 and clipped to ParkServe\u00ae park boundaries. Trail data were augmented with USGS transportation trails data from April 2024.\""
@@ -59,11 +59,11 @@
   "georeferenced": false,
   "relation": null,
   "member_of": null,
-  "is_part_of": [
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": [
     "herop-fhfxqq"
   ],
-  "source": null,
-  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": [
@@ -83,7 +83,7 @@
   "wxs_indentifier": null,
   "id": "herop-eqojtg",
   "identifier": null,
-  "modified": "2025-01-30T01:41:59Z",
+  "modified": "2025-02-11T17:00:12Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -96,5 +96,6 @@
   ],
   "data_usage_notes": null,
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": null
 }

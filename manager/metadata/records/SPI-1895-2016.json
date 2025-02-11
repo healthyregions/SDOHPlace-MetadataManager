@@ -2,8 +2,8 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 23,
-    "to_fill": 25,
+    "filled": 24,
+    "to_fill": 26,
     "filled_pct": 92,
     "progress_class": "success"
   },
@@ -32,7 +32,7 @@
     "Web services"
   ],
   "resource_type": [
-    "Point data"
+    "Table data"
   ],
   "subject": [
     "Health and Healthcare",
@@ -86,13 +86,13 @@
   "format": "CSV | RSS | RDF | XML",
   "file_size": "93.1 mb",
   "references": {
-    "http://schema.org/url ": "https://ephtracking.cdc.gov/DataExplorer/#/",
-    "http://lccn.loc.gov/sh85035852": "https://data.cdc.gov/Environmental-Health-Toxicology/Standardized-Precipitation-Index-1895-2016/xbk2-5i4e/data_preview"
+    "http://schema.org/url": "https://ephtracking.cdc.gov/DataExplorer/#/",
+    "http://schema.org/downloadUrl": "https://data.cdc.gov/Environmental-Health-Toxicology/Standardized-Precipitation-Index-1895-2016/xbk2-5i4e/data_preview"
   },
   "wxs_indentifier": null,
   "id": "herop-fsqjns",
   "identifier": null,
-  "modified": "2025-01-25T17:34:03Z",
+  "modified": "2025-02-06T21:55:00Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -100,13 +100,19 @@
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
+    "Annual Number of Extreme Precipitation Days",
+    "Monthly Average of Daily Total Precipitation",
+    "Projected Difference in Extreme Precipitation Days as Compared to the Historical Period",
+    "Projected Difference in Maximum Precipitation During an Extreme Event as Compared to the Historical Period"
+  ],
+  "data_variables": [
     "year",
     "month"
   ],
-  "data_variables": [
-    "Standard Precipitation Index (SPI)"
-  ],
   "data_usage_notes": null,
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": [
+    "Standard Precipitation Index (SPI)"
+  ],
+  "preferred_citation": null
 }

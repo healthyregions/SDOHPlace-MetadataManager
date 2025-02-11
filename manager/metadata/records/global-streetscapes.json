@@ -2,20 +2,24 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 19,
-    "to_fill": 25,
-    "filled_pct": 76,
+    "filled": 21,
+    "to_fill": 26,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
   "title": "Global Streetscapes",
   "alternative_title": null,
   "description": [
-    "A comprehensively enriched and labelled SVI dataset, named Global Streetscapes, to advance the use of SVI in urban science research. The open data repository we developed consists of metadata about over 10 million entirely crowdsourced SVIs obtained from Mapillary and KartaView, sampled from 688 cities worldwide. All images are enriched with extensive geographical, temporal, contextual, semantic, and perceptual information in addition to their original metadata (totalling 346 attributes) to facilitate their use and to promote their integration with other data. Specifically, images are merged with other global geospatial datasets based on their locations and have further temporal attributes calculated based on their capture timestamps."
+    "The Global Streetscapes dataset is an open-access, enriched dataset designed to advance the use of street-level imagery (SVI) in urban science research. It includes data from 688 cities worldwide, ensuring a geographically and demographically balanced representation.",
+    "The dataset is created by sampling street-level images from a wide range of cities and enriching them through computer vision and geospatial analysis. This process enhances the images with 346 attributes, providing geographical, temporal, contextual, semantic, and perceptual information. The dataset is crowdsourced, relying on open imagery from Mapillary and KartaView.",
+    "To improve integration with other datasets, images are geolocated and merged with global geospatial datasets. Additional temporal attributes are calculated based on the captured timestamps, offering valuable insights for urban research. The dataset is openly available alongside the source code, enabling researchers to explore and apply SVI data in diverse urban studies."
   ],
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [
+    "A comprehensive dataset of 10 million street-level images across 688 cities for urban science and analytics. Since the imagery comes from crowdsourcing platforms (Mapillary and KartaView), the dataset may have variations in image quality and coverage. The data might be uneven in some areas, depending on how much imagery is available in a specific location.The dataset provides metadata about each image, but the images themselves are not included."
+  ],
   "creator": [
     "Yujun Hou",
     "Matias Quintana",
@@ -35,6 +39,7 @@
     "Collections"
   ],
   "resource_type": [
+    "Point data",
     "Streetview photographs",
     "Table data"
   ],
@@ -81,15 +86,17 @@
   ],
   "license": null,
   "access_rights": "Public",
-  "format": null,
+  "format": "CSV, Shapefile (.shp), GeoJSON (.geojson)",
   "file_size": null,
   "references": {
-    "http://schema.org/url": "https://github.com/ualsg/global-streetscapes?tab=readme-ov-file"
+    "http://schema.org/url": "https://ual.sg/project/global-streetscapes/",
+    "http://schema.org/downloadUrl": "https://huggingface.co/datasets/NUS-UAL/global-streetscapes/tree/main/data",
+    "http://lccn.loc.gov/sh85035852": "https://www.sciencedirect.com/science/article/abs/pii/S0924271624002612?dgcid=author#d1e1592"
   },
   "wxs_indentifier": null,
   "id": "herop-blhoja",
   "identifier": null,
-  "modified": "2025-01-28T18:00:55Z",
+  "modified": "2025-02-11T17:23:21Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -97,8 +104,30 @@
   ],
   "spatial_resolution_note": null,
   "methods_variables": null,
-  "data_variables": null,
-  "data_usage_notes": null,
+  "data_variables": [
+    "UUID",
+    "Source",
+    "Original ID",
+    "Latitude",
+    "Longitude",
+    "Local date time",
+    "Width",
+    "Height:",
+    "Heading",
+    "Projection type",
+    "Horizontal field of view",
+    "Vertical field of view",
+    "Sequence ID",
+    "Index in sequence",
+    "Season",
+    "Number of hours before sunset",
+    "Average speed",
+    "Maximum speed"
+  ],
+  "data_usage_notes": "The CSV format makes the dataset suitable for statistical analysis, machine learning, and integration with GIS software. However, since it does not store images directly, users must reference the dataset\u2019s metadata to access the corresponding street-level images.",
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": [
+    "Street Greenery Coverage"
+  ],
+  "preferred_citation": null
 }

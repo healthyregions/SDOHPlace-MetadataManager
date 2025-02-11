@@ -41,10 +41,15 @@
     "Transportation"
   ],
   "keyword": [
+    "Transportation",
     "Walkability",
-    "US Census",
-    "Urban Mobility",
-    "Sustainable Development"
+    "Transit",
+    "Access",
+    "Design",
+    "Diversity",
+    "Density",
+    "Employment",
+    "Demographics"
   ],
   "temporal_coverage": [
     "2021"
@@ -87,7 +92,7 @@
   "wxs_indentifier": null,
   "id": "herop-jjsukv",
   "identifier": null,
-  "modified": "2025-02-04T20:28:20Z",
+  "modified": "2025-02-07T01:01:44Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -116,6 +121,8 @@
   ],
   "data_usage_notes": null,
   "highlight_ids": null,
-  "featured_variable": "National Walkability Index",
+  "featured_variable": [
+    "National Walkability Index"
+  ],
   "preferred_citation": null
 }

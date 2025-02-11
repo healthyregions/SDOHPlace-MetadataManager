@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 22,
-    "to_fill": 25,
-    "filled_pct": 88,
+    "to_fill": 26,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
   "title": "Priority Areas (ParkServe)",
@@ -58,11 +58,11 @@
   "georeferenced": false,
   "relation": null,
   "member_of": null,
-  "is_part_of": [
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": [
     "herop-fhfxqq"
   ],
-  "source": null,
-  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": [
@@ -82,7 +82,7 @@
   "wxs_indentifier": null,
   "id": "herop-cdyuaj",
   "identifier": null,
-  "modified": "2025-01-30T01:40:36Z",
+  "modified": "2025-02-11T17:01:21Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -98,5 +98,6 @@
   ],
   "data_usage_notes": null,
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": null
 }

@@ -9,10 +9,10 @@
   },
   "title": "Access to Jobs and Workers Via Transit",
   "alternative_title": [
-    "Access to Jobs and Workers Via Transit"
+    "Travel and the Built Environment"
   ],
   "description": [
-    "Access to Jobs and Workers Via Transit is a free geospatial data resource and web mapping tool for comparing the accessibility of neighborhoods via public transit service. Indicators summarize accessibility to jobs as well as accessibility by workers, households, and population. Coverage is limited to metropolitan regions served by transit agencies that share their service data in a standard format called GTFS."
+    "The Access to Jobs and Workers Via Transit is a geospatial tool that provides indicators of accessibility to destinations by public transit. Indicators summarize jobs accessible by transit as well as workers, households, and the population that can access transit at the block group level. Coverage is limited to metropolitan regions served by transit agencies that share their service data."
   ],
   "language": [
     "eng"
@@ -45,11 +45,16 @@
     "Transportation"
   ],
   "keyword": [
-    "jobs",
-    "transit",
-    "public transit",
-    "transportation",
-    "job opportunities"
+    "Transportation",
+    "Walkability",
+    "Transit",
+    "Access",
+    "Design",
+    "Diversity",
+    "Density",
+    "Employment",
+    "Demographics",
+    "Jobs"
   ],
   "temporal_coverage": [
     "2021"
@@ -86,15 +91,15 @@
   "format": "Geodatabase| Shapefile | DBF",
   "file_size": "shp 253 mb | gdb 120 | DBF 8mb",
   "references": {
-    "http://schema.org/url ": "https://www.epa.gov/smartgrowth/smart-location-mapping#walkability",
-    "http://schema.org/downloadUrl ": "https://www.epa.gov/smartgrowth/smart-location-mapping#Trans45",
+    "http://schema.org/url": "https://www.epa.gov/smartgrowth/smart-location-mapping#walkability",
+    "http://schema.org/downloadUrl": "https://www.epa.gov/smartgrowth/smart-location-mapping#Trans45",
     "http://lccn.loc.gov/sh85035852": "https://www.epa.gov/sites/default/files/2014-03/documents/sld_trans45_ug_0.pdf",
     "archive-url": "https://uofi.app.box.com/s/fqtslnfkpmgi32pb1cah1eyvmimvp740/folder/305406383348"
   },
   "wxs_indentifier": null,
   "id": "herop-bnohpx",
   "identifier": null,
-  "modified": "2025-02-04T23:04:23Z",
+  "modified": "2025-02-07T01:02:29Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -113,29 +118,50 @@
     "Aggregate frequency of transit service [D4c] per capita"
   ],
   "data_variables": [
-    "Accessibility Index - Transit to working-age population",
-    "Population with access by transit",
-    "Percentage of population with access by transit",
+    "Population accessible by transit",
+    "Minimum population accessible by transit among all block groups within same CBSA",
+    "Minimum population accessible by transit among all block group within the same CBSA",
+    "Weighted average population accessible by transit among all block group within same CBSA",
+    "Percent of population accessible by transit",
+    "Minimum percent of population accessible by transit among all block group within the same CBSA",
+    "Maximum percent of population accessible by transit among all block group within the same CBSA",
+    "Weighted average percent of population accessible by transit among all block group within the same CBSA",
+    "Housing units accessible by transit",
+    "Households accessible by",
+    "Workers accessible by transit",
+    "Minimum workers accessible by transit among all block group within the same CBSA",
+    "Maximum workers accessible by transit among all block group within the same CBSA",
+    "Weighted average workers accessible by transit among all block group within the same CBSA",
+    "Percent of workers accessible by transit",
+    "Minimum transit accessibility score among all block group within the same CBSA",
+    "Maximum transit accessibility score among all block group within the same CBSA",
+    "Weighted average transit accessibility score among all block group within the same CBSA",
+    "Low-medium wage workers accessible by transit",
+    "Minimum low-medium wage workers accessible by transit among all block group within the same CBSA",
+    "Maximum low-medium wage workers accessible by transit among all block group within the same CBSA",
+    "Weighted average Low-medium wage workers accessible by transitr among all block group within the same CBSA",
+    "High wage workers accessible by transit",
+    "Percent of all low-wage workers in region accessible by transit",
+    "Minimum percent of all low-wage workers in region accessible by transit among all block group within the same CBSA",
+    "Maximum percent of all low-wage workers in region accessible by transit among all block group within the same CBSA",
+    "Weighted average percent of all low-wage workers in region accessible by transit among all block group within the same CBSA",
+    "Percent of all medium-wage workers in region accessible by transit",
+    "Percent  of all low-medium wage workers in region accessible by transit",
+    "Minimum percent  of all low-medium wage workers in region accessible by transit among all block group within the sameCBSA",
+    "Minimum percent  of all low-medium wage workers in region accessible by transit among all block group within the same CBSA",
+    "Weighted average percent  of all low-medium wage workers in region accessible by transit among all block group within the same CBSA",
     "Jobs accessible by transit",
-    "Percentage of regional jobs accessible by transit",
-    "Workers with access by transit",
-    "Percentage of workers with access by transit",
-    "Low-wage workers with access by transit",
-    "Percentage of all low-wage workers in region with access by transit",
-    "Low-medium wage workers with access by transit",
-    "Percentage of all low-medium wage workers in region with access by transit",
-    "Population with access by transit",
-    "Percentage of population with access by transit",
-    "Jobs accessible by transit",
-    "Percentage of regional jobs accessible by transit",
-    "Workers with access by transit",
-    "Percentage of workers with access by transit",
-    "Low-wage workers with access by transit",
-    "Percentage of all low-wage workers in region with access by transit",
-    "Low-medium wage workers with access by transit",
-    "Percentage of all low-medium wage workers in region with access by transit"
+    "Minimum jobs accessible by transit among all block group within the same CBSA",
+    "Maximum jobs accessible by transit among all block group within the same CBSA",
+    "Weighted average jobs accessible by transit among all block group within the same CBSA",
+    "Percent of regional jobs accessible by transit",
+    "Minimum percent of regional jobs accessible by transit among all block group within the same CBSA",
+    "Maximum percent of regional jobs accessible by transit among all block group within the same CBSA",
+    "Weighted average percent of regional jobs accessible by transit among all block group within the same CBSA"
   ],
   "data_usage_notes": null,
-  "featured_variable": "Accessibility Index - Transit to working-age population",
+  "featured_variable": [
+    "Accessibility Index - Transit to working-age population"
+  ],
   "preferred_citation": null
 }

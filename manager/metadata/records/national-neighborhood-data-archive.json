@@ -2,12 +2,12 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 18,
+    "filled": 19,
     "to_fill": 26,
-    "filled_pct": 69,
+    "filled_pct": 73,
     "progress_class": "danger"
   },
-  "title": "The National Neighborhood Data Archive",
+  "title": "The National Neighborhood Data Archive (NANDA)",
   "alternative_title": [
     "The National Neighborhood Data Archive"
   ],
@@ -48,7 +48,7 @@
   "temporal_coverage": [
     "2019-2024"
   ],
-  "date_issued": null,
+  "date_issued": "2019",
   "index_year": [
     2019,
     2020,
@@ -78,11 +78,13 @@
   "access_rights": "Public",
   "format": "CSV",
   "file_size": null,
-  "references": null,
+  "references": {
+    "http://schema.org/url": "https://nanda.isr.umich.edu/about-nanda/"
+  },
   "wxs_indentifier": null,
   "id": "herop-gfxyto",
   "identifier": null,
-  "modified": "2025-02-04T13:42:40Z",
+  "modified": "2025-02-10T23:37:26Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -96,7 +98,7 @@
   "spatial_resolution_note": null,
   "methods_variables": null,
   "data_variables": null,
-  "data_usage_notes": null,
+  "data_usage_notes": "shorten\r\nChatGPT said:\r\nThe National Neighborhood Data Archive (NaNDA) provides datasets at various spatial scales, including census tract, block group, and ZIP code level. These datasets cover topics such as demographics, healthcare, crime, education, food access, housing, and more.The NANDA datasets encompass 4,333 variables.\r\n\r\n",
   "highlight_ids": null,
   "featured_variable": null,
   "preferred_citation": null

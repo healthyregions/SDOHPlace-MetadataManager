@@ -2,20 +2,22 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 20,
-    "to_fill": 25,
+    "filled": 21,
+    "to_fill": 26,
     "filled_pct": 80,
     "progress_class": "warning"
   },
-  "title": "Global Streetscapes (Climate)",
+  "title": "Global Streetscapes Climate Dataset",
   "alternative_title": null,
   "description": [
-    "\"Contains the Koppen climate zone associated with each image's location.\""
+    "The Global Streetscapes Climate dataset is an open, point-based geospatial dataset that enriches street-level imagery (SVI) with critical climate-related data. It includes imagery from 688 cities worldwide, ensuring broad geographic and demographic coverage. The dataset is based on crowdsourced images sourced from Mapillary and KartaView and is enriched with climate variables through computer vision and geospatial processing.The dataset includes the K\u00f6ppen climate zone associated with each image's location. This climate classification is integrated with the images based on their geospatial coordinates and temporal attributes."
   ],
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [
+    "Since the imagery comes from crowdsourcing platforms (Mapillary and KartaView), the dataset may have variations in image quality and coverage. The data might be uneven in some areas, depending on how much imagery is available in a specific location.The dataset provides metadata about each image, but the images themselves are not included."
+  ],
   "creator": [
     "Yujun Hou",
     "Matias Quintana",
@@ -35,6 +37,7 @@
     "Datasets"
   ],
   "resource_type": [
+    "Point data",
     "Streetview photographs",
     "Table data"
   ],
@@ -67,11 +70,11 @@
   "georeferenced": false,
   "relation": null,
   "member_of": null,
-  "is_part_of": [
+  "is_part_of": null,
+  "source": null,
+  "is_version_of": [
     "herop-blhoja"
   ],
-  "source": null,
-  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": [
@@ -82,15 +85,17 @@
   ],
   "license": null,
   "access_rights": "Public",
-  "format": null,
+  "format": "CSV",
   "file_size": null,
   "references": {
-    "http://schema.org/url": "https://huggingface.co/datasets/NUS-UAL/global-streetscapes/tree/main/data"
+    "http://schema.org/url": "https://ual.sg/project/global-streetscapes/",
+    "http://schema.org/downloadUrl": "https://huggingface.co/datasets/NUS-UAL/global-streetscapes/tree/main/data",
+    "http://lccn.loc.gov/sh85035852": "https://www.sciencedirect.com/science/article/abs/pii/S0924271624002612?dgcid=author#d1e1592"
   },
   "wxs_indentifier": null,
   "id": "herop-wyksjq",
   "identifier": null,
-  "modified": "2025-01-28T18:01:28Z",
+  "modified": "2025-02-11T17:21:52Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -99,9 +104,24 @@
   "spatial_resolution_note": null,
   "methods_variables": null,
   "data_variables": [
-    "Unique image ID, Source (Mapillary or KartaView), Orginal ID (by Mapillary or KartaView), Koppen Geiger zone, Zone description"
+    "Unique image ID,",
+    "Source (Mapillary or KartaView),",
+    "Orginal ID (by Mapillary or KartaView),",
+    "Koppen Geiger zone,",
+    "Zone description",
+    "Platform",
+    "Weather",
+    "View direction",
+    "Lighting condition",
+    "Panoramic status",
+    "Quality",
+    "Glare",
+    "Reflection"
   ],
-  "data_usage_notes": null,
+  "data_usage_notes": "The dataset is valuable for climate research, urban sustainability, and environmental planning. It supports spatial analysis of urban heat, green space distribution, and the impact of climate factors on public health and urban life. As a point dataset, it can be integrated with other geospatial layers and climate data sources to explore patterns of urban climate resilience.",
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": [
+    "K\u00f6ppen climate zone"
+  ],
+  "preferred_citation": null
 }

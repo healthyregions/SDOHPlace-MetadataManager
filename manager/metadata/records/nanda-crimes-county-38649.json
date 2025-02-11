@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 22,
-    "to_fill": 25,
-    "filled_pct": 88,
+    "to_fill": 26,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
   "title": "Crimes, 2002-2014",
@@ -12,7 +12,7 @@
     "NaNDA Crimes by County, United States, 2002-2014"
   ],
   "description": [
-    "This dataset contains county-level totals for the years 2002-2014 for eight types of crime: murder, rape, robbery, aggravated assault, burglary, larceny, motor vehicle theft, and arson. These crimes are classed as Part I criminal offenses by the United States Federal Bureau of Investigations (FBI) in their Uniform Crime Reporting (UCR) program. Each record in the dataset represents the total of each type of criminal offense reported in (or, in the case of missing data, attributed to) the county in a given year."
+    "This dataset contains county-level totals for the years 2002-2014 for eight types of crime: murder, rape, robbery, aggravated assault, burglary, larceny, motor vehicle theft, and arson. These crimes are classed as Part I criminal offenses by the United States Federal Bureau of Investigations (FBI) in their Uniform Crime Reporting (UCR) program. Each record in the dataset represents the total of each type of criminal offense reported in (or, in the case of missing data, attributed to) the county in a given year. Data were compiled from the Universal Crime Reporting Program Data Series at the National Archive of Criminal Justice Data (NACJD) Intra-university Consortium for Political and Social Research (ICPSR)."
   ],
   "language": [
     "eng"
@@ -97,14 +97,15 @@
   "format": "tsv",
   "file_size": "3.6 MB",
   "references": {
-    "http://schema.org/url": "https://doi.org/10.3886/ICPSR38649.v1"
+    "http://schema.org/url": "https://doi.org/10.3886/ICPSR38649.v1",
+    "'http://lccn.loc.gov/sh85035852'": "https://www.openicpsr.org/openicpsr/project/115006/version/V1/view"
   },
   "wxs_indentifier": null,
   "id": "herop-fdevuz",
   "identifier": [
     "https://doi.org/10.3886/ICPSR38649.v1"
   ],
-  "modified": "2025-02-03T15:57:46Z",
+  "modified": "2025-02-06T22:46:36Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -112,20 +113,24 @@
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
-    "multi-jurisdiction reporting agencies",
-    "county-level crime data",
-    "years",
-    "crime longitudinally"
+    "Crimes Reported (dataset 4)"
   ],
   "data_variables": [
-    "AGASSLT",
-    "ROBBERY",
-    "BURGLRY",
-    "LARCENY",
-    "MVTHEFT",
-    "ARSON"
+    "Murder",
+    "Rape",
+    "Robbery",
+    "Aggravated Assault",
+    "Burglary",
+    "Larceny",
+    "Motor Vehicle Theft",
+    "Arson",
+    "Multi-Jurisdiction Reporting Agencies",
+    "County",
+    "Years",
+    "Crime Longitudinally"
   ],
-  "data_usage_notes": null,
+  "data_usage_notes": "Crime data should be interpreted carefully to avoid reinforcing biases or misrepresenting communities. Users should follow ethical guidelines when reporting findings. The dataset aggregates crime data from various sources, including the FBI\u2019s Uniform Crime Reporting (UCR) program. Differences in local crime reporting practices and law enforcement policies may affect data consistency across counties.",
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": null
 }
