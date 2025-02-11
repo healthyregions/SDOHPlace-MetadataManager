@@ -72,7 +72,7 @@
                         <span class="tag">{{ keyword }}</span>
                         {% endfor %}
                     {% else %}
-                        {% if record[field['id']] and record[field['id']]|length > 100 %}
+                        {% if field['data_type'] != "boolean" and record[field['id']] and record[field['id']]|length > 100 %}
                         <details>
                             <summary>show full (this value is very long)</summary>
                             {{ record[field['id']] }}
