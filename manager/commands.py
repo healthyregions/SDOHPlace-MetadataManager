@@ -14,6 +14,8 @@ from .registry import Registry
 from .models import db, User
 from .utils import METADATA_DIR, batch_list
 
+from . import coverage
+
 registry = Registry()
 
 user_grp = AppGroup("user", help="A set of commands for managing users.")
@@ -185,3 +187,18 @@ def inspect_schema():
         print(f"\n## {dg['name']}")
         for f in dg["fields"]:
             print(f"- {f['label']}")
+
+
+coverage_grp = AppGroup(
+    "coverage",
+    help="A set of commands for checking coverage of various study datasets.",
+)
+
+
+@coverage_grp.command()
+@with_appcontext
+def verify():
+    coverage.check_coverage()
+    coverage.report_coverage()
+    return
+
