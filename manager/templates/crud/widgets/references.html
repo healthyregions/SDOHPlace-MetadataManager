@@ -4,6 +4,10 @@
 put multiple references on separate lines, with this format: <code>&lt;reference uri&gt;:: &lt;value&gt;</code> where <code>reference uri</code> is one of <a href="https://opengeometadata.org/reference-uris/" target="_blank">these options &nearr;</a>
 {% endblock %}
 
+{% block format %}
+specify multiple download formats using <code>download/&lt;label&gt;:: &lt;url&gt;</code> where <code>label</code> is <code>CSV</code>, <code>JSON</code>, <code>XML</code>, etc.
+{% endblock %}
+
 {% block input %}
 <textarea 
 style="white-space:pre; overflow-wrap:normal; overflow-x:scroll; width:100%;"

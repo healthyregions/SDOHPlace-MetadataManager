@@ -234,8 +234,20 @@ class Record:
             value = self.data.get(key)
             if value is not None and str(value).lower() != "none":
                 if key == "references":
-                    value = json.dumps(value)
-                solr_doc[field.uri] = value
+                    non_download_refs = {k:v for k, v in value.items() if not str.startswith(k, "download/")}
+                    download_refs = [{
+                        'label': k[9:],
+                        'url': v,
+                    } for k, v in value.items() if str.startswith(k, "download/")]
+                    download_ref_formatted = {'http://schema.org/downloadUrl': download_refs}
+                    #print(non_download_refs)
+                    if len(download_refs) > 0:
+                        #print(download_ref_formatted)
+                        value = {**non_download_refs, **download_ref_formatted}
+                    else:
+                        value = non_download_refs
+                    print(json.dumps(value))
+                solr_doc[field.uri] = json.dumps(value)
         return solr_doc
 
     def index(self, solr_instance=None):
