@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 20,
-    "to_fill": 25,
-    "filled_pct": 80,
+    "to_fill": 26,
+    "filled_pct": 76,
     "progress_class": "warning"
   },
   "id": "herop-yvjqrx",
@@ -83,11 +83,11 @@
   "file_size": null,
   "references": {
     "http://schema.org/url": "https://sdohatlas.github.io/",
-    "http://schema.org/downloadUrl": "[{'url': 'https://geodacenter.github.io/data-and-lab/data/us-sdoh-2014.zip', 'label': 'ZIP Archive'}]"
+    "http://schema.org/downloadUrl": "[{\"label\": \"ZIP Archive\", \"url\": \"https://geodacenter.github.io/data-and-lab/data/us-sdoh-2014.zip\"}]"
   },
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": "2025-02-03T21:05:47Z",
+  "modified": "2025-02-20T21:26:18Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -139,6 +139,9 @@
     "SDOH_CL - 1:rural affordable, 2:suburban affluent, 3:suburban affordable, 4:extreme poverty, 5:multilingual working, 6:urban core opportunity, 7:sparse areas"
   ],
   "highlight_ids": null,
-  "featured_variable": "Socioeconomic Advantage Index, Limited Mobility Index, Urban Core Opportunity Index, Mixed Immigrant, Cohesion, & Access Index, SDOH Cluster - 1:rural affordable, 2:suburban affluent, 3:suburban affordable, 4:extreme poverty, 5:multilingual working, 6:urban core opportunity, 7:sparse areas (see https://sdohatlas.github.io/)",
-  "data_usage_notes": null
+  "featured_variable": [
+    "Socioeconomic Advantage Index, Limited Mobility Index, Urban Core Opportunity Index, Mixed Immigrant, Cohesion, & Access Index, SDOH Cluster - 1:rural affordable, 2:suburban affluent, 3:suburban affordable, 4:extreme poverty, 5:multilingual working, 6:urban core opportunity, 7:sparse areas (see https://sdohatlas.github.io/)"
+  ],
+  "data_usage_notes": null,
+  "preferred_citation": null
 }

@@ -1,4 +1,6 @@
 import json
+import logging
+from json import JSONDecodeError
 from pathlib import Path
 from datetime import datetime
 from dotenv import load_dotenv
@@ -133,11 +135,20 @@ class Record:
 
         if self.data["references"]:
             cleaned_references = {}
+            download_refs = []
             for (
                 k,
                 v,
             ) in self.data["references"].items():
-                cleaned_references[k.rstrip().lstrip()] = v.rstrip().lstrip()
+                if k.startswith('download/'):
+                    label = k.rstrip().lstrip()[9:]
+                    url = v.rstrip().lstrip()
+                    download_refs.append({'label': label, 'url': url})
+                else:
+                    cleaned_references[k.rstrip().lstrip()] = v.rstrip().lstrip()
+
+            if len(download_refs) > 0:
+                cleaned_references['http://schema.org/downloadUrl'] = json.dumps(download_refs)
             self.data["references"] = cleaned_references
 
         coverages = (
@@ -204,7 +215,27 @@ class Record:
 
         self.data["_meta"] = meta
 
+        # cleaned_references = {}
+        # download_refs = []
+        # refs = self.data["references"]
+        # if refs and len(refs) > 0:
+        #     for k, v in refs.items():
+        #         if k.startswith('download/'):
+        #             ref = {'label': k[9:], 'url': v}
+        #             #print(f'Adding references: {str(ref)}')
+        #             download_refs.append(ref)
+        #         else:
+        #             cleaned_references[k] = v
+        #
+        #         if len(download_refs) > 0:
+        #             cleaned_references['http://schema.org/downloadUrl'] = json.dumps(download_refs)
+        #
+        #         #if k.startswith('download/'):
+        #         #    print(cleaned_references)
+        #     self.data["references"] = cleaned_references
+
         return self.data
+
 
     def to_form(self):
         """Prepares the raw backend data to populate an html form."""
@@ -216,7 +247,23 @@ class Record:
             if key == "references" and isinstance(value, dict):
                 lines = ""
                 for x, y in value.items():
-                    lines += f"{x}:: {y}\n"
+                    logging.warning(f'item - {x}:: {y}')
+                    if x == 'http://schema.org/downloadUrl':
+                        try:
+                            y_parsed = json.loads(y)
+                            if isinstance(y_parsed, list):
+                                print('Dictionary found')
+                                # downloadUrl is a list of objects defining label + url
+                                # break it up into multiple lines of download/<label>:: <url>
+                                for u in y_parsed:
+                                    lines += f"download/{u['label']}:: {u['url']}\n"
+                        except JSONDecodeError as ex:
+                            # downloadUrl is a single string
+                            print('String found')
+                            lines += f"{x}:: {y}\n"
+                    else:
+                        print('Typical key found')
+                        lines += f"{x}:: {y}\n"
                 value = lines
             if field.multiple and isinstance(value, list):
                 if field.widget == "text-area.html":
@@ -234,20 +281,24 @@ class Record:
             value = self.data.get(key)
             if value is not None and str(value).lower() != "none":
                 if key == "references":
-                    non_download_refs = {k:v for k, v in value.items() if not str.startswith(k, "download/")}
-                    download_refs = [{
-                        'label': k[9:],
-                        'url': v,
-                    } for k, v in value.items() if str.startswith(k, "download/")]
-                    download_ref_formatted = {'http://schema.org/downloadUrl': download_refs}
-                    #print(non_download_refs)
-                    if len(download_refs) > 0:
-                        #print(download_ref_formatted)
-                        value = {**non_download_refs, **download_ref_formatted}
-                    else:
-                        value = non_download_refs
-                    print(json.dumps(value))
-                solr_doc[field.uri] = json.dumps(value)
+                    value = json.dumps(value)
+                    # non_download_refs = {k:v for k, v in value.items() if not k.startswith("download/")}
+                    # download_refs = [{
+                    #     'label': k[9:],
+                    #     'url': v,
+                    # } for k, v in value.items() if k.startswith("download/")]
+                    # download_ref_formatted = {'http://schema.org/downloadUrl': download_refs}
+                    # if len(non_download_refs) > 0:
+                    #     print('Non Download Refs:')
+                    #     print(non_download_refs)
+                    #
+                    # if len(download_refs) > 0:
+                    #     print('Download Refs:')
+                    #     print(download_ref_formatted)
+                    #     value = {**non_download_refs, **download_ref_formatted}
+                    # else:
+                    #     value = non_download_refs
+                solr_doc[field.uri] = value
         return solr_doc
 
     def index(self, solr_instance=None):
