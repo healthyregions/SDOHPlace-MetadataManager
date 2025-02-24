@@ -148,7 +148,7 @@ class Record:
                     cleaned_references[k.rstrip().lstrip()] = v.rstrip().lstrip()
 
             if len(download_refs) > 0:
-                cleaned_references['http://schema.org/downloadUrl'] = json.dumps(download_refs)
+                cleaned_references['http://schema.org/downloadUrl'] = download_refs
             self.data["references"] = cleaned_references
 
         coverages = (
@@ -231,11 +231,10 @@ class Record:
                     logging.warning(f'item - {x}:: {y}')
                     if x == 'http://schema.org/downloadUrl':
                         try:
-                            y_parsed = json.loads(y)
-                            if isinstance(y_parsed, list):
+                            if isinstance(y, list):
                                 # downloadUrl is a list of objects defining label + url
                                 # break it up into multiple lines of download/<label>:: <url>
-                                for u in y_parsed:
+                                for u in y:
                                     lines += f"download/{u['label']}:: {u['url']}\n"
                         except JSONDecodeError as ex:
                             # downloadUrl is a single string
