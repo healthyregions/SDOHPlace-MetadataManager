@@ -1,8 +1,53 @@
 #!/usr/bin/env python3
 import os
-import logging
+import argparse
+from enum import Enum
+
 import pandas as pd
-from .utils import SpatialResolution
+import geopandas as gpd
+
+# Map "spatial_resolution" above with the prefix to use
+spatial_resolution_prefix_map = {
+    'state': {
+        'prefix': '040US',
+        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k-shp.zip'
+    },
+    'county': {
+        'prefix': '050US',
+        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k-shp.zip'
+    },
+    'tract': {
+        'prefix': '140US',
+        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k-shp.zip'
+    },
+    'bg': {
+        'prefix': '150US',
+        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k-shp.zip'
+    },
+    'zcta': {
+        'prefix': '860US',
+        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k-shp.zip'
+    },
+}
+
+# Enum for spatial_reolution
+class SpatialResolution(str, Enum):
+    state = 'state'
+    county = 'county'
+    tract = 'tract'
+    blockgroup = 'blockgroup'
+    zcta = 'zcta'
+
+    def __str__(self) -> str:
+        return self.value
+
+    # Constant prefixes based on spatial resolution
+    def to_prefix(self):
+        return spatial_resolution_prefix_map[self.value]['prefix']
+
+    def get_geodataframe(self):
+        return gpd.read_file(spatial_resolution_prefix_map[self.value]['shp_url'])
+
 
 STUDY_DATASET_DIRECTORY = os.getenv('STUDY_DATASET_DIRECTORY', 'manager/data/test')
 MASTER_GEOGRAPHY_DIRECTORY = os.getenv('MASTER_GEOGRAPHY_DIRECTORY', 'manager/data/master')
@@ -24,31 +69,28 @@ file_map = {
 # Store coverage results in a new dictionary
 coverage = {}
 
-def check_coverage():
+def check_coverage(file_path, geography, id_field=None):
     print('Checking coverage...')
-    for check, master in file_map.items():
-        # Read study CSV
-        study_df = read_csv(STUDY_DATASET_DIRECTORY + '/' + check)
-        fips_col = 'FIPS'  # Column in df1
-        study_df[fips_col] = study_df[fips_col].astype(str)
-        print(study_df[fips_col])
 
-        # Read master geography CSV
-        mgeo_df = read_csv(MASTER_GEOGRAPHY_DIRECTORY + '/' + master['mgeo'])
-        herop_id_col = 'HEROP_ID'  # Column in df2 that should match col1 + '140US'
-        mgeo_df[herop_id_col] = mgeo_df[herop_id_col].astype(str)
-        print(mgeo_df[herop_id_col])
+    geog_lookup = SpatialResolution(geography)
+    study_df = read_csv(file_path, id_field)
+    study_df[id_field] = study_df[id_field].astype(str)
+    print(study_df[id_field])
 
-        # TODO: Null-checking, handle NaN, etc
+    # Read master geography file
+    gdf = geog_lookup.get_geodataframe()
+    herop_id_col = 'HEROP_ID'  # Column in df2 that should match col1 + '140US'
+    gdf[herop_id_col] = gdf[herop_id_col].astype(str)
+    print(gdf[herop_id_col])
 
-        # Determine prefix for HEROP_ID
-        prefix = SpatialResolution(master['spatial_resolution']).to_prefix()
+    # Use a predicate to compare FIPS to HEROP_ID
+    mask = ~(gdf[herop_id_col]).isin(geog_lookup.to_prefix() + study_df[id_field])
+    missing = gdf[mask]["HEROP_ID"]
 
-        # Use a predicate to compare FIPS to HEROP_ID
-        mask = ~(mgeo_df[herop_id_col]).isin(prefix + study_df[fips_col])
-        coverage[check] = mgeo_df[mask]
-
+    print(f'{len(gdf)} HEROP_IDs are present in master geography file.')
+    print(f'{len(missing)} are missing from the input dataset ({file_path}).')
     print('Done checking!')
+    return list(missing)
 
 def report_coverage():
     print('Reporting coverage')
@@ -62,7 +104,7 @@ def report_coverage():
 
     print('Done reporting!')
 
-def read_csv(filepath):
+def read_csv(filepath, id_field):
     print(f'Reading {filepath}...')
     df = pd.read_csv(filepath, dtype=str)
 
@@ -70,9 +112,11 @@ def read_csv(filepath):
         print(f'This file has FIPS column: {len(df.index)} rows found')
     elif 'HEROP_ID' in df.columns:
         print(f'This file has HEROP_ID column: {len(df.index)} rows found')
+    elif id_field in df.columns:
+        print(f'This file has {id_field} column: {len(df.index)} rows found')
     else:
-        print(f'WARNING! Neither FIPS nor HEROP_ID were found. Available columns: {str(df.columns)}')
-    
+        print(f'WARNING! Neither FIPS, HEROP_ID, nor the provided id field were found. Available columns: {str(df.columns)}')
+        exit()
     return df
 
 def main():
@@ -81,4 +125,22 @@ def main():
     report_coverage()
 
 if __name__=="__main__":
-    main()
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("input_file", help="path to input file")
+    parser.add_argument("geography",
+        help="name of geography to check against. 2018 US Census files will be used.",
+        choices=[
+            "state",
+            "county",
+            "tract",
+            "blockgroup",
+            "zcta",
+        ],
+    )
+    parser.add_argument("-i", "--id_field",
+        help="name of field in input file that has FIPS, GEOID, or HEROPID in it",
+    )
+    args = parser.parse_args()
+
+    missing = check_coverage(args.input_file, args.geography, args.id_field)
