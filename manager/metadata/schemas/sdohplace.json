@@ -882,7 +882,15 @@
             "widget": "text-area.html",
             "id": "highlight_ids",
             "help_text": [
-                "HEROP_IDs corresponding to specific units that this resource represents. Used to drive highlighted units in the map view."
+                "HEROP_IDs corresponding to specific units that this resource represents. Used to drive highlighted units in the map view.",
+                "Use wildcards to indicate a full set of certain geographic category:",
+                "040US*: All states",
+                "050US*: All counties",
+                "140US*: All census tracts",
+                "150US*: All census block groups",
+                "860US*: All zip-codes",
+                "You can also use specific codes for one or more units, like 040US17 to highlight just the state of Illnois.",
+                "For subsets of units, like all counties in Illinois, you can use wildcards: 050US17*"
             ]
         },
         {
