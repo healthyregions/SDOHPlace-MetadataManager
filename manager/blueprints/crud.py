@@ -43,6 +43,7 @@ def index():
 
 @crud.route("/table", methods=["GET"])
 def table_view():
+    registry = Registry()
     records = [r.to_json() for r in registry.records]
     schema = registry.schema
     fields = schema.schema_json["fields"]
@@ -69,6 +70,7 @@ def create_record():
 @login_required
 def validate_record():
     if request.method == "POST":
+        registry = Registry()
         schema = registry.schema
         form_errors = schema.validate_form_data(request.form)
         if form_errors:
