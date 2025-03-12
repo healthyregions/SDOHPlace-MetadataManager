@@ -21,6 +21,7 @@ load_dotenv()
 METADATA_DIR = os.path.join(os.path.dirname(__file__), "metadata")
 
 
+
 def load_json(path: Path):
     with open(path, "r") as o:
         return json.load(o)

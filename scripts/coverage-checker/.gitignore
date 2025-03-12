@@ -1,0 +1,4 @@
+data/
+
+# Hide from git if it contains secrets
+#.env
