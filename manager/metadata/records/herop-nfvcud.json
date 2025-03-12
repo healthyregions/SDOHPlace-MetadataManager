@@ -43,7 +43,12 @@
     "1960-2022"
   ],
   "date_issued": null,
-  "index_year": null,
+  "index_year": [
+    2020,
+    2021,
+    2022,
+    2023
+  ],
   "date_range": null,
   "spatial_coverage": [
     "United States"
@@ -59,7 +64,9 @@
   "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
-  "rights": null,
+  "rights": [
+    "Public"
+  ],
   "rights_holder": null,
   "license": null,
   "access_rights": "Public",
@@ -71,7 +78,7 @@
   "wxs_indentifier": null,
   "id": "herop-nfvcud",
   "identifier": null,
-  "modified": "2025-02-10T23:58:13Z",
+  "modified": "2025-03-12T21:02:50Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -85,9 +92,9 @@
   "data_usage_notes": "The CDE pages provide a view of estimated national and state data, reported agency-level crime statistics, and graphs of specific variables from the National Incident-Based Reporting System (NIBRS). ",
   "_meta": {
     "to_fill": 26,
-    "filled": 18,
-    "filled_pct": 69,
-    "progress_class": "danger"
+    "filled": 20,
+    "filled_pct": 76,
+    "progress_class": "warning"
   },
   "preferred_citation": null
 }

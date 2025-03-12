@@ -2,53 +2,50 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 14,
-    "to_fill": 25,
-    "filled_pct": 56,
+    "filled": 13,
+    "to_fill": 26,
+    "filled_pct": 50,
     "progress_class": "danger"
   },
   "id": "herop-ldyffx",
   "title": "CDC Social Vulnerability Index (SVI) 2018",
   "alternative_title": null,
   "description": null,
-  "language": null,
+  "language": [],
   "display_note": null,
   "creator": [
     "Centers for Disease Control and Prevention/ Agency for Toxic Substances and Disease Registry/ Geospatial Research, Analysis, and Services Program."
   ],
-  "publisher": "Centers for Disease Control and Prevention",
+  "publisher": [
+    "Centers for Disease Control and Prevention"
+  ],
   "provider": "Healthy Regions + Policies Lab",
   "resource_class": [
     "Datasets"
   ],
-  "resource_type": [
-    "Vector Data"
-  ],
+  "resource_type": [],
   "subject": [
     "Economic Stability",
     "Social and Community Context"
   ],
-  "theme": null,
+  "theme": [],
   "keyword": null,
   "temporal_coverage": null,
   "date_issued": "2018",
   "index_year": [
-    2,
-    0,
-    1,
-    8
+    2018
   ],
   "date_range": null,
   "spatial_coverage": null,
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
   "source": null,
-  "is_version_of": "social-vulnerability-index",
+  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": null,
@@ -62,14 +59,18 @@
   },
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": "2024-12-03T12:14:59Z",
+  "modified": "2025-03-12T20:55:28Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "County",
     "Census Tract"
   ],
   "spatial_resolution_note": null,
   "methods_variables": null,
-  "data_variables": null
+  "data_variables": null,
+  "highlight_ids": null,
+  "featured_variable": null,
+  "preferred_citation": null,
+  "data_usage_notes": null
 }

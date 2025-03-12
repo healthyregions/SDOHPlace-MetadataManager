@@ -54,7 +54,9 @@
   ],
   "temporal_coverage": null,
   "date_issued": "2015",
-  "index_year": null,
+  "index_year": [
+    2024
+  ],
   "date_range": null,
   "spatial_coverage": [
     "United States"
@@ -83,7 +85,7 @@
   "wxs_indentifier": null,
   "id": "herop-qatixm",
   "identifier": null,
-  "modified": "2025-02-11T02:05:52Z",
+  "modified": "2025-03-12T21:31:06Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -244,8 +246,8 @@
   "data_usage_notes": "The AARP Livability Index takes a holistic approach to understanding livability. It wasn\u2019t created to solely measure the quality of the built environment or the health of residents. It includes those elements, but it also considers engagement, opportunity, and the natural environment. It encourages policymakers and professionals to get outside their areas of expertise and understand the interrelated nature of livability.",
   "_meta": {
     "to_fill": 26,
-    "filled": 21,
-    "filled_pct": 80,
+    "filled": 22,
+    "filled_pct": 84,
     "progress_class": "warning"
   }
 }

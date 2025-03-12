@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 10,
-    "to_fill": 25,
-    "filled_pct": 40,
+    "to_fill": 26,
+    "filled_pct": 38,
     "progress_class": "danger"
   },
   "title": "Area Deprivation Index (ADI) 2015",
@@ -31,22 +31,19 @@
   "temporal_coverage": null,
   "date_issued": "2015",
   "index_year": [
-    2,
-    0,
-    1,
-    5
+    2015
   ],
   "date_range": null,
   "spatial_coverage": null,
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
   "source": null,
-  "is_version_of": "neighborhood-atlas",
+  "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
   "rights": null,
@@ -59,9 +56,9 @@
   "wxs_indentifier": null,
   "id": "herop-hqhyud",
   "identifier": null,
-  "modified": "2024-12-03T12:14:59Z",
+  "modified": "2025-03-12T20:48:05Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "Census Block Group",
     "Zip Code Tabulation Area (ZCTA)"
@@ -69,5 +66,8 @@
   "spatial_resolution_note": null,
   "methods_variables": null,
   "data_variables": null,
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null,
+  "preferred_citation": null
 }

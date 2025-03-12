@@ -92,11 +92,11 @@
   "wxs_indentifier": null,
   "id": "herop-qwqgwc",
   "identifier": null,
-  "modified": "2025-02-17T15:56:08Z",
+  "modified": "2025-03-12T21:20:15Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
-    "Census Block Group"
+    "Other"
   ],
   "spatial_resolution_note": "30m resolution",
   "methods_variables": null,
