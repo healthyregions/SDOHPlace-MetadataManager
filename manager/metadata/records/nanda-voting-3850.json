@@ -2,8 +2,8 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
-    "to_fill": 25,
+    "filled": 23,
+    "to_fill": 26,
     "filled_pct": 88,
     "progress_class": "warning"
   },
@@ -99,7 +99,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38506.v1"
   ],
-  "modified": "2025-01-26T14:59:29Z",
+  "modified": "2025-02-19T20:06:10Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -114,5 +114,6 @@
   ],
   "data_usage_notes": "This dataset was created to explore the relationship between voter engagement (as expressed through registration and turnout rates), partisan political leanings, community health, and public policy.\r\n\r\n",
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": "Megan Chenoweth, University of Michigan. Institute for Social Research; Mao Li, University of Michigan. Institute for Social Research; Iris N. Gomez-Lopez, University of Michigan. Institute for Social Research; Ken Kollman, University of Michigan. Institute for Social Research"
 }

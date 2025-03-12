@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
+    "filled": 23,
     "to_fill": 26,
-    "filled_pct": 84,
+    "filled_pct": 88,
     "progress_class": "warning"
   },
   "title": "Environmental Justice Index (CDC)",
@@ -17,7 +17,9 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [
+    "A percentile ranking represents the proportion of census tracts (or communities) that may experience more or less severe cumulative impacts from environmental burdens than the community of interest. For example, a EJI ranking of 0.75 signifies that 75% of tracts in the nation likely experience less severe cumulative impacts from environmental burdens than the tract of interest, and that 25% of tracts in the nation likely experience more severe cumulative impacts from environmental burdens."
+  ],
   "creator": [
     "Centers for Disease Control and Prevention and Agency for Toxic Substances Disease Registry"
   ],
@@ -78,14 +80,14 @@
   "format": "CSV, Geodatabase",
   "file_size": "51.7 MB",
   "references": {
-    "http://schema.org/downloadUrl": "https://www.epa.gov/ejscreen/download-ejscreen-data",
-    "http://schema.org/url": "https://www.epa.gov/ejscreen/ej-and-supplemental-indexes-ejscreen#EJ",
-    "http://lccn.loc.gov/sh85035852": "https://www.epa.gov/ejscreen/technical-information-and-data-downloads"
+    "http://schema.org/downloadUrl": "https://www.atsdr.cdc.gov/place-health/php/eji/index.html",
+    "http://schema.org/url": "https://www.atsdr.cdc.gov/place-health/php/eji/eji-data-download.html",
+    "http://lccn.loc.gov/sh85035852": "https://www.atsdr.cdc.gov/place-health/media/pdfs/2024/10/EJI_2024_Technical_Documentation.pdf"
   },
   "wxs_indentifier": null,
   "id": "herop-oqxqog",
   "identifier": null,
-  "modified": "2025-02-04T13:40:46Z",
+  "modified": "2025-02-17T22:30:09Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -99,7 +101,9 @@
   "data_variables": [
     "Total population; Low-income population percentage; Population with less than high school education; Unemployed population percentage; Population with disabilities percentage; People of color percentage; Limited English-speaking population percentage; Population under age 5 percentage; Population over age 64 percentage; Life expectancy; Levels of PM2.5 (Particulate Matter); Ozone levels; Nitrogen dioxide levels; Diesel particulate matter levels; Toxic releases to air concentrations; Traffic volume and proximity to major roads; Percentage of housing units with potential lead paint exposure; Proximity to Superfund sites; Proximity to Risk Management Plan (RMP) facilities; Proximity to hazardous waste facilities; Proximity to underground storage tanks; Wastewater discharge concentration; Drinking water non-compliance violations."
   ],
-  "data_usage_notes": null,
-  "featured_variable": "Environmental Justice Index for PM2.5 (Particulate Matter); Environmental Justice Index for ozone levels; Environmental Justice Index for nitrogen dioxide levels; Environmental Justice Index for diesel particulate matter levels; Environmental Justice Index for toxic releases to air; Environmental Justice Index for traffic proximity and volume; Environmental Justice Index for lead paint exposure risk; Environmental Justice Index for Superfund site proximity; Environmental Justice Index for Risk Management Plan (RMP) facility proximity; Environmental Justice Index for hazardous waste facility proximity; Environmental Justice Index for underground storage tank proximity; Environmental Justice Index for wastewater discharge proximity; Environmental Justice Index for drinking water non-compliance.",
-  "preferred_citation": null
+  "data_usage_notes": "The EJI can be used to:\r\n\r\nIdentify and prioritize areas that may require special attention or additional action to improve health and health equity\r\nEducate and inform the public about their community\r\nAnalyze the unique, local factors driving cumulative impacts on health to inform policy and decision-making\r\nEstablish meaningful goals and measure progress towards environmental justice and health equity",
+  "featured_variable": [
+    "Environmental Justice Index for PM2.5 (Particulate Matter); Environmental Justice Index for ozone levels; Environmental Justice Index for nitrogen dioxide levels; Environmental Justice Index for diesel particulate matter levels; Environmental Justice Index for toxic releases to air; Environmental Justice Index for traffic proximity and volume; Environmental Justice Index for lead paint exposure risk; Environmental Justice Index for Superfund site proximity; Environmental Justice Index for Risk Management Plan (RMP) facility proximity; Environmental Justice Index for hazardous waste facility proximity; Environmental Justice Index for underground storage tank proximity; Environmental Justice Index for wastewater discharge proximity; Environmental Justice Index for drinking water non-compliance."
+  ],
+  "preferred_citation": "Centers for Disease Control and Prevention and Agency for Toxic Substances Disease Registry. [Year] Environmental Justice Index. Accessed [Date]. https://atsdr.cdc.gov/place-health/php/eji/index.html"
 }

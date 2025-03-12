@@ -2,15 +2,15 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 21,
+    "filled": 22,
     "to_fill": 26,
-    "filled_pct": 80,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
-  "title": "Global Streetscapes Climate Dataset",
+  "title": "Global Streetscapes (Climate)",
   "alternative_title": null,
   "description": [
-    "The Global Streetscapes Climate dataset is an open, point-based geospatial dataset that enriches street-level imagery (SVI) with critical climate-related data. It includes imagery from 688 cities worldwide, ensuring broad geographic and demographic coverage. The dataset is based on crowdsourced images sourced from Mapillary and KartaView and is enriched with climate variables through computer vision and geospatial processing.The dataset includes the K\u00f6ppen climate zone associated with each image's location. This climate classification is integrated with the images based on their geospatial coordinates and temporal attributes."
+    "The Global Streetscapes Climate dataset is an open geospatial dataset that enriches street-level imagery (SVI) with critical climate-related data. It includes imagery from 688 cities worldwide, ensuring broad geographic and demographic coverage. The dataset is based on crowdsourced images sourced from Mapillary and KartaView and is enriched with climate variables through computer vision and geospatial processing.The dataset includes the K\u00f6ppen climate zone associated with each image's location. This climate classification is integrated with the images based on their geospatial coordinates and temporal attributes."
   ],
   "language": [
     "eng"
@@ -95,7 +95,7 @@
   "wxs_indentifier": null,
   "id": "herop-wyksjq",
   "identifier": null,
-  "modified": "2025-02-11T17:21:52Z",
+  "modified": "2025-02-17T22:46:13Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -123,5 +123,5 @@
   "featured_variable": [
     "K\u00f6ppen climate zone"
   ],
-  "preferred_citation": null
+  "preferred_citation": "Hou Y, Quintana M, Khomiakov M, Yap W, Ouyang J, Ito K, Wang Z, Zhao T, Biljecki F (2024): Global Streetscapes \u2014 A comprehensive dataset of 10 million street-level images across 688 cities for urban science and analytics. ISPRS Journal of Photogrammetry and Remote Sensing 215: 216-238. doi:10.1016/j.isprsjprs.2024.06.023"
 }

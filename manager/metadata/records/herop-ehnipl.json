@@ -1,16 +1,8 @@
 {
-  "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
-    "filled": 20,
-    "to_fill": 26,
-    "filled_pct": 76,
-    "progress_class": "warning"
-  },
-  "title": "USGS Land Cover (PR 2001)",
+  "title": "USGS Land Cover (Annual CONUS)",
   "alternative_title": null,
   "description": [
-    "2001 land cover data for Puerto Rico"
+    "Land cover data for the conterminous United States. Data available for each individual year 1985-2023, and as larger datasets for 1985-1994, 1995-2004, 2005-2014, and 2015-2023."
   ],
   "language": [
     "eng"
@@ -41,15 +33,53 @@
     "Sateliite Data"
   ],
   "temporal_coverage": [
-    "2001"
+    "1985-2023"
   ],
   "date_issued": null,
   "index_year": [
-    2001
+    1985,
+    1986,
+    1987,
+    1988,
+    1989,
+    1990,
+    1991,
+    1992,
+    1993,
+    1994,
+    1995,
+    1996,
+    1997,
+    1998,
+    1999,
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
   ],
   "date_range": null,
   "spatial_coverage": [
-    "Puerto Rico"
+    "Conterminous United States"
   ],
   "geometry": null,
   "bounding_box": null,
@@ -75,26 +105,32 @@
   "format": "Raster Dataset",
   "file_size": null,
   "references": {
-    "http://schema.org/url": "https://www.mrlc.gov/data/nlcd-2001-land-cover-puerto-rico",
-    "http://schema.org/downloadUrl": "https://www.mrlc.gov/data/nlcd-2001-land-cover-puerto-rico",
+    "http://schema.org/url": "https://www.mrlc.gov/data/legends/national-land-cover-database-class-legend-and-description",
+    "http://schema.org/downloadUrl": "https://www.mrlc.gov/data?f%5B0%5D=category%3ALand%20Cover&f%5B1%5D=category%3ALegacy%20Land%20Cover&f%5B2%5D=project_tax_term_term_parents_tax_term_name%3AAnnual%20NLCD",
     "http://lccn.loc.gov/sh85035852": "https://doi.org/10.14358/PERS.70.7.829"
   },
   "wxs_indentifier": null,
-  "id": "herop-mmfcua",
+  "id": "herop-ehnipl",
   "identifier": null,
-  "modified": "2025-02-17T15:42:33Z",
+  "modified": "2025-02-17T15:43:11Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
   ],
+  "highlight_ids": null,
   "spatial_resolution_note": "30m resolution",
   "methods_variables": null,
   "data_variables": [
     "Land cover type"
   ],
-  "data_usage_notes": null,
-  "highlight_ids": null,
   "featured_variable": null,
-  "preferred_citation": null
+  "preferred_citation": null,
+  "data_usage_notes": null,
+  "_meta": {
+    "to_fill": 26,
+    "filled": 20,
+    "filled_pct": 76,
+    "progress_class": "warning"
+  }
 }

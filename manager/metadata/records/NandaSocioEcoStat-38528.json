@@ -2,8 +2,8 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
-    "to_fill": 25,
+    "filled": 23,
+    "to_fill": 26,
     "filled_pct": 88,
     "progress_class": "warning"
   },
@@ -108,7 +108,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38528.v3"
   ],
-  "modified": "2025-01-26T15:10:55Z",
+  "modified": "2025-02-19T21:04:08Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -153,5 +153,6 @@
   ],
   "data_usage_notes": "These datasets were created to measure the socioeconomic and demographic characteristics by US census tract for the years 2000-2020 and ZIP code tabulation area (ZCTA) for the years 2008-2020.\r\n\r\nUsers should be aware that ZCTAs are not equivalent to ZIP codes. ZIP codes are linear\r\nmail delivery routes created by the US Postal Service. ZIP code tabulation areas are\r\nspatial features consisting of census blocks grouped by the predominant ZIP code found\r\non the block (United States Census Bureau, 2020).",
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": "Clarke, Philippa, Noppert, Grace, Melendez, Robert, Chenoweth, Megan, and Gypin, Lindsay. National Neighborhood Data Archive (NaNDA): Socioeconomic Status and Demographic Characteristics of Census Tracts and ZIP Code Tabulation Areas, United States, 2000-2020. Inter-university Consortium for Political and Social Research [distributor], 2023-04-17. https://doi.org/10.3886/ICPSR38528.v3"
 }

@@ -6,7 +6,9 @@
   "description": [
     "The goal of the Child Opportunity Index is to measure and compare specific neighborhood-level (census-tract) quality of life indicators that play a significant factor in the healthy development of children. These measures include: safe housing, access to food, quality of schools, parks, and more. The database and interactive map tool enables exploration of the factors that shape education, health, and socioeconomic outcomes, and the drivers of childhood equity at the neighborhood level."
   ],
-  "language": [],
+  "language": [
+    "eng"
+  ],
   "display_note": [
     "The list of methodological variables presented here may not be exhaustive; however, we have made every effort to incorporate as many relevant variables as possible within the scope of this study."
   ],
@@ -89,7 +91,7 @@
   "wxs_indentifier": null,
   "id": "herop-znxdus",
   "identifier": null,
-  "modified": "2025-02-10T20:30:06Z",
+  "modified": "2025-02-17T21:38:49Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

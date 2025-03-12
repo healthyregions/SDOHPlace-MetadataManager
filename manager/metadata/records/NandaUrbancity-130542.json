@@ -2,8 +2,8 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
-    "to_fill": 25,
+    "filled": 23,
+    "to_fill": 26,
     "filled_pct": 88,
     "progress_class": "warning"
   },
@@ -83,7 +83,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38606.v1"
   ],
-  "modified": "2025-01-26T15:10:06Z",
+  "modified": "2025-02-19T20:21:46Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -125,5 +125,6 @@
   ],
   "data_usage_notes": null,
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": "Miller, Stephanie, Melendez, Robert, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Urbanicity by Census Tract, United States, 2010. Inter-university Consortium for Political and Social Research [distributor], 2022-12-12. https://doi.org/10.3886/ICPSR38606.v1"
 }

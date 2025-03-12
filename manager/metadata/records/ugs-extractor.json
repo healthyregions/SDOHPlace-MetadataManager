@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 20,
-    "to_fill": 25,
-    "filled_pct": 80,
+    "to_fill": 26,
+    "filled_pct": 76,
     "progress_class": "warning"
   },
   "title": "UGS Extractor",
@@ -83,15 +83,17 @@
   ],
   "license": null,
   "access_rights": "Public",
-  "format": null,
+  "format": "GeoJSON",
   "file_size": null,
   "references": {
-    "http://schema.org/url": "https://ee-geotools.projects.earthengine.app/view/theugsextractor"
+    "http://schema.org/url": "https://isprs-annals.copernicus.org/articles/X-2-2024/65/2024/",
+    "http://schema.org/downloadUrl": "https://ee-geotools.projects.earthengine.app/view/theugsextractor",
+    "http://lccn.loc.gov/sh85035852": "https://isprs-annals.copernicus.org/articles/X-2-2024/65/2024/"
   },
   "wxs_indentifier": null,
   "id": "herop-uyrmqd",
   "identifier": null,
-  "modified": "2025-01-30T00:56:12Z",
+  "modified": "2025-02-17T16:02:01Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -114,5 +116,6 @@
   "highlight_ids": [
     "150US*"
   ],
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": null
 }

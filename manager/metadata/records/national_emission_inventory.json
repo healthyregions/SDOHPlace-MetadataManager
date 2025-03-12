@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 21,
+    "filled": 22,
     "to_fill": 26,
-    "filled_pct": 80,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
   "title": "National Emissions Inventory (NEI)",
@@ -93,7 +93,7 @@
   "wxs_indentifier": null,
   "id": "herop-odfmer",
   "identifier": null,
-  "modified": "2025-02-04T13:42:51Z",
+  "modified": "2025-02-19T21:32:13Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -115,7 +115,7 @@
   "data_variables": [
     "Emissions (Tons)"
   ],
-  "data_usage_notes": null,
+  "data_usage_notes": "The raw data and summaries that are still available (dating back to 1990) can be obtained from the web page https://www.epa.gov/air-emissions-inventories/pollutant-emissions-summary-files-earlier-neis.  Starting with 2001 data, a more limited selection of summary files are available.",
   "featured_variable": null,
-  "preferred_citation": null
+  "preferred_citation": "US EPA (2015). National emissions inventory (NEI). https://www.epa.gov/air-emissions-inventories/national-emissions-inventory-nei"
 }

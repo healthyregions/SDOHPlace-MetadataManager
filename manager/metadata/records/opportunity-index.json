@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 24,
+    "filled": 25,
     "to_fill": 26,
-    "filled_pct": 92,
+    "filled_pct": 96,
     "progress_class": "success"
   },
   "title": "Opportunity Index",
@@ -90,7 +90,7 @@
   "wxs_indentifier": null,
   "id": "herop-yumqkc",
   "identifier": null,
-  "modified": "2025-02-06T21:56:01Z",
+  "modified": "2025-02-20T02:31:51Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -126,10 +126,10 @@
     "Overall community score",
     "Overall health score"
   ],
-  "data_usage_notes": null,
+  "data_usage_notes": "In 2017, there was a structural change to the Index, affecting its indicators and dimensions. With the structural change, composite opportunity and dimension scores from 2011 to 2015 should not be compared with those from 2016 and forward.\r\n\r\nThe Opportunity Index continues to incorporate the important structural updates made in 2017, including the newest dimension (Health), and indicator updates (detailed information on those updates can be found in the 2017 Technical Supplement). The 2023 Opportunity Index also disaggregated 11 individual indicators by race, ethnicity, and gender at the national level. This analysis provides an examination of what disparities persist across the various facets of opportunity.  ",
   "highlight_ids": null,
   "featured_variable": [
     "Opportunity Score"
   ],
-  "preferred_citation": null
+  "preferred_citation": "Opportunity Index. (2013, July 30). Opportunity Index. https://opportunityindex.org/"
 }

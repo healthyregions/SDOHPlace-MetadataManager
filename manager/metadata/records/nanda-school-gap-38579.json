@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 21,
-    "to_fill": 25,
-    "filled_pct": 84,
+    "filled": 23,
+    "to_fill": 26,
+    "filled_pct": 88,
     "progress_class": "warning"
   },
   "title": "Neighborhood-School Gap, 2009-2010 and 2015-2016",
@@ -88,13 +88,17 @@
   "access_rights": "Public",
   "format": null,
   "file_size": null,
-  "references": null,
+  "references": {
+    "http://schema.org/url": "https://nanda.isr.umich.edu/project/neighborhood-school-gap/",
+    "http://schema.org/downloadUrl": "https://www.icpsr.umich.edu/web/ICPSR/studies/38579/versions/V2",
+    "http://lccn.loc.gov/sh85035852": "https://hdl.handle.net/1783.1/137477"
+  },
   "wxs_indentifier": null,
   "id": "herop-rkcyhr",
   "identifier": [
     "https://doi.org/10.3886/ICPSR38579.v2"
   ],
-  "modified": "2025-01-26T14:58:32Z",
+  "modified": "2025-02-19T23:38:14Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -116,5 +120,6 @@
   ],
   "data_usage_notes": "These data measure discrepancies between the school environment and that of the surrounding community. The collection aims to contribute to the discussion about the causes and the consequences of variations in educational context across geographies.\r\n\r\n",
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": "Gomez-Lopez, Iris, Kim, Min Hee, Li, Mao, Sylvers, Dominique, Esposito, Michael, Clarke, Philippa, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Neighborhood-School Gap by Census Tract and ZIP Code Tabulation Area, United States, 2009-2010 and 2015-2016. Inter-university Consortium for Political and Social Research [distributor], 2022-11-14. https://doi.org/10.3886/ICPSR38579.v2"
 }

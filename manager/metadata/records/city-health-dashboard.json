@@ -2,10 +2,10 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 23,
+    "filled": 24,
     "to_fill": 26,
-    "filled_pct": 88,
-    "progress_class": "warning"
+    "filled_pct": 92,
+    "progress_class": "success"
   },
   "title": "City Health Dashboard",
   "alternative_title": null,
@@ -996,7 +996,7 @@
   "wxs_indentifier": null,
   "id": "herop-xtoqlx",
   "identifier": null,
-  "modified": "2025-02-04T20:01:36Z",
+  "modified": "2025-02-17T21:51:17Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -30374,7 +30374,7 @@
     "lower confidence interval",
     "upper confidence interval"
   ],
-  "data_usage_notes": null,
+  "data_usage_notes": "Error margins are not displayed on the dashboard. However, they are available in the downloadable data files and in the tabular view of the city data. Estimates of similar metrics may differ between the Dashboard and other resources due to different data sources and analytic techniques. When comparing the Dashboard\u2019s estimates to other similar metrics on similar sites, please use caution and refer to the City Health Dashboard Technical Document to understand all potential sources of difference.",
   "featured_variable": null,
-  "preferred_citation": null
+  "preferred_citation": "Department of Population Health, NYU Langone Health. City Health Dashboard. https://www.cityhealthdashboard.com/. Accessed [INSERT DATE OF ACCESS]."
 }

@@ -82,7 +82,7 @@
   ],
   "license": null,
   "access_rights": "Public",
-  "format": null,
+  "format": "Raster Dataset",
   "file_size": null,
   "references": {
     "http://schema.org/url": "https://www.mrlc.gov/data/type/tree-canopy",
@@ -92,7 +92,7 @@
   "wxs_indentifier": null,
   "id": "herop-qwqgwc",
   "identifier": null,
-  "modified": "2025-02-11T17:10:24Z",
+  "modified": "2025-02-17T15:56:08Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

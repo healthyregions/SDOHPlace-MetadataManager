@@ -2,10 +2,10 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 23,
+    "filled": 24,
     "to_fill": 26,
-    "filled_pct": 88,
-    "progress_class": "warning"
+    "filled_pct": 92,
+    "progress_class": "success"
   },
   "title": "Daily Ozone Concentrations, 2001-2019 (CDC)",
   "alternative_title": [
@@ -97,7 +97,7 @@
   "wxs_indentifier": null,
   "id": "herop-qgbmwc",
   "identifier": null,
-  "modified": "2025-02-06T20:18:40Z",
+  "modified": "2025-02-17T22:04:49Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -133,5 +133,5 @@
     "050US*"
   ],
   "featured_variable": null,
-  "preferred_citation": null
+  "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. (n.d.) Web. Accessed: 02/17/2025. www.cdc.gov/ephtracking."
 }

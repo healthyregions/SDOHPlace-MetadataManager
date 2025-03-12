@@ -2,8 +2,8 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 20,
-    "to_fill": 25,
+    "filled": 21,
+    "to_fill": 26,
     "filled_pct": 80,
     "progress_class": "warning"
   },
@@ -20,7 +20,7 @@
   ],
   "display_note": null,
   "creator": [
-    "Kolak, Marynia, Bhatt, Jay, Park, Yoon Hong, Padron, Norma, and Molefe, Ayrin. \"Quantification of Neighborhood-Level Social Determinants of Health in the Continental United States.\" JAMA Network Open. 2020;3(1):e1919928. doi:10.1001/jamanetworkopen.2019.19928"
+    "Marynia Kolak, Jay Bhatt, Yoon Hong Park, Norma Padron, and Ayrin Molefe"
   ],
   "publisher": [
     "GeoDa Data and Lab, Center for Spatial Data Science, University of Chicago"
@@ -87,7 +87,7 @@
   },
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": "2025-02-03T21:05:47Z",
+  "modified": "2025-02-19T20:20:02Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -139,6 +139,9 @@
     "SDOH_CL - 1:rural affordable, 2:suburban affluent, 3:suburban affordable, 4:extreme poverty, 5:multilingual working, 6:urban core opportunity, 7:sparse areas"
   ],
   "highlight_ids": null,
-  "featured_variable": "Socioeconomic Advantage Index, Limited Mobility Index, Urban Core Opportunity Index, Mixed Immigrant, Cohesion, & Access Index, SDOH Cluster - 1:rural affordable, 2:suburban affluent, 3:suburban affordable, 4:extreme poverty, 5:multilingual working, 6:urban core opportunity, 7:sparse areas (see https://sdohatlas.github.io/)",
-  "data_usage_notes": null
+  "featured_variable": [
+    "Socioeconomic Advantage Index, Limited Mobility Index, Urban Core Opportunity Index, Mixed Immigrant, Cohesion, & Access Index, SDOH Cluster - 1:rural affordable, 2:suburban affluent, 3:suburban affordable, 4:extreme poverty, 5:multilingual working, 6:urban core opportunity, 7:sparse areas (see https://sdohatlas.github.io/)"
+  ],
+  "data_usage_notes": null,
+  "preferred_citation": "Kolak, Marynia, Bhatt, Jay, Park, Yoon Hong, Padron, Norma, and Molefe, Ayrin. \"Quantification of Neighborhood-Level Social Determinants of Health in the Continental United States.\" JAMA Network Open. 2020;3(1):e1919928. doi:10.1001/jamanetworkopen.2019.19928"
 }

@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 19,
-    "to_fill": 25,
-    "filled_pct": 76,
+    "filled": 21,
+    "to_fill": 26,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
   "title": "Tree Canopy Cover (Hawaii 2011)",
@@ -29,11 +29,17 @@
   "resource_type": [
     "Raster data"
   ],
-  "subject": [],
+  "subject": [
+    "Greenspaces"
+  ],
   "theme": [
     "Land Cover"
   ],
-  "keyword": null,
+  "keyword": [
+    "Green Space",
+    "Tree Canopy",
+    "Satellite Data"
+  ],
   "temporal_coverage": [
     "2011"
   ],
@@ -66,17 +72,19 @@
   ],
   "license": null,
   "access_rights": "Public",
-  "format": null,
+  "format": "Raster Dataset",
   "file_size": null,
   "references": {
-    "http://schema.org/url": "https://www.mrlc.gov/data/nlcd-2011-usfs-tree-canopy-cover-hawaii"
+    "http://schema.org/url": "https://www.mrlc.gov/data/type/tree-canopy",
+    "http://schema.org/downloadUrl": "https://www.mrlc.gov/data?f%5B0%5D=category%3Atree%20canopy",
+    "http://lccn.loc.gov/sh85035852": "https://data.fs.usda.gov/geodata/rastergateway/treecanopycover/docs/TCC_v2021-4_Methods.pdf"
   },
   "wxs_indentifier": null,
   "id": "herop-wnmlru",
   "identifier": null,
-  "modified": "2025-01-17T16:12:19Z",
+  "modified": "2025-02-17T15:50:40Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
   ],
@@ -89,5 +97,6 @@
   "highlight_ids": [
     "150US15*"
   ],
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": null
 }

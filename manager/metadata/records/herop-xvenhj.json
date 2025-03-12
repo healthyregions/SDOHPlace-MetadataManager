@@ -1,7 +1,7 @@
 {
   "title": "EJScreen (EPA)",
   "alternative_title": [
-    "EJScreen (EPA)"
+    "Environmental Justice Mapping and Screening Tool"
   ],
   "description": [
     "The goal of EJScreen is to find places at the census block group level that could have greater environmental burdens, highlighting specific populations that may be at risk. The tool also allows users to obtain environmental and demographic information all over the U.S.A, at high spatial resolution, shown with color-coded maps and standard data reports."
@@ -60,17 +60,21 @@
   "is_replaced_by": null,
   "rights": null,
   "rights_holder": null,
-  "license": null,
-  "access_rights": null,
+  "license": [
+    "U.S. Environmental Protection Agency"
+  ],
+  "access_rights": "Public",
   "format": null,
   "file_size": null,
   "references": {
-    "http://lccn.loc.gov/sh85035852": "https://www.epa.gov/system/files/documents/2024-07/ejscreen-tech-doc-version-2-3.pdf"
+    "http://lccn.loc.gov/sh85035852": "https://www.epa.gov/ejscreen/technical-information-and-data-downloads",
+    "ttp://schema.org/downloadUrl": "https://www.epa.gov/ejscreen/download-ejscreen-data",
+    "http://schema.org/url": "https://www.epa.gov/ejscreen/ej-and-supplemental-indexes-ejscreen#EJ"
   },
   "wxs_indentifier": null,
   "id": "herop-xvenhj",
   "identifier": null,
-  "modified": "2025-02-10T19:07:50Z",
+  "modified": "2025-02-17T22:25:36Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -157,12 +161,12 @@
   "featured_variable": [
     "Demographic Index, Supplemental Demographic Index"
   ],
-  "data_usage_notes": null,
+  "data_usage_notes": "EJScreen cannot provide data on every environmental impact and demographic factor that may be important to any location. Therefore, its initial results should be supplemented with additional information and local knowledge whenever appropriate, for a more complete picture of a location.",
   "_meta": {
     "to_fill": 26,
-    "filled": 20,
-    "filled_pct": 76,
+    "filled": 22,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
-  "preferred_citation": null
+  "preferred_citation": "United States Environmental Protection Agency. 2015. EJSCREEN."
 }

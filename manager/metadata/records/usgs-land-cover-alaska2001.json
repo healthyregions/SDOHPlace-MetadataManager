@@ -3,8 +3,8 @@
     "created_by": "",
     "last_modified_by": "Admin",
     "filled": 21,
-    "to_fill": 25,
-    "filled_pct": 84,
+    "to_fill": 26,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
   "title": "USGS Land Cover (Alaska 2001)",
@@ -72,17 +72,19 @@
   ],
   "license": null,
   "access_rights": "Public",
-  "format": null,
+  "format": "Raster Dataset",
   "file_size": null,
   "references": {
-    "http://schema.org/url": "https://www.mrlc.gov/data/nlcd-2001-land-cover-alaska-0"
+    "http://schema.org/url": "https://www.mrlc.gov/data/nlcd-2001-land-cover-alaska-0",
+    "http://schema.org/downloadUrl": "https://www.mrlc.gov/data/nlcd-2001-land-cover-alaska-0",
+    "http://lccn.loc.gov/sh85035852": "https://doi.org/10.14358/PERS.70.7.829"
   },
   "wxs_indentifier": null,
   "id": "herop-ehphnq",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-02-17T15:40:31Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
   ],
@@ -93,5 +95,6 @@
   ],
   "data_usage_notes": null,
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": null
 }

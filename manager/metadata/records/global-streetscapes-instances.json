@@ -2,10 +2,10 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 17,
-    "to_fill": 25,
-    "filled_pct": 68,
-    "progress_class": "danger"
+    "filled": 20,
+    "to_fill": 26,
+    "filled_pct": 76,
+    "progress_class": "warning"
   },
   "title": "Global Streetscapes (Instances)",
   "alternative_title": null,
@@ -15,7 +15,9 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [
+    "Since the imagery comes from crowdsourcing platforms (Mapillary and KartaView), the dataset may have variations in image quality and coverage. The data might be uneven in some areas, depending on how much imagery is available in a specific location.The dataset provides metadata about each image, but the images themselves are not included."
+  ],
   "creator": [
     "Yujun Hou",
     "Matias Quintana",
@@ -35,17 +37,24 @@
     "Datasets"
   ],
   "resource_type": [
+    "Point data",
     "Streetview photographs",
     "Table data"
   ],
-  "subject": null,
+  "subject": [
+    "Neighborhood and Built Environment"
+  ],
   "theme": [
     "Imagery",
     "Society",
     "Structure"
   ],
-  "keyword": null,
-  "temporal_coverage": null,
+  "keyword": [
+    "Urban Environment"
+  ],
+  "temporal_coverage": [
+    "2024"
+  ],
   "date_issued": null,
   "index_year": [
     2024
@@ -57,7 +66,7 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -75,17 +84,19 @@
   ],
   "license": null,
   "access_rights": "Public",
-  "format": null,
+  "format": "CSV",
   "file_size": null,
   "references": {
-    "http://schema.org/url": "https://huggingface.co/datasets/NUS-UAL/global-streetscapes/tree/main/data"
+    "http://schema.org/url": "https://ual.sg/project/global-streetscapes/",
+    "http://schema.org/downloadUrl": "https://huggingface.co/datasets/NUS-UAL/global-streetscapes/tree/main/data",
+    "http://lccn.loc.gov/sh85035852": "https://www.sciencedirect.com/science/article/abs/pii/S0924271624002612?dgcid=author#d1e1592"
   },
   "wxs_indentifier": null,
   "id": "herop-couike",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-02-17T16:11:50Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "City"
   ],
@@ -94,5 +105,8 @@
   "data_variables": [
     "Unique image ID, Source (Mapillary or KartaView), Orginal ID (by Mapillary or KartaView), Bird, Ground-Animal, Curb, Fence, Guard-Rail, Barrier, Wall, Bike-Lane, Crosswalk---Plain, Curb-Cut, Parking, Pedestrian-Area, Rail-Track, Road, Service-Lane, Sidewalk, Bridge, Building, Tunnel, Person, Bicyclist, Motorcyclist, Other-Rider, Lane-Marking---Crosswalk, Lane-Marking---General, Mountain, Sand, Sky, Snow, Terrain, Vegetation, Water, Banner, Bench, Bike-Rack, Billboard, Catch-Basin, CCTV-Camera, Fire-Hydrant, Junction-Box, Mailbox, Manhole, Phone-Booth, Pothole, Street-Light, Pole, Traffic-Sign-Frame, Utility-Pole, Traffic-Light, Traffic-Sign-(Back), Traffic-Sign-(Front), Trash-Can, Bicycle, Boat, Bus, Car, Caravan, Motorcycle, On-Rails, Other-Vehicle, Trailer, Truck, Wheeled-Slow, Car-Mount, Ego-Vehicle"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null,
+  "preferred_citation": null
 }

@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 20,
-    "to_fill": 25,
-    "filled_pct": 80,
+    "filled": 23,
+    "to_fill": 26,
+    "filled_pct": 88,
     "progress_class": "warning"
   },
   "title": "MODIS Combined 16-Day NDVI (Google Earth Engine)",
@@ -12,7 +12,7 @@
     "MODIS Combined 16-Day NDVI (Google Earth Engine)"
   ],
   "description": [
-    "The Normalized Difference Vegetation Index is generated from the Near-IR and Red bands of each scene as (NIR - Red) / (NIR + Red), and ranges in value from -1.0 to 1.0. This product is generated from the MODIS/006/MCD43A4 surface reflectance composites. Accessed through Google Earth Engine."
+    "This Normalized Difference Vegetation Index is an index of greenness generated from MODIS satellite imagery. Google Earth Engine provides streamlined access for users to pull spatially and temporally specific data."
   ],
   "language": [
     "eng"
@@ -80,15 +80,16 @@
   ],
   "license": null,
   "access_rights": "Public",
-  "format": null,
+  "format": "GeoTIFF",
   "file_size": null,
   "references": {
-    "http://schema.org/url": "https://developers.google.com/earth-engine/datasets/catalog/MODIS_MCD43A4_006_NDVI#description"
+    "http://schema.org/url": "https://developers.google.com/earth-engine/datasets/catalog/MODIS_MCD43A4_006_NDVI#description",
+    "http://lccn.loc.gov/sh85035852": "https://modis.gsfc.nasa.gov/data/atbd/atbd_mod13.pdf"
   },
   "wxs_indentifier": null,
   "id": "herop-eflmqc",
   "identifier": null,
-  "modified": "2025-01-26T15:16:26Z",
+  "modified": "2025-02-19T21:44:30Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -100,12 +101,33 @@
     "Census Block Group",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "spatial_resolution_note": "463m resolution",
-  "methods_variables": null,
+  "spatial_resolution_note": "500m resolution",
+  "methods_variables": [
+    "BRDF Albedo Mandatory Quality for Band 3",
+    "BRDF Albedo Mandatory Quality for Band 4",
+    "NBAR at local solar noon for Band 3",
+    "NBAR at local solar noon for Band 4"
+  ],
   "data_variables": [
-    "NDVI"
+    "BRDF Albedo Mandatory Quality for Band 1",
+    "BRDF Albedo Mandatory Quality for Band 2",
+    "BRDF Albedo Mandatory Quality for Band 3",
+    "BRDF Albedo Mandatory Quality for Band 4",
+    "BRDF Albedo Mandatory Quality for Band 5",
+    "BRDF Albedo Mandatory Quality for Band 6",
+    "BRDF Albedo Mandatory Quality for Band 7",
+    "NBAR at local solar noon for Band 1",
+    "NBAR at local solar noon for Band 2",
+    "NBAR at local solar noon for Band 3",
+    "NBAR at local solar noon for Band 4",
+    "NBAR at local solar noon for Band 5",
+    "NBAR at local solar noon for Band 6",
+    "NBAR at local solar noon for Band 7"
   ],
   "data_usage_notes": null,
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": [
+    "NDVI"
+  ],
+  "preferred_citation": "NASA LP DAAC. (2017). MODIS MCD43A4.006 Nadir BRDF-Adjusted Reflectance (NBAR) [Dataset]. NASA EOSDIS Land Processes DAAC. https://doi.org/10.5067/MODIS/MCD43A4.006"
 }

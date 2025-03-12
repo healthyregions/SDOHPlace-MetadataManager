@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
+    "filled": 23,
     "to_fill": 26,
-    "filled_pct": 84,
+    "filled_pct": 88,
     "progress_class": "warning"
   },
   "title": "Food Access Research Atlas (USDA)",
@@ -78,7 +78,7 @@
   "wxs_indentifier": null,
   "id": "herop-htraln",
   "identifier": null,
-  "modified": "2025-02-07T16:28:00Z",
+  "modified": "2025-02-17T22:36:07Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -94,9 +94,9 @@
   "data_variables": [
     "Housing units, total; Population with low access at 1 mile for urban areas and 10 miles for rural areas; Population with low access at 1/2 mile for urban areas and 10 miles for rural areas; Population with low access at 1 mile for urban areas and 20 miles for rural areas; Low-income population with low access at 1 mile for urban areas and 10 miles for rural areas; Low-income population with low access at 1/2 mile for urban areas and 10 miles for rural areas; Low-income population with low access at 1 mile for urban areas and 20 miles for rural areas; Population with low access at 1/2 mile; Population share with low access at 1/2 mile; Low-income population with low access at 1/2 mile; Share of low-income population with low access at 1/2 mile; Children (age 0-17) with low access at 1/2 mile; Share of children (age 0-17) with low access at 1/2 mile; Seniors (age 65+) with low access at 1/2 mile; Share of seniors (age 65+) with low access at 1/2 mile; White population with low access at 1/2 mile; Share of White population with low access at 1/2 mile; Black or African American population with low access at 1/2 mile; Share of Black or African American population with low access at 1/2 mile; Hispanic or Latino population with low access at 1 mile; Share of Hispanic or Latino population with low access at 1 mile; Housing units receiving SNAP benefits and with low access at 10 miles; Share of housing units receiving SNAP benefits and with low access at 10 miles."
   ],
-  "data_usage_notes": null,
+  "data_usage_notes": "Estimates in the Atlas for 2019 are based on a 2019 list of supermarkets, the 2010 Decennial Census, and the 2014-18 American Community Survey (ACS). The estimates for 2015 are based on a 2015 list of supermarkets, the 2010 Decennial Census, and the 2010-14 ACS.",
   "featured_variable": [
     "Low-income and low-access tracts at 1 mile for urban areas and 10 miles for rural areas; Low-income and low-access tracts at 1/2 mile for urban areas and 10 miles for rural areas; Low-income and low-access tracts at 1 mile for urban areas and 20 miles for rural areas; Tracts with low vehicle access and low income at 20 miles in rural areas."
   ],
-  "preferred_citation": null
+  "preferred_citation": "Economic Research Service (ERS), U.S. Department of Agriculture (USDA). Food Access Research Atlas, https://www.ers.usda.gov/data-products/food-access-research-atlas/"
 }

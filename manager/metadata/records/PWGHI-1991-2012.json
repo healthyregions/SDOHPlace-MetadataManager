@@ -2,10 +2,10 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 23,
+    "filled": 24,
     "to_fill": 26,
-    "filled_pct": 88,
-    "progress_class": "warning"
+    "filled_pct": 92,
+    "progress_class": "success"
   },
   "title": "Global Horizontal Irradiance, 1991-2012 (CDC)",
   "alternative_title": [
@@ -97,7 +97,7 @@
   "wxs_indentifier": null,
   "id": "herop-efqkhv",
   "identifier": null,
-  "modified": "2025-02-06T22:23:54Z",
+  "modified": "2025-02-17T22:39:13Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -113,12 +113,12 @@
     "DAY: Day of the month, from 1-31",
     "GHI: County-level population weighted daily GHI"
   ],
-  "data_usage_notes": "NAs in the dataset appear as missing values; these refer to no valid data and are caused by invalid retrievals from NSRDB or SolarAnywhere. We suggest to treat NAs as missing. Detailed methods are available in the documentation- https://data.cdc.gov/api/views/fdyw-m38t/files/eb1465e3-de29-488e-ac3b-f862d6adbbec?download=true&filename=GHI_Metadata.pdf",
+  "data_usage_notes": "NAs in the dataset appear as missing values; these refer to no valid data and are caused by invalid retrievals from NSRDB or SolarAnywhere. We suggest to treat NAs as missing. \r\nBy using these data, you signify your agreement to comply with the following requirements:\r\n1. Use the data for statistical reporting and analysis only.\r\n2. Do not attempt to learn the identity of any person included in the data and do not combine these data with other data for the purpose of matching records to identify individuals.\r\n3. Do not disclose of or make use of the identity of any person or establishment discovered inadvertently and report the discovery to: trackingsupport@cdc.gov.\r\n4. Do not imply or state, either in written or oral form, that interpretations based on the data are those of the original data sources and CDC unless the data user and data source are formally collaborating.\r\n5. Acknowledge, in all reports or presentations based on these data, the original source of the data and CDC.\r\n\r\nDetailed methods are available in the documentation: https://data.cdc.gov/api/views/fdyw-m38t/files/eb1465e3-de29-488e-ac3b-f862d6adbbec?download=true&filename=GHI_Metadata.pdf",
   "highlight_ids": [
     "050US*"
   ],
   "featured_variable": [
     "County-level population weighted daily global horizontal irradiance in wh/m2 (GHI)"
   ],
-  "preferred_citation": null
+  "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. Web. Accessed: insert date. www.cdc.gov/ephtracking."
 }

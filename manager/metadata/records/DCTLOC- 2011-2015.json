@@ -2,10 +2,10 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 23,
+    "filled": 24,
     "to_fill": 26,
-    "filled_pct": 88,
-    "progress_class": "warning"
+    "filled_pct": 92,
+    "progress_class": "success"
   },
   "title": "Daily Ozone Concentrations, 2016-2020 (CDC)",
   "alternative_title": [
@@ -17,7 +17,9 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [
+    "The Tracking Network allows you to view different query results at the same time. This does not mean or suggest that the data are related and results should not be interpreted in this way."
+  ],
   "creator": [
     "Environmental Public Health Tracking Network",
     "Centers for Disease Control and Prevention",
@@ -91,7 +93,7 @@
   "wxs_indentifier": null,
   "id": "herop-ltsvnx",
   "identifier": null,
-  "modified": "2025-02-06T20:27:15Z",
+  "modified": "2025-02-17T22:18:06Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -120,8 +122,8 @@
     "standard error of the estimated ozone concentration",
     "Mean estimated 8-hour average ozone concentration in parts per billion (ppb) within 3 meters of the surface of the earth"
   ],
-  "data_usage_notes": null,
+  "data_usage_notes": "1. Use the data for statistical reporting and analysis only.\r\n2. Do not attempt to learn the identity of any person included in the data and do not combine these data with other data for the purpose of matching records to identify individuals.\r\n3. Do not disclose or make use of the identity of any person or establishment discovered inadvertently and report the discovery to: trackingsupport@cdc.gov1",
   "highlight_ids": null,
   "featured_variable": null,
-  "preferred_citation": null
+  "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. (n.d.) Web. Accessed: 02/17/2025. www.cdc.gov/ephtracking"
 }

@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
+    "filled": 23,
     "to_fill": 26,
-    "filled_pct": 84,
+    "filled_pct": 88,
     "progress_class": "warning"
   },
   "title": "Crimes, 2002-2014",
@@ -105,7 +105,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38649.v1"
   ],
-  "modified": "2025-02-06T22:46:36Z",
+  "modified": "2025-02-17T21:57:39Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -132,5 +132,5 @@
   "data_usage_notes": "Crime data should be interpreted carefully to avoid reinforcing biases or misrepresenting communities. Users should follow ethical guidelines when reporting findings. The dataset aggregates crime data from various sources, including the FBI\u2019s Uniform Crime Reporting (UCR) program. Differences in local crime reporting practices and law enforcement policies may affect data consistency across counties.",
   "highlight_ids": null,
   "featured_variable": null,
-  "preferred_citation": null
+  "preferred_citation": "Clarke, Philippa, Melendez, Robert, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Crimes by County, United States, 2002-2014. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2019-12-02. https://doi.org/10.3886/E115006V1"
 }

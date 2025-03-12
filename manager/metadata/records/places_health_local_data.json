@@ -2,8 +2,8 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 21,
-    "to_fill": 25,
+    "filled": 22,
+    "to_fill": 26,
     "filled_pct": 84,
     "progress_class": "warning"
   },
@@ -79,7 +79,7 @@
   "wxs_indentifier": null,
   "id": "herop-tvlxez",
   "identifier": null,
-  "modified": "2025-01-30T01:43:43Z",
+  "modified": "2025-02-20T02:51:27Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -152,6 +152,7 @@
     "Low confidence limit",
     "High confidence limit"
   ],
-  "data_usage_notes": null,
-  "featured_variable": null
+  "data_usage_notes": "Because these are modeled and not direct estimates, the data should not be used for ranking the overall health of any county, place, census tract, or ZCTA.\r\nPLACES does not provide a weighted composite score for the included counties, places, census tracts, or ZCTAs. Therefore, the data should not be used to rank the overall health of a local area.\r\nHowever, counties, places, census tracts, or ZCTAs can be compared on individual measures.",
+  "featured_variable": null,
+  "preferred_citation": " Centers for Disease Control and Prevention. PLACES: Local Data for Better Health. Accessed [date]. https://www.cdc.gov/places"
 }

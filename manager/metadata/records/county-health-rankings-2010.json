@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
+    "filled": 23,
     "to_fill": 26,
-    "filled_pct": 84,
+    "filled_pct": 88,
     "progress_class": "warning"
   },
   "title": "County Health Rankings",
@@ -106,7 +106,7 @@
   "wxs_indentifier": null,
   "id": "herop-cfmkuz",
   "identifier": null,
-  "modified": "2025-02-03T23:04:48Z",
+  "modified": "2025-02-17T21:54:48Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -157,5 +157,5 @@
   "data_usage_notes": "The data contains a breakdown of the measures used in calculating outcomes, data elements, descriptions, and ranking for each country.",
   "highlight_ids": null,
   "featured_variable": null,
-  "preferred_citation": null
+  "preferred_citation": "University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps 2024. www.countyhealthrankings.org. "
 }

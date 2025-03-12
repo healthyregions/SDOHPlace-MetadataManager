@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 24,
+    "filled": 25,
     "to_fill": 26,
-    "filled_pct": 92,
+    "filled_pct": 96,
     "progress_class": "success"
   },
   "title": "National Walkability Index",
@@ -81,7 +81,9 @@
   "rights_holder": [
     "None"
   ],
-  "license": null,
+  "license": [
+    "No license information was provided. If this work was prepared by an officer or employee of the United States government as part of that person's official duties it is considered a U.S. Government Work."
+  ],
   "access_rights": "Public",
   "format": "Geodatabase",
   "file_size": "406 mb",
@@ -92,7 +94,7 @@
   "wxs_indentifier": null,
   "id": "herop-jjsukv",
   "identifier": null,
-  "modified": "2025-02-07T01:01:44Z",
+  "modified": "2025-02-19T22:13:10Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -124,5 +126,5 @@
   "featured_variable": [
     "National Walkability Index"
   ],
-  "preferred_citation": null
+  "preferred_citation": "US-EPA. (2019). National Walkability Index [Dataset]. U.S. Environmental Protection Agency. Retrieved from https://edg.epa.gov/data/Public/OA/WalkabilityIndex.zip"
 }

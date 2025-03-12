@@ -2,8 +2,8 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
-    "to_fill": 25,
+    "filled": 23,
+    "to_fill": 26,
     "filled_pct": 88,
     "progress_class": "warning"
   },
@@ -88,7 +88,7 @@
   "wxs_indentifier": null,
   "id": "herop-cpeeor",
   "identifier": null,
-  "modified": "2025-01-30T01:47:35Z",
+  "modified": "2025-02-20T02:47:21Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -102,8 +102,19 @@
     "Fraction of children born in 1984-1989 birth cohorts with parents at the 25th percentile of the national income distribution who were incarcerated on April 1st, 2010"
   ],
   "data_variables": [
-    "Number of children under 18 living in the given area with parents whose household income was below the national median"
+    "Number of children under 18 living in the given area with parents whose household income was below the national median",
+    "state",
+    "county",
+    "tract",
+    "cz",
+    "czname",
+    "kfr_[race]_[gender]_p25",
+    "kfr_[race]_[gender]_p25_se",
+    "jail_[race]_[gender]_p25",
+    "jail_[race]_[gender]_p25_se",
+    "[race]_[gender]_count"
   ],
-  "data_usage_notes": null,
-  "featured_variable": null
+  "data_usage_notes": "This table reports predicted outcomes for children by Census tract, race and gender. Each Census tract is uniquely identified by three identifiers \u2013 state, county, and tract (2010 FIPS codes). The data is organized long on Census tract and wide on race and gender, so that there is exactly one row per tract. ",
+  "featured_variable": null,
+  "preferred_citation": "Chetty, R., Hendren, N., Friedman, J., Jones, M. R., & Porter, S. R. (2018, September 30). The Opportunity Atlas: Mapping the Childhood Roots of social mobility. Opportunity Insights. https://opportunityinsights.org/paper/the-opportunity-atlas/"
 }

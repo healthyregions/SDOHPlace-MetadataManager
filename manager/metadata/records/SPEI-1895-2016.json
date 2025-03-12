@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 24,
+    "filled": 25,
     "to_fill": 26,
-    "filled_pct": 92,
+    "filled_pct": 96,
     "progress_class": "success"
   },
   "title": "Standardized Precipitation Evapotranspiration Index, 1895-2016 (CDC)",
@@ -93,7 +93,7 @@
   "wxs_indentifier": null,
   "id": "herop-bllwns",
   "identifier": null,
-  "modified": "2025-02-06T21:54:42Z",
+  "modified": "2025-02-19T20:55:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -123,5 +123,5 @@
   "featured_variable": [
     "Standard Precipitation Evapotranspiration Index (SPEI)"
   ],
-  "preferred_citation": null
+  "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. (n.d.) Web. www.cdc.gov/ephtracking."
 }

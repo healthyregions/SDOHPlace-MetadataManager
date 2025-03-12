@@ -2,8 +2,8 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
-    "to_fill": 25,
+    "filled": 23,
+    "to_fill": 26,
     "filled_pct": 88,
     "progress_class": "warning"
   },
@@ -91,7 +91,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38605.v1"
   ],
-  "modified": "2025-01-26T15:12:08Z",
+  "modified": "2025-02-19T23:25:26Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -125,5 +125,6 @@
   ],
   "data_usage_notes": "The purpose this study is to measure the number of public transit stops per United States census tract or ZIP code tabulation area (ZCTA) based on data from the National Transit Map (NTM).",
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": "Clarke, Philippa, and Melendez, Robert. National Neighborhood Data Archive (NaNDA): Public Transit Stops by Census Tract, United States, 2016-2018. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2019-10-09. https://doi.org/10.3886/E111109V1"
 }

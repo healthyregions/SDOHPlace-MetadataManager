@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
+    "filled": 23,
     "to_fill": 26,
-    "filled_pct": 84,
+    "filled_pct": 88,
     "progress_class": "warning"
   },
   "title": "10-minute walk service areas (10MWSA)",
@@ -18,7 +18,7 @@
     "eng"
   ],
   "display_note": [
-    "Info: ParkServe is partially crowdsourced and regularly updated. Only the most recent update is available for download at any given time, and data should be understood as incomplete."
+    "Info: ParkServe is partially crowdsourced and regularly updated. Only the most recent update is available for download at any given time, and data should be understood as incomplete. In communities with an exceptionally small number of block groups, 10-minute walk demographic calculations are not available.  All calculated population statistics are based on 2023 US Census Block Group estimates provided by Esri."
   ],
   "creator": [
     "Trust for Public Land"
@@ -61,7 +61,9 @@
   "georeferenced": false,
   "relation": null,
   "member_of": null,
-  "is_part_of": null,
+  "is_part_of": [
+    "herop-fhfxqq"
+  ],
   "source": null,
   "is_version_of": [
     "herop-fhfxqq"
@@ -76,17 +78,17 @@
   ],
   "license": null,
   "access_rights": "Public",
-  "format": null,
+  "format": "Excel, Geodatabase, Shapefile, Geojson",
   "file_size": null,
   "references": {
-    "http://schema.org/url": "https://www.tpl.org/park-data-downloads",
+    "http://schema.org/url": "https://www.tpl.org/parkserve",
     "http://schema.org/downloadUrl": "https://www.tpl.org/park-data-downloads",
     "http://lccn.loc.gov/sh85035852": "https://www.tpl.org/ParkServe/About"
   },
   "wxs_indentifier": null,
   "id": "herop-jxbloa",
   "identifier": null,
-  "modified": "2025-02-11T16:56:47Z",
+  "modified": "2025-02-17T21:21:33Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -97,14 +99,23 @@
     "Zip Code Tabulation Area (ZCTA)"
   ],
   "spatial_resolution_note": null,
-  "methods_variables": null,
-  "data_variables": [
-    "Park ID, Park Name, Park Size, Shape Length, Shape Area"
+  "methods_variables": [
+    "A half-mile \u2018walkable\u2019 service area from each of the park\u2019s public access points",
+    "Race/ethnicity,",
+    "Age,",
+    "Income"
   ],
-  "data_usage_notes": "The ParkServe dataset is designed for spatial analysis and GIS applications to evaluate urban park accessibility. While it provides geospatial files (e.g., shapefiles, GeoJSON, and other GIS-compatible formats), it may not include detailed attribute data such as park addresses, ownership details, or facility descriptions. Users should integrate it with additional datasets if such information is needed for analysis.\r\n\r\nAvailable Data Formats:\r\nShapefile (.shp)\r\nGeoJSON (.geojson)\r\nFile Geodatabase (.gdb)\r\nKML (.kml) (depending on availability)",
+  "data_variables": [
+    "Park ID,",
+    "Park Name,",
+    "Park Size,",
+    "Shape Length,",
+    "Shape Area"
+  ],
+  "data_usage_notes": "The ParkServe dataset is designed for spatial analysis and GIS applications to evaluate urban park accessibility. While it provides geospatial files (e.g., shapefiles, GeoJSON, and other GIS-compatible formats), it may not include detailed attribute data such as park addresses, ownership details, or facility descriptions. Users should integrate it with additional datasets if such information is needed for analysis.\r\n\r\n\r\n\r\n",
   "highlight_ids": [
     "150US*"
   ],
   "featured_variable": null,
-  "preferred_citation": "This is the citation"
+  "preferred_citation": "ParkServe. (2023, May 24). Trust for Public Land. https://www.tpl.org/parkserve"
 }

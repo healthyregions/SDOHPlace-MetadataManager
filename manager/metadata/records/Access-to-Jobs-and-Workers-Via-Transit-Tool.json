@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Adam Cox",
-    "filled": 24,
+    "filled": 25,
     "to_fill": 26,
-    "filled_pct": 92,
+    "filled_pct": 96,
     "progress_class": "success"
   },
   "title": "Access to Jobs and Workers Via Transit",
@@ -76,7 +76,9 @@
   "is_part_of": [
     "herop-ppvuzl"
   ],
-  "source": null,
+  "source": [
+    "herop-xvenhj"
+  ],
   "is_version_of": null,
   "replaces": null,
   "is_replaced_by": null,
@@ -86,7 +88,9 @@
   "rights_holder": [
     "None"
   ],
-  "license": null,
+  "license": [
+    "No license information was provided. If this work was prepared by an officer or employee of the United States government as part of that person's official duties it is considered a U.S. Government Work."
+  ],
   "access_rights": "Public",
   "format": "Geodatabase| Shapefile | DBF",
   "file_size": "shp 253 mb | gdb 120 | DBF 8mb",
@@ -99,7 +103,7 @@
   "wxs_indentifier": null,
   "id": "herop-bnohpx",
   "identifier": null,
-  "modified": "2025-02-07T01:02:29Z",
+  "modified": "2025-02-17T21:30:08Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -163,5 +167,5 @@
   "featured_variable": [
     "Accessibility Index - Transit to working-age population"
   ],
-  "preferred_citation": null
+  "preferred_citation": "U.S. EPA. (2021). U.S. environmental protection agency - access to jobs and workers via transit - download. Data.gov. https://catalog.data.gov/dataset/access-to-jobs-and-workers-via-transit-download7"
 }

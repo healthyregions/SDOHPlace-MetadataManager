@@ -2,14 +2,14 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
-    "to_fill": 25,
+    "filled": 23,
+    "to_fill": 26,
     "filled_pct": 88,
     "progress_class": "warning"
   },
   "title": "Opportunity Insights, Neighborhood Characteristics",
   "alternative_title": [
-    "Opportunity Insights Neighborhood Characteristics"
+    "Opportunity Insights Neighborhood Characteristics (The Opportunity Atlas: Mapping the Childhood Roots of Social Mobility)"
   ],
   "description": [
     "This data provides multiple levels (census tract, county, and conmmunity zone) covariates used throughout the paper or shown in the Opportunity Atlas as neighborhood characteristics. All variables other than czname are numeric. The statistics reported in this table have been cleared by the Census Bureau's Disclosure Review Board release authorization number CBDRB-FY18-319."
@@ -90,7 +90,7 @@
   "wxs_indentifier": null,
   "id": "herop-wtfiks",
   "identifier": null,
-  "modified": "2025-01-30T01:44:45Z",
+  "modified": "2025-02-20T02:49:38Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -127,5 +127,6 @@
     "Number of residents per square mile"
   ],
   "data_usage_notes": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": "Chetty, R., Hendren, N., Friedman, J., Jones, M. R., & Porter, S. R. (2018, September 30). The Opportunity Atlas: Mapping the Childhood Roots of social mobility. Opportunity Insights. https://opportunityinsights.org/paper/the-opportunity-atlas/"
 }

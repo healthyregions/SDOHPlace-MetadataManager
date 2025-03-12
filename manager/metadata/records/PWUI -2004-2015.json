@@ -2,10 +2,10 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 23,
+    "filled": 24,
     "to_fill": 26,
-    "filled_pct": 88,
-    "progress_class": "warning"
+    "filled_pct": 92,
+    "progress_class": "success"
   },
   "title": "Ultraviolet Irradiance, 2004-2015 (CDC)",
   "alternative_title": [
@@ -95,7 +95,7 @@
   "wxs_indentifier": null,
   "id": "herop-drwddq",
   "identifier": null,
-  "modified": "2025-02-06T21:53:14Z",
+  "modified": "2025-02-19T20:36:23Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -126,5 +126,5 @@
   "data_usage_notes": null,
   "highlight_ids": null,
   "featured_variable": null,
-  "preferred_citation": null
+  "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. Web. www.cdc.gov/ephtracking. "
 }

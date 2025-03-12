@@ -2,20 +2,22 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 17,
-    "to_fill": 25,
-    "filled_pct": 68,
-    "progress_class": "danger"
+    "filled": 21,
+    "to_fill": 26,
+    "filled_pct": 80,
+    "progress_class": "warning"
   },
   "title": "Global Streetscapes (GADM)",
   "alternative_title": null,
   "description": [
-    "Contains the administrative area associated with each image, at all available levels."
+    "Contains the administrative area associated with each image, at all available levels. Administrative area derived from the Database of Global Administrative Areas (GADM)."
   ],
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [
+    "Since the imagery comes from crowdsourcing platforms (Mapillary and KartaView), the dataset may have variations in image quality and coverage. The data might be uneven in some areas, depending on how much imagery is available in a specific location.The dataset provides metadata about each image, but the images themselves are not included."
+  ],
   "creator": [
     "Yujun Hou",
     "Matias Quintana",
@@ -35,17 +37,24 @@
     "Datasets"
   ],
   "resource_type": [
+    "Point data",
     "Streetview photographs",
     "Table data"
   ],
-  "subject": null,
+  "subject": [
+    "Neighborhood and Built Environment"
+  ],
   "theme": [
     "Imagery",
     "Society",
     "Structure"
   ],
-  "keyword": null,
-  "temporal_coverage": null,
+  "keyword": [
+    "Urban Environment"
+  ],
+  "temporal_coverage": [
+    "2024"
+  ],
   "date_issued": null,
   "index_year": [
     2024
@@ -57,7 +66,7 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -75,17 +84,19 @@
   ],
   "license": null,
   "access_rights": "Public",
-  "format": null,
+  "format": "CSV",
   "file_size": null,
   "references": {
-    "http://schema.org/url": "https://huggingface.co/datasets/NUS-UAL/global-streetscapes/tree/main/data"
+    "http://schema.org/url": "https://ual.sg/project/global-streetscapes/",
+    "http://schema.org/downloadUrl": "https://huggingface.co/datasets/NUS-UAL/global-streetscapes/tree/main/data",
+    "http://lccn.loc.gov/sh85035852": "https://www.sciencedirect.com/science/article/abs/pii/S0924271624002612?dgcid=author#d1e1592"
   },
   "wxs_indentifier": null,
   "id": "herop-wcfrct",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-02-17T22:48:30Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "City",
     "County",
@@ -98,5 +109,8 @@
   "data_variables": [
     "Unique image ID, Source (Mapillary or KartaView), Orginal ID (by Mapillary or KartaView), Unique ID at level 0 (country) using ISO 3166-1 alpha-3 country code when available, Country Name in English, Unique ID of the level 1 state/province/equivalent within the country, Administrative type in English (following commonly used translations) at level 1, Unique ID at level 1 (state/province/equivalent), HASC (a unique ID from\u00a0Statoids) at level 1, ISO 3166-2 code of the level 1 state/province/equivalent, Official name in latin script at level 1, Non-Latin name official name in a non-latin script at level 1, Administrative type in local language at level 1, Variant name alternate names in usage for the place separated by pipes | at level 1, Unique ID of the level 2 county/district/equivalent within the country, Administrative type in English (following commonly used translations) at level 2, Unique ID at level 2 (county/district/equivalent), HASC (a unique ID from\u00a0Statoids) at level 2, Official name in latin script at level 2, Non-Latin name official name in a non-latin script at level 2, Administrative type in local language at level 2, Variant name alternate names in usage for the place separated by pipes | at level 2, Unique ID of the level 3 commune/municipality/equivalent within the country, Administrative type in English (following commonly used translations) at level 3, Unique ID at level 3 (commune/municipality/equivalent), HASC (a unique ID from\u00a0Statoids) at level 3, Official name in latin script at level 3, Non-Latin name official name in a non-latin script at level 3, Administrative type in local language at level 3, Variant name alternate names in usage for the place separated by pipes | at level 3, Uniqe ID of the level 4 administrative areas within the country, Administrative type in English (following commonly used translations) at level 4, Unique ID at level 4, Official name in latin script at level 4, Administrative type in local language at level 4, Variant name alternate names in usage for the place separated by pipes | at level 4, Unique ID of the level 5 administrative areas within the country, Administrative type in English (following commonly used translations) at level 5, Unique ID at level 5, Official name in latin script at level 5, Administrative type in local language at level 5"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null,
+  "preferred_citation": "Hou Y, Quintana M, Khomiakov M, Yap W, Ouyang J, Ito K, Wang Z, Zhao T, Biljecki F (2024): Global Streetscapes \u2014 A comprehensive dataset of 10 million street-level images across 688 cities for urban science and analytics. ISPRS Journal of Photogrammetry and Remote Sensing 215: 216-238. doi:10.1016/j.isprsjprs.2024.06.023"
 }

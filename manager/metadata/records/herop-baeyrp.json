@@ -1,5 +1,5 @@
 {
-  "title": "Congressional District Health Dashboard|CDH Dashboard",
+  "title": "Congressional District Health Dashboard",
   "alternative_title": [
     "Congressional District Health Dashboard"
   ],
@@ -22,7 +22,9 @@
     "Department of Population Health at NYU Grossman School of Medicine"
   ],
   "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
-  "resource_class": [],
+  "resource_class": [
+    "Websites"
+  ],
   "resource_type": [
     "Table data"
   ],
@@ -36,7 +38,15 @@
     "Health",
     "Society"
   ],
-  "keyword": null,
+  "keyword": [
+    "clinical care",
+    "health behavior",
+    "health outcomes",
+    "physical environment",
+    "social & economic factors",
+    "congressional",
+    "congressional district"
+  ],
   "temporal_coverage": null,
   "date_issued": "2023",
   "index_year": [
@@ -75,7 +85,7 @@
   "wxs_indentifier": null,
   "id": "herop-baeyrp",
   "identifier": null,
-  "modified": "2025-02-10T20:20:56Z",
+  "modified": "2025-03-05T14:22:00Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -173,8 +183,8 @@
   "data_usage_notes": "These variables are primarily derived from sources such as the American Community Survey (ACS), Behavioral Risk Factor Surveillance System (BRFSS), Centers for Disease Control and Prevention (CDC), National Vital Statistics System (NVSS), and the U.S. Small-Area Life Expectancy Project (USALEEP). Many of these measures are aggregated from census tract or county data to estimate values at the congressional district level\u200b.\r\n",
   "_meta": {
     "to_fill": 26,
-    "filled": 20,
-    "filled_pct": 76,
+    "filled": 22,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
   "preferred_citation": "Department of Population Health, NYU Langone Health. Congressional District Health Dashboard. https://www.congressionaldistricthealthdashboard.org/. Accessed [INSERT DATE OF ACCESS]."

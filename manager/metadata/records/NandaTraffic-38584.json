@@ -2,8 +2,8 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
-    "to_fill": 25,
+    "filled": 23,
+    "to_fill": 26,
     "filled_pct": 88,
     "progress_class": "warning"
   },
@@ -151,7 +151,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38584.v2"
   ],
-  "modified": "2025-01-26T15:13:03Z",
+  "modified": "2025-02-19T20:48:12Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -167,5 +167,6 @@
   ],
   "data_usage_notes": "The purpose of this study is to characterize the average volume of traffic passing through a census tract and a ZIP code tabulation area in a given year.\r\n\r\n",
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": "Finlay, Jessica M., Melendez, Robert, Esposito, Michael, Khan, Anam, Li, Mao, Gomez-Lopez, Iris, \u2026 Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Traffic Volume by Census Tract and ZIP Code Tabulation Area, United States, 1963-2019 . Inter-university Consortium for Political and Social Research [distributor], 2022-11-10. https://doi.org/10.3886/ICPSR38584.v2"
 }

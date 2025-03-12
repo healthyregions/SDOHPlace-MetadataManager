@@ -2,8 +2,8 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 21,
-    "to_fill": 25,
+    "filled": 22,
+    "to_fill": 26,
     "filled_pct": 84,
     "progress_class": "warning"
   },
@@ -79,7 +79,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38580.v2"
   ],
-  "modified": "2025-01-26T15:15:02Z",
+  "modified": "2025-02-19T20:49:51Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -95,5 +95,6 @@
   ],
   "data_usage_notes": "This dataset contains measures of street connectivity (how well streets connect) within United States ZIP code tabulation areas (ZCTAs). This includes measures of the number of street segments (links) and intersections (nodes) per ZCTA, street length within ZCTAs, and indices representing overall connectivity within the ZCTA.",
   "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": null,
+  "preferred_citation": "Ailshire, Jennifer, Melendez, Robert, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Street Connectivity by ZIP Code Tabulation Area, United States, 2010. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2021-03-10. https://doi.org/10.3886/E134561V1"
 }

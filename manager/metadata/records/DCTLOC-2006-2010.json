@@ -2,10 +2,10 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 23,
+    "filled": 24,
     "to_fill": 26,
-    "filled_pct": 88,
-    "progress_class": "warning"
+    "filled_pct": 92,
+    "progress_class": "success"
   },
   "title": "Daily Ozone Concentrations, 2006-2010 (CDC)",
   "alternative_title": [
@@ -93,7 +93,7 @@
   "wxs_indentifier": null,
   "id": "herop-dnnjyy",
   "identifier": null,
-  "modified": "2025-02-06T20:20:28Z",
+  "modified": "2025-02-17T22:06:38Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -127,5 +127,5 @@
     "140US*"
   ],
   "featured_variable": null,
-  "preferred_citation": null
+  "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. (n.d.) Web. Accessed: 02/17/2025. www.cdc.gov/ephtracking."
 }

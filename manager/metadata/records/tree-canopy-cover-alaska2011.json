@@ -2,10 +2,10 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 18,
-    "to_fill": 25,
-    "filled_pct": 72,
-    "progress_class": "danger"
+    "filled": 20,
+    "to_fill": 26,
+    "filled_pct": 76,
+    "progress_class": "warning"
   },
   "title": "Tree Canopy Cover (Alaska 2011)",
   "alternative_title": null,
@@ -29,11 +29,17 @@
   "resource_type": [
     "Raster data"
   ],
-  "subject": null,
+  "subject": [
+    "Greenspaces"
+  ],
   "theme": [
     "Land Cover"
   ],
-  "keyword": null,
+  "keyword": [
+    "Green Space",
+    "Tree Canopy",
+    "Satellite Data"
+  ],
   "temporal_coverage": [
     "2011"
   ],
@@ -48,7 +54,7 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -66,17 +72,19 @@
   ],
   "license": null,
   "access_rights": "Public",
-  "format": null,
+  "format": "Raster Dataset",
   "file_size": null,
   "references": {
-    "http://schema.org/url": "https://www.mrlc.gov/data/nlcd-2011-usfs-tree-canopy-cover-alaska"
+    "http://schema.org/url": "https://www.mrlc.gov/data/type/tree-canopy",
+    "http://schema.org/downloadUrl": "https://www.mrlc.gov/data?f%5B0%5D=category%3ATree%20Canopy",
+    "http://lccn.loc.gov/sh85035852": "https://data.fs.usda.gov/geodata/rastergateway/treecanopycover/docs/TCC_v2021-4_Methods.pdf"
   },
   "wxs_indentifier": null,
   "id": "herop-hekhce",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-02-17T15:46:49Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
   ],
@@ -85,5 +93,8 @@
   "data_variables": [
     "Percent tree canopy cover"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null,
+  "preferred_citation": null
 }

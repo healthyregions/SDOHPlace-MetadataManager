@@ -2,15 +2,15 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 18,
-    "to_fill": 25,
-    "filled_pct": 72,
-    "progress_class": "danger"
+    "filled": 20,
+    "to_fill": 26,
+    "filled_pct": 76,
+    "progress_class": "warning"
   },
-  "title": "USGS Land Cover (CONUS)",
+  "title": "USGS Land Cover (Legacy CONUS)",
   "alternative_title": null,
   "description": [
-    "Land cover data for the conterminus United States. Download includes data for 2021, 2019, 2016, 2013, 2011, 2008, 2006, 2004, and 2001."
+    "Land cover data for the conterminus United States. Data download includes land cover for 2001, 2004, 2006, 2008, 2011, 2013, 2016, 2019, and 2021."
   ],
   "language": [
     "eng"
@@ -29,11 +29,17 @@
   "resource_type": [
     "Raster data"
   ],
-  "subject": null,
+  "subject": [
+    "Greenspaces"
+  ],
   "theme": [
     "Land Cover"
   ],
-  "keyword": null,
+  "keyword": [
+    "Land Cover",
+    "Remote Sensing",
+    "Sateliite Data"
+  ],
   "temporal_coverage": [
     "2001",
     "2004",
@@ -64,7 +70,7 @@
   "geometry": null,
   "bounding_box": null,
   "centroid": null,
-  "georeferenced": null,
+  "georeferenced": false,
   "relation": null,
   "member_of": null,
   "is_part_of": null,
@@ -82,17 +88,19 @@
   ],
   "license": null,
   "access_rights": "Public",
-  "format": null,
+  "format": "Raster Dataset",
   "file_size": null,
   "references": {
-    "http://schema.org/url": "https://www.mrlc.gov/data/nlcd-land-cover-conus-all-years"
+    "http://schema.org/url": "https://www.mrlc.gov/data/nlcd-land-cover-conus-all-years",
+    "http://schema.org/downloadUrl": "https://www.mrlc.gov/data/nlcd-land-cover-conus-all-years",
+    "http://lccn.loc.gov/sh85035852": "https://doi.org/10.14358/PERS.70.7.829"
   },
   "wxs_indentifier": null,
   "id": "herop-cxuyoz",
   "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-02-17T15:42:54Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": true,
+  "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
   ],
@@ -101,5 +109,8 @@
   "data_variables": [
     "Land cover type"
   ],
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "highlight_ids": null,
+  "featured_variable": null,
+  "preferred_citation": null
 }
