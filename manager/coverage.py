@@ -85,12 +85,27 @@ def check_coverage(file_path, geography, id_field=None):
 
     # Use a predicate to compare FIPS to HEROP_ID
     mask = ~(gdf[herop_id_col]).isin(geog_lookup.to_prefix() + study_df[id_field])
-    missing = gdf[mask]["HEROP_ID"]
+    missing_df = gdf[mask]
+
+    highlight_ids = []
+    if missing_df.shape[0] == 0:
+        highlight_ids = [f"{geog_lookup.to_prefix()}*"]
+    else:
+        # if less than half the total ids are missing, then use missing ids with negative filter
+        if missing_df.shape[0] < gdf.shape[0] / 2:
+            highlight_ids = [f"-{i}" for i in missing_df[herop_id_col]]
+        # otherwise, use matching ids with positive filter
+        else:
+            mask = (gdf[herop_id_col]).isin(geog_lookup.to_prefix() + study_df[id_field])
+            matching_df = gdf[mask]
+            highlight_ids = [i["HEROP_ID"] for i in matching_df]
 
     print(f'{len(gdf)} HEROP_IDs are present in master geography file.')
-    print(f'{len(missing)} are missing from the input dataset ({file_path}).')
+    print(f'{len(missing_df)} are missing from the input dataset ({file_path}).')
     print('Done checking!')
-    return list(missing)
+
+    # Generate the proper entry for highlight_ids
+    return highlight_ids
 
 def report_coverage():
     print('Reporting coverage')
@@ -141,6 +156,13 @@ if __name__=="__main__":
     parser.add_argument("-i", "--id_field",
         help="name of field in input file that has FIPS, GEOID, or HEROPID in it",
     )
+    parser.add_argument("-o", "--output",
+        help="file to write a list of ids to",
+    )
     args = parser.parse_args()
 
-    missing = check_coverage(args.input_file, args.geography, args.id_field)
+    highlight_ids = check_coverage(args.input_file, args.geography, args.id_field)
+
+    if args.output:
+        with open(args.output, "w") as o:
+            o.write("\n".join(highlight_ids))

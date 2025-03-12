@@ -14,7 +14,7 @@ from .registry import Registry
 from .models import db, User
 from .utils import METADATA_DIR, batch_list
 
-from . import coverage
+from .coverage import check_coverage
 
 registry = Registry()
 
@@ -197,8 +197,31 @@ coverage_grp = AppGroup(
 
 @coverage_grp.command()
 @with_appcontext
-def verify():
-    coverage.check_coverage()
-    coverage.report_coverage()
-    return
+@click.argument("input_file")
+@click.argument("geography",
+    type=click.Choice([
+        "state",
+        "county",
+        "tract",
+        "blockgroup",
+        "zcta",
+    ], case_sensitive=False),
+)
+@click.option("-i", "--id_field",
+    help="name of field in input file that has FIPS, GEOID, or HEROPID in it",
+)
+@click.option("--apply_to",
+    help="name of field in input file that has FIPS, GEOID, or HEROPID in it",
+)
+def generate_highlight_ids(input_file, geography, id_field, apply_to):
 
+    highlight_ids = check_coverage(input_file, geography, id_field)
+
+    if apply_to:
+        from .registry import Registry
+        record = Registry().get_record(apply_to)
+        if not record:
+            print(f"no record exists matching this id: {apply_to}")
+            exit()
+        record.data["highlight_ids"] = highlight_ids
+        record.save_data()

@@ -11,7 +11,7 @@ from manager.models import db, User
 from manager.commands import (
     user_grp,
     registry_grp,
-    coverage_grp
+    coverage_grp,
 )
 
 load_dotenv()
