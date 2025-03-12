@@ -78,13 +78,15 @@
   "wxs_indentifier": null,
   "id": "herop-nfvcud",
   "identifier": null,
-  "modified": "2025-03-12T21:02:50Z",
+  "modified": "2025-03-12T22:43:38Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "State"
   ],
-  "highlight_ids": null,
+  "highlight_ids": [
+    "040US*"
+  ],
   "spatial_resolution_note": null,
   "methods_variables": null,
   "data_variables": null,

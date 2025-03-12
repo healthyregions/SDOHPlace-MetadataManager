@@ -56,9 +56,9 @@
   "wxs_indentifier": null,
   "id": "herop-hqhyud",
   "identifier": null,
-  "modified": "2025-03-12T20:48:05Z",
+  "modified": "2025-03-12T22:38:08Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": false,
+  "suppressed": true,
   "spatial_resolution": [
     "Census Block Group",
     "Zip Code Tabulation Area (ZCTA)"

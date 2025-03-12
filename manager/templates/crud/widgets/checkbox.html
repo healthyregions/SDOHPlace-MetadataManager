@@ -3,7 +3,6 @@
 {% block input %}
 <div class="checkbox">
     <input class="form-check-input" type="checkbox" name="{{ field.id }}"
-	{% if field.id == "suppressed" %}disabled{% endif %}
         placeholder="" {% if record and record[field.id] %}checked{% endif %}
         ></input>
 </div>
