@@ -10,23 +10,28 @@ import geopandas as gpd
 spatial_resolution_prefix_map = {
     'state': {
         'prefix': '040US',
-        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k-shp.zip'
+        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k-shp.zip',
+        'id_length': 2,
     },
     'county': {
         'prefix': '050US',
-        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k-shp.zip'
+        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k-shp.zip',
+        'id_length': 5,
     },
     'tract': {
         'prefix': '140US',
-        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k-shp.zip'
+        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k-shp.zip',
+        'id_length': 11,
     },
     'bg': {
         'prefix': '150US',
-        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k-shp.zip'
+        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k-shp.zip',
+        'id_length': 12,
     },
     'zcta': {
         'prefix': '860US',
-        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k-shp.zip'
+        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k-shp.zip',
+        'id_length': 5,
     },
 }
 
@@ -47,6 +52,9 @@ class SpatialResolution(str, Enum):
 
     def get_geodataframe(self):
         return gpd.read_file(spatial_resolution_prefix_map[self.value]['shp_url'])
+
+    def id_length(self):
+        return spatial_resolution_prefix_map[self.value]['id_length']
 
 
 STUDY_DATASET_DIRECTORY = os.getenv('STUDY_DATASET_DIRECTORY', 'manager/data/test')
@@ -73,9 +81,9 @@ def check_coverage(file_path, geography, id_field=None):
     print('Checking coverage...')
 
     geog_lookup = SpatialResolution(geography)
-    study_df = read_csv(file_path, id_field)
-    study_df[id_field] = study_df[id_field].astype(str)
-    print(study_df[id_field])
+    study_df, use_id = read_csv(file_path, id_field)
+    study_df[use_id] = study_df[use_id].astype(str).str.zfill(geog_lookup.id_length())
+    print(study_df[use_id])
 
     # Read master geography file
     gdf = geog_lookup.get_geodataframe()
@@ -84,8 +92,12 @@ def check_coverage(file_path, geography, id_field=None):
     print(gdf[herop_id_col])
 
     # Use a predicate to compare FIPS to HEROP_ID
-    mask = ~(gdf[herop_id_col]).isin(geog_lookup.to_prefix() + study_df[id_field])
+    mask = ~(gdf[herop_id_col]).isin(geog_lookup.to_prefix() + study_df[use_id])
     missing_df = gdf[mask]
+
+    print(f'{len(gdf)} HEROP_IDs are present in master geography file.')
+    print(f'{len(missing_df)} are missing from the input dataset ({file_path}).')
+    print("generating highlight_ids list...")
 
     highlight_ids = []
     if missing_df.shape[0] == 0:
@@ -96,12 +108,10 @@ def check_coverage(file_path, geography, id_field=None):
             highlight_ids = [f"-{i}" for i in missing_df[herop_id_col]]
         # otherwise, use matching ids with positive filter
         else:
-            mask = (gdf[herop_id_col]).isin(geog_lookup.to_prefix() + study_df[id_field])
+            mask = (gdf[herop_id_col]).isin(geog_lookup.to_prefix() + study_df[use_id])
             matching_df = gdf[mask]
             highlight_ids = [i["HEROP_ID"] for i in matching_df]
 
-    print(f'{len(gdf)} HEROP_IDs are present in master geography file.')
-    print(f'{len(missing_df)} are missing from the input dataset ({file_path}).')
     print('Done checking!')
 
     # Generate the proper entry for highlight_ids
@@ -123,16 +133,18 @@ def read_csv(filepath, id_field):
     print(f'Reading {filepath}...')
     df = pd.read_csv(filepath, dtype=str)
 
+    use_id = None
+
     if 'FIPS' in df.columns:
         print(f'This file has FIPS column: {len(df.index)} rows found')
-    elif 'HEROP_ID' in df.columns:
-        print(f'This file has HEROP_ID column: {len(df.index)} rows found')
+        use_id = "FIPS"
     elif id_field in df.columns:
         print(f'This file has {id_field} column: {len(df.index)} rows found')
+        use_id = id_field
     else:
         print(f'WARNING! Neither FIPS, HEROP_ID, nor the provided id field were found. Available columns: {str(df.columns)}')
         exit()
-    return df
+    return (df, use_id)
 
 def main():
     print('Running coverage checker...')
