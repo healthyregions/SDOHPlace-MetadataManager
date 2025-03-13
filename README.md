@@ -155,3 +155,66 @@ Stop containers
 ```
 docker-compose down
 ```
+
+## Running the coverage command as a standalone script
+
+The coverage checking command can be run as a standalone script, outside of the Flask framework. This comes with many fewer python dependencies, and will not alter any data in the records, it just gives you an output text file of ids that can be pasted into the metadata manager "Highlight IDs" field.
+
+### How to set it up
+
+This process must be done in a terminal or command line interface.
+
+In a new directory, create a new Python virtual environment. We recommend using the included `venv` package for this.
+
+```
+python3 -m venv env
+```
+
+This command will create a new "virtual environment" which is very important when dealing with Python. To activate this environment, run
+
+```
+source ./env/bin/activate
+```
+
+on a mac or linux operating system. On windows, use
+
+```
+.\env\Scripts\activate
+```
+
+You will see a `(env)` prefix in your command line prompt. Great! All this does is set some environment variables shortcuts. The environment is deactivated if you close your terminal, or run the `deactivate` command.
+
+Now that the virtual environment is active, you can install Python packages directly into it, which allows you to keep your default Python installation on your system untouched (very important).
+
+For this script, we just need the [geopandas]() package, which we can install using the `pip` command:
+
+```
+pip install geopandas
+```
+
+Great! Try running `python -c "import geopandas"` in your terminal. If you don't get an error, all is well.
+
+Now, download the script from this repository and put it in your directory: https://github.com/healthyregions/SDOHPlace-MetadataManager/blob/main/manager/coverage.py. Again, no need to clone the whole repository to run this one script.
+
+You should now be able to run this command, with your virtual environment activated, and you'll see the embedded help content for the script:
+
+```
+python coverage.py --help
+```
+
+If you get an `ImportError`, make sure you have installed `geopandas` as described above, and that you have your virtual environment activated.
+
+## How to run it
+
+The script must be given a couple of arguments to work, and there are some additional options you can add to the process.
+
+1. Input file: Provide the local path to a CSV file that you want to analyze (for example, "SVI 2022.csv")
+2. Geography: Indicate what geography level this file should be matched against, one of `state`, `county`, `tract`, `blockgroup`, or `zcta`.
+3. Id field, `-i` (optional): The name of the field in your input CSV that holds a GEOID or FIPS-like identifier. This field will be converted to a HEROP_ID during the check, and compared against the source geography file. If not provided, the script will look for a field called FIPS.
+4. Output, `-o` (optional): A text file to which the final highlight ids will be written. You can then open this file and copy its contents directly into the Metadata Manager web interface. If not provided, the script will perform the check and report the number of missing ids in our input file.
+
+Putting these arguments together, let's assume we have a file called `SVI 2022.csv` that has a list of tracts in it, and the column in that file with FIPS codes is called `tractfips`. A run of the script that outputs the ids to a text file would look like this:
+
+```
+python coverage.py "SVI 2022.csv" tract -i tractfips -o svi-highlight-ids.txt
+```
