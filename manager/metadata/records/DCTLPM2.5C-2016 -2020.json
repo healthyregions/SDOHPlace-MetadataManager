@@ -2,22 +2,24 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 24,
+    "filled": 25,
     "to_fill": 26,
-    "filled_pct": 92,
+    "filled_pct": 96,
     "progress_class": "success"
   },
-  "title": "Daily PM2.5 Concentrations, 2016-2020 (CDC)",
+  "title": "Daily Census Tract PM 2.5 Concentrations (2016-2020)",
   "alternative_title": [
-    "CDC Daily Census Tract-Level PM2.5 Concentrations 2016 - 2020"
+    "Daily Census Tract PM 2.5 Concentrations (2016-2020)"
   ],
   "description": [
-    "This dataset provides modeled predictions of PM2.5 levels from the EPA's Downscaler model. Data are at the census tract level for 2016-2020. These data are used by the CDC's National Environmental Public Health Tracking Network to generate air quality measures. Census tract-level datasets contain estimates of the mean predicted concentration and associated standard error."
+    "CDC works closely with Environmental Protection Agency (EPA), National Aeronautics and Space Administration (NASA), and National Oceanic and Atmospheric Association (NOAA) to generate air quality data from the National Environmental Public Health Tracking Network. This dataset provides modeled predictions of PM 2.5 levels from the EPA's Downscaler model. The dataset includes estimates of the mean predicted concentration and associated standard error for particulate matter smaller than 2.5 micrometers (PM2.5) in \u03bcg/m3."
   ],
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [
+    "Warning: Tract-level measures are <i> downscaled</I>, modeled predictions. Care should be take in interpretation at finer resolutions to ensure that variations in measures are due to change in measure of interest, and not due to the methodology generated to establish measure."
+  ],
   "creator": [
     "Environmental Public Health Tracking Network",
     "Centers for Disease Control and Prevention",
@@ -93,11 +95,10 @@
   "wxs_indentifier": null,
   "id": "herop-ccbxef",
   "identifier": null,
-  "modified": "2025-02-17T22:15:26Z",
+  "modified": "2025-03-14T03:57:34Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
-    "County",
     "Census Tract"
   ],
   "spatial_resolution_note": null,
@@ -124,6 +125,8 @@
   ],
   "data_usage_notes": "1. Use the data for statistical reporting and analysis only.\r\n2. Do not attempt to learn the identity of any person included in the data and do not combine these data with other data for the purpose of matching records to identify individuals.\r\n3. Do not disclose or make use of the identity of any person or establishment discovered inadvertently and report the discovery to: trackingsupport@cdc.gov1",
   "highlight_ids": null,
-  "featured_variable": null,
+  "featured_variable": [
+    "Mean estimated 24-hour average PM2.5 concentration in \u03bcg/m3, Standard error of the estimated PM2.5 concentration"
+  ],
   "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. Web. Accessed: insert date. www.cdc.gov/ephtracking."
 }

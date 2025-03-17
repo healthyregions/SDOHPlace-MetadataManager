@@ -9,7 +9,7 @@
   },
   "title": "Access to Jobs and Workers Via Transit",
   "alternative_title": [
-    "Travel and the Built Environment"
+    "Access to Jobs and Workers Via Transit"
   ],
   "description": [
     "The Access to Jobs and Workers Via Transit is a geospatial tool that provides indicators of accessibility to destinations by public transit. Indicators summarize jobs accessible by transit as well as workers, households, and the population that can access transit at the block group level. Coverage is limited to metropolitan regions served by transit agencies that share their service data."
@@ -26,9 +26,7 @@
   ],
   "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
-    "Datasets",
-    "Web services",
-    "Websites"
+    "Datasets"
   ],
   "resource_type": [
     "Census data",
@@ -103,27 +101,27 @@
   "wxs_indentifier": null,
   "id": "herop-bnohpx",
   "identifier": null,
-  "modified": "2025-03-12T21:29:06Z",
+  "modified": "2025-03-13T23:30:25Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
-    "Census Block"
+    "Census Block Group"
   ],
   "highlight_ids": [
     "150US*"
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
-    "Distance from the population-weighted centroid to nearest transit stop (meters)-D4a",
-    "Proportion of CBG employment within \u00bc mile of fixed-guideway transit stop- D4b025",
-    "Proportion of CBG employment within \u00bd mile of fixed-guideway transit stop- D4b050",
-    "Aggregate frequency of transit service within 0.25 miles of CBG boundary per hour during evening peak period-D4c",
-    "Aggregate frequency of transit service [D4c] per square mile",
-    "Aggregate frequency of transit service [D4c] per capita"
+    "Distance from the population-weighted centroid to nearest transit stop (meters) ('D4a')",
+    "Proportion of Census Block Group (CBG) employment within \u00bc mile of fixed-guideway transit stop ('D4b025')",
+    "Proportion of CBG employment within \u00bd mile of fixed-guideway transit stop ('D4b050')",
+    "Aggregate frequency of transit service within 0.25 miles of CBG boundary per hour during evening peak period ('D4c')",
+    "Aggregate frequency of transit service ('D4c') per square mile",
+    "Aggregate frequency of transit service ('D4c') per capita"
   ],
   "data_variables": [
     "Population accessible by transit",
-    "Minimum population accessible by transit among all block groups within same CBSA",
+    "Minimum population accessible by transit among all block groups within same Census Block Statistical Area (CBSA)",
     "Minimum population accessible by transit among all block group within the same CBSA",
     "Weighted average population accessible by transit among all block group within same CBSA",
     "Percent of population accessible by transit",

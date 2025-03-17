@@ -1,13 +1,17 @@
 {
-  "title": "EJScreen (EPA)",
+  "title": "EJScreen",
   "alternative_title": [
     "Environmental Justice Mapping and Screening Tool"
   ],
   "description": [
-    "The goal of EJScreen is to find places at the census block group level that could have greater environmental burdens, highlighting specific populations that may be at risk. The tool also allows users to obtain environmental and demographic information all over the U.S.A, at high spatial resolution, shown with color-coded maps and standard data reports."
+    "EJScreen is the U.S. Environmental Protection Agency's (EPA) environmental justice mapping and screening tool, designed to find places at the census block group level that could have greater environmental burdens, highlighting specific populations that may be at risk. The tool also allows users to obtain environmental and demographic information all over the U.S.A, at high spatial resolution, shown with color-coded maps and standard data reports."
   ],
-  "language": [],
-  "display_note": null,
+  "language": [
+    "eng"
+  ],
+  "display_note": [
+    "The EJScreen Mapping Tool is primarily a data dashboard and exploration platform. See related products for downloadable datasets."
+  ],
   "creator": [
     "U.S. Environmental Protection Agency"
   ],
@@ -19,9 +23,7 @@
     "Maps",
     "Websites"
   ],
-  "resource_type": [
-    "Census data"
-  ],
+  "resource_type": [],
   "subject": [
     "Demographics",
     "Employment",
@@ -34,7 +36,12 @@
     "Environment",
     "Health"
   ],
-  "keyword": null,
+  "keyword": [
+    "Environmental Justice",
+    "Environmental Mapping",
+    "Exposure",
+    "Pollution"
+  ],
   "temporal_coverage": [
     "2022"
   ],
@@ -69,17 +76,17 @@
   "references": {
     "http://lccn.loc.gov/sh85035852": "https://www.epa.gov/ejscreen/technical-information-and-data-downloads",
     "ttp://schema.org/downloadUrl": "https://www.epa.gov/ejscreen/download-ejscreen-data",
-    "http://schema.org/url": "https://www.epa.gov/ejscreen/ej-and-supplemental-indexes-ejscreen#EJ"
+    "http://schema.org/url": "https://www.epa.gov/ejscreen/ej-and-supplemental-indexes-ejscreen#EJ",
+    "archive-url": "https://pedp-ejscreen.azurewebsites.net/"
   },
   "wxs_indentifier": null,
   "id": "herop-xvenhj",
   "identifier": null,
-  "modified": "2025-03-12T18:16:33Z",
+  "modified": "2025-03-14T04:07:39Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
-    "County",
-    "Census Block"
+    "Census Block Group"
   ],
   "highlight_ids": [
     "-140US01009050500",
@@ -12462,43 +12469,7 @@
     "-140US78010970300"
   ],
   "spatial_resolution_note": null,
-  "methods_variables": [
-    "Particulate Matter 2.5 (M2.5)",
-    "Ozone",
-    "Nitrogen Dioxide (NO2)",
-    "Diesel Particulate Matter",
-    "Toxic Releases to Air",
-    "Traffic Proximity and Volume",
-    "Lead Paint",
-    "Superfund Proximity",
-    "Risk management Plan (RMP) Facility Proximity",
-    "Hazardous Waste Proximity",
-    "Underground Storage Tanks (UST) and Leaking UST (LUST)",
-    "Wastewater Discharge",
-    "Drinking Water Non-Compliance",
-    "People of Color",
-    "Low-Income",
-    "Unemployment Rate",
-    "Limited English Speaking",
-    "Less than High School Education",
-    "Under Age 5",
-    "Over Age 64",
-    "Flood Risk",
-    "Wildfire Risk",
-    "100-Year Floodplain",
-    "Sea Level Rise",
-    "Extreme Heat",
-    "Low Life Expectancy",
-    "Heart Disease",
-    "Asthma",
-    "Cancer",
-    "Person with Disabilities",
-    "Broadband Gaps",
-    "Lack of Health Insurance",
-    "Housing Burden",
-    "Transportation Access",
-    "Food Desert"
-  ],
+  "methods_variables": null,
   "data_variables": [
     "Annual average PM2.5 levels in air",
     "Average of the annual top ten daily maximum 8-hour ozone concentrations in air",
@@ -12538,13 +12509,13 @@
     "Food Desert"
   ],
   "featured_variable": [
-    "Demographic Index, Supplemental Demographic Index"
+    "Key variables of interest include indicators of Particulate Matter 2.5 (M2.5), Ozone, Nitrogen Dioxide (NO2), Diesel Particulate Matter, Toxic Releases to Air, Traffic Proximity and Volume, Lead Paint, Superfund Proximity, Risk management Plan (RMP) Facility Proximity, Hazardous Waste Proximity, Underground Storage Tanks (UST) and Leaking UST (LUST), Wastewater Discharge, and Drinking Water Non-Compliance"
   ],
   "data_usage_notes": "EJScreen cannot provide data on every environmental impact and demographic factor that may be important to any location. Therefore, its initial results should be supplemented with additional information and local knowledge whenever appropriate, for a more complete picture of a location.",
   "_meta": {
     "to_fill": 26,
-    "filled": 22,
-    "filled_pct": 84,
+    "filled": 21,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
   "preferred_citation": "United States Environmental Protection Agency. 2015. EJSCREEN."

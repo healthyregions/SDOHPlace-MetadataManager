@@ -91,7 +91,7 @@
   "wxs_indentifier": null,
   "id": "herop-fhlnqe",
   "identifier": null,
-  "modified": "2025-02-19T23:32:10Z",
+  "modified": "2025-03-14T21:06:09Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -120,8 +120,20 @@
     "Counties Currently Experiencing Drought (USDM)"
   ],
   "data_variables": [
-    "year",
-    "month"
+    "Year",
+    "Month",
+    "Total Number of Weeks a County Was in Drought (1980-present; SPEI)",
+    "Percent of Weeks a County Was in Drought (1980-present; SPEI)",
+    "Total Number of Weeks a County Was in Drought by Year (SPEI)",
+    "Maximum Number of Consecutive Weeks a County Was in Drought by Year (SPEI)",
+    "Percent of Weeks a County Was in Drought by Year (SPEI)",
+    "Counties Currently Experiencing Drought (SPEI)",
+    "Total Number of Weeks a County Was in Drought (2000-present; USDM)",
+    "Percent of Weeks a County Was in Drought (2000-present; USDM)",
+    "Total Number of Weeks a County Was in Drought by Year (USDM)",
+    "Maximum Number of Consecutive Weeks a County Was in Drought by Year (USDM)",
+    "Percent of Weeks a County Was in Drought by Year (USDM)",
+    "Counties Currently Experiencing Drought (USDM)"
   ],
   "data_usage_notes": "Data were downloaded from the National Oceanic and Atmospheric Administration (NOAA) server and were originally provided as monthly values for a climate division (typically 5-10 divisions per state). Distance weighting functions were applied to constrain the drought values to a specific US county.",
   "featured_variable": [

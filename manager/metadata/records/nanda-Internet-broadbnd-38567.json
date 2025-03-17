@@ -2,17 +2,17 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 24,
+    "filled": 23,
     "to_fill": 26,
-    "filled_pct": 92,
-    "progress_class": "success"
+    "filled_pct": 88,
+    "progress_class": "warning"
   },
-  "title": "Broadband Internet Availability, Speed, and Adoption, 2014-2020",
+  "title": "Broadband Internet Availability, Speed, and Adoption",
   "alternative_title": [
     "NaNDA Broadband Internet Availability, Speed, and Adoption by Census Tract and ZIP Code Tabulation Area, United States, 2014-2020"
   ],
   "description": [
-    "This dataset contains measures of broadband internet availability, speed, and adoption per United States census tract in 2014 through 2020., and contains two data files. Data file one (<strong>Broadband Internet Availability, Speed, and Adoption by Census Tract</strong>) contains measures of broadband internet availability, speed, and adoption per United States census tract in 2014 through 2020. The data is derived from internet service providers' Form 477 reports to the Federal Communications Commission.  Data file two (<strong>Broadband Internet Availability and Speed by ZIP Code Tabulation Area</strong>) contains measures of broadband internet access and usage per United States ZIP code tabulation area (ZCTA) in 2014 through 2020. The data is derived primarily from internet service providers' Form 477 reports to the Federal Communications Commission."
+    "This data collection contains measures of broadband internet availability, speed, and adoption for U.S. census tracts and zip codes tabulation areas (ZCTA) from 2014 through 2020, as two distinct datasets (one for each spatial resolution). Data is derived from internet service providers' Form 477 reports to the Federal Communications Commission."
   ],
   "language": [
     "eng"
@@ -34,14 +34,13 @@
   "resource_class": [
     "Datasets"
   ],
-  "resource_type": [
-    "Table data"
-  ],
+  "resource_type": [],
   "subject": [
-    "Neighborhood and Built Environment"
+    "Neighborhood and Built Environment",
+    "Transportation and Infrastructure"
   ],
   "theme": [
-    "Environment",
+    "Society",
     "Structure"
   ],
   "keyword": [
@@ -88,7 +87,7 @@
   "format": "tsv",
   "file_size": "27.2 MB",
   "references": {
-    "http://schema.org/url'": "https://doi.org/10.3886/ICPSR38567.v1",
+    "http://schema.org/url": "https://doi.org/10.3886/ICPSR38567.v1",
     "http://schema.org/downloadUrl": "https://www.openicpsr.org/openicpsr/project/117866/version/V2/view",
     "http://lccn.loc.gov/sh85035852": "https://www.openicpsr.org/openicpsr/project/117866/version/V2/view?path=/openicpsr/117866/fcr:versions/V2.6/NaNDA_Broadband_Availability_by_Census_Tract_2014-2020_v1-1.pdf&type=file"
   },
@@ -97,7 +96,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38567.v1"
   ],
-  "modified": "2025-02-17T21:32:37Z",
+  "modified": "2025-03-14T20:28:49Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -106,35 +105,47 @@
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
-    "tract_fips10 (string): Census tract FIPS code, 2010"
+    "Sum of Maximum CIR (Committed Information Rate) download speed across all providers",
+    "The number of Internet service providers serving the tract (measured in kbps)",
+    "Sum of Maximum CIR upload speed across all providers",
+    "Total providers of high-speed fixed connections (200 kbps+)",
+    "Total residential providers of high-speed fixed connections (200 kbps+)",
+    "Residential fixed broadband connections per 1000 households (with a minimum speed of 200 kbps+)",
+    "Residential fixed broadband connections per 1000 households with speeds of at least 10 Mbps download / 1 Mbps upload"
   ],
   "data_variables": [
-    "tract_fips10 (string): Census tract FIPS code, 2010",
-    "households (int): Number of households in the tract",
-    "n_internet_sub (int): Households with any type of internet subscription",
-    "n_broadband_any_sub (int): Households with any type of broadband (DSL/cable, satellite, or cellular)",
-    "n_broadband_dsl_cable_sub (int): Households with DSL/cable broadband",
-    "n_broadband_satellite_sub (int): Households with satellite internet",
-    "n_broadband_cellular_sub (int): Households with a cellular data plan",
-    "n_internet_no_sub (int): Households with internet access but no subscription",
-    "n_no_internet_acc (int): Households with no internet access",
-    "n_computer_with_broadband (int): Households with a computing device and broadband access",
-    "n_computer (int): Households with any computing device (laptop/desktop or smartphone/tablet)",
-    "n_laptop_desktop (int): Households with a laptop/desktop computer",
-    "n_smartphone_tablet (int): Households with a smartphone or tablet",
-    "n_no_computer (int): Households with no computing device",
-    "p_internet_sub (float): % of households with an internet subscription",
-    "p_broadband_any_sub (float): % of households with any type of broadband (DSL/cable, satellite, or cellular)",
-    "p_broadband_fixed_sub (float): % of households with DSL/cable broadband",
-    "p_broadband_satellite_sub (float): % of households with satellite internet",
-    "p_broadband_cellular_sub (float): % of households with a cellular data plan",
-    "p_internet_no_sub (float): % of households with internet access but no subscription",
-    "p_no_internet_acc (float): % of households with no internet access",
-    "p_computer_with_broadband (float): % of households with a computing device and broadband access",
-    "p_computer (float): % of households with any computing device (laptop/desktop or smartphone/tablet)",
-    "p_laptop_desktop (float): % of households with a laptop/desktop computer",
-    "p_smartphone_tablet (float): % of households with a smartphone or tablet",
-    "p_no_computer (float): % of households with no computing device"
+    "Number of households in the tract",
+    "Households with any type of internet subscription",
+    "Households with any type of broadband (DSL/cable, satellite, or cellular)",
+    "Households with DSL/cable broadband",
+    "Households with satellite internet",
+    "Households with a cellular data plan",
+    "Households with internet access but no subscription",
+    "Households with no internet access",
+    "Households with a computing device and broadband access",
+    "Households with any computing device (laptop/desktop or smartphone/tablet)",
+    "Households with a laptop/desktop computer",
+    "Households with a smartphone or tablet",
+    "Households with no computing device",
+    "Percentage of households with an internet subscription",
+    "Percentage of households with any type of broadband (DSL/cable, satellite, or cellular)",
+    "Percentage of households with DSL/cable broadband",
+    "Percentage of households with satellite internet",
+    "Percentage of households with a cellular data plan",
+    "Percentage of households with internet access but no subscription",
+    "Percentage of households with no internet access",
+    "Percentage of households with a computing device and broadband access",
+    "Percentage of households with any computing device (laptop/desktop or smartphone/tablet)",
+    "Percentage of households with a laptop/desktop computer",
+    "Percentage of households with a smartphone or tablet",
+    "Percentage of households with no computing device",
+    "Sum of Maximum CIR (Committed Information Rate) download speed across all providers",
+    "The number of Internet service providers serving the tract (measured in kbps)",
+    "Sum of Maximum CIR upload speed across all providers",
+    "Total providers of high-speed fixed connections (200 kbps+)",
+    "Total residential providers of high-speed fixed connections (200 kbps+)",
+    "Residential fixed broadband connections per 1000 households (with a minimum speed of 200 kbps+)",
+    "Residential fixed broadband connections per 1000 households with speeds of at least 10 Mbps download / 1 Mbps upload"
   ],
   "data_usage_notes": "This dataset supplements the National Neighborhood Data Archive (NaNDA): Broadband Internet Availability, Speed, and Adoption by Census Tract, United States, 2014-2020, which provides broadband availability data from the Federal Communications Commission (FCC).\r\n\r\nKey differences exist between these datasets. The FCC-derived data is longitudinal (2014\u20132020) and focuses on broadband availability, whereas the American Community Survey (ACS)-derived data represents a single measure for 2015\u20132019 and focuses on household-level internet access and usage.\r\n\r\n",
   "highlight_ids": null,

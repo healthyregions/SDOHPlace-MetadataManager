@@ -2,25 +2,24 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
+    "filled": 24,
     "to_fill": 26,
-    "filled_pct": 84,
-    "progress_class": "warning"
+    "filled_pct": 92,
+    "progress_class": "success"
   },
   "title": "Global Streetscapes",
   "alternative_title": [
     "NUS Global Streetscapes dataset"
   ],
   "description": [
-    "The Global Streetscapes dataset is an open-access, enriched dataset designed to advance the use of street-level imagery (SVI) in urban science research. It includes data from 688 cities worldwide, ensuring a geographically and demographically balanced representation.",
-    "The dataset is created by sampling street-level images from a wide range of cities and enriching them through computer vision and geospatial analysis. This process enhances the images with 346 attributes, providing geographical, temporal, contextual, semantic, and perceptual information. The dataset is crowdsourced, relying on open imagery from Mapillary and KartaView.",
-    "To improve integration with other datasets, images are geolocated and merged with global geospatial datasets. Additional temporal attributes are calculated based on the captured timestamps, offering valuable insights for urban research. The dataset is openly available alongside the source code, enabling researchers to explore and apply SVI data in diverse urban studies."
+    "The Global Streetscapes dataset is an open-access, enriched dataset designed to advance the use of street-level imagery in urban science research. It includes data from 688 cities worldwide, ensuring a geographically and demographically balanced representation. The dataset of 10 million street-level images was created by sampling street-level images from a wide range of cities and enriching them through computer vision and geospatial analysis. This process enhances the images with 346 attributes, providing geographical, temporal, contextual, semantic, and perceptual information. The dataset is crowdsourced, relying on open imagery from Mapillary and KartaView. To improve integration with other datasets, images are geolocated and merged with global geospatial datasets. Additional temporal attributes are calculated based on the captured timestamps, offering valuable insights for urban research. The dataset is openly available alongside the source code, enabling researchers to explore and apply street view imagery data in diverse urban studies."
   ],
   "language": [
     "eng"
   ],
   "display_note": [
-    "A comprehensive dataset of 10 million street-level images across 688 cities for urban science and analytics. Since the imagery comes from crowdsourcing platforms (Mapillary and KartaView), the dataset may have variations in image quality and coverage. The data might be uneven in some areas, depending on how much imagery is available in a specific location.The dataset provides metadata about each image, but the images themselves are not included."
+    "Warning: Some attribute measures, such as perception, should be interpreted as subjective. Read method documentation for a complete understanding of approach.",
+    "Since the imagery comes from crowdsourcing platforms (Mapillary and KartaView), the dataset may have variations in image quality and coverage. The data might be uneven in some areas, depending on how much imagery is available in a specific location. The dataset provides metadata about each image, but the images themselves are not included."
   ],
   "creator": [
     "Yujun Hou",
@@ -38,7 +37,8 @@
   ],
   "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
-    "Collections"
+    "Collections",
+    "Datasets"
   ],
   "resource_type": [
     "Point data",
@@ -56,7 +56,15 @@
     "Structure"
   ],
   "keyword": [
-    "Urban Environment"
+    "Urban Environment",
+    "Street Views",
+    "Photographs",
+    "Perception",
+    "Semantic",
+    "Places",
+    "Climate Zone",
+    "Street Segment",
+    "Built Environment"
   ],
   "temporal_coverage": [
     "2024"
@@ -86,7 +94,9 @@
   "rights_holder": [
     "Hou et al (2024)"
   ],
-  "license": null,
+  "license": [
+    "Creative Commons Attribution Share Alike 4.0"
+  ],
   "access_rights": "Public",
   "format": "CSV",
   "file_size": null,
@@ -97,39 +107,51 @@
   },
   "wxs_indentifier": null,
   "id": "herop-blhoja",
-  "identifier": null,
-  "modified": "2025-02-17T22:41:45Z",
+  "identifier": [
+    "10.1016/j.isprsjprs.2024.06.023"
+  ],
+  "modified": "2025-03-14T04:45:53Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
-    "City"
+    "City",
+    "Other"
   ],
   "spatial_resolution_note": null,
-  "methods_variables": null,
+  "methods_variables": [
+    "Multiple (See Documentation For Full Details and Metadata)"
+  ],
   "data_variables": [
-    "UUID",
-    "Source",
-    "Original ID",
     "Latitude",
     "Longitude",
     "Local date time",
     "Width",
-    "Height:",
+    "Height",
     "Heading",
     "Projection type",
     "Horizontal field of view",
     "Vertical field of view",
     "Sequence ID",
     "Index in sequence",
-    "Season",
-    "Number of hours before sunset",
-    "Average speed",
-    "Maximum speed"
+    "K\u00f6ppen climate zone: climate classification is integrated with the images based on their geospatial coordinates and temporal attributes",
+    "Context: eight contextual attributes about conditions under which images were captured inferred for each image",
+    "Ephem: how long an image was taken before or after sunrise or sunset, calculated using the python package 'PyEphem'",
+    "GADM: Administrative area associated with each image derived from the Database of Global Administrative Areas (GADM)",
+    "GSHL: degree of urbanisation associated with the location of the image, calculated using the Global Human Settlement Layer (GHSL) database",
+    "H3: ID of the h3-indexed hexagon associated with each image, at all available resolution levels from level 0 to 15",
+    "Instances: count of instances (65 categories) detected in each image",
+    "Segment: OSM street segment found nearest to each image within its 10 m radius",
+    "Perception: Scores in scale of 0-10 predicted for each of six perceptual dimensions (Safe, Lively, Beautiful, Wealthy, Boring, Depressing)",
+    "Place: Contains the place/scene classification for each image and overall semantic context of each image (ex highway, residential, park, etc)",
+    "Season: determined for each image based on climate zone and month",
+    "Simplemaps: information of the city associated with the image, obtained from the World Cities database by Simplemaps",
+    "Speed: Statistical values related to speed for each image that are a part of sequences",
+    "Metadata"
   ],
-  "data_usage_notes": "Data is stored in CSVs made publicly available via Github and Hugging Face. The CSV format makes the dataset suitable for statistical analysis, machine learning, and integration with GIS software. However, it does not store images directly, users must reference the dataset\u2019s metadata to access the corresponding street-level images.",
+  "data_usage_notes": "Data is stored in multiple CSVs connected via unique ID corresponding to a specific image taken at a specific location, and is made publicly available via Github and Hugging Face. The CSV format makes the dataset suitable for statistical analysis, machine learning, and integration with GIS software. However, it does not store images directly. Users must reference the dataset\u2019s metadata to access the corresponding street-level images.",
   "highlight_ids": null,
   "featured_variable": [
-    "Street Greenery Coverage"
+    "Street Greenery Coverage, K\u00f6ppen climate zone, Context, Street Segment, Place, Perception"
   ],
   "preferred_citation": "Hou Y, Quintana M, Khomiakov M, Yap W, Ouyang J, Ito K, Wang Z, Zhao T, Biljecki F (2024): Global Streetscapes \u2014 A comprehensive dataset of 10 million street-level images across 688 cities for urban science and analytics. ISPRS Journal of Photogrammetry and Remote Sensing 215: 216-238. doi:10.1016/j.isprsjprs.2024.06.023"
 }

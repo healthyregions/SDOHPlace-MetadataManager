@@ -1,12 +1,11 @@
 {
-  "title": "Uniform Crime Reporting Program (FBI)",
+  "title": "Uniform Crime Reporting Program",
   "alternative_title": [
     "Uniform Crime Reporting Program (FBI)",
     "Crime Data Explorer (CDE)"
   ],
   "description": [
-    "The CDE is an interactive tool that helps law enforcement and the public use and understand the massive amounts of crime data the FBI collects and publishes each year. The FBI\u2019s Uniform Crime Reporting (UCR) Program manages the CDE.",
-    "The CDE is part of the FBI\u2019s broader effort to modernize reports of national crime data. It is a web-based solution that enables the public to view and interact with UCR Program data in an intuitive and user-friendly way. The CDE allows the public to query, view, and download data about crime (e.g. offense and arrest numbers) and law enforcement (e.g., law enforcement employee numbers, officers killed) that is submitted to the UCR Program in machine readable and open-source formats"
+    "The CDE is an interactive tool that helps law enforcement and the public use and understand the massive amounts of crime data the FBI collects and publishes each year. The FBI\u2019s Uniform Crime Reporting (UCR) Program manages the CDE. The CDE is part of the FBI\u2019s broader effort to modernize reports of national crime data. It is a web-based solution that enables the public to view and interact with UCR Program data in an intuitive and user-friendly way. The CDE allows the public to query, view, and download data about crime (e.g. offense and arrest numbers) and law enforcement (e.g., law enforcement employee numbers, officers killed) that is submitted to the UCR Program in machine readable and open-source formats"
   ],
   "language": [
     "eng"
@@ -26,8 +25,7 @@
     "Table data"
   ],
   "subject": [
-    "Safety",
-    "Social and Community Context"
+    "Safety"
   ],
   "theme": [
     "Health",
@@ -78,11 +76,13 @@
   "wxs_indentifier": null,
   "id": "herop-nfvcud",
   "identifier": null,
-  "modified": "2025-03-12T22:43:38Z",
+  "modified": "2025-03-14T03:53:18Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
-    "State"
+    "County",
+    "State",
+    "Other"
   ],
   "highlight_ids": [
     "040US*"

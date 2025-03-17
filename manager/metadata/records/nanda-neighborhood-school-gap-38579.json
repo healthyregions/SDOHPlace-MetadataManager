@@ -98,7 +98,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38579.v2"
   ],
-  "modified": "2025-02-19T22:56:43Z",
+  "modified": "2025-03-14T21:01:46Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -107,21 +107,18 @@
   ],
   "spatial_resolution_note": "These data measure discrepancies between the school environment and that of the surrounding community. The collection aims to contribute to the discussion about the causes and the consequences of variations in educational context across geographies.",
   "methods_variables": [
-    "Cross-sectional",
-    "Census tracts and ZIP code tabulation areas (ZCTAs) in the United States, including U.S. island territories.",
-    "Census block group demographics",
-    "School attendance boundaries"
+    "School attendance boundaries to block groups",
+    "Block group demographics",
+    "Elementary school demographics",
+    "Median gap for each census tract and ZIP code tabulation area (by aggregating block group data)"
   ],
   "data_variables": [
-    "TRACT_FIPS10",
-    "YEAR",
-    "WHITE_GAP",
-    "BLACK_GAP",
-    "AIAN_GAP",
-    "ASIAN_GAP",
-    "NHPI_GAP",
-    "TWOORMORE_GAP",
-    "POVERTY_GAP"
+    "Difference between the percentage of White residents in a neighborhood and the percentage of White students in the local school(s).",
+    "Difference between the percentage of Black residents in a neighborhood and the percentage of Black students in the local school(s).",
+    "Difference between the percentage of American Indian and Alaska Native (AIAN) residents in a neighborhood and the percentage of AIAN students in the school(s).",
+    "Difference between the percentage of Native Hawaiian and Pacific Islander (NHPI) residents in a neighborhood and the percentage of NHPI students in the school(s).",
+    "Difference between the neighborhood poverty rate and the school poverty rate (e.g., measured by free/reduced-price lunch eligibility).",
+    "Difference between the percentage of individuals identifying as Two or More Races in the neighborhood and the percentage of students in the school(s) with the same racial identity."
   ],
   "data_usage_notes": null,
   "highlight_ids": null,

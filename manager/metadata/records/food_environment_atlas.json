@@ -7,9 +7,9 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
-  "title": "Food Access Research Atlas (USDA)",
+  "title": "Food Access Research Atlas",
   "alternative_title": [
-    "Food Access Research Atlas (USDA)"
+    "Food Access Research Atlas"
   ],
   "description": [
     "The Food Access Research Atlas presents an overview of food access indicators for low-income and other census tracts using different measures of supermarket accessibility. It provides food access data for populations within census tracts and it offers census-tract-level data on food access that can be downloaded for community planning or research purposes."
@@ -38,8 +38,12 @@
     "Health"
   ],
   "keyword": [
-    "US Census",
-    "Access"
+    "Food Access",
+    "Food Desert",
+    "Grocery",
+    "Supermarket",
+    "Healthy Food",
+    "Produce"
   ],
   "temporal_coverage": [
     "2006-2019"
@@ -78,7 +82,7 @@
   "wxs_indentifier": null,
   "id": "herop-htraln",
   "identifier": null,
-  "modified": "2025-03-12T18:17:50Z",
+  "modified": "2025-03-14T04:15:22Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

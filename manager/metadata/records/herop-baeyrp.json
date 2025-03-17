@@ -4,7 +4,7 @@
     "Congressional District Health Dashboard"
   ],
   "description": [
-    "Most data on health, the drivers of health, and health equity are organized at the county, state, or, more recently, city level. In contrast, data about the health of people living in congressional districts is difficult to find. That\u2019s where the Congressional District Health Dashboard (the Dashboard) comes in. The Dashboard provides actionable measures of health and its drivers calculated at the congressional district level, showing users how their district is doing on health outcomes, social and economic factors, and more. The Dashboard incorporates the 2022 redrawn district boundaries based on the 2020 census, corresponding to the 118th Congressional session that started in January 2023. Data and site features will be updated regularly. Data are sourced by our team at NYU Grossman School of Medicine\u2019s Department of Population Health from federal, state, and other datasets with rigorous standards for collection and analysis."
+    "The Congressional District Health Dashboard provides actionable measures of health and its drivers calculated at the congressional district level, showing users how their district is doing on health outcomes, social and economic factors, and more. The Dashboard incorporates the 2022 redrawn district boundaries based on the 2020 census, corresponding to the 118th Congressional session that started in January 2023. Data are sourced by a team at the NYU Grossman School of Medicine\u2019s Department of Population Health from federal, state, and other datasets with rigorous standards for collection and analysis."
   ],
   "language": [
     "eng"
@@ -13,16 +13,15 @@
     "The list of methodological variables presented here is not exhaustive; however, we have made every effort to incorporate as many relevant variables as possible within the scope of this study."
   ],
   "creator": [
-    "Department of Population Health at NYU Grossman School of Medicine",
-    "The Robert Wood Johnson Foundation",
-    "The Bipartisan Policy Center",
-    "The Center on Budget and Policy"
+    "Department of Population Health, NYU Langone Health"
   ],
   "publisher": [
-    "Department of Population Health at NYU Grossman School of Medicine"
+    "Department of Population Health, NYU Langone Health"
   ],
   "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
+    "Datasets",
+    "Maps",
     "Websites"
   ],
   "resource_type": [
@@ -39,13 +38,13 @@
     "Society"
   ],
   "keyword": [
-    "clinical care",
-    "health behavior",
-    "health outcomes",
-    "physical environment",
-    "social & economic factors",
-    "congressional",
-    "congressional district"
+    "Clinical Care",
+    "Health Behavior",
+    "Health Outcomes",
+    "Physical Environment",
+    "Social & Economic Factors",
+    "Congressional",
+    "Congressional District"
   ],
   "temporal_coverage": null,
   "date_issued": "2023",
@@ -85,7 +84,7 @@
   "wxs_indentifier": null,
   "id": "herop-baeyrp",
   "identifier": null,
-  "modified": "2025-03-05T14:22:00Z",
+  "modified": "2025-03-14T03:37:21Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -177,14 +176,12 @@
     "Premature Deaths",
     "Teen Births"
   ],
-  "featured_variable": [
-    "District Level Estimates"
-  ],
+  "featured_variable": null,
   "data_usage_notes": "These variables are primarily derived from sources such as the American Community Survey (ACS), Behavioral Risk Factor Surveillance System (BRFSS), Centers for Disease Control and Prevention (CDC), National Vital Statistics System (NVSS), and the U.S. Small-Area Life Expectancy Project (USALEEP). Many of these measures are aggregated from census tract or county data to estimate values at the congressional district level\u200b.\r\n",
   "_meta": {
     "to_fill": 26,
-    "filled": 22,
-    "filled_pct": 84,
+    "filled": 21,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
   "preferred_citation": "Department of Population Health, NYU Langone Health. Congressional District Health Dashboard. https://www.congressionaldistricthealthdashboard.org/. Accessed [INSERT DATE OF ACCESS]."

@@ -4,19 +4,19 @@
     "Child Opportunity Index (COI)"
   ],
   "description": [
-    "The goal of the Child Opportunity Index is to measure and compare specific neighborhood-level (census-tract) quality of life indicators that play a significant factor in the healthy development of children. These measures include: safe housing, access to food, quality of schools, parks, and more. The database and interactive map tool enables exploration of the factors that shape education, health, and socioeconomic outcomes, and the drivers of childhood equity at the neighborhood level."
+    "The Child Opportunity Index measures and compares specific neighborhood-level quality of life indicators that play a significant factor in the healthy development of children, incorporating measures of safe housing, access to food, quality of schools, parks, and more. The database and interactive map tool enables exploration of the factors that shape education, health, and socioeconomic outcomes, and the drivers of childhood equity at the neighborhood level."
   ],
   "language": [
     "eng"
   ],
   "display_note": [
-    "The list of methodological variables presented here may not be exhaustive; however, we have made every effort to incorporate as many relevant variables as possible within the scope of this study."
+    "The list of methodological variables presented are not meant to be exhaustive of all factors impacting child opportunity; the analytical team sought to incorporate as many relevant variables as possible within the scope of this study."
   ],
   "creator": [
     "Boston University School of Social Work."
   ],
   "publisher": [
-    "Website was developed by the Institute for Equity in Child Opportunity & Healthy Development at Boston University School of Social Work."
+    "Institute for Equity in Child Opportunity & Healthy Development at Boston University School of Social Work"
   ],
   "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign ",
   "resource_class": [
@@ -91,12 +91,10 @@
   "wxs_indentifier": null,
   "id": "herop-znxdus",
   "identifier": null,
-  "modified": "2025-02-17T21:38:49Z",
+  "modified": "2025-03-13T22:16:31Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
-    "County",
-    "State",
     "Census Tract"
   ],
   "highlight_ids": null,

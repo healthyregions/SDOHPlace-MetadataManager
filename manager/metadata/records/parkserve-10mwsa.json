@@ -2,23 +2,24 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 23,
+    "filled": 24,
     "to_fill": 26,
-    "filled_pct": 88,
-    "progress_class": "warning"
+    "filled_pct": 92,
+    "progress_class": "success"
   },
-  "title": "10-minute walk service areas (10MWSA)",
+  "title": "Park 10-min Walk Service Areas",
   "alternative_title": [
-    "10-minute walk service areas (ParkServe Dataset)"
+    "ParkServe 10-minute walk service areas (10MWSA)"
   ],
   "description": [
-    "Park accessibility is analyzed by calculating ten-minute walk service areas for each park in its database. This is achieved by generating a half-mile \u2018walkable\u2019 service area from each park\u2019s designated public access points. Utilizing Esri\u2019s StreetMap Premium network dataset, the analysis accounts for physical barriers such as highways, train tracks, and rivers without bridges, ensuring a more accurate representation of pedestrian access."
+    "Park accessibility is analyzed by calculating ten-minute walk service areas for each park in its database by generating a half-mile \u2018walkable\u2019 service area from each park\u2019s designated public access points. Utilizing ESRI's Proprietary StreetMap Premium Network dataset, the analysis accounts for physical barriers such as highways, train tracks, and rivers without bridges, ensuring a more accurate representation of pedestrian access."
   ],
   "language": [
     "eng"
   ],
   "display_note": [
-    "Info: ParkServe is partially crowdsourced and regularly updated. Only the most recent update is available for download at any given time, and data should be understood as incomplete. In communities with an exceptionally small number of block groups, 10-minute walk demographic calculations are not available.  All calculated population statistics are based on 2023 US Census Block Group estimates provided by Esri."
+    "Info: ParkServe is partially crowdsourced and regularly updated. Only the most recent update is available for download at any given time, and data should be understood as incomplete. In communities with an exceptionally small number of block groups, 10-minute walk demographic calculations are not available. All calculated population statistics are based on 2023 US Census Block Group estimates provided by ESRI.",
+    "Service areas are polygons calculated from the street network, and will cross multiple administrative boundaries. Read provider's documentation for more details."
   ],
   "creator": [
     "Trust for Public Land"
@@ -35,14 +36,17 @@
   ],
   "subject": [
     "Neighborhood and Built Environment",
-    "Physical Activity and Lifestyle"
+    "Greenspaces"
   ],
   "theme": [
     "Society"
   ],
   "keyword": [
     "Park accessibility",
-    "Service areas"
+    "Service areas",
+    "Walkability",
+    "10-minute walk",
+    "Parks"
   ],
   "temporal_coverage": [
     "2023"
@@ -83,39 +87,38 @@
   "references": {
     "http://schema.org/url": "https://www.tpl.org/parkserve",
     "http://schema.org/downloadUrl": "https://www.tpl.org/park-data-downloads",
-    "http://lccn.loc.gov/sh85035852": "https://www.tpl.org/ParkServe/About"
+    "http://lccn.loc.gov/sh85035852": "https://10minutewalk.org/about-us/"
   },
   "wxs_indentifier": null,
   "id": "herop-jxbloa",
   "identifier": null,
-  "modified": "2025-02-17T21:21:33Z",
+  "modified": "2025-03-13T21:10:42Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "City",
-    "Census Tract",
-    "Census Block",
-    "Census Block Group",
-    "Zip Code Tabulation Area (ZCTA)"
+    "Other"
   ],
-  "spatial_resolution_note": null,
+  "spatial_resolution_note": " Service areas are polygons calculated from the street network, and will cross multiple administrative boundaries. Read provider's documentation for more details.",
   "methods_variables": [
-    "A half-mile \u2018walkable\u2019 service area from each of the park\u2019s public access points",
-    "Race/ethnicity,",
-    "Age,",
-    "Income"
+    "Park location",
+    "Street network",
+    "Block-level race/ethnicity estimates",
+    "Block-level age estimates",
+    "Block-level per capita income estimates"
   ],
   "data_variables": [
-    "Park ID,",
-    "Park Name,",
-    "Park Size,",
-    "Shape Length,",
-    "Shape Area"
+    "A half-mile \u2018walkable\u2019 service area from each of the park\u2019s public access points",
+    "Race/ethnicity estimates of intersecting blocks for each service area",
+    "Average age estimates of intersecting blocks for each service area",
+    "Average income estimate of intersecting blocks for each service area"
   ],
   "data_usage_notes": "The ParkServe dataset is designed for spatial analysis and GIS applications to evaluate urban park accessibility. While it provides geospatial files (e.g., shapefiles, GeoJSON, and other GIS-compatible formats), it may not include detailed attribute data such as park addresses, ownership details, or facility descriptions. Users should integrate it with additional datasets if such information is needed for analysis.\r\n\r\n\r\n\r\n",
   "highlight_ids": [
     "150US*"
   ],
-  "featured_variable": null,
+  "featured_variable": [
+    "10-min walk to nearest park"
+  ],
   "preferred_citation": "ParkServe. (2023, May 24). Trust for Public Land. https://www.tpl.org/parkserve"
 }

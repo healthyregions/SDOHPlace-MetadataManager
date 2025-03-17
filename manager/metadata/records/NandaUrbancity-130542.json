@@ -2,10 +2,10 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 23,
+    "filled": 24,
     "to_fill": 26,
-    "filled_pct": 88,
-    "progress_class": "warning"
+    "filled_pct": 92,
+    "progress_class": "success"
   },
   "title": "Urbanicity by Census Tract, 2010",
   "alternative_title": [
@@ -83,7 +83,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38606.v1"
   ],
-  "modified": "2025-02-19T20:21:46Z",
+  "modified": "2025-03-14T20:46:32Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -91,40 +91,42 @@
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
-    "measures of urbanicity",
-    "urban/rural qualities of United States",
-    "census tracts",
+    "Urban/rural qualities of United States",
+    "Census tracts",
     "RUCA codes",
-    "population",
-    "urban",
-    " large rural",
-    " small rural",
-    " isolated primary",
-    "commuting flow",
-    "secondary commuting flow",
+    "Population",
+    "Urban",
+    "Large rural",
+    "Small rural",
+    "Isolated primary",
+    "Commuting flow",
+    "Secondary commuting flow",
     "Rural area"
   ],
   "data_variables": [
-    "tract_fips10",
-    "tot_pop_census",
-    "urban_pop",
-    "ua_pop",
-    "uc_pop",
-    "rural_pop",
-    "tract_urban_pct",
-    "tract_rural_pct",
-    "urbanicity",
-    "tot_pop_ruca",
-    "land_area_sqmiles",
-    "pop_density",
-    "ruca_primary",
-    "ruca_secondary",
-    "ruca_secondaryx10",
-    "ruca4",
-    "ruca7"
+    "Unique identifier for each census tract (2010 FIPS code).",
+    "Total population of the tract from the Census.",
+    "Population in urban areas within the tract.",
+    "Population in urbanized areas (50,000+ people).",
+    " Population in urban clusters (2,500\u201349,999 people).",
+    "Population in rural areas within the tract.",
+    "Urban-Rural Classification Metrics",
+    "Percentage of the tract\u2019s population classified as urban.",
+    "Percentage of the tract\u2019s population classified as rural.",
+    "Urbanicity",
+    "Total population used for RUCA classification.",
+    "Primary RUCA code for the tract, based on commuting patterns and urban-rural status.",
+    "Secondary RUCA code for more granular classification.",
+    "A scaled version of the secondary RUCA code (e.g., multiplied by 10 for finer resolution).",
+    "RUCA classification grouped into 4 categories.",
+    "RUCA classification grouped into 7 categories.",
+    "Total land area of the tract in square miles.",
+    "Population density (total population per square mile)."
   ],
   "data_usage_notes": null,
   "highlight_ids": null,
-  "featured_variable": null,
+  "featured_variable": [
+    "Urbanicity"
+  ],
   "preferred_citation": "Miller, Stephanie, Melendez, Robert, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Urbanicity by Census Tract, United States, 2010. Inter-university Consortium for Political and Social Research [distributor], 2022-12-12. https://doi.org/10.3886/ICPSR38606.v1"
 }

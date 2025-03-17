@@ -7,17 +7,19 @@
     "filled_pct": 92,
     "progress_class": "success"
   },
-  "title": "Daily PM2.5 Concentrations, 2001-2005 (CDC)",
+  "title": "Daily Census Tract PM 2.5 Concentrations (2001-2005)",
   "alternative_title": [
-    "CDC Daily Census Tract-Level PM2.5 Concentrations 2001-2005"
+    "Daily Census Tract PM 2.5 Concentrations (2001-2005)"
   ],
   "description": [
-    "This dataset provides modeled predictions of PM2.5 levels from the EPA's Downscaler model. Data are at the census tract level for 2001-2005. These data are used by the CDC's National Environmental Public Health Tracking Network to generate air quality measures. Census tract-level datasets contain estimates of the mean predicted concentration and associated standard error."
+    "CDC works closely with Environmental Protection Agency (EPA), National Aeronautics and Space Administration (NASA), and National Oceanic and Atmospheric Association (NOAA) to generate air quality data from the National Environmental Public Health Tracking Network. This dataset provides modeled predictions of PM 2.5 levels from the EPA's Downscaler model. The dataset includes estimates of the mean predicted concentration and associated standard error for particulate matter smaller than 2.5 micrometers (PM2.5) in \u03bcg/m3."
   ],
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [
+    "Warning: Tract-level measures are <i> downscaled</I>, modeled predictions. Care should be take in interpretation at finer resolutions to ensure that variations in measures are due to change in measure of interest, and not due to the methodology generated to establish measure."
+  ],
   "creator": [
     "Environmental Public Health Tracking Network",
     "Centers for Disease Control and Prevention",
@@ -43,13 +45,21 @@
     "Health"
   ],
   "keyword": [
-    "US Census",
     "Air Quality",
-    "Environment Data",
-    "PM2.5"
+    "Environment",
+    "PM 2.5",
+    "Particulate Matter",
+    "Asthma",
+    "Air Pollution",
+    "Environmental Health",
+    "Toxicology"
   ],
   "temporal_coverage": [
-    "2001-2005"
+    "2001",
+    "2002",
+    "2003",
+    "2004",
+    "2005"
   ],
   "date_issued": null,
   "index_year": [
@@ -85,7 +95,7 @@
   "format": "CSV | RSS | RDF | XML",
   "file_size": null,
   "references": {
-    "http://schema.org/url": "https://ephtracking.cdc.gov/DataExplorer/#/",
+    "http://schema.org/url": "https://data.cdc.gov/Environmental-Health-Toxicology/Daily-Census-Tract-Level-PM2-5-Concentrations-2001/v5qq-ktfc/data_preview",
     "http://schema.org/downloadUrl": "https://data.cdc.gov/Environmental-Health-Toxicology/Daily-Census-Tract-Level-PM2-5-Concentrations-2001/v5qq-ktfc/data_preview",
     "http://lccn.loc.gov/sh85035852": "https://ephtracking.cdc.gov/Tracking%20User%20Guide.pdf",
     "archive-url": "https://uofi.app.box.com/s/fqtslnfkpmgi32pb1cah1eyvmimvp740/folder/305409431864"
@@ -93,29 +103,14 @@
   "wxs_indentifier": null,
   "id": "herop-pvsgwe",
   "identifier": null,
-  "modified": "2025-02-17T22:07:05Z",
+  "modified": "2025-03-14T03:49:50Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
-    "County",
     "Census Tract"
   ],
   "spatial_resolution_note": null,
-  "methods_variables": [
-    "Air Quality:",
-    "O3: Number of Days over Air Quality Standard (Monitor Only)",
-    "PM2.5: Percent of Days over Air Quality Standard (Monitor Only)",
-    "PM2.5: Highest Annual Average Concentration (Monitor Data)",
-    "O3: Number of Days over Air Quality Standard (Monitor + Modeled Data)",
-    "PM2.5: Percent of Days over Air Quality Standard (Monitor + Modeled Data)",
-    "PM2.5: Highest Annual Average Concentration (Monitor + Modeled Data)",
-    "Annual Average Cancer Risk Estimates per 1,000,000 Population",
-    "Annual Average Air Concentration Estimates of Selected Pollutant (\u00b5g/m3)",
-    "Percent of Cancer Risk Estimates by Source",
-    "Percent of Cancer Risk Estimates from All Sources",
-    "Areas and Populations Vulnerable to Predicted Surface Smoke from Wildland Fires",
-    "Annual Average Total Cancer Risk Estimates"
-  ],
+  "methods_variables": null,
   "data_variables": [
     "Year of prediction",
     "Date (day-month-year) of prediction",
@@ -126,6 +121,8 @@
   "highlight_ids": [
     "140US*"
   ],
-  "featured_variable": null,
+  "featured_variable": [
+    "Mean estimated 24-hour average PM2.5 concentration in \u03bcg/m3, Standard error of the estimated PM2.5 concentration"
+  ],
   "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. (n.d.) Web. Accessed: 02/17/2025. www.cdc.gov/ephtracking."
 }

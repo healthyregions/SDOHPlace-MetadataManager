@@ -2,12 +2,12 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 23,
+    "filled": 22,
     "to_fill": 26,
-    "filled_pct": 88,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
-  "title": "Crimes, 2002-2014",
+  "title": "Crimes by County",
   "alternative_title": [
     "NaNDA Crimes by County, United States, 2002-2014"
   ],
@@ -17,9 +17,7 @@
   "language": [
     "eng"
   ],
-  "display_note": [
-    "The purpose of this study was to aggregate county-level Uniform Crime Reporting (UCR) data for the years 2002-2014."
-  ],
+  "display_note": null,
   "creator": [
     "Philippa Clarke",
     "Robert Melendez",
@@ -39,7 +37,7 @@
     "Safety"
   ],
   "theme": [
-    "Environment"
+    "Society"
   ],
   "keyword": [
     "Arson",
@@ -98,23 +96,22 @@
   "file_size": "3.6 MB",
   "references": {
     "http://schema.org/url": "https://doi.org/10.3886/ICPSR38649.v1",
-    "'http://lccn.loc.gov/sh85035852'": "https://www.openicpsr.org/openicpsr/project/115006/version/V1/view"
+    "'http://lccn.loc.gov/sh85035852'": "https://www.openicpsr.org/openicpsr/project/115006/version/V1/view",
+    "'http://schema.org/downloadUrl'": "https://doi.org/10.3886/E115006"
   },
   "wxs_indentifier": null,
   "id": "herop-fdevuz",
   "identifier": [
     "https://doi.org/10.3886/ICPSR38649.v1"
   ],
-  "modified": "2025-03-12T18:15:20Z",
+  "modified": "2025-03-14T02:55:21Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
   "spatial_resolution_note": null,
-  "methods_variables": [
-    "Crimes Reported (dataset 4)"
-  ],
+  "methods_variables": null,
   "data_variables": [
     "Murder",
     "Rape",

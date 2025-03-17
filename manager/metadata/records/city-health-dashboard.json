@@ -2,15 +2,15 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 24,
+    "filled": 23,
     "to_fill": 26,
-    "filled_pct": 92,
-    "progress_class": "success"
+    "filled_pct": 88,
+    "progress_class": "warning"
   },
   "title": "City Health Dashboard",
   "alternative_title": null,
   "description": [
-    "The goal of the City Health Dashboard is to provide communities and city leaders with an array of regularly updated data specific to neighborhood and/or city boundaries\u2014such as life expectancy, park access, and children in poverty\u2014to improve the health and well-being of everyone in the community. The database and interactive web tool enables exploration of the factors that shape health and the drivers of health equity at the city level."
+    "The City Health Dashboard provides communities and city leaders with an array of regularly updated data specific to neighborhood and/or city boundaries\u2014such as life expectancy, park access, and children in poverty, that may serve to improve the health and well-being of everyone in the community. The database and interactive web tool enables exploration of the factors that shape health and the drivers of health equity at the city level."
   ],
   "language": [
     "eng"
@@ -22,11 +22,12 @@
     "Department of Population Health, NYU Langone Health"
   ],
   "publisher": [
-    "Website was developed by Forum One, under the direction of the Department of Population Health at NYU Langone Health"
+    "Department of Population Health, NYU Langone Health"
   ],
   "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
     "Datasets",
+    "Maps",
     "Websites"
   ],
   "resource_type": [
@@ -996,7 +997,7 @@
   "wxs_indentifier": null,
   "id": "herop-xtoqlx",
   "identifier": null,
-  "modified": "2025-02-17T21:51:17Z",
+  "modified": "2025-03-13T23:37:50Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -30310,8 +30311,9 @@
     "140US15003003900",
     "140US15003011105"
   ],
-  "spatial_resolution_note": "note 1 | note 2",
-  "methods_variables": [
+  "spatial_resolution_note": null,
+  "methods_variables": null,
+  "data_variables": [
     "Dental Care",
     "Prenatal Care",
     "Routine",
@@ -30356,23 +30358,6 @@
     "Unemployment - Current, City-Level",
     "Voter Turnout",
     "Youth Not in Work or School"
-  ],
-  "data_variables": [
-    "period type",
-    "group name",
-    "data period",
-    "census parent shape year",
-    "metric name",
-    "geography level",
-    "estimate",
-    "geography name",
-    "aggregate indicator",
-    "source name",
-    "data indicator",
-    "numerator",
-    "denomerator",
-    "lower confidence interval",
-    "upper confidence interval"
   ],
   "data_usage_notes": "Error margins are not displayed on the dashboard. However, they are available in the downloadable data files and in the tabular view of the city data. Estimates of similar metrics may differ between the Dashboard and other resources due to different data sources and analytic techniques. When comparing the Dashboard\u2019s estimates to other similar metrics on similar sites, please use caution and refer to the City Health Dashboard Technical Document to understand all potential sources of difference.",
   "featured_variable": null,

@@ -7,12 +7,12 @@
     "filled_pct": 92,
     "progress_class": "success"
   },
-  "title": "Global Horizontal Irradiance, 1991-2012 (CDC)",
+  "title": "Global Horizontal Irradiance",
   "alternative_title": [
     "CDC Population-Weighted Global Horizontal Irradiance 1991-2012"
   ],
   "description": [
-    "Global Horizontal Irradiance (GHI) is the total amount of shortwave radiation received by a horizontal surface from above. The available county-level data show the temporal and spatial trends of population-weighted irradiance levels throughout the contiguous United States from 1991 to 2012. The GHI data is provided by the Environmental Remote Sensing group at the Rollins School of Public Health at Emory University, led by Prof. Yang Liu. The 1991-1997 data are calculated based on the GHI data from the National Solar Radiation Data Base  (NSRDB), and the 1998-2012 data are calculated based on the GHI data from SolarAnywhere irradiance data."
+    "Global Horizontal Irradiance (GHI) is the total amount of shortwave radiation received by a horizontal surface from above. The available county-level data show the temporal and spatial trends of population-weighted irradiance levels throughout the contiguous United States from 1991 to 2012. The GHI data is originally provided by the Environmental Remote Sensing group at the Rollins School of Public Health at Emory University, led by Prof. Yang Liu. The 1991-1997 data are calculated based on the GHI data from the National Solar Radiation Data Base  (NSRDB), and the 1998-2012 data are calculated based on the GHI data from SolarAnywhere irradiance data."
   ],
   "language": [
     "eng"
@@ -35,9 +35,7 @@
     "Table data"
   ],
   "subject": [
-    "Health and Healthcare",
-    "Neighborhood and Built Environment",
-    "Safety"
+    "Neighborhood and Built Environment"
   ],
   "theme": [
     "Climate",
@@ -90,14 +88,14 @@
   "format": "CSV | RSS | RDF | XML",
   "file_size": null,
   "references": {
-    "http://schema.org/url": "https://ephtracking.cdc.gov/DataExplorer/#/",
+    "http://schema.org/url": "https://data.cdc.gov/Environmental-Health-Toxicology/Population-Weighted-Global-Horizontal-Irradiance-1/fdyw-m38t/about_data",
     "http://schema.org/downloadUrl": "https://data.cdc.gov/Environmental-Health-Toxicology/Population-Weighted-Global-Horizontal-Irradiance-1/fdyw-m38t/data_preview",
     "archive-url": "https://uofi.app.box.com/s/fqtslnfkpmgi32pb1cah1eyvmimvp740/folder/305419681660"
   },
   "wxs_indentifier": null,
   "id": "herop-efqkhv",
   "identifier": null,
-  "modified": "2025-02-17T22:39:13Z",
+  "modified": "2025-03-14T04:19:54Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -106,14 +104,12 @@
   "spatial_resolution_note": null,
   "methods_variables": null,
   "data_variables": [
-    "STATEFIPS: FIPS codes for states",
-    "COUNTYFIPS: FIPS codes for counties",
-    "YEAR: Year",
-    "MONTH: Month of the year, from 1-12",
-    "DAY: Day of the month, from 1-31",
-    "GHI: County-level population weighted daily GHI"
+    "Year",
+    "Month",
+    "Date",
+    "County-level population weighted daily Global Horizontal Irradiance (GHI)"
   ],
-  "data_usage_notes": "NAs in the dataset appear as missing values; these refer to no valid data and are caused by invalid retrievals from NSRDB or SolarAnywhere. We suggest to treat NAs as missing. \r\nBy using these data, you signify your agreement to comply with the following requirements:\r\n1. Use the data for statistical reporting and analysis only.\r\n2. Do not attempt to learn the identity of any person included in the data and do not combine these data with other data for the purpose of matching records to identify individuals.\r\n3. Do not disclose of or make use of the identity of any person or establishment discovered inadvertently and report the discovery to: trackingsupport@cdc.gov.\r\n4. Do not imply or state, either in written or oral form, that interpretations based on the data are those of the original data sources and CDC unless the data user and data source are formally collaborating.\r\n5. Acknowledge, in all reports or presentations based on these data, the original source of the data and CDC.\r\n\r\nDetailed methods are available in the documentation: https://data.cdc.gov/api/views/fdyw-m38t/files/eb1465e3-de29-488e-ac3b-f862d6adbbec?download=true&filename=GHI_Metadata.pdf",
+  "data_usage_notes": "Null values or \"NA\" in the dataset appear as missing values; these refer to no valid data and are caused by invalid retrievals from NSRDB or SolarAnywhere. Authors suggest to treat NAs as missing. Detailed methods are available in the documentation.",
   "highlight_ids": [
     "050US*"
   ],

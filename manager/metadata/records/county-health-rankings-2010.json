@@ -2,9 +2,9 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 23,
+    "filled": 22,
     "to_fill": 26,
-    "filled_pct": 88,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
   "title": "County Health Rankings",
@@ -12,24 +12,25 @@
     "County Health Rankings & Roadmaps (CHR&R)"
   ],
   "description": [
-    "Summarize the Health Outcome of Communities at the County-Level Health Data Across the US. The County Health Rankings & Roadmaps (CHR&R) draws attention to why there are differences in health within and across communities. CHR&R provides a snapshot of the health of nearly every county in the nation. Data for the 34 Select measures/ factors used to calculate Health Outcomes. This shows the 2024 release of the County Health Rankings."
+    "The County Health Rankings & Roadmaps (CHR&R) program provides an annual data release to generate a snapshot of how health is influenced by where people live, learn, work, and play, drawing attention to why there are differences in health within and across communities. Each annual data release features a well documented model and dozens of measures related to health outcomes as well as health behaviors, clinical care, social and economic factors, and physical environment. Files associated with each release will also include national statistics, state-level data and technical documentation including changes to measures, guidelines for comparing data across states, information about data years and sources, and more."
   ],
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [
+    "Be sure to check technical documentation for each year of release to check for updates, as the data model approach is continually refined."
+  ],
   "creator": [
-    "Forum One",
-    "Robert Wood Johnson Foundation",
-    "University of Wisconsin Population Health Institute",
-    "Burness"
+    "University of Wisconsin Population Health Institute"
   ],
   "publisher": [
     "University of Wisconsin Population Health Institute"
   ],
   "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
-    "Datasets"
+    "Datasets",
+    "Maps",
+    "Websites"
   ],
   "resource_type": [
     "Polygon data"
@@ -49,12 +50,18 @@
   ],
   "theme": [
     "Health",
+    "Society",
+    "Structure",
     "Transportation"
   ],
   "keyword": [
-    "health index",
-    "housing",
-    "commute"
+    "Structural determinants of Health",
+    "Health Outcomes",
+    "SDOH",
+    "Health Behaviors",
+    "Clinical Care",
+    "Social and Economic Factors",
+    "Physical Environment"
   ],
   "temporal_coverage": [
     "2010-2024"
@@ -101,37 +108,38 @@
   "format": null,
   "file_size": null,
   "references": {
-    "http://lccn.loc.gov/sh85035852": "https://www.countyhealthrankings.org/health-data/methodology-and-sources/data-documentation/national-data-documentation-2010-2022"
+    "http://lccn.loc.gov/sh85035852": "https://www.countyhealthrankings.org/health-data/methodology-and-sources/data-documentation/national-data-documentation-2010-2022",
+    "http://schema.org/url": "https://www.countyhealthrankings.org/",
+    "http://schema.org/downloadUrl": "https://www.countyhealthrankings.org/health-data/county-health-rankings-measures"
   },
   "wxs_indentifier": null,
   "id": "herop-cfmkuz",
   "identifier": null,
-  "modified": "2025-02-17T21:54:48Z",
+  "modified": "2025-03-14T03:37:56Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
   "spatial_resolution_note": null,
-  "methods_variables": [
-    "Food Environment Index",
-    "Average Daily PM2.5"
-  ],
+  "methods_variables": null,
   "data_variables": [
     "Years of Potential Life Lost Rate",
-    "% Fair or Poor Health",
+    "Percent Fair or Poor Health",
     "Average Number of Physically Unhealthy Days",
     "Average Number of Mentally Unhealthy Days",
-    "% Low birthweight",
-    "% Adults Reporting Currently Smoking",
-    "% Adults with Obesity",
-    "% Physically Inactive",
-    "% With Access to Exercise Opportunities",
-    "% Excessive Drinking",
-    "% Driving Deaths with Alcohol Involvement",
+    "Percent Low birthweight",
+    "Food Environment Index",
+    "Average Daily PM2.5",
+    "Percent Adults Reporting Currently Smoking",
+    "Percent Adults with Obesity",
+    "Percent Physically Inactive",
+    "Percent With Access to Exercise Opportunities",
+    "Percent Excessive Drinking",
+    "Percent Driving Deaths with Alcohol Involvement",
     "Chlamydia Rate",
     "Teen Birth Rate",
-    "% Uninsured",
+    "Percent Uninsured",
     "Primary Care Physicians Rate",
     "Primary Care Physicians Ratio",
     "Dentist Rate",
@@ -139,20 +147,20 @@
     "Mental Health Provider Rate",
     "Mental Health Provider Ratio",
     "Preventable Hospitalization Rate",
-    "% With Annual Mammogram",
-    "% Flu Vaccinated",
-    "% Completed High School",
-    "% Some College",
-    "% Unemployed",
-    "% Children in Poverty",
+    "Percent With Annual Mammogram",
+    "Percent Flu Vaccinated",
+    "Percent Completed High School",
+    "Percent Some College",
+    "Percent Unemployed",
+    "Percent Children in Poverty",
     "Income Ratio",
-    "% Children in Single-Parent Households",
+    "Percent Children in Single-Parent Households",
     "Social Association Rate",
     "Injury Death Rate",
     "Presence of Water Violation",
-    "% Severe Housing Problems",
-    "% Drive Alone to Work",
-    "% Long Commute - Drives Alone"
+    "Percent Severe Housing Problems",
+    "Percent Drive Alone to Work",
+    "Percent Long Commute - Drives Alone"
   ],
   "data_usage_notes": "The data contains a breakdown of the measures used in calculating outcomes, data elements, descriptions, and ranking for each country.",
   "highlight_ids": null,

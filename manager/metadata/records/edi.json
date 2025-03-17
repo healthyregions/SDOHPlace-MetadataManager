@@ -7,9 +7,9 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
-  "title": "Environmental Justice Index (CDC)",
+  "title": "Environmental Justice Index",
   "alternative_title": [
-    "Environmental Justice Index (CDC)"
+    "Environmental Justice Index"
   ],
   "description": [
     "The Environmental Justice Index (EJI) is a part of the EPA\u2019s EJSCREEN platform, is a data-driven tool designed to identify and analyze environmental justice concerns across the United States. The EJI combines environmental, demographic, and health data to assess communities disproportionately impacted by environmental burdens and social vulnerabilities. Indicators include air quality, proximity to hazardous facilities, and exposure to pollutants, along with demographic factors like income, race, and linguistic isolation. In addition to the core EJI, the EPA incorporates Supplemental Indexes to enhance its analytical capabilities. These indexes include the Climate Change Index, which identifies communities vulnerable to the impacts of climate change, and the Health Disparities Index, which highlights areas with existing health challenges that may exacerbate environmental risks. While both EJI and EJSCREEN are tools for assessing environmental justice, they are designed for slightly different purposes. EJSCREEN is a screening and mapping tool primarily intended for community engagement, highlighting potential environmental and demographic concerns to guide further investigation. The EJI, on the other hand, goes beyond screening by integrating additional health and climate vulnerability data to create indexes tailored for more in-depth analysis and decision-making."
@@ -82,12 +82,13 @@
   "references": {
     "http://schema.org/downloadUrl": "https://www.atsdr.cdc.gov/place-health/php/eji/index.html",
     "http://schema.org/url": "https://www.atsdr.cdc.gov/place-health/php/eji/eji-data-download.html",
-    "http://lccn.loc.gov/sh85035852": "https://www.atsdr.cdc.gov/place-health/media/pdfs/2024/10/EJI_2024_Technical_Documentation.pdf"
+    "http://lccn.loc.gov/sh85035852": "https://www.atsdr.cdc.gov/place-health/media/pdfs/2024/10/EJI_2024_Technical_Documentation.pdf",
+    "archive-url": "https://uofi.app.box.com/s/fqtslnfkpmgi32pb1cah1eyvmimvp740/folder/305791161208"
   },
   "wxs_indentifier": null,
   "id": "herop-oqxqog",
   "identifier": null,
-  "modified": "2025-02-17T22:30:09Z",
+  "modified": "2025-03-14T04:10:17Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

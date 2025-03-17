@@ -2,22 +2,24 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 24,
+    "filled": 25,
     "to_fill": 26,
-    "filled_pct": 92,
+    "filled_pct": 96,
     "progress_class": "success"
   },
-  "title": "Daily Ozone Concentrations, 2006-2010 (CDC)",
+  "title": "Daily Census Tract Ozone Concentrations (2006-2010)",
   "alternative_title": [
-    "CDC Daily Census Tract-Level Ozone Concentrations 2006-2010"
+    "Daily Census Tract Ozone Concentrations (2006-2010)"
   ],
   "description": [
-    "This dataset provides modeled predictions of ozone levels from the EPA's Downscaler model. Data are at the census tract level for 2006-2010. These data are used by the CDC's National Environmental Public Health Tracking Network to generate air quality measures. Census tract-level datasets contain estimates of the mean predicted concentration and associated standard error."
+    "CDC works closely with Environmental Protection Agency (EPA), National Aeronautics and Space Administration (NASA), and National Oceanic and Atmospheric Association (NOAA) to generate air quality data from the National Environmental Public Health Tracking Network. This dataset provides modeled predictions of ozone levels from the EPA's Downscaler model. The dataset includes mean estimated 8-hour average ozone concentration in parts per billion (ppb) within 3 meters of the surface of the earth, and standard error of the estimated ozone concentration, per census tract."
   ],
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [
+    "Warning: Tract-level measures are <i> downscaled</I>, modeled predictions. Care should be take in interpretation at finer resolutions to ensure that variations in measures are due to change in measure of interest, and not due to the methodology generated to establish measure."
+  ],
   "creator": [
     "Environmental Public Health Tracking Network",
     "Centers for Disease Control and Prevention",
@@ -43,10 +45,13 @@
     "Health"
   ],
   "keyword": [
-    "US Census",
     "Air Quality",
-    "Environment Data",
-    "Ozone"
+    "Environment",
+    "Ozone",
+    "Asthma",
+    "Air Pollution",
+    "Environmental Health",
+    "Toxicology"
   ],
   "temporal_coverage": [
     "2006-2010"
@@ -93,39 +98,36 @@
   "wxs_indentifier": null,
   "id": "herop-dnnjyy",
   "identifier": null,
-  "modified": "2025-02-17T22:06:38Z",
+  "modified": "2025-03-14T20:38:50Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
-    "County",
     "Census Tract"
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
-    "Air Quality:",
-    "O3: Number of Days over Air Quality Standard (Monitor Only)",
-    "PM2.5: Percent of Days over Air Quality Standard (Monitor Only)",
-    "PM2.5: Highest Annual Average Concentration (Monitor Data)",
-    "O3: Number of Days over Air Quality Standard (Monitor + Modeled Data)",
-    "PM2.5: Percent of Days over Air Quality Standard (Monitor + Modeled Data)",
-    "PM2.5: Highest Annual Average Concentration (Monitor + Modeled Data)",
-    "Annual Average Cancer Risk Estimates per 1,000,000 Population",
-    "Annual Average Air Concentration Estimates of Selected Pollutant (\u00b5g/m3)",
-    "Percent of Cancer Risk Estimates by Source",
-    "Percent of Cancer Risk Estimates from All Sources",
-    "Areas and Populations Vulnerable to Predicted Surface Smoke from Wildland Fires",
-    "Annual Average Total Cancer Risk Estimates"
+    "Year of estimate",
+    "Date (day-month-year) of estimate",
+    "Latitude of census tract centroid",
+    "Longitude of census tract centroid"
   ],
   "data_variables": [
     "Year of estimate",
     "Date (day-month-year) of estimate",
-    "Standard error of the estimated ozone concentration",
-    "Mean estimated 8-hour average ozone concentration in parts per billion (ppb) within 3 meters of the surface of the earth"
+    "State FIPS code",
+    "County FIPS code",
+    "Census tract FIPS code",
+    "Latitude of census tract centroid",
+    "Longitude of census tract centroid",
+    "Mean estimated 8-hour average ozone concentration in parts per billion (ppb) within 3 meters of the surface of the earth",
+    "Standard error of the estimated ozone concentration"
   ],
   "data_usage_notes": null,
   "highlight_ids": [
     "140US*"
   ],
-  "featured_variable": null,
+  "featured_variable": [
+    "Standard error of the estimated ozone concentration, Mean estimated 8-hour average ozone concentration in parts per billion (ppb) within 3 meters of the surface of the earth"
+  ],
   "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. (n.d.) Web. Accessed: 02/17/2025. www.cdc.gov/ephtracking."
 }
