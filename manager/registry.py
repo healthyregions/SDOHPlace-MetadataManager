@@ -1,4 +1,6 @@
 import json
+import logging
+from json import JSONDecodeError
 from pathlib import Path
 from datetime import datetime
 from dotenv import load_dotenv
@@ -133,11 +135,20 @@ class Record:
 
         if self.data["references"]:
             cleaned_references = {}
+            download_refs = []
             for (
                 k,
                 v,
             ) in self.data["references"].items():
-                cleaned_references[k.rstrip().lstrip()] = v.rstrip().lstrip()
+                if k.startswith('download/'):
+                    label = k.rstrip().lstrip()[9:]
+                    url = v.rstrip().lstrip()
+                    download_refs.append({'label': label, 'url': url})
+                else:
+                    cleaned_references[k.rstrip().lstrip()] = v.rstrip().lstrip()
+
+            if len(download_refs) > 0:
+                cleaned_references['http://schema.org/downloadUrl'] = download_refs
             self.data["references"] = cleaned_references
 
         coverages = (
@@ -206,6 +217,7 @@ class Record:
 
         return self.data
 
+
     def to_form(self):
         """Prepares the raw backend data to populate an html form."""
         form_data = {}
@@ -216,7 +228,19 @@ class Record:
             if key == "references" and isinstance(value, dict):
                 lines = ""
                 for x, y in value.items():
-                    lines += f"{x}:: {y}\n"
+                    logging.warning(f'item - {x}:: {y}')
+                    if x == 'http://schema.org/downloadUrl':
+                        try:
+                            if isinstance(y, list):
+                                # downloadUrl is a list of objects defining label + url
+                                # break it up into multiple lines of download/<label>:: <url>
+                                for u in y:
+                                    lines += f"download/{u['label']}:: {u['url']}\n"
+                        except JSONDecodeError as ex:
+                            # downloadUrl is a single string
+                            lines += f"{x}:: {y}\n"
+                    else:
+                        lines += f"{x}:: {y}\n"
                 value = lines
             if field.multiple and isinstance(value, list):
                 if field.widget == "text-area.html":
