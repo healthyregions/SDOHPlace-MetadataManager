@@ -28,6 +28,7 @@
     "Demographics",
     "Employment",
     "Health and Healthcare",
+    "Natural Environment",
     "Social and Community Context",
     "Composite Index"
   ],
@@ -82,7 +83,7 @@
   "wxs_indentifier": null,
   "id": "herop-xvenhj",
   "identifier": null,
-  "modified": "2025-03-14T04:07:39Z",
+  "modified": "2025-03-20T21:01:43Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

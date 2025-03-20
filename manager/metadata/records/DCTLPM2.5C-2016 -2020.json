@@ -7,7 +7,7 @@
     "filled_pct": 96,
     "progress_class": "success"
   },
-  "title": "Daily Census Tract PM 2.5 Concentrations (2016-2020)",
+  "title": "Daily Census Tract PM 2.5 Concentrations",
   "alternative_title": [
     "Daily Census Tract PM 2.5 Concentrations (2016-2020)"
   ],
@@ -95,7 +95,7 @@
   "wxs_indentifier": null,
   "id": "herop-ccbxef",
   "identifier": null,
-  "modified": "2025-03-14T03:57:34Z",
+  "modified": "2025-03-17T23:10:46Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

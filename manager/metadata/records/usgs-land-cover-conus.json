@@ -2,12 +2,12 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 20,
+    "filled": 21,
     "to_fill": 26,
-    "filled_pct": 76,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
-  "title": "USGS Land Cover (Legacy CONUS)",
+  "title": "USGS Land Cover (CONUS)",
   "alternative_title": null,
   "description": [
     "Land cover data for the conterminus United States. Data download includes land cover for 2001, 2004, 2006, 2008, 2011, 2013, 2016, 2019, and 2021."
@@ -97,10 +97,12 @@
   },
   "wxs_indentifier": null,
   "id": "herop-cxuyoz",
-  "identifier": null,
-  "modified": "2025-02-17T15:42:54Z",
+  "identifier": [
+    "doi.org/10.1080/15481603.2023.2181143"
+  ],
+  "modified": "2025-03-18T01:42:25Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": false,
+  "suppressed": true,
   "spatial_resolution": [
     "Census Block Group"
   ],

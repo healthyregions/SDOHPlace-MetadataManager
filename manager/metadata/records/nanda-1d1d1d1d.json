@@ -7,7 +7,7 @@
     "filled_pct": 84,
     "progress_class": "warning"
   },
-  "title": "Street Connectivity, 2010",
+  "title": "Street Connectivity (NaNDA)",
   "alternative_title": [
     "NaNDA Street Connectivity by ZIP Code Tabulation Area, United States, 2010"
   ],
@@ -77,9 +77,9 @@
   "wxs_indentifier": null,
   "id": "herop-kgnhrw",
   "identifier": [
-    "https://doi.org/10.3886/ICPSR38580.v2"
+    "doi.org/10.3886/ICPSR38580.v2"
   ],
-  "modified": "2025-02-19T20:49:51Z",
+  "modified": "2025-03-17T23:12:32Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

@@ -7,7 +7,7 @@
     "filled_pct": 92,
     "progress_class": "success"
   },
-  "title": "Daily County-Level PM2.5 Concentrations (2001-2019)",
+  "title": "Daily County-Level PM2.5 Concentrations",
   "alternative_title": [
     "Daily County-Level PM2.5 Concentrations (2001-2019)"
   ],
@@ -95,7 +95,7 @@
   "wxs_indentifier": null,
   "id": "herop-dxpjno",
   "identifier": null,
-  "modified": "2025-03-14T03:45:25Z",
+  "modified": "2025-03-17T23:11:03Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

@@ -98,9 +98,9 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38579.v2"
   ],
-  "modified": "2025-03-14T20:58:25Z",
+  "modified": "2025-03-17T22:42:40Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": false,
+  "suppressed": true,
   "spatial_resolution": [
     "Census Tract",
     "Zip Code Tabulation Area (ZCTA)"

@@ -2,12 +2,12 @@
   "_meta": {
     "created_by": "",
     "last_modified_by": "Admin",
-    "filled": 22,
+    "filled": 23,
     "to_fill": 26,
-    "filled_pct": 84,
+    "filled_pct": 88,
     "progress_class": "warning"
   },
-  "title": "Crimes by County",
+  "title": "Crimes by County (NaNDA)",
   "alternative_title": [
     "NaNDA Crimes by County, United States, 2002-2014"
   ],
@@ -104,15 +104,14 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38649.v1"
   ],
-  "modified": "2025-03-14T02:55:21Z",
+  "modified": "2025-03-18T14:01:32Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
   "spatial_resolution_note": null,
-  "methods_variables": null,
-  "data_variables": [
+  "methods_variables": [
     "Murder",
     "Rape",
     "Robbery",
@@ -125,6 +124,32 @@
     "County",
     "Years",
     "Crime Longitudinally"
+  ],
+  "data_variables": [
+    "Total crimes excluding arson",
+    "Total crimes including arson",
+    "Total property crimes reported (burglary, larceny, and motor vehicle theft)",
+    "Total violent crimes reported (murder + rape + robbery + aggravated assault)",
+    "County population used to calculate county-level crime reports",
+    "First two digits of the FIPS county code (state)",
+    "Five-digit FIPS county code",
+    "ICPSR case ID number",
+    "ICPSR part number",
+    "Last three digits of the FIPS county code (county)",
+    "Number of agencies in the county reporting arrest data",
+    "Number of agencies in the county reporting offense data",
+    "Proportion of totals based on data provided by reporting agencies (not imputed)",
+    "Total aggravated assaults in the county this year",
+    "Total arsons in the county this year",
+    "Total auto thefts in the county this year",
+    "Total burglaries in the county this year",
+    "Total county population used to calculate arrests",
+    "Total larcenies in the county this year",
+    "Total murders in the county this year",
+    "Total rapes in the county this year",
+    "Total robberies in the county this year",
+    "Version of the ICPSR study from which the observation was obtained",
+    "Year that the offenses occurred"
   ],
   "data_usage_notes": "Crime data should be interpreted carefully to avoid reinforcing biases or misrepresenting communities. Users should follow ethical guidelines when reporting findings. The dataset aggregates crime data from various sources, including the FBI\u2019s Uniform Crime Reporting (UCR) program. Differences in local crime reporting practices and law enforcement policies may affect data consistency across counties.",
   "highlight_ids": [

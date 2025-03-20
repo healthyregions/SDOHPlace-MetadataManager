@@ -7,7 +7,7 @@
     "filled_pct": 96,
     "progress_class": "success"
   },
-  "title": "Palmer Drought Severity Index, 1895-2016 (CDC)",
+  "title": "Palmer Drought Severity Index",
   "alternative_title": [
     "CDC Palmer Drought Severity Index 1895-2016"
   ],
@@ -91,7 +91,7 @@
   "wxs_indentifier": null,
   "id": "herop-fhlnqe",
   "identifier": null,
-  "modified": "2025-03-14T21:06:09Z",
+  "modified": "2025-03-17T23:01:13Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

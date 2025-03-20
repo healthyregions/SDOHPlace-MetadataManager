@@ -7,7 +7,7 @@
     "filled_pct": 76,
     "progress_class": "warning"
   },
-  "title": "USGS Land Cover (PR 2001)",
+  "title": "USGS Land Cover (PR & USVI)",
   "alternative_title": null,
   "description": [
     "2001 land cover data for Puerto Rico"
@@ -82,9 +82,9 @@
   "wxs_indentifier": null,
   "id": "herop-mmfcua",
   "identifier": null,
-  "modified": "2025-02-17T15:42:33Z",
+  "modified": "2025-03-18T01:42:52Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": false,
+  "suppressed": true,
   "spatial_resolution": [
     "Census Block Group"
   ],

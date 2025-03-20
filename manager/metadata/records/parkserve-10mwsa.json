@@ -7,12 +7,12 @@
     "filled_pct": 92,
     "progress_class": "success"
   },
-  "title": "Park 10-min Walk Service Areas",
+  "title": "Park 10-min Walk Service Areas (ParkServe)",
   "alternative_title": [
     "ParkServe 10-minute walk service areas (10MWSA)"
   ],
   "description": [
-    "Park accessibility is analyzed by calculating ten-minute walk service areas for each park in its database by generating a half-mile \u2018walkable\u2019 service area from each park\u2019s designated public access points. Utilizing ESRI's Proprietary StreetMap Premium Network dataset, the analysis accounts for physical barriers such as highways, train tracks, and rivers without bridges, ensuring a more accurate representation of pedestrian access."
+    "This is a dataset from the ParkServe national park database, covering over 15,000 cities and towns across the U.S. Park accessibility is analyzed by calculating ten-minute walk service areas for each park in its database by generating a half-mile \u2018walkable\u2019 service area from each park\u2019s designated public access points. Utilizing ESRI's Proprietary StreetMap Premium Network dataset, the analysis accounts for physical barriers such as highways, train tracks, and rivers without bridges, ensuring a more accurate representation of pedestrian access."
   ],
   "language": [
     "eng"
@@ -92,7 +92,7 @@
   "wxs_indentifier": null,
   "id": "herop-jxbloa",
   "identifier": null,
-  "modified": "2025-03-13T21:10:42Z",
+  "modified": "2025-03-17T23:23:25Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

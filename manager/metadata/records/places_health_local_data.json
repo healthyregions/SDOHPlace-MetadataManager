@@ -17,7 +17,9 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [
+    "Warning: Tract-level measures are downscaled, modeled predictions. Care should be take in interpretation at finer resolutions to ensure that variations in measures are due to change in measure of interest, and not due to the methodology generated to establish measure."
+  ],
   "creator": [
     "Centers for Disease Control and Prevention National Center for Chronic Disease Prevention and Health Promotion Division of Population Health"
   ],
@@ -79,7 +81,7 @@
   "wxs_indentifier": null,
   "id": "herop-tvlxez",
   "identifier": null,
-  "modified": "2025-03-14T21:05:04Z",
+  "modified": "2025-03-18T01:52:49Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -89,7 +91,7 @@
     "Zip Code Tabulation Area (ZCTA)"
   ],
   "highlight_ids": null,
-  "spatial_resolution_note": "This data includes multiple spatial resolution",
+  "spatial_resolution_note": null,
   "methods_variables": [
     "Arthritis among adults",
     "Current asthma among adults",

@@ -7,7 +7,7 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
-  "title": "Neighborhood-School Gap, 2009-2010 and 2015-2016 ",
+  "title": "Neighborhood-School Gap (NaNDA)",
   "alternative_title": [
     "NaNDA Neighborhood-School Gap by Census Tract and ZIP Code Tabulation Area, United States, 2009-2010 and 2015-2016"
   ],
@@ -96,9 +96,9 @@
   "wxs_indentifier": null,
   "id": "herop-oyapqt",
   "identifier": [
-    "https://doi.org/10.3886/ICPSR38579.v2"
+    "doi.org/10.3886/ICPSR38579.v2"
   ],
-  "modified": "2025-03-14T21:01:46Z",
+  "modified": "2025-03-17T23:13:00Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

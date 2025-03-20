@@ -7,7 +7,7 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
-  "title": "Public Transit Stops, 2016-2018 ",
+  "title": "Public Transit Stops (NaNDA)",
   "alternative_title": [
     "NaNDA Public Transit Stops by Census Tract and ZIP Code Tabulation Area, United States, 2016-2018"
   ],
@@ -84,14 +84,14 @@
   "format": "tsv",
   "file_size": "2.9",
   "references": {
-    "http://schema.org/url'": "https://doi.org/10.3886/ICPSR38605.v1"
+    "http://schema.org/url": "https://doi.org/10.3886/ICPSR38605.v1"
   },
   "wxs_indentifier": null,
   "id": "herop-htqlca",
   "identifier": [
-    "https://doi.org/10.3886/ICPSR38605.v1"
+    "doi.org/10.3886/ICPSR38605.v1"
   ],
-  "modified": "2025-02-19T23:25:26Z",
+  "modified": "2025-03-18T03:09:02Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -100,28 +100,24 @@
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
-    " Longitudinal",
-    "transit stops per 1000 people",
-    "transit stops per square mile",
-    "census tract level",
-    "public transit stops",
-    "total population counts via Census tract and ZIP code tabulation area measures.",
-    "ZIP code tabulation area",
-    "aggregate"
+    "Census tract level",
+    "Public transportation",
+    "Environment",
+    "Geography",
+    "Spatial Data"
   ],
   "data_variables": [
-    "zcta19",
-    "zcta_area",
-    "count_ntm_stops",
-    "totpop13_17",
-    "tract_fips",
-    "stops_per_capita",
-    "census_tract_area",
-    "count_ntm_stops",
-    "tot_pop_2010",
-    "stops_per_capita",
-    "stops_per_sqmile",
-    "stops_per_sqmile"
+    "Census 2010 Tract FIPS Code",
+    "Census Tract 2020 FIPS Code",
+    "Census Zip Code Tabulation Area 2020 FIPS Code",
+    "Census land area, square miles",
+    "Census tract area (sq. miles)",
+    "Count of transit stops reported to National Transit Map as of 1/2024",
+    "Count of transit stops reported to National Transit Map as of 2018",
+    "Total population",
+    "Transit stops per 1000 people",
+    "Transit stops per square mile",
+    "Zip Code Tabulation Area, square miles"
   ],
   "data_usage_notes": "The purpose this study is to measure the number of public transit stops per United States census tract or ZIP code tabulation area (ZCTA) based on data from the National Transit Map (NTM).",
   "highlight_ids": null,

@@ -7,7 +7,7 @@
     "filled_pct": 96,
     "progress_class": "success"
   },
-  "title": "Standardized Precipitation Index, 1895-2016 (CDC)",
+  "title": "Standardized Precipitation Index",
   "alternative_title": [
     "CDC Standardized Precipitation Index 1895-2016"
   ],
@@ -92,7 +92,7 @@
   "wxs_indentifier": null,
   "id": "herop-fsqjns",
   "identifier": null,
-  "modified": "2025-02-19T20:51:55Z",
+  "modified": "2025-03-17T23:01:03Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

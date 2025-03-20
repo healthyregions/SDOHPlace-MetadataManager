@@ -7,7 +7,7 @@
     "filled_pct": 76,
     "progress_class": "warning"
   },
-  "title": "Tree Canopy Cover (Alaska 2021)",
+  "title": "Tree Canopy Cover (Alaska)",
   "alternative_title": null,
   "description": [
     "2021 tree canopy cover data for southeast coastal Alaska"
@@ -82,9 +82,9 @@
   "wxs_indentifier": null,
   "id": "herop-vsxyco",
   "identifier": null,
-  "modified": "2025-02-17T15:49:24Z",
+  "modified": "2025-03-18T01:43:01Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": false,
+  "suppressed": true,
   "spatial_resolution": [
     "Census Block Group"
   ],

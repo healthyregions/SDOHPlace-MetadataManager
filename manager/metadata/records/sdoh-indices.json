@@ -8,7 +8,7 @@
     "progress_class": "warning"
   },
   "id": "herop-yvjqrx",
-  "title": "US Social Determinants of Health (2014)",
+  "title": "US Social Determinants of Health",
   "alternative_title": [
     "US Social Determinants of Health (2014)"
   ],
@@ -20,7 +20,7 @@
   ],
   "display_note": null,
   "creator": [
-    "Marynia Kolak, Jay Bhatt, Yoon Hong Park, Norma Padron, and Ayrin Molefe"
+    "Kolak, Marynia, Bhatt, Jay, Park, Yoon Hong, Padron, Norma, and Molefe, Ayrin. \"Quantification of Neighborhood-Level Social Determinants of Health in the Continental United States.\" JAMA Network Open. 2020;3(1):e1919928. doi:10.1001/jamanetworkopen.2019.19928"
   ],
   "publisher": [
     "GeoDa Data and Lab, Center for Spatial Data Science, University of Chicago"
@@ -87,7 +87,7 @@
   },
   "wxs_indentifier": null,
   "identifier": null,
-  "modified": "2025-03-12T18:27:39Z",
+  "modified": "2025-03-17T23:00:21Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

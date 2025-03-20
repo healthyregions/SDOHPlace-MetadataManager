@@ -1,5 +1,5 @@
 {
-  "title": "Livability Index (AARP)",
+  "title": "Livability Index",
   "alternative_title": [
     "AARP Livability Index"
   ],
@@ -11,6 +11,7 @@
     "spa"
   ],
   "display_note": [
+    "Information: This product is primarily a data dashboard and exploration platform. See original sources of data measures for downloadable datasets.",
     "The AARP Livability Index\u2122 considers seven categories: housing, neighborhood, transportation, environment, health, engagement, and opportunity. For each category, the AARP Livability Index\u2122 evaluates current conditions as well as policies and programs that can enhance community livability over time.",
     "The list of methodological variables presented here is not exhaustive; however, we have made every effort to incorporate as many relevant variables as possible within the scope of this study."
   ],
@@ -22,7 +23,6 @@
   ],
   "provider": "AARP",
   "resource_class": [
-    "Datasets",
     "Maps",
     "Websites"
   ],
@@ -85,7 +85,7 @@
   "wxs_indentifier": null,
   "id": "herop-qatixm",
   "identifier": null,
-  "modified": "2025-03-12T21:31:06Z",
+  "modified": "2025-03-18T01:55:55Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

@@ -12,7 +12,7 @@
     "H+T Index"
   ],
   "description": [
-    "The Housing and Transportation (H+T\u00ae) Affordability Index provides a comprehensive view of affordability, one that includes the cost of housing and transportation at the neighborhood level. The Index is part of a broader effort to explore urban sustainability through location efficiency."
+    "The Housing and Transportation (H+T\u00ae) Affordability Index provides a comprehensive view of affordability, one that includes the cost of housing and transportation at the neighborhood level. The Index shows that transportation costs vary between and within regions depending on neighborhood characteristics: (1) People who live in location-efficient neighborhoods\u2014compact, mixed-use, and with convenient access to jobs, services, transit and amenities\u2014tend to have lower transportation costs, and (2) People who live in location-inefficient places\u2014less dense areas that require automobiles for most trips\u2014are more likely to have higher transportation costs. The Index is part of a broader effort to explore urban sustainability through location efficiency."
   ],
   "language": [
     "eng"
@@ -135,21 +135,15 @@
   "references": {
     "http://schema.org/url": "https://htaindex.cnt.org/download/data.php",
     "http://lccn.loc.gov/sh85035852": "https://htaindex.cnt.org/about/",
-    "http://schema.org/downloadUrl": "https://htaindex.cnt.org/about/method-2022.pdf",
-    "archive-url": "https://uofi.app.box.com/folder/305406383348"
+    "http://schema.org/downloadUrl": "https://htaindex.cnt.org/about/method-2022.pdf"
   },
   "wxs_indentifier": null,
   "id": "herop-ddydvt",
   "identifier": null,
-  "modified": "2025-02-06T18:07:03Z",
+  "modified": "2025-03-18T01:37:31Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
-    "City",
-    "County",
-    "State",
-    "Census Tract",
-    "Census Block",
     "Census Block Group"
   ],
   "spatial_resolution_note": null,

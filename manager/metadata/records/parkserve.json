@@ -7,7 +7,7 @@
     "filled_pct": 84,
     "progress_class": "warning"
   },
-  "title": "ParkServe",
+  "title": "Urban Parks (ParkServe)",
   "alternative_title": [
     "ParkServe"
   ],
@@ -69,14 +69,14 @@
   "replaces": null,
   "is_replaced_by": null,
   "rights": [
-    "\"\u00a9 2024 The Trust for Public Land, 101 Montgomery Street, Suite 900, San Francisco, California 94104 U.S.A. All rights reserved. Other parties may hold or claim proprietary, trademark, service mark and copyright interests in material on or delivered from this website. Materials on this website may not be copied, reproduced, modified, published, uploaded, posted, transmitted, or distributed in any way, without the prior written consent of The Trust for Public Land and/or the party holding rights to such material. Notwithstanding the previous sentence, you may download one copy of the information on this website for personal, non-commercial use. If you download, you may not modify the materials, use them for a commercial purpose or for public display, remove any copyright or trademark information, transfer the materials to another person, or allow unauthorized copying of the materials.\""
+    "\u00a9 2024 The Trust for Public Land, 101 Montgomery Street, Suite 900, San Francisco, California 94104 U.S.A. All rights reserved. Other parties may hold or claim proprietary, trademark, service mark and copyright interests in material on or delivered from this website. Materials on this website may not be copied, reproduced, modified, published, uploaded, posted, transmitted, or distributed in any way, without the prior written consent of The Trust for Public Land and/or the party holding rights to such material. Notwithstanding the previous sentence, you may download one copy of the information on this website for personal, non-commercial use. If you download, you may not modify the materials, use them for a commercial purpose or for public display, remove any copyright or trademark information, transfer the materials to another person, or allow unauthorized copying of the materials."
   ],
   "rights_holder": [
     "Trust for Public Land"
   ],
   "license": null,
   "access_rights": "Public",
-  "format": null,
+  "format": "Excel, Geodatabase, Shapefile, Geojson",
   "file_size": null,
   "references": {
     "http://schema.org/url": "https://www.tpl.org/park-data-downloads",
@@ -85,17 +85,16 @@
   "wxs_indentifier": null,
   "id": "herop-fhfxqq",
   "identifier": null,
-  "modified": "2025-02-20T02:25:19Z",
+  "modified": "2025-03-17T23:19:29Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
-    "Census Tract",
-    "Census Block Group"
+    "Other"
   ],
   "spatial_resolution_note": "Resolution varies by dataset and field",
   "methods_variables": null,
   "data_variables": null,
-  "data_usage_notes": "The ParkServe\u00ae dataset compiles park data for over 15,000 cities and towns across the U.S. and is provided for download in a variety of file formats. Included in the data downloads are park polygons, park 10-minute walk service areas, park priority areas, as well as trails and playgrounds in parks. ",
+  "data_usage_notes": "There are multiple download options available for the ParkServe database. Explore the Discovery Platform for more details.",
   "highlight_ids": null,
   "featured_variable": [
     "ParkScore"

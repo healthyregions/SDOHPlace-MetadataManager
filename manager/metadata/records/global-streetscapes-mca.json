@@ -94,9 +94,9 @@
   "wxs_indentifier": null,
   "id": "herop-sgaldb",
   "identifier": null,
-  "modified": "2025-02-17T16:12:28Z",
+  "modified": "2025-03-17T22:37:50Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": false,
+  "suppressed": true,
   "spatial_resolution": [
     "City"
   ],

@@ -7,7 +7,7 @@
     "filled_pct": 92,
     "progress_class": "success"
   },
-  "title": "Ultraviolet Irradiance, 2004-2015 (CDC)",
+  "title": "Ultraviolet Irradiance",
   "alternative_title": [
     "CDC Population-Weighted Ultraviolet Irradiance 2004-2015"
   ],
@@ -95,7 +95,7 @@
   "wxs_indentifier": null,
   "id": "herop-drwddq",
   "identifier": null,
-  "modified": "2025-03-12T17:59:19Z",
+  "modified": "2025-03-17T22:58:43Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

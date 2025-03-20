@@ -7,7 +7,7 @@
     "filled_pct": 96,
     "progress_class": "success"
   },
-  "title": "Standardized Precipitation Evapotranspiration Index, 1895-2016 (CDC)",
+  "title": "Standardized Precipitation Evapotranspiration Index",
   "alternative_title": [
     "CDC Standardized Precipitation Evapotranspiration Index 1895-2016"
   ],
@@ -93,7 +93,7 @@
   "wxs_indentifier": null,
   "id": "herop-bllwns",
   "identifier": null,
-  "modified": "2025-02-19T20:55:19Z",
+  "modified": "2025-03-17T23:04:08Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

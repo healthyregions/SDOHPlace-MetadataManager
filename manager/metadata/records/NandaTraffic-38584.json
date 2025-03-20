@@ -7,7 +7,7 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
-  "title": "Traffic Volume, 1963-2019",
+  "title": "Traffic Volume (NaNDA)",
   "alternative_title": [
     "NaNDA Traffic Volume by Census Tract and ZIP Code Tabulation Area, United States, 1963-2019"
   ],
@@ -151,7 +151,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38584.v2"
   ],
-  "modified": "2025-02-19T20:48:12Z",
+  "modified": "2025-03-17T23:07:08Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

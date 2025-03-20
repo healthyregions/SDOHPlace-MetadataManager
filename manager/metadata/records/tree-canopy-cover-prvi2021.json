@@ -7,7 +7,7 @@
     "filled_pct": 76,
     "progress_class": "warning"
   },
-  "title": "Tree Canopy Cover (PR & USVI 2021)",
+  "title": "Tree Canopy Cover (PR & USVI)",
   "alternative_title": null,
   "description": [
     "2021 tree canopy cover data for Puerto Rico and the US Virgin Islands"
@@ -82,9 +82,9 @@
   "wxs_indentifier": null,
   "id": "herop-dwlwag",
   "identifier": null,
-  "modified": "2025-02-17T15:55:32Z",
+  "modified": "2025-03-18T01:44:09Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": false,
+  "suppressed": true,
   "spatial_resolution": [
     "Census Block Group"
   ],

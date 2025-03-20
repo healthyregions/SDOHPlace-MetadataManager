@@ -7,7 +7,7 @@
     "filled_pct": 80,
     "progress_class": "warning"
   },
-  "title": "Tree Canopy Cover (Hawaii 2021)",
+  "title": "Tree Canopy Cover (Hawaii)",
   "alternative_title": null,
   "description": [
     "2021 tree canopy cover data for Hawaii'"
@@ -82,9 +82,9 @@
   "wxs_indentifier": null,
   "id": "herop-czhlru",
   "identifier": null,
-  "modified": "2025-02-17T15:52:32Z",
+  "modified": "2025-03-18T01:43:35Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": false,
+  "suppressed": true,
   "spatial_resolution": [
     "Census Block Group"
   ],

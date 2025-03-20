@@ -7,7 +7,7 @@
     "filled_pct": 92,
     "progress_class": "success"
   },
-  "title": "Daily County-Level Ozone Concentrations (2001-2019)",
+  "title": "Daily County-Level Ozone Concentrations",
   "alternative_title": [
     "Daily County-Level Ozone Concentrations 2001-2019"
   ],
@@ -95,7 +95,7 @@
   "wxs_indentifier": null,
   "id": "herop-qgbmwc",
   "identifier": null,
-  "modified": "2025-03-14T05:15:46Z",
+  "modified": "2025-03-17T23:10:54Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

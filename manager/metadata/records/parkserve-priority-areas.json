@@ -10,7 +10,7 @@
   "title": "Priority Areas (ParkServe)",
   "alternative_title": null,
   "description": [
-    "\"To help planners prioritize where to address park access gaps first, TPL provides a prioritization index for all populated areas that are not within a 10-minute walk to a park. The prioritization index is calculated for census block groups and is based on a comprehensive index of six equally weighted demographic and environmental metrics. The six variables are: 1. Population density 2. Density of low-income households... 3. Density of people of color 4. Community health... 5. Urban heat islands... 6. Pollution burden\""
+    "This is a dataset from the ParkServe national park database, covering over 15,000 cities and towns across the U.S. To help planners prioritize where to address park access gaps first, Trust for Public Land provides a prioritization index for all populated areas that are not within a 10-minute walk to a park. The prioritization index is calculated for census block groups and is based on a comprehensive index of six equally weighted demographic and environmental metrics. The six variables are: 1. Population density 2. Density of low-income households... 3. Density of people of color 4. Community health... 5. Urban heat islands... 6. Pollution burden\""
   ],
   "language": [
     "eng"
@@ -82,7 +82,7 @@
   "wxs_indentifier": null,
   "id": "herop-cdyuaj",
   "identifier": null,
-  "modified": "2025-02-11T17:01:21Z",
+  "modified": "2025-03-17T23:22:28Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -96,7 +96,7 @@
   "data_variables": [
     "Park priority, Park priority rank, Outside 10 minute walk service area"
   ],
-  "data_usage_notes": null,
+  "data_usage_notes": "See related datasets of the ParkServe database for more information and understanding of the underlying data generating process. ",
   "highlight_ids": null,
   "featured_variable": null,
   "preferred_citation": null

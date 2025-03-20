@@ -1,5 +1,5 @@
 {
-  "title": "USGS Land Cover (Annual CONUS)",
+  "title": "USGS Land Cover (CONUS)",
   "alternative_title": null,
   "description": [
     "Land cover data for the conterminous United States. Data available for each individual year 1985-2023, and as larger datasets for 1985-1994, 1995-2004, 2005-2014, and 2015-2023."
@@ -112,9 +112,9 @@
   "wxs_indentifier": null,
   "id": "herop-ehnipl",
   "identifier": null,
-  "modified": "2025-02-17T15:43:11Z",
+  "modified": "2025-03-17T23:06:48Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": false,
+  "suppressed": true,
   "spatial_resolution": [
     "Census Block Group"
   ],

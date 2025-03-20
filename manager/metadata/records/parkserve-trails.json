@@ -10,7 +10,7 @@
   "title": "Trails (ParkServe)",
   "alternative_title": null,
   "description": [
-    "\"Crowd-sourced trails and playground data were retrieved from Open Street Map (OSM) in February of 2024 and clipped to ParkServe\u00ae park boundaries. Trail data were augmented with USGS transportation trails data from April 2024.\""
+    "This is a dataset from the ParkServe national park database, covering over 15,000 cities and towns across the U.S. Crowd-sourced trails and playground data were retrieved from Open Street Map (OSM) in February of 2024 and clipped to ParkServe\u00ae park boundaries. Trail data were augmented with USGS transportation trails data from April 2024."
   ],
   "language": [
     "eng"
@@ -83,7 +83,7 @@
   "wxs_indentifier": null,
   "id": "herop-eqojtg",
   "identifier": null,
-  "modified": "2025-02-11T17:00:12Z",
+  "modified": "2025-03-17T23:23:34Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

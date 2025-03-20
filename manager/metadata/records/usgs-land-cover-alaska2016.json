@@ -7,7 +7,7 @@
     "filled_pct": 80,
     "progress_class": "warning"
   },
-  "title": "USGS Land Cover (Alaska 2016)",
+  "title": "USGS Land Cover (Alaska)",
   "alternative_title": null,
   "description": [
     "2016 land cover data for Alaska"
@@ -82,9 +82,9 @@
   "wxs_indentifier": null,
   "id": "herop-wqbzfv",
   "identifier": null,
-  "modified": "2025-02-17T15:41:27Z",
+  "modified": "2025-03-18T01:42:14Z",
   "metadata_version": "SDOH PlaceProject",
-  "suppressed": false,
+  "suppressed": true,
   "spatial_resolution": [
     "Census Block Group"
   ],

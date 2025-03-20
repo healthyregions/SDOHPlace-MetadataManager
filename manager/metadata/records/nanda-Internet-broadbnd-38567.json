@@ -7,7 +7,7 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
-  "title": "Broadband Internet Availability, Speed, and Adoption",
+  "title": "Broadband Internet Availability, Speed, & Adoption",
   "alternative_title": [
     "NaNDA Broadband Internet Availability, Speed, and Adoption by Census Tract and ZIP Code Tabulation Area, United States, 2014-2020"
   ],
@@ -96,7 +96,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38567.v1"
   ],
-  "modified": "2025-03-14T20:28:49Z",
+  "modified": "2025-03-17T23:11:49Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

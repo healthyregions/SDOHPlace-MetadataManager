@@ -17,7 +17,9 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [
+    "Info: Emission data is available at the address-level for point estimates."
+  ],
   "creator": [
     "U.S. Environmental Protection Agency (EPA)"
   ],
@@ -93,12 +95,11 @@
   "wxs_indentifier": null,
   "id": "herop-odfmer",
   "identifier": null,
-  "modified": "2025-03-14T20:49:12Z",
+  "modified": "2025-03-18T01:32:58Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
-    "County",
-    "State"
+    "Other"
   ],
   "highlight_ids": null,
   "spatial_resolution_note": null,

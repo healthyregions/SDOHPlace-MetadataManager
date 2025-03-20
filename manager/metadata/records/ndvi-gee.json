@@ -7,7 +7,7 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
-  "title": "MODIS Combined 16-Day NDVI (Google Earth Engine)",
+  "title": "MODIS Combined 16-Day NDVI",
   "alternative_title": [
     "MODIS Combined 16-Day NDVI (Google Earth Engine)"
   ],
@@ -89,7 +89,7 @@
   "wxs_indentifier": null,
   "id": "herop-eflmqc",
   "identifier": null,
-  "modified": "2025-02-19T21:44:30Z",
+  "modified": "2025-03-17T23:03:23Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [

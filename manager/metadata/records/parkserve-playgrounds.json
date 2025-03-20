@@ -12,7 +12,7 @@
     "Playgrounds (ParkServe)"
   ],
   "description": [
-    "\"Crowd-sourced trails and playground data were retrieved from Open Street Map (OSM) in February of 2024 and clipped to ParkServe\u00ae park boundaries.\""
+    "This is a dataset from the ParkServe national park database, covering over 15,000 cities and towns across the U.S. Crowd-sourced trails and playground data were retrieved from Open Street Map (OSM) in February of 2024 and clipped to ParkServe\u00ae park boundaries."
   ],
   "language": [
     "eng"
@@ -84,7 +84,7 @@
   "wxs_indentifier": null,
   "id": "herop-yoizdf",
   "identifier": null,
-  "modified": "2025-02-11T17:01:00Z",
+  "modified": "2025-03-17T23:22:54Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
