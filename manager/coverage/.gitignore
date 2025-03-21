@@ -1,0 +1,12 @@
+# Metadata/caches from various programs
+.jupyter
+.local
+.npm
+.cache
+.ipython
+.ipynb_checkpoints
+__pycache__
+
+# Ignore downloaded files
+coverage.py
+*.csv

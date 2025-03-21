@@ -1,0 +1,9 @@
+services:
+  jupyterlab:
+    container_name: sdoh-jupyterlab
+    image: jupyter/datascience-notebook
+    command: ["start-notebook.py", "--NotebookApp.token='sdoh'"]
+    volumes:
+      - .:/home/jovyan/
+    ports:
+      - "8888:8888"

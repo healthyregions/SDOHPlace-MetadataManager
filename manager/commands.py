@@ -14,7 +14,7 @@ from .registry import Registry
 from .models import db, User
 from .utils import METADATA_DIR, batch_list
 
-from .coverage import check_coverage
+from .coverage.coverage import check_coverage
 
 registry = Registry()
 
