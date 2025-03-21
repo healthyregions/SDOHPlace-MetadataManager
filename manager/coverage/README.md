@@ -4,9 +4,7 @@ An interactive IPython notebook for running the SDOH&Place Dataset Coverage Chec
 ### Google Colab
 This file is intended to work online with Google Colab
 
-Visit https://colab.research.google.com and open this notebook from GitHub
-
-Or upload a copy of this notebook to Colab to get started
+Visit https://colab.research.google.com and open this notebook using this GitHub repository
 
 
 ### Run Locally with Docker
