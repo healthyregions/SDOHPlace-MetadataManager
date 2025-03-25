@@ -194,7 +194,7 @@ pip install geopandas
 
 Great! Try running `python -c "import geopandas"` in your terminal. If you don't get an error, all is well.
 
-Now, download the script from this repository and put it in your directory: https://github.com/healthyregions/SDOHPlace-MetadataManager/blob/main/manager/coverage.py. Again, no need to clone the whole repository to run this one script.
+Now, download the script from this repository and put it in your directory: https://github.com/healthyregions/SDOHPlace-MetadataManager/blob/main/manager/coverage/coverage.py. Again, no need to clone the whole repository to run this one script.
 
 You should now be able to run this command, with your virtual environment activated, and you'll see the embedded help content for the script:
 
