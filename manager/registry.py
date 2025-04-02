@@ -78,6 +78,31 @@ class Schema:
 
         return errors
 
+    def validate_record(self, record):
+
+        errors = []
+        extra = set(record.data.keys()) - set(self.lookup.keys())
+        if extra:
+            errors.append(f"{len(extra)} extra fields: ", extra)
+
+        for id, field in self.lookup.items():
+            result = field.validate(record.data[id])
+            if result['is_valid']:
+                errors.append(result['message'])
+
+        return errors
+
+    def make_record_from_form_data(self, form_data):
+
+        data = {
+            "metadata_version": self.schema_json["name"]
+        }
+        for field in self.lookup.values():
+            clean_value = field.get_value_from_form(form_data)
+            data[field] = clean_value
+
+        return data
+
 
 class Registry:
     def __init__(self):
@@ -178,7 +203,7 @@ class Record:
     def get_value(self, field_name):
         return self.data[field_name]
 
-    def validate(self):
+    def validateOLD(self):
         """validate this record against its schema."""
         errors = []
         for key, field in self.schema.lookup.items():
@@ -186,6 +211,12 @@ class Record:
             print(key, field, value)
             errors += field.validate(value)
         return errors
+
+    def validate(self):
+        return self.schema.validate_record(self)
+
+    def from_form_data(self, form_data):
+        pass
 
     def to_json(self):
         obligations = ["required", "suggested"]
@@ -290,11 +321,59 @@ class Field:
         for k, v in kwargs.items():
             self.__setattr__(k, v)
 
+    def get_value_from_form(self, form):
+        """This function has bespoke logic for handling specific fields."""
+
+        value = form.get(self.id)
+        if value == "":
+            value = None
+
+        if self.widget == "checkboxes.html":
+            value = [
+                k.split("--")[1]
+                for k, v in form.items()
+                if k.split("--")[0] == self.id and v == "on"
+            ]
+            value = [i.lstrip().rstrip() for i in value]
+
+        if self.id == "references":
+            value_dict = {}
+            items = [i.rstrip() for i in value.split("\n")]
+            items = [i for i in items if i]
+            for i in items:
+                if "::" in i:
+                    kvs = i.split("::")
+                    value_dict[kvs[0]] = kvs[1].lstrip().rstrip()
+            return value_dict
+
+        if self.multiple:
+            if (
+                self.widget == "select.html"
+                or self.widget == "select-record.html"
+            ):
+                value = form.getlist(self.id)
+            if self.widget == "text-simple.html":
+                value = [i.lstrip().rstrip() for i in form.get(self.id).split("|") if i]
+            if self.widget == "text-area.html":
+                value = form.get(self.id)
+                value = [i.rstrip() for i in value.split("\n")]
+                value = [i for i in value if i]
+
+        if self.data_type == "boolean":
+            if value == "on":
+                value = True
+            elif value == "off" or not value:
+                value = False
+
+        return value
+
     def validate(self, value):
-        if self.label == "Modified":
-            return []
 
         errors = []
+
+        if self.label == "Modified":
+            return errors
+
         if isinstance(value, list):
             if self.obligation == "required" and not len(value) > 0:
                 msg = f"{self.label} -- missing required value"
@@ -312,6 +391,7 @@ class Field:
             if val and (self.controlled and val not in self.controlled_options):
                 msg = f"{self.label} -- {val} not in list of acceptable values"
                 errors.append(msg)
+
         return errors
 
 
