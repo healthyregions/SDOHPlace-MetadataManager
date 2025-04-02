@@ -1,5 +1,6 @@
 {
     "name": "SDOH Place Project",
+    "id": "sdohplace",
     "display_groups": [
         {
             "name": "Identifiers"
