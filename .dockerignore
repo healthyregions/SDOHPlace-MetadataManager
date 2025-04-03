@@ -1,0 +1,4 @@
+Dockerfile
+.env
+docker-compose.yml
+solr/
