@@ -1,14 +1,13 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 22,
     "to_fill": 26,
     "filled_pct": 84,
     "progress_class": "warning"
   },
   "title": "Priority Areas (ParkServe)",
-  "alternative_title": null,
+  "alternative_title": [],
   "description": [
     "This is a dataset from the ParkServe national park database, covering over 15,000 cities and towns across the U.S. To help planners prioritize where to address park access gaps first, Trust for Public Land provides a prioritization index for all populated areas that are not within a 10-minute walk to a park. The prioritization index is calculated for census block groups and is based on a comprehensive index of six equally weighted demographic and environmental metrics. The six variables are: 1. Population density 2. Density of low-income households... 3. Density of people of color 4. Community health... 5. Urban heat islands... 6. Pollution burden\""
   ],
@@ -48,7 +47,7 @@
   "index_year": [
     2024
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -56,22 +55,22 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
   "is_version_of": [
     "herop-fhfxqq"
   ],
-  "replaces": null,
-  "is_replaced_by": null,
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "\"\u00a9 2024 The Trust for Public Land, 101 Montgomery Street, Suite 900, San Francisco, California 94104 U.S.A. All rights reserved. Other parties may hold or claim proprietary, trademark, service mark and copyright interests in material on or delivered from this website. Materials on this website may not be copied, reproduced, modified, published, uploaded, posted, transmitted, or distributed in any way, without the prior written consent of The Trust for Public Land and/or the party holding rights to such material. Notwithstanding the previous sentence, you may download one copy of the information on this website for personal, non-commercial use. If you download, you may not modify the materials, use them for a commercial purpose or for public display, remove any copyright or trademark information, transfer the materials to another person, or allow unauthorized copying of the materials.\""
   ],
   "rights_holder": [
     "Trust for Public Land"
   ],
-  "license": null,
+  "license": [],
   "access_rights": "Public",
   "format": null,
   "file_size": null,
@@ -81,14 +80,15 @@
   },
   "wxs_indentifier": null,
   "id": "herop-cdyuaj",
-  "identifier": null,
-  "modified": "2025-03-17T23:22:28Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract",
     "Census Block Group"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "ID, Population per acre, Urban area ID, Rate of physical inactivity, Rate of poor mental health, Respiratory hazard, Density of low-income households, Density of people of color, ID of the city, Low-income households (%), People of color (%), People per acre rank, Physical inactivity rank, Poor mental health rank, Average land surface temperature rank, Respiratory hazard rank, Density of people of color rank, People of color (%) rank, Low-income households (%) rank, Density of low-income households rank, Average of physical inactivity rank and poor mental health rank, Urban heat island anomaly"
@@ -96,8 +96,7 @@
   "data_variables": [
     "Park priority, Park priority rank, Outside 10 minute walk service area"
   ],
-  "data_usage_notes": "See related datasets of the ParkServe database for more information and understanding of the underlying data generating process. ",
-  "highlight_ids": null,
-  "featured_variable": null,
-  "preferred_citation": null
+  "featured_variable": [],
+  "preferred_citation": null,
+  "data_usage_notes": "See related datasets of the ParkServe database for more information and understanding of the underlying data generating process. "
 }

@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 22,
     "to_fill": 26,
     "filled_pct": 84,
@@ -52,7 +51,7 @@
   "index_year": [
     2021
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -60,15 +59,15 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
-  "rights": null,
-  "rights_holder": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
+  "rights": [],
+  "rights_holder": [],
   "license": [
     "Public Domain"
   ],
@@ -80,8 +79,8 @@
   },
   "wxs_indentifier": null,
   "id": "herop-tvlxez",
-  "identifier": null,
-  "modified": "2025-03-18T01:52:49Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -90,7 +89,7 @@
     "Census Tract",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": null,
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Arthritis among adults",
@@ -207,7 +206,7 @@
     "Single-parent households",
     "Unemployment among people \u2265 16 years in the labor force"
   ],
-  "data_usage_notes": "Because these are modeled and not direct estimates, the data should not be used for ranking the overall health of any county, place, census tract, or ZCTA.\r\nPLACES does not provide a weighted composite score for the included counties, places, census tracts, or ZCTAs. Therefore, the data should not be used to rank the overall health of a local area.\r\nHowever, counties, places, census tracts, or ZCTAs can be compared on individual measures.",
-  "featured_variable": null,
-  "preferred_citation": " Centers for Disease Control and Prevention. PLACES: Local Data for Better Health. Accessed [date]. https://www.cdc.gov/places"
+  "featured_variable": [],
+  "preferred_citation": " Centers for Disease Control and Prevention. PLACES: Local Data for Better Health. Accessed [date]. https://www.cdc.gov/places",
+  "data_usage_notes": "Because these are modeled and not direct estimates, the data should not be used for ranking the overall health of any county, place, census tract, or ZCTA.\r\nPLACES does not provide a weighted composite score for the included counties, places, census tracts, or ZCTAs. Therefore, the data should not be used to rank the overall health of a local area.\r\nHowever, counties, places, census tracts, or ZCTAs can be compared on individual measures."
 }

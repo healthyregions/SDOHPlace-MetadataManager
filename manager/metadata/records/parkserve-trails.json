@@ -1,14 +1,13 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 21,
     "to_fill": 26,
     "filled_pct": 80,
     "progress_class": "warning"
   },
   "title": "Trails (ParkServe)",
-  "alternative_title": null,
+  "alternative_title": [],
   "description": [
     "This is a dataset from the ParkServe national park database, covering over 15,000 cities and towns across the U.S. Crowd-sourced trails and playground data were retrieved from Open Street Map (OSM) in February of 2024 and clipped to ParkServe\u00ae park boundaries. Trail data were augmented with USGS transportation trails data from April 2024."
   ],
@@ -49,7 +48,7 @@
   "index_year": [
     2024
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -57,22 +56,22 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
   "is_version_of": [
     "herop-fhfxqq"
   ],
-  "replaces": null,
-  "is_replaced_by": null,
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "\"\u00a9 2024 The Trust for Public Land, 101 Montgomery Street, Suite 900, San Francisco, California 94104 U.S.A. All rights reserved. Other parties may hold or claim proprietary, trademark, service mark and copyright interests in material on or delivered from this website. Materials on this website may not be copied, reproduced, modified, published, uploaded, posted, transmitted, or distributed in any way, without the prior written consent of The Trust for Public Land and/or the party holding rights to such material. Notwithstanding the previous sentence, you may download one copy of the information on this website for personal, non-commercial use. If you download, you may not modify the materials, use them for a commercial purpose or for public display, remove any copyright or trademark information, transfer the materials to another person, or allow unauthorized copying of the materials.\""
   ],
   "rights_holder": [
     "Trust for Public Land"
   ],
-  "license": null,
+  "license": [],
   "access_rights": "Public",
   "format": null,
   "file_size": null,
@@ -82,20 +81,20 @@
   },
   "wxs_indentifier": null,
   "id": "herop-eqojtg",
-  "identifier": null,
-  "modified": "2025-03-17T23:23:34Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
-  "methods_variables": null,
+  "methods_variables": [],
   "data_variables": [
     "Permanent ID, Name, Trail number, Source feature, Source data, Source origin, Load date, Trail type, Hiker/pedestrian, Bicycle, Packsaddle, ATV, Motorcycle, OHV over 50in, Snowshoe, Cross count, Dogsled, Snowmobile, National trail, Global ID, OSM ID, Code, Class, Oneway, Max speed, Bridge, Tunnel, Length"
   ],
-  "data_usage_notes": null,
-  "highlight_ids": null,
-  "featured_variable": null,
-  "preferred_citation": null
+  "featured_variable": [],
+  "preferred_citation": null,
+  "data_usage_notes": null
 }

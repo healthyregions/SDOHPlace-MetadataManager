@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 23,
     "to_fill": 26,
     "filled_pct": 88,
@@ -17,7 +16,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "Opportunity Insights"
   ],
@@ -57,7 +56,7 @@
   "index_year": [
     2015
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -65,13 +64,13 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "Oppotunity Insights"
   ],
@@ -89,15 +88,15 @@
   },
   "wxs_indentifier": null,
   "id": "herop-wtfiks",
-  "identifier": null,
-  "modified": "2025-03-18T01:50:56Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "County",
     "Census Tract"
   ],
-  "highlight_ids": null,
+  "highlight_ids": [],
   "spatial_resolution_note": "Community Zone",
   "methods_variables": [
     "Sum of native and foreign born residents",
@@ -126,7 +125,7 @@
     "Mean commute time for workers over 16 years old",
     "Number of residents per square mile"
   ],
-  "data_usage_notes": null,
-  "featured_variable": null,
-  "preferred_citation": "Chetty, R., Hendren, N., Friedman, J., Jones, M. R., & Porter, S. R. (2018, September 30). The Opportunity Atlas: Mapping the Childhood Roots of social mobility. Opportunity Insights. https://opportunityinsights.org/paper/the-opportunity-atlas/"
+  "featured_variable": [],
+  "preferred_citation": "Chetty, R., Hendren, N., Friedman, J., Jones, M. R., & Porter, S. R. (2018, September 30). The Opportunity Atlas: Mapping the Childhood Roots of social mobility. Opportunity Insights. https://opportunityinsights.org/paper/the-opportunity-atlas/",
+  "data_usage_notes": null
 }

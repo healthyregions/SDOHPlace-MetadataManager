@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 24,
     "to_fill": 26,
     "filled_pct": 92,
@@ -55,7 +54,7 @@
   "index_year": [
     2023
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -63,24 +62,24 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
+  "relation": [],
+  "member_of": [],
   "is_part_of": [
     "herop-fhfxqq"
   ],
-  "source": null,
+  "source": [],
   "is_version_of": [
     "herop-fhfxqq"
   ],
-  "replaces": null,
-  "is_replaced_by": null,
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "\"\u00a9 2024 The Trust for Public Land, 101 Montgomery Street, Suite 900, San Francisco, California 94104 U.S.A. All rights reserved. Other parties may hold or claim proprietary, trademark, service mark and copyright interests in material on or delivered from this website. Materials on this website may not be copied, reproduced, modified, published, uploaded, posted, transmitted, or distributed in any way, without the prior written consent of The Trust for Public Land and/or the party holding rights to such material. Notwithstanding the previous sentence, you may download one copy of the information on this website for personal, non-commercial use. If you download, you may not modify the materials, use them for a commercial purpose or for public display, remove any copyright or trademark information, transfer the materials to another person, or allow unauthorized copying of the materials.\""
   ],
   "rights_holder": [
     "Trust for Public Land"
   ],
-  "license": null,
+  "license": [],
   "access_rights": "Public",
   "format": "Excel, Geodatabase, Shapefile, Geojson",
   "file_size": null,
@@ -91,13 +90,16 @@
   },
   "wxs_indentifier": null,
   "id": "herop-jxbloa",
-  "identifier": null,
-  "modified": "2025-03-17T23:23:25Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "City",
     "Other"
+  ],
+  "highlight_ids": [
+    "150US*"
   ],
   "spatial_resolution_note": " Service areas are polygons calculated from the street network, and will cross multiple administrative boundaries. Read provider's documentation for more details.",
   "methods_variables": [
@@ -113,12 +115,9 @@
     "Average age estimates of intersecting blocks for each service area",
     "Average income estimate of intersecting blocks for each service area"
   ],
-  "data_usage_notes": "The ParkServe dataset is designed for spatial analysis and GIS applications to evaluate urban park accessibility. While it provides geospatial files (e.g., shapefiles, GeoJSON, and other GIS-compatible formats), it may not include detailed attribute data such as park addresses, ownership details, or facility descriptions. Users should integrate it with additional datasets if such information is needed for analysis.\r\n\r\n\r\n\r\n",
-  "highlight_ids": [
-    "150US*"
-  ],
   "featured_variable": [
     "10-min walk to nearest park"
   ],
-  "preferred_citation": "ParkServe. (2023, May 24). Trust for Public Land. https://www.tpl.org/parkserve"
+  "preferred_citation": "ParkServe. (2023, May 24). Trust for Public Land. https://www.tpl.org/parkserve",
+  "data_usage_notes": "The ParkServe dataset is designed for spatial analysis and GIS applications to evaluate urban park accessibility. While it provides geospatial files (e.g., shapefiles, GeoJSON, and other GIS-compatible formats), it may not include detailed attribute data such as park addresses, ownership details, or facility descriptions. Users should integrate it with additional datasets if such information is needed for analysis.\r\n\r\n\r\n\r\n"
 }

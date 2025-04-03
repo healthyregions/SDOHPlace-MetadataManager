@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 23,
     "to_fill": 26,
     "filled_pct": 88,
@@ -17,7 +16,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "Iris Gomez-Lopez",
     "Min Hee Kim",
@@ -65,7 +64,7 @@
     2015,
     2016
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -73,18 +72,18 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
+  "relation": [],
+  "member_of": [],
   "is_part_of": [
     "herop-zrurpe"
   ],
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
-  "rights": null,
-  "rights_holder": null,
-  "license": null,
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
+  "rights": [],
+  "rights_holder": [],
+  "license": [],
   "access_rights": "Public",
   "format": "CSV",
   "file_size": "15.5 MB",
@@ -98,13 +97,14 @@
   "identifier": [
     "doi.org/10.3886/ICPSR38579.v2"
   ],
-  "modified": "2025-03-17T23:13:00Z",
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract",
     "Zip Code Tabulation Area (ZCTA)"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": "These data measure discrepancies between the school environment and that of the surrounding community. The collection aims to contribute to the discussion about the causes and the consequences of variations in educational context across geographies.",
   "methods_variables": [
     "School attendance boundaries to block groups",
@@ -120,8 +120,7 @@
     "Difference between the neighborhood poverty rate and the school poverty rate (e.g., measured by free/reduced-price lunch eligibility).",
     "Difference between the percentage of individuals identifying as Two or More Races in the neighborhood and the percentage of students in the school(s) with the same racial identity."
   ],
-  "data_usage_notes": null,
-  "highlight_ids": null,
-  "featured_variable": null,
-  "preferred_citation": "Gomez-Lopez, Iris, Kim, Min Hee, Li, Mao, Sylvers, Dominique, Esposito, Michael, Clarke, Philippa, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Neighborhood-School Gap by Census Tract and ZIP Code Tabulation Area, United States, 2009-2010 and 2015-2016. Inter-university Consortium for Political and Social Research [distributor], 2022-11-14. https://doi.org/10.3886/ICPSR38579.v2"
+  "featured_variable": [],
+  "preferred_citation": "Gomez-Lopez, Iris, Kim, Min Hee, Li, Mao, Sylvers, Dominique, Esposito, Michael, Clarke, Philippa, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Neighborhood-School Gap by Census Tract and ZIP Code Tabulation Area, United States, 2009-2010 and 2015-2016. Inter-university Consortium for Political and Social Research [distributor], 2022-11-14. https://doi.org/10.3886/ICPSR38579.v2",
+  "data_usage_notes": null
 }

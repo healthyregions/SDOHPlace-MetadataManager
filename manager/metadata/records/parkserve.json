@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 22,
     "to_fill": 26,
     "filled_pct": 84,
@@ -53,7 +52,7 @@
   "index_year": [
     2024
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -61,20 +60,20 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": true,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "\u00a9 2024 The Trust for Public Land, 101 Montgomery Street, Suite 900, San Francisco, California 94104 U.S.A. All rights reserved. Other parties may hold or claim proprietary, trademark, service mark and copyright interests in material on or delivered from this website. Materials on this website may not be copied, reproduced, modified, published, uploaded, posted, transmitted, or distributed in any way, without the prior written consent of The Trust for Public Land and/or the party holding rights to such material. Notwithstanding the previous sentence, you may download one copy of the information on this website for personal, non-commercial use. If you download, you may not modify the materials, use them for a commercial purpose or for public display, remove any copyright or trademark information, transfer the materials to another person, or allow unauthorized copying of the materials."
   ],
   "rights_holder": [
     "Trust for Public Land"
   ],
-  "license": null,
+  "license": [],
   "access_rights": "Public",
   "format": "Excel, Geodatabase, Shapefile, Geojson",
   "file_size": null,
@@ -84,20 +83,20 @@
   },
   "wxs_indentifier": null,
   "id": "herop-fhfxqq",
-  "identifier": null,
-  "modified": "2025-03-17T23:19:29Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Other"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": "Resolution varies by dataset and field",
-  "methods_variables": null,
-  "data_variables": null,
-  "data_usage_notes": "There are multiple download options available for the ParkServe database. Explore the Discovery Platform for more details.",
-  "highlight_ids": null,
+  "methods_variables": [],
+  "data_variables": [],
   "featured_variable": [
     "ParkScore"
   ],
-  "preferred_citation": "ParkServe. (2023, May 24). Trust for Public Land. https://www.tpl.org/parkserve"
+  "preferred_citation": "ParkServe. (2023, May 24). Trust for Public Land. https://www.tpl.org/parkserve",
+  "data_usage_notes": "There are multiple download options available for the ParkServe database. Explore the Discovery Platform for more details."
 }

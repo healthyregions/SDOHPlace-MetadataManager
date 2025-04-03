@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 23,
     "to_fill": 26,
     "filled_pct": 88,
@@ -17,7 +16,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "Jessica M. Finlay",
     "Robert Melendez",
@@ -120,7 +119,7 @@
     2018,
     2019
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -128,18 +127,18 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
+  "relation": [],
+  "member_of": [],
   "is_part_of": [
     "herop-zrurpe"
   ],
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
-  "rights": null,
-  "rights_holder": null,
-  "license": null,
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
+  "rights": [],
+  "rights_holder": [],
+  "license": [],
   "access_rights": "Public",
   "format": null,
   "file_size": null,
@@ -151,13 +150,14 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38584.v2"
   ],
-  "modified": "2025-03-17T23:07:08Z",
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract",
     "Zip Code Tabulation Area (ZCTA)"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "TrafficMetrix: average annual daily traffic, average annual weekday traffic, average daily traffic, latitude and longitude,ZCTA, average, maximum, minimum, and number of traffic volume measurements across all locations in a tract and ZCTA, highway traffic vs. non-highway traffic, ZIP code tabulation area, census tract, Cross-sectional"
@@ -165,8 +165,7 @@
   "data_variables": [
     "ZCTA19: ZIP code tabulation area, 2019 TIGER/Line shapefiles, INTP_FLAG, I_MEAN_TRAFFIC, I_MIN_TRAFFIC, I_MAX_TRAFFIC, I_COUNT_TRAFFIC, I_TOTAL_TRAFFIC, I_MEAN_HW_TRAFFIC, I_MIN_HW_TRAFFIC, I_MAX_HW_TRAFFIC, I_COUNT_HW_TRAFFIC, I_TOTAL_HW_TRAFFIC, I_MEAN_NONHW_TRAFFIC, I_MIN_NONHW_TRAFFIC, I_MAX_NONHW_TRAFFIC, I_COUNT_NONHW_TRAFFIC, I_TOTAL_NONHW_TRAFFIC, COUNT_INTERSECTIONS, I_MEAN_TRAF_PER_INTERSECTION, I_MEAN_HW_TRAF_PER_INTERSECTION, I_MEAN_NH_TRAF_PER_INTERSECTION, MEAN_TRAFFIC, MIN_TRAFFIC, MAX_TRAFFIC, COUNT_TRAFFIC, TOTAL_TRAFFIC, MEAN_HW_TRAFFIC, MIN_HW_TRAFFIC, MAX_HW_TRAFFIC, COUNT_HW_TRAFFIC, TOTAL_HW_TRAFFIC, MEAN_NONHW_TRAFFIC, MIN_NONHW_TRAFFIC, MAX_NONHW_TRAFFIC, COUNT_NONHW_TRAFFIC,TOTAL_NONHW_TRAFFIC, COUNT_INTERSECTIONS, MEAN_TRAFFIC_PER_INTERSECTION, MEAN_HW_TRAFFIC_PER_INTERSECTION, MEAN_NH_TRAFFIC_PER_INTERSECTION"
   ],
-  "data_usage_notes": "The purpose of this study is to characterize the average volume of traffic passing through a census tract and a ZIP code tabulation area in a given year.\r\n\r\n",
-  "highlight_ids": null,
-  "featured_variable": null,
-  "preferred_citation": "Finlay, Jessica M., Melendez, Robert, Esposito, Michael, Khan, Anam, Li, Mao, Gomez-Lopez, Iris, \u2026 Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Traffic Volume by Census Tract and ZIP Code Tabulation Area, United States, 1963-2019 . Inter-university Consortium for Political and Social Research [distributor], 2022-11-10. https://doi.org/10.3886/ICPSR38584.v2"
+  "featured_variable": [],
+  "preferred_citation": "Finlay, Jessica M., Melendez, Robert, Esposito, Michael, Khan, Anam, Li, Mao, Gomez-Lopez, Iris, \u2026 Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Traffic Volume by Census Tract and ZIP Code Tabulation Area, United States, 1963-2019 . Inter-university Consortium for Political and Social Research [distributor], 2022-11-10. https://doi.org/10.3886/ICPSR38584.v2",
+  "data_usage_notes": "The purpose of this study is to characterize the average volume of traffic passing through a census tract and a ZIP code tabulation area in a given year.\r\n\r\n"
 }

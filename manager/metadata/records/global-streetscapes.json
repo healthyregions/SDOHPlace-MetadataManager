@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 24,
     "to_fill": 26,
     "filled_pct": 92,
@@ -73,7 +72,7 @@
   "index_year": [
     2024
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "Global"
   ],
@@ -81,13 +80,13 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "No use restrictions"
   ],
@@ -110,13 +109,14 @@
   "identifier": [
     "10.1016/j.isprsjprs.2024.06.023"
   ],
-  "modified": "2025-03-14T04:45:53Z",
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "City",
     "Other"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Multiple (See Documentation For Full Details and Metadata)"
@@ -148,10 +148,9 @@
     "Speed: Statistical values related to speed for each image that are a part of sequences",
     "Metadata"
   ],
-  "data_usage_notes": "Data is stored in multiple CSVs connected via unique ID corresponding to a specific image taken at a specific location, and is made publicly available via Github and Hugging Face. The CSV format makes the dataset suitable for statistical analysis, machine learning, and integration with GIS software. However, it does not store images directly. Users must reference the dataset\u2019s metadata to access the corresponding street-level images.",
-  "highlight_ids": null,
   "featured_variable": [
     "Street Greenery Coverage, K\u00f6ppen climate zone, Context, Street Segment, Place, Perception"
   ],
-  "preferred_citation": "Hou Y, Quintana M, Khomiakov M, Yap W, Ouyang J, Ito K, Wang Z, Zhao T, Biljecki F (2024): Global Streetscapes \u2014 A comprehensive dataset of 10 million street-level images across 688 cities for urban science and analytics. ISPRS Journal of Photogrammetry and Remote Sensing 215: 216-238. doi:10.1016/j.isprsjprs.2024.06.023"
+  "preferred_citation": "Hou Y, Quintana M, Khomiakov M, Yap W, Ouyang J, Ito K, Wang Z, Zhao T, Biljecki F (2024): Global Streetscapes \u2014 A comprehensive dataset of 10 million street-level images across 688 cities for urban science and analytics. ISPRS Journal of Photogrammetry and Remote Sensing 215: 216-238. doi:10.1016/j.isprsjprs.2024.06.023",
+  "data_usage_notes": "Data is stored in multiple CSVs connected via unique ID corresponding to a specific image taken at a specific location, and is made publicly available via Github and Hugging Face. The CSV format makes the dataset suitable for statistical analysis, machine learning, and integration with GIS software. However, it does not store images directly. Users must reference the dataset\u2019s metadata to access the corresponding street-level images."
 }

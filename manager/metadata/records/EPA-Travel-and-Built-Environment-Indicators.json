@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 22,
     "to_fill": 26,
     "filled_pct": 84,
@@ -17,7 +16,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "U.S. Environmental Protection Agency, Office of Sustainable Communities"
   ],
@@ -63,7 +62,7 @@
   "index_year": [
     2021
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -71,20 +70,20 @@
   "bounding_box": "None",
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "None"
   ],
   "rights_holder": [
     "None"
   ],
-  "license": null,
+  "license": [],
   "access_rights": "Public",
   "format": "Geodatabase",
   "file_size": "527 mb",
@@ -95,15 +94,16 @@
   },
   "wxs_indentifier": null,
   "id": "herop-ppvuzl",
-  "identifier": null,
-  "modified": "2025-02-07T00:58:39Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
-  "methods_variables": null,
+  "methods_variables": [],
   "data_variables": [
     "Name of CBSA in which CBG resides",
     "Total population in CBSA",
@@ -213,8 +213,7 @@
     "[D2b_E8MixA] (D2B_Ranked), [D3b] (D3B_Ranked)",
     "and [D4a] (D4A_Ranked)"
   ],
-  "data_usage_notes": "The Smart Location Database summarizes more than 90 different indicators associated with the built environment and location efficiency. The Access to Jobs and Workers Via Transit Tool provides indicators of accessibility to destinations by public transit.The National Walkability Index provides walkability scores based on a simple formula that ranks selected indicators from the Smart Location Database that have been demonstrated to affect the propensity of walk trips.",
-  "highlight_ids": null,
-  "featured_variable": null,
-  "preferred_citation": null
+  "featured_variable": [],
+  "preferred_citation": null,
+  "data_usage_notes": "The Smart Location Database summarizes more than 90 different indicators associated with the built environment and location efficiency. The Access to Jobs and Workers Via Transit Tool provides indicators of accessibility to destinations by public transit.The National Walkability Index provides walkability scores based on a simple formula that ranks selected indicators from the Smart Location Database that have been demonstrated to affect the propensity of walk trips."
 }

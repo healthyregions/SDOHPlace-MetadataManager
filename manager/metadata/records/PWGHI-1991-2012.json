@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 24,
     "to_fill": 26,
     "filled_pct": 92,
@@ -17,7 +16,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "Environmental Public Health Tracking Network",
     "Centers for Disease Control and Prevention",
@@ -56,7 +55,7 @@
   "index_year": [
     2012
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -64,17 +63,17 @@
   "bounding_box": "None",
   "centroid": "None",
   "georeferenced": false,
-  "relation": null,
+  "relation": [],
   "member_of": [
     "herop-lukhbw"
   ],
   "is_part_of": [
     "herop-lukhbw"
   ],
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "None"
   ],
@@ -94,27 +93,27 @@
   },
   "wxs_indentifier": null,
   "id": "herop-efqkhv",
-  "identifier": null,
-  "modified": "2025-03-14T04:19:54Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
+  "highlight_ids": [
+    "050US*"
+  ],
   "spatial_resolution_note": null,
-  "methods_variables": null,
+  "methods_variables": [],
   "data_variables": [
     "Year",
     "Month",
     "Date",
     "County-level population weighted daily Global Horizontal Irradiance (GHI)"
   ],
-  "data_usage_notes": "Null values or \"NA\" in the dataset appear as missing values; these refer to no valid data and are caused by invalid retrievals from NSRDB or SolarAnywhere. Authors suggest to treat NAs as missing. Detailed methods are available in the documentation.",
-  "highlight_ids": [
-    "050US*"
-  ],
   "featured_variable": [
     "County-level population weighted daily global horizontal irradiance in wh/m2 (GHI)"
   ],
-  "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. Web. Accessed: insert date. www.cdc.gov/ephtracking."
+  "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. Web. Accessed: insert date. www.cdc.gov/ephtracking.",
+  "data_usage_notes": "Null values or \"NA\" in the dataset appear as missing values; these refer to no valid data and are caused by invalid retrievals from NSRDB or SolarAnywhere. Authors suggest to treat NAs as missing. Detailed methods are available in the documentation."
 }

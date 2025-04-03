@@ -1,4 +1,11 @@
 {
+  "_meta": {
+    "schema": "sdohplace",
+    "filled": 20,
+    "to_fill": 26,
+    "filled_pct": 76,
+    "progress_class": "warning"
+  },
   "title": "Uniform Crime Reporting Program",
   "alternative_title": [
     "Uniform Crime Reporting Program (FBI)",
@@ -10,7 +17,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "Federal Bureau of Investigation (FBI)"
   ],
@@ -47,7 +54,7 @@
     2022,
     2023
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -55,18 +62,18 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "Public"
   ],
-  "rights_holder": null,
-  "license": null,
+  "rights_holder": [],
+  "license": [],
   "access_rights": "Public",
   "format": "JSON, CSV",
   "file_size": null,
@@ -75,8 +82,8 @@
   },
   "wxs_indentifier": null,
   "id": "herop-nfvcud",
-  "identifier": null,
-  "modified": "2025-03-14T03:53:18Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -88,15 +95,9 @@
     "040US*"
   ],
   "spatial_resolution_note": null,
-  "methods_variables": null,
-  "data_variables": null,
-  "featured_variable": null,
-  "data_usage_notes": "The CDE pages provide a view of estimated national and state data, reported agency-level crime statistics, and graphs of specific variables from the National Incident-Based Reporting System (NIBRS). ",
-  "_meta": {
-    "to_fill": 26,
-    "filled": 20,
-    "filled_pct": 76,
-    "progress_class": "warning"
-  },
-  "preferred_citation": null
+  "methods_variables": [],
+  "data_variables": [],
+  "featured_variable": [],
+  "preferred_citation": null,
+  "data_usage_notes": "The CDE pages provide a view of estimated national and state data, reported agency-level crime statistics, and graphs of specific variables from the National Incident-Based Reporting System (NIBRS). "
 }

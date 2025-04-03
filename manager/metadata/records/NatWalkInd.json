@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 25,
     "to_fill": 26,
     "filled_pct": 96,
@@ -17,7 +16,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "U.S. Environmental Protection Agency, Office of Sustainable Communities"
   ],
@@ -58,7 +57,7 @@
   "index_year": [
     2021
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -66,15 +65,15 @@
   "bounding_box": "None",
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
+  "relation": [],
+  "member_of": [],
   "is_part_of": [
     "herop-ppvuzl"
   ],
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "None"
   ],
@@ -93,13 +92,14 @@
   },
   "wxs_indentifier": null,
   "id": "herop-jjsukv",
-  "identifier": null,
-  "modified": "2025-02-19T22:13:10Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Intersection density (D3b)",
@@ -121,10 +121,9 @@
     "Quantile ranked order (1-20) of [D3b] from lowest to highest- D3B_Ranked",
     "Quantile ranked order (1,13-20) of [D4a] from lowest to highest- D4A_Ranked"
   ],
-  "data_usage_notes": null,
-  "highlight_ids": null,
   "featured_variable": [
     "National Walkability Index"
   ],
-  "preferred_citation": "US-EPA. (2019). National Walkability Index [Dataset]. U.S. Environmental Protection Agency. Retrieved from https://edg.epa.gov/data/Public/OA/WalkabilityIndex.zip"
+  "preferred_citation": "US-EPA. (2019). National Walkability Index [Dataset]. U.S. Environmental Protection Agency. Retrieved from https://edg.epa.gov/data/Public/OA/WalkabilityIndex.zip",
+  "data_usage_notes": null
 }

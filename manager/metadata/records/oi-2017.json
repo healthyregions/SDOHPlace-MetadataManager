@@ -1,21 +1,20 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 20,
-    "to_fill": 25,
-    "filled_pct": 80,
+    "to_fill": 26,
+    "filled_pct": 76,
     "progress_class": "warning"
   },
   "title": "Opportunity Index 2017",
-  "alternative_title": null,
+  "alternative_title": [],
   "description": [
     "Opportunity index provides a snapshot of conditions that can be used to identify and improve access to opportunity - in comprehensive terms - for residents and their communities. The data and full analysis online show how opportunity index scores have changed over time and what access to opportunity looks like today."
   ],
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "Child Trends and the Forum for Youth Investment\u2019s Opportunity Nation campaign"
   ],
@@ -37,7 +36,7 @@
     "Society",
     "Structure"
   ],
-  "keyword": null,
+  "keyword": [],
   "temporal_coverage": [
     "2017"
   ],
@@ -45,7 +44,7 @@
   "index_year": [
     2017
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -53,15 +52,15 @@
   "bounding_box": "None",
   "centroid": "None",
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
   "is_version_of": [
     "herop-yumqkc"
   ],
-  "replaces": null,
-  "is_replaced_by": null,
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "None"
   ],
@@ -80,16 +79,17 @@
   },
   "wxs_indentifier": null,
   "id": "herop-culizk",
-  "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
     "County",
     "State"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
-  "methods_variables": null,
+  "methods_variables": [],
   "data_variables": [
     "Unemployment rate (percentage of the population ages 16 and older who are not working but available for and seeking work)",
     "Median household income (in 2010 dollars",
@@ -111,7 +111,7 @@
     "Number of grocery stores and produce vendors (per 10,000 population)",
     "Number of people incarcerated in jail or prison (per 100,000 population 18 and older) [national and state-level only]"
   ],
-  "data_usage_notes": null,
-  "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": [],
+  "preferred_citation": null,
+  "data_usage_notes": null
 }

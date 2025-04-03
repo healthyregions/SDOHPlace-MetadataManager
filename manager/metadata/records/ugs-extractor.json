@@ -1,21 +1,20 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 20,
     "to_fill": 26,
     "filled_pct": 76,
     "progress_class": "warning"
   },
   "title": "UGS Extractor",
-  "alternative_title": null,
+  "alternative_title": [],
   "description": [
     "A web-based application for the automatic extraction of urban greenspace (UGS) given user inputs of Area of Interest and Date of Interest. To accommodate various types of green spaces, such as parks or lawns, the application additionally allows users to set parameters for the minimum size of each UGS and the Minimum Urban Neighbor Density, enabling customization of what qualifies as UGS. Primary datasource is Dynamic World, a collection of global near real-time LULC derived from Sentinel 2-imagery. Greenspace defined as pixels classified as Trees or Grass by Dynamic World."
   ],
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "Ian Estacio",
     "Cristian Roman-Palacios",
@@ -60,7 +59,7 @@
     2023,
     2024
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "Global"
   ],
@@ -68,20 +67,20 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "No use restrictions"
   ],
   "rights_holder": [
     "Estacio et al (2024)"
   ],
-  "license": null,
+  "license": [],
   "access_rights": "Public",
   "format": "GeoJSON",
   "file_size": null,
@@ -92,8 +91,8 @@
   },
   "wxs_indentifier": null,
   "id": "herop-uyrmqd",
-  "identifier": null,
-  "modified": "2025-02-17T16:02:01Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -103,8 +102,11 @@
     "Census Block Group",
     "Zip Code Tabulation Area (ZCTA)"
   ],
+  "highlight_ids": [
+    "150US*"
+  ],
   "spatial_resolution_note": "10m resolution, with a minimum 3000m area for UGS",
-  "methods_variables": null,
+  "methods_variables": [],
   "data_variables": [
     "ID",
     "Percent Classified as Grass",
@@ -112,10 +114,7 @@
     "Count",
     "Labels"
   ],
-  "data_usage_notes": null,
-  "highlight_ids": [
-    "150US*"
-  ],
-  "featured_variable": null,
-  "preferred_citation": null
+  "featured_variable": [],
+  "preferred_citation": null,
+  "data_usage_notes": null
 }

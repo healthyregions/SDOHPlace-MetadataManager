@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 24,
     "to_fill": 26,
     "filled_pct": 92,
@@ -18,7 +17,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "Environmental Public Health Tracking Network",
     "Centers for Disease Control and Prevention",
@@ -59,7 +58,7 @@
   "index_year": [
     2015
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -67,15 +66,15 @@
   "bounding_box": "None",
   "centroid": "None",
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
+  "relation": [],
+  "member_of": [],
   "is_part_of": [
     "herop-lukhbw"
   ],
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "None"
   ],
@@ -94,36 +93,13 @@
   },
   "wxs_indentifier": null,
   "id": "herop-drwddq",
-  "identifier": null,
-  "modified": "2025-03-17T22:58:43Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
-  "spatial_resolution_note": null,
-  "methods_variables": [
-    "Annual Average Sunlight Exposure Measured by Solar Irradiance (kJ/m2)",
-    "Monthly Average Sunlight Exposure Measured by Solar Irradiance (kJ/m2)",
-    "Annual Average Daily Dose of UV Irradiance (J/m2)",
-    "Monthly Average Daily Dose of UV Irradiance (J/m2)",
-    "Annual Average UV Irradiance at Noon (mW/m2)",
-    "Monthly Average UV Irradiance at Noon (mW/m2)",
-    "Indoor Tanning Restrictions for Minors",
-    "Laws Allowing Students to Carry and Self-apply Sunscreen in Schools"
-  ],
-  "data_variables": [
-    "year",
-    "month",
-    "day",
-    "daily county-level population weighted erythemally weighted daily dose, with the unit of J/m2",
-    "daily county-level population weighted erythemally weighted irradiance at local solar noon time, with the unit of Mw/m2",
-    "daily county-level population weighted spectral irradiance at local solar noon time at 305 nm, with the unit of mW/m2/nm",
-    "daily county-level population weighted spectral irradiance at local solar noon time at 310 nm, with the unit of mW/m2/nm",
-    "daily county-level population weighted spectral irradiance at local solar noon time at 324 nm, with the unit of mW/m2/nm",
-    "daily county-level population weighted spectral irradiance at local solar noon time at 380 nm, with the unit of mW/m2/nm"
-  ],
-  "data_usage_notes": null,
   "highlight_ids": [
     "-050US02016",
     "-050US02130",
@@ -252,6 +228,29 @@
     "-050US72129",
     "-050US02105"
   ],
-  "featured_variable": null,
-  "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. Web. www.cdc.gov/ephtracking. "
+  "spatial_resolution_note": null,
+  "methods_variables": [
+    "Annual Average Sunlight Exposure Measured by Solar Irradiance (kJ/m2)",
+    "Monthly Average Sunlight Exposure Measured by Solar Irradiance (kJ/m2)",
+    "Annual Average Daily Dose of UV Irradiance (J/m2)",
+    "Monthly Average Daily Dose of UV Irradiance (J/m2)",
+    "Annual Average UV Irradiance at Noon (mW/m2)",
+    "Monthly Average UV Irradiance at Noon (mW/m2)",
+    "Indoor Tanning Restrictions for Minors",
+    "Laws Allowing Students to Carry and Self-apply Sunscreen in Schools"
+  ],
+  "data_variables": [
+    "year",
+    "month",
+    "day",
+    "daily county-level population weighted erythemally weighted daily dose, with the unit of J/m2",
+    "daily county-level population weighted erythemally weighted irradiance at local solar noon time, with the unit of Mw/m2",
+    "daily county-level population weighted spectral irradiance at local solar noon time at 305 nm, with the unit of mW/m2/nm",
+    "daily county-level population weighted spectral irradiance at local solar noon time at 310 nm, with the unit of mW/m2/nm",
+    "daily county-level population weighted spectral irradiance at local solar noon time at 324 nm, with the unit of mW/m2/nm",
+    "daily county-level population weighted spectral irradiance at local solar noon time at 380 nm, with the unit of mW/m2/nm"
+  ],
+  "featured_variable": [],
+  "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. Web. www.cdc.gov/ephtracking. ",
+  "data_usage_notes": null
 }

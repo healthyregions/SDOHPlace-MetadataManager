@@ -1,4 +1,11 @@
 {
+  "_meta": {
+    "schema": "sdohplace",
+    "filled": 22,
+    "to_fill": 26,
+    "filled_pct": 84,
+    "progress_class": "warning"
+  },
   "title": "Livability Index",
   "alternative_title": [
     "AARP Livability Index"
@@ -52,12 +59,12 @@
     "Environment",
     "Neighborhood"
   ],
-  "temporal_coverage": null,
+  "temporal_coverage": [],
   "date_issued": "2015",
   "index_year": [
     2024
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -65,16 +72,16 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
-  "rights": null,
-  "rights_holder": null,
-  "license": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
+  "rights": [],
+  "rights_holder": [],
+  "license": [],
   "access_rights": "Public",
   "format": "PDF",
   "file_size": null,
@@ -84,8 +91,8 @@
   },
   "wxs_indentifier": null,
   "id": "herop-qatixm",
-  "identifier": null,
-  "modified": "2025-03-18T01:55:55Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -93,7 +100,7 @@
     "State",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": null,
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Zero-step entrances",
@@ -243,11 +250,5 @@
     "AARP Livability Score"
   ],
   "preferred_citation": "AARP Public Policy Institute, Livable Communities. The AARP Livability Index\u2122 Categories Explained. Washington, DC: AARP Public Policy Institute, June 27, 2024. https://doi.org/10.26419/ppi.00230.000.",
-  "data_usage_notes": "The AARP Livability Index takes a holistic approach to understanding livability. It wasn\u2019t created to solely measure the quality of the built environment or the health of residents. It includes those elements, but it also considers engagement, opportunity, and the natural environment. It encourages policymakers and professionals to get outside their areas of expertise and understand the interrelated nature of livability.",
-  "_meta": {
-    "to_fill": 26,
-    "filled": 22,
-    "filled_pct": 84,
-    "progress_class": "warning"
-  }
+  "data_usage_notes": "The AARP Livability Index takes a holistic approach to understanding livability. It wasn\u2019t created to solely measure the quality of the built environment or the health of residents. It includes those elements, but it also considers engagement, opportunity, and the natural environment. It encourages policymakers and professionals to get outside their areas of expertise and understand the interrelated nature of livability."
 }

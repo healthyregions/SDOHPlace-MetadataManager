@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 23,
     "to_fill": 26,
     "filled_pct": 88,
@@ -57,7 +56,7 @@
   "index_year": [
     2000
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "Global"
   ],
@@ -65,20 +64,20 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "MODIS data and products acquired through the LP DAAC have no restrictions on subsequent use, sale, or redistribution."
   ],
   "rights_holder": [
     "LP DAAC"
   ],
-  "license": null,
+  "license": [],
   "access_rights": "Public",
   "format": "GeoTIFF",
   "file_size": null,
@@ -88,8 +87,8 @@
   },
   "wxs_indentifier": null,
   "id": "herop-eflmqc",
-  "identifier": null,
-  "modified": "2025-03-17T23:03:23Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -101,6 +100,7 @@
     "Census Block Group",
     "Zip Code Tabulation Area (ZCTA)"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": "500m resolution",
   "methods_variables": [
     "BRDF Albedo Mandatory Quality for Band 3",
@@ -124,10 +124,9 @@
     "NBAR at local solar noon for Band 6",
     "NBAR at local solar noon for Band 7"
   ],
-  "data_usage_notes": null,
-  "highlight_ids": null,
   "featured_variable": [
     "NDVI"
   ],
-  "preferred_citation": "NASA LP DAAC. (2017). MODIS MCD43A4.006 Nadir BRDF-Adjusted Reflectance (NBAR) [Dataset]. NASA EOSDIS Land Processes DAAC. https://doi.org/10.5067/MODIS/MCD43A4.006"
+  "preferred_citation": "NASA LP DAAC. (2017). MODIS MCD43A4.006 Nadir BRDF-Adjusted Reflectance (NBAR) [Dataset]. NASA EOSDIS Land Processes DAAC. https://doi.org/10.5067/MODIS/MCD43A4.006",
+  "data_usage_notes": null
 }

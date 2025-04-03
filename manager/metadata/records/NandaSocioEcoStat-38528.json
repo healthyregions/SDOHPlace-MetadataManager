@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 23,
     "to_fill": 26,
     "filled_pct": 88,
@@ -17,7 +16,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "Philippa Clarke",
     "Grace Noppert",
@@ -77,7 +76,7 @@
     2019,
     2020
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -85,18 +84,18 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
+  "relation": [],
+  "member_of": [],
   "is_part_of": [
     "herop-zrurpe"
   ],
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
-  "rights": null,
-  "rights_holder": null,
-  "license": null,
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
+  "rights": [],
+  "rights_holder": [],
+  "license": [],
   "access_rights": "Public",
   "format": null,
   "file_size": null,
@@ -108,13 +107,14 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38528.v3"
   ],
-  "modified": "2025-03-18T02:34:40Z",
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract",
     "Zip Code Tabulation Area (ZCTA)"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Affluence",
@@ -167,8 +167,7 @@
     "Proportion single female-headed families w/ kids",
     "Proportion of owner occupied housing units"
   ],
-  "data_usage_notes": "These datasets were created to measure the socioeconomic and demographic characteristics by US census tract for the years 2000-2020 and ZIP code tabulation area (ZCTA) for the years 2008-2020.\r\n\r\nUsers should be aware that ZCTAs are not equivalent to ZIP codes. ZIP codes are linear\r\nmail delivery routes created by the US Postal Service. ZIP code tabulation areas are\r\nspatial features consisting of census blocks grouped by the predominant ZIP code found\r\non the block (United States Census Bureau, 2020).",
-  "highlight_ids": null,
-  "featured_variable": null,
-  "preferred_citation": "Clarke, Philippa, Noppert, Grace, Melendez, Robert, Chenoweth, Megan, and Gypin, Lindsay. National Neighborhood Data Archive (NaNDA): Socioeconomic Status and Demographic Characteristics of Census Tracts and ZIP Code Tabulation Areas, United States, 2000-2020. Inter-university Consortium for Political and Social Research [distributor], 2023-04-17. https://doi.org/10.3886/ICPSR38528.v3"
+  "featured_variable": [],
+  "preferred_citation": "Clarke, Philippa, Noppert, Grace, Melendez, Robert, Chenoweth, Megan, and Gypin, Lindsay. National Neighborhood Data Archive (NaNDA): Socioeconomic Status and Demographic Characteristics of Census Tracts and ZIP Code Tabulation Areas, United States, 2000-2020. Inter-university Consortium for Political and Social Research [distributor], 2023-04-17. https://doi.org/10.3886/ICPSR38528.v3",
+  "data_usage_notes": "These datasets were created to measure the socioeconomic and demographic characteristics by US census tract for the years 2000-2020 and ZIP code tabulation area (ZCTA) for the years 2008-2020.\r\n\r\nUsers should be aware that ZCTAs are not equivalent to ZIP codes. ZIP codes are linear\r\nmail delivery routes created by the US Postal Service. ZIP code tabulation areas are\r\nspatial features consisting of census blocks grouped by the predominant ZIP code found\r\non the block (United States Census Bureau, 2020)."
 }

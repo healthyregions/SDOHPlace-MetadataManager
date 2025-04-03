@@ -1,4 +1,11 @@
 {
+  "_meta": {
+    "schema": "sdohplace",
+    "filled": 23,
+    "to_fill": 26,
+    "filled_pct": 88,
+    "progress_class": "warning"
+  },
   "title": "Child Opportunity Index (COI)",
   "alternative_title": [
     "Child Opportunity Index (COI)"
@@ -63,7 +70,7 @@
     2020,
     2021
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -71,16 +78,16 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
-  "rights": null,
-  "rights_holder": null,
-  "license": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
+  "rights": [],
+  "rights_holder": [],
+  "license": [],
   "access_rights": "Public",
   "format": "CSV",
   "file_size": null,
@@ -90,14 +97,14 @@
   },
   "wxs_indentifier": null,
   "id": "herop-znxdus",
-  "identifier": null,
-  "modified": "2025-03-13T22:16:31Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract"
   ],
-  "highlight_ids": null,
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Private Pre-K Enrollment",
@@ -193,12 +200,6 @@
   "featured_variable": [
     "Child Opportunity Index"
   ],
-  "data_usage_notes": null,
-  "_meta": {
-    "to_fill": 26,
-    "filled": 23,
-    "filled_pct": 88,
-    "progress_class": "warning"
-  },
-  "preferred_citation": "Diversity Data Kids. (n.d.). Child opportunity index. The Institute for Child, Youth, and Family Policy. Retrieved [Date], from https://www.diversitydatakids.org/child-opportunity-index"
+  "preferred_citation": "Diversity Data Kids. (n.d.). Child opportunity index. The Institute for Child, Youth, and Family Policy. Retrieved [Date], from https://www.diversitydatakids.org/child-opportunity-index",
+  "data_usage_notes": null
 }
