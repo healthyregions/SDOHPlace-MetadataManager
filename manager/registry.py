@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 
 from manager.utils import (
     METADATA_DIR,
-    get_clean_field_from_form,
     load_json,
     get_wkt_from_geojson,
     generate_id,
@@ -65,43 +64,82 @@ class Schema:
                 form[k] = ""
         return form
 
-    def validate_form_data(self, form_data):
-        cleaned_data = {}
-        for field, field_def in self.lookup.items():
-            clean_value = get_clean_field_from_form(form_data, field, field_def)
-            cleaned_data[field] = clean_value
-        errors = []
-
-        for key, field in self.lookup.items():
-            value = cleaned_data.get(key)
-            errors += field.validate(value)
-
-        return errors
-
     def validate_record(self, record):
 
-        errors = []
-        extra = set(record.data.keys()) - set(self.lookup.keys())
-        if extra:
-            errors.append(f"{len(extra)} extra fields: ", extra)
+        data = record.to_json()
 
+        errors = []
         for id, field in self.lookup.items():
-            result = field.validate(record.data[id])
-            if result['is_valid']:
-                errors.append(result['message'])
+            errors += field.validate(data.get(id))
 
         return errors
 
-    def make_record_from_form_data(self, form_data):
+    def make_record_data_from_form_data(self, form_data):
 
         data = {
             "metadata_version": self.schema_json["name"]
         }
+
         for field in self.lookup.values():
+            print(field.id)
             clean_value = field.get_value_from_form(form_data)
-            data[field] = clean_value
+            data[field.id] = clean_value
+
+        ## this must be handled at the Schema level instead of the Field level
+        ## because it bases one field's value on another.
+        coverages = (
+            [i.lower() for i in data["spatial_coverage"]]
+            if data["spatial_coverage"]
+            else []
+        )
+        wkt = None
+        if "united states" in coverages:
+            wkt = get_wkt_from_geojson("full-us-simplified.geojson")
+        elif "contiguous us" in coverages:
+            wkt = get_wkt_from_geojson("contiguous-us-simplified.geojson")
+        elif "alaska" in coverages:
+            wkt = get_wkt_from_geojson("alaska-simplified.geojson")
+        elif "hawaii" in coverages:
+            wkt = get_wkt_from_geojson("hawaii-simplified.geojson")
+
+        if wkt and (not data["geometry"] or data["geometry"] == "None"):
+            data["geometry"] = wkt
 
         return data
+
+    def make_form_data_from_record_data(self, record):
+        """Prepares the raw backend data to populate an html form."""
+        form_data = {}
+        for key, field in self.lookup.items():
+            value = record.data.get(key)
+            if not value:
+                value = ""
+            if key == "references" and isinstance(value, dict):
+                lines = ""
+                for x, y in value.items():
+                    logging.warning(f'item - {x}:: {y}')
+                    if x == 'http://schema.org/downloadUrl-NEW':
+                        try:
+                            if isinstance(y, list):
+                                # downloadUrl is a list of objects defining label + url
+                                # break it up into multiple lines of download/<label>:: <url>
+                                for u in y:
+                                    lines += f"download/{u['label']}:: {u['url']}\n"
+                        except JSONDecodeError as ex:
+                            # downloadUrl is a single string
+                            lines += f"{x}:: {y}\n"
+                    else:
+                        lines += f"{x}:: {y}\n"
+                value = lines
+            if field.multiple and isinstance(value, list):
+                if field.widget == "text-area.html":
+                    value = "\n".join(value)
+                else:
+                    value = "|".join([str(i) for i in value])
+            form_data[key] = value
+
+        return form_data
+
 
 
 class Registry:
@@ -142,86 +180,28 @@ class Record:
 
     def load_from_file(self, file_path):
         self.file_path = file_path
-        self.data = load_json(file_path)
+
+        raw_data = load_json(file_path)
+        self.data = {}
+
+        for field in self.schema.lookup.values():
+            val = raw_data.get(field.id)
+            if val is None:
+                val = field.get_default()
+            self.data[field.id] = val
+
+        self.meta = raw_data.get("_meta", {})
+
+        schema_id = self.meta.get('schema', 'sdohplace')
+        self.schema = Schema(Path(METADATA_DIR, "schemas", f"{schema_id}.json"))
+
         return self
-
-    def save_data(self, index=False):
-        self.data["metadata_version"] = "SDOH PlaceProject"
-        self.data["modified"] = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
-
-        ## Feb 5th 2025, we may need to show some child records afterall, removing this hard coding
-        # if self.data['is_version_of']:
-        #     self.data['suppressed'] = True
-        # else:
-        #     self.data['suppressed'] = False
-
-        if self.data["index_year"]:
-            self.data["index_year"] = [int(i) for i in self.data["index_year"]]
-
-        if not self.file_path:
-            self.file_path = Path(METADATA_DIR, "records", self.data["id"] + ".json")
-
-        if self.data["references"]:
-            cleaned_references = {}
-            download_refs = []
-            for (
-                k,
-                v,
-            ) in self.data["references"].items():
-                if k.startswith('download/'):
-                    label = k.rstrip().lstrip()[9:]
-                    url = v.rstrip().lstrip()
-                    download_refs.append({'label': label, 'url': url})
-                else:
-                    cleaned_references[k.rstrip().lstrip()] = v.rstrip().lstrip()
-
-            if len(download_refs) > 0:
-                cleaned_references['http://schema.org/downloadUrl'] = download_refs
-            self.data["references"] = cleaned_references
-
-        coverages = (
-            [i.lower() for i in self.data["spatial_coverage"]]
-            if self.data["spatial_coverage"]
-            else []
-        )
-        wkt = None
-        if "united states" in coverages:
-            wkt = get_wkt_from_geojson("full-us-simplified.geojson")
-        elif "contiguous us" in coverages:
-            wkt = get_wkt_from_geojson("contiguous-us-simplified.geojson")
-        elif "alaska" in coverages:
-            wkt = get_wkt_from_geojson("alaska-simplified.geojson")
-        elif "hawaii" in coverages:
-            wkt = get_wkt_from_geojson("hawaii-simplified.geojson")
-
-        if wkt and (not self.data["geometry"] or self.data["geometry"] == "None"):
-            self.data["geometry"] = wkt
-
-        with open(self.file_path, "w") as o:
-            json.dump(self.to_json(), o, indent=2)
-
-        if index:
-            self.index()
-
-    def get_value(self, field_name):
-        return self.data[field_name]
-
-    def validateOLD(self):
-        """validate this record against its schema."""
-        errors = []
-        for key, field in self.schema.lookup.items():
-            value = self.data.get(key)
-            print(key, field, value)
-            errors += field.validate(value)
-        return errors
 
     def validate(self):
         return self.schema.validate_record(self)
 
-    def from_form_data(self, form_data):
-        pass
-
     def to_json(self):
+
         obligations = ["required", "suggested"]
         rs_fields = [i for i in self.schema.fields if i.obligation in obligations]
         required_filled = len([i for i in rs_fields if self.data.get(i.id)])
@@ -233,56 +213,22 @@ class Record:
         else:
             css_color = "danger"
 
-        meta = self.data.get(
-            "_meta",
-            {
-                "to_fill": "",
-                "filled": "",
-                "filled_pct": "",
-                "progress_class": "",
-            },
-        )
-        meta["to_fill"] = len(rs_fields)
-        meta["filled"] = required_filled
-        meta["filled_pct"] = filled_pct
-        meta["progress_class"] = css_color
+        data = {
+            "_meta": {
+                "schema": self.schema.schema_json["id"],
+                "filled": required_filled,
+                "to_fill": len(rs_fields),
+                "filled_pct": filled_pct,
+                "progress_class": css_color,
+            }
+        }
 
-        self.data["_meta"] = meta
+        data.update(self.data)
 
-        return self.data
-
+        return data
 
     def to_form(self):
-        """Prepares the raw backend data to populate an html form."""
-        form_data = {}
-        for key, field in self.schema.lookup.items():
-            value = self.data.get(key)
-            if not value:
-                value = ""
-            if key == "references" and isinstance(value, dict):
-                lines = ""
-                for x, y in value.items():
-                    logging.warning(f'item - {x}:: {y}')
-                    if x == 'http://schema.org/downloadUrl':
-                        try:
-                            if isinstance(y, list):
-                                # downloadUrl is a list of objects defining label + url
-                                # break it up into multiple lines of download/<label>:: <url>
-                                for u in y:
-                                    lines += f"download/{u['label']}:: {u['url']}\n"
-                        except JSONDecodeError as ex:
-                            # downloadUrl is a single string
-                            lines += f"{x}:: {y}\n"
-                    else:
-                        lines += f"{x}:: {y}\n"
-                value = lines
-            if field.multiple and isinstance(value, list):
-                if field.widget == "text-area.html":
-                    value = "\n".join(value)
-                else:
-                    value = "|".join([str(i) for i in value])
-            form_data[key] = value
-        return form_data
+        return self.schema.make_form_data_from_record_data(self)
 
     def to_solr(self):
         """A variation on to_json() that uses the SOLR uris instead, and
@@ -290,6 +236,8 @@ class Record:
         solr_doc = {}
         for key, field in self.schema.lookup.items():
             value = self.data.get(key)
+            if isinstance(value, list) and len([i for i in value if not str(i).lower() == "none"]) == 0:
+                continue
             if value is not None and str(value).lower() != "none":
                 if key == "references":
                     value = json.dumps(value)
@@ -307,22 +255,36 @@ class Record:
             result = {"success": False, "error": str(e)}
         return result
 
-    def save_from_form_data(self, form_data):
-        cleaned_data = {}
-        for field, field_def in self.schema.lookup.items():
-            clean_value = get_clean_field_from_form(form_data, field, field_def)
-            cleaned_data[field] = clean_value
-        cleaned_data["metadata_version"] = "SDOH PlaceProject"
-        cleaned_data["modified"] = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
+    def update_from_form_data(self, form_data):
+        self.data = self.schema.make_record_data_from_form_data(form_data)
 
-        self.data.update(cleaned_data)
-        self.save_data()
+    def save(self, index=False):
+
+        self.data["modified"] = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
+
+        if not self.file_path:
+            self.file_path = Path(METADATA_DIR, "records", self.data["id"] + ".json")
+
+        with open(self.file_path, "w") as o:
+            json.dump(self.to_json(), o, indent=2)
+
+        if index:
+            self.index()
 
 
 class Field:
     def __init__(self, **kwargs):
         for k, v in kwargs.items():
             self.__setattr__(k, v)
+
+    def get_default(self):
+
+        default = None
+        if self.multiple:
+            default = []
+        elif self.id == "references":
+            default = {}
+        return default
 
     def get_value_from_form(self, form):
         """This function has bespoke logic for handling specific fields."""
@@ -340,6 +302,8 @@ class Field:
             value = [i.lstrip().rstrip() for i in value]
 
         if self.id == "references":
+            if value is None:
+                return {}
             value_dict = {}
             items = [i.rstrip() for i in value.split("\n")]
             items = [i for i in items if i]
@@ -347,20 +311,44 @@ class Field:
                 if "::" in i:
                     kvs = i.split("::")
                     value_dict[kvs[0]] = kvs[1].lstrip().rstrip()
-            return value_dict
+
+            cleaned_references = {}
+            download_refs = []
+            for k, v in value_dict.items():
+                if k.startswith('download/'):
+                    label = k.rstrip().lstrip()[9:]
+                    url = v.rstrip().lstrip()
+                    download_refs.append({'label': label, 'url': url})
+                else:
+                    cleaned_references[k.rstrip().lstrip()] = v.rstrip().lstrip()
+
+            if len(download_refs) > 0:
+                cleaned_references['http://schema.org/downloadUrl-NEW'] = download_refs
+            value = cleaned_references
+
+        if self.id == "highlight_ids":
+            value = form.get(self.id)
+            value = value.replace(",", "|").replace("\n", "|")
+            return [i.rstrip().lstrip() for i in value.split("|")]
 
         if self.multiple:
             if (
                 self.widget == "select.html"
                 or self.widget == "select-record.html"
             ):
-                value = form.getlist(self.id)
+                value = [i.lstrip().rstrip() for i in form.getlist(self.id) if i]
             if self.widget == "text-simple.html":
                 value = [i.lstrip().rstrip() for i in form.get(self.id).split("|") if i]
             if self.widget == "text-area.html":
                 value = form.get(self.id)
                 value = [i.rstrip() for i in value.split("\n")]
                 value = [i for i in value if i]
+
+        if self.data_type == "integer":
+            if self.multiple:
+                value = [int(i) for i in value]
+            else:
+                value = int(value)
 
         if self.data_type == "boolean":
             if value == "on":
@@ -374,7 +362,7 @@ class Field:
 
         errors = []
 
-        if self.label == "Modified":
+        if self.id == "modified":
             return errors
 
         if isinstance(value, list):

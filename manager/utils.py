@@ -49,57 +49,8 @@ def batch_list(lst, n):
     for i in range(0, len(lst), n):
         yield lst[i : i + n]
 
-
 def generate_id(length=6):
     return "herop-" + "".join(random.choices(string.ascii_lowercase, k=length))
-
-
-def get_clean_field_from_form(form, field, field_def):
-    """This function has bespoke logic for handling specific fields."""
-
-    value = form.get(field)
-    if value == "":
-        return None
-
-    if field_def.widget == "checkboxes.html":
-        value = [
-            k.split("--")[1]
-            for k, v in form.items()
-            if k.split("--")[0] == field and v == "on"
-        ]
-        value = [i.lstrip().rstrip() for i in value]
-
-    if field == "references":
-        value_dict = {}
-        items = [i.rstrip() for i in value.split("\n")]
-        items = [i for i in items if i]
-        for i in items:
-            if "::" in i:
-                kvs = i.split("::")
-                value_dict[kvs[0]] = kvs[1].lstrip().rstrip()
-        return value_dict
-
-    if field_def.multiple:
-        if (
-            field_def.widget == "select.html"
-            or field_def.widget == "select-record.html"
-        ):
-            value = form.getlist(field)
-        if field_def.widget == "text-simple.html":
-            value = [i.lstrip().rstrip() for i in form.get(field).split("|") if i]
-        if field_def.widget == "text-area.html":
-            value = form.get(field)
-            value = [i.rstrip() for i in value.split("\n")]
-            value = [i for i in value if i]
-
-    if field_def.data_type == "boolean":
-        if value == "on":
-            return True
-        elif value == "off" or not value:
-            return False
-
-    return value
-
 
 STATE_POSTAL = {
     "alabama": "al",

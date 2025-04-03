@@ -113,9 +113,17 @@ def handle_record(id):
             registry = Registry()
             record = registry.get_record(id)
             if not record:
-                return NotFound
-            record.update_from_form_data(request.form)
-            form_errors = record.validate()
+                record = Record(registry.schema)
+
+            form_errors = []
+            try:
+                record.update_from_form_data(request.form)
+                form_errors += record.validate()
+            except Exception as e:
+                form_errors += [
+                    f"Error parsing form: {e}",
+                    "This must be fixed before you can continue",
+                ]
             if form_errors:
                 html = "<ul>"
                 for i in form_errors:
