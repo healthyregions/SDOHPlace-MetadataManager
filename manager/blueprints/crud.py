@@ -35,7 +35,7 @@ logger = logging.getLogger(__name__)
 def index():
     registry = Registry()
     show_hidden = True if request.args.get("show-hidden") == "true" else False
-    records = [r.to_json() for r in registry.records]
+    records = registry.records_as_json()
     if show_hidden is False:
         records = [r for r in records if r["suppressed"] is not True]
     return render_template("index.html", records=records, show_hidden=show_hidden)
@@ -44,7 +44,7 @@ def index():
 @crud.route("/table", methods=["GET"])
 def table_view():
     registry = Registry()
-    records = [r.to_json() for r in registry.records]
+    records = registry.records_as_json()
     schema = registry.schema
     fields = schema.schema_json["fields"]
     return render_template("full_table.html", records=records, fields=fields)
@@ -55,7 +55,7 @@ def table_view():
 def create_record():
     if request.method == "GET":
         schema = Registry().schema
-        records = [r.to_json() for r in registry.records]
+        records = registry.records_as_json()
         relations_choices = [(r["id"], r["title"]) for r in records]
         return render_template(
             "crud/edit.html",
@@ -76,7 +76,7 @@ def handle_record(id):
         format = request.args.get("f", "html")
         edit = request.args.get("edit") == "true"
         if format == "html":
-            records = [r.to_json() for r in registry.records]
+            records = registry.records_as_json()
             link_list = [
                 {"id": r["id"], "title": r["title"]}
                 for r in records

@@ -130,6 +130,9 @@ class Registry:
                 break
         return record
 
+    def records_as_json(self):
+        return [r.to_json() for r in self.records]
+
 
 class Record:
     def __init__(self, schema: Schema):
