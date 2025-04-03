@@ -653,7 +653,7 @@
             "uri": "dct_rights_sm",
             "data_type": "string",
             "multiple": true,
-            "obligation": "required",
+            "obligation": "suggested",
             "controlled": false,
             "controlled_options": [],
             "schema": "Aardvark",
