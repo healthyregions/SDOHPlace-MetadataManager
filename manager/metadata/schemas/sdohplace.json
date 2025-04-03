@@ -28,7 +28,8 @@
             "help_text": [
                 "These fields allow you to relate this record to other records in the index. Typically, this is a done to create a \"parent/child\" relationship.",
                 "If this is a record for the specific release year of a dataset, use <strong>Is Version Of</strong> to relate to the parent record.",
-                "If this record is one of many in a collection, use <strong>Is Part Of</strong> to link to the parent record."
+                "If this record is one of many in a collection, use <strong>Is Part Of</strong> to link to the parent record.",
+                "For multiple values, you can provide a comma-separated list, or place each value on a new line."
             ]
         },
         {
