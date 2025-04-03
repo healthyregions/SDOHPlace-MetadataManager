@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 24,
     "to_fill": 26,
     "filled_pct": 92,
@@ -17,7 +16,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "University of Michigan. Institute for Social Research."
   ],
@@ -52,7 +51,7 @@
   "index_year": [
     2010
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -60,18 +59,18 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
+  "relation": [],
+  "member_of": [],
   "is_part_of": [
     "herop-zrurpe"
   ],
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
-  "rights": null,
-  "rights_holder": null,
-  "license": null,
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
+  "rights": [],
+  "rights_holder": [],
+  "license": [],
   "access_rights": "Public",
   "format": "csv|zip",
   "file_size": "1.9 MB",
@@ -83,12 +82,13 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38606.v1"
   ],
-  "modified": "2025-03-17T23:13:41Z",
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Urban/rural qualities of United States",
@@ -123,10 +123,9 @@
     "Total land area of the tract in square miles.",
     "Population density (total population per square mile)."
   ],
-  "data_usage_notes": null,
-  "highlight_ids": null,
   "featured_variable": [
     "Urbanicity"
   ],
-  "preferred_citation": "Miller, Stephanie, Melendez, Robert, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Urbanicity by Census Tract, United States, 2010. Inter-university Consortium for Political and Social Research [distributor], 2022-12-12. https://doi.org/10.3886/ICPSR38606.v1"
+  "preferred_citation": "Miller, Stephanie, Melendez, Robert, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Urbanicity by Census Tract, United States, 2010. Inter-university Consortium for Political and Social Research [distributor], 2022-12-12. https://doi.org/10.3886/ICPSR38606.v1",
+  "data_usage_notes": null
 }

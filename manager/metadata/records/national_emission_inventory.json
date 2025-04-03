@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 23,
     "to_fill": 26,
     "filled_pct": 88,
@@ -68,7 +67,7 @@
     1996,
     1990
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -76,16 +75,16 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
-  "rights": null,
-  "rights_holder": null,
-  "license": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
+  "rights": [],
+  "rights_holder": [],
+  "license": [],
   "access_rights": "Public",
   "format": "ZIP, CSV",
   "file_size": null,
@@ -94,14 +93,14 @@
   },
   "wxs_indentifier": null,
   "id": "herop-odfmer",
-  "identifier": null,
-  "modified": "2025-03-18T01:32:58Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Other"
   ],
-  "highlight_ids": null,
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Pollutant (e.g., Carbon Dioxide, Methane, Nitrogen Oxides)",
@@ -124,9 +123,9 @@
     "SCC LEVEL 3 (e.g., Combination Short-haul, third-level classification in SCC)",
     "SCC LEVEL 4 (e.g., All on-road or all off-network, fourth-level classification in SCC)"
   ],
-  "data_usage_notes": "The raw data and summaries that are still available (dating back to 1990) can be obtained from the web page https://www.epa.gov/air-emissions-inventories/pollutant-emissions-summary-files-earlier-neis.  Starting with 2001 data, a more limited selection of summary files are available.",
   "featured_variable": [
     "Emissions"
   ],
-  "preferred_citation": "US EPA (2015). National emissions inventory (NEI). https://www.epa.gov/air-emissions-inventories/national-emissions-inventory-nei"
+  "preferred_citation": "US EPA (2015). National emissions inventory (NEI). https://www.epa.gov/air-emissions-inventories/national-emissions-inventory-nei",
+  "data_usage_notes": "The raw data and summaries that are still available (dating back to 1990) can be obtained from the web page https://www.epa.gov/air-emissions-inventories/pollutant-emissions-summary-files-earlier-neis.  Starting with 2001 data, a more limited selection of summary files are available."
 }

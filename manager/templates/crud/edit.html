@@ -5,11 +5,11 @@
 {% block sidebar %}
 <h2 class="subtitle">Actions</h2>
 <div class="buttons are-small has-addons">
-    <label id="save-button-label" class="button is-success" for="submit-edit-form" tabindex="0" >Save</label>
+    <!-- <label id="save-button-label" class="button is-success" for="submit-edit-form" tabindex="0" >Save</label> -->
     <label id="validate-button-label" class="button is-warning" for="validate-edit-form" tabindex="0" >Validate</label>
     <a href="{% if not create_new %}{{ url_for('manager.handle_record', id=record.id) }}{% else %}{{ url_for('manager.index') }}{% endif %}" class="button is-danger" role="button">Cancel</a>
 </div>
-<div id="validate-result"></div>
+<div id="validate-result">Click Validate to enable Save</div>
 {% endblock %}
 
 {% block main_content %}
@@ -21,7 +21,7 @@
     </ul>
 </div>
 <div class="record-content">
-    <form method="post" id="edit-form">
+    <form action="{{ url_for('manager.handle_record', id=record.id) }}?action=save" method="post" id="edit-form">
         {% for group in display_groups %}
         <div style="background:light-grey;">
             <div class="grouped-title">
@@ -51,7 +51,7 @@
         </div>
         {% endfor %}
         <input type="submit" id="validate-edit-form" class="hidden"
-            hx-post="/record/validate"
+            hx-post="{{ url_for('manager.handle_record', id=record.id) }}?action=validate"
             hx-trigger="click"
             hx-target="#validate-result"
             hx-swap="innerHTML"

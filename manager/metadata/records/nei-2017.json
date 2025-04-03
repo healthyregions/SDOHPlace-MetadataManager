@@ -1,21 +1,20 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 19,
-    "to_fill": 25,
-    "filled_pct": 76,
-    "progress_class": "warning"
+    "to_fill": 26,
+    "filled_pct": 73,
+    "progress_class": "danger"
   },
   "title": "National Emissions Inventory (NEI) 2017",
-  "alternative_title": null,
+  "alternative_title": [],
   "description": [
     "January 2021 version: The 2017 NEI, last released in April 2020, has been updated to include a revised point inventory that corrects airport emissions and incorporates updates to some facilities in several states. All other data category components of the 2017 NEI are unchanged from the April 2020 release: nonpoint (including biogenics, commercial marine vessels, and rail line emissions), onroad mobile, nonroad mobile, and events (wildfires and prescribed burning emissions). All 2017 NEI data products impacted by changes to the point inventory have been updated, including point inventory summaries, All Sectors, and Tier summaries, as well as the associated data query tools. An accompanying interactive 2017 NEI Report is also being released with this update. This is the final public release of the 2017 NEI."
   ],
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "U.S. Environmental Protection Agency (EPA)"
   ],
@@ -51,7 +50,7 @@
   "index_year": [
     2017
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -59,18 +58,18 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
   "is_version_of": [
     "herop-odfmer"
   ],
-  "replaces": null,
-  "is_replaced_by": null,
-  "rights": null,
-  "rights_holder": null,
-  "license": null,
+  "replaces": [],
+  "is_replaced_by": [],
+  "rights": [],
+  "rights_holder": [],
+  "license": [],
   "access_rights": "Public",
   "format": "ZIP, CSV",
   "file_size": null,
@@ -79,17 +78,19 @@
   },
   "wxs_indentifier": null,
   "id": "herop-getwnt",
-  "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
     "County",
     "State"
   ],
-  "highlight_ids": null,
+  "highlight_ids": [],
   "spatial_resolution_note": null,
-  "methods_variables": null,
-  "data_variables": null,
+  "methods_variables": [],
+  "data_variables": [],
+  "featured_variable": [],
+  "preferred_citation": null,
   "data_usage_notes": null
 }

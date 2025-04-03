@@ -1,14 +1,13 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 20,
     "to_fill": 26,
     "filled_pct": 76,
     "progress_class": "warning"
   },
   "title": "Global Streetscapes (Instances)",
-  "alternative_title": null,
+  "alternative_title": [],
   "description": [
     "Contains the count of instances (65 categories) detected in each image."
   ],
@@ -59,7 +58,7 @@
   "index_year": [
     2024
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "Global"
   ],
@@ -67,22 +66,22 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
   "is_version_of": [
     "herop-blhoja"
   ],
-  "replaces": null,
-  "is_replaced_by": null,
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "No use restrictions"
   ],
   "rights_holder": [
     "Hou et al (2024)"
   ],
-  "license": null,
+  "license": [],
   "access_rights": "Public",
   "format": "CSV",
   "file_size": null,
@@ -93,20 +92,20 @@
   },
   "wxs_indentifier": null,
   "id": "herop-couike",
-  "identifier": null,
-  "modified": "2025-03-17T22:39:38Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
     "City"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
-  "methods_variables": null,
+  "methods_variables": [],
   "data_variables": [
     "Unique image ID, Source (Mapillary or KartaView), Orginal ID (by Mapillary or KartaView), Bird, Ground-Animal, Curb, Fence, Guard-Rail, Barrier, Wall, Bike-Lane, Crosswalk---Plain, Curb-Cut, Parking, Pedestrian-Area, Rail-Track, Road, Service-Lane, Sidewalk, Bridge, Building, Tunnel, Person, Bicyclist, Motorcyclist, Other-Rider, Lane-Marking---Crosswalk, Lane-Marking---General, Mountain, Sand, Sky, Snow, Terrain, Vegetation, Water, Banner, Bench, Bike-Rack, Billboard, Catch-Basin, CCTV-Camera, Fire-Hydrant, Junction-Box, Mailbox, Manhole, Phone-Booth, Pothole, Street-Light, Pole, Traffic-Sign-Frame, Utility-Pole, Traffic-Light, Traffic-Sign-(Back), Traffic-Sign-(Front), Trash-Can, Bicycle, Boat, Bus, Car, Caravan, Motorcycle, On-Rails, Other-Vehicle, Trailer, Truck, Wheeled-Slow, Car-Mount, Ego-Vehicle"
   ],
-  "data_usage_notes": null,
-  "highlight_ids": null,
-  "featured_variable": null,
-  "preferred_citation": null
+  "featured_variable": [],
+  "preferred_citation": null,
+  "data_usage_notes": null
 }

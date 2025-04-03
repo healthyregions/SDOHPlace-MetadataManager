@@ -1,21 +1,20 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 22,
-    "to_fill": 25,
-    "filled_pct": 88,
+    "to_fill": 26,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
   "title": "Housing + Transportation Index 2016",
-  "alternative_title": null,
+  "alternative_title": [],
   "description": [
     "The Housing and Transportation (H+T\u00ae) Affordability Index provides a comprehensive view of affordability, one that includes the cost of housing and transportation at the neighborhood level. The Index is part of a broader effort to explore urban sustainability through location efficiency"
   ],
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "The Center for Neighborhood Technology (CNT)"
   ],
@@ -48,7 +47,7 @@
   "index_year": [
     2016
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "Alabama",
     "Alaska",
@@ -106,15 +105,15 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
   "is_version_of": [
     "herop-ddydvt"
   ],
-  "replaces": null,
-  "is_replaced_by": null,
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "None"
   ],
@@ -132,8 +131,8 @@
   },
   "wxs_indentifier": null,
   "id": "herop-xkziex",
-  "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
@@ -144,6 +143,7 @@
     "Census Block",
     "Census Block Group"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Population",
@@ -187,7 +187,7 @@
     "Transportation Costs as a Percent of Household Income",
     "Vehicle Miles Traveled (VMT)"
   ],
-  "data_usage_notes": null,
-  "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": [],
+  "preferred_citation": null,
+  "data_usage_notes": null
 }

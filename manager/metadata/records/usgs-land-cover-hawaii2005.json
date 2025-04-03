@@ -1,21 +1,20 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 21,
     "to_fill": 26,
     "filled_pct": 80,
     "progress_class": "warning"
   },
   "title": "USGS Land Cover (Hawaii 2005)",
-  "alternative_title": null,
+  "alternative_title": [],
   "description": [
     "2005 land cover data for Hawaii"
   ],
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "National Oceanic and Atmospheric Administration"
   ],
@@ -47,7 +46,7 @@
   "index_year": [
     2005
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "Hawaii"
   ],
@@ -55,22 +54,22 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
   "is_version_of": [
     "herop-iviplg"
   ],
-  "replaces": null,
-  "is_replaced_by": null,
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "No use restrictions"
   ],
   "rights_holder": [
     "US Geological Survey"
   ],
-  "license": null,
+  "license": [],
   "access_rights": "Public",
   "format": "Raster Dataset",
   "file_size": null,
@@ -81,20 +80,20 @@
   },
   "wxs_indentifier": null,
   "id": "herop-tylxkq",
-  "identifier": null,
-  "modified": "2025-03-12T22:41:10Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
     "Census Block Group"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": "30m resolution",
-  "methods_variables": null,
+  "methods_variables": [],
   "data_variables": [
     "Land cover type"
   ],
-  "data_usage_notes": null,
-  "highlight_ids": null,
-  "featured_variable": null,
-  "preferred_citation": null
+  "featured_variable": [],
+  "preferred_citation": null,
+  "data_usage_notes": null
 }

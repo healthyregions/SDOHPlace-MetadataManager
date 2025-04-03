@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 24,
     "to_fill": 26,
     "filled_pct": 92,
@@ -63,7 +62,7 @@
   "index_year": [
     2020
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -71,22 +70,22 @@
   "bounding_box": "None",
   "centroid": "None",
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
+  "relation": [],
+  "member_of": [],
   "is_part_of": [
     "herop-lukhbw"
   ],
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "None"
   ],
   "rights_holder": [
     "None"
   ],
-  "license": null,
+  "license": [],
   "access_rights": "Public",
   "format": "CSV | RSS | RDF | XML",
   "file_size": null,
@@ -98,25 +97,25 @@
   },
   "wxs_indentifier": null,
   "id": "herop-ltsvnx",
-  "identifier": null,
-  "modified": "2025-03-17T23:10:37Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
-  "methods_variables": null,
+  "methods_variables": [],
   "data_variables": [
     "Standard error of the estimated ozone concentration",
     "Year of estimate",
     "Date (day-month-year) of estimate",
     "Mean estimated 8-hour average ozone concentration in parts per billion (ppb) within 3 meters of the surface of the earth"
   ],
-  "data_usage_notes": null,
-  "highlight_ids": null,
   "featured_variable": [
     "Standard error of the estimated ozone concentration, Mean estimated 8-hour average ozone concentration in parts per billion (ppb) within 3 meters of the surface of the earth"
   ],
-  "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. (n.d.) Web. Accessed: 02/17/2025. www.cdc.gov/ephtracking"
+  "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. (n.d.) Web. Accessed: 02/17/2025. www.cdc.gov/ephtracking",
+  "data_usage_notes": null
 }

@@ -1,21 +1,20 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 25,
     "to_fill": 26,
     "filled_pct": 96,
     "progress_class": "success"
   },
   "title": "Opportunity Index",
-  "alternative_title": null,
+  "alternative_title": [],
   "description": [
     "Opportunity index provides a snapshot of conditions that can be used to identify and improve access to opportunity - in comprehensive terms - for residents and their communities. The data and full analysis online show how opportunity index scores have changed over time and what access to opportunity looks like today.The raw data is only available for request."
   ],
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "Child Trends and the Forum for Youth Investment\u2019s Opportunity Nation campaign"
   ],
@@ -58,7 +57,7 @@
     2018,
     2019
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -66,18 +65,18 @@
   "bounding_box": "None",
   "centroid": "None",
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "None"
   ],
-  "rights_holder": null,
-  "license": null,
+  "rights_holder": [],
+  "license": [],
   "access_rights": "Public",
   "format": null,
   "file_size": null,
@@ -89,14 +88,15 @@
   },
   "wxs_indentifier": null,
   "id": "herop-yumqkc",
-  "identifier": null,
-  "modified": "2025-03-14T21:03:12Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "County",
     "State"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Number of people incarcerated in jail or prison (per 100,000 population 18 and older) [national and state-level only]",
@@ -146,10 +146,9 @@
     "Unemployment rate (percentage of the population ages 16 and older who are not working but available for and seeking work)",
     "Median household income (in 2010 dollars)"
   ],
-  "data_usage_notes": "In 2017, there was a structural change to the Index, affecting its indicators and dimensions. With the structural change, composite opportunity and dimension scores from 2011 to 2015 should not be compared with those from 2016 and forward.\r\n\r\nThe Opportunity Index continues to incorporate the important structural updates made in 2017, including the newest dimension (Health), and indicator updates (detailed information on those updates can be found in the 2017 Technical Supplement). The 2023 Opportunity Index also disaggregated 11 individual indicators by race, ethnicity, and gender at the national level. This analysis provides an examination of what disparities persist across the various facets of opportunity.  ",
-  "highlight_ids": null,
   "featured_variable": [
     "Opportunity Score"
   ],
-  "preferred_citation": "Opportunity Index. (2013, July 30). Opportunity Index. https://opportunityindex.org/"
+  "preferred_citation": "Opportunity Index. (2013, July 30). Opportunity Index. https://opportunityindex.org/",
+  "data_usage_notes": "In 2017, there was a structural change to the Index, affecting its indicators and dimensions. With the structural change, composite opportunity and dimension scores from 2011 to 2015 should not be compared with those from 2016 and forward.\r\n\r\nThe Opportunity Index continues to incorporate the important structural updates made in 2017, including the newest dimension (Health), and indicator updates (detailed information on those updates can be found in the 2017 Technical Supplement). The 2023 Opportunity Index also disaggregated 11 individual indicators by race, ethnicity, and gender at the national level. This analysis provides an examination of what disparities persist across the various facets of opportunity.  "
 }

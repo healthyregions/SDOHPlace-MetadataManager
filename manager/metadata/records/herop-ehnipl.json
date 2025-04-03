@@ -1,13 +1,20 @@
 {
+  "_meta": {
+    "schema": "sdohplace",
+    "filled": 20,
+    "to_fill": 26,
+    "filled_pct": 76,
+    "progress_class": "warning"
+  },
   "title": "USGS Land Cover (CONUS)",
-  "alternative_title": null,
+  "alternative_title": [],
   "description": [
     "Land cover data for the conterminous United States. Data available for each individual year 1985-2023, and as larger datasets for 1985-1994, 1995-2004, 2005-2014, and 2015-2023."
   ],
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "US Geological Survey"
   ],
@@ -77,7 +84,7 @@
     2022,
     2023
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "Conterminous United States"
   ],
@@ -85,22 +92,22 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
   "is_version_of": [
     "herop-iviplg"
   ],
-  "replaces": null,
-  "is_replaced_by": null,
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "No use restrictions"
   ],
   "rights_holder": [
     "US Geological Survey"
   ],
-  "license": null,
+  "license": [],
   "access_rights": "Public",
   "format": "Raster Dataset",
   "file_size": null,
@@ -111,26 +118,20 @@
   },
   "wxs_indentifier": null,
   "id": "herop-ehnipl",
-  "identifier": null,
-  "modified": "2025-03-17T23:06:48Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
     "Census Block Group"
   ],
-  "highlight_ids": null,
+  "highlight_ids": [],
   "spatial_resolution_note": "30m resolution",
-  "methods_variables": null,
+  "methods_variables": [],
   "data_variables": [
     "Land cover type"
   ],
-  "featured_variable": null,
+  "featured_variable": [],
   "preferred_citation": null,
-  "data_usage_notes": null,
-  "_meta": {
-    "to_fill": 26,
-    "filled": 20,
-    "filled_pct": 76,
-    "progress_class": "warning"
-  }
+  "data_usage_notes": null
 }

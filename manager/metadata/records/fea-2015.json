@@ -1,19 +1,18 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 18,
-    "to_fill": 25,
-    "filled_pct": 72,
+    "to_fill": 26,
+    "filled_pct": 69,
     "progress_class": "danger"
   },
   "title": "Food Environment Atlas (FEA) 2015",
-  "alternative_title": null,
-  "description": null,
+  "alternative_title": [],
+  "description": [],
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "Economic Research Service (ERS), U.S. Department of Agriculture (USDA)"
   ],
@@ -44,7 +43,7 @@
   "index_year": [
     2015
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -52,18 +51,18 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
   "is_version_of": [
     "herop-htraln"
   ],
-  "replaces": null,
-  "is_replaced_by": null,
-  "rights": null,
-  "rights_holder": null,
-  "license": null,
+  "replaces": [],
+  "is_replaced_by": [],
+  "rights": [],
+  "rights_holder": [],
+  "license": [],
   "access_rights": "Public",
   "format": "Zip",
   "file_size": "72.1 MB",
@@ -72,16 +71,18 @@
   },
   "wxs_indentifier": null,
   "id": "herop-cfwbip",
-  "identifier": null,
-  "modified": "2024-12-03T12:15:00Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
     "Census Tract"
   ],
-  "highlight_ids": null,
+  "highlight_ids": [],
   "spatial_resolution_note": null,
-  "methods_variables": null,
-  "data_variables": null,
+  "methods_variables": [],
+  "data_variables": [],
+  "featured_variable": [],
+  "preferred_citation": null,
   "data_usage_notes": null
 }

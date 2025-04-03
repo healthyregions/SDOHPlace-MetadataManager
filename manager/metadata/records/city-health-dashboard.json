@@ -1,16 +1,16 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 23,
     "to_fill": 26,
     "filled_pct": 88,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "City Health Dashboard",
-  "alternative_title": null,
+  "alternative_title": [],
   "description": [
-    "The City Health Dashboard provides communities and city leaders with an array of regularly updated data specific to neighborhood and/or city boundaries\u2014such as life expectancy, park access, and children in poverty, that may serve to improve the health and well-being of everyone in the community. The database and interactive web tool enables exploration of the factors that shape health and the drivers of health equity at the city level."
+    "The City Health Dashboard provides communities and city leaders with an array of regularly updated data specific to neighborhood and/or city boundaries\u2014such as life expectancy, park access, and children in poverty, that may serve to improve the health and well-being of everyone in the community. The database and interactive web tool enables exploration of the factors that shape health and the drivers of health equity in the city level."
   ],
   "language": [
     "eng"
@@ -60,7 +60,7 @@
     2010,
     2020
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "Auburn, Alabama",
     "Birmingham, Alabama",
@@ -973,20 +973,20 @@
   "bounding_box": "None",
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "https://www.cityhealthdashboard.com/terms-of-use"
   ],
   "rights_holder": [
     "None"
   ],
-  "license": null,
+  "license": [],
   "access_rights": "Public",
   "format": "CSV",
   "file_size": "23.1 mb",
@@ -996,9 +996,8 @@
   },
   "wxs_indentifier": null,
   "id": "herop-xtoqlx",
-  "identifier": null,
-  "modified": "2025-03-13T23:37:50Z",
-  "metadata_version": "SDOH PlaceProject",
+  "identifier": [],
+  "modified": "2025-04-03T14:11:16Z",
   "suppressed": false,
   "spatial_resolution": [
     "City",
@@ -30312,7 +30311,7 @@
     "140US15003011105"
   ],
   "spatial_resolution_note": null,
-  "methods_variables": null,
+  "methods_variables": [],
   "data_variables": [
     "Dental Care",
     "Prenatal Care",
@@ -30359,7 +30358,7 @@
     "Voter Turnout",
     "Youth Not in Work or School"
   ],
-  "data_usage_notes": "Error margins are not displayed on the dashboard. However, they are available in the downloadable data files and in the tabular view of the city data. Estimates of similar metrics may differ between the Dashboard and other resources due to different data sources and analytic techniques. When comparing the Dashboard\u2019s estimates to other similar metrics on similar sites, please use caution and refer to the City Health Dashboard Technical Document to understand all potential sources of difference.",
-  "featured_variable": null,
-  "preferred_citation": "Department of Population Health, NYU Langone Health. City Health Dashboard. https://www.cityhealthdashboard.com/. Accessed [INSERT DATE OF ACCESS]."
+  "featured_variable": [],
+  "preferred_citation": "Department of Population Health, NYU Langone Health. City Health Dashboard. https://www.cityhealthdashboard.com/. Accessed [INSERT DATE OF ACCESS].",
+  "data_usage_notes": "Error margins are not displayed on the dashboard. However, they are available in the downloadable data files and in the tabular view of the city data. Estimates of similar metrics may differ between the Dashboard and other resources due to different data sources and analytic techniques. When comparing the Dashboard\u2019s estimates to other similar metrics on similar sites, please use caution and refer to the City Health Dashboard Technical Document to understand all potential sources of difference."
 }

@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 24,
     "to_fill": 26,
     "filled_pct": 92,
@@ -17,7 +16,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "The Center for Neighborhood Technology (CNT)"
   ],
@@ -55,7 +54,7 @@
     2019,
     2020
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "Alabama",
     "Alaska",
@@ -113,13 +112,13 @@
   "bounding_box": "None",
   "centroid": "None",
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "None"
   ],
@@ -139,12 +138,15 @@
   },
   "wxs_indentifier": null,
   "id": "herop-ddydvt",
-  "identifier": null,
-  "modified": "2025-03-18T01:37:31Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
+  ],
+  "highlight_ids": [
+    "150US*"
   ],
   "spatial_resolution_note": null,
   "methods_variables": [
@@ -216,12 +218,9 @@
     "PCT_owner_occupied_housing",
     "PCT_renter_occupied_housing"
   ],
-  "data_usage_notes": null,
-  "highlight_ids": [
-    "150US*"
-  ],
   "featured_variable": [
     "Housing + Transportation (H + T) Costs as a Percent of Household Income"
   ],
-  "preferred_citation": null
+  "preferred_citation": null,
+  "data_usage_notes": null
 }

@@ -1,10 +1,9 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 21,
-    "to_fill": 25,
-    "filled_pct": 84,
+    "to_fill": 26,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
   "title": "County Health Rankings (2022)",
@@ -17,7 +16,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "Forum One",
     "Robert Wood Johnson Foundation",
@@ -39,7 +38,7 @@
   "theme": [
     "Health"
   ],
-  "keyword": null,
+  "keyword": [],
   "temporal_coverage": [
     "2010-2024"
   ],
@@ -61,7 +60,7 @@
     2023,
     2024
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "Alabama",
     "Alaska",
@@ -119,22 +118,22 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
   "is_version_of": [
     "herop-cfmkuz"
   ],
-  "replaces": null,
-  "is_replaced_by": null,
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "None"
   ],
   "rights_holder": [
     "None"
   ],
-  "license": null,
+  "license": [],
   "access_rights": "Public",
   "format": "CSV",
   "file_size": "13.7 mb",
@@ -146,12 +145,13 @@
   "identifier": [
     "None"
   ],
-  "modified": "2024-12-03T12:15:00Z",
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": true,
   "spatial_resolution": [
     "County"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Food Environment Index",
@@ -195,7 +195,7 @@
     "% Drive Alone to Work",
     "% Long Commute - Drives Alone"
   ],
-  "data_usage_notes": "The data contains a breakdown of the measures used in calculating outcomes, data elements, descriptions, and ranking for each country.",
-  "highlight_ids": null,
-  "featured_variable": null
+  "featured_variable": [],
+  "preferred_citation": null,
+  "data_usage_notes": "The data contains a breakdown of the measures used in calculating outcomes, data elements, descriptions, and ranking for each country."
 }

@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 22,
     "to_fill": 26,
     "filled_pct": 84,
@@ -84,7 +83,7 @@
     2023,
     2024
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -92,18 +91,18 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "See terms of use: https://www.countyhealthrankings.org/terms-use"
   ],
-  "rights_holder": null,
-  "license": null,
+  "rights_holder": [],
+  "license": [],
   "access_rights": "Public",
   "format": null,
   "file_size": null,
@@ -114,15 +113,16 @@
   },
   "wxs_indentifier": null,
   "id": "herop-cfmkuz",
-  "identifier": null,
-  "modified": "2025-03-14T03:37:56Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
-  "methods_variables": null,
+  "methods_variables": [],
   "data_variables": [
     "Years of Potential Life Lost Rate",
     "Percent Fair or Poor Health",
@@ -162,8 +162,7 @@
     "Percent Drive Alone to Work",
     "Percent Long Commute - Drives Alone"
   ],
-  "data_usage_notes": "The data contains a breakdown of the measures used in calculating outcomes, data elements, descriptions, and ranking for each country.",
-  "highlight_ids": null,
-  "featured_variable": null,
-  "preferred_citation": "University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps 2024. www.countyhealthrankings.org. "
+  "featured_variable": [],
+  "preferred_citation": "University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps 2024. www.countyhealthrankings.org. ",
+  "data_usage_notes": "The data contains a breakdown of the measures used in calculating outcomes, data elements, descriptions, and ranking for each country."
 }

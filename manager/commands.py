@@ -76,18 +76,47 @@ registry_grp = AppGroup(
 @registry_grp.command()
 @with_appcontext
 @click.option("--id")
-def resave_records(id):
-    """Loads all records and performs save_data() on each one. Use this to trigger
-    revalidation of all fields."""
+def save_records(id):
+    """Loads all records and performs save() on each one."""
     registry = Registry()
 
     if id:
         record = registry.get_record(id)
-        record.save_data()
+        if not record:
+            print(f"record '{id}' not found. invalid id.")
+            exit()
+        records = [record]
     else:
-        for i in registry.records:
-            i.save_data()
+        records = registry.records
 
+    for r in records:
+        print(f"saving: [{r.data['id']}] {r.data['title']}")
+        r.save()
+
+@registry_grp.command()
+@with_appcontext
+@click.option("--id")
+@click.option("--verbose", is_flag=True, default=False)
+def validate_records(id, verbose):
+    """Loads all records and performs validate() on each one."""
+    registry = Registry()
+
+    if id:
+        record = registry.get_record(id)
+        if not record:
+            print(f"record '{id}' not found. invalid id.")
+            exit()
+        records = [record]
+    else:
+        records = registry.records
+
+    for r in records:
+        print(f"validate: [{r.data['id']}] {r.data['title']}")
+        errors = r.validate()
+        if errors:
+            print(f"{len(errors)} errors")
+        if verbose:
+            print(errors)
 
 @registry_grp.command()
 @with_appcontext
@@ -224,4 +253,4 @@ def generate_highlight_ids(input_file, geography, id_field, apply_to):
             print(f"no record exists matching this id: {apply_to}")
             exit()
         record.data["highlight_ids"] = highlight_ids
-        record.save_data()
+        record.save()

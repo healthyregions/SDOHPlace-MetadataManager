@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Adam Cox",
+    "schema": "sdohplace",
     "filled": 25,
     "to_fill": 26,
     "filled_pct": 96,
     "progress_class": "success"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Access to Jobs and Workers Via Transit",
   "alternative_title": [
     "Access to Jobs and Workers Via Transit"
@@ -17,7 +17,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "U.S. Environmental Protection Agency, Office of Sustainable Communities"
   ],
@@ -61,7 +61,7 @@
   "index_year": [
     2021
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -69,17 +69,17 @@
   "bounding_box": "None",
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
+  "relation": [],
+  "member_of": [],
   "is_part_of": [
     "herop-ppvuzl"
   ],
   "source": [
     "herop-xvenhj"
   ],
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "None"
   ],
@@ -100,9 +100,8 @@
   },
   "wxs_indentifier": null,
   "id": "herop-bnohpx",
-  "identifier": null,
-  "modified": "2025-03-13T23:30:25Z",
-  "metadata_version": "SDOH PlaceProject",
+  "identifier": [],
+  "modified": "2025-04-03T14:03:08Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
@@ -161,9 +160,9 @@
     "Maximum percent of regional jobs accessible by transit among all block group within the same CBSA",
     "Weighted average percent of regional jobs accessible by transit among all block group within the same CBSA"
   ],
-  "data_usage_notes": null,
   "featured_variable": [
     "Accessibility Index - Transit to working-age population"
   ],
-  "preferred_citation": "U.S. EPA. (2021). U.S. environmental protection agency - access to jobs and workers via transit - download. Data.gov. https://catalog.data.gov/dataset/access-to-jobs-and-workers-via-transit-download7"
+  "preferred_citation": "U.S. EPA. (2021). U.S. environmental protection agency - access to jobs and workers via transit - download. Data.gov. https://catalog.data.gov/dataset/access-to-jobs-and-workers-via-transit-download7",
+  "data_usage_notes": null
 }

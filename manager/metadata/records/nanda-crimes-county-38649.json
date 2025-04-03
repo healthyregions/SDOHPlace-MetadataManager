@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 23,
     "to_fill": 26,
     "filled_pct": 88,
@@ -17,7 +16,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "Philippa Clarke",
     "Robert Melendez",
@@ -71,7 +70,7 @@
     2013,
     2014
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -79,18 +78,18 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
+  "relation": [],
+  "member_of": [],
   "is_part_of": [
     "herop-zrurpe"
   ],
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
-  "rights": null,
-  "rights_holder": null,
-  "license": null,
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
+  "rights": [],
+  "rights_holder": [],
+  "license": [],
   "access_rights": "Public",
   "format": "tsv",
   "file_size": "3.6 MB",
@@ -104,54 +103,12 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38649.v1"
   ],
-  "modified": "2025-03-18T14:01:32Z",
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
-  "spatial_resolution_note": null,
-  "methods_variables": [
-    "Murder",
-    "Rape",
-    "Robbery",
-    "Aggravated Assault",
-    "Burglary",
-    "Larceny",
-    "Motor Vehicle Theft",
-    "Arson",
-    "Multi-Jurisdiction Reporting Agencies",
-    "County",
-    "Years",
-    "Crime Longitudinally"
-  ],
-  "data_variables": [
-    "Total crimes excluding arson",
-    "Total crimes including arson",
-    "Total property crimes reported (burglary, larceny, and motor vehicle theft)",
-    "Total violent crimes reported (murder + rape + robbery + aggravated assault)",
-    "County population used to calculate county-level crime reports",
-    "First two digits of the FIPS county code (state)",
-    "Five-digit FIPS county code",
-    "ICPSR case ID number",
-    "ICPSR part number",
-    "Last three digits of the FIPS county code (county)",
-    "Number of agencies in the county reporting arrest data",
-    "Number of agencies in the county reporting offense data",
-    "Proportion of totals based on data provided by reporting agencies (not imputed)",
-    "Total aggravated assaults in the county this year",
-    "Total arsons in the county this year",
-    "Total auto thefts in the county this year",
-    "Total burglaries in the county this year",
-    "Total county population used to calculate arrests",
-    "Total larcenies in the county this year",
-    "Total murders in the county this year",
-    "Total rapes in the county this year",
-    "Total robberies in the county this year",
-    "Version of the ICPSR study from which the observation was obtained",
-    "Year that the offenses occurred"
-  ],
-  "data_usage_notes": "Crime data should be interpreted carefully to avoid reinforcing biases or misrepresenting communities. Users should follow ethical guidelines when reporting findings. The dataset aggregates crime data from various sources, including the FBI\u2019s Uniform Crime Reporting (UCR) program. Differences in local crime reporting practices and law enforcement policies may affect data consistency across counties.",
   "highlight_ids": [
     "-050US72054",
     "-050US72113",
@@ -253,6 +210,48 @@
     "-050US72129",
     "-050US02105"
   ],
-  "featured_variable": null,
-  "preferred_citation": "Clarke, Philippa, Melendez, Robert, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Crimes by County, United States, 2002-2014. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2019-12-02. https://doi.org/10.3886/E115006V1"
+  "spatial_resolution_note": null,
+  "methods_variables": [
+    "Murder",
+    "Rape",
+    "Robbery",
+    "Aggravated Assault",
+    "Burglary",
+    "Larceny",
+    "Motor Vehicle Theft",
+    "Arson",
+    "Multi-Jurisdiction Reporting Agencies",
+    "County",
+    "Years",
+    "Crime Longitudinally"
+  ],
+  "data_variables": [
+    "Total crimes excluding arson",
+    "Total crimes including arson",
+    "Total property crimes reported (burglary, larceny, and motor vehicle theft)",
+    "Total violent crimes reported (murder + rape + robbery + aggravated assault)",
+    "County population used to calculate county-level crime reports",
+    "First two digits of the FIPS county code (state)",
+    "Five-digit FIPS county code",
+    "ICPSR case ID number",
+    "ICPSR part number",
+    "Last three digits of the FIPS county code (county)",
+    "Number of agencies in the county reporting arrest data",
+    "Number of agencies in the county reporting offense data",
+    "Proportion of totals based on data provided by reporting agencies (not imputed)",
+    "Total aggravated assaults in the county this year",
+    "Total arsons in the county this year",
+    "Total auto thefts in the county this year",
+    "Total burglaries in the county this year",
+    "Total county population used to calculate arrests",
+    "Total larcenies in the county this year",
+    "Total murders in the county this year",
+    "Total rapes in the county this year",
+    "Total robberies in the county this year",
+    "Version of the ICPSR study from which the observation was obtained",
+    "Year that the offenses occurred"
+  ],
+  "featured_variable": [],
+  "preferred_citation": "Clarke, Philippa, Melendez, Robert, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Crimes by County, United States, 2002-2014. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2019-12-02. https://doi.org/10.3886/E115006V1",
+  "data_usage_notes": "Crime data should be interpreted carefully to avoid reinforcing biases or misrepresenting communities. Users should follow ethical guidelines when reporting findings. The dataset aggregates crime data from various sources, including the FBI\u2019s Uniform Crime Reporting (UCR) program. Differences in local crime reporting practices and law enforcement policies may affect data consistency across counties."
 }

@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 24,
     "to_fill": 26,
     "filled_pct": 92,
@@ -17,7 +16,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "Environmental Public Health Tracking Network",
     "Centers for Disease Control and Prevention",
@@ -57,7 +56,7 @@
   "index_year": [
     2019
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -65,15 +64,15 @@
   "bounding_box": "None",
   "centroid": "None",
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
+  "relation": [],
+  "member_of": [],
   "is_part_of": [
     "herop-lukhbw"
   ],
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "None"
   ],
@@ -94,15 +93,18 @@
   },
   "wxs_indentifier": null,
   "id": "herop-dxpjno",
-  "identifier": null,
-  "modified": "2025-03-17T23:11:03Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
+  "highlight_ids": [
+    "050US*"
+  ],
   "spatial_resolution_note": null,
-  "methods_variables": null,
+  "methods_variables": [],
   "data_variables": [
     "Year of prediction",
     "Date (day-month-year) of prediction",
@@ -111,12 +113,9 @@
     "Mean estimated 24-hour average PM2.5 concentration in \u03bcg/m3 for the county",
     "Population-weighted estimated 24-hour average PM2.5 concentration in \u03bcg/m3 for the county"
   ],
-  "data_usage_notes": null,
-  "highlight_ids": [
-    "050US*"
-  ],
   "featured_variable": [
     "Maximum, median, mean, and population-weighted estimates of 24-hour average PM2.5 concentration in \u03bcg/m3 for the county"
   ],
-  "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. Web. Accessed: insert date. www.cdc.gov/ephtracking."
+  "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. Web. Accessed: insert date. www.cdc.gov/ephtracking.",
+  "data_usage_notes": null
 }

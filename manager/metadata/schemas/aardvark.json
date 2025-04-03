@@ -1,4 +1,6 @@
 {
+    "name": "Aardvark",
+    "id": "aardvark",
     "display_groups": [
         "Identifiers",
         "Descriptive",

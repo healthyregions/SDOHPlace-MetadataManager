@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 23,
     "to_fill": 26,
     "filled_pct": 88,
@@ -17,7 +16,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "Chenoweth, Megan",
     "Li, Mao",
@@ -68,7 +67,7 @@
     2017,
     2018
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -76,18 +75,18 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
+  "relation": [],
+  "member_of": [],
   "is_part_of": [
     "herop-zrurpe"
   ],
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
-  "rights": null,
-  "rights_holder": null,
-  "license": null,
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
+  "rights": [],
+  "rights_holder": [],
+  "license": [],
   "access_rights": "Public",
   "format": "CSV",
   "file_size": "2.7 MB",
@@ -99,12 +98,13 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38506.v1"
   ],
-  "modified": "2025-03-18T02:01:07Z",
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": "Warning: Alaska and island territories are excluded in this dataset",
   "methods_variables": [
     "Voter Registration",
@@ -135,8 +135,7 @@
     "Republican partisanship index (Percentage of votes cast, past 6 years)",
     "Year"
   ],
-  "data_usage_notes": "This dataset was created to explore the relationship between voter engagement (as expressed through registration and turnout rates), partisan political leanings, community health, and public policy.\r\n\r\n",
-  "highlight_ids": null,
-  "featured_variable": null,
-  "preferred_citation": "Megan Chenoweth, University of Michigan. Institute for Social Research; Mao Li, University of Michigan. Institute for Social Research; Iris N. Gomez-Lopez, University of Michigan. Institute for Social Research; Ken Kollman, University of Michigan. Institute for Social Research"
+  "featured_variable": [],
+  "preferred_citation": "Megan Chenoweth, University of Michigan. Institute for Social Research; Mao Li, University of Michigan. Institute for Social Research; Iris N. Gomez-Lopez, University of Michigan. Institute for Social Research; Ken Kollman, University of Michigan. Institute for Social Research",
+  "data_usage_notes": "This dataset was created to explore the relationship between voter engagement (as expressed through registration and turnout rates), partisan political leanings, community health, and public policy.\r\n\r\n"
 }

@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 20,
     "to_fill": 26,
     "filled_pct": 76,
@@ -17,7 +16,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "USDA Forest Service"
   ],
@@ -59,7 +58,7 @@
     2020,
     2021
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States, Puerto Rico, US Virgin Islands"
   ],
@@ -67,20 +66,20 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "No use restrictions"
   ],
   "rights_holder": [
     "US Geological Survey"
   ],
-  "license": null,
+  "license": [],
   "access_rights": "Public",
   "format": "Raster Dataset",
   "file_size": null,
@@ -91,20 +90,20 @@
   },
   "wxs_indentifier": null,
   "id": "herop-qwqgwc",
-  "identifier": null,
-  "modified": "2025-03-12T21:20:15Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Other"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": "30m resolution",
-  "methods_variables": null,
+  "methods_variables": [],
   "data_variables": [
     "Percent Tree Canopy Cover"
   ],
-  "data_usage_notes": null,
-  "highlight_ids": null,
-  "featured_variable": null,
-  "preferred_citation": null
+  "featured_variable": [],
+  "preferred_citation": null,
+  "data_usage_notes": null
 }

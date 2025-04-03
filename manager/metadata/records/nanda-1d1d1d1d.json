@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 22,
     "to_fill": 26,
     "filled_pct": 84,
@@ -17,7 +16,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "University of Michigan. Institute for Social Research"
   ],
@@ -50,7 +49,7 @@
   "index_year": [
     2010
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -58,33 +57,34 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
+  "relation": [],
+  "member_of": [],
   "is_part_of": [
     "herop-zrurpe"
   ],
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
-  "rights": null,
-  "rights_holder": null,
-  "license": null,
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
+  "rights": [],
+  "rights_holder": [],
+  "license": [],
   "access_rights": "Public",
   "format": "csv | dta",
   "file_size": "1.8 MB\t",
-  "references": null,
+  "references": {},
   "wxs_indentifier": null,
   "id": "herop-kgnhrw",
   "identifier": [
     "doi.org/10.3886/ICPSR38580.v2"
   ],
-  "modified": "2025-03-17T23:12:32Z",
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Zip Code Tabulation Area (ZCTA)"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "links, street lengths, nodes,  endpoints of links, Buffers, areas over which to calculate street connectivity, Circuits,  connected path along streets"
@@ -93,8 +93,7 @@
     "block density, block length, streets, nodes, zcta, n_streets , n_nodes, n_realnodes, zcta_area_sqmiles, sum_strintlen, n_blocks, linkNodeRatio, Alpha index ratio of actual circuits to maximum circuits, Gamma index ratio of total links fully in the ZCTA to the maximum possible number of",
     "links in the ZCTA"
   ],
-  "data_usage_notes": "This dataset contains measures of street connectivity (how well streets connect) within United States ZIP code tabulation areas (ZCTAs). This includes measures of the number of street segments (links) and intersections (nodes) per ZCTA, street length within ZCTAs, and indices representing overall connectivity within the ZCTA.",
-  "highlight_ids": null,
-  "featured_variable": null,
-  "preferred_citation": "Ailshire, Jennifer, Melendez, Robert, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Street Connectivity by ZIP Code Tabulation Area, United States, 2010. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2021-03-10. https://doi.org/10.3886/E134561V1"
+  "featured_variable": [],
+  "preferred_citation": "Ailshire, Jennifer, Melendez, Robert, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Street Connectivity by ZIP Code Tabulation Area, United States, 2010. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2021-03-10. https://doi.org/10.3886/E134561V1",
+  "data_usage_notes": "This dataset contains measures of street connectivity (how well streets connect) within United States ZIP code tabulation areas (ZCTAs). This includes measures of the number of street segments (links) and intersections (nodes) per ZCTA, street length within ZCTAs, and indices representing overall connectivity within the ZCTA."
 }

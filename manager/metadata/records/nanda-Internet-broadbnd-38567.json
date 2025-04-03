@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 23,
     "to_fill": 26,
     "filled_pct": 88,
@@ -61,7 +60,7 @@
     2019,
     2020
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -69,17 +68,17 @@
   "bounding_box": null,
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
+  "relation": [],
+  "member_of": [],
   "is_part_of": [
     "herop-zrurpe"
   ],
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
-  "rights": null,
-  "rights_holder": null,
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
+  "rights": [],
+  "rights_holder": [],
   "license": [
     "This work is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) License."
   ],
@@ -96,13 +95,14 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38567.v1"
   ],
-  "modified": "2025-03-17T23:11:49Z",
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract",
     "Zip Code Tabulation Area (ZCTA)"
   ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Sum of Maximum CIR (Committed Information Rate) download speed across all providers",
@@ -147,10 +147,9 @@
     "Residential fixed broadband connections per 1000 households (with a minimum speed of 200 kbps+)",
     "Residential fixed broadband connections per 1000 households with speeds of at least 10 Mbps download / 1 Mbps upload"
   ],
-  "data_usage_notes": "This dataset supplements the National Neighborhood Data Archive (NaNDA): Broadband Internet Availability, Speed, and Adoption by Census Tract, United States, 2014-2020, which provides broadband availability data from the Federal Communications Commission (FCC).\r\n\r\nKey differences exist between these datasets. The FCC-derived data is longitudinal (2014\u20132020) and focuses on broadband availability, whereas the American Community Survey (ACS)-derived data represents a single measure for 2015\u20132019 and focuses on household-level internet access and usage.\r\n\r\n",
-  "highlight_ids": null,
   "featured_variable": [
     "Average upload and download speed of fixed broadband connections, Number of internet service providers, Number of actual connections per 1000 households"
   ],
-  "preferred_citation": "Li, Mao, Gomez-Lopez, Iris, Khan, Anam, Clarke, Philippa, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Broadband Internet Availability, Speed, and Adoption by Census Tract, United States, 2014-2020. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2021-10-21. https://doi.org/10.3886/E117866V2"
+  "preferred_citation": "Li, Mao, Gomez-Lopez, Iris, Khan, Anam, Clarke, Philippa, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Broadband Internet Availability, Speed, and Adoption by Census Tract, United States, 2014-2020. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2021-10-21. https://doi.org/10.3886/E117866V2",
+  "data_usage_notes": "This dataset supplements the National Neighborhood Data Archive (NaNDA): Broadband Internet Availability, Speed, and Adoption by Census Tract, United States, 2014-2020, which provides broadband availability data from the Federal Communications Commission (FCC).\r\n\r\nKey differences exist between these datasets. The FCC-derived data is longitudinal (2014\u20132020) and focuses on broadband availability, whereas the American Community Survey (ACS)-derived data represents a single measure for 2015\u20132019 and focuses on household-level internet access and usage.\r\n\r\n"
 }

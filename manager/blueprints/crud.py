@@ -35,7 +35,7 @@ logger = logging.getLogger(__name__)
 def index():
     registry = Registry()
     show_hidden = True if request.args.get("show-hidden") == "true" else False
-    records = [r.to_json() for r in registry.records]
+    records = registry.records_as_json()
     if show_hidden is False:
         records = [r for r in records if r["suppressed"] is not True]
     return render_template("index.html", records=records, show_hidden=show_hidden)
@@ -44,7 +44,7 @@ def index():
 @crud.route("/table", methods=["GET"])
 def table_view():
     registry = Registry()
-    records = [r.to_json() for r in registry.records]
+    records = registry.records_as_json()
     schema = registry.schema
     fields = schema.schema_json["fields"]
     return render_template("full_table.html", records=records, fields=fields)
@@ -55,7 +55,7 @@ def table_view():
 def create_record():
     if request.method == "GET":
         schema = Registry().schema
-        records = [r.to_json() for r in registry.records]
+        records = registry.records_as_json()
         relations_choices = [(r["id"], r["title"]) for r in records]
         return render_template(
             "crud/edit.html",
@@ -64,23 +64,6 @@ def create_record():
             display_groups=schema.display_groups,
             relations_choices=relations_choices,
         )
-
-
-@crud.route("/record/validate", methods=["POST"])
-@login_required
-def validate_record():
-    if request.method == "POST":
-        registry = Registry()
-        schema = registry.schema
-        form_errors = schema.validate_form_data(request.form)
-        if form_errors:
-            html = "<ul>"
-            for i in form_errors:
-                html += f'<li class="notification is-danger">{i}</li>'
-            html += "</ul>"
-        else:
-            html = '<label id="save-button-label" class="button is-success is-small is-fullwidth" for="submit-edit-form" tabindex="0" >Save</label>'
-        return html
 
 
 @crud.route("/record/<id>", methods=["GET", "POST", "DELETE"])
@@ -93,7 +76,7 @@ def handle_record(id):
         format = request.args.get("f", "html")
         edit = request.args.get("edit") == "true"
         if format == "html":
-            records = [r.to_json() for r in registry.records]
+            records = registry.records_as_json()
             link_list = [
                 {"id": r["id"], "title": r["title"]}
                 for r in records
@@ -121,15 +104,44 @@ def handle_record(id):
             return jsonify(record.to_solr())
 
     if request.method == "POST":
-        registry = Registry()
-        if current_user.is_authenticated:
+
+        if not current_user.is_authenticated:
+            raise Unauthorized
+
+        action = request.args.get("action")
+        if action == "validate":
+            registry = Registry()
             record = registry.get_record(id)
-            if record:
-                record.save_from_form_data(request.form)
-                record.last_modified_by = current_user.name
-            else:
+            if not record:
                 record = Record(registry.schema)
-                record.save_from_form_data(request.form)
+
+            form_errors = []
+            try:
+                record.update_from_form_data(request.form)
+                form_errors += record.validate()
+            except Exception as e:
+                form_errors += [
+                    f"Error parsing form: {e}",
+                    "This must be fixed before you can continue",
+                ]
+            if form_errors:
+                html = "<ul>"
+                for i in form_errors:
+                    html += f'<li class="notification is-danger">{i}</li>'
+                html += "</ul>"
+            else:
+                html = '<label id="save-button-label" class="button is-success is-small is-fullwidth" for="submit-edit-form" tabindex="0" >Save</label>'
+            return html
+
+        elif action == "save":
+            registry = Registry()
+            record = registry.get_record(id)
+            if not record:
+                record = Record(registry.schema)
+
+            record.update_from_form_data(request.form)
+            record.save()
+
             return redirect(url_for("manager.handle_record", id=record.data["id"]))
         else:
             raise Unauthorized

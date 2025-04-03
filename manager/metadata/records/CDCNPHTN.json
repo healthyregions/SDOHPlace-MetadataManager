@@ -1,7 +1,6 @@
 {
   "_meta": {
-    "created_by": "",
-    "last_modified_by": "Admin",
+    "schema": "sdohplace",
     "filled": 24,
     "to_fill": 26,
     "filled_pct": 92,
@@ -17,7 +16,7 @@
   "language": [
     "eng"
   ],
-  "display_note": null,
+  "display_note": [],
   "creator": [
     "Environmental Public Health Tracking Network",
     "Centers for Disease Control and Prevention",
@@ -69,7 +68,7 @@
     2018,
     2019
   ],
-  "date_range": null,
+  "date_range": [],
   "spatial_coverage": [
     "United States"
   ],
@@ -77,13 +76,13 @@
   "bounding_box": "None",
   "centroid": null,
   "georeferenced": false,
-  "relation": null,
-  "member_of": null,
-  "is_part_of": null,
-  "source": null,
-  "is_version_of": null,
-  "replaces": null,
-  "is_replaced_by": null,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
   "rights": [
     "None"
   ],
@@ -104,8 +103,8 @@
   },
   "wxs_indentifier": null,
   "id": "herop-lukhbw",
-  "identifier": null,
-  "modified": "2025-03-17T23:07:50Z",
+  "identifier": [],
+  "modified": "2025-04-03T14:01:19Z",
   "metadata_version": "SDOH PlaceProject",
   "suppressed": false,
   "spatial_resolution": [
@@ -1765,7 +1764,7 @@
     "Crude Death Rate from CO Poisoning per 100,000 Population over a 5-year Period",
     "Age-adjusted Death Rate from CO Poisoning per 100,000 Population over a 5-year Period"
   ],
-  "data_usage_notes": null,
-  "featured_variable": null,
-  "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. (n.d.) Web. Accessed: 04/18/2018. www.cdc.gov/ephtracking."
+  "featured_variable": [],
+  "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. (n.d.) Web. Accessed: 04/18/2018. www.cdc.gov/ephtracking.",
+  "data_usage_notes": null
 }
