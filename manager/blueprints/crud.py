@@ -66,23 +66,6 @@ def create_record():
         )
 
 
-@crud.route("/record/validate", methods=["POST"])
-@login_required
-def validate_record():
-    if request.method == "POST":
-        registry = Registry()
-        schema = registry.schema
-        form_errors = schema.validate_form_data(request.form)
-        if form_errors:
-            html = "<ul>"
-            for i in form_errors:
-                html += f'<li class="notification is-danger">{i}</li>'
-            html += "</ul>"
-        else:
-            html = '<label id="save-button-label" class="button is-success is-small is-fullwidth" for="submit-edit-form" tabindex="0" >Save</label>'
-        return html
-
-
 @crud.route("/record/<id>", methods=["GET", "POST", "DELETE"])
 def handle_record(id):
     if request.method == "GET":
@@ -121,15 +104,36 @@ def handle_record(id):
             return jsonify(record.to_solr())
 
     if request.method == "POST":
-        registry = Registry()
-        if current_user.is_authenticated:
+
+        if not current_user.is_authenticated:
+            raise Unauthorized
+
+        action = request.args.get("action")
+        if action == "validate":
+            registry = Registry()
             record = registry.get_record(id)
-            if record:
-                record.save_from_form_data(request.form)
-                record.last_modified_by = current_user.name
+            if not record:
+                return NotFound
+            record.update_from_form_data(request.form)
+            form_errors = record.validate()
+            if form_errors:
+                html = "<ul>"
+                for i in form_errors:
+                    html += f'<li class="notification is-danger">{i}</li>'
+                html += "</ul>"
             else:
+                html = '<label id="save-button-label" class="button is-success is-small is-fullwidth" for="submit-edit-form" tabindex="0" >Save</label>'
+            return html
+
+        elif action == "save":
+            registry = Registry()
+            record = registry.get_record(id)
+            if not record:
                 record = Record(registry.schema)
-                record.save_from_form_data(request.form)
+
+            record.update_from_form_data(request.form)
+            record.save()
+
             return redirect(url_for("manager.handle_record", id=record.data["id"]))
         else:
             raise Unauthorized

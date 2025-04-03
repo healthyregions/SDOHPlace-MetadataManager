@@ -21,7 +21,7 @@
     </ul>
 </div>
 <div class="record-content">
-    <form method="post" id="edit-form">
+    <form action="{{ url_for('manager.handle_record', id=record.id) }}?action=save" method="post" id="edit-form">
         {% for group in display_groups %}
         <div style="background:light-grey;">
             <div class="grouped-title">
@@ -51,7 +51,7 @@
         </div>
         {% endfor %}
         <input type="submit" id="validate-edit-form" class="hidden"
-            hx-post="/record/validate"
+            hx-post="{{ url_for('manager.handle_record', id=record.id) }}?action=validate"
             hx-trigger="click"
             hx-target="#validate-result"
             hx-swap="innerHTML"
