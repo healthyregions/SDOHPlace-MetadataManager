@@ -7,14 +7,19 @@ use the dropdown to add a new value to the list
 {% block input %}
 <div style="display:flex; flex-direction: column;">
     <div style="display:flex;">
-        <select id="{{ field.id }}-select" name="{{ field.id }}-select" placeholder="">
-            {% for choice in field.controlled_options %}
-            <option value="{{ choice }}">{{ choice }}</option>
-            {% endfor %}
-        </select>
-        <div id="clear-button" style="cursor:pointer; margin-left:1em;">Click to clear existing values</div>
+        <div class="select">
+            <select id="{{ field.id }}-select" name="{{ field.id }}-select" placeholder="">
+                {% for choice in field.controlled_options %}
+                <option value="{{ choice }}">{{ choice }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div id="clear-button" class="button is-danger" style="cursor:pointer; margin-left:1em;">Click to clear</div>
     </div>
-    <input id="{{ field.id }}-selected" name="{{ field.id }}" readonly {% if record %}value="{{ record[field.id] }}"{% endif %} style="width:100%;"/>
+    <div class="level">
+        <span style="text-wrap: nowrap;">Current value:</span>
+        <input id="{{ field.id }}-selected" class="input is-static" name="{{ field.id }}" readonly {% if record %}value="{{ record[field.id] }}"{% endif %} style="width:100%;"/>
+    </div>
 </div>
 <script>
     const selected = document.getElementById("{{ field.id }}-selected");
