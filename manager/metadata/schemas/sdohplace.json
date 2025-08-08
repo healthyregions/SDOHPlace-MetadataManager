@@ -334,7 +334,7 @@
             "schema": "Aardvark",
             "display_group": "Categories",
             "slug": "subject",
-            "widget": "checkboxes.html",
+            "widget": "ordered-multi-select.html",
             "id": "subject"
         },
         {
