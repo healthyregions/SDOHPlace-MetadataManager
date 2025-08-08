@@ -293,6 +293,9 @@ class Field:
         if value == "":
             value = None
 
+        if self.widget == "ordered-multi-select.html":
+            value = value.split("|") if value else None
+
         if self.widget == "checkboxes.html":
             value = [
                 k.split("--")[1]

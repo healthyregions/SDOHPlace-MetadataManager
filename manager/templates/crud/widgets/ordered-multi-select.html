@@ -1,0 +1,30 @@
+{% extends 'crud/widgets/_base.html' %}
+
+{% block note %}
+use the dropdown to add a new value to the list
+{% endblock %}
+
+{% block input %}
+<div style="display:flex; flex-direction: column;">
+    <div style="display:flex;">
+        <select id="{{ field.id }}-select" name="{{ field.id }}-select" placeholder="">
+            {% for choice in field.controlled_options %}
+            <option value="{{ choice }}">{{ choice }}</option>
+            {% endfor %}
+        </select>
+        <div id="clear-button" style="cursor:pointer; margin-left:1em;">Click to clear existing values</div>
+    </div>
+    <input id="{{ field.id }}-selected" name="{{ field.id }}" readonly {% if record %}value="{{ record[field.id] }}"{% endif %} style="width:100%;"/>
+</div>
+<script>
+    const selected = document.getElementById("{{ field.id }}-selected");
+    document.getElementById("{{ field.id }}-select").addEventListener("change", (evt) => {
+        const vals = selected.value.split("|").filter(i => i)
+        if (!vals.includes(evt.target.value)) {vals.push(evt.target.value)}
+        selected.value = vals.join("|");
+    })
+    document.getElementById("clear-button").addEventListener("click", (evt) => {
+        selected.value = "";
+    })
+</script>
+{% endblock %}
