@@ -6,10 +6,11 @@
     "filled_pct": 96,
     "progress_class": "success"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Opportunity Index",
   "alternative_title": [],
   "description": [
-    "Opportunity index provides a snapshot of conditions that can be used to identify and improve access to opportunity - in comprehensive terms - for residents and their communities. The data and full analysis online show how opportunity index scores have changed over time and what access to opportunity looks like today.The raw data is only available for request."
+    "The Opportunity Index provides a snapshot of conditions that can be used to identify and improve access to opportunity - in comprehensive terms - for residents and their communities. The data and full analysis online show how opportunity index scores have changed over time and what access to opportunity looks like today. The raw data is only available for request."
   ],
   "language": [
     "eng"
@@ -89,14 +90,15 @@
   "wxs_indentifier": null,
   "id": "herop-yumqkc",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-06-25T17:10:41Z",
   "suppressed": false,
   "spatial_resolution": [
     "County",
     "State"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Number of people incarcerated in jail or prison (per 100,000 population 18 and older) [national and state-level only]",

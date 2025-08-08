@@ -1,0 +1,173 @@
+{
+  "_meta": {
+    "schema": "sdohplace",
+    "filled": 19,
+    "to_fill": 26,
+    "filled_pct": 73,
+    "progress_class": "danger"
+  },
+  "metadata_version": "SDOH PlaceProject",
+  "title": "Structural Racism and Discrimination Index",
+  "alternative_title": [
+    "SRD Index"
+  ],
+  "description": [
+    "The index assigns a national and a state score to each county by combining indicators of racial discrimination against Black communities across five key dimensions: residential segregation, housing, income, healthcare, and the criminal justice system."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": [],
+  "creator": [
+    "Dr. Debarchana (Debs) Ghosh",
+    "Sabina Bhandari",
+    "Dr. Cheryl Knott"
+  ],
+  "publisher": [
+    "University of Connecticut",
+    "University of Maryland"
+  ],
+  "provider": null,
+  "resource_class": [
+    "Datasets",
+    "Websites"
+  ],
+  "resource_type": [
+    "Census data",
+    "Table data"
+  ],
+  "subject": [
+    "Demographics",
+    "Economic Stability",
+    "Health and Healthcare",
+    "Housing",
+    "Safety",
+    "Social and Community Context",
+    "Composite Index"
+  ],
+  "theme": [],
+  "keyword": [
+    "Structural Racism",
+    "Discrimination",
+    "SRI Index",
+    "Residential Segregation",
+    "Housing",
+    "Income",
+    "Healthcare Resources",
+    "Crime and Incarceration"
+  ],
+  "temporal_coverage": [],
+  "date_issued": null,
+  "index_year": [
+    1990,
+    2000,
+    2010,
+    2020
+  ],
+  "date_range": [],
+  "spatial_coverage": [],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": false,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
+  "rights": [],
+  "rights_holder": [],
+  "license": [],
+  "access_rights": "Public",
+  "format": null,
+  "file_size": null,
+  "references": {
+    "http://schema.org/url": "https://structuralracism.research.uconn.edu"
+  },
+  "wxs_indentifier": null,
+  "id": "herop-pnlslp",
+  "identifier": [],
+  "modified": "2025-07-23T23:15:59Z",
+  "suppressed": false,
+  "spatial_resolution": [
+    "County",
+    "State",
+    "Other"
+  ],
+  "highlight_ids": [
+    ""
+  ],
+  "spatial_resolution_note": null,
+  "methods_variables": [
+    "Racial Concentration",
+    "Racial Diversity",
+    "Home-Mortgage Loan Denial Gap",
+    "Home Ownership Gap",
+    "Median Household Income Gap",
+    "Unemployment Gap",
+    "Below-Poverty Gap",
+    "Primary Care",
+    "Mental Health Care",
+    "Dental Health Care",
+    "Health Uninsurance Gap",
+    "Violent Crime Arrests Gap",
+    "Property Crime Arrests Gap",
+    "Incarceration Gap",
+    "Homicide Fatalities Gap",
+    "Firearm Fatalities Gap"
+  ],
+  "data_variables": [
+    "2-Digit FIPS Code",
+    "5-Digit FIPS Code",
+    "County Name",
+    "State/Territory Name",
+    "Rural-Urban Continuum Code (RUCC)",
+    "Year",
+    "Number of Black population",
+    "Number of White population",
+    "Percentage of Black population",
+    "Percentage of White population",
+    "Index of Concentration at the Extremes for Race",
+    "Entropy",
+    "Gap in Loan Non-Origination between Black/African American & White applicants",
+    "Gap in Homeowership between Black/African American & White populations",
+    "Gap in Median Household Income between Black/African American & White populations",
+    "Gap in Unemployment between Black/African American & White populations",
+    "Gap in Below Poverty Rate between Black/African American & White populations",
+    "Rate of total Primary Care Providers per 100,000 populations (all races)",
+    "Rate of total Mental Health Care Providers per 100,000 populations (all races)",
+    "Rate of total Dental Health Care Providers per 100,000 populations (all races)",
+    "Gap in Uninsurance between Black/African American & White populations",
+    "Gap in Arrests for Violent Crime between Black/African American & White populations",
+    "Gap in Arrests for Property Crime between Black/African American & White populations",
+    "Gap in Incarceration Rates between Black/African American & White populations",
+    "Gap in Homicide-related Deaths between Black/African American & White populations",
+    "Gap in Firearm-related Deaths between Black/African American & White populations",
+    "National level z-score",
+    "National level composite z-score for Segregation Dimension",
+    "National-level composite z-score for Housing Dimension",
+    "National-level composite z-score for Income Dimension",
+    "National-level composite z-score for Healthcare Resources Dimension",
+    "National-level composite z-score for Crime and Incarceration Dimension",
+    "National-level overall composite z-score of all 5 dimensions",
+    "National-level score based on percentile ranking",
+    "State-leve z-score",
+    "State-level composite z-score",
+    "1 = Metro - Counties in metro areas of 1 million population or more",
+    "2 = Metro - Counties in metro areas of 250,000 to 1 million population",
+    "3 = Metro - Counties in metro areas of fewer than 250,000 population",
+    "4 = Nonmetro - Urban population of 20,000 or more, adjacent to a metro area",
+    "5 = Nonmetro - Urban population of 20,000 or more, not adjacent to a metro area",
+    "6 = Nonmetro - Urban population of 5,000 to 20,000, adjacent to a metro area",
+    "7 = Nonmetro - Urban population of 5,000 to 20,000, not adjacent to a metro area",
+    "8 = Nonmetro - Urban population of fewer than 5,000, adjacent to a metro area",
+    "9 = Nonmetro - Urban population of fewer than 5,000, not adjacent to a metro area"
+  ],
+  "featured_variable": [
+    "SRD Score"
+  ],
+  "preferred_citation": "Debarchana Ghosh, Sabina Bhandari, and Cheryl Knott. A Measure for Place-Based Structural Racism and Discrimination Over Time: Version 1.0 SRD Index. 2025.",
+  "data_usage_notes": null
+}

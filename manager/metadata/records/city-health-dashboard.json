@@ -991,13 +991,14 @@
   "format": "CSV",
   "file_size": "23.1 mb",
   "references": {
+    "http://schema.org/url": "https://www.cityhealthdashboard.com/",
     "http://lccn.loc.gov/sh85035852": "https://www.cityhealthdashboard.com/data-access",
     "http://schema.org/downloadUrl": "https://assets.ctfassets.net/2b49co28d55u/1FdfgsUln2VB4gQsRtaiQQ/4944489a6852656bcebe47989c9a4ef2/City_Health_Dashboard_-_Technical_Document_-_12.03.24.pdf"
   },
   "wxs_indentifier": null,
   "id": "herop-xtoqlx",
   "identifier": [],
-  "modified": "2025-04-03T14:11:16Z",
+  "modified": "2025-05-14T01:46:46Z",
   "suppressed": false,
   "spatial_resolution": [
     "City",

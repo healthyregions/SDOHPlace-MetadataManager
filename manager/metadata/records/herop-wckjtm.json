@@ -6,10 +6,11 @@
     "filled_pct": 80,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Food Environment Atlas",
   "alternative_title": [],
   "description": [
-    "Food environment factors\u2014such as store/restaurant proximity, food prices, food and nutrition assistance programs, and community characteristics\u2014interact to influence food choices and diet quality. Research has been documenting the complexity of these interactions, but more research is needed to identify causal relationships and effective policy interventions.The objectives of the Atlas are to assemble statistics on food environment indicators to stimulate research on the determinants of food choices and diet quality and to provide a spatial overview of a community's ability to access healthy food and its success in doing so."
+    "Food environment factors\u2014such as store/restaurant proximity, food prices, food and nutrition assistance programs, and community characteristics\u2014interact to influence food choices and diet quality. Research has been documenting the complexity of these interactions, but more research is needed to identify causal relationships and effective policy interventions. The objectives of the Food Environment Atlas are to assemble statistics on food environment indicators to stimulate research on the determinants of food choices and diet quality and to provide a spatial overview of a community's ability to access healthy food and its success in doing so."
   ],
   "language": [],
   "display_note": [
@@ -80,8 +81,7 @@
   "wxs_indentifier": null,
   "id": "herop-wckjtm",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-06-15T00:39:42Z",
   "suppressed": false,
   "spatial_resolution": [
     "County"

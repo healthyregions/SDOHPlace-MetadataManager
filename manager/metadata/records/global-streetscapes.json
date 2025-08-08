@@ -6,6 +6,7 @@
     "filled_pct": 92,
     "progress_class": "success"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Global Streetscapes",
   "alternative_title": [
     "NUS Global Streetscapes dataset"
@@ -109,14 +110,15 @@
   "identifier": [
     "10.1016/j.isprsjprs.2024.06.023"
   ],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-06-15T00:44:54Z",
   "suppressed": false,
   "spatial_resolution": [
     "City",
     "Other"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Multiple (See Documentation For Full Details and Metadata)"
@@ -152,5 +154,5 @@
     "Street Greenery Coverage, K\u00f6ppen climate zone, Context, Street Segment, Place, Perception"
   ],
   "preferred_citation": "Hou Y, Quintana M, Khomiakov M, Yap W, Ouyang J, Ito K, Wang Z, Zhao T, Biljecki F (2024): Global Streetscapes \u2014 A comprehensive dataset of 10 million street-level images across 688 cities for urban science and analytics. ISPRS Journal of Photogrammetry and Remote Sensing 215: 216-238. doi:10.1016/j.isprsjprs.2024.06.023",
-  "data_usage_notes": "Data is stored in multiple CSVs connected via unique ID corresponding to a specific image taken at a specific location, and is made publicly available via Github and Hugging Face. The CSV format makes the dataset suitable for statistical analysis, machine learning, and integration with GIS software. However, it does not store images directly. Users must reference the dataset\u2019s metadata to access the corresponding street-level images."
+  "data_usage_notes": " Data is stored in multiple CSVs connected via unique ID corresponding to a specific image taken at a specific location, and is made publicly available via Github and Hugging Face. The CSV format makes the dataset suitable for statistical analysis, machine learning, and integration with GIS software. However, it does not store images directly. Users must reference the dataset\u2019s metadata to access the corresponding street-level images."
 }

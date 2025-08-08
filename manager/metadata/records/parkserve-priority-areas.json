@@ -1,11 +1,12 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 22,
+    "filled": 23,
     "to_fill": 26,
-    "filled_pct": 84,
+    "filled_pct": 88,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Priority Areas (ParkServe)",
   "alternative_title": [],
   "description": [
@@ -76,19 +77,20 @@
   "file_size": null,
   "references": {
     "http://schema.org/url": "https://www.tpl.org/park-data-downloads",
-    "http://lccn.loc.gov/sh85035852": "https://www.tpl.org/ParkServe/About"
+    "http://lccn.loc.gov/sh85035852": "https://parkserve.tpl.org/downloads/ParkServe_Documentation_2025.pdf"
   },
   "wxs_indentifier": null,
   "id": "herop-cdyuaj",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-06-16T15:41:22Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract",
     "Census Block Group"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "ID, Population per acre, Urban area ID, Rate of physical inactivity, Rate of poor mental health, Respiratory hazard, Density of low-income households, Density of people of color, ID of the city, Low-income households (%), People of color (%), People per acre rank, Physical inactivity rank, Poor mental health rank, Average land surface temperature rank, Respiratory hazard rank, Density of people of color rank, People of color (%) rank, Low-income households (%) rank, Density of low-income households rank, Average of physical inactivity rank and poor mental health rank, Urban heat island anomaly"
@@ -97,6 +99,6 @@
     "Park priority, Park priority rank, Outside 10 minute walk service area"
   ],
   "featured_variable": [],
-  "preferred_citation": null,
+  "preferred_citation": "Trust for Public Land. (2025). ParkServe [Database]. Land and People Lab. tpl.org/parkserve",
   "data_usage_notes": "See related datasets of the ParkServe database for more information and understanding of the underlying data generating process. "
 }

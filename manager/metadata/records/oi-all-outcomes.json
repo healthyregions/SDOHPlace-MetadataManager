@@ -6,7 +6,8 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
-  "title": "Child Opportunity Outcomes",
+  "metadata_version": "SDOH PlaceProject",
+  "title": "Child Opportunity Atlas",
   "alternative_title": [
     "Opportunity Insights"
   ],
@@ -89,14 +90,15 @@
   "wxs_indentifier": null,
   "id": "herop-siawey",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-06-13T16:17:12Z",
   "suppressed": false,
   "spatial_resolution": [
     "County",
     "Census Tract"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": "Community Zone, National",
   "methods_variables": [
     "Mean predicted outcome for children of a given race, gender, and with parents at a given percentile",

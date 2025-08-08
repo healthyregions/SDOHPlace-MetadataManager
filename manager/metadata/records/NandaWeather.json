@@ -6,6 +6,7 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Weather (NaNDA)",
   "alternative_title": [
     "NaNDA Weather by County, United States, 2003-2016"
@@ -31,11 +32,12 @@
     "Table data"
   ],
   "subject": [
-    "Health and Healthcare",
+    "Natural Environment",
     "Safety"
   ],
   "theme": [
-    "Climate"
+    "Climate",
+    "Environment"
   ],
   "keyword": [
     "Climate",
@@ -92,13 +94,14 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38858.v1"
   ],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-06-16T16:20:45Z",
   "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Climate",

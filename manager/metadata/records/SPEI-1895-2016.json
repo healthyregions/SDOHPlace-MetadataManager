@@ -6,13 +6,13 @@
     "filled_pct": 96,
     "progress_class": "success"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Standardized Precipitation Evapotranspiration Index",
   "alternative_title": [
     "CDC Standardized Precipitation Evapotranspiration Index 1895-2016"
   ],
   "description": [
-    "The Standardized Precipitation Evapotranspiration Index (SPEI) is an extension of the",
-    "widely used Standardized Precipitation Index (SPI). The SPEI is designed to take into account both precipitation and potential evapotranspiration (PET) in determining drought. Thus, unlike the SPI, the SPEI captures the main impact of increased temperatures on water demand. Like the SPI, the SPEI can be calculated on a range of timescales from 1-48 months. At longer timescales (>~18 months), the SPEI has been shown to correlate with the self-calibrating PDSI (sc-PDSI). If only limited data are available, such as temperature and precipitation, PET can be estimated with the simple Thornthwaite method. In this simplified approach, variables that can affect PET such as wind speed, surface humidity and solar radiation are not accounted for. The dataset includes one-month SPEI values for every contiguous US county and the District of Columbia monthly from 1895-2016. The dataset has been compiled to estimate wetness and dryness of a particular area. This is important for the agriculture as well as health sectors. The data can be used to examine local and national trends in drought information."
+    "The Standardized Precipitation Evapotranspiration Index (SPEI) is an extension of the widely used Standardized Precipitation Index (SPI). The SPEI is designed to take into account both precipitation and potential evapotranspiration (PET) in determining drought. Thus, unlike the SPI, the SPEI captures the main impact of increased temperatures on water demand. Like the SPI, the SPEI can be calculated on a range of timescales from 1-48 months. At longer timescales (>~18 months), the SPEI has been shown to correlate with the self-calibrating PDSI (sc-PDSI). If only limited data are available, such as temperature and precipitation, PET can be estimated with the simple Thornthwaite method. In this simplified approach, variables that can affect PET such as wind speed, surface humidity and solar radiation are not accounted for. The dataset includes one-month SPEI values for every contiguous US county and the District of Columbia monthly from 1895-2016. The dataset has been compiled to estimate wetness and dryness of a particular area. This is important for the agriculture as well as health sectors. The data can be used to examine local and national trends in drought information."
   ],
   "language": [
     "eng"
@@ -36,6 +36,7 @@
   ],
   "subject": [
     "Health and Healthcare",
+    "Natural Environment",
     "Neighborhood and Built Environment",
     "Safety"
   ],
@@ -92,13 +93,14 @@
   "wxs_indentifier": null,
   "id": "herop-bllwns",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-06-16T16:00:39Z",
   "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Monthly Projected Average Heat Wave Intensity",

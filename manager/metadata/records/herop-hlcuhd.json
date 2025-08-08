@@ -1,0 +1,93 @@
+{
+  "_meta": {
+    "schema": "sdohplace",
+    "filled": 14,
+    "to_fill": 26,
+    "filled_pct": 53,
+    "progress_class": "danger"
+  },
+  "metadata_version": "SDOH PlaceProject",
+  "title": "MIT StreetScore",
+  "alternative_title": [
+    "MIT StreetScore"
+  ],
+  "description": [
+    "Streetscore is a scene understanding algorithm that predicts the perceived safety of a streetscape, using training data from an online survey with contributions from more than 7000 participants."
+  ],
+  "language": [
+    "eng"
+  ],
+  "display_note": [],
+  "creator": [
+    "Nikhil Naik",
+    "Jade Philipoom",
+    "Ramesh Rashkar",
+    "Cesar Hidalgo"
+  ],
+  "publisher": [
+    "MIT Media Lab"
+  ],
+  "provider": null,
+  "resource_class": [
+    "Imagery",
+    "Websites"
+  ],
+  "resource_type": [
+    "Streetview photographs"
+  ],
+  "subject": [
+    "Neighborhood and Built Environment",
+    "Safety",
+    "Social and Community Context"
+  ],
+  "theme": [],
+  "keyword": [
+    "Street Views",
+    "Urban Environment",
+    "Photographs",
+    "StreetScore",
+    "Street Segment",
+    "Built Environment",
+    "Streetscape"
+  ],
+  "temporal_coverage": [],
+  "date_issued": null,
+  "index_year": [],
+  "date_range": [],
+  "spatial_coverage": [],
+  "geometry": null,
+  "bounding_box": null,
+  "centroid": null,
+  "georeferenced": false,
+  "relation": [],
+  "member_of": [],
+  "is_part_of": [],
+  "source": [],
+  "is_version_of": [],
+  "replaces": [],
+  "is_replaced_by": [],
+  "rights": [],
+  "rights_holder": [],
+  "license": [],
+  "access_rights": "Restricted",
+  "format": null,
+  "file_size": null,
+  "references": {},
+  "wxs_indentifier": null,
+  "id": "herop-hlcuhd",
+  "identifier": [],
+  "modified": "2025-06-15T00:58:59Z",
+  "suppressed": false,
+  "spatial_resolution": [
+    "Other"
+  ],
+  "highlight_ids": [
+    "StreetScore"
+  ],
+  "spatial_resolution_note": null,
+  "methods_variables": [],
+  "data_variables": [],
+  "featured_variable": [],
+  "preferred_citation": "Naik, N., Philipoom, J., Raskar, R., & Hidalgo, C. (2014). Streetscore -Predicting the Perceived Safety of One Million Streetscapes. In MIT Media Lab. https://www.media.mit.edu/projects/streetscore/overview/",
+  "data_usage_notes": null
+}

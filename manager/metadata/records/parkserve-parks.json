@@ -1,15 +1,16 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 21,
+    "filled": 22,
     "to_fill": 26,
-    "filled_pct": 80,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Parks (ParkServe)",
   "alternative_title": [],
   "description": [
-    "This is a dataset from the ParkServe national park database, covering over 15,000 cities and towns across the U.S. Trust for Public land compiled the ParkServe database from 2016 to 2018. TPL contacted each city or town to request parks data, as well as searched for GIS parks data resources on municipal and regional open data websites. If no GIS data were available, we delineated park boundaries based on satellite imagery, and confirmed public access via city park websites or signage viewable through Google Street View. Cities and towns were given the opportunity to confirm our delineated boundaries. Today, there are about 145,000 parks in the ParkServe database. Parks data for the 100 largest cities are updated annually as part of the ParkScore Index, and parks data for all other places are updated on a monthly basis following TPL verification of public submissions via the ParkReviewer tool."
+    "This is a dataset from the ParkServe national park database, covering over 15,000 cities and towns across the U.S. Trust for Public land compiled the ParkServe database from 2016 to 2018. TPL contacted each city or town to request parks data, as well as searched for GIS parks data resources on municipal and regional open data websites. If no GIS data were available, they delineated park boundaries based on satellite imagery, and confirmed public access via city park websites or signage viewable through Google Street View. Cities and towns were given the opportunity to confirm their delineated boundaries. Today, there are about 145,000 parks in the ParkServe database. Parks data for the 100 largest cities are updated annually as part of the ParkScore Index, and parks data for all other places are updated on a monthly basis following TPL verification of public submissions via the ParkReviewer tool."
   ],
   "language": [
     "eng"
@@ -82,20 +83,21 @@
   "wxs_indentifier": null,
   "id": "herop-dbsktp",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-06-16T15:27:20Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [],
   "data_variables": [
     "Park ID, Park name, Park designation, Park owner type,  Park local owner,  Park manager type, Park local manager, Park access, Park status, Park land acquisition, Park establishment date, Park size (acres), Park address, Park state, Park state FIPS, Park county, Park county FIPS, Park place, Park place FIPS, Park urban area, Park urban area ID, Park zipcode, Park boundary source, Data provider, Park date added, Total population within a 10-minute walk (2022), Total population < 20 years of age within a 10-minute walk (2022), Total population > 20 and < 65 years of age of within a 10-minute walk (2022), Total population > 64 years of age within a 10-minute walk (2022), Total number of low income households (<75% urban area median income) within a 10-minute walk (2022), Total number of middle income households (75% - 125% urban area median income) within a 10-minute walk (2022), Total number of high income households (>125% urban area median income) within a 10-minute walk (2022), Total White Non-Hispanic population within a 10-minute walk (2022), Total Black Non-Hispanic population within a 10-minute walk (2022), Total Native American Non-Hispanic population within a 10-minute walk (2022), Total Asian Non-Hispanic population within a 10-minute walk (2022), Total Pacific Islander Non-Hispanic population within a 10-minute walk (2022), Total population of 2 or more races (Non-Hispanic) within a 10-minute walk (2022), Total population of other races (Non-Hispanic) within a 10-minute walk (2022), Total Hispanic population within a 10-minute walk (2022)"
   ],
   "featured_variable": [],
-  "preferred_citation": null,
+  "preferred_citation": "Trust for Public Land. (2025). ParkServe [Database]. Land and People Lab. tpl.org/parkserve",
   "data_usage_notes": null
 }

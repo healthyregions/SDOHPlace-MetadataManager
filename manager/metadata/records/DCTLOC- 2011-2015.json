@@ -6,6 +6,7 @@
     "filled_pct": 92,
     "progress_class": "success"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Daily Census Tract Ozone Concentrations",
   "alternative_title": [
     "Daily Census Tract Ozone Concentrations (2016-2020)"
@@ -35,6 +36,7 @@
     "Table data"
   ],
   "subject": [
+    "Natural Environment",
     "Neighborhood and Built Environment"
   ],
   "theme": [
@@ -98,13 +100,14 @@
   "wxs_indentifier": null,
   "id": "herop-ltsvnx",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-06-13T22:24:08Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [],
   "data_variables": [

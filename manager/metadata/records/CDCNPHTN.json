@@ -6,6 +6,7 @@
     "filled_pct": 92,
     "progress_class": "success"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "National Environmental Public Health Tracking Network",
   "alternative_title": [
     "National Environmental Public Health Tracking Network"
@@ -34,6 +35,7 @@
     "Table data"
   ],
   "subject": [
+    "Natural Environment",
     "Neighborhood and Built Environment"
   ],
   "theme": [
@@ -99,13 +101,12 @@
     "{http://schema.org/url": "https://ephtracking.cdc.gov/DataExplorer/",
     "http://schema.org/downloadUrl": "https://ephtracking.cdc.gov/download",
     "http://lccn.loc.gov/sh85035852": "https://ephtracking.cdc.gov/qrca",
-    "archive-url": "https://uofi.app.box.com/folder/305406383348}"
+    "archive-url": "https://uofi.box.com/s/iwi194604skcps1qqs0eircsbej0t80u"
   },
   "wxs_indentifier": null,
   "id": "herop-lukhbw",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-08-05T23:29:22Z",
   "suppressed": false,
   "spatial_resolution": [
     "County",

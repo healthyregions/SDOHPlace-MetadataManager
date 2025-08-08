@@ -6,6 +6,7 @@
     "filled_pct": 76,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "National Neighborhood Data Archive (NANDA)",
   "alternative_title": [
     "National Neighborhood Data Archive"
@@ -31,9 +32,14 @@
     "Polygon data"
   ],
   "subject": [
+    "Economic Stability",
+    "Education",
+    "Food Environment",
     "Health and Healthcare",
     "Housing",
-    "Neighborhood and Built Environment"
+    "Neighborhood and Built Environment",
+    "Social and Community Context",
+    "Transportation and Infrastructure"
   ],
   "theme": [
     "Health",
@@ -83,8 +89,7 @@
   "wxs_indentifier": null,
   "id": "herop-gfxyto",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-06-16T15:03:44Z",
   "suppressed": false,
   "spatial_resolution": [
     "County",
@@ -94,7 +99,9 @@
     "Census Block Group",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [],
   "data_variables": [],

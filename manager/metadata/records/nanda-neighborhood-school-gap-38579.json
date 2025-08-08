@@ -6,6 +6,7 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Neighborhood-School Gap (NaNDA)",
   "alternative_title": [
     "NaNDA Neighborhood-School Gap by Census Tract and ZIP Code Tabulation Area, United States, 2009-2010 and 2015-2016"
@@ -97,14 +98,15 @@
   "identifier": [
     "doi.org/10.3886/ICPSR38579.v2"
   ],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-06-16T15:17:01Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": "These data measure discrepancies between the school environment and that of the surrounding community. The collection aims to contribute to the discussion about the causes and the consequences of variations in educational context across geographies.",
   "methods_variables": [
     "School attendance boundaries to block groups",

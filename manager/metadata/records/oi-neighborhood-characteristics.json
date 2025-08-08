@@ -6,12 +6,13 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Neighborhood Characteristics by Tract, County, & Commuting Zone",
   "alternative_title": [
     "Opportunity Insights Neighborhood Characteristics (The Opportunity Atlas: Mapping the Childhood Roots of Social Mobility)"
   ],
   "description": [
-    "The Child Opportunity Atlas maps the childhood roots of social mobility, and serves as a  publicly available atlas of children\u2019s outcomes in adulthood by Census tract using anonymized longitudinal data covering nearly the entire U.S. population. This data provides multiple levels (census tract, county, and commuting zone) covariates used throughout the paper or shown in the Opportunity Atlas as neighborhood characteristics. All variables other than czname are numeric. The statistics reported in this table have been cleared by the Census Bureau's Disclosure Review Board release authorization number CBDRB-FY18-319."
+    "The Child Opportunity Atlas maps the childhood roots of social mobility, and serves as a  publicly available atlas of children\u2019s outcomes in adulthood by census tract using anonymized longitudinal data covering nearly the entire U.S. population. The Neighborhood Characteristics dataset provides multiple levels (census tract, county, and commuting zone) covariates used throughout the paper or shown in the Opportunity Atlas as neighborhood characteristics. All variables other than czname are numeric. The statistics reported in this table have been cleared by the Census Bureau's Disclosure Review Board release authorization number CBDRB-FY18-319."
   ],
   "language": [
     "eng"
@@ -89,14 +90,15 @@
   "wxs_indentifier": null,
   "id": "herop-wtfiks",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-06-16T15:13:41Z",
   "suppressed": false,
   "spatial_resolution": [
     "County",
     "Census Tract"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": "Community Zone",
   "methods_variables": [
     "Sum of native and foreign born residents",

@@ -6,12 +6,13 @@
     "filled_pct": 96,
     "progress_class": "success"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "National Walkability Index",
   "alternative_title": [
     "EPA Walkability Index"
   ],
   "description": [
-    "EPA developed three data products(Smart Location Database, Access to Jobs and Workers Via Transit Tool, and National Walkability Index) that consistently measure the built environment and transit accessibility of neighborhoods across metropolitan regions and the United States. Users can download data, browse the data in interactive maps, or access the data through web services. The National Walkability is based on measures of the built environment that affect the probability of whether people walk as a mode of transportation: street intersection density, proximity to transit stops, and diversity of land uses. The National Walkability Index data are available at the block group level, a unit of census geography that is smaller than a census tract and larger than a census block"
+    "EPA developed three data products - Smart Location Database, Access to Jobs and Workers Via Transit Tool, and National Walkability Index - that consistently measure the built environment and transit accessibility of neighborhoods across metropolitan regions and the United States. Users can download data, browse the data in interactive maps, or access the data through web services. The National Walkability Index is based on measures of the built environment that affect the probability of whether people walk as a mode of transportation: street intersection density, proximity to transit stops, and diversity of land uses. The National Walkability Index data are available at the block group level, a unit of census geography that is smaller than a census tract and larger than a census block"
   ],
   "language": [
     "eng"
@@ -88,18 +89,20 @@
   "file_size": "406 mb",
   "references": {
     "http://lccn.loc.gov/sh85035852": "https://https://www.epa.gov/smartgrowth/smart-location-mapping#walkability",
-    "http://schema.org/downloadUrl": "https://www.epa.gov/sites/default/files/2021-06/documents/national_walkability_index_methodology_and_user_guide_june2021.pdf"
+    "http://schema.org/downloadUrl": "https://www.epa.gov/sites/default/files/2021-06/documents/national_walkability_index_methodology_and_user_guide_june2021.pdf",
+    "archive-url": "https://uofi.box.com/s/0pzgxfprxzu7c6vj5pyopu61ixkb5gra"
   },
   "wxs_indentifier": null,
   "id": "herop-jjsukv",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-08-05T23:01:03Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Intersection density (D3b)",
@@ -112,7 +115,7 @@
     "Housing units 2018",
     "Households (occupied housing units) 2018",
     "Workers - Count of workers in CBG (home location), 2017",
-    " 8-tier employment entropy (denominator set to the static 8 employment types in the CBG)-D2B_E8MIXA",
+    "8-tier employment entropy (denominator set to the static 8 employment types in the CBG)-D2B_E8MIXA",
     " Employment and household entropy-D2A_EPHHM",
     "Distance from the population-weighted centroid to the nearest transit stop (meters)-D4A",
     "Street intersection density (weighted, auto-oriented intersections eliminated)- D3B",

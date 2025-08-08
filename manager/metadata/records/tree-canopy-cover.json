@@ -1,17 +1,18 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 20,
+    "filled": 21,
     "to_fill": 26,
-    "filled_pct": 76,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Tree Canopy Cover",
   "alternative_title": [
     "Tree Canopy Cover"
   ],
   "description": [
-    "\"NLCD tree canopy cover geospatial datasets with spatial resolutions of 30 m are produced by the USDA Forest Service. Tree canopy cover is measured as percent tree canopy cover for 30m raster cells, and is derived from multi-spectral satellite imagery and other available ground and ancillary information. Tree canopy dataset for the period 2011-2021 are available for the conterminous United States, and coastal south east Alaska, Hawaii, Puerto Rico, and U.S. Virgin Islands.\""
+    "\"NLCD tree canopy cover geospatial datasets with spatial resolutions of 30m are produced by the USDA Forest Service. Tree canopy cover is measured as percent tree canopy cover for 30m raster cells, and is derived from multi-spectral satellite imagery and other available ground and ancillary information. Tree canopy dataset for the period 2011-2021 are available for the conterminous United States, and coastal south east Alaska, Hawaii, Puerto Rico, and U.S. Virgin Islands.\""
   ],
   "language": [
     "eng"
@@ -91,19 +92,20 @@
   "wxs_indentifier": null,
   "id": "herop-qwqgwc",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-06-16T16:10:16Z",
   "suppressed": false,
   "spatial_resolution": [
     "Other"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": "30m resolution",
   "methods_variables": [],
   "data_variables": [
     "Percent Tree Canopy Cover"
   ],
   "featured_variable": [],
-  "preferred_citation": null,
+  "preferred_citation": "U.S. Department of Agriculture, Forest Service. Tree Canopy Cover (TCC) v2021.4 Methods Document. 2021, https://data.fs.usda.gov/geodata/rastergateway/treecanopycover/docs/TCC_v2021-4_Methods.pdf.",
   "data_usage_notes": null
 }

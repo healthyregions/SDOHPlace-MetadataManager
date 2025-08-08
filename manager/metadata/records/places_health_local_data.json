@@ -6,12 +6,13 @@
     "filled_pct": 84,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "PLACES: Local Data for Better Health",
   "alternative_title": [
     "PLACES: Local Data for Better Health"
   ],
   "description": [
-    "This dataset contains four levels (county, census tract, ZCTA, place) social determinants of health (SDOH) measures from the American Community Survey 5-year data for the entire United States\u201450 states and the District of Columbia.  Data were downloaded from data.census.gov using Census API and processed by the Centers for Disease Control and Prevention (CDC), Division of Population Health, Epidemiology and Surveillance Branch. These measures complement existing PLACES measures, including PLACES SDOH measures (e.g., health insurance, routine check-up). These data can be used together with PLACES data to identify which health and SDOH issues overlap in a community to help inform public health planning."
+    "This dataset contains four levels (county, census tract, ZCTA, place) of social determinants of health (SDOH) measures from the American Community Survey 5-year data for the entire United States\u201450 states and the District of Columbia.  Data were downloaded from data.census.gov using Census API and processed by the Centers for Disease Control and Prevention (CDC), Division of Population Health, Epidemiology and Surveillance Branch. These measures complement existing PLACES measures, including PLACES SDOH measures (e.g., health insurance, routine check-up). These data can be used together with PLACES data to identify which health and SDOH issues overlap in a community to help inform public health planning."
   ],
   "language": [
     "eng"
@@ -75,13 +76,13 @@
   "format": "CSV",
   "file_size": "5.4 MB",
   "references": {
-    "http://schema.org/url": "https://data.cdc.gov/browse?q=PLACES%3A%20Local%20Data%20for%20Better%20Health&sortBy=relevance"
+    "http://schema.org/url": "https://data.cdc.gov/browse?q=PLACES%3A%20Local%20Data%20for%20Better%20Health&sortBy=relevance",
+    "archive-url": "https://uofi.box.com/s/eihxglpibrh2nrf7f3dgp6g9wy3xx9vk"
   },
   "wxs_indentifier": null,
   "id": "herop-tvlxez",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-08-05T23:25:05Z",
   "suppressed": false,
   "spatial_resolution": [
     "City",
@@ -89,7 +90,9 @@
     "Census Tract",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Arthritis among adults",

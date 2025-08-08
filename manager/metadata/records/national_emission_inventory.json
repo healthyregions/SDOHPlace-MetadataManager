@@ -6,12 +6,13 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "National Emissions Inventory (NEI)",
   "alternative_title": [
     "National Emissions Inventory (NEI)"
   ],
   "description": [
-    "The National Emissions Inventory (NEI) is a comprehensive and detailed estimate of air emissions of criteria pollutants, criteria precursors, and hazardous air pollutants from air emissions sources. The NEI is released every three years based primarily upon data provided by State, Local, and Tribal air agencies for sources in their jurisdictions and supplemented by data developed by the US EPA. The NEI is built using the Emissions Inventory System (EIS) first to collect the data from State, Local, and Tribal air agencies and then to blend that data with other data sources."
+    "The National Emissions Inventory (NEI) is a comprehensive and detailed estimate of air emissions of criteria pollutants, criteria precursors, and hazardous air pollutants from air emissions sources. The NEI is released every three years based primarily upon data provided by state, local, and tribal air agencies for sources in their jurisdictions and supplemented by data developed by the US EPA. The NEI is built using the Emissions Inventory System (EIS) first to collect the data from state, local, and tribal air agencies and then to blend that data with other data sources."
   ],
   "language": [
     "eng"
@@ -34,6 +35,7 @@
     "Table data"
   ],
   "subject": [
+    "Natural Environment",
     "Safety",
     "Transportation and Infrastructure"
   ],
@@ -94,13 +96,14 @@
   "wxs_indentifier": null,
   "id": "herop-odfmer",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-06-16T14:44:22Z",
   "suppressed": false,
   "spatial_resolution": [
     "Other"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Pollutant (e.g., Carbon Dioxide, Methane, Nitrogen Oxides)",

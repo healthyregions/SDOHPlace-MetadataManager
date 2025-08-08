@@ -6,6 +6,7 @@
     "filled_pct": 80,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "EJScreen",
   "alternative_title": [
     "Environmental Justice Mapping and Screening Tool"
@@ -84,14 +85,13 @@
   "references": {
     "http://lccn.loc.gov/sh85035852": "https://www.epa.gov/ejscreen/technical-information-and-data-downloads",
     "ttp://schema.org/downloadUrl": "https://www.epa.gov/ejscreen/download-ejscreen-data",
-    "http://schema.org/url": "https://www.epa.gov/ejscreen/ej-and-supplemental-indexes-ejscreen#EJ",
-    "archive-url": "https://pedp-ejscreen.azurewebsites.net/"
+    "http://schema.org/url": "https://pedp-ejscreen.azurewebsites.net/",
+    "archive-url": "https://uofi.box.com/s/5nn4o3dyfvol6i0h87jasfu27mb5ziue"
   },
   "wxs_indentifier": null,
   "id": "herop-xvenhj",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-08-05T23:34:51Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
@@ -12520,5 +12520,5 @@
     "Key variables of interest include indicators of Particulate Matter 2.5 (M2.5), Ozone, Nitrogen Dioxide (NO2), Diesel Particulate Matter, Toxic Releases to Air, Traffic Proximity and Volume, Lead Paint, Superfund Proximity, Risk management Plan (RMP) Facility Proximity, Hazardous Waste Proximity, Underground Storage Tanks (UST) and Leaking UST (LUST), Wastewater Discharge, and Drinking Water Non-Compliance"
   ],
   "preferred_citation": "United States Environmental Protection Agency. 2015. EJSCREEN.",
-  "data_usage_notes": "EJScreen cannot provide data on every environmental impact and demographic factor that may be important to any location. Therefore, its initial results should be supplemented with additional information and local knowledge whenever appropriate, for a more complete picture of a location."
+  "data_usage_notes": "EJScreen cannot provide data on every environmental impact and demographic factor that may be important to any location. Therefore, its initial results should be supplemented with additional information and local knowledge whenever appropriate, for a more complete picture of a location.\r\n\r\nThe linked dataset is an unofficial copy of EJScreen, hosted by the Public Environmental Data Partners. Some links and text may incorrectly suggest that this site is affiliated with the US Government. We've published an initial reconstruction - you can identify the EJScreen data and index percentiles for a given block group right now."
 }

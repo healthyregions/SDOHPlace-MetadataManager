@@ -6,6 +6,7 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Food Access Research Atlas",
   "alternative_title": [
     "Food Access Research Atlas"
@@ -76,13 +77,12 @@
     "http://schema.org/downloadUrl": "https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data",
     "http://schema.org/url": "https://www.ers.usda.gov/data-products/food-access-research-atlas/about-the-atlas",
     "http://lccn.loc.gov/sh85035852": "https://www.ers.usda.gov/data-products/food-access-research-atlas/documentation",
-    "archive-url": "https://uofi.app.box.com/s/fqtslnfkpmgi32pb1cah1eyvmimvp740/folder/305464316550"
+    "archive-url": "https://uofi.box.com/s/0icypzgnk3j8z8ij4qkifrq1d2u6r5nz"
   },
   "wxs_indentifier": null,
   "id": "herop-htraln",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-08-05T22:33:45Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract"

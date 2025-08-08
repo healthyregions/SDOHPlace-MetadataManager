@@ -1,11 +1,12 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 21,
+    "filled": 22,
     "to_fill": 26,
-    "filled_pct": 80,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Playgrounds (ParkServe)",
   "alternative_title": [
     "Playgrounds (ParkServe)"
@@ -78,24 +79,25 @@
   "file_size": null,
   "references": {
     "http://schema.org/url": "https://www.tpl.org/park-data-downloads",
-    "http://lccn.loc.gov/sh85035852": "https://www.tpl.org/ParkServe/About"
+    "http://lccn.loc.gov/sh85035852": "https://parkserve.tpl.org/downloads/ParkServe_Documentation_2025.pdf"
   },
   "wxs_indentifier": null,
   "id": "herop-yoizdf",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-06-16T15:38:06Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [],
   "data_variables": [
     "OSM ID, Code, Class, Name, Shape length, Shape area"
   ],
   "featured_variable": [],
-  "preferred_citation": null,
+  "preferred_citation": "Trust for Public Land. (2025). ParkServe [Database]. Land and People Lab. tpl.org/parkserve",
   "data_usage_notes": null
 }

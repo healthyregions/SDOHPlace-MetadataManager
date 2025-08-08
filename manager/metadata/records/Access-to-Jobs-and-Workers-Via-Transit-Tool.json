@@ -36,6 +36,7 @@
   ],
   "subject": [
     "Employment",
+    "Neighborhood and Built Environment",
     "Transportation and Infrastructure"
   ],
   "theme": [
@@ -96,12 +97,12 @@
     "http://schema.org/url": "https://www.epa.gov/smartgrowth/smart-location-mapping#walkability",
     "http://schema.org/downloadUrl": "https://www.epa.gov/smartgrowth/smart-location-mapping#Trans45",
     "http://lccn.loc.gov/sh85035852": "https://www.epa.gov/sites/default/files/2014-03/documents/sld_trans45_ug_0.pdf",
-    "archive-url": "https://uofi.app.box.com/s/fqtslnfkpmgi32pb1cah1eyvmimvp740/folder/305406383348"
+    "archive-url": "https://uofi.box.com/s/imyxkch7611rsp86hh9kf57mhcutceky"
   },
   "wxs_indentifier": null,
   "id": "herop-bnohpx",
   "identifier": [],
-  "modified": "2025-04-03T14:03:08Z",
+  "modified": "2025-08-05T23:03:14Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
