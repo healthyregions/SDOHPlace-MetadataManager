@@ -13,7 +13,7 @@
   ],
   "description": [
     "The Environmental Justice Index (EJI), which is a part of the EPA\u2019s EJSCREEN platform, is a data-driven tool designed to identify and analyze environmental justice concerns across the United States. The EJI combines environmental, demographic, and health data to assess communities disproportionately impacted by environmental burdens and social vulnerabilities.",
-    " Indicators include air quality, proximity to hazardous facilities, and exposure to pollutants, along with demographic factors like income, race, and linguistic isolation. In addition to the core EJI, the EPA incorporates Supplemental Indexes to enhance its analytical capabilities. These indexes include the Climate Change Index, which identifies communities vulnerable to the impacts of climate change, and the Health Disparities Index, which highlights areas with existing health challenges that may exacerbate environmental risks.",
+    "Indicators include air quality, proximity to hazardous facilities, and exposure to pollutants, along with demographic factors like income, race, and linguistic isolation. In addition to the core EJI, the EPA incorporates Supplemental Indexes to enhance its analytical capabilities. These indexes include the Climate Change Index, which identifies communities vulnerable to the impacts of climate change, and the Health Disparities Index, which highlights areas with existing health challenges that may exacerbate environmental risks.",
     "While both EJI and EJSCREEN are tools for assessing environmental justice, they are designed for slightly different purposes. EJSCREEN is a screening and mapping tool primarily intended for community engagement, highlighting potential environmental and demographic concerns to guide further investigation. The EJI, on the other hand, goes beyond screening by integrating additional health and climate vulnerability data to create indexes tailored for more in-depth analysis and decision-making."
   ],
   "language": [
@@ -54,11 +54,12 @@
     "Pollutant"
   ],
   "temporal_coverage": [
-    "2014-2021"
+    "2014-2022"
   ],
   "date_issued": "8/10/22 ",
   "index_year": [
-    2021
+    2022,
+    2024
   ],
   "date_range": [],
   "spatial_coverage": [
@@ -90,7 +91,7 @@
   "wxs_indentifier": null,
   "id": "herop-oqxqog",
   "identifier": [],
-  "modified": "2025-08-05T23:19:43Z",
+  "modified": "2025-09-12T13:32:49Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract"

@@ -6,6 +6,7 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Public Transit Stops (NaNDA)",
   "alternative_title": [
     "NaNDA Public Transit Stops by Census Tract and ZIP Code Tabulation Area, United States, 2016-2018"
@@ -51,13 +52,14 @@
     "spatial data"
   ],
   "temporal_coverage": [
-    "2016-2018"
+    "2016-2014"
   ],
-  "date_issued": "2023-01-04",
+  "date_issued": "2024-12-11",
   "index_year": [
     2016,
     2017,
-    2018
+    2018,
+    2024
   ],
   "date_range": [],
   "spatial_coverage": [
@@ -83,21 +85,22 @@
   "format": "tsv",
   "file_size": "2.9",
   "references": {
-    "http://schema.org/url": "https://doi.org/10.3886/ICPSR38605.v1"
+    "http://schema.org/url": "https://doi.org/10.3886/ICPSR38605.v2"
   },
   "wxs_indentifier": null,
   "id": "herop-htqlca",
   "identifier": [
     "doi.org/10.3886/ICPSR38605.v1"
   ],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-09-12T14:10:01Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Census tract level",

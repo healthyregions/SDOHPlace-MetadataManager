@@ -6,12 +6,13 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Neighborhood Atlas",
   "alternative_title": [
     "Neighborhood Atlas"
   ],
   "description": [
-    "The <a href='https://www.neighborhoodatlas.medicine.wisc.edu'>Neighborhood Atlas website</a> was created in order to freely share measures of neighborhood disadvantage with the public, including educational institutions, health systems, not-for-profit organizations, and government agencies, in order to make these metrics available for use in research, program planning, and policy development. The Area Deprivation Index (ADI) is based on a measure created by the Health Resources & Services Administration (HRSA) thirty years ago. It helps to rank neighborhoods on the basis of income, education, employment, and housing quality."
+    "The Neighborhood Atlas was created in order to freely share measures of neighborhood disadvantage with the public, including educational institutions, health systems, not-for-profit organizations, and government agencies, in order to make these metrics available for use in research, program planning, and policy development. The Area Deprivation Index (ADI) is based on a measure created by the Health Resources & Services Administration (HRSA) thirty years ago. It helps to rank neighborhoods on the basis of income, education, employment, and housing quality."
   ],
   "language": [
     "eng"
@@ -48,13 +49,13 @@
     "SDOH"
   ],
   "temporal_coverage": [
-    "2015-2020"
+    "2015-2023"
   ],
   "date_issued": "2018-05-01",
   "index_year": [
     2015,
-    2018,
-    2020
+    2020,
+    2023
   ],
   "date_range": [],
   "spatial_coverage": [
@@ -84,14 +85,15 @@
   "wxs_indentifier": null,
   "id": "herop-ggungs",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-09-12T13:46:11Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "FPL 150% (Federal Poverty Level at 150%)",

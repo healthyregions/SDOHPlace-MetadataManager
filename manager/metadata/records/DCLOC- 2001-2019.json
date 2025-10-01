@@ -6,12 +6,13 @@
     "filled_pct": 92,
     "progress_class": "success"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Daily County-Level Ozone Concentrations",
   "alternative_title": [
     "Daily County-Level Ozone Concentrations 2001-2019"
   ],
   "description": [
-    "CDC works closely with Environmental Protection Agency (EPA), National Aeronautics and Space Administration (NASA), and National Oceanic and Atmospheric Association (NOAA) to generate air quality data from the National Environmental Public Health Tracking Network. This dataset provides modeled predictions of ozone levels from the EPA's Downscaler model. The dataset includes the maximum, median, mean, and population-weighted mean concentration of ozone at the county-level."
+    "The CDC works closely with Environmental Protection Agency (EPA), National Aeronautics and Space Administration (NASA), and National Oceanic and Atmospheric Association (NOAA) to generate air quality data from the National Environmental Public Health Tracking Network. This dataset provides modeled predictions of ozone levels from the EPA's Downscaler model. The dataset includes the maximum, median, mean, and population-weighted mean concentration of ozone at the county-level."
   ],
   "language": [
     "eng"
@@ -94,8 +95,7 @@
   "wxs_indentifier": null,
   "id": "herop-qgbmwc",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-09-02T21:39:36Z",
   "suppressed": false,
   "spatial_resolution": [
     "County"

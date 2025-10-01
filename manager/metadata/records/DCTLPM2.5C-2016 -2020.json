@@ -6,12 +6,13 @@
     "filled_pct": 96,
     "progress_class": "success"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Daily Census Tract PM 2.5 Concentrations",
   "alternative_title": [
     "Daily Census Tract PM 2.5 Concentrations (2016-2020)"
   ],
   "description": [
-    "CDC works closely with Environmental Protection Agency (EPA), National Aeronautics and Space Administration (NASA), and National Oceanic and Atmospheric Association (NOAA) to generate air quality data from the National Environmental Public Health Tracking Network. This dataset provides modeled predictions of PM 2.5 levels from the EPA's Downscaler model. The dataset includes estimates of the mean predicted concentration and associated standard error for particulate matter smaller than 2.5 micrometers (PM2.5) in \u03bcg/m3."
+    "The CDC works closely with Environmental Protection Agency (EPA), National Aeronautics and Space Administration (NASA), and National Oceanic and Atmospheric Association (NOAA) to generate air quality data from the National Environmental Public Health Tracking Network. This dataset provides modeled predictions of PM 2.5 levels from the EPA's Downscaler model. The dataset includes estimates of the mean predicted concentration and associated standard error for particulate matter smaller than 2.5 micrometers (PM2.5) in \u03bcg/m3."
   ],
   "language": [
     "eng"
@@ -94,13 +95,14 @@
   "wxs_indentifier": null,
   "id": "herop-ccbxef",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-09-20T12:30:53Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    "140US*"
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Air Quality:",

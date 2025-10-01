@@ -1,15 +1,16 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 20,
+    "filled": 21,
     "to_fill": 26,
-    "filled_pct": 76,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "USGS Land Cover",
   "alternative_title": [],
   "description": [
-    "The National Land Cover Database (NLCD) provides nationwide data on land cover and land cover change at a 30m resolution with a 16-class classification system. The database is designed to provide cyclical updates of United States land cover and associated changes. Systematically aligned over time, the database provides the ability to understand both current and historical land cover and land cover change, and enables monitoring and trend assessments. Legacy land cover is available for the conterminus US for years 2001, 2004, 2006, 2008, 2011, 2013, 2016, 2019, and 2021, Alaska for 2001, 2011, and 2016, Hawai'i for 2001, 2005, and 2011, and Puerto Rico for 2001. Annual land cover is available for the conterminus US for 1985-2023."
+    "The National Land Cover Database (NLCD) provides nationwide data on land cover and land cover change at a 30m resolution with a 16-class classification system. The database is designed to provide cyclical updates of United States land cover and associated changes. Systematically aligned over time, the database provides the ability to understand both current and historical land cover and land cover change, and enables monitoring and trend assessments. Legacy land cover is available for the conterminus US for years 2001, 2004, 2006, 2008, 2011, 2013, 2016, 2019, and 2021, Alaska for 2001, 2011, and 2016, Hawai'i for 2001, 2005, and 2011, and Puerto Rico for 2001. Annual land cover is available for the conterminus US for 1985-2024."
   ],
   "language": [
     "eng"
@@ -40,7 +41,7 @@
     "Sateliite Data"
   ],
   "temporal_coverage": [
-    "1985-2023"
+    "1985-2024"
   ],
   "date_issued": null,
   "index_year": [
@@ -82,7 +83,8 @@
     2020,
     2021,
     2022,
-    2023
+    2023,
+    2024
   ],
   "date_range": [],
   "spatial_coverage": [
@@ -112,24 +114,25 @@
   "references": {
     "http://schema.org/url": "https://www.mrlc.gov/data/legends/national-land-cover-database-class-legend-and-description",
     "http://schema.org/downloadUrl": "https://www.mrlc.gov/data?f%5B0%5D=category%3ALand%20Cover&f%5B1%5D=category%3ALegacy%20Land%20Cover&f%5B2%5D=project_tax_term_term_parents_tax_term_name%3AAnnual%20NLCD&f%5B3%5D=project_tax_term_term_parents_tax_term_name%3ALegacy%20NLCD",
-    "http://lccn.loc.gov/sh85035852": "https://doi.org/10.14358/PERS.70.7.829"
+    "http://lccn.loc.gov/sh85035852": "https://doi.org/10.5066/P94UXNTS"
   },
   "wxs_indentifier": null,
   "id": "herop-iviplg",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-09-20T12:32:26Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    "150US*"
+  ],
   "spatial_resolution_note": "30m resolution",
   "methods_variables": [],
   "data_variables": [
     "Land Cover Type"
   ],
   "featured_variable": [],
-  "preferred_citation": null,
+  "preferred_citation": "U.S. Geological Survey (USGS), 2024, Annual NLCD Collection 1 Science Products: U.S. Geological Survey data release, https://doi.org/10.5066/P94UXNTS.",
   "data_usage_notes": null
 }

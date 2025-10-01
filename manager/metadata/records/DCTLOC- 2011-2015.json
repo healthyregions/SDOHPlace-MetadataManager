@@ -12,7 +12,7 @@
     "Daily Census Tract Ozone Concentrations (2016-2020)"
   ],
   "description": [
-    "CDC works closely with Environmental Protection Agency (EPA), National Aeronautics and Space Administration (NASA), and National Oceanic and Atmospheric Association (NOAA) to generate air quality data from the National Environmental Public Health Tracking Network. This dataset provides modeled predictions of ozone levels from the EPA's Downscaler model. This dataset row mean estimated 8-hour average ozone concentration in parts per billion (ppb) within 3 meters of the surface of the earth, and standard error of the estimated ozone concentration at census tract-level."
+    "The CDC works closely with Environmental Protection Agency (EPA), National Aeronautics and Space Administration (NASA), and National Oceanic and Atmospheric Association (NOAA) to generate air quality data from the National Environmental Public Health Tracking Network. This dataset provides modeled predictions of ozone levels from the EPA's Downscaler model. This dataset row mean estimated 8-hour average ozone concentration in parts per billion (ppb) within 3 meters of the surface of the earth, and standard error of the estimated ozone concentration at census tract-level."
   ],
   "language": [
     "eng"
@@ -100,7 +100,7 @@
   "wxs_indentifier": null,
   "id": "herop-ltsvnx",
   "identifier": [],
-  "modified": "2025-06-13T22:24:08Z",
+  "modified": "2025-09-02T21:39:22Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract"

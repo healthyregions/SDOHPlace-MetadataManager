@@ -1,10 +1,10 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 23,
+    "filled": 24,
     "to_fill": 26,
-    "filled_pct": 88,
-    "progress_class": "warning"
+    "filled_pct": 92,
+    "progress_class": "success"
   },
   "metadata_version": "SDOH PlaceProject",
   "title": "City Health Dashboard",
@@ -53,12 +53,25 @@
     "US Census"
   ],
   "temporal_coverage": [
-    "2010-2020"
+    "2010-2024"
   ],
   "date_issued": null,
   "index_year": [
     2010,
-    2020
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
   ],
   "date_range": [],
   "spatial_coverage": [
@@ -998,7 +1011,7 @@
   "wxs_indentifier": null,
   "id": "herop-xtoqlx",
   "identifier": [],
-  "modified": "2025-05-14T01:46:46Z",
+  "modified": "2025-09-12T13:26:35Z",
   "suppressed": false,
   "spatial_resolution": [
     "City",
@@ -30312,8 +30325,7 @@
     "140US15003011105"
   ],
   "spatial_resolution_note": null,
-  "methods_variables": [],
-  "data_variables": [
+  "methods_variables": [
     "Dental Care",
     "Prenatal Care",
     "Routine",
@@ -30358,6 +30370,41 @@
     "Unemployment - Current, City-Level",
     "Voter Turnout",
     "Youth Not in Work or School"
+  ],
+  "data_variables": [
+    "FIPS code for the city or census tract",
+    "Name of the city or tract",
+    "The geographic level of geo_fips",
+    "FIPS code for the city in which the",
+    "tract resides",
+    "Name of the city in which the tract",
+    "resides",
+    "The geographic level of parent_fips",
+    "State FIPS code",
+    "State abbreviation",
+    "State name",
+    "Year of the census that correlates",
+    "with geographic boundaries",
+    "State abbreviation",
+    "State FIPS code",
+    "FIPS code for the city",
+    "The geographic level of geo_fips",
+    "Name of the city",
+    "Metric name",
+    "Demographic group",
+    "Year or Year and Month of data",
+    "Source name",
+    "Year of the census that correlates with",
+    "geographic boundaries",
+    "Information about unavailable data or",
+    "data cautions",
+    "Information about county data",
+    "Information about data aggregation",
+    "Concatenation of geo_fips,",
+    "parent_fips,",
+    "census_parent_shape_year",
+    "Category of demographic group",
+    "Demographic group"
   ],
   "featured_variable": [],
   "preferred_citation": "Department of Population Health, NYU Langone Health. City Health Dashboard. https://www.cityhealthdashboard.com/. Accessed [INSERT DATE OF ACCESS].",

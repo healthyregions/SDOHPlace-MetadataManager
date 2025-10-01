@@ -6,12 +6,13 @@
     "filled_pct": 84,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Livability Index",
   "alternative_title": [
     "AARP Livability Index"
   ],
   "description": [
-    "The AARP Livability Index takes every community in the United States and assigns a score based on services and amenities that affect people\u2019s lives the most. The AARP Livability Index provides users with a full view of the quality of a community based on the current and future needs of everyone. The AARP Livability Index aims its focus on seven crutial and distinct categories: housing, neighborhood, transportation, environment, health, engagement, and opportunity."
+    "The AARP Livability Index takes every community in the United States and assigns a score based on services and amenities that affect people\u2019s lives the most. The AARP Livability Index provides users with a full view of the quality of a community based on the current and future needs of everyone. The AARP Livability Index aims its focus on seven crucial and distinct categories: housing, neighborhood, transportation, environment, health, engagement, and opportunity."
   ],
   "language": [
     "eng",
@@ -92,15 +93,16 @@
   "wxs_indentifier": null,
   "id": "herop-qatixm",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-09-19T16:16:06Z",
   "suppressed": false,
   "spatial_resolution": [
     "City",
     "State",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Zero-step entrances",

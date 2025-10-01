@@ -6,6 +6,7 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Broadband Internet Availability, Speed, & Adoption",
   "alternative_title": [
     "NaNDA Broadband Internet Availability, Speed, and Adoption by Census Tract and ZIP Code Tabulation Area, United States, 2014-2020"
@@ -95,14 +96,15 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38567.v1"
   ],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-09-20T12:28:04Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    "140US*"
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Sum of Maximum CIR (Committed Information Rate) download speed across all providers",

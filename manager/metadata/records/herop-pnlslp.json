@@ -12,7 +12,7 @@
     "SRD Index"
   ],
   "description": [
-    "The index assigns a national and a state score to each county by combining indicators of racial discrimination against Black communities across five key dimensions: residential segregation, housing, income, healthcare, and the criminal justice system."
+    "The Structural Racism and Discrimination Index assigns a national and a state score to each county by combining indicators of racial discrimination against Black communities across five key dimensions: residential segregation, housing, income, healthcare, and the criminal justice system."
   ],
   "language": [
     "eng"
@@ -89,7 +89,7 @@
   "wxs_indentifier": null,
   "id": "herop-pnlslp",
   "identifier": [],
-  "modified": "2025-07-23T23:15:59Z",
+  "modified": "2025-09-10T16:34:13Z",
   "suppressed": false,
   "spatial_resolution": [
     "County",

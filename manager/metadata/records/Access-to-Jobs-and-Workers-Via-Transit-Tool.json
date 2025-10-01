@@ -35,9 +35,9 @@
     "Table data"
   ],
   "subject": [
+    "Transportation and Infrastructure",
     "Employment",
-    "Neighborhood and Built Environment",
-    "Transportation and Infrastructure"
+    "Neighborhood and Built Environment"
   ],
   "theme": [
     "Economy",
@@ -102,7 +102,7 @@
   "wxs_indentifier": null,
   "id": "herop-bnohpx",
   "identifier": [],
-  "modified": "2025-08-05T23:03:14Z",
+  "modified": "2025-10-01T18:13:48Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"

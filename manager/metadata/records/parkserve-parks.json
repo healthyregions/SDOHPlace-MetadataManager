@@ -10,7 +10,7 @@
   "title": "Parks (ParkServe)",
   "alternative_title": [],
   "description": [
-    "This is a dataset from the ParkServe national park database, covering over 15,000 cities and towns across the U.S. Trust for Public land compiled the ParkServe database from 2016 to 2018. TPL contacted each city or town to request parks data, as well as searched for GIS parks data resources on municipal and regional open data websites. If no GIS data were available, they delineated park boundaries based on satellite imagery, and confirmed public access via city park websites or signage viewable through Google Street View. Cities and towns were given the opportunity to confirm their delineated boundaries. Today, there are about 145,000 parks in the ParkServe database. Parks data for the 100 largest cities are updated annually as part of the ParkScore Index, and parks data for all other places are updated on a monthly basis following TPL verification of public submissions via the ParkReviewer tool."
+    "This is a dataset from the ParkServe national park database, covering over 15,000 cities and towns across the United States. The Trust for Public Land compiled the ParkServe database from 2016 to 2018. TPL contacted each city or town to request parks data, as well as searched for GIS parks data resources on municipal and regional open data websites. If no GIS data were available, they delineated park boundaries based on satellite imagery, and confirmed public access via city park websites or signage viewable through Google Street View. Cities and towns were given the opportunity to confirm their delineated boundaries. Today, there are about 145,000 parks in the ParkServe database. Parks data for the 100 largest cities are updated annually as part of the ParkScore Index, and parks data for all other places are updated on a monthly basis following TPL verification of public submissions via the ParkReviewer tool."
   ],
   "language": [
     "eng"
@@ -83,7 +83,7 @@
   "wxs_indentifier": null,
   "id": "herop-dbsktp",
   "identifier": [],
-  "modified": "2025-06-16T15:27:20Z",
+  "modified": "2025-09-08T16:51:55Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group",

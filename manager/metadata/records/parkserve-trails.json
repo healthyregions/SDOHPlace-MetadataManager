@@ -1,11 +1,12 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 21,
+    "filled": 22,
     "to_fill": 26,
-    "filled_pct": 80,
+    "filled_pct": 84,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Trails (ParkServe)",
   "alternative_title": [],
   "description": [
@@ -82,19 +83,20 @@
   "wxs_indentifier": null,
   "id": "herop-eqojtg",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-09-20T12:35:08Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    "150US*"
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [],
   "data_variables": [
     "Permanent ID, Name, Trail number, Source feature, Source data, Source origin, Load date, Trail type, Hiker/pedestrian, Bicycle, Packsaddle, ATV, Motorcycle, OHV over 50in, Snowshoe, Cross count, Dogsled, Snowmobile, National trail, Global ID, OSM ID, Code, Class, Oneway, Max speed, Bridge, Tunnel, Length"
   ],
   "featured_variable": [],
-  "preferred_citation": null,
+  "preferred_citation": "ParkServe. (2023, May 24). Trust for Public Land. https://www.tpl.org/parkserve",
   "data_usage_notes": null
 }

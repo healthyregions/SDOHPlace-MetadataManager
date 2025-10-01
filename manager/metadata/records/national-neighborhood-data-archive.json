@@ -12,7 +12,7 @@
     "National Neighborhood Data Archive"
   ],
   "description": [
-    "The National Neighborhood Data Archive (NaNDA) is an open-source collection of datasets that include a focus on \"places\" across the United States. It provides various measures that can be narrowed down to align more with an individual's research. It provides subjects such as socioeconomic disadvantage and affluence, walkability, crime, land use, recreational centers, libraries, fast food, climate, healthcare, housing, public transit, etc. It is managed by the social Environment and Health program at the University of Michigan Institute for Social Research."
+    "The National Neighborhood Data Archive (NaNDA) is an open-source collection of datasets that include a focus on \"places\" across the United States. It provides various measures that can be narrowed down to align more with an individual's research. It provides subjects such as socioeconomic disadvantage and affluence, walkability, crime, land use, recreational centers, libraries, fast food, climate, healthcare, housing, public transit, etc. It is managed by the Social Environment and Health program at the University of Michigan Institute for Social Research."
   ],
   "language": [
     "eng"
@@ -89,7 +89,7 @@
   "wxs_indentifier": null,
   "id": "herop-gfxyto",
   "identifier": [],
-  "modified": "2025-06-16T15:03:44Z",
+  "modified": "2025-09-07T22:02:54Z",
   "suppressed": false,
   "spatial_resolution": [
     "County",

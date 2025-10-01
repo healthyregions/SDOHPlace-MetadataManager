@@ -6,6 +6,7 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Child Opportunity Index (COI)",
   "alternative_title": [
     "Child Opportunity Index (COI)"
@@ -98,13 +99,14 @@
   "wxs_indentifier": null,
   "id": "herop-znxdus",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-09-20T12:23:54Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    "140US*"
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Private Pre-K Enrollment",

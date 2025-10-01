@@ -6,6 +6,7 @@
     "filled_pct": 92,
     "progress_class": "success"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Urbanicity by Census Tract (NaNDA)",
   "alternative_title": [
     "NaNDA Urbanicity by Census Tract, United States, 2010"
@@ -82,13 +83,14 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38606.v1"
   ],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-09-20T12:33:16Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    "140US*"
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Urban/rural qualities of United States",

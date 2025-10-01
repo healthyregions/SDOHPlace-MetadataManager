@@ -12,7 +12,7 @@
     "Tree Canopy Cover"
   ],
   "description": [
-    "\"NLCD tree canopy cover geospatial datasets with spatial resolutions of 30m are produced by the USDA Forest Service. Tree canopy cover is measured as percent tree canopy cover for 30m raster cells, and is derived from multi-spectral satellite imagery and other available ground and ancillary information. Tree canopy dataset for the period 2011-2021 are available for the conterminous United States, and coastal south east Alaska, Hawaii, Puerto Rico, and U.S. Virgin Islands.\""
+    "\"NLCD tree canopy cover geospatial datasets with spatial resolutions of 30m are produced by the USDA Forest Service. Tree canopy cover is measured as percent tree canopy cover for 30m raster cells, and is derived from multi-spectral satellite imagery and other available ground and ancillary information. Tree canopy datasets for the periods of 1985-1994, 1995-2004, 2005-2014, 2015-2023 are available for the conterminous United States, and coastal south east Alaska, Hawaii, Puerto Rico, and U.S. Virgin Islands.\""
   ],
   "language": [
     "eng"
@@ -43,10 +43,36 @@
     "Satellite Data"
   ],
   "temporal_coverage": [
-    "2011-2021"
+    "1985-2024"
   ],
   "date_issued": null,
   "index_year": [
+    1985,
+    1986,
+    1987,
+    1988,
+    1989,
+    1990,
+    1991,
+    1992,
+    1993,
+    1994,
+    1995,
+    1996,
+    1997,
+    1998,
+    1999,
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    200,
+    2007,
+    2008,
+    2009,
+    2010,
     2011,
     2012,
     2013,
@@ -57,7 +83,9 @@
     2018,
     2019,
     2020,
-    2021
+    2021,
+    2022,
+    2023
   ],
   "date_range": [],
   "spatial_coverage": [
@@ -86,19 +114,19 @@
   "file_size": null,
   "references": {
     "http://schema.org/url": "https://www.mrlc.gov/data/type/tree-canopy",
-    "http://schema.org/downloadUrl": "https://www.mrlc.gov/data?f%5B0%5D=category%3Atree%20canopy",
+    "http://schema.org/downloadUrl": "https://www.mrlc.gov/data?f%5B0%5D=category%3ANLCD%20Tree%20Canopy%20Cover&f%5B1%5D=category%3Atree%20canopy",
     "http://lccn.loc.gov/sh85035852": "https://data.fs.usda.gov/geodata/rastergateway/treecanopycover/docs/TCC_v2021-4_Methods.pdf"
   },
   "wxs_indentifier": null,
   "id": "herop-qwqgwc",
   "identifier": [],
-  "modified": "2025-06-16T16:10:16Z",
+  "modified": "2025-09-12T16:16:46Z",
   "suppressed": false,
   "spatial_resolution": [
     "Other"
   ],
   "highlight_ids": [
-    ""
+    "040US*"
   ],
   "spatial_resolution_note": "30m resolution",
   "methods_variables": [],

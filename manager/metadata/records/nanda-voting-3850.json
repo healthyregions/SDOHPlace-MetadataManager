@@ -6,12 +6,13 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Voter Registration, Turnout, & Partisanship (NaNDA)",
   "alternative_title": [
-    "NaNDA Voter Registration, Turnout, and Partisanship by County, United States, 2004-2018"
+    "NaNDA Voter Registration, Turnout, and Partisanship by County, United States, 2004-2022"
   ],
   "description": [
-    "This dataset contains counts of voter registration and voter turnout for all counties in the United States for the years 2004-2018. It also contains measures of each county's Democratic and Republican partisanship, including six-year longitudinal partisan indices for 2006-2016."
+    "This dataset contains counts of voter registration and voter turnout for all counties in the United States for the years 2004-2022. It also contains measures of each county's Democratic and Republican partisanship, including six-year longitudinal partisan indices for 2006-2022."
   ],
   "language": [
     "eng"
@@ -47,7 +48,7 @@
     "voters"
   ],
   "temporal_coverage": [
-    "2004-2018"
+    "2004-2022"
   ],
   "date_issued": "2022-08-31",
   "index_year": [
@@ -65,7 +66,11 @@
     2015,
     2016,
     2017,
-    2018
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
   ],
   "date_range": [],
   "spatial_coverage": [
@@ -91,20 +96,21 @@
   "format": "CSV",
   "file_size": "2.7 MB",
   "references": {
-    "http://schema.org/url": "https://doi.org/10.3886/ICPSR38506.v1"
+    "http://schema.org/url": "https://doi.org/10.3886/ICPSR38506.v2"
   },
   "wxs_indentifier": null,
   "id": "herop-gfeatu",
   "identifier": [
     "https://doi.org/10.3886/ICPSR38506.v1"
   ],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-09-12T14:59:30Z",
   "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": "Warning: Alaska and island territories are excluded in this dataset",
   "methods_variables": [
     "Voter Registration",

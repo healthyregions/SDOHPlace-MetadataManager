@@ -12,7 +12,8 @@
     "EPA Walkability Index"
   ],
   "description": [
-    "EPA developed three data products - Smart Location Database, Access to Jobs and Workers Via Transit Tool, and National Walkability Index - that consistently measure the built environment and transit accessibility of neighborhoods across metropolitan regions and the United States. Users can download data, browse the data in interactive maps, or access the data through web services. The National Walkability Index is based on measures of the built environment that affect the probability of whether people walk as a mode of transportation: street intersection density, proximity to transit stops, and diversity of land uses. The National Walkability Index data are available at the block group level, a unit of census geography that is smaller than a census tract and larger than a census block"
+    "EPA developed three data products - Smart Location Database, Access to Jobs and Workers Via Transit Tool, and National Walkability Index - that consistently measure the built environment and transit accessibility of neighborhoods across metropolitan regions and the United States. Users can download data, browse the data in interactive maps, or access the data through web services.",
+    "The National Walkability Index is based on measures of the built environment that affect the probability of whether people walk as a mode of transportation: street intersection density, proximity to transit stops, and diversity of land uses. The National Walkability Index data are available at the block group level, a unit of census geography that is smaller than a census tract and larger than a census block"
   ],
   "language": [
     "eng"
@@ -95,7 +96,7 @@
   "wxs_indentifier": null,
   "id": "herop-jjsukv",
   "identifier": [],
-  "modified": "2025-08-05T23:01:03Z",
+  "modified": "2025-09-07T22:03:57Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"

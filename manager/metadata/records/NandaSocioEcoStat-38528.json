@@ -6,12 +6,13 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Socioeconomic Status & Demographic Characteristics (NaNDA)",
   "alternative_title": [
     "NaNDA Socioeconomic Status and Demographic Characteristics of Census Tracts and ZIP Code Tabulation Areas, United States, 2000-2020"
   ],
   "description": [
-    "These datasets contain measures of socioeconomic and demographic characteristics by US census tract for the years 2000-2020 and ZIP code tabulation area (ZCTA) for the years 2008-2020. Example measures include population density; population distribution by race, ethnicity, age, and income; income inequality by race and ethnicity; and proportion of population living below the poverty level, receiving public assistance, and female-headed or single parent families with kids. The datasets also contain a set of theoretically derived measures capturing neighborhood socioeconomic disadvantage and affluence, as well as a neighborhood index of Hispanic, foreign born, and limited English."
+    "These datasets contain measures of socioeconomic and demographic characteristics by US census tract for the years 1990-2022 and ZIP code tabulation area (ZCTA) for the years 2008-2022. Example measures include population density; population distribution by race, ethnicity, age, and income; income inequality by race and ethnicity; and proportion of population living below the poverty level, receiving public assistance, and female-headed or single parent families with kids. The datasets also contain a set of theoretically derived measures capturing neighborhood socioeconomic disadvantage and affluence, as well as a neighborhood index of Hispanic, foreign born, and limited English."
   ],
   "language": [
     "eng"
@@ -50,10 +51,19 @@
     "socioeconomic status"
   ],
   "temporal_coverage": [
-    "2000-2020"
+    "1990-2022"
   ],
-  "date_issued": "2022-09-15",
+  "date_issued": "2025-01-22",
   "index_year": [
+    1990,
+    1991,
+    19921993,
+    1994,
+    1995,
+    1996,
+    1997,
+    1998,
+    1999,
     2000,
     2001,
     2002,
@@ -74,7 +84,9 @@
     2017,
     2018,
     2019,
-    2020
+    2020,
+    2021,
+    2022
   ],
   "date_range": [],
   "spatial_coverage": [
@@ -100,21 +112,22 @@
   "format": null,
   "file_size": null,
   "references": {
-    "http://schema.org/url": "https://doi.org/10.3886/ICPSR38528.v3"
+    "http://schema.org/url": "https://doi.org/10.3886/ICPSR38528.v5"
   },
   "wxs_indentifier": null,
   "id": "herop-zemals",
   "identifier": [
     "https://doi.org/10.3886/ICPSR38528.v3"
   ],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-09-12T14:06:03Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Affluence",

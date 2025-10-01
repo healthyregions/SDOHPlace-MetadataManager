@@ -6,6 +6,7 @@
     "filled_pct": 84,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Street Connectivity (NaNDA)",
   "alternative_title": [
     "NaNDA Street Connectivity by ZIP Code Tabulation Area, United States, 2010"
@@ -78,20 +79,42 @@
   "identifier": [
     "doi.org/10.3886/ICPSR38580.v2"
   ],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2025-09-10T21:42:30Z",
   "suppressed": false,
   "spatial_resolution": [
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": [],
+  "highlight_ids": [
+    ""
+  ],
   "spatial_resolution_note": null,
   "methods_variables": [
-    "links, street lengths, nodes,  endpoints of links, Buffers, areas over which to calculate street connectivity, Circuits,  connected path along streets"
+    "links, street lengths, nodes, endpoints of links, buffers, areas over which to calculate street connectivity, circuits,  connected path along streets"
   ],
   "data_variables": [
-    "block density, block length, streets, nodes, zcta, n_streets , n_nodes, n_realnodes, zcta_area_sqmiles, sum_strintlen, n_blocks, linkNodeRatio, Alpha index ratio of actual circuits to maximum circuits, Gamma index ratio of total links fully in the ZCTA to the maximum possible number of",
-    "links in the ZCTA"
+    "Alpha index: number of circuits / max number of circuits",
+    "Average block length: mean length of streets in ZCTA",
+    "Block density",
+    "Census 2010 tract FIPS code",
+    "Census 2020 tract FIPS code",
+    "Census tract area (square miles)",
+    "Connected node ratio",
+    "Gamma index: number of links fully in ZCTA / max possible links",
+    "Intersection density",
+    "Length of street segments within ZCTA (meters)",
+    "Length of street segments within tract (meters)",
+    "Link/node ratio",
+    "Median block length: median length of streets in ZCTA",
+    "Number of census blocks in ZCTA",
+    "Number of census blocks in tract",
+    "Number of nodes in ZCTA",
+    "Number of nodes in tract",
+    "Number of real nodes (nodes at 3- or 4-way intersections",
+    "Number of street segments in ZCTA",
+    "Number of street segments in census tract",
+    "Street network density",
+    "ZCTA area (square miles)",
+    "ZIP code tabulation area"
   ],
   "featured_variable": [],
   "preferred_citation": "Ailshire, Jennifer, Melendez, Robert, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Street Connectivity by ZIP Code Tabulation Area, United States, 2010. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor], 2021-03-10. https://doi.org/10.3886/E134561V1",
