@@ -2,7 +2,7 @@
 
 This is the metadata manager for the SDOH & Place Project, a new map-based search platform for SDOH data discovery that will curate and integrate validated geospatial data relevant to public health at multiple scales.
 
-## Preliminary Metadata Creation
+## Metadata Creation
 
 ### Schema
 
@@ -14,29 +14,6 @@ Custom metadata schema for this project:
 - Data Variables
 - Methods Variables
 
-### Initial Discovery Datasets:
-
-- County Health Rankings 
-    - 2021 county (MK - Needs Review)
-- City Health Dashboard
-    - 2018 census tract (Augustyn will Review - Add Placenames to Spatial Coverage)
-- Neighborhood Health Atlas (ADI)
-    - 2015 block group (Sarthak - Needs Review)
-    - 2020 block group (Sarthak - Needs Review)
-- SDOH Indices
-    - 2014 census tract
-- Opportunity Index
-    - most recent; census tract
-    - most recent; county
-- Social Vulnerability Index
-    - 2016 county (Augustyn -  Review)
-    - 2016 census tract (Augustyn -  Review)
-    - 2020 county (Augustyn To Do)
-    - 2020 census tract (Augustyn To Do)
-    - 2018 county (Sarthak To Do)
-    - 2018 census tract (Sarthak To Do)
-    - Link to 2020 SVI GeoJSON files (county-level and tract-level): https://drive.google.com/drive/folders/1ke84gY2yCA90R2S0-YAZrZo9rJPl7I-R?usp=share_link
-
 ###  Contributors
 
 - Marynia Kolak
@@ -44,16 +21,10 @@ Custom metadata schema for this project:
 - Augustyn Crane
 - Adam Cox
 - Mandela Gadri
+- Arli Coli
+- Camrin Garrett
 
-### Metadata Markdown Files
-
-If you are looking for the Metadata or DataDictionary folders, these are now located in
-
-```
-MetadataManager/manager/metadata/
-```
-
-## MetadataManager Flask App
+## `manager` Flask App
 
 ### Management Commands
 
@@ -87,17 +58,7 @@ Sets the specified user's password to a random 6 character string.
 
 Update a user's password to the provided string.
 
-### Configure
-
-```
-cp ./flask/.env.example ./flask/.env
-```
-
-Required .env content:
-
-`SOLR_HOST`: full url to Solr endpoint
-
-### Install/Run locally
+### Install
 
 A dev deploy will serve the app on Flask's default port (5000).
 
@@ -116,29 +77,45 @@ cd SDOHPlace-MetadataManager
 pip install -e .
 ```
 
+Copy the environment file:
+
+```
+cp .env.example .env
+```
+
+To get started, you won't need to edit any environment variables.
+
+#### Run dev server
+
 Run in debug mode:
 
 ```
-flask --app MetadataManager.manager.app run --debug
+flask run --debug
 ```
 
-`--debug` will auto-reload the app whenever a file is changed (though it seems like changes to HTML or CSS files may require the app to be stopped and restarted...).
+`--debug` will auto-reload the app whenever a file is changed (though it seems like changes to HTML or CSS files sometimes require the app to be stopped and restarted...).
 
-To run as a background process with gunicorn, first set scripts to be executable:
+You can now view the app at `http://localhost:5000`
+
+#### Deploying with gunicorn
+
+To run as a background process with gunicorn, first set the scripts to be executable:
 
 ```
 sudo chmod +x ./scripts/*.sh
 ```
 
-Then use
+Then use the following commands to start/stop/restart the application. A log will be written to `./scripts/.log`.
 
 ```
-./scripts/start.sh
-./scripts/stop.sh
-./scripts/restart.sh
+./scripts/start_flask.sh
+./scripts/stop_flask.sh
+./scripts/restart_flask.sh
 ```
 
-to control the application. A log will be created in `./scripts/.log`.
+With gunicorn running, you can view the app at `http://localhost:8000`, or set a proxy through a production webserver like nginx.
+
+You can change `PORT` in `.env` if you want gunicorn to listen on a different port than 8000.
 
 ### Install/Run with Docker
 
@@ -147,17 +124,15 @@ The Docker deploy will serve the app with NGINX: http://localhost:8000
 It will also run Solr at http://localhost:8983 and will automatically create a core named `blacklight-core-dev`
 
 Start containers:
+
 ```bash
 docker compose up -d --build
 ```
+
 This will build a Docker image and run a container from that image.
 
-Populate Solr:
-```bash
-docker compose exec -it manager flask registry index --clean 
-```
+If you are also running the SDOHPlace Data Discovery application locally, you can point it to this solr instance by editing the `.env` for that project:
 
-Point your SDOHPlace Discovery App at this instance by editing the `.env` for that project:
 ```env
 NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-dev'
 ```
