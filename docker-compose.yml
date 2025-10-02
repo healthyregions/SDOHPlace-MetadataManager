@@ -14,7 +14,11 @@ services:
       - ./solr/web.xml:/opt/solr-9.7.0-slim/server/solr-webapp/webapp/WEB-INF/web.xml
       - ./solr/solr.in.sh:/etc/default/solr.in.sh
       - ./solr:/solr-configset
-    command: [ '/bin/sh', '-c', 'sed -i -e "s/{{SOLR_CORE}}/blacklight-core-dev/g" /solr-configset/conf/solrconfig.xml && solr-precreate blacklight-core-dev /solr-configset -n data_driven_schema_configs' ]
+    command: 
+      - '/bin/sh'
+      - '-c'
+      - 'solr-precreate blacklight-core-dev /solr-configset'
+      ## I tried creating two cores here based on https://github.com/docker-solr/docker-solr/issues/188 but couldn't get it to work... -AC
 
   manager:
     container_name: sdoh-manager
