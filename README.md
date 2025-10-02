@@ -58,7 +58,7 @@ Sets the specified user's password to a random 6 character string.
 
 Update a user's password to the provided string.
 
-### Install
+### Local Install
 
 A dev deploy will serve the app on Flask's default port (5000).
 
@@ -141,6 +141,30 @@ Shutdown containers:
 ```bash
 docker compose down
 ```
+
+### Getting Started with Docker
+
+Once the application is running, you'll need to create a user for login and then index all of the records. First enter the docker container for the metadata manager:
+
+```
+docker exec -it <container id> bash
+```
+
+Now create a dummy user:
+
+```
+flask user create admin admin@example.com password
+```
+
+In the interface you will login with the **email** and **password** (do not use the username).
+
+Finally index all of the records into Solr:
+
+```
+flask registry index
+```
+
+You may see a 503 error from Solr, this is not a problem it is a health status ping that is not enabled yet on the docker build of the core.
 
 ## Running the coverage command as a standalone script
 
