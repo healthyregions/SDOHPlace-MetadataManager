@@ -46,9 +46,9 @@ Provides the capability of updating all instances of a specific value in a field
 
 #### Users
 
-`flask user create`
+`flask user create [username] [email] [password]`
 
-Create a new user with their name, email, and password.
+Create a new user with their username, email, and password. Note that only email and password are used to login, not the username.
 
 `flask user reset-password`
 
