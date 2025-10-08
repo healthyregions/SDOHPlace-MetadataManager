@@ -332,7 +332,7 @@ class Field:
         if self.id == "highlight_ids":
             value = form.get(self.id)
             value = value.replace(",", "|").replace("\n", "|")
-            return [i.rstrip().lstrip() for i in value.split("|")]
+            return [i for i in [j.rstrip().lstrip() for j in value.split("|")] if i]
 
         if self.multiple:
             if (
