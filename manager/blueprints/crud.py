@@ -152,30 +152,40 @@ def handle_record(id):
 @crud.route("/solr/<id>", methods=["POST", "DELETE"])
 @login_required
 def handle_solr(id):
-    s = Solr()
+    # Get environment parameter from query string (stage or prod)
+    environment = request.args.get("env", "prod")
+    
+    # Check if user is admin for production indexing
+    if environment == "prod" and current_user.name != "admin":
+        current_app.logger.warning(f"User {current_user.name} attempted to index to production without admin privileges")
+        return f'<div class="notification is-danger">Only admin users can index to production. Please use staging instead.</div>'
+    
+    s = Solr(environment=environment)
+    
     if request.method == "POST":
         # ultimately, reindex-all should be calling a method on Solr()
         # but leaving here for the moment.
         if id == "reindex-all":
-            current_app.logger.info("reindexing all records...")
+            current_app.logger.info(f"reindexing all records to {environment}...")
             s.delete_all()
             registry = Registry()
             records = [i.to_solr() for i in registry.records]
             s.multi_add(records)
             return redirect("/")
         else:
-            current_app.logger.info(f"indexing {id}")
+            current_app.logger.info(f"indexing {id} to {environment}")
             registry = Registry()
             record = registry.get_record(id)
             if not record:
                 raise NotFound
             result = record.index(solr_instance=s)
             if result["success"]:
-                current_app.logger.info(f"record {id} indexed successfully")
+                current_app.logger.info(f"record {id} indexed successfully to {environment}")
                 current_app.logger.debug(result["document"])
-                return f'<div class="notification is-success">{record.data["title"]} re-indexed successfully</div>'
+                env_label = "staging" if environment == "stage" else "production"
+                return f'<div class="notification is-success">{record.data["title"]} indexed to {env_label} successfully</div>'
             else:
                 current_app.logger.error(result["error"])
-                return f'<div class="notification is-danger">Error while re-indexing record: {result["error"]}</div>'
+                return f'<div class="notification is-danger">Error while indexing record: {result["error"]}</div>'
     elif request.method == "DELETE":
         pass

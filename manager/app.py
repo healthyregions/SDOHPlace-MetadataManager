@@ -23,9 +23,12 @@ GBL_HOST = os.getenv("GBL_HOST").rstrip("/")
 DISCOVERY_APP_URL = os.getenv("DISCOVERY_APP_URL")
 
 SOLR_HOST = os.getenv("SOLR_HOST", "").rstrip("/")
-SOLR_CORE = os.getenv("SOLR_CORE", "").rstrip("/")
+SOLR_CORE = os.getenv("SOLR_CORE", "").rstrip("/")  # Legacy support
+SOLR_CORE_STAGE = os.getenv("SOLR_CORE_STAGE", "blacklight-core-stage").rstrip("/")
+SOLR_CORE_PROD = os.getenv("SOLR_CORE_PROD", "blacklight-core").rstrip("/")
 
-SOLR_URL = f"{SOLR_HOST}/{SOLR_CORE}/"
+# Legacy URL for backward compatibility
+SOLR_URL = f"{SOLR_HOST}/{SOLR_CORE}/" if SOLR_CORE else f"{SOLR_HOST}/{SOLR_CORE_PROD}/"
 
 app = Flask(__name__)
 
@@ -64,6 +67,11 @@ def get_context():
     return dict(
         gbl_host=GBL_HOST,
         discovery_app_url=DISCOVERY_APP_URL,
-        solr={"host": SOLR_HOST, "core": SOLR_CORE},
+        solr={
+            "host": SOLR_HOST,
+            "core": SOLR_CORE,  # Legacy
+            "core_stage": SOLR_CORE_STAGE,
+            "core_prod": SOLR_CORE_PROD,
+        },
         user=current_user,
     )

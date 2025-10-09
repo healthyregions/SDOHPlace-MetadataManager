@@ -7,15 +7,28 @@
 {% if user.is_authenticated %}
 <div class="buttons are-small has-addons">
     <a href="{{ url_for('manager.handle_record', id=record.id) }}?edit=true" class="button" role="button">Edit</a>
-    <!-- <form class="button" action="" method="post">
-        <button name="index-btn" value="index" title="Index this record in SOLR (will overwrite existing record with same id)">Re-index</button>
-    </form> -->
-    <button class="button"
-            hx-post="{{ url_for('manager.handle_solr', id=record.id) }}"
+</div>
+<h2 class="subtitle">Index to Solr</h2>
+<div class="buttons are-small has-addons">
+    <button class="button is-info"
+            hx-post="{{ url_for('manager.handle_solr', id=record.id) }}?env=stage"
             hx-trigger="click"
             hx-target="#reindex-result"
-            hx-swap="innerHTML" >
-        Index</button>
+            hx-swap="innerHTML"
+            title="Index to staging core ({{ solr.core_stage }})">
+        Index — Staging</button>
+    {% if user.name == "admin" %}
+    <button class="button is-warning"
+            hx-post="{{ url_for('manager.handle_solr', id=record.id) }}?env=prod"
+            hx-trigger="click"
+            hx-target="#reindex-result"
+            hx-swap="innerHTML"
+            title="Index to production core ({{ solr.core_prod }}) - Admin only">
+        Index — Production</button>
+    {% else %}
+    <button class="button is-warning" disabled title="Only admin users can index to production">
+        Index — Production (admin only)</button>
+    {% endif %}
 </div>
 {% else %}
 <p><em>You are not logged in.</em></p>
