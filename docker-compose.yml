@@ -14,12 +14,27 @@ services:
       - ./solr/web.xml:/opt/solr-9.7.0-slim/server/solr-webapp/webapp/WEB-INF/web.xml
       - ./solr/solr.in.sh:/etc/default/solr.in.sh
       - ./solr:/solr-configset
+      - ./solr/init-cores.sh:/docker-entrypoint-initdb.d/init-cores.sh
     command: 
-      - '/bin/sh'
+      - 'bash'
       - '-c'
       - |
-        solr-precreate blacklight-core-dev /solr-configset &&
-        solr-precreate blacklight-core-prod /solr-configset
+        # Create dev core and start Solr in background
+        solr-precreate blacklight-core-dev /solr-configset &
+        SOLR_PID=$!
+        
+        # Wait for Solr to be ready
+        echo "Waiting for Solr to start..."
+        until curl -s http://localhost:8983/solr/admin/cores?action=STATUS > /dev/null 2>&1; do
+          sleep 2
+        done
+        
+        # Create production core
+        echo "Creating production core..."
+        solr create_core -c blacklight-core-prod -d /solr-configset
+        
+        # Wait for the background Solr process
+        wait $SOLR_PID
 
   manager:
     container_name: sdoh-manager
