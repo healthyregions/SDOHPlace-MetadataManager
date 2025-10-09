@@ -17,8 +17,9 @@ services:
     command: 
       - '/bin/sh'
       - '-c'
-      - 'solr-precreate blacklight-core-dev /solr-configset'
-      ## I tried creating two cores here based on https://github.com/docker-solr/docker-solr/issues/188 but couldn't get it to work... -AC
+      - |
+        solr-precreate blacklight-core-dev /solr-configset &&
+        solr-precreate blacklight-core-prod /solr-configset
 
   manager:
     container_name: sdoh-manager

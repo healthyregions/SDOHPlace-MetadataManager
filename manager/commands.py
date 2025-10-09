@@ -123,7 +123,7 @@ def validate_records(id, verbose):
 @click.option("--id")
 @click.option("--clean", is_flag=True, default=False)
 @click.option("--verbose", is_flag=True, default=False)
-@click.option("--env", type=click.Choice(['stage', 'prod'], case_sensitive=False), default='prod', help="Target environment: stage or prod")
+@click.option("--env", type=click.Choice(['dev', 'prod'], case_sensitive=False), default='prod', help="Target environment: dev or prod")
 def index(id, clean, verbose, env):
     """Reindex all Solr records from database content."""
 

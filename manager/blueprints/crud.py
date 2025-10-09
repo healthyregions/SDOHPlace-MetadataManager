@@ -158,7 +158,7 @@ def handle_solr(id):
     # Check if user is admin for production indexing
     if environment == "prod" and current_user.name != "admin":
         current_app.logger.warning(f"User {current_user.name} attempted to index to production without admin privileges")
-        return f'<div class="notification is-danger">Only admin users can index to production. Please use staging instead.</div>'
+        return f'<div class="notification is-danger">Only admin users can index to production. Please use dev instead.</div>'
     
     s = Solr(environment=environment)
     
@@ -182,7 +182,7 @@ def handle_solr(id):
             if result["success"]:
                 current_app.logger.info(f"record {id} indexed successfully to {environment}")
                 current_app.logger.debug(result["document"])
-                env_label = "staging" if environment == "stage" else "production"
+                env_label = "dev" if environment == "dev" else "production"
                 return f'<div class="notification is-success">{record.data["title"]} indexed to {env_label} successfully</div>'
             else:
                 current_app.logger.error(result["error"])

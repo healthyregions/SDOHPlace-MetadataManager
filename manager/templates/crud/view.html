@@ -10,13 +10,13 @@
 </div>
 <h2 class="subtitle">Index to Solr</h2>
 <div class="buttons are-small has-addons">
-    <button class="button is-info"
-            hx-post="{{ url_for('manager.handle_solr', id=record.id) }}?env=stage"
-            hx-trigger="click"
-            hx-target="#reindex-result"
-            hx-swap="innerHTML"
-            title="Index to staging core ({{ solr.core_stage }})">
-        Index — Staging</button>
+            <button class="button is-info"
+                    hx-post="{{ url_for('manager.handle_solr', id=record.id) }}?env=dev"
+                    hx-trigger="click"
+                    hx-target="#reindex-result"
+                    hx-swap="innerHTML"
+                    title="Index to dev core ({{ solr.core_dev }})">
+                Index — Dev</button>
     {% if user.name == "admin" %}
     <button class="button is-warning"
             hx-post="{{ url_for('manager.handle_solr', id=record.id) }}?env=prod"
