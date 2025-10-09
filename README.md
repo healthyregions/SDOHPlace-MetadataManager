@@ -36,6 +36,13 @@ Use `flask [command] [subcommand] --help` to see the specific arguments for each
 
 Index a specific record (provide the id), or all records, into Solr. Use `--clean` to remove all existing documents from the Solr core before indexing (for a full refresh).
 
+**Stage/Prod Workflow:** Use `--env` to specify staging or production:
+
+```bash
+flask registry index --env stage    # Index to staging (preview)
+flask registry index --env prod     # Index to production (admin only via web UI)
+```
+
 `flask registry resave-records`
 
 Loads all records and then runs "save_data()" on each one, triggers whatever data cleaning is applied to each field.
@@ -79,11 +86,13 @@ pip install -e .
 
 Copy the environment file:
 
-```
+```bash
 cp .env.example .env
 ```
 
-To get started, you won't need to edit any environment variables.
+Edit `.env` and set a secure `SECRET_KEY`. For the stage/prod workflow, you can also configure:
+- `SOLR_CORE_STAGE` (default: `blacklight-core-stage`)
+- `SOLR_CORE_PROD` (default: `blacklight-core-prod`)
 
 #### Run dev server
 
@@ -119,9 +128,30 @@ You can change `PORT` in `.env` if you want gunicorn to listen on a different po
 
 ### Install/Run with Docker
 
-The Docker deploy will serve the app with NGINX: http://localhost:8000
+The Docker deploy will serve the app on port 8000 and Solr on port 8983.
 
-It will also run Solr at http://localhost:8983 and will automatically create a core named `blacklight-core-dev`
+#### Quick Start (Recommended)
+
+Use the quickstart script to automatically set up everything:
+
+**Linux/Mac:**
+```bash
+chmod +x docker-quickstart.sh
+./docker-quickstart.sh
+```
+
+**Windows (PowerShell):**
+```powershell
+.\docker-quickstart.ps1
+```
+
+This will:
+- Create `.env.docker` from the example
+- Start Docker containers
+- Create staging and production Solr cores
+- Display next steps
+
+#### Manual Setup
 
 Start containers:
 
@@ -129,12 +159,16 @@ Start containers:
 docker compose up -d --build
 ```
 
-This will build a Docker image and run a container from that image.
+This will build a Docker image and run containers. By default, it creates a core named `blacklight-core-dev`.
 
-If you are also running the SDOHPlace Data Discovery application locally, you can point it to this solr instance by editing the `.env` for that project:
+**For Stage/Prod Workflow:** Create staging and production cores:
 
-```env
-NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-dev'
+```bash
+# Create staging core
+curl "http://localhost:8983/solr/admin/cores?action=CREATE&name=blacklight-core-stage&configSet=_default"
+
+# Create production core
+curl "http://localhost:8983/solr/admin/cores?action=CREATE&name=blacklight-core-prod&configSet=_default"
 ```
 
 Shutdown containers:
@@ -144,27 +178,51 @@ docker compose down
 
 ### Getting Started with Docker
 
-Once the application is running, you'll need to create a user for login and then index all of the records. First enter the docker container for the metadata manager:
+Once the application is running, you'll need to create a user for login and then index records.
 
-```
-docker exec -it <container id> bash
+Enter the docker container:
+
+```bash
+docker exec -it sdoh-manager bash
 ```
 
-Now create a dummy user:
+Create an admin user:
 
-```
+```bash
 flask user create admin admin@example.com password
 ```
 
-In the interface you will login with the **email** and **password** (do not use the username).
+**Important:** Login uses **email** and **password**, not the username!
 
-Finally index all of the records into Solr:
+Index records to staging (all users) or production (admin only):
 
+```bash
+# Index to staging
+flask registry index --env stage
+
+# Index to production (admin only)
+flask registry index --env prod
 ```
-flask registry index
+
+**Note:** You may see a 503 error from Solr health checks - this is normal and can be ignored.
+
+### Connecting to Data Discovery App
+
+If you're running the SDOHPlace Data Discovery application locally, point it to the appropriate Solr core:
+
+**For staging preview:**
+```env
+NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-stage'
 ```
 
-You may see a 503 error from Solr, this is not a problem it is a health status ping that is not enabled yet on the docker build of the core.
+**For production:**
+```env
+NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-prod'
+```
+
+### Docker Documentation
+
+For detailed Docker setup and troubleshooting, see [DOCKER_SETUP.md](./DOCKER_SETUP.md)
 
 ## Running the coverage command as a standalone script
 
@@ -228,3 +286,4 @@ Putting these arguments together, let's assume we have a file called `SVI 2022.c
 ```
 python coverage.py "SVI 2022.csv" tract -i tractfips -o svi-highlight-ids.txt
 ```
+
