@@ -14,7 +14,6 @@ services:
       - ./solr/web.xml:/opt/solr-9.7.0-slim/server/solr-webapp/webapp/WEB-INF/web.xml
       - ./solr/solr.in.sh:/etc/default/solr.in.sh
       - ./solr:/solr-configset
-      - ./solr/init-cores.sh:/docker-entrypoint-initdb.d/init-cores.sh
     command: 
       - 'bash'
       - '-c'
