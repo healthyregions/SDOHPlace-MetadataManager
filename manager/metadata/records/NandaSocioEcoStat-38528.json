@@ -57,7 +57,8 @@
   "index_year": [
     1990,
     1991,
-    19921993,
+    1992,
+    1993,
     1994,
     1995,
     1996,
@@ -119,7 +120,7 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38528.v3"
   ],
-  "modified": "2025-09-12T14:06:03Z",
+  "modified": "2025-10-02T20:15:37Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract",
