@@ -15,10 +15,25 @@ services:
       - ./solr/solr.in.sh:/etc/default/solr.in.sh
       - ./solr:/solr-configset
     command: 
-      - '/bin/sh'
+      - 'bash'
       - '-c'
-      - 'solr-precreate blacklight-core-dev /solr-configset'
-      ## I tried creating two cores here based on https://github.com/docker-solr/docker-solr/issues/188 but couldn't get it to work... -AC
+      - |
+        # Create dev core and start Solr in background
+        solr-precreate blacklight-core-dev /solr-configset &
+        SOLR_PID=$!
+        
+        # Wait for Solr to be ready
+        echo "Waiting for Solr to start..."
+        until curl -s http://localhost:8983/solr/admin/cores?action=STATUS > /dev/null 2>&1; do
+          sleep 2
+        done
+        
+        # Create production core
+        echo "Creating production core..."
+        solr create_core -c blacklight-core-prod -d /solr-configset
+        
+        # Wait for the background Solr process
+        wait $SOLR_PID
 
   manager:
     container_name: sdoh-manager
