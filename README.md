@@ -130,46 +130,25 @@ You can change `PORT` in `.env` if you want gunicorn to listen on a different po
 
 The Docker deploy will serve the app on port 8000 and Solr on port 8983.
 
-#### Quick Start (Recommended)
+**See [DOCKER_SETUP.md](./DOCKER_SETUP.md) for complete Docker setup instructions.**
 
-Use the quickstart script to automatically set up everything:
+#### Quick Start
 
-**Linux/Mac:**
+1. Copy the environment template:
 ```bash
-chmod +x docker-quickstart.sh
-./docker-quickstart.sh
+cp .env.docker.example .env.docker
 ```
 
-**Windows (PowerShell):**
-```powershell
-.\docker-quickstart.ps1
-```
+2. Edit `.env.docker` and set your `SECRET_KEY` to a secure random string.
 
-This will:
-- Create `.env.docker` from the example
-- Start Docker containers
-- Create staging and production Solr cores
-- Display next steps
-
-#### Manual Setup
-
-Start containers:
-
+3. Start containers:
 ```bash
 docker compose up -d --build
 ```
 
-This will build a Docker image and run containers. By default, it creates a core named `blacklight-core-dev`.
+4. The docker-compose setup automatically creates `blacklight-core-dev` and `blacklight-core-prod` cores.
 
-**For Stage/Prod Workflow:** Create staging and production cores:
-
-```bash
-# Create staging core
-curl "http://localhost:8983/solr/admin/cores?action=CREATE&name=blacklight-core-stage&configSet=_default"
-
-# Create production core
-curl "http://localhost:8983/solr/admin/cores?action=CREATE&name=blacklight-core-prod&configSet=_default"
-```
+You can verify at: http://localhost:8983/solr/#/~cores
 
 Shutdown containers:
 ```bash
@@ -194,11 +173,11 @@ flask user create admin admin@example.com password
 
 **Important:** Login uses **email** and **password**, not the username!
 
-Index records to staging (all users) or production (admin only):
+Index records to dev (all users) or production (admin only):
 
 ```bash
-# Index to staging
-flask registry index --env stage
+# Index to dev/staging
+flask registry index --env dev
 
 # Index to production (admin only)
 flask registry index --env prod
@@ -210,9 +189,9 @@ flask registry index --env prod
 
 If you're running the SDOHPlace Data Discovery application locally, point it to the appropriate Solr core:
 
-**For staging preview:**
+**For dev/staging preview:**
 ```env
-NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-stage'
+NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-dev'
 ```
 
 **For production:**

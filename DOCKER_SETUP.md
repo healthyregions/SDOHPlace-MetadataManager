@@ -53,27 +53,19 @@ flask user create admin admin@example.com password
 
 **Important:** Login uses **email** and **password**, not the username!
 
-### 3. Create Staging and Production Cores
+### 3. Create Development and Production Cores (Optional)
 
-The docker-compose setup creates a single core by default. To use the stage/prod workflow, you need to create both cores.
+The docker-compose setup creates `blacklight-core-dev` and `blacklight-core-prod` cores automatically.
 
-Inside the container, execute:
+If you need to create additional cores or recreate them, use:
 
 ```bash
-# Create staging core
-curl "http://solr:8983/solr/admin/cores?action=CREATE&name=blacklight-core-stage&configSet=_default"
-
-# Create production core  
+# From inside the container
+curl "http://solr:8983/solr/admin/cores?action=CREATE&name=blacklight-core-dev&configSet=_default"
 curl "http://solr:8983/solr/admin/cores?action=CREATE&name=blacklight-core-prod&configSet=_default"
-```
 
-Or from your host machine:
-
-```bash
-# Create staging core
-curl "http://localhost:8983/solr/admin/cores?action=CREATE&name=blacklight-core-stage&configSet=_default"
-
-# Create production core
+# Or from your host machine
+curl "http://localhost:8983/solr/admin/cores?action=CREATE&name=blacklight-core-dev&configSet=_default"
 curl "http://localhost:8983/solr/admin/cores?action=CREATE&name=blacklight-core-prod&configSet=_default"
 ```
 
@@ -81,49 +73,35 @@ Verify cores were created at: http://localhost:8983/solr/#/~cores
 
 ### 4. Configure Environment Variables
 
-Create a `.env.docker` file in the project root with the following content:
+Copy the example environment file and customize it:
 
 ```bash
-# Flask Configuration
-SECRET_KEY=your-secret-key-here-change-this
-FLASK_APP=manager/app.py
-
-# Solr Configuration
-# Note: Inside Docker, use the service name 'solr' not 'localhost'
-SOLR_HOST=http://solr:8983/solr
-SOLR_CORE_STAGE=blacklight-core-stage
-SOLR_CORE_PROD=blacklight-core-prod
-SOLR_USERNAME=
-SOLR_PASSWORD=
-
-# GeoBlacklight (if using)
-GBL_HOST=http://localhost:3000
-
-# Data Discovery App URL (if using)
-DISCOVERY_APP_URL=http://localhost:3001
-
-# Port (internal to container)
-PORT=8000
+cp .env.docker.example .env.docker
 ```
 
+Then edit `.env.docker` and change at minimum:
+- `SECRET_KEY` - Set to a secure random string (required for Flask sessions)
+
 **Important:** 
-- Change `SECRET_KEY` to a secure random string
+- The `.env.docker` file is git-ignored and will not be tracked
 - Inside Docker, use `http://solr:8983/solr` (service name), not `localhost`
 - For local (non-Docker) setup, you would use `http://localhost:8983/solr` instead
+
+See `.env.docker.example` for all available configuration options.
 
 ### 5. Index Records
 
 Inside the container:
 
 ```bash
-# Index all records to staging
-flask registry index --env stage
+# Index all records to dev/staging
+flask registry index --env dev
 
-# Index all records to production (after verifying in staging)
+# Index all records to production (after verifying in dev)
 flask registry index --env prod
 
-# Index specific record to staging
-flask registry index --id my-record-id --env stage
+# Index specific record to dev
+flask registry index --id my-record-id --env dev
 ```
 
 ## Docker Compose Commands
@@ -191,8 +169,8 @@ Inside the container:
 # Create user
 flask user create username email@example.com password
 
-# Index to staging
-flask registry index --env stage
+# Index to dev/staging
+flask registry index --env dev
 
 # Index to production
 flask registry index --env prod
@@ -212,16 +190,23 @@ exit
 
 ## Environment Setup
 
-The docker-compose configuration uses `.env.docker` for environment variables. Here's what each variable does:
+The docker-compose configuration uses `.env.docker` for environment variables. A template is provided as `.env.docker.example`.
+
+### Environment Variables
 
 | Variable | Description | Default |
 |----------|-------------|---------|
+| `SECRET_KEY` | Flask secret key for sessions | (required) |
+| `FLASK_APP` | Flask application path | `manager/app.py` |
 | `SOLR_HOST` | Solr server URL | `http://solr:8983/solr` |
-| `SOLR_CORE_STAGE` | Staging core name | `blacklight-core-stage` |
+| `SOLR_CORE_DEV` | Development/staging core name | `blacklight-core-dev` |
 | `SOLR_CORE_PROD` | Production core name | `blacklight-core-prod` |
-| `SECRET_KEY` | Flask secret key | (required) |
+| `SOLR_CORE` | Legacy single core (optional) | - |
+| `SOLR_USERNAME` | Solr authentication username | (optional) |
+| `SOLR_PASSWORD` | Solr authentication password | (optional) |
 | `GBL_HOST` | GeoBlacklight URL | (optional) |
 | `DISCOVERY_APP_URL` | Data discovery app URL | (optional) |
+| `PORT` | Internal container port | `8000` |
 
 ## Solr Core Configuration
 
@@ -236,7 +221,7 @@ docker cp ./solr/conf sdoh-solr:/opt/solr-9.7.0-slim/server/solr/configsets/myco
 
 2. Create core with custom config:
 ```bash
-docker exec -it sdoh-solr solr create_core -c blacklight-core-stage -d /opt/solr-9.7.0-slim/server/solr/configsets/myconfig
+docker exec -it sdoh-solr solr create_core -c blacklight-core-dev -d /opt/solr-9.7.0-slim/server/solr/configsets/myconfig
 ```
 
 ### Verify Cores
@@ -251,13 +236,13 @@ Or visit: http://localhost:8983/solr/#/~cores
 
 ## Integrating with Data Discovery App
 
-If you're running the SDOHPlace Data Discovery application locally, configure it to use the staging core:
+If you're running the SDOHPlace Data Discovery application locally, configure it to use the appropriate core:
 
 In your Data Discovery app's `.env`:
 
 ```env
-# For staging preview
-NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-stage'
+# For dev/staging preview
+NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-dev'
 
 # For production
 NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-prod'
@@ -364,5 +349,4 @@ For production deployments:
 - [Solr Documentation](https://solr.apache.org/guide/)
 - [Flask Documentation](https://flask.palletsprojects.com/)
 - [Project README](./README.md)
-- [Stage/Prod Workflow Guide](./STAGE_PROD_WORKFLOW.md)
 
