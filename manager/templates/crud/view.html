@@ -9,7 +9,7 @@
     <a href="{{ url_for('manager.handle_record', id=record.id) }}?edit=true" class="button" role="button">Edit</a>
 </div>
 <h2 class="subtitle">Index to Solr</h2>
-<div class="buttons are-small has-addons">
+<div class="buttons are-small is-vertical">
             <button class="button is-info"
                     hx-post="{{ url_for('manager.handle_solr', id=record.id) }}?env=dev"
                     hx-trigger="click"
