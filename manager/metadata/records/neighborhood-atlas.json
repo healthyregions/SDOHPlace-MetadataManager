@@ -85,15 +85,13 @@
   "wxs_indentifier": null,
   "id": "herop-ggungs",
   "identifier": [],
-  "modified": "2025-09-12T13:46:11Z",
+  "modified": "2025-10-10T19:08:02Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": [
-    ""
-  ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "FPL 150% (Federal Poverty Level at 150%)",

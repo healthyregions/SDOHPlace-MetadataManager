@@ -120,15 +120,13 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38528.v3"
   ],
-  "modified": "2025-10-02T20:15:37Z",
+  "modified": "2025-10-10T19:08:33Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": [
-    ""
-  ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Affluence",

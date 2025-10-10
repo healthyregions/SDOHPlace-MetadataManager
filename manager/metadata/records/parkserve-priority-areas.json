@@ -82,15 +82,13 @@
   "wxs_indentifier": null,
   "id": "herop-cdyuaj",
   "identifier": [],
-  "modified": "2025-06-16T15:41:22Z",
+  "modified": "2025-10-10T19:06:21Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract",
     "Census Block Group"
   ],
-  "highlight_ids": [
-    ""
-  ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "ID, Population per acre, Urban area ID, Rate of physical inactivity, Rate of poor mental health, Respiratory hazard, Density of low-income households, Density of people of color, ID of the city, Low-income households (%), People of color (%), People per acre rank, Physical inactivity rank, Poor mental health rank, Average land surface temperature rank, Respiratory hazard rank, Density of people of color rank, People of color (%) rank, Low-income households (%) rank, Density of low-income households rank, Average of physical inactivity rank and poor mental health rank, Urban heat island anomaly"

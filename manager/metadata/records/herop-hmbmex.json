@@ -135,15 +135,13 @@
   "wxs_indentifier": null,
   "id": "herop-hmbmex",
   "identifier": [],
-  "modified": "2025-10-01T02:32:06Z",
+  "modified": "2025-10-10T19:04:04Z",
   "suppressed": false,
   "spatial_resolution": [
     "City",
     "County"
   ],
-  "highlight_ids": [
-    ""
-  ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [],
   "data_variables": [

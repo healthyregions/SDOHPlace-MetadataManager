@@ -84,14 +84,12 @@
   "wxs_indentifier": null,
   "id": "herop-yoizdf",
   "identifier": [],
-  "modified": "2025-06-16T15:38:06Z",
+  "modified": "2025-10-10T19:08:50Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
   ],
-  "highlight_ids": [
-    ""
-  ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [],
   "data_variables": [

@@ -89,7 +89,7 @@
   "wxs_indentifier": null,
   "id": "herop-gfxyto",
   "identifier": [],
-  "modified": "2025-09-07T22:02:54Z",
+  "modified": "2025-10-10T19:07:39Z",
   "suppressed": false,
   "spatial_resolution": [
     "County",
@@ -99,9 +99,7 @@
     "Census Block Group",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": [
-    ""
-  ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [],
   "data_variables": [],

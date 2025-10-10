@@ -96,14 +96,12 @@
   "wxs_indentifier": null,
   "id": "herop-odfmer",
   "identifier": [],
-  "modified": "2025-06-16T14:44:22Z",
+  "modified": "2025-10-10T19:03:54Z",
   "suppressed": false,
   "spatial_resolution": [
     "Other"
   ],
-  "highlight_ids": [
-    ""
-  ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Pollutant (e.g., Carbon Dioxide, Methane, Nitrogen Oxides)",

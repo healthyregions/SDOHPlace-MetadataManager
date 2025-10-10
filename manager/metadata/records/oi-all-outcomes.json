@@ -90,15 +90,13 @@
   "wxs_indentifier": null,
   "id": "herop-siawey",
   "identifier": [],
-  "modified": "2025-09-19T16:05:22Z",
+  "modified": "2025-10-10T18:53:23Z",
   "suppressed": false,
   "spatial_resolution": [
     "County",
     "Census Tract"
   ],
-  "highlight_ids": [
-    ""
-  ],
+  "highlight_ids": [],
   "spatial_resolution_note": "Community Zone, National",
   "methods_variables": [
     "Mean predicted outcome for children of a given race, gender, and with parents at a given percentile",

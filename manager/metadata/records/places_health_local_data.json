@@ -82,7 +82,7 @@
   "wxs_indentifier": null,
   "id": "herop-tvlxez",
   "identifier": [],
-  "modified": "2025-08-05T23:25:05Z",
+  "modified": "2025-10-10T19:03:46Z",
   "suppressed": false,
   "spatial_resolution": [
     "City",
@@ -90,9 +90,7 @@
     "Census Tract",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": [
-    ""
-  ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Arthritis among adults",

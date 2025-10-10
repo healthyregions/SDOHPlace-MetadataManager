@@ -89,16 +89,14 @@
   "wxs_indentifier": null,
   "id": "herop-pnlslp",
   "identifier": [],
-  "modified": "2025-09-10T16:34:13Z",
+  "modified": "2025-10-10T19:05:24Z",
   "suppressed": false,
   "spatial_resolution": [
     "County",
     "State",
     "Other"
   ],
-  "highlight_ids": [
-    ""
-  ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Racial Concentration",

@@ -93,14 +93,12 @@
   "wxs_indentifier": null,
   "id": "herop-bllwns",
   "identifier": [],
-  "modified": "2025-06-16T16:00:39Z",
+  "modified": "2025-10-10T19:02:42Z",
   "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
-  "highlight_ids": [
-    ""
-  ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Monthly Projected Average Heat Wave Intensity",

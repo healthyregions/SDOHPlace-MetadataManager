@@ -90,15 +90,13 @@
   "wxs_indentifier": null,
   "id": "herop-wtfiks",
   "identifier": [],
-  "modified": "2025-06-16T15:13:41Z",
+  "modified": "2025-10-10T19:08:10Z",
   "suppressed": false,
   "spatial_resolution": [
     "County",
     "Census Tract"
   ],
-  "highlight_ids": [
-    ""
-  ],
+  "highlight_ids": [],
   "spatial_resolution_note": "Community Zone",
   "methods_variables": [
     "Sum of native and foreign born residents",

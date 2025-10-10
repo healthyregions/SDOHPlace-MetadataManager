@@ -151,15 +151,13 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38584.v2"
   ],
-  "modified": "2025-04-09T16:34:49Z",
+  "modified": "2025-10-10T19:06:08Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": [
-    ""
-  ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "TrafficMetrix: average annual daily traffic, average annual weekday traffic, average daily traffic, latitude and longitude,ZCTA, average, maximum, minimum, and number of traffic volume measurements across all locations in a tract and ZCTA, highway traffic vs. non-highway traffic, ZIP code tabulation area, census tract, Cross-sectional"

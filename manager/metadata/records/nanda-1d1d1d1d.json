@@ -79,14 +79,12 @@
   "identifier": [
     "doi.org/10.3886/ICPSR38580.v2"
   ],
-  "modified": "2025-09-10T21:42:30Z",
+  "modified": "2025-10-10T19:03:36Z",
   "suppressed": false,
   "spatial_resolution": [
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": [
-    ""
-  ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "links, street lengths, nodes, endpoints of links, buffers, areas over which to calculate street connectivity, circuits,  connected path along streets"

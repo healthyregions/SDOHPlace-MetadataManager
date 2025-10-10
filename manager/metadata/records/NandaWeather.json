@@ -94,14 +94,12 @@
   "identifier": [
     "https://doi.org/10.3886/ICPSR38858.v1"
   ],
-  "modified": "2025-06-16T16:20:45Z",
+  "modified": "2025-10-10T19:06:55Z",
   "suppressed": false,
   "spatial_resolution": [
     "County"
   ],
-  "highlight_ids": [
-    ""
-  ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Climate",

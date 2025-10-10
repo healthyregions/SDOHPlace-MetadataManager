@@ -90,15 +90,13 @@
   "wxs_indentifier": null,
   "id": "herop-yumqkc",
   "identifier": [],
-  "modified": "2025-06-25T17:10:41Z",
+  "modified": "2025-10-10T19:04:17Z",
   "suppressed": false,
   "spatial_resolution": [
     "County",
     "State"
   ],
-  "highlight_ids": [
-    ""
-  ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Number of people incarcerated in jail or prison (per 100,000 population 18 and older) [national and state-level only]",

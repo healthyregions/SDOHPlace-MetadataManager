@@ -92,15 +92,13 @@
   "identifier": [
     "doi.org/10.3886/ICPSR38605.v1"
   ],
-  "modified": "2025-09-12T14:10:01Z",
+  "modified": "2025-10-10T19:04:27Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Tract",
     "Zip Code Tabulation Area (ZCTA)"
   ],
-  "highlight_ids": [
-    ""
-  ],
+  "highlight_ids": [],
   "spatial_resolution_note": null,
   "methods_variables": [
     "Census tract level",
