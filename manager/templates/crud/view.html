@@ -9,25 +9,34 @@
     <a href="{{ url_for('manager.handle_record', id=record.id) }}?edit=true" class="button" role="button">Edit</a>
 </div>
 <h2 class="subtitle">Index to Solr</h2>
-<div class="buttons are-small is-vertical">
-            <button class="button is-info"
-                    hx-post="{{ url_for('manager.handle_solr', id=record.id) }}?env=dev"
-                    hx-trigger="click"
-                    hx-target="#reindex-result"
-                    hx-swap="innerHTML"
-                    title="Index to dev core ({{ solr.core_dev }})">
-                Index — Dev</button>
+<div class="field is-grouped is-grouped-vertical">
+    <div class="control">
+        <button class="button is-info is-small"
+                hx-post="{{ url_for('manager.handle_solr', id=record.id) }}?env=dev"
+                hx-trigger="click"
+                hx-target="#reindex-result"
+                hx-swap="innerHTML"
+                title="Index to dev core ({{ solr.core_dev }})">
+            Index — Dev
+        </button>
+    </div>
     {% if user.name == "admin" %}
-    <button class="button is-warning"
-            hx-post="{{ url_for('manager.handle_solr', id=record.id) }}?env=prod"
-            hx-trigger="click"
-            hx-target="#reindex-result"
-            hx-swap="innerHTML"
-            title="Index to production core ({{ solr.core_prod }}) - Admin only">
-        Index — Production</button>
+    <div class="control">
+        <button class="button is-warning is-small"
+                hx-post="{{ url_for('manager.handle_solr', id=record.id) }}?env=prod"
+                hx-trigger="click"
+                hx-target="#reindex-result"
+                hx-swap="innerHTML"
+                title="Index to production core ({{ solr.core_prod }}) - Admin only">
+            Index — Production
+        </button>
+    </div>
     {% else %}
-    <button class="button is-warning" disabled title="Only admin users can index to production">
-        Index — Production (admin only)</button>
+    <div class="control">
+        <button class="button is-warning is-small" disabled title="Only admin users can index to production">
+            Index — Production (admin only)
+        </button>
+    </div>
     {% endif %}
 </div>
 {% else %}
