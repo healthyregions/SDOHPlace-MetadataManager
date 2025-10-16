@@ -12,12 +12,12 @@
 <div class="field is-grouped is-grouped-vertical">
     <div class="control">
         <button class="button is-info is-small"
-                hx-post="{{ url_for('manager.handle_solr', id=record.id) }}?env=dev"
+                hx-post="{{ url_for('manager.handle_solr', id=record.id) }}?env=stage"
                 hx-trigger="click"
                 hx-target="#reindex-result"
                 hx-swap="innerHTML"
-                title="Index to dev core ({{ solr.core_dev }})">
-            Index — Dev
+                title="Index to stage core ({{ solr.core_stage }})">
+            Index — Stage
         </button>
     </div>
     {% if user.name == "admin" %}
