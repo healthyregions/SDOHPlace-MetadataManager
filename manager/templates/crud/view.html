@@ -11,22 +11,20 @@
 <h2 class="subtitle">Index to Solr</h2>
 <div class="field is-grouped is-grouped-vertical">
     <div class="control">
-        <button class="button is-info is-small"
-                hx-post="{{ url_for('manager.handle_solr', id=record.id) }}?env=stage"
-                hx-trigger="click"
-                hx-target="#reindex-result"
-                hx-swap="innerHTML"
+        <button class="button is-info is-small index-btn"
+                data-env="stage"
+                data-core="{{ solr.core_stage }}"
+                data-record-id="{{ record.id }}"
                 title="Index to stage core ({{ solr.core_stage }})">
             Index — Stage
         </button>
     </div>
     {% if user.name == "admin" %}
     <div class="control">
-        <button class="button is-warning is-small"
-                hx-post="{{ url_for('manager.handle_solr', id=record.id) }}?env=prod"
-                hx-trigger="click"
-                hx-target="#reindex-result"
-                hx-swap="innerHTML"
+        <button class="button is-warning is-small index-btn"
+                data-env="prod"
+                data-core="{{ solr.core_prod }}"
+                data-record-id="{{ record.id }}"
                 title="Index to production core ({{ solr.core_prod }}) - Admin only">
             Index — Prod
         </button>
@@ -39,6 +37,83 @@
     </div>
     {% endif %}
 </div>
+
+<!-- Confirmation Modal -->
+<div id="index-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Confirm Indexing</p>
+            <button class="delete" aria-label="close" onclick="closeModal()"></button>
+        </header>
+        <section class="modal-card-body">
+            <p id="modal-message">Are you sure you want to index this record?</p>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success" id="confirm-index">Yes, Index</button>
+            <button class="button" onclick="closeModal()">Cancel</button>
+        </footer>
+    </div>
+</div>
+
+<script>
+let currentIndexData = null;
+
+// Add click handlers to index buttons
+document.addEventListener('DOMContentLoaded', function() {
+    const indexButtons = document.querySelectorAll('.index-btn');
+    indexButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const env = this.dataset.env;
+            const core = this.dataset.core;
+            const recordId = this.dataset.recordId;
+            
+            currentIndexData = {
+                env: env,
+                core: core,
+                recordId: recordId,
+                button: this
+            };
+            
+            // Update modal message
+            const modalMessage = document.getElementById('modal-message');
+            modalMessage.textContent = `Are you sure you want to index this record to the ${env} environment (${core})?`;
+            
+            // Show modal
+            document.getElementById('index-modal').classList.add('is-active');
+        });
+    });
+    
+    // Handle confirm button click
+    document.getElementById('confirm-index').addEventListener('click', function() {
+        if (currentIndexData) {
+            // Perform the actual indexing
+            const url = "{{ url_for('manager.handle_solr', id='PLACEHOLDER') }}".replace('PLACEHOLDER', currentIndexData.recordId) + '?env=' + currentIndexData.env;
+            
+            // Use htmx to make the request
+            htmx.ajax('POST', url, {
+                target: '#reindex-result',
+                swap: 'innerHTML'
+            });
+            
+            closeModal();
+        }
+    });
+});
+
+function closeModal() {
+    document.getElementById('index-modal').classList.remove('is-active');
+    currentIndexData = null;
+}
+
+// Close modal when clicking background
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('modal-background')) {
+        closeModal();
+    }
+});
+</script>
 {% else %}
 <p><em>You are not logged in.</em></p>
 {% endif %}
