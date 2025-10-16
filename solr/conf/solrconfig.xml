@@ -37,7 +37,7 @@
   <codecFactory class="solr.SchemaCodecFactory"/>
   <schemaFactory class="ClassicIndexSchemaFactory"/>
 
-  <dataDir>${solr.blacklight-code-dev.data.dir:}</dataDir>
+  <dataDir>${solr.data.dir:}</dataDir>
 
   <indexConfig>
     <lockType>${solr.lock.type:native}</lockType>

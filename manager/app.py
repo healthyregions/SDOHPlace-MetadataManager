@@ -24,7 +24,7 @@ DISCOVERY_APP_URL = os.getenv("DISCOVERY_APP_URL")
 
 SOLR_HOST = os.getenv("SOLR_HOST", "").rstrip("/")
 SOLR_CORE = os.getenv("SOLR_CORE", "").rstrip("/")  # Legacy support
-SOLR_CORE_DEV = os.getenv("SOLR_CORE_DEV", "blacklight-core-dev").rstrip("/")
+SOLR_CORE_STAGE = os.getenv("SOLR_CORE_STAGE", "blacklight-core-stage").rstrip("/")
 SOLR_CORE_PROD = os.getenv("SOLR_CORE_PROD", "blacklight-core-prod").rstrip("/")
 
 # Legacy URL for backward compatibility
@@ -70,7 +70,7 @@ def get_context():
                 solr={
                     "host": SOLR_HOST,
                     "core": SOLR_CORE,  # Legacy
-                    "core_dev": SOLR_CORE_DEV,
+                    "core_stage": SOLR_CORE_STAGE,
                     "core_prod": SOLR_CORE_PROD,
                 },
         user=current_user,

@@ -146,7 +146,7 @@ cp .env.docker.example .env.docker
 docker compose up -d --build
 ```
 
-4. The docker-compose setup automatically creates `blacklight-core-dev` and `blacklight-core-prod` cores.
+4. The docker-compose setup automatically creates `blacklight-core-stage` and `blacklight-core-prod` cores.
 
 You can verify at: http://localhost:8983/solr/#/~cores
 
@@ -173,11 +173,11 @@ flask user create admin admin@example.com password
 
 **Important:** Login uses **email** and **password**, not the username!
 
-Index records to dev (all users) or production (admin only):
+Index records to staging (all users) or production (admin only):
 
 ```bash
-# Index to dev/staging
-flask registry index --env dev
+# Index to staging
+flask registry index --env stage
 
 # Index to production (admin only)
 flask registry index --env prod
@@ -189,9 +189,9 @@ flask registry index --env prod
 
 If you're running the SDOHPlace Data Discovery application locally, point it to the appropriate Solr core:
 
-**For dev/staging preview:**
+**For staging preview:**
 ```env
-NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-dev'
+NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-stage'
 ```
 
 **For production:**

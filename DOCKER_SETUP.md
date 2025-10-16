@@ -19,7 +19,7 @@ This command will:
 - Build the metadata manager Docker image
 - Start a Solr container on port 8983
 - Start the metadata manager container on port 8000
-- Create a default Solr core named `blacklight-core-dev`
+- Create a default Solr core named `blacklight-core-stage`
 
 **Access the application:**
 - Metadata Manager: http://localhost:8000
@@ -53,19 +53,19 @@ flask user create admin admin@example.com password
 
 **Important:** Login uses **email** and **password**, not the username!
 
-### 3. Create Development and Production Cores (Optional)
+### 3. Create Staging and Production Cores (Optional)
 
-The docker-compose setup creates `blacklight-core-dev` and `blacklight-core-prod` cores automatically.
+The docker-compose setup creates `blacklight-core-stage` and `blacklight-core-prod` cores automatically.
 
 If you need to create additional cores or recreate them, use:
 
 ```bash
 # From inside the container
-curl "http://solr:8983/solr/admin/cores?action=CREATE&name=blacklight-core-dev&configSet=_default"
+curl "http://solr:8983/solr/admin/cores?action=CREATE&name=blacklight-core-stage&configSet=_default"
 curl "http://solr:8983/solr/admin/cores?action=CREATE&name=blacklight-core-prod&configSet=_default"
 
 # Or from your host machine
-curl "http://localhost:8983/solr/admin/cores?action=CREATE&name=blacklight-core-dev&configSet=_default"
+curl "http://localhost:8983/solr/admin/cores?action=CREATE&name=blacklight-core-stage&configSet=_default"
 curl "http://localhost:8983/solr/admin/cores?action=CREATE&name=blacklight-core-prod&configSet=_default"
 ```
 
@@ -199,7 +199,7 @@ The docker-compose configuration uses `.env.docker` for environment variables. A
 | `SECRET_KEY` | Flask secret key for sessions | (required) |
 | `FLASK_APP` | Flask application path | `manager/app.py` |
 | `SOLR_HOST` | Solr server URL | `http://solr:8983/solr` |
-| `SOLR_CORE_DEV` | Development/staging core name | `blacklight-core-dev` |
+| `SOLR_CORE_STAGE` | Staging core name | `blacklight-core-stage` |
 | `SOLR_CORE_PROD` | Production core name | `blacklight-core-prod` |
 | `SOLR_CORE` | Legacy single core (optional) | - |
 | `SOLR_USERNAME` | Solr authentication username | (optional) |
@@ -221,7 +221,7 @@ docker cp ./solr/conf sdoh-solr:/opt/solr-9.7.0-slim/server/solr/configsets/myco
 
 2. Create core with custom config:
 ```bash
-docker exec -it sdoh-solr solr create_core -c blacklight-core-dev -d /opt/solr-9.7.0-slim/server/solr/configsets/myconfig
+docker exec -it sdoh-solr solr create_core -c blacklight-core-stage -d /opt/solr-9.7.0-slim/server/solr/configsets/myconfig
 ```
 
 ### Verify Cores
@@ -241,8 +241,8 @@ If you're running the SDOHPlace Data Discovery application locally, configure it
 In your Data Discovery app's `.env`:
 
 ```env
-# For dev/staging preview
-NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-dev'
+# For staging preview
+NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-stage'
 
 # For production
 NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-prod'
