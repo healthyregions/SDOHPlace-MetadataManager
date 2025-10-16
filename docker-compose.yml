@@ -27,7 +27,7 @@ services:
         
         # Wait for Solr to be ready
         echo "Waiting for Solr to start..."
-        until curl -s http://localhost:8983/solr/admin/cores?action=STATUS > /dev/null 2>&1; do
+        until curl -s http://localhost:8983/solr/admin/cores?action=STATUS | grep -q "$SOLR_CORE_STAGE"; do
           sleep 1
         done
         
