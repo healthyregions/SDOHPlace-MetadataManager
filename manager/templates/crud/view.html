@@ -47,6 +47,7 @@
             <button class="delete" aria-label="close" onclick="closeModal()"></button>
         </header>
         <section class="modal-card-body">
+            <p><strong>Record:</strong> <span id="modal-record-title"></span></p>
             <p id="modal-message">Are you sure you want to index this record?</p>
         </section>
         <footer class="modal-card-foot">
@@ -55,6 +56,16 @@
         </footer>
     </div>
 </div>
+
+<style>
+.field.is-grouped-vertical .control {
+    margin-bottom: 0.5rem;
+}
+
+.field.is-grouped-vertical .control:last-child {
+    margin-bottom: 0;
+}
+</style>
 
 <script>
 let currentIndexData = null;
@@ -76,8 +87,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 button: this
             };
             
-            // Update modal message
+            // Update modal content
+            const modalRecordTitle = document.getElementById('modal-record-title');
             const modalMessage = document.getElementById('modal-message');
+            
+            // Get the record title from the page title
+            const recordTitle = document.title || 'Unknown Record';
+            modalRecordTitle.textContent = recordTitle;
             modalMessage.textContent = `Are you sure you want to index this record to the ${env} environment (${core})?`;
             
             // Show modal
