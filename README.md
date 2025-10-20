@@ -201,14 +201,22 @@ In the interface you will login with the **email** and **password** (do not use 
 Finally index all of the records into Solr:
 
 ```
+flask registry index
+```
+
+You may see a 503 error from Solr, this is not a problem it is a health status ping that is not enabled yet on the docker build of the core.
+
+### Environment-Specific Indexing
+
+After setting up your `.env` file with custom core names, you can index to specific environments:
+
+```
 # Index to staging (all users can access)
 flask registry index --env stage
 
 # Index to production (admin only)
 flask registry index --env prod
 ```
-
-You may see a 503 error from Solr, this is not a problem it is a health status ping that is not enabled yet on the docker build of the core.
 
 ## Running the coverage command as a standalone script
 
