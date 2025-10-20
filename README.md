@@ -32,9 +32,13 @@ Use `flask [command] [subcommand] --help` to see the specific arguments for each
 
 #### Registry
 
-`flask registry index`
+`flask registry index [--env stage|prod]`
 
 Index a specific record (provide the id), or all records, into Solr. Use `--clean` to remove all existing documents from the Solr core before indexing (for a full refresh).
+
+- `--env stage`: Index to staging core (accessible by all users)
+- `--env prod`: Index to production core (admin only)
+- If no `--env` specified, defaults to production
 
 `flask registry resave-records`
 
@@ -85,6 +89,8 @@ cp .env.example .env
 
 To get started, you won't need to edit any environment variables.
 
+**Note:** For Docker deployments, use `cp .env.docker.example .env` instead, which includes Docker-specific configuration like `SOLR_HOST=http://solr:8983/solr`.
+
 #### Run dev server
 
 Run in debug mode:
@@ -131,6 +137,44 @@ docker compose up -d --build
 
 This will build a Docker image and run a container from that image.
 
+#### Configuration
+
+You can customize core names and other settings using environment variables:
+
+| Variable | Description | Default Value |
+|----------|-------------|---------------|
+| `SOLR_CORE_STAGE` | Staging core name | `blacklight-core-stage` |
+| `SOLR_CORE_PROD` | Production core name | `blacklight-core-prod` |
+| `SOLR_HOST` | Solr server URL | `http://localhost:8983/solr` |
+| `GBL_HOST` | GeoBlacklight URL | (optional) |
+
+**Using .env file:**
+
+For Docker deployments, use the Docker-specific example:
+```bash
+# For Docker setups
+cp .env.docker.example .env
+# Edit .env with your custom core names
+SOLR_CORE_STAGE=my-stage-core
+SOLR_CORE_PROD=my-prod-core
+```
+
+For local development without Docker:
+```bash
+# For local development
+cp .env.example .env
+# Edit .env with your custom core names
+SOLR_CORE_STAGE=my-stage-core
+SOLR_CORE_PROD=my-prod-core
+```
+
+**Using environment variables:**
+```bash
+export SOLR_CORE_STAGE=my-stage-core
+export SOLR_CORE_PROD=my-prod-core
+docker compose up
+```
+
 If you are also running the SDOHPlace Data Discovery application locally, you can point it to this solr instance by editing the `.env` for that project:
 
 ```env
@@ -165,6 +209,8 @@ flask registry index
 ```
 
 You may see a 503 error from Solr, this is not a problem it is a health status ping that is not enabled yet on the docker build of the core.
+
+**Note:** For environment-specific indexing (stage vs prod), see the Management Commands section above.
 
 ## Running the coverage command as a standalone script
 
