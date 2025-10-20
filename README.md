@@ -121,7 +121,7 @@ You can change `PORT` in `.env` if you want gunicorn to listen on a different po
 
 The Docker deploy will serve the app with NGINX: http://localhost:8000
 
-It will also run Solr at http://localhost:8983 and will automatically create a core named `blacklight-core-dev`
+It will also run Solr at http://localhost:8983 and will automatically create cores named `blacklight-core-stage` and `blacklight-core-prod`
 
 Start containers:
 
@@ -134,7 +134,7 @@ This will build a Docker image and run a container from that image.
 If you are also running the SDOHPlace Data Discovery application locally, you can point it to this solr instance by editing the `.env` for that project:
 
 ```env
-NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-dev'
+NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-stage'
 ```
 
 Shutdown containers:
@@ -147,7 +147,7 @@ docker compose down
 Once the application is running, you'll need to create a user for login and then index all of the records. First enter the docker container for the metadata manager:
 
 ```
-docker exec -it <container id> bash
+docker exec -it sdoh-manager bash
 ```
 
 Now create a dummy user:
