@@ -131,6 +131,33 @@ docker compose up -d --build
 
 This will build a Docker image and run a container from that image.
 
+#### Configuration
+
+You can customize core names and other settings using environment variables:
+
+| Variable | Description | Default Value |
+|----------|-------------|---------------|
+| `SOLR_CORE_STAGE` | Staging core name | `blacklight-core-stage` |
+| `SOLR_CORE_PROD` | Production core name | `blacklight-core-prod` |
+| `SOLR_HOST` | Solr server URL | `http://localhost:8983/solr` |
+| `GBL_HOST` | GeoBlacklight URL | (optional) |
+
+**Using .env file:**
+```bash
+# Create .env file
+cp .env.example .env
+# Edit .env with your custom core names
+SOLR_CORE_STAGE=my-stage-core
+SOLR_CORE_PROD=my-prod-core
+```
+
+**Using environment variables:**
+```bash
+export SOLR_CORE_STAGE=my-stage-core
+export SOLR_CORE_PROD=my-prod-core
+docker compose up
+```
+
 If you are also running the SDOHPlace Data Discovery application locally, you can point it to this solr instance by editing the `.env` for that project:
 
 ```env
@@ -161,7 +188,11 @@ In the interface you will login with the **email** and **password** (do not use 
 Finally index all of the records into Solr:
 
 ```
-flask registry index
+# Index to staging (all users can access)
+flask registry index --env stage
+
+# Index to production (admin only)
+flask registry index --env prod
 ```
 
 You may see a 503 error from Solr, this is not a problem it is a health status ping that is not enabled yet on the docker build of the core.
