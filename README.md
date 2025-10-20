@@ -32,9 +32,13 @@ Use `flask [command] [subcommand] --help` to see the specific arguments for each
 
 #### Registry
 
-`flask registry index`
+`flask registry index [--env stage|prod]`
 
 Index a specific record (provide the id), or all records, into Solr. Use `--clean` to remove all existing documents from the Solr core before indexing (for a full refresh).
+
+- `--env stage`: Index to staging core (accessible by all users)
+- `--env prod`: Index to production core (admin only)
+- If no `--env` specified, defaults to production
 
 `flask registry resave-records`
 
@@ -206,17 +210,7 @@ flask registry index
 
 You may see a 503 error from Solr, this is not a problem it is a health status ping that is not enabled yet on the docker build of the core.
 
-### Environment-Specific Indexing
-
-After setting up your `.env` file with custom core names, you can index to specific environments:
-
-```
-# Index to staging (all users can access)
-flask registry index --env stage
-
-# Index to production (admin only)
-flask registry index --env prod
-```
+**Note:** For environment-specific indexing (stage vs prod), see the Management Commands section above.
 
 ## Running the coverage command as a standalone script
 
