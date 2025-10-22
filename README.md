@@ -129,6 +129,8 @@ The Docker deploy will serve the app with NGINX: http://localhost:8000
 
 It will also run Solr at http://localhost:8983 and will automatically create cores named `blacklight-core-stage` and `blacklight-core-prod`
 
+**Data Persistence:** Solr core data is automatically persisted using Docker volumes, so your indexed data survives container restarts.
+
 Start containers:
 
 ```bash
