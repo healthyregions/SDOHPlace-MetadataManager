@@ -24,7 +24,7 @@ services:
       - '-c'
       - |
         # Create staging core and start Solr in background
-        solr-precreate $SOLR_CORE_STAGE /solr-configset &
+        solr-precreate $SOLR_CORE_STAGE /solr-configset --force &
         SOLR_PID=$!
         
         # Wait for Solr to be ready
