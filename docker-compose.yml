@@ -17,7 +17,7 @@ services:
       - ./solr/web.xml:/opt/solr-9.7.0-slim/server/solr-webapp/webapp/WEB-INF/web.xml
       - ./solr/solr.in.sh:/etc/default/solr.in.sh
       - ./solr:/solr-configset
-      - ./solr-data:/var/solr/data
+      - solr-data:/var/solr/data
     command: 
       - 'bash'
       - '-c'
@@ -53,4 +53,7 @@ services:
       - ./manager:/home/herop/manager
     ports:
     - 8000:8000
+
+volumes:
+  solr-data:
 
