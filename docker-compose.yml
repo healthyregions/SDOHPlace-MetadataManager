@@ -23,9 +23,15 @@ services:
       - 'bash'
       - '-c'
       - |
-        # Create staging core and start Solr in background
-        solr-precreate $SOLR_CORE_STAGE /solr-configset --force &
+        # Start Solr with --force to allow root user
+        solr start --force &
         SOLR_PID=$!
+        
+        # Wait for Solr to be ready
+        sleep 10
+        
+        # Create staging core
+        solr create_core -c $SOLR_CORE_STAGE -d /solr-configset
         
         # Wait for Solr to be ready
         echo "Waiting for Solr to start..."
