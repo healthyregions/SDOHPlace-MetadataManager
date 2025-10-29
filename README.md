@@ -20,6 +20,7 @@ Custom metadata schema for this project:
 - Sarthak Joshi
 - Augustyn Crane
 - Adam Cox
+- Yong Wook Kim
 - Mandela Gadri
 - Arli Coli
 - Camrin Garrett
@@ -203,11 +204,11 @@ The Docker setup uses **Traefik** as a reverse proxy and load balancer. Traefik 
 - **Traefik Dashboard**: http://localhost:8080 (or http://your-server-ip:8080)
 
 **Features:**
-- ✅ Automatic service discovery - No manual configuration needed
-- ✅ Load balancing - Built-in load balancing
-- ✅ Health checks - Automatic health monitoring
-- ✅ Dashboard - Web UI to monitor services (accessible on port 8080)
-- ✅ Auto-restart - Services restart automatically on VM reboot
+- Automatic service discovery - No manual configuration needed
+- Load balancing - Built-in load balancing
+- Health checks - Automatic health monitoring
+- Dashboard - Web UI to monitor services (accessible on port 8080)
+- Auto-restart - Services restart automatically on VM reboot
 
 **Common Commands:**
 
@@ -222,8 +223,38 @@ docker compose logs -f
 docker compose restart manager
 ```
 
-**Adding SSL Later:**
-When you get a domain name, you can easily add SSL/HTTPS by adding Let's Encrypt labels to Traefik. The configuration will be much simpler than traditional nginx setups.
+**Adding SSL/HTTPS:**
+
+The setup supports automatic HTTPS with Let's Encrypt. To enable:
+
+1. **Set environment variables** in `.env`:
+   ```bash
+   DOMAIN_NAME=your-domain.com
+   LETSENCRYPT_EMAIL=your-email@example.com
+   ```
+
+2. **Start services**:
+   ```bash
+   docker compose up -d
+   ```
+
+3. **Access your site**:
+   - **HTTPS**: https://your-domain.com (secure)
+   - **HTTP**: http://your-domain.com (redirects to HTTPS)
+   - **Dashboard**: http://your-domain.com:8080
+
+**Features:**
+- Automatic SSL certificate generation and renewal
+- HTTP to HTTPS redirect
+- Fallback to IP address if no domain set
+- Modern TLS configuration
+
+**Disable HTTPS:**
+Leave the variables empty in `.env` to use HTTP only:
+```bash
+DOMAIN_NAME=
+LETSENCRYPT_EMAIL=
+```
 
 ### Getting Started with Docker
 
