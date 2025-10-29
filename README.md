@@ -84,7 +84,7 @@ pip install -e .
 Copy the environment file:
 
 ```
-cp .env.example .env
+cp env.example .env
 ```
 
 To get started, you won't need to edit any environment variables.
@@ -125,7 +125,7 @@ You can change `PORT` in `.env` if you want gunicorn to listen on a different po
 
 ### Install/Run with Docker
 
-The Docker deploy will serve the app with NGINX: http://localhost:8000
+The Docker deploy uses Traefik as a reverse proxy. The main application is accessible on port 80, and Traefik dashboard is on port 8080.
 
 It will also run Solr at http://localhost:8983 and will automatically create cores named `blacklight-core-stage` and `blacklight-core-prod`
 
@@ -170,7 +170,7 @@ SOLR_CORE_PROD=my-prod-core
 For local development without Docker:
 ```bash
 # For local development
-cp .env.example .env
+cp env.example .env
 # Edit .env with your custom core names
 SOLR_CORE_STAGE=my-stage-core
 SOLR_CORE_PROD=my-prod-core
@@ -193,6 +193,37 @@ Shutdown containers:
 ```bash
 docker compose down
 ```
+
+#### Traefik Reverse Proxy
+
+The Docker setup uses **Traefik** as a reverse proxy and load balancer. Traefik automatically discovers services in Docker containers and routes traffic accordingly.
+
+**Access Points:**
+- **Main Application**: http://localhost (or http://your-server-ip)
+- **Traefik Dashboard**: http://localhost:8080 (or http://your-server-ip:8080)
+
+**Features:**
+- ✅ Automatic service discovery - No manual configuration needed
+- ✅ Load balancing - Built-in load balancing
+- ✅ Health checks - Automatic health monitoring
+- ✅ Dashboard - Web UI to monitor services (accessible on port 8080)
+- ✅ Auto-restart - Services restart automatically on VM reboot
+
+**Common Commands:**
+
+```bash
+# View Traefik logs
+docker compose logs traefik
+
+# View all service logs
+docker compose logs -f
+
+# Restart specific service
+docker compose restart manager
+```
+
+**Adding SSL Later:**
+When you get a domain name, you can easily add SSL/HTTPS by adding Let's Encrypt labels to Traefik. The configuration will be much simpler than traditional nginx setups.
 
 ### Getting Started with Docker
 

@@ -1,8 +1,29 @@
 services:
+  traefik:
+    container_name: sdoh-traefik
+    image: traefik:v3.0
+    restart: unless-stopped
+    command:
+      - --api.dashboard=true
+      - --api.insecure=true
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.web.address=:80
+    ports:
+      - "80:80"
+      - "8080:8080"  # Traefik dashboard
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.dashboard.rule=Host(`traefik.localhost`)"
+      - "traefik.http.routers.dashboard.service=api@internal"
+
   solr:
     container_name: sdoh-solr
     image: 'solr:9.7.0-slim'
     user: root
+    restart: unless-stopped
     ports:
     - 8983:8983
     environment:
@@ -64,6 +85,7 @@ services:
     image: herop/sdoh-metadata-manager
     build:
       context: .
+    restart: unless-stopped
     depends_on:
       solr:
         condition: service_healthy
@@ -74,5 +96,10 @@ services:
     working_dir: /home/herop
     volumes:
       - ./manager:/home/herop/manager
-    ports:
-    - 8000:8000
+    expose:
+    - 8000
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.manager.rule=Host(`3.138.81.154`)"
+      - "traefik.http.routers.manager.entrypoints=web"
+      - "traefik.http.services.manager.loadbalancer.server.port=8000"
