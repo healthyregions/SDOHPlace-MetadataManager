@@ -129,6 +129,14 @@ The Docker deploy will serve the app with NGINX: http://localhost:8000
 
 It will also run Solr at http://localhost:8983 and will automatically create cores named `blacklight-core-stage` and `blacklight-core-prod`
 
+**Data Persistence:** Solr core data is automatically persisted using Docker volumes, so your indexed data survives container restarts.
+
+**Volume Mount Details:** The system uses a bind mount (`./solr-data:/var/solr/data`) to persist Solr core data on the host machine. This means:
+- Solr index data is stored in the local `solr-data/` directory
+- Data persists between container restarts and system reboots
+- The `solr-data/` directory is automatically created with the correct core structure
+- Core names are dynamically configured via environment variables (`SOLR_CORE_STAGE`, `SOLR_CORE_PROD`)
+
 Start containers:
 
 ```bash
