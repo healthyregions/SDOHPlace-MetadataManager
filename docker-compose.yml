@@ -21,17 +21,14 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - letsencrypt:/letsencrypt
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.dashboard.rule=Host(`traefik.localhost`)"
-      - "traefik.http.routers.dashboard.service=api@internal"
+      - "traefik.enable=false"
 
   solr:
     container_name: sdoh-solr
     image: 'solr:9.7.0-slim'
     user: root
     restart: unless-stopped
-    ports:
-    - 8983:8983
+    # Expose via Traefik; no direct host port
     environment:
       - SOLR_CORE_STAGE=${SOLR_CORE_STAGE:-blacklight-core-stage}
       - SOLR_CORE_PROD=${SOLR_CORE_PROD:-blacklight-core-prod}
@@ -85,6 +82,20 @@ services:
           # Wait for the background Solr process
           wait \$SOLR_PID
         "
+    labels:
+      - "traefik.enable=true"
+      # HTTP router (redirect to HTTPS) for solr subdomain
+      - "traefik.http.middlewares.solr-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.solr-http.rule=Host(`solr.${DOMAIN_NAME}`)"
+      - "traefik.http.routers.solr-http.entrypoints=web"
+      - "traefik.http.routers.solr-http.middlewares=solr-redirect"
+      # HTTPS router for Solr admin UI
+      - "traefik.http.routers.solr-https.rule=Host(`solr.${DOMAIN_NAME}`)"
+      - "traefik.http.routers.solr-https.entrypoints=websecure"
+      - "traefik.http.routers.solr-https.tls=true"
+      - "traefik.http.routers.solr-https.tls.certresolver=letsencrypt"
+      - "traefik.http.services.solr-svc.loadbalancer.server.port=8983"
+      - "traefik.http.routers.solr-https.service=solr-svc"
 
   manager:
     container_name: sdoh-manager
@@ -92,6 +103,7 @@ services:
     build:
       context: .
     restart: unless-stopped
+    user: root
     depends_on:
       solr:
         condition: service_healthy
@@ -104,6 +116,25 @@ services:
       - ./manager:/home/herop/manager
     expose:
     - 8000
+    command: |
+      sh -lc "
+        chown -R herop:herop /home/herop/manager || true
+        exec su -s /bin/sh -c 'PATH=/home/herop/.local/bin:$PATH flask run -h 0.0.0.0 -p 8000' herop
+      "
+    labels:
+      - "traefik.enable=true"
+      # HTTP router with redirect to HTTPS
+      - "traefik.http.routers.sdoh-manager.rule=Host(`${DOMAIN_NAME}`)"
+      - "traefik.http.routers.sdoh-manager.entrypoints=web"
+      - "traefik.http.routers.sdoh-manager.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      # HTTPS router
+      - "traefik.http.routers.sdoh-manager-secure.rule=Host(`${DOMAIN_NAME}`)"
+      - "traefik.http.routers.sdoh-manager-secure.entrypoints=websecure"
+      - "traefik.http.routers.sdoh-manager-secure.tls=true"
+      - "traefik.http.routers.sdoh-manager-secure.tls.certresolver=letsencrypt"
+      # Service points to container's internal port
+      - "traefik.http.services.sdoh-manager.loadbalancer.server.port=8000"
 
 volumes:
   letsencrypt:
