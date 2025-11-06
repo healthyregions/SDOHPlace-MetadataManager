@@ -90,8 +90,6 @@ cp env.example .env
 
 To get started, you won't need to edit any environment variables.
 
-**Note:** For Docker deployments, use `cp .env.docker.example .env` instead, which includes Docker-specific configuration like `SOLR_HOST=http://solr:8983/solr`.
-
 #### Run dev server
 
 Run in debug mode:
@@ -159,20 +157,26 @@ You can customize core names and other settings using environment variables:
 
 **Using .env file:**
 
-For Docker deployments, use the Docker-specific example:
+Create your environment file from the example:
+
 ```bash
-# For Docker setups
-cp .env.docker.example .env
-# Edit .env with your custom core names
-SOLR_CORE_STAGE=my-stage-core
-SOLR_CORE_PROD=my-prod-core
+cp env.example .env
 ```
 
-For local development without Docker:
+Edit `.env` and set your configuration. For Docker deployments, you must set `DOMAIN_NAME`:
+
 ```bash
-# For local development
-cp env.example .env
-# Edit .env with your custom core names
+# For local Docker development
+DOMAIN_NAME=sdoh.metadata.local
+
+# For production with HTTPS
+DOMAIN_NAME=your-domain.com
+LETSENCRYPT_EMAIL=your-email@example.com
+```
+
+You can also customize Solr core names if needed:
+
+```bash
 SOLR_CORE_STAGE=my-stage-core
 SOLR_CORE_PROD=my-prod-core
 ```
