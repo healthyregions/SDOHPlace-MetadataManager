@@ -20,6 +20,7 @@ Custom metadata schema for this project:
 - Sarthak Joshi
 - Augustyn Crane
 - Adam Cox
+- Yong Wook Kim
 - Mandela Gadri
 - Arli Coli
 - Camrin Garrett
@@ -84,12 +85,10 @@ pip install -e .
 Copy the environment file:
 
 ```
-cp .env.example .env
+cp env.example .env
 ```
 
 To get started, you won't need to edit any environment variables.
-
-**Note:** For Docker deployments, use `cp .env.docker.example .env` instead, which includes Docker-specific configuration like `SOLR_HOST=http://solr:8983/solr`.
 
 #### Run dev server
 
@@ -125,7 +124,7 @@ You can change `PORT` in `.env` if you want gunicorn to listen on a different po
 
 ### Install/Run with Docker
 
-The Docker deploy will serve the app with NGINX: http://localhost:8000
+The Docker deploy uses Traefik as a reverse proxy. The main application is accessible on port 80, and Traefik dashboard is on port 8080.
 
 It will also run Solr at http://localhost:8983 and will automatically create cores named `blacklight-core-stage` and `blacklight-core-prod`
 
@@ -158,20 +157,26 @@ You can customize core names and other settings using environment variables:
 
 **Using .env file:**
 
-For Docker deployments, use the Docker-specific example:
+Create your environment file from the example:
+
 ```bash
-# For Docker setups
-cp .env.docker.example .env
-# Edit .env with your custom core names
-SOLR_CORE_STAGE=my-stage-core
-SOLR_CORE_PROD=my-prod-core
+cp env.example .env
 ```
 
-For local development without Docker:
+Edit `.env` and set your configuration. For Docker deployments, you must set `DOMAIN_NAME`:
+
 ```bash
-# For local development
-cp .env.example .env
-# Edit .env with your custom core names
+# For local Docker development
+DOMAIN_NAME=sdoh.metadata.local
+
+# For production with HTTPS
+DOMAIN_NAME=your-domain.com
+LETSENCRYPT_EMAIL=your-email@example.com
+```
+
+You can also customize Solr core names if needed:
+
+```bash
 SOLR_CORE_STAGE=my-stage-core
 SOLR_CORE_PROD=my-prod-core
 ```
@@ -192,6 +197,67 @@ NEXT_PUBLIC_SOLR_URL='http://localhost:8983/solr/blacklight-core-stage'
 Shutdown containers:
 ```bash
 docker compose down
+```
+
+#### Traefik Reverse Proxy
+
+The Docker setup uses **Traefik** as a reverse proxy and load balancer. Traefik automatically discovers services in Docker containers and routes traffic accordingly.
+
+**Access Points:**
+- **Main Application**: http://localhost (or http://your-server-ip)
+- **Traefik Dashboard**: http://localhost:8080 (or http://your-server-ip:8080)
+
+**Features:**
+- Automatic service discovery - No manual configuration needed
+- Load balancing - Built-in load balancing
+- Health checks - Automatic health monitoring
+- Dashboard - Web UI to monitor services (accessible on port 8080)
+- Auto-restart - Services restart automatically on VM reboot
+
+**Common Commands:**
+
+```bash
+# View Traefik logs
+docker compose logs traefik
+
+# View all service logs
+docker compose logs -f
+
+# Restart specific service
+docker compose restart manager
+```
+
+**Adding SSL/HTTPS:**
+
+The setup supports automatic HTTPS with Let's Encrypt. To enable:
+
+1. **Set environment variables** in `.env`:
+   ```bash
+   DOMAIN_NAME=your-domain.com
+   LETSENCRYPT_EMAIL=your-email@example.com
+   ```
+
+2. **Start services**:
+   ```bash
+   docker compose up -d
+   ```
+
+3. **Access your site**:
+   - **HTTPS**: https://your-domain.com (secure)
+   - **HTTP**: http://your-domain.com (redirects to HTTPS)
+   - **Dashboard**: http://your-domain.com:8080
+
+**Features:**
+- Automatic SSL certificate generation and renewal
+- HTTP to HTTPS redirect
+- Fallback to IP address if no domain set
+- Modern TLS configuration
+
+**Disable HTTPS:**
+Leave the variables empty in `.env` to use HTTP only:
+```bash
+DOMAIN_NAME=
+LETSENCRYPT_EMAIL=
 ```
 
 ### Getting Started with Docker
