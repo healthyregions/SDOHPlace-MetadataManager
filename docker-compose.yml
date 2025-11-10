@@ -132,7 +132,7 @@ services:
         echo 'Flask is ready!'
         
         # Create default admin user (ignore error if already exists)
-        su -s /bin/sh -c 'PATH=/home/herop/.local/bin:$PATH flask user create admin admin@example.com password' herop 2>/dev/null || echo 'Admin user already exists or could not be created'
+        su -s /bin/sh -c 'PATH=/home/herop/.local/bin:$PATH flask user create ${ADMIN_USERNAME:-admin} ${ADMIN_EMAIL:-admin@example.com} ${ADMIN_PASSWORD:-changeme}' herop 2>/dev/null || echo 'Admin user already exists or could not be created'
         
         # Index all records to stage core
         echo 'Indexing records to stage core...'

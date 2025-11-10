@@ -154,6 +154,9 @@ You can customize core names and other settings using environment variables:
 | `SOLR_CORE_PROD` | Production core name | `blacklight-core-prod` |
 | `SOLR_HOST` | Solr server URL | `http://localhost:8983/solr` |
 | `GBL_HOST` | GeoBlacklight URL | (optional) |
+| `ADMIN_USERNAME` | Default admin username | `admin` |
+| `ADMIN_EMAIL` | Default admin email (used for login) | `admin@example.com` |
+| `ADMIN_PASSWORD` | Default admin password | `changeme` |
 
 **Using .env file:**
 
@@ -172,6 +175,14 @@ DOMAIN_NAME=sdoh.metadata.local
 # For production with HTTPS
 DOMAIN_NAME=your-domain.com
 LETSENCRYPT_EMAIL=your-email@example.com
+```
+
+**Important:** Change the default admin credentials before deploying to production:
+
+```bash
+ADMIN_USERNAME=admin
+ADMIN_EMAIL=your-email@example.com
+ADMIN_PASSWORD=your-secure-password-here
 ```
 
 You can also customize Solr core names if needed:
@@ -264,7 +275,7 @@ LETSENCRYPT_EMAIL=
 
 When you first start the application with `docker compose up -d --build`, the system will automatically:
 
-1. Create a default admin user (`admin@example.com` with password `password`)
+1. Create a default admin user with credentials from your `.env` file (defaults: `admin@example.com` / `changeme`)
 2. Index all metadata records into both the staging and production Solr cores
 
 You can monitor the initialization progress by checking the logs:
@@ -273,9 +284,11 @@ You can monitor the initialization progress by checking the logs:
 docker compose logs -f manager
 ```
 
-Once you see "Initialization complete!" in the logs, you can log in to the application using:
-- **Email:** admin@example.com
-- **Password:** password
+Once you see "Initialization complete!" in the logs, you can log in to the application using the credentials you set in your `.env` file:
+- **Email:** Value from `ADMIN_EMAIL` (default: `admin@example.com`)
+- **Password:** Value from `ADMIN_PASSWORD` (default: `changeme`)
+
+**Security Note:** Make sure to change `ADMIN_PASSWORD` in your `.env` file before deploying to production!
 
 **Note:** On every container restart, the system will re-index all records to ensure Solr cores are in sync with the JSON files. The admin user creation will be skipped if it already exists.
 
