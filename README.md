@@ -37,8 +37,8 @@ Use `flask [command] [subcommand] --help` to see the specific arguments for each
 
 Index a specific record (provide the id), or all records, into Solr. Use `--clean` to remove all existing documents from the Solr core before indexing (for a full refresh).
 
-- `--env stage`: Index to staging core (accessible by all users)
-- `--env prod`: Index to production core (admin only)
+- `--env stage`: Index to staging core
+- `--env prod`: Index to production core
 - If no `--env` specified, defaults to production
 
 `flask registry resave-records`
@@ -262,29 +262,34 @@ LETSENCRYPT_EMAIL=
 
 ### Getting Started with Docker
 
-Once the application is running, you'll need to create a user for login and then index all of the records. First enter the docker container for the metadata manager:
+When you first start the application with `docker compose up -d --build`, the system will automatically:
 
+1. Create a default admin user (`admin@example.com` with password `password`)
+2. Index all metadata records into both the staging and production Solr cores
+
+You can monitor the initialization progress by checking the logs:
+
+```bash
+docker compose logs -f manager
 ```
+
+Once you see "Initialization complete!" in the logs, you can log in to the application using:
+- **Email:** admin@example.com
+- **Password:** password
+
+**Note:** On every container restart, the system will re-index all records to ensure Solr cores are in sync with the JSON files. The admin user creation will be skipped if it already exists.
+
+#### Manual Indexing
+
+If you need to manually re-index records later (e.g., after adding new records), you can enter the container and run the indexing command:
+
+```bash
 docker exec -it sdoh-manager bash
+flask registry index --env stage  # Index to staging core
+flask registry index --env prod   # Index to production core
 ```
 
-Now create a dummy user:
-
-```
-flask user create admin admin@example.com password
-```
-
-In the interface you will login with the **email** and **password** (do not use the username).
-
-Finally index all of the records into Solr:
-
-```
-flask registry index
-```
-
-You may see a 503 error from Solr, this is not a problem it is a health status ping that is not enabled yet on the docker build of the core.
-
-**Note:** For environment-specific indexing (stage vs prod), see the Management Commands section above.
+You may see a 503 error from Solr during indexing - this is expected and not a problem (it's a health status ping that is not enabled on the docker build of the core).
 
 ## Running the coverage command as a standalone script
 
