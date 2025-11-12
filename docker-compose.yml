@@ -23,15 +23,21 @@ services:
     labels:
       - "traefik.enable=true"
       # HTTP router with redirect to HTTPS
+      - "traefik.http.routers.traefik-dashboard-http.rule=Host(`traefik.${DOMAIN_NAME}`)"
+      - "traefik.http.routers.traefik-dashboard-http.entrypoints=web"
+      - "traefik.http.routers.traefik-dashboard-http.middlewares=redirect-to-https"
+      # HTTPS router for dashboard API
+      - "traefik.http.routers.traefik-api.rule=Host(`traefik.${DOMAIN_NAME}`) && PathPrefix(`/api`)"
+      - "traefik.http.routers.traefik-api.entrypoints=websecure"
+      - "traefik.http.routers.traefik-api.tls=true"
+      - "traefik.http.routers.traefik-api.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.traefik-api.service=api@internal"
+      # HTTPS router for dashboard UI
       - "traefik.http.routers.traefik-dashboard.rule=Host(`traefik.${DOMAIN_NAME}`)"
-      - "traefik.http.routers.traefik-dashboard.entrypoints=web"
-      - "traefik.http.routers.traefik-dashboard.middlewares=redirect-to-https"
-      # HTTPS router for dashboard
-      - "traefik.http.routers.traefik-dashboard-secure.rule=Host(`traefik.${DOMAIN_NAME}`)"
-      - "traefik.http.routers.traefik-dashboard-secure.entrypoints=websecure"
-      - "traefik.http.routers.traefik-dashboard-secure.tls=true"
-      - "traefik.http.routers.traefik-dashboard-secure.tls.certresolver=letsencrypt"
-      - "traefik.http.routers.traefik-dashboard-secure.service=api@internal"
+      - "traefik.http.routers.traefik-dashboard.entrypoints=websecure"
+      - "traefik.http.routers.traefik-dashboard.tls=true"
+      - "traefik.http.routers.traefik-dashboard.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.traefik-dashboard.service=dashboard@internal"
 
   solr:
     container_name: sdoh-solr
