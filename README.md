@@ -37,8 +37,8 @@ Use `flask [command] [subcommand] --help` to see the specific arguments for each
 
 Index a specific record (provide the id), or all records, into Solr. Use `--clean` to remove all existing documents from the Solr core before indexing (for a full refresh).
 
-- `--env stage`: Index to staging core (accessible by all users)
-- `--env prod`: Index to production core (admin only)
+- `--env stage`: Index to staging core
+- `--env prod`: Index to production core
 - If no `--env` specified, defaults to production
 
 `flask registry resave-records`
@@ -154,6 +154,9 @@ You can customize core names and other settings using environment variables:
 | `SOLR_CORE_PROD` | Production core name | `blacklight-core-prod` |
 | `SOLR_HOST` | Solr server URL | `http://localhost:8983/solr` |
 | `GBL_HOST` | GeoBlacklight URL | (optional) |
+| `ADMIN_USERNAME` | Default admin username | `admin` |
+| `ADMIN_EMAIL` | Default admin email (used for login) | `admin@example.com` |
+| `ADMIN_PASSWORD` | Default admin password | `changeme` |
 
 **Using .env file:**
 
@@ -172,6 +175,14 @@ DOMAIN_NAME=sdoh.metadata.local
 # For production with HTTPS
 DOMAIN_NAME=your-domain.com
 LETSENCRYPT_EMAIL=your-email@example.com
+```
+
+**Important:** Change the default admin credentials before deploying to production:
+
+```bash
+ADMIN_USERNAME=admin
+ADMIN_EMAIL=your-email@example.com
+ADMIN_PASSWORD=your-secure-password-here
 ```
 
 You can also customize Solr core names if needed:
@@ -262,29 +273,36 @@ LETSENCRYPT_EMAIL=
 
 ### Getting Started with Docker
 
-Once the application is running, you'll need to create a user for login and then index all of the records. First enter the docker container for the metadata manager:
+When you first start the application with `docker compose up -d --build`, the system will automatically:
 
+1. Create a default admin user with credentials from your `.env` file (defaults: `admin@example.com` / `changeme`)
+2. Index all metadata records into both the staging and production Solr cores
+
+You can monitor the initialization progress by checking the logs:
+
+```bash
+docker compose logs -f manager
 ```
+
+Once you see "Initialization complete!" in the logs, you can log in to the application using the credentials you set in your `.env` file:
+- **Email:** Value from `ADMIN_EMAIL` (default: `admin@example.com`)
+- **Password:** Value from `ADMIN_PASSWORD` (default: `changeme`)
+
+**Security Note:** Make sure to change `ADMIN_PASSWORD` in your `.env` file before deploying to production!
+
+**Note:** On every container restart, the system will re-index all records to ensure Solr cores are in sync with the JSON files. The admin user creation will be skipped if it already exists.
+
+#### Manual Indexing
+
+If you need to manually re-index records later (e.g., after adding new records), you can enter the container and run the indexing command:
+
+```bash
 docker exec -it sdoh-manager bash
+flask registry index --env stage  # Index to staging core
+flask registry index --env prod   # Index to production core
 ```
 
-Now create a dummy user:
-
-```
-flask user create admin admin@example.com password
-```
-
-In the interface you will login with the **email** and **password** (do not use the username).
-
-Finally index all of the records into Solr:
-
-```
-flask registry index
-```
-
-You may see a 503 error from Solr, this is not a problem it is a health status ping that is not enabled yet on the docker build of the core.
-
-**Note:** For environment-specific indexing (stage vs prod), see the Management Commands section above.
+You may see a 503 error from Solr during indexing - this is expected and not a problem (it's a health status ping that is not enabled on the docker build of the core).
 
 ## Running the coverage command as a standalone script
 

@@ -63,7 +63,7 @@ services:
         exec su solr -c "
           # Start Solr in background
           /opt/solr/bin/solr start -f &
-          SOLR_PID=\$!
+          SOLR_PID=$$!
           
           # Wait for Solr to be ready
           echo 'Waiting for Solr to start...'
@@ -80,7 +80,7 @@ services:
           /opt/solr/bin/solr create_core -c $SOLR_CORE_PROD
           
           # Wait for the background Solr process
-          wait \$SOLR_PID
+          wait $$SOLR_PID
         "
     labels:
       - "traefik.enable=true"
@@ -119,7 +119,33 @@ services:
     command: |
       sh -lc "
         chown -R herop:herop /home/herop/manager || true
-        exec su -s /bin/sh -c 'PATH=/home/herop/.local/bin:$PATH flask run -h 0.0.0.0 -p 8000' herop
+        
+        # Start Flask in background
+        su -s /bin/sh -c 'PATH=/home/herop/.local/bin:$PATH flask run -h 0.0.0.0 -p 8000' herop &
+        FLASK_PID=$$!
+        
+        # Wait for Flask to be ready
+        echo 'Waiting for Flask to start...'
+        until curl -s http://localhost:8000/ >/dev/null 2>&1; do
+          sleep 2
+        done
+        echo 'Flask is ready!'
+        
+        # Create default admin user (ignore error if already exists)
+        su -s /bin/sh -c 'PATH=/home/herop/.local/bin:$PATH flask user create ${ADMIN_USERNAME:-admin} ${ADMIN_EMAIL:-admin@example.com} ${ADMIN_PASSWORD:-changeme}' herop 2>/dev/null || echo 'Admin user already exists or could not be created'
+        
+        # Index all records to stage core
+        echo 'Indexing records to stage core...'
+        su -s /bin/sh -c 'PATH=/home/herop/.local/bin:$PATH flask registry index --env stage' herop
+        
+        # Index all records to prod core
+        echo 'Indexing records to prod core...'
+        su -s /bin/sh -c 'PATH=/home/herop/.local/bin:$PATH flask registry index --env prod' herop
+        
+        echo 'Initialization complete!'
+        
+        # Wait for Flask process to keep container alive
+        wait $$FLASK_PID
       "
     labels:
       - "traefik.enable=true"
