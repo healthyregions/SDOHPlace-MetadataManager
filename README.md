@@ -216,7 +216,7 @@ The Docker setup uses **Traefik** as a reverse proxy and load balancer. Traefik 
 
 **Access Points:**
 - **Main Application**: http://localhost (or http://your-server-ip) / `https://${DOMAIN_NAME}`
-- **Solr Admin**: `https://solr.${DOMAIN_NAME}`
+- **Solr Admin**: `https://solr.${DOMAIN_NAME}` (requires authentication)
 - **Traefik Dashboard**: http://localhost:8080 (or http://your-server-ip:8080) / `https://traefik.${DOMAIN_NAME}` (requires authentication)
 
 **Traefik Dashboard Authentication:**
@@ -246,6 +246,35 @@ To set custom credentials:
 4. **Restart containers:**
    ```bash
    docker compose restart traefik
+   ```
+
+**Solr Admin Authentication:**
+
+The Solr admin interface is also protected with HTTP basic authentication. Default credentials are:
+- **Username:** admin
+- **Password:** changeme
+
+To set custom credentials:
+1. **Generate a password hash:**
+   - Go to https://www.apivoid.com/tools/htpasswd-generator/
+   - In the input field, enter your credentials in the format: `username:password`
+     - Example: `admin:MySecureSolrPassword123`
+   - Click the **"Generate Htpasswd"** button
+   - The tool will generate a hash like: `admin:$2a$10$xyz...hashedpassword`
+   
+2. **Escape dollar signs for docker-compose:**
+   - Copy the generated hash
+   - Replace every single `$` with `$$` (double dollar signs)
+   - Example: `admin:$2a$10$xyz` becomes `admin:$$2a$$10$$xyz`
+
+3. **Update your `.env` file:**
+   ```bash
+   SOLR_AUTH=admin:$$2a$$10$$yourhashedpasswordhere
+   ```
+
+4. **Restart containers:**
+   ```bash
+   docker compose restart solr traefik
    ```
 
 **Features:**

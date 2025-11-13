@@ -113,8 +113,11 @@ services:
       - "traefik.http.routers.solr-https.entrypoints=websecure"
       - "traefik.http.routers.solr-https.tls=true"
       - "traefik.http.routers.solr-https.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.solr-https.middlewares=solr-auth@docker"
       - "traefik.http.services.solr-svc.loadbalancer.server.port=8983"
       - "traefik.http.routers.solr-https.service=solr-svc"
+      # Basic auth middleware for Solr
+      - "traefik.http.middlewares.solr-auth.basicauth.users=${SOLR_AUTH}"
 
   manager:
     container_name: sdoh-manager
