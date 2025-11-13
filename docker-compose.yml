@@ -38,6 +38,9 @@ services:
       - "traefik.http.routers.traefik-dashboard.tls=true"
       - "traefik.http.routers.traefik-dashboard.tls.certresolver=letsencrypt"
       - "traefik.http.routers.traefik-dashboard.service=dashboard@internal"
+      - "traefik.http.routers.traefik-dashboard.middlewares=traefik-auth@docker"
+      # Basic auth middleware for dashboard
+      - "traefik.http.middlewares.traefik-auth.basicauth.users=${TRAEFIK_AUTH}"
 
   solr:
     container_name: sdoh-solr

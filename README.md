@@ -124,7 +124,7 @@ You can change `PORT` in `.env` if you want gunicorn to listen on a different po
 
 ### Install/Run with Docker
 
-The Docker deploy uses Traefik as a reverse proxy. The main application is accessible on port 80, and Traefik dashboard is on port 8080.
+The Docker deploy uses Traefik as a reverse proxy. The main application is accessible on port 80. The Traefik dashboard is available at `https://traefik.${DOMAIN_NAME}` (protected with basic authentication).
 
 It will also run Solr at http://localhost:8983 and will automatically create cores named `blacklight-core-stage` and `blacklight-core-prod`
 
@@ -215,14 +215,44 @@ docker compose down
 The Docker setup uses **Traefik** as a reverse proxy and load balancer. Traefik automatically discovers services in Docker containers and routes traffic accordingly.
 
 **Access Points:**
-- **Main Application**: http://localhost (or http://your-server-ip)
-- **Traefik Dashboard**: http://localhost:8080 (or http://your-server-ip:8080)
+- **Main Application**: http://localhost (or http://your-server-ip) / `https://${DOMAIN_NAME}`
+- **Solr Admin**: `https://solr.${DOMAIN_NAME}`
+- **Traefik Dashboard**: http://localhost:8080 (or http://your-server-ip:8080) / `https://traefik.${DOMAIN_NAME}` (requires authentication)
+
+**Traefik Dashboard Authentication:**
+
+The Traefik dashboard is protected with HTTP basic authentication. Default credentials are:
+- **Username:** admin
+- **Password:** changeme
+
+To set custom credentials:
+1. **Generate a password hash:**
+   - Go to https://www.apivoid.com/tools/htpasswd-generator/
+   - In the input field, enter your credentials in the format: `username:password`
+     - Example: `admin:MySecurePassword123`
+   - Click the **"Generate Htpasswd"** button
+   - The tool will generate a hash like: `admin:$2a$10$xyz...hashedpassword`
+   
+2. **Escape dollar signs for docker-compose:**
+   - Copy the generated hash
+   - Replace every single `$` with `$$` (double dollar signs)
+   - Example: `admin:$2a$10$xyz` becomes `admin:$$2a$$10$$xyz`
+
+3. **Update your `.env` file:**
+   ```bash
+   TRAEFIK_AUTH=admin:$$2a$$10$$yourhashedpasswordhere
+   ```
+
+4. **Restart containers:**
+   ```bash
+   docker compose restart traefik
+   ```
 
 **Features:**
 - Automatic service discovery - No manual configuration needed
 - Load balancing - Built-in load balancing
 - Health checks - Automatic health monitoring
-- Dashboard - Web UI to monitor services (accessible on port 8080)
+- Dashboard - Web UI to monitor services with authentication
 - Auto-restart - Services restart automatically on VM reboot
 
 **Common Commands:**
@@ -254,9 +284,9 @@ The setup supports automatic HTTPS with Let's Encrypt. To enable:
    ```
 
 3. **Access your site**:
-   - **HTTPS**: https://your-domain.com (secure)
-   - **HTTP**: http://your-domain.com (redirects to HTTPS)
-   - **Dashboard**: http://your-domain.com:8080
+   - **Main App**: https://your-domain.com (secure)
+   - **Solr Admin**: https://solr.your-domain.com
+   - **Traefik Dashboard**: https://traefik.your-domain.com (requires authentication)
 
 **Features:**
 - Automatic SSL certificate generation and renewal
