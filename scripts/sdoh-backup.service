@@ -1,0 +1,20 @@
+[Unit]
+Description=SDOH Place Metadata Manager Backup
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/path/to/SDOHPlace-MetadataManager
+ExecStart=/path/to/SDOHPlace-MetadataManager/scripts/backup.sh
+
+# Optional: Environment variables
+Environment="BACKUP_DIR=/var/backups/sdohplace"
+Environment="RETENTION_DAYS=30"
+Environment="COMPRESS=true"
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+
