@@ -63,7 +63,7 @@ services:
         exec su solr -c "
           # Start Solr in background
           /opt/solr/bin/solr start -f &
-          SOLR_PID=\$!
+          SOLR_PID=$$!
           
           # Wait for Solr to be ready
           echo 'Waiting for Solr to start...'
@@ -80,7 +80,7 @@ services:
           /opt/solr/bin/solr create_core -c $SOLR_CORE_PROD
           
           # Wait for the background Solr process
-          wait \$SOLR_PID
+          wait $$SOLR_PID
         "
     labels:
       - "traefik.enable=true"
@@ -122,7 +122,7 @@ services:
         
         # Start Flask in background
         su -s /bin/sh -c 'PATH=/home/herop/.local/bin:$PATH flask run -h 0.0.0.0 -p 8000' herop &
-        FLASK_PID=\$!
+        FLASK_PID=$$!
         
         # Wait for Flask to be ready
         echo 'Waiting for Flask to start...'
@@ -145,7 +145,7 @@ services:
         echo 'Initialization complete!'
         
         # Wait for Flask process to keep container alive
-        wait \$FLASK_PID
+        wait $$FLASK_PID
       "
     labels:
       - "traefik.enable=true"
