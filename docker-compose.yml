@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     command:
       - --api.dashboard=true
-      - --api.insecure=true
+      - --api.insecure=false
       - --providers.docker=true
       - --providers.docker.exposedbydefault=false
       - --entrypoints.web.address=:80
@@ -21,7 +21,26 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - letsencrypt:/letsencrypt
     labels:
-      - "traefik.enable=false"
+      - "traefik.enable=true"
+      # HTTP router with redirect to HTTPS
+      - "traefik.http.routers.traefik-dashboard-http.rule=Host(`traefik.${DOMAIN_NAME}`)"
+      - "traefik.http.routers.traefik-dashboard-http.entrypoints=web"
+      - "traefik.http.routers.traefik-dashboard-http.middlewares=redirect-to-https"
+      # HTTPS router for dashboard API
+      - "traefik.http.routers.traefik-api.rule=Host(`traefik.${DOMAIN_NAME}`) && PathPrefix(`/api`)"
+      - "traefik.http.routers.traefik-api.entrypoints=websecure"
+      - "traefik.http.routers.traefik-api.tls=true"
+      - "traefik.http.routers.traefik-api.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.traefik-api.service=api@internal"
+      # HTTPS router for dashboard UI
+      - "traefik.http.routers.traefik-dashboard.rule=Host(`traefik.${DOMAIN_NAME}`)"
+      - "traefik.http.routers.traefik-dashboard.entrypoints=websecure"
+      - "traefik.http.routers.traefik-dashboard.tls=true"
+      - "traefik.http.routers.traefik-dashboard.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.traefik-dashboard.service=dashboard@internal"
+      - "traefik.http.routers.traefik-dashboard.middlewares=traefik-auth@docker"
+      # Basic auth middleware for dashboard
+      - "traefik.http.middlewares.traefik-auth.basicauth.users=${TRAEFIK_AUTH}"
 
   solr:
     container_name: sdoh-solr
@@ -94,8 +113,11 @@ services:
       - "traefik.http.routers.solr-https.entrypoints=websecure"
       - "traefik.http.routers.solr-https.tls=true"
       - "traefik.http.routers.solr-https.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.solr-https.middlewares=solr-auth@docker"
       - "traefik.http.services.solr-svc.loadbalancer.server.port=8983"
       - "traefik.http.routers.solr-https.service=solr-svc"
+      # Basic auth middleware for Solr
+      - "traefik.http.middlewares.solr-auth.basicauth.users=${SOLR_AUTH}"
 
   manager:
     container_name: sdoh-manager
