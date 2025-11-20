@@ -10,7 +10,7 @@ set -e  # Exit on error
 BACKUP_DIR="${BACKUP_DIR:-./backups}"
 RETENTION_DAYS="${RETENTION_DAYS:-30}"
 COMPRESS="${COMPRESS:-true}"
-LOG_FILE="${LOG_FILE:-./backups/backup.log}"
+LOG_FILE="${LOG_FILE:-${BACKUP_DIR}/backup.log}"
 
 # Directories to backup
 SOLR_DATA_DIR="./solr-data"
@@ -79,11 +79,15 @@ backup_solr() {
     local temp_dir="${BACKUP_DIR}/${BACKUP_NAME}"
     mkdir -p "${temp_dir}/solr-data"
     
-    # Copy Solr data
-    cp -r "${SOLR_DATA_DIR}"/* "${temp_dir}/solr-data/" 2>/dev/null || {
-        log_error "Failed to copy Solr data"
-        return 1
-    }
+    # Copy Solr data (handle empty directory case)
+    if [ -n "$(ls -A "${SOLR_DATA_DIR}" 2>/dev/null)" ]; then
+        cp -r "${SOLR_DATA_DIR}"/* "${temp_dir}/solr-data/" 2>/dev/null || {
+            log_error "Failed to copy Solr data"
+            return 1
+        }
+    else
+        log_warn "Solr data directory is empty"
+    fi
     
     log_info "Solr data backed up successfully"
     return 0
@@ -170,18 +174,18 @@ cleanup_old_backups() {
     
     # Find and delete old backup archives
     if [ -d "${BACKUP_DIR}" ]; then
-        while IFS= read -r file; do
+        while IFS= read -r -d '' file; do
             rm -f "$file"
             log_info "Deleted old backup: $(basename "$file")"
             ((deleted_count++))
-        done < <(find "${BACKUP_DIR}" -name "sdoh-backup-*.tar.gz" -mtime +${RETENTION_DAYS} 2>/dev/null)
+        done < <(find "${BACKUP_DIR}" -name "sdoh-backup-*.tar.gz" -mtime +${RETENTION_DAYS} -print0 2>/dev/null)
         
         # Also clean up old uncompressed directories
-        while IFS= read -r dir; do
+        while IFS= read -r -d '' dir; do
             rm -rf "$dir"
             log_info "Deleted old backup directory: $(basename "$dir")"
             ((deleted_count++))
-        done < <(find "${BACKUP_DIR}" -maxdepth 1 -type d -name "sdoh-backup-*" -mtime +${RETENTION_DAYS} 2>/dev/null)
+        done < <(find "${BACKUP_DIR}" -maxdepth 1 -type d -name "sdoh-backup-*" -mtime +${RETENTION_DAYS} -print0 2>/dev/null)
     fi
     
     if [ ${deleted_count} -eq 0 ]; then
@@ -197,8 +201,11 @@ main() {
     log_info "Starting SDOH Place backup: ${BACKUP_NAME}"
     log_info "========================================="
     
-    # Create backup directory
+    # Create backup directory (must be done before logging)
     create_backup_dir
+    
+    # Ensure log file directory exists
+    mkdir -p "$(dirname "${LOG_FILE}")"
     
     # Check container status
     check_containers

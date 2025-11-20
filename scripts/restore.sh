@@ -7,7 +7,7 @@ set -e  # Exit on error
 
 # Configuration
 BACKUP_DIR="${BACKUP_DIR:-./backups}"
-LOG_FILE="${LOG_FILE:-./backups/restore.log}"
+LOG_FILE="${LOG_FILE:-${BACKUP_DIR}/restore.log}"
 
 # Directories to restore to
 SOLR_DATA_DIR="./solr-data"
@@ -103,6 +103,7 @@ extract_backup() {
             exit 1
         }
         log_info "Backup extracted successfully"
+        echo "${backup_name}"  # Return backup name
         return 0
     elif [ -f "${backup_path}" ] && [[ "${backup_path}" == *.tar.gz ]]; then
         # Remove .tar.gz from name for extraction
@@ -116,6 +117,7 @@ extract_backup() {
         return 0
     elif [ -d "${backup_path}" ]; then
         log_info "Backup is already uncompressed"
+        echo "${backup_name}"  # Return backup name for consistency
         return 0
     else
         log_error "Backup not found: ${backup_name}"
@@ -229,6 +231,9 @@ main() {
     # Remove .tar.gz extension if provided
     backup_name="${backup_name%.tar.gz}"
     
+    # Ensure log file directory exists
+    mkdir -p "$(dirname "${LOG_FILE}")"
+    
     log_info "========================================="
     log_info "Starting SDOH Place restore: ${backup_name}"
     log_info "========================================="
@@ -237,17 +242,30 @@ main() {
     check_containers
     
     # Extract backup if compressed
-    backup_name=$(extract_backup "${backup_name}")
+    extracted_name=$(extract_backup "${backup_name}")
+    if [ -n "${extracted_name}" ]; then
+        backup_name="${extracted_name}"
+    fi
+    
+    # Verify backup directory exists
+    if [ ! -d "${BACKUP_DIR}/${backup_name}" ]; then
+        log_error "Backup directory not found after extraction: ${BACKUP_DIR}/${backup_name}"
+        exit 1
+    fi
     
     # Show backup metadata
     show_metadata "${backup_name}"
     
-    # Ask for confirmation
-    echo ""
-    read -p "Are you sure you want to restore this backup? This will overwrite current data. (yes/no): " -r
-    if [[ ! $REPLY =~ ^[Yy][Ee][Ss]$ ]]; then
-        log_warn "Restore cancelled by user"
-        exit 0
+    # Ask for confirmation (check if running interactively)
+    if [ -t 0 ]; then
+        echo ""
+        read -p "Are you sure you want to restore this backup? This will overwrite current data. (yes/no): " -r
+        if [[ ! $REPLY =~ ^[Yy][Ee][Ss]$ ]]; then
+            log_warn "Restore cancelled by user"
+            exit 0
+        fi
+    else
+        log_warn "Not running interactively - skipping confirmation prompt"
     fi
     
     # Backup current data
