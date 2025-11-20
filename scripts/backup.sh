@@ -60,11 +60,11 @@ check_containers() {
     if command -v docker &> /dev/null && docker compose ps | grep -q "Up"; then
         log_warn "Docker containers are running. Backup will proceed, but data consistency may vary."
         log_warn "For best results, consider stopping containers first: docker compose down"
-        return 0
     else
         log_info "Docker containers are not running or Docker is not available."
-        return 1
+        log_info "This is ideal for data consistency."
     fi
+    return 0
 }
 
 # Backup Solr data
