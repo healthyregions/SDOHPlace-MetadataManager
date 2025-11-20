@@ -150,6 +150,9 @@ venv.bak/
 # Solr data
 solr-data/
 
+# Backups
+backups/
+
 # Spyder project settings
 .spyderproject
 .spyproject

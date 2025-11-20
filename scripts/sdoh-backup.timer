@@ -1,0 +1,16 @@
+[Unit]
+Description=SDOH Place Backup Timer
+Requires=sdoh-backup.service
+
+[Timer]
+# Run daily at 2:00 AM
+OnCalendar=daily
+OnCalendar=*-*-* 02:00:00
+
+# If the system was powered off during the scheduled time, 
+# run the backup 10 minutes after next boot
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+
