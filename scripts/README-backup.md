@@ -28,6 +28,8 @@ Both scripts support these environment variables:
 **`backup.sh`:**
 - Creates timestamped archives: `sdoh-backup-YYYYMMDD_HHMMSS.tar.gz`
 - Backs up `./solr-data/` and `./manager/data.db`
+- Can run while containers are running (with warning) or stopped (recommended)
+- **Recommended:** Stop containers before backup for best data consistency
 - Automatically cleans up backups older than `RETENTION_DAYS`
 - Color-coded console output (green=info, yellow=warning, red=error)
 - Logs all operations to `${BACKUP_DIR}/backup.log` (default: `./backups/backup.log`)
@@ -35,9 +37,9 @@ Both scripts support these environment variables:
 
 **`restore.sh`:**
 - Requires backup name as argument (with or without .tar.gz extension)
-- Checks if Docker containers are running (will exit if they are)
+- **Requires containers to be stopped** (will exit with error if containers are running)
 - Creates pre-restore backup before overwriting data
-- Displays backup metadata and asks for confirmation
+- Displays backup metadata and asks for confirmation (interactive mode only)
 - Logs all operations to `${BACKUP_DIR}/restore.log` (default: `./backups/restore.log`)
 - Exit code 0 on success, 1 on failure
 
@@ -71,6 +73,30 @@ sdoh-backup-YYYYMMDD_HHMMSS/
 2024-11-06 10:30:06 [INFO] SQLite database restored successfully
 2024-11-06 10:30:06 [INFO] Restore completed successfully!
 ```
+
+## Container Status and Data Consistency
+
+### Backup Script (`backup.sh`)
+
+**Recommended:** Stop containers before backup for best data consistency:
+```bash
+docker compose down
+./scripts/backup.sh
+docker compose up -d
+```
+
+**Why stop containers?**
+- SQLite: Prevents database writes during backup, avoiding inconsistent snapshots
+- Solr: Ensures data files are not in use, preventing potential corruption
+
+**Running with containers active:**
+- Script will warn but proceed with backup
+- Acceptable for: Quick test backups, automated scheduled backups where brief inconsistencies are acceptable
+- Risk: Files may be captured mid-write, potentially causing data inconsistencies or corruption
+
+### Restore Script (`restore.sh`)
+
+**Containers MUST be stopped before restore** - the script will exit with an error if containers are running to prevent data corruption.
 
 ## Exit Codes
 

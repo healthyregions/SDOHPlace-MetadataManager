@@ -346,15 +346,22 @@ COMPRESS=false ./scripts/backup.sh
 LOG_FILE=/var/log/sdoh-backup.log ./scripts/backup.sh
 ```
 
-**Important:** For best data consistency, stop Docker containers before backing up:
+**Container Status:**
+
+The backup script can run while containers are running or stopped. However, for best data consistency and safety, it's recommended to stop containers first:
 
 ```bash
+# Recommended: Stop containers for consistent backups
 docker compose down
 ./scripts/backup.sh
 docker compose up -d
 ```
 
-However, the script can also run while containers are active (backups may have minor inconsistencies).
+**Running backups while containers are active:**
+- The script will warn you but will proceed with the backup
+- This is acceptable for quick/test backups or automated scheduled backups
+- Risk: May capture data files mid-write, potentially causing inconsistencies or corruption
+- Use case: Convenient for frequent automated backups where brief inconsistencies are acceptable
 
 #### Restoring Backups
 
@@ -378,12 +385,14 @@ docker compose up -d
 ```
 
 The restore script will:
-- Verify containers are stopped
+- **Require containers to be stopped** (will exit if containers are running)
 - Show backup metadata
 - Ask for confirmation before proceeding
 - Create a pre-restore backup of current data
 - Restore Solr data and SQLite database
 - Log all operations to `./backups/restore.log`
+
+**Important:** Containers MUST be stopped before restore to prevent data corruption.
 
 #### Automated Backups with Cron
 
