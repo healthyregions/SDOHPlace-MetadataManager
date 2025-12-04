@@ -66,6 +66,14 @@ def change_password(email, password):
     user.password = generate_password_hash(password, method="pbkdf2:sha256")
     db.session.commit()
 
+@user_grp.command()
+@with_appcontext
+def list_all():
+    """Changes a users password"""
+
+    for user in User.query.all():
+        print(user.name, user.email)
+
 
 registry_grp = AppGroup(
     "registry",
