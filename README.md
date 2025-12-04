@@ -363,6 +363,145 @@ flask registry index --env prod   # Index to production core
 
 You may see a 503 error from Solr during indexing - this is expected and not a problem (it's a health status ping that is not enabled on the docker build of the core).
 
+### Backup and Restore
+
+The project includes automated backup scripts to preserve critical application data from both the Solr index and the Manager SQLite database.
+
+#### Creating Backups
+
+To create a manual backup:
+
+```bash
+# Make the script executable (first time only)
+chmod +x scripts/backup.sh
+
+# Run the backup
+./scripts/backup.sh
+```
+
+The backup script will:
+- Create timestamped backup archives in `./backups/`
+- Back up Solr data directory (`./solr-data/`)
+- Back up SQLite database (`./manager/data.db`)
+- Compress backups as `.tar.gz` files
+- Clean up old backups based on retention policy (default: 30 days)
+- Log all operations to `./backups/backup.log`
+
+**Environment Variables:**
+
+You can customize the backup behavior using environment variables:
+
+```bash
+# Custom backup directory
+BACKUP_DIR=/mnt/backups ./scripts/backup.sh
+
+# Keep backups for 60 days instead of 30
+RETENTION_DAYS=60 ./scripts/backup.sh
+
+# Disable compression
+COMPRESS=false ./scripts/backup.sh
+
+# Custom log file
+LOG_FILE=/var/log/sdoh-backup.log ./scripts/backup.sh
+```
+
+**Container Status:**
+
+The backup script can run while containers are running or stopped. However, for best data consistency and safety, it's recommended to stop containers first:
+
+```bash
+# Recommended: Stop containers for consistent backups
+docker compose down
+./scripts/backup.sh
+docker compose up -d
+```
+
+**Running backups while containers are active:**
+- The script will warn you but will proceed with the backup
+- This is acceptable for quick/test backups or automated scheduled backups
+- Risk: May capture data files mid-write, potentially causing inconsistencies or corruption
+- Use case: Convenient for frequent automated backups where brief inconsistencies are acceptable
+
+#### Restoring Backups
+
+To restore from a backup:
+
+```bash
+# Make the script executable (first time only)
+chmod +x scripts/restore.sh
+
+# List available backups
+ls -lt ./backups/
+
+# Stop containers first (required)
+docker compose down
+
+# Restore a specific backup
+./scripts/restore.sh sdoh-backup-20241106_143022
+
+# Start containers after restore
+docker compose up -d
+```
+
+The restore script will:
+- **Require containers to be stopped** (will exit if containers are running)
+- Show backup metadata
+- Ask for confirmation before proceeding
+- Create a pre-restore backup of current data
+- Restore Solr data and SQLite database
+- Log all operations to `./backups/restore.log`
+
+**Important:** Containers MUST be stopped before restore to prevent data corruption.
+
+#### Automated Backups with Cron
+
+To schedule automatic daily backups using cron:
+
+1. Make the backup script executable:
+   ```bash
+   chmod +x scripts/backup.sh
+   ```
+
+2. Edit your crontab:
+   ```bash
+   crontab -e
+   ```
+
+3. Add a cron job (example runs daily at 2:00 AM):
+   ```bash
+   0 2 * * * cd /path/to/SDOHPlace-MetadataManager && ./scripts/backup.sh >> ./backups/cron.log 2>&1
+   ```
+
+See `scripts/backup-cron-example.sh` for more cron job examples.
+
+#### Automated Backups with Systemd Timer
+
+For systems using systemd, you can use a timer unit instead of cron:
+
+1. Copy the service and timer files:
+   ```bash
+   sudo cp scripts/sdoh-backup.service /etc/systemd/system/
+   sudo cp scripts/sdoh-backup.timer /etc/systemd/system/
+   ```
+
+2. Edit the service file to set the correct paths:
+   ```bash
+   sudo nano /etc/systemd/system/sdoh-backup.service
+   ```
+
+3. Enable and start the timer:
+   ```bash
+   sudo systemctl daemon-reload
+   sudo systemctl enable sdoh-backup.timer
+   sudo systemctl start sdoh-backup.timer
+   ```
+
+4. Check timer status:
+   ```bash
+   sudo systemctl status sdoh-backup.timer
+   sudo systemctl list-timers
+   ```
+
 ## Running the coverage command as a standalone script
 
 The coverage checking command can be run as a standalone script, outside of the Flask framework. This comes with many fewer python dependencies, and will not alter any data in the records, it just gives you an output text file of ids that can be pasted into the metadata manager "Highlight IDs" field.
