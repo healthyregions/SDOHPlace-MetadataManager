@@ -1,89 +1,67 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 23,
+    "filled": 21,
     "to_fill": 26,
-    "filled_pct": 88,
+    "filled_pct": 80,
     "progress_class": "warning"
   },
   "metadata_version": "SDOH PlaceProject",
-  "title": "County Health Rankings",
+  "title": "Residential Air Conditioning Prevalence (Zip Code)",
   "alternative_title": [
-    "County Health Rankings & Roadmaps (CHR&R)"
+    "ZCTA-Level Summary of Residential Air Conditioning Prevalence"
   ],
   "description": [
-    "The County Health Rankings & Roadmaps (CHR&R) program provides an annual data release to generate a snapshot of how health is influenced by where people live, learn, work, and play, drawing attention to why there are differences in health within and across communities. Each annual data release features a well documented model and dozens of measures related to health outcomes as well as health behaviors, clinical care, social and economic factors, and physical environment. Files associated with each release will also include national statistics, state-level data and technical documentation including changes to measures, guidelines for comparing data across states, information about data years and sources, and more."
+    "This dataset includes summary information on the prevalence of air conditioning (AC) across ZIP Code Tabulation Areas (ZCTAs) in the United States. While the spatial boundaries reflect ZCTAs and counties for the specified year (2010,2015,2020), the AC prevalence estimates are based on predictive models calibrated using data from 2021. This allows the dataset to represent 2021 AC conditions aligned with historical geographic definitions for comparative analysis.",
+    "This dataset addresses longstanding gaps in understanding the geographic and demographic disparities in AC access, critical for public health, climate adaptation, and energy equity research. Users may integrate these data into epidemiological modeling, resilience planning, and policy analysis to support heat vulnerability assessments and infrastructure interventions."
   ],
   "language": [
     "eng"
   ],
-  "display_note": [
-    "Be sure to check technical documentation for each year of release to check for updates, as the data model approach is continually refined."
-  ],
+  "display_note": [],
   "creator": [
-    "University of Wisconsin Population Health Institute"
+    "Dr. Yoonjung Ahn"
   ],
   "publisher": [
-    "University of Wisconsin Population Health Institute"
+    "Harvard Dataverse"
   ],
   "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
-    "Datasets",
-    "Maps",
-    "Websites"
+    "Datasets"
   ],
   "resource_type": [
-    "Polygon data"
+    "Table data"
   ],
   "subject": [
-    "Demographics",
-    "Economic Stability",
-    "Employment",
-    "Education",
-    "Food Environment",
-    "Health and Healthcare",
     "Housing",
-    "Neighborhood and Built Environment",
-    "Physical Activity and Lifestyle",
+    "Safety",
     "Social and Community Context",
-    "Transportation and Infrastructure"
+    "Neighborhood and Built Environment",
+    "Natural Environment"
   ],
   "theme": [
+    "Boundaries",
+    "Climate",
     "Health",
-    "Society",
-    "Structure",
-    "Transportation"
+    "Location",
+    "Structure"
   ],
   "keyword": [
-    "Structural determinants of Health",
-    "Health Outcomes",
-    "SDOH",
-    "Health Behaviors",
-    "Clinical Care",
-    "Social and Economic Factors",
-    "Physical Environment"
+    "Air Conditioning",
+    "AC",
+    "AC Units",
+    "Cooling",
+    "Central Air"
   ],
   "temporal_coverage": [
-    "2010-2025"
+    "2010",
+    "2020"
   ],
-  "date_issued": null,
+  "date_issued": "2025-09-30",
   "index_year": [
     2010,
-    2011,
-    2012,
-    2013,
-    2014,
     2015,
-    2016,
-    2017,
-    2018,
-    2019,
-    2020,
-    2021,
-    2022,
-    2023,
-    2024,
-    2025
+    2020
   ],
   "date_range": [],
   "spatial_coverage": [
@@ -100,175 +78,36 @@
   "is_version_of": [],
   "replaces": [],
   "is_replaced_by": [],
-  "rights": [
-    "See terms of use: https://www.countyhealthrankings.org/terms-use"
-  ],
+  "rights": [],
   "rights_holder": [],
   "license": [],
   "access_rights": "Public",
   "format": null,
   "file_size": null,
   "references": {
-    "http://lccn.loc.gov/sh85035852": "https://www.countyhealthrankings.org/health-data/methodology-and-sources/data-documentation/national-data-documentation-2010-2022",
-    "http://schema.org/url": "https://www.countyhealthrankings.org/",
-    "http://schema.org/downloadUrl": "https://www.countyhealthrankings.org/health-data/county-health-rankings-measures"
+    "http://schema.org/url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/A0CGTX"
   },
   "wxs_indentifier": null,
-  "id": "herop-cfmkuz",
+  "id": "herop-fxlloc",
   "identifier": [],
-  "modified": "2025-12-04T16:39:25Z",
+  "modified": "2025-11-03T18:13:32Z",
   "suppressed": false,
   "spatial_resolution": [
-    "County"
+    "Zip Code Tabulation Area (ZCTA)"
   ],
   "highlight_ids": [
-    "050US*"
+    "860US*"
   ],
   "spatial_resolution_note": null,
-  "methods_variables": [
-    "Years of Potential Life Lost Rate",
-    "Percent Fair or Poor Health",
-    "Average Number of Physically Unhealthy Days",
-    "Average Number of Mentally Unhealthy Days",
-    "Percent Low birthweight",
-    "Food Environment Index",
-    "Average Daily PM2.5",
-    "Percent Adults Reporting Currently Smoking",
-    "Percent Adults with Obesity",
-    "Percent Physically Inactive",
-    "Percent With Access to Exercise Opportunities",
-    "Percent Excessive Drinking",
-    "Percent Driving Deaths with Alcohol Involvement",
-    "Chlamydia Rate",
-    "Teen Birth Rate",
-    "Percent Uninsured",
-    "Primary Care Physicians Rate",
-    "Primary Care Physicians Ratio",
-    "Dentist Rate",
-    "Dentist Ratio",
-    "Mental Health Provider Rate",
-    "Mental Health Provider Ratio",
-    "Preventable Hospitalization Rate",
-    "Percent With Annual Mammogram",
-    "Percent Flu Vaccinated",
-    "Percent Completed High School",
-    "Percent Some College",
-    "Percent Unemployed",
-    "Percent Children in Poverty",
-    "Income Ratio",
-    "Percent Children in Single-Parent Households",
-    "Social Association Rate",
-    "Injury Death Rate",
-    "Presence of Water Violation",
-    "Percent Severe Housing Problems",
-    "Percent Drive Alone to Work",
-    "Percent Long Commute - Drives Alone"
-  ],
+  "methods_variables": [],
   "data_variables": [
-    "State FIPS Code",
-    "County FIPS Code",
-    "5-digit FIPS Code",
-    "State Abbreviation",
-    "Name",
-    "Release Year",
-    "County Clustered (Yes=1/No=0)",
-    "Premature Death",
-    "Poor Physical Health Days",
-    "Poor Mental Health Days",
-    "Low Birth Weight",
-    "Poor or Fair Health",
-    "Flu Vaccinations",
-    "Access to Exercise Opportunities",
-    "Food Environment Index",
-    "Primary Care Physicians",
-    "Mental Health Providers",
-    "Ratio of population to primary care physicians",
-    "Dentists",
-    "Ratio of population to dentists",
-    "Preventable Hospital Stays",
-    "Mammography Screening",
-    "Uninsured",
-    "Severe Housing Problems",
-    "Percentage of households with high housing costs",
-    "Percentage of households with overcrowding",
-    "Driving Alone to Work",
-    "Long Commute",
-    "Air Pollution: Particulate Matter",
-    "Drinking Water Violations",
-    "Broadband Access",
-    "Library Access",
-    "Some College",
-    "High School Completion",
-    "Unemployment",
-    "Income Inequality",
-    "Children in Poverty",
-    "Injury Deaths",
-    "Social Associations",
-    "Child Care Cost Burden",
-    "Life Expectancy",
-    "Premature Age-Adjusted Mortality",
-    "Child Mortality",
-    "Infant Mortality",
-    "Frequent Physical Distress",
-    "Diabetes Prevalence",
-    "HIV Prevalence",
-    "Adult Obesity",
-    "Frequent Mental Distress",
-    "Suicides",
-    "Crude suicide rate",
-    "Feelings of Loneliness",
-    "Limited Access to Healthy Foods",
-    "Food Insecurity",
-    "Insufficient Sleep",
-    "Teen Births",
-    "Sexually Transmitted Infections",
-    "Excessive Drinking",
-    "Alcohol-Impaired Driving Deaths",
-    "Drug Overdose Deaths",
-    "Adult Smoking",
-    "Physical Inactivity",
-    "Uninsured Adults",
-    "Uninsured Children",
-    "Other Primary Care Providers",
-    "Traffic Volume",
-    "Homeownership",
-    "Severe Housing Cost Burden",
-    "Access to Parks",
-    "Adverse Climate Events",
-    "Census Participation",
-    "Voter Turnout",
-    "High School Graduation",
-    "Reading Scores",
-    "Math Scores",
-    "School Segregation",
-    "School Funding Adequacy",
-    "Children Eligible for Free or Reduced Price Lunch",
-    "Gender Pay Gap",
-    "Median Household Income",
-    "Living Wage",
-    "Child Care Centers",
-    "Residential Segregation",
-    "Homicides",
-    "Motor Vehicle Crash Deaths",
-    "Firearm Fatalities",
-    "Disconnected Youth",
-    "Lack of Social and Emotional Support",
-    "% Below 18 Years of Age",
-    "% 65 and Older",
-    "% Female",
-    "% American Indian or Alaska Native",
-    "% Asian",
-    "% Hispanic",
-    "% Native Hawaiian or Other Pacific Islander",
-    "% Non-Hispanic Black",
-    "% Non-Hispanic White",
-    "% Disability: Functional Limitations",
-    "% Not Proficient in English",
-    "Children in Single-Parent Households",
-    "% Rural",
-    "Population"
+    "Zip Code Tabulation Areas",
+    "ZCTA",
+    "AC Type",
+    "AC Percentage",
+    "AC Count"
   ],
   "featured_variable": [],
-  "preferred_citation": "University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps 2024. www.countyhealthrankings.org. ",
-  "data_usage_notes": "The data contains a breakdown of the measures used in calculating outcomes, data elements, descriptions, and ranking for each country."
+  "preferred_citation": " Ahn, Yoonjung. 2025. \u201cZCTA-Level Summary of Residential Air Conditioning Prevalence.\u201d Harvard Dataverse. https://doi.org/10.7910/DVN/A0CGTX.",
+  "data_usage_notes": null
 }
