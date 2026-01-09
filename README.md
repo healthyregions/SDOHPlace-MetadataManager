@@ -153,7 +153,6 @@ You can customize core names and other settings using environment variables:
 | `SOLR_CORE_STAGE` | Staging core name | `blacklight-core-stage` |
 | `SOLR_CORE_PROD` | Production core name | `blacklight-core-prod` |
 | `SOLR_HOST` | Solr server URL | `http://localhost:8983/solr` |
-| `GBL_HOST` | GeoBlacklight URL | (optional) |
 | `ADMIN_USERNAME` | Default admin username | `admin` |
 | `ADMIN_EMAIL` | Default admin email (used for login) | `admin@example.com` |
 | `ADMIN_PASSWORD` | Default admin password | `changeme` |
