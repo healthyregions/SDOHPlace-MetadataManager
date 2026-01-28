@@ -18,8 +18,6 @@ load_dotenv()
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-GBL_HOST = os.getenv("GBL_HOST").rstrip("/")
-
 DISCOVERY_APP_URL = os.getenv("DISCOVERY_APP_URL")
 
 SOLR_HOST = os.getenv("SOLR_HOST", "").rstrip("/")
@@ -65,7 +63,6 @@ app.register_blueprint(crud)
 @app.context_processor
 def get_context():
     return dict(
-        gbl_host=GBL_HOST,
         discovery_app_url=DISCOVERY_APP_URL,
                 solr={
                     "host": SOLR_HOST,
