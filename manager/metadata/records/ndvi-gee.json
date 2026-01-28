@@ -6,6 +6,7 @@
     "filled_pct": 88,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "MODIS Combined 16-Day NDVI",
   "alternative_title": [
     "MODIS Combined 16-Day NDVI (Google Earth Engine)"
@@ -34,10 +35,11 @@
     "Raster data"
   ],
   "subject": [
+    "Natural Environment",
     "Food Environment",
+    "Greenspaces",
     "Health and Healthcare",
-    "Neighborhood and Built Environment",
-    "Greenspaces"
+    "Neighborhood and Built Environment"
   ],
   "theme": [
     "Land Cover"
@@ -88,8 +90,7 @@
   "wxs_indentifier": null,
   "id": "herop-eflmqc",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2026-01-08T16:12:16Z",
   "suppressed": false,
   "spatial_resolution": [
     "City",
