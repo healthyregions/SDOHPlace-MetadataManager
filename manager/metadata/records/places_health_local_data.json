@@ -46,11 +46,11 @@
     "US Census"
   ],
   "temporal_coverage": [
-    "2017-2021"
+    "2017-2023"
   ],
-  "date_issued": "10/31/2023",
+  "date_issued": "12/12/2025",
   "index_year": [
-    2021
+    2025
   ],
   "date_range": [],
   "spatial_coverage": [
@@ -82,7 +82,7 @@
   "wxs_indentifier": null,
   "id": "herop-tvlxez",
   "identifier": [],
-  "modified": "2025-10-10T19:03:46Z",
+  "modified": "2026-01-12T18:31:19Z",
   "suppressed": false,
   "spatial_resolution": [
     "City",

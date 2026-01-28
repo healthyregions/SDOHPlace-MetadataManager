@@ -1,11 +1,12 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 22,
+    "filled": 23,
     "to_fill": 26,
-    "filled_pct": 84,
+    "filled_pct": 88,
     "progress_class": "warning"
   },
+  "metadata_version": "SDOH PlaceProject",
   "title": "Smart Location Database",
   "alternative_title": [
     "None"
@@ -33,10 +34,10 @@
     "Polygon data"
   ],
   "subject": [
-    "Demographics",
-    "Employment",
+    "Neighborhood and Built Environment",
     "Housing",
-    "Neighborhood and Built Environment"
+    "Demographics",
+    "Employment"
   ],
   "theme": [
     "Environment",
@@ -88,6 +89,7 @@
   "format": "Geodatabase",
   "file_size": "527 mb",
   "references": {
+    "http://schema.org/url": "https://www.epa.gov/smartgrowth/smart-location-mapping#SLD",
     "http://schema.org/downloadUrl": "https://www.epa.gov/smartgrowth/smart-location-mapping#Trans45",
     "http://lccn.loc.gov/sh85035852": "https://www.epa.gov/system/files/documents/2023-10/epa_sld_3.0_technicaldocumentationuserguide_may2021_0.pdf",
     "archive-url": "https://uofi.app.box.com/folder/305406383348"
@@ -95,8 +97,7 @@
   "wxs_indentifier": null,
   "id": "herop-ppvuzl",
   "identifier": [],
-  "modified": "2025-04-03T14:01:19Z",
-  "metadata_version": "SDOH PlaceProject",
+  "modified": "2026-01-08T16:21:52Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"
@@ -214,6 +215,6 @@
     "and [D4a] (D4A_Ranked)"
   ],
   "featured_variable": [],
-  "preferred_citation": null,
+  "preferred_citation": "United States Environmental Protection Agency. (2021). Smart Location Database (Version 3.0). Retrieved January 8, 2026, from https://www.epa.gov/smartgrowth/smart-location-mapping. ",
   "data_usage_notes": "The Smart Location Database summarizes more than 90 different indicators associated with the built environment and location efficiency. The Access to Jobs and Workers Via Transit Tool provides indicators of accessibility to destinations by public transit.The National Walkability Index provides walkability scores based on a simple formula that ranks selected indicators from the Smart Location Database that have been demonstrated to affect the propensity of walk trips."
 }

@@ -89,6 +89,7 @@
   "format": "Geodatabase",
   "file_size": "406 mb",
   "references": {
+    "http://schema.org/url": "https://www.epa.gov/smartgrowth/smart-location-mapping#walkability",
     "http://lccn.loc.gov/sh85035852": "https://https://www.epa.gov/smartgrowth/smart-location-mapping#walkability",
     "http://schema.org/downloadUrl": "https://www.epa.gov/sites/default/files/2021-06/documents/national_walkability_index_methodology_and_user_guide_june2021.pdf",
     "archive-url": "https://uofi.box.com/s/0pzgxfprxzu7c6vj5pyopu61ixkb5gra"
@@ -96,7 +97,7 @@
   "wxs_indentifier": null,
   "id": "herop-jjsukv",
   "identifier": [],
-  "modified": "2025-10-10T19:03:12Z",
+  "modified": "2026-01-08T16:24:44Z",
   "suppressed": false,
   "spatial_resolution": [
     "Census Block Group"

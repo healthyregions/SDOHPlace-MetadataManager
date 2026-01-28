@@ -34,9 +34,11 @@
     "Table data"
   ],
   "subject": [
+    "Composite Index",
+    "Social and Community Context",
     "Economic Stability",
-    "Natural Environment",
-    "Neighborhood and Built Environment"
+    "Housing",
+    "Natural Environment"
   ],
   "theme": [
     "Environment",
@@ -53,7 +55,8 @@
     "institutional",
     "community",
     "environmental",
-    "natural"
+    "natural",
+    "resilience"
   ],
   "temporal_coverage": [
     "2010-2020"
@@ -66,7 +69,7 @@
   ],
   "date_range": [],
   "spatial_coverage": [
-    "United State",
+    "United States",
     "Alaska",
     "Hawaii"
   ],
@@ -94,7 +97,7 @@
   "wxs_indentifier": null,
   "id": "herop-xqjhxb",
   "identifier": [],
-  "modified": "2025-10-16T01:41:04Z",
+  "modified": "2026-01-08T15:55:12Z",
   "suppressed": false,
   "spatial_resolution": [
     "County",
