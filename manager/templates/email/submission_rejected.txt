@@ -1,0 +1,18 @@
+Subject: SDOH & Place submission decision: {{ title }}
+
+Hello,
+
+Thank you for submitting to the SDOH & Place data discovery platform. After review, we have to reject this submission at this time.
+
+{% if notes %}Please refer to our comments:
+{{ notes }}
+
+{% endif %}{% if submission_url %}You can review the submitted record here:
+{{ submission_url }}
+
+{% endif %}Submission: {{ title }}
+
+If you have any question, please feel free to reach out to us at {{ contact_email }}.
+
+Thank you,
+SDOH & Place Team

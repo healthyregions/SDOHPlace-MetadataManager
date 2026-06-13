@@ -1,0 +1,17 @@
+<div class="field has-addons submission-nav">
+  <p class="control">
+    <a class="button {% if active_status == 'submitted' %}is-link{% endif %}" href="{{ url_for('submissions.list_submissions', status='submitted') }}">Submitted</a>
+  </p>
+  <p class="control">
+    <a class="button {% if active_status == 'needs_changes' %}is-link{% endif %}" href="{{ url_for('submissions.list_submissions', status='needs_changes') }}">Needs Changes</a>
+  </p>
+  <p class="control">
+    <a class="button {% if active_status == 'approved' %}is-link{% endif %}" href="{{ url_for('submissions.list_submissions', status='approved') }}">Approved</a>
+  </p>
+  <p class="control">
+    <a class="button {% if active_status == 'rejected' %}is-link{% endif %}" href="{{ url_for('submissions.list_submissions', status='rejected') }}">Rejected</a>
+  </p>
+  <p class="control">
+    <a class="button {% if active_status == 'contributors' %}is-link{% endif %}" href="{{ url_for('submissions.list_contributors') }}">Contributors</a>
+  </p>
+</div>

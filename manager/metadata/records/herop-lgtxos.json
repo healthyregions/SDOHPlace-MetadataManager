@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 21,
-    "to_fill": 26,
-    "filled_pct": 80,
+    "filled": 22,
+    "to_fill": 27,
+    "filled_pct": 81,
     "progress_class": "warning"
   },
   "metadata_version": "SDOH PlaceProject",
@@ -182,7 +182,7 @@
     "Hepatitis C Deaths - Age Over 75  (5-Year Averages)",
     "Hepatitis C Deaths - Age Under 50 (5-Year Averages)",
     "Average White Hepitatis C virus Deaths",
-    "Percent Persons aged 25 years and over with a bachelor\u2019s degree as their highest level of education",
+    "Percent Persons aged 25 years and over with a bachelor’s degree as their highest level of education",
     "Count Black/African American Populationw",
     "Percent Black/African American Populationw",
     "Yearly Hepatitis C cases - Black (2013-2016)",
@@ -531,5 +531,6 @@
   ],
   "featured_variable": [],
   "preferred_citation": "Susan Paykin, Wataru Morioka, Mahjabin Kabir Adrita, Adam Cox, Ashlynn Wimer, Sara Lambert, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li, Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2024). healthyregions/oeps: Opioid Environment Policy Scan (OEPS) Data Warehouse (v2.0). Zenodo. https://doi.org/10.5281/zenodo.5842465",
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

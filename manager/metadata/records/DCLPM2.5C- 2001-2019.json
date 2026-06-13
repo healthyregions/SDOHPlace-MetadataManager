@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 24,
-    "to_fill": 26,
+    "filled": 25,
+    "to_fill": 27,
     "filled_pct": 92,
     "progress_class": "success"
   },
@@ -12,7 +12,7 @@
     "Daily County-Level PM2.5 Concentrations (2001-2019)"
   ],
   "description": [
-    "The CDC works closely with Environmental Protection Agency (EPA), National Aeronautics and Space Administration (NASA), and National Oceanic and Atmospheric Association (NOAA) to generate air quality data from the National Environmental Public Health Tracking Network. This dataset provides modeled predictions of PM 2.5 levels from the EPA's Downscaler model. The dataset includes the maximum, median, mean, and population-weighted 24-hour average concentration of particulate matter smaller than 2.5 micrometers (PM2.5) in \u03bcg/m3 at the county-level."
+    "The CDC works closely with Environmental Protection Agency (EPA), National Aeronautics and Space Administration (NASA), and National Oceanic and Atmospheric Association (NOAA) to generate air quality data from the National Environmental Public Health Tracking Network. This dataset provides modeled predictions of PM 2.5 levels from the EPA's Downscaler model. The dataset includes the maximum, median, mean, and population-weighted 24-hour average concentration of particulate matter smaller than 2.5 micrometers (PM2.5) in μg/m3 at the county-level."
   ],
   "language": [
     "eng"
@@ -108,14 +108,15 @@
   "data_variables": [
     "Year of prediction",
     "Date (day-month-year) of prediction",
-    "Maximum estimated 24-hour average PM2.5 concentration in \u03bcg/m3 for the county",
-    "Median estimated 24-hour average PM2.5 concentration in \u03bcg/m3 for the county",
-    "Mean estimated 24-hour average PM2.5 concentration in \u03bcg/m3 for the county",
-    "Population-weighted estimated 24-hour average PM2.5 concentration in \u03bcg/m3 for the county"
+    "Maximum estimated 24-hour average PM2.5 concentration in μg/m3 for the county",
+    "Median estimated 24-hour average PM2.5 concentration in μg/m3 for the county",
+    "Mean estimated 24-hour average PM2.5 concentration in μg/m3 for the county",
+    "Population-weighted estimated 24-hour average PM2.5 concentration in μg/m3 for the county"
   ],
   "featured_variable": [
-    "Maximum, median, mean, and population-weighted estimates of 24-hour average PM2.5 concentration in \u03bcg/m3 for the county"
+    "Maximum, median, mean, and population-weighted estimates of 24-hour average PM2.5 concentration in μg/m3 for the county"
   ],
   "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. Web. Accessed: insert date. www.cdc.gov/ephtracking.",
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

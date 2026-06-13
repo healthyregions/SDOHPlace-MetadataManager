@@ -13,8 +13,9 @@ COMPRESS="${COMPRESS:-true}"
 LOG_FILE="${LOG_FILE:-${BACKUP_DIR}/backup.log}"
 
 # Directories to backup
-SOLR_DATA_DIR="./solr-data"
-MANAGER_DB="./manager/data.db"
+SOLR_DATA_DIR="${SOLR_DATA_DIR:-./solr-data}"
+MANAGER_DB="${MANAGER_DB:-./manager/data.db}"
+RECORDS_HISTORY_DIR="${RECORDS_HISTORY_DIR:-./manager/metadata/records-history}"
 
 # Timestamp for backup
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
@@ -116,6 +117,30 @@ backup_database() {
     return 0
 }
 
+backup_records_history() {
+    log_info "Starting records history backup..."
+
+    if [ ! -d "${RECORDS_HISTORY_DIR}" ]; then
+        log_warn "Records history directory not found: ${RECORDS_HISTORY_DIR}"
+        return 0
+    fi
+
+    local temp_dir="${BACKUP_DIR}/${BACKUP_NAME}"
+    mkdir -p "${temp_dir}/manager/metadata/records-history"
+
+    if [ -n "$(ls -A "${RECORDS_HISTORY_DIR}" 2>/dev/null)" ]; then
+        cp -r "${RECORDS_HISTORY_DIR}"/* "${temp_dir}/manager/metadata/records-history/" 2>/dev/null || {
+            log_error "Failed to copy records history"
+            return 1
+        }
+    else
+        log_warn "Records history directory is empty"
+    fi
+
+    log_info "Records history backed up successfully"
+    return 0
+}
+
 # Create metadata file
 create_metadata() {
     local temp_dir="${BACKUP_DIR}/${BACKUP_NAME}"
@@ -132,6 +157,7 @@ User: $(whoami)
 Contents:
 - Solr Data: ${SOLR_DATA_DIR}
 - SQLite DB: ${MANAGER_DB}
+- Records History: ${RECORDS_HISTORY_DIR}
 
 To restore this backup, use:
   ./scripts/restore.sh ${BACKUP_NAME}
@@ -213,6 +239,7 @@ main() {
     # Perform backups
     backup_solr || exit 1
     backup_database || exit 1
+    backup_records_history || exit 1
     
     # Create metadata
     create_metadata
@@ -231,4 +258,3 @@ main() {
 
 # Run main function
 main
-

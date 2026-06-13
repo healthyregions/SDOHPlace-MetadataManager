@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block page_title %}Submission {{ submission_id }}{% endblock %}
+
+{% block main_content %}
+<div class="buttons are-small">
+  <a class="button" href="{{ url_for('submissions.list_submissions') }}">Back to submissions</a>
+</div>
+
+{% if error %}
+<div class="notification is-danger">{{ error }}</div>
+{% endif %}
+
+{% if validation_errors and validation_errors|length > 0 %}
+<div class="notification is-danger">
+  <ul>
+    {% for err in validation_errors %}
+    <li>{{ err }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+<form method="post" id="edit-form" action="{{ url_for('submissions.submission_action', submission_id=submission_id) }}">
+  {% include 'crud/_record_fields.html' %}
+  <div class="field">
+    <label class="label">Admin Notes</label>
+    <div class="control">
+      <textarea class="textarea" name="notes" rows="4">{{ review_notes }}</textarea>
+    </div>
+  </div>
+  <div class="field is-grouped" style="margin-top:16px;">
+    <div class="control">
+      <button class="button is-link" type="submit" name="action" value="save">Save Edits</button>
+    </div>
+    <div class="control">
+      <button class="button is-success" type="submit" name="action" value="approve">Approve</button>
+    </div>
+    <div class="control">
+      <button class="button is-warning" type="submit" name="action" value="needs_changes">Needs Changes</button>
+    </div>
+    <div class="control">
+      <button class="button is-danger" type="submit" name="action" value="reject" formtarget="_blank">Reject</button>
+    </div>
+  </div>
+</form>
+
+<details style="margin-top:16px;">
+  <summary>Raw Submission Response</summary>
+  <pre>{{ submission_text }}</pre>
+</details>
+{% endblock %}
+
+{% block sidebar %}
+<div class="content">
+  <p><strong>Status:</strong> {{ submission.status if submission else '' }}</p>
+  <p><strong>Submitter:</strong> {{ submission.submitter_email if submission else '' }}</p>
+  {% if submission.submitter_name %}
+  <p><strong>Name:</strong> {{ submission.submitter_name }}</p>
+  {% endif %}
+  <p><strong>Updated:</strong> {{ submission.updated_at if submission else '' }}</p>
+  {% if email_submitter_links.gmail %}
+  <p><a class="button is-link is-small" href="{{ email_submitter_links.gmail }}" target="_blank" rel="noopener">Open Gmail</a></p>
+  <p><small>{{ submission.submitter_email }}</small></p>
+  {% endif %}
+</div>
+{% endblock %}

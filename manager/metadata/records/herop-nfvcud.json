@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 23,
-    "to_fill": 26,
+    "filled": 24,
+    "to_fill": 27,
     "filled_pct": 88,
     "progress_class": "warning"
   },
@@ -13,7 +13,7 @@
     "Crime Data Explorer (CDE)"
   ],
   "description": [
-    "The CDE is an interactive tool that helps law enforcement and the public use and understand the massive amounts of crime data the FBI collects and publishes each year. The FBI\u2019s Uniform Crime Reporting (UCR) Program manages the CDE. The CDE is part of the FBI\u2019s broader effort to modernize reports of national crime data. It is a web-based solution that enables the public to view and interact with UCR Program data in an intuitive and user-friendly way. The CDE allows the public to query, view, and download data about crime (e.g. offense and arrest numbers) and law enforcement (e.g., law enforcement employee numbers, officers killed) that is submitted to the UCR Program in machine readable and open-source formats"
+    "The CDE is an interactive tool that helps law enforcement and the public use and understand the massive amounts of crime data the FBI collects and publishes each year. The FBI’s Uniform Crime Reporting (UCR) Program manages the CDE. The CDE is part of the FBI’s broader effort to modernize reports of national crime data. It is a web-based solution that enables the public to view and interact with UCR Program data in an intuitive and user-friendly way. The CDE allows the public to query, view, and download data about crime (e.g. offense and arrest numbers) and law enforcement (e.g., law enforcement employee numbers, officers killed) that is submitted to the UCR Program in machine readable and open-source formats"
   ],
   "language": [
     "eng"
@@ -129,7 +129,7 @@
     "Arrestees, Sex, by Arrest Offense Category",
     "Arrestees, Race, by Arrest Offense Category",
     "Incidents with Drugs/Narcotics Seized by Suspected Drug Type",
-    "Offenses Involving Offender\u2019s Suspected Use, Drugs/Narcotics and Alcohol, by Offense Category",
+    "Offenses Involving Offender’s Suspected Use, Drugs/Narcotics and Alcohol, by Offense Category",
     "United States, Offense Type, by Agency"
   ],
   "data_variables": [
@@ -194,10 +194,10 @@
     "Rest Area",
     "Restaurant",
     "School/College",
-    "School\u2013College/University",
-    "School\u2013Elementary/Secondary",
+    "School–College/University",
+    "School–Elementary/Secondary",
     "Service/Gas Station",
-    "Shelter\u2013Mission/Homeless",
+    "Shelter–Mission/Homeless",
     "Shopping Mall",
     "Specialty Store",
     "Tribal Lands",
@@ -244,5 +244,6 @@
   ],
   "featured_variable": [],
   "preferred_citation": "United States Department of Justice, Federal Bureau of Investigation. (2024). Crime Data Explorer. Retrieved September 10, 2025, from (https://cde.ucr.cjis.gov/LATEST/webapp/#)",
-  "data_usage_notes": "The CDE pages provide a view of estimated national and state data, reported agency-level crime statistics, and graphs of specific variables from the National Incident-Based Reporting System (NIBRS). "
+  "data_usage_notes": "The CDE pages provide a view of estimated national and state data, reported agency-level crime statistics, and graphs of specific variables from the National Incident-Based Reporting System (NIBRS). ",
+  "contrubution_source": "manager"
 }

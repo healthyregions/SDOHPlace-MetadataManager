@@ -49,7 +49,7 @@ services:
     restart: unless-stopped
     # Expose via Traefik; no direct host port
     environment:
-      - SOLR_CORE_STAGE=${SOLR_CORE_STAGE:-blacklight-core-stage}
+      - SOLR_CORE_DEV=${SOLR_CORE_DEV:-blacklight-core-dev}
       - SOLR_CORE_PROD=${SOLR_CORE_PROD:-blacklight-core-prod}
     healthcheck:
       test: ["CMD-SHELL", "bin/solr status"]
@@ -67,14 +67,14 @@ services:
       - '-c'
       - |
         # Create directories for both cores dynamically (as root)
-        mkdir -p /var/solr/data/$SOLR_CORE_STAGE/data
+        mkdir -p /var/solr/data/$SOLR_CORE_DEV/data
         mkdir -p /var/solr/data/$SOLR_CORE_PROD/data
         mkdir -p /var/solr/logs
         chown -R solr:solr /var/solr/data
         chown -R solr:solr /var/solr/logs
         
         # Copy configset files to core directories
-        cp -r /solr-configset/* /var/solr/data/$SOLR_CORE_STAGE/
+        cp -r /solr-configset/* /var/solr/data/$SOLR_CORE_DEV/
         cp -r /solr-configset/* /var/solr/data/$SOLR_CORE_PROD/
         chown -R solr:solr /var/solr/data
         
@@ -92,7 +92,7 @@ services:
           
           # Create staging core
           echo 'Creating staging core...'
-          /opt/solr/bin/solr create_core -c $SOLR_CORE_STAGE
+          /opt/solr/bin/solr create_core -c $SOLR_CORE_DEV
           
           # Create production core
           echo 'Creating production core...'
@@ -158,7 +158,7 @@ services:
         
         # Index all records to stage core
         echo 'Indexing records to stage core...'
-        su -s /bin/sh -c 'PATH=/home/herop/.local/bin:$PATH flask registry index --env stage' herop
+        su -s /bin/sh -c 'PATH=/home/herop/.local/bin:$PATH flask registry index --env dev' herop
         
         # Index all records to prod core
         echo 'Indexing records to prod core...'

@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 21,
-    "to_fill": 26,
-    "filled_pct": 80,
+    "filled": 22,
+    "to_fill": 27,
+    "filled_pct": 81,
     "progress_class": "warning"
   },
   "metadata_version": "SDOH PlaceProject",
@@ -12,7 +12,7 @@
     "Mental Health America State and County Dashboard"
   ],
   "description": [
-    "Mental Health America\u2019s State and County Dashboard is a dashboard that geographically visualizes data from over 10 million mental health screens taken by U.S. users at MHAScreening.org in 2020-2025. The interactive maps are able to identify the current need for mental health resources at a pace and scale that was not possible before."
+    "Mental Health America’s State and County Dashboard is a dashboard that geographically visualizes data from over 10 million mental health screens taken by U.S. users at MHAScreening.org in 2020-2025. The interactive maps are able to identify the current need for mental health resources at a pace and scale that was not possible before."
   ],
   "language": [
     "eng"
@@ -134,5 +134,6 @@
   "data_variables": [],
   "featured_variable": [],
   "preferred_citation": "Mental Health America. \"Mapping the Mental Health of Our Communities: Explore the Data. Create Change.\" https://mhanational.org/data-in-your-community/mha-state-county-data/. Accessed 1 October 2025.",
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 14,
-    "to_fill": 26,
-    "filled_pct": 53,
+    "filled": 15,
+    "to_fill": 27,
+    "filled_pct": 55,
     "progress_class": "danger"
   },
   "metadata_version": "SDOH PlaceProject",
@@ -89,5 +89,6 @@
   "data_variables": [],
   "featured_variable": [],
   "preferred_citation": "Naik, N., Philipoom, J., Raskar, R., & Hidalgo, C. (2014). Streetscore -Predicting the Perceived Safety of One Million Streetscapes. In MIT Media Lab. https://www.media.mit.edu/projects/streetscore/overview/",
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

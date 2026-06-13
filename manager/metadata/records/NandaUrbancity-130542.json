@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 24,
-    "to_fill": 26,
+    "filled": 25,
+    "to_fill": 27,
     "filled_pct": 92,
     "progress_class": "success"
   },
@@ -110,11 +110,11 @@
     "Total population of the tract from the Census.",
     "Population in urban areas within the tract.",
     "Population in urbanized areas (50,000+ people).",
-    " Population in urban clusters (2,500\u201349,999 people).",
+    " Population in urban clusters (2,500–49,999 people).",
     "Population in rural areas within the tract.",
     "Urban-Rural Classification Metrics",
-    "Percentage of the tract\u2019s population classified as urban.",
-    "Percentage of the tract\u2019s population classified as rural.",
+    "Percentage of the tract’s population classified as urban.",
+    "Percentage of the tract’s population classified as rural.",
     "Urbanicity",
     "Total population used for RUCA classification.",
     "Primary RUCA code for the tract, based on commuting patterns and urban-rural status.",
@@ -129,5 +129,6 @@
     "Urbanicity"
   ],
   "preferred_citation": "Miller, Stephanie, Melendez, Robert, and Chenoweth, Megan. National Neighborhood Data Archive (NaNDA): Urbanicity by Census Tract, United States, 2010. Inter-university Consortium for Political and Social Research [distributor], 2022-12-12. https://doi.org/10.3886/ICPSR38606.v1",
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

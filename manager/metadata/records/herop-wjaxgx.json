@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 21,
-    "to_fill": 26,
-    "filled_pct": 80,
+    "filled": 22,
+    "to_fill": 27,
+    "filled_pct": 81,
     "progress_class": "warning"
   },
   "metadata_version": "SDOH PlaceProject",
@@ -243,5 +243,6 @@
   ],
   "featured_variable": [],
   "preferred_citation": "New York City Department of Health and Mental Hygiene. Community Health Profiles. November 20, 2025. https://nyc.gov/health/profiles",
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

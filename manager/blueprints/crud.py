@@ -9,6 +9,7 @@ from flask import (
     url_for,
     redirect,
     current_app,
+    flash,
 )
 from flask_cors import CORS
 from flask_login import (
@@ -17,6 +18,7 @@ from flask_login import (
 )
 from werkzeug.exceptions import NotFound, Unauthorized
 
+from manager.blueprints.auth import is_admin_user
 from manager.registry import Registry, Record
 from manager.solr import Solr
 
@@ -31,14 +33,30 @@ CORS(crud)
 logger = logging.getLogger(__name__)
 
 
+@crud.route("/help", methods=["GET"])
+def help_page():
+    return render_template("help.html")
+
+
 @crud.route("/", methods=["GET"])
 def index():
     registry = Registry()
     show_hidden = True if request.args.get("show-hidden") == "true" else False
+    contribution_source = request.args.get("contribution-source", "")
     records = registry.records_as_json()
     if show_hidden is False:
         records = [r for r in records if r["suppressed"] is not True]
-    return render_template("index.html", records=records, show_hidden=show_hidden)
+    if contribution_source:
+        records = [
+            r for r in records
+            if (r.get("contrubution_source") or "manager") == contribution_source
+        ]
+    return render_template(
+        "index.html",
+        records=records,
+        show_hidden=show_hidden,
+        contribution_source=contribution_source,
+    )
 
 
 @crud.route("/table", methods=["GET"])
@@ -143,6 +161,14 @@ def handle_record(id):
             record.save()
 
             return redirect(url_for("manager.handle_record", id=record.data["id"]))
+        elif action == "delete":
+            registry = Registry()
+            record = registry.get_record(id)
+            if not record:
+                raise NotFound
+            record.file_path.unlink()
+            flash(f"Deleted record {id}. Refresh Solr Index to remove it from search.", "success")
+            return redirect(url_for("manager.index"))
         else:
             raise Unauthorized
     elif request.method == "DELETE":
@@ -152,11 +178,11 @@ def handle_record(id):
 @crud.route("/solr/<id>", methods=["POST", "DELETE"])
 @login_required
 def handle_solr(id):
-    # Get environment parameter from query string (stage or prod)
+    # Get environment parameter from query string (dev or prod)
     environment = request.args.get("env", "prod")
     
     # Check if user is admin for production indexing
-    if environment == "prod" and current_user.name != "admin":
+    if environment == "prod" and not is_admin_user():
         current_app.logger.warning(f"User {current_user.name} attempted to index to production without admin privileges")
         return f'<div class="notification is-danger">Only admin users can index to production. Please use dev instead.</div>'
     
