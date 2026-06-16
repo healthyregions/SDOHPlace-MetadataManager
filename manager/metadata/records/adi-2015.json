@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 10,
-    "to_fill": 26,
-    "filled_pct": 38,
+    "filled": 11,
+    "to_fill": 27,
+    "filled_pct": 40,
     "progress_class": "danger"
   },
   "title": "Area Deprivation Index (ADI) 2015",
@@ -68,5 +68,6 @@
   "data_variables": [],
   "featured_variable": [],
   "preferred_citation": null,
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

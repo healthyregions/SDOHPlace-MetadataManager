@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block page_title %}Contributors{% endblock %}
+
+{% block main_content %}
+{% set active_status = 'contributors' %}
+{% include 'submissions/_nav.html' %}
+
+{% if error %}
+<div class="notification is-danger">{{ error }}</div>
+{% endif %}
+
+{% for contributor in contributors %}
+<details class="box contributor-card">
+  <summary class="contributor-summary">
+    <span class="contributor-heading">
+      <strong>{{ contributor.name or contributor.email or 'Unknown contributor' }}</strong>
+      {% if contributor.email %}
+      <span class="has-text-grey">{{ contributor.email }}</span>
+      {% endif %}
+    </span>
+    <span class="tags contributor-tags">
+      <span class="tag">{{ contributor.submission_count }} submission{% if contributor.submission_count != 1 %}s{% endif %}</span>
+      {% if contributor.statuses %}
+      <span class="tag is-light">{{ contributor.statuses }}</span>
+      {% endif %}
+    </span>
+  </summary>
+
+  <div class="columns is-variable is-5 contributor-content">
+    <div class="column is-5">
+      <div class="content">
+        <p><strong>Username:</strong> {{ contributor.username or '—' }}</p>
+        <p><strong>User ID:</strong> {{ contributor.user_id or '—' }}</p>
+        <p><strong>Latest Update:</strong> {{ contributor.latest_update or '—' }}</p>
+      </div>
+
+      <form method="post" action="{{ url_for('submissions.update_contributor') }}" class="contributor-update-form">
+        <input type="hidden" name="original_email" value="{{ contributor.email }}">
+        <input type="hidden" name="original_name" value="{{ contributor.name }}">
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input class="input" type="text" name="submitter_name" value="{{ contributor.name }}" placeholder="Name">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input class="input" type="email" name="submitter_email" value="{{ contributor.email }}" placeholder="Email">
+          </div>
+        </div>
+        <button class="button is-link" type="submit">Update Contributor</button>
+      </form>
+    </div>
+
+    <div class="column">
+      <h2 class="subtitle is-5">Submissions</h2>
+      <div class="table-container">
+        <table class="table is-fullwidth contributor-submissions-table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Status</th>
+              <th>Updated</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for submission in contributor.submissions %}
+            <tr>
+              <td>
+                <div>{{ submission.title }}</div>
+                <small class="has-text-grey">{{ submission.id }}</small>
+              </td>
+              <td>{{ submission.status }}</td>
+              <td>{{ submission.updated_at }}</td>
+              <td>
+                <div class="buttons are-small">
+                  {% if submission.status == 'approved' and submission.has_record %}
+                  <a class="button" href="{{ url_for('manager.handle_record', id=submission.record_id) }}">View Record</a>
+                  {% endif %}
+                  <a class="button is-link" href="{{ url_for('submissions.view_submission', submission_id=submission.id) }}">Review</a>
+                </div>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</details>
+{% endfor %}
+
+{% if contributors|length == 0 and not error %}
+<div class="notification is-warning">No contributor information found.</div>
+{% endif %}
+{% endblock %}

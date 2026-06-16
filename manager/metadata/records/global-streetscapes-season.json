@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 20,
-    "to_fill": 26,
-    "filled_pct": 76,
+    "filled": 21,
+    "to_fill": 27,
+    "filled_pct": 77,
     "progress_class": "warning"
   },
   "title": "Global Streetscapes (Season)",
@@ -107,5 +107,6 @@
   ],
   "featured_variable": [],
   "preferred_citation": null,
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

@@ -15,11 +15,24 @@
 {% endblock %}
 
 {% block main_content %}
+<div class="field has-addons" style="margin-bottom: 16px;">
+    <p class="control">
+        <a class="button {% if not contribution_source %}is-link{% endif %}" href="/{% if show_hidden %}?show-hidden=true{% endif %}">All Sources</a>
+    </p>
+    <p class="control">
+        <a class="button {% if contribution_source == 'manager' %}is-link{% endif %}" href="/?contribution-source=manager{% if show_hidden %}&show-hidden=true{% endif %}">Manager</a>
+    </p>
+    <p class="control">
+        <a class="button {% if contribution_source == 'contributor' %}is-link{% endif %}" href="/?contribution-source=contributor{% if show_hidden %}&show-hidden=true{% endif %}">Contributor</a>
+    </p>
+</div>
+
 <table class="table table-striped is-fullwidth home-table">
     <thead>
         <tr>
             <td>Title</td>
             <td style="white-space:nowrap;">Created by</td>
+            <td style="white-space:nowrap;">Contribution Source</td>
             <td>Completeness</td>
             <td>
                 {% if show_hidden %}
@@ -42,6 +55,11 @@
             <td>
                 <div class="row-item">
                     <span style="font-size:.8em; white-space:nowrap;">{{record['_meta']['created_by']}}</span>
+                </div>
+            </td>
+            <td>
+                <div class="row-item">
+                    <span class="tag">{{ record.get('contrubution_source', 'manager') }}</span>
                 </div>
             </td>
             <td>

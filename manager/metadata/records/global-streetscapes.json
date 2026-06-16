@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 24,
-    "to_fill": 26,
+    "filled": 25,
+    "to_fill": 27,
     "filled_pct": 92,
     "progress_class": "success"
   },
@@ -133,7 +133,7 @@
     "Vertical field of view",
     "Sequence ID",
     "Index in sequence",
-    "K\u00f6ppen climate zone: climate classification is integrated with the images based on their geospatial coordinates and temporal attributes",
+    "Köppen climate zone: climate classification is integrated with the images based on their geospatial coordinates and temporal attributes",
     "Context: eight contextual attributes about conditions under which images were captured inferred for each image",
     "Ephem: how long an image was taken before or after sunrise or sunset, calculated using the python package 'PyEphem'",
     "GADM: Administrative area associated with each image derived from the Database of Global Administrative Areas (GADM)",
@@ -149,8 +149,9 @@
     "Metadata"
   ],
   "featured_variable": [
-    "Street Greenery Coverage, K\u00f6ppen climate zone, Context, Street Segment, Place, Perception"
+    "Street Greenery Coverage, Köppen climate zone, Context, Street Segment, Place, Perception"
   ],
-  "preferred_citation": "Hou Y, Quintana M, Khomiakov M, Yap W, Ouyang J, Ito K, Wang Z, Zhao T, Biljecki F (2024): Global Streetscapes \u2014 A comprehensive dataset of 10 million street-level images across 688 cities for urban science and analytics. ISPRS Journal of Photogrammetry and Remote Sensing 215: 216-238. doi:10.1016/j.isprsjprs.2024.06.023",
-  "data_usage_notes": " Data is stored in multiple CSVs connected via unique ID corresponding to a specific image taken at a specific location, and is made publicly available via Github and Hugging Face. The CSV format makes the dataset suitable for statistical analysis, machine learning, and integration with GIS software. However, it does not store images directly. Users must reference the dataset\u2019s metadata to access the corresponding street-level images."
+  "preferred_citation": "Hou Y, Quintana M, Khomiakov M, Yap W, Ouyang J, Ito K, Wang Z, Zhao T, Biljecki F (2024): Global Streetscapes — A comprehensive dataset of 10 million street-level images across 688 cities for urban science and analytics. ISPRS Journal of Photogrammetry and Remote Sensing 215: 216-238. doi:10.1016/j.isprsjprs.2024.06.023",
+  "data_usage_notes": " Data is stored in multiple CSVs connected via unique ID corresponding to a specific image taken at a specific location, and is made publicly available via Github and Hugging Face. The CSV format makes the dataset suitable for statistical analysis, machine learning, and integration with GIS software. However, it does not store images directly. Users must reference the dataset’s metadata to access the corresponding street-level images.",
+  "contrubution_source": "manager"
 }

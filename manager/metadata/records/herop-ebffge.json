@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 21,
-    "to_fill": 26,
-    "filled_pct": 80,
+    "filled": 22,
+    "to_fill": 27,
+    "filled_pct": 81,
     "progress_class": "warning"
   },
   "metadata_version": "SDOH PlaceProject",
@@ -138,5 +138,6 @@
   ],
   "featured_variable": [],
   "preferred_citation": "Education Demographic and Geographic Estimates. (n.d.). School district boundaries. Geographic. https://nces.ed.gov/programs/edge/Geographic/DistrictBoundaries ",
-  "data_usage_notes": "Files represent the 2023-2024 school year and apply to the 2020-2024 ACS Period.\r\nPseudo-school districts represent service areas that address situations where a school district may have financial responsibility for a different grade span in a different part of the district.\r\nA list of pseudo-school districts is found in the TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation (census.gov).\r\nNew York City, Hawaii, and Puerto Rico are reported as single school districts.\r\nVermont reported boundaries for Unified, Elementary, Secondary, and Supervisory districts."
+  "data_usage_notes": "Files represent the 2023-2024 school year and apply to the 2020-2024 ACS Period.\r\nPseudo-school districts represent service areas that address situations where a school district may have financial responsibility for a different grade span in a different part of the district.\r\nA list of pseudo-school districts is found in the TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation (census.gov).\r\nNew York City, Hawaii, and Puerto Rico are reported as single school districts.\r\nVermont reported boundaries for Unified, Elementary, Secondary, and Supervisory districts.",
+  "contrubution_source": "manager"
 }

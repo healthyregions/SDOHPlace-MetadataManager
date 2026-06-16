@@ -1,5 +1,7 @@
 import json
 import logging
+import os
+import shutil
 from json import JSONDecodeError
 from pathlib import Path
 from datetime import datetime
@@ -57,9 +59,11 @@ class Schema:
 
     def get_blank_form(self):
         form = self.get_blank_record()
-        for k in form.keys():
+        for k, field in self.lookup.items():
             if k == "id":
                 form[k] = generate_id()
+            elif hasattr(field, "default"):
+                form[k] = field.get_default()
             else:
                 form[k] = ""
         return form
@@ -258,15 +262,36 @@ class Record:
     def update_from_form_data(self, form_data):
         self.data = self.schema.make_record_data_from_form_data(form_data)
 
-    def save(self, index=False):
+    def save(self, index=False, history=False, history_event=None):
 
         self.data["modified"] = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
 
         if not self.file_path:
             self.file_path = Path(METADATA_DIR, "records", self.data["id"] + ".json")
 
+        if history:
+            history_root = os.getenv("RECORDS_HISTORY_DIR", "")
+            if history_root:
+                history_base = Path(history_root)
+            else:
+                history_base = Path(METADATA_DIR, "records-history")
+            record_history_dir = Path(history_base, self.data["id"])
+            record_history_dir.mkdir(parents=True, exist_ok=True)
+            if self.file_path.exists():
+                snapshot_name = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ") + ".json"
+                shutil.copy2(self.file_path, Path(record_history_dir, snapshot_name))
+
         with open(self.file_path, "w") as o:
             json.dump(self.to_json(), o, indent=2)
+
+        if history:
+            event_path = Path(record_history_dir, "events.jsonl")
+            event_data = history_event.copy() if history_event else {}
+            event_data["record_id"] = self.data["id"]
+            event_data["modified"] = self.data["modified"]
+            event_data["timestamp"] = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+            with open(event_path, "a") as o:
+                o.write(json.dumps(event_data) + "\n")
 
         if index:
             self.index()
@@ -278,6 +303,9 @@ class Field:
             self.__setattr__(k, v)
 
     def get_default(self):
+
+        if hasattr(self, "default"):
+            return self.default
 
         default = None
         if self.multiple:
@@ -292,6 +320,8 @@ class Field:
         value = form.get(self.id)
         if value == "":
             value = None
+        if value is None and hasattr(self, "default"):
+            value = self.default
 
         if self.widget == "ordered-multi-select.html":
             value = value.split("|") if value else None

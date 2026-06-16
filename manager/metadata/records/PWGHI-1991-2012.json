@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 24,
-    "to_fill": 26,
+    "filled": 25,
+    "to_fill": 27,
     "filled_pct": 92,
     "progress_class": "success"
   },
@@ -116,5 +116,6 @@
     "County-level population weighted daily global horizontal irradiance in wh/m2 (GHI)"
   ],
   "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. Web. Accessed: insert date. www.cdc.gov/ephtracking.",
-  "data_usage_notes": "Null values or \"NA\" in the dataset appear as missing values; these refer to no valid data and are caused by invalid retrievals from NSRDB or SolarAnywhere. Authors suggest to treat NAs as missing. Detailed methods are available in the documentation."
+  "data_usage_notes": "Null values or \"NA\" in the dataset appear as missing values; these refer to no valid data and are caused by invalid retrievals from NSRDB or SolarAnywhere. Authors suggest to treat NAs as missing. Detailed methods are available in the documentation.",
+  "contrubution_source": "manager"
 }

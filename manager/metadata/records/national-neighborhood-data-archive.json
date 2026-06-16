@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 20,
-    "to_fill": 26,
-    "filled_pct": 76,
+    "filled": 21,
+    "to_fill": 27,
+    "filled_pct": 77,
     "progress_class": "warning"
   },
   "metadata_version": "SDOH PlaceProject",
@@ -105,5 +105,6 @@
   "data_variables": [],
   "featured_variable": [],
   "preferred_citation": "Clarke, P., Noppert, G., Melendez, R., Sinkewic, M., Gomez-Lopez, I., Pienta, A., & Chenoweth, M. (2019). National Neighborhood Data Archive. NANDA. https://nanda.isr.umich.edu/data/",
-  "data_usage_notes": "The National Neighborhood Data Archive (NaNDA) provides datasets at various spatial scales, including census tract, block group, and ZIP code level. These datasets cover topics such as demographics, healthcare, crime, education, food access, housing, and more.The NANDA datasets encompass 4,333 variables.\r\n\r\n"
+  "data_usage_notes": "The National Neighborhood Data Archive (NaNDA) provides datasets at various spatial scales, including census tract, block group, and ZIP code level. These datasets cover topics such as demographics, healthcare, crime, education, food access, housing, and more.The NANDA datasets encompass 4,333 variables.\r\n\r\n",
+  "contrubution_source": "manager"
 }

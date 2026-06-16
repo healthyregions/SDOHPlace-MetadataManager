@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 24,
-    "to_fill": 26,
+    "filled": 25,
+    "to_fill": 27,
     "filled_pct": 92,
     "progress_class": "success"
   },
@@ -12,7 +12,7 @@
     "ParkServe 10-minute walk service areas (10MWSA)"
   ],
   "description": [
-    "This is a dataset from the ParkServe national park database, covering over 15,000 cities and towns across the United States. Park accessibility is analyzed by calculating ten-minute walk service areas for each park in its database by generating a half-mile \u2018walkable\u2019 service area from each park\u2019s designated public access points. Utilizing ESRI's Proprietary StreetMap Premium Network dataset, the analysis accounts for physical barriers such as highways, train tracks, and rivers without bridges, ensuring a more accurate representation of pedestrian access."
+    "This is a dataset from the ParkServe national park database, covering over 15,000 cities and towns across the United States. Park accessibility is analyzed by calculating ten-minute walk service areas for each park in its database by generating a half-mile ‘walkable’ service area from each park’s designated public access points. Utilizing ESRI's Proprietary StreetMap Premium Network dataset, the analysis accounts for physical barriers such as highways, train tracks, and rivers without bridges, ensuring a more accurate representation of pedestrian access."
   ],
   "language": [
     "eng"
@@ -75,7 +75,7 @@
   "replaces": [],
   "is_replaced_by": [],
   "rights": [
-    "\"\u00a9 2024 The Trust for Public Land, 101 Montgomery Street, Suite 900, San Francisco, California 94104 U.S.A. All rights reserved. Other parties may hold or claim proprietary, trademark, service mark and copyright interests in material on or delivered from this website. Materials on this website may not be copied, reproduced, modified, published, uploaded, posted, transmitted, or distributed in any way, without the prior written consent of The Trust for Public Land and/or the party holding rights to such material. Notwithstanding the previous sentence, you may download one copy of the information on this website for personal, non-commercial use. If you download, you may not modify the materials, use them for a commercial purpose or for public display, remove any copyright or trademark information, transfer the materials to another person, or allow unauthorized copying of the materials.\""
+    "\"© 2024 The Trust for Public Land, 101 Montgomery Street, Suite 900, San Francisco, California 94104 U.S.A. All rights reserved. Other parties may hold or claim proprietary, trademark, service mark and copyright interests in material on or delivered from this website. Materials on this website may not be copied, reproduced, modified, published, uploaded, posted, transmitted, or distributed in any way, without the prior written consent of The Trust for Public Land and/or the party holding rights to such material. Notwithstanding the previous sentence, you may download one copy of the information on this website for personal, non-commercial use. If you download, you may not modify the materials, use them for a commercial purpose or for public display, remove any copyright or trademark information, transfer the materials to another person, or allow unauthorized copying of the materials.\""
   ],
   "rights_holder": [
     "Trust for Public Land"
@@ -110,7 +110,7 @@
     "Block-level per capita income estimates"
   ],
   "data_variables": [
-    "A half-mile \u2018walkable\u2019 service area from each of the park\u2019s public access points",
+    "A half-mile ‘walkable’ service area from each of the park’s public access points",
     "Race/ethnicity estimates of intersecting blocks for each service area",
     "Average age estimates of intersecting blocks for each service area",
     "Average income estimate of intersecting blocks for each service area"
@@ -119,5 +119,6 @@
     "10-min walk to nearest park"
   ],
   "preferred_citation": "ParkServe. (2023, May 24). Trust for Public Land. https://www.tpl.org/parkserve",
-  "data_usage_notes": "The ParkServe dataset is designed for spatial analysis and GIS applications to evaluate urban park accessibility. While it provides geospatial files (e.g., shapefiles, GeoJSON, and other GIS-compatible formats), it may not include detailed attribute data such as park addresses, ownership details, or facility descriptions. Users should integrate it with additional datasets if such information is needed for analysis.\r\n\r\n\r\n\r\n"
+  "data_usage_notes": "The ParkServe dataset is designed for spatial analysis and GIS applications to evaluate urban park accessibility. While it provides geospatial files (e.g., shapefiles, GeoJSON, and other GIS-compatible formats), it may not include detailed attribute data such as park addresses, ownership details, or facility descriptions. Users should integrate it with additional datasets if such information is needed for analysis.\r\n\r\n\r\n\r\n",
+  "contrubution_source": "manager"
 }

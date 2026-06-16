@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 25,
-    "to_fill": 26,
+    "filled": 26,
+    "to_fill": 27,
     "filled_pct": 96,
     "progress_class": "success"
   },
@@ -138,5 +138,6 @@
     "Palmer Drought Severity Index (PDSI)"
   ],
   "preferred_citation": "Centers for Disease Control and Prevention. National Environmental Public Health Tracking Network. (n.d.) Web. Accessed: 02/19/2025. www.cdc.gov/ephtracking.",
-  "data_usage_notes": "Data were downloaded from the National Oceanic and Atmospheric Administration (NOAA) server and were originally provided as monthly values for a climate division (typically 5-10 divisions per state). Distance weighting functions were applied to constrain the drought values to a specific US county."
+  "data_usage_notes": "Data were downloaded from the National Oceanic and Atmospheric Administration (NOAA) server and were originally provided as monthly values for a climate division (typically 5-10 divisions per state). Distance weighting functions were applied to constrain the drought values to a specific US county.",
+  "contrubution_source": "manager"
 }

@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 19,
-    "to_fill": 26,
-    "filled_pct": 73,
+    "filled": 20,
+    "to_fill": 27,
+    "filled_pct": 74,
     "progress_class": "danger"
   },
   "title": "National Emissions Inventory (NEI) 1997",
@@ -91,5 +91,6 @@
   "data_variables": [],
   "featured_variable": [],
   "preferred_citation": null,
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

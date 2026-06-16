@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 23,
-    "to_fill": 26,
+    "filled": 24,
+    "to_fill": 27,
     "filled_pct": 88,
     "progress_class": "warning"
   },
@@ -128,5 +128,6 @@
     "Emissions"
   ],
   "preferred_citation": "US EPA (2015). National emissions inventory (NEI). https://www.epa.gov/air-emissions-inventories/national-emissions-inventory-nei",
-  "data_usage_notes": "The raw data and summaries that are still available (dating back to 1990) can be obtained from the web page https://www.epa.gov/air-emissions-inventories/pollutant-emissions-summary-files-earlier-neis.  Starting with 2001 data, a more limited selection of summary files are available."
+  "data_usage_notes": "The raw data and summaries that are still available (dating back to 1990) can be obtained from the web page https://www.epa.gov/air-emissions-inventories/pollutant-emissions-summary-files-earlier-neis.  Starting with 2001 data, a more limited selection of summary files are available.",
+  "contrubution_source": "manager"
 }

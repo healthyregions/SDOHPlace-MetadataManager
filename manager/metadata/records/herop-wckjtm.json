@@ -1,16 +1,16 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 21,
-    "to_fill": 26,
-    "filled_pct": 80,
+    "filled": 22,
+    "to_fill": 27,
+    "filled_pct": 81,
     "progress_class": "warning"
   },
   "metadata_version": "SDOH PlaceProject",
   "title": "Food Environment Atlas",
   "alternative_title": [],
   "description": [
-    "Food environment factors\u2014such as store/restaurant proximity, food prices, food and nutrition assistance programs, and community characteristics\u2014interact to influence food choices and diet quality. Research has been documenting the complexity of these interactions, but more research is needed to identify causal relationships and effective policy interventions. The objectives of the Food Environment Atlas are to assemble statistics on food environment indicators to stimulate research on the determinants of food choices and diet quality and to provide a spatial overview of a community's ability to access healthy food and its success in doing so."
+    "Food environment factors—such as store/restaurant proximity, food prices, food and nutrition assistance programs, and community characteristics—interact to influence food choices and diet quality. Research has been documenting the complexity of these interactions, but more research is needed to identify causal relationships and effective policy interventions. The objectives of the Food Environment Atlas are to assemble statistics on food environment indicators to stimulate research on the determinants of food choices and diet quality and to provide a spatial overview of a community's ability to access healthy food and its success in doing so."
   ],
   "language": [],
   "display_note": [
@@ -397,5 +397,6 @@
   ],
   "featured_variable": [],
   "preferred_citation": "Economic Research Service (ERS), U.S. Department of Agriculture (USDA). Food Environment Atlas. https://www.ers.usda.gov/data-products/food-environment-atlas/",
-  "data_usage_notes": "The USDA's Food Environment Atlas and Food Access Research Atlas provide comprehensive data on food access, health, and well-being, enabling users to create maps, analyze trends, and identify regions with food access challenges. Users can create maps to visualize how indicators like access to grocery stores and the number of farmers' markets vary across the country. They can also view county-level indicators, zoom in on specific areas, and export or print maps. The data is available for download in Excel format, and the advanced query tool allows users to identify and map counties with similar indicators, making it easier to explore and understand food access patterns."
+  "data_usage_notes": "The USDA's Food Environment Atlas and Food Access Research Atlas provide comprehensive data on food access, health, and well-being, enabling users to create maps, analyze trends, and identify regions with food access challenges. Users can create maps to visualize how indicators like access to grocery stores and the number of farmers' markets vary across the country. They can also view county-level indicators, zoom in on specific areas, and export or print maps. The data is available for download in Excel format, and the advanced query tool allows users to identify and map counties with similar indicators, making it easier to explore and understand food access patterns.",
+  "contrubution_source": "manager"
 }

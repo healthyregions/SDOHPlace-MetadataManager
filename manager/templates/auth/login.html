@@ -11,6 +11,10 @@
             </div>
         {% endif %}
         {% endwith %}
+        {% if keycloak_configured %}
+        <a class="button is-primary is-large is-fullwidth" href="{{ url_for('auth.login') }}">Login with Keycloak</a>
+        <hr>
+        {% endif %}
         <form method="POST" action="/login">
             <div class="field">
                 <div class="control">

@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 21,
-    "to_fill": 26,
-    "filled_pct": 80,
+    "filled": 22,
+    "to_fill": 27,
+    "filled_pct": 81,
     "progress_class": "warning"
   },
   "metadata_version": "SDOH PlaceProject",
@@ -109,5 +109,6 @@
   ],
   "featured_variable": [],
   "preferred_citation": "Ahn, Yoonjung, 2025, \"Census Tract-Level Summary of Air Conditioning Prevalence\", https://doi.org/10.7910/DVN/7GLPD7, Harvard Dataverse, V1 ",
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }
