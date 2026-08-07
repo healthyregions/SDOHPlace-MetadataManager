@@ -2,7 +2,15 @@ import json
 import os
 from pathlib import Path
 from urllib.parse import quote, urlencode
-from flask import Blueprint, flash, redirect, render_template, request, url_for
+from flask import (
+    Blueprint,
+    current_app,
+    flash,
+    redirect,
+    render_template,
+    request,
+    url_for,
+)
 from flask_login import current_user, login_required
 from manager.blueprints.auth import is_admin_user
 from manager.intake_client import IntakeApiError, IntakeClient
@@ -397,6 +405,14 @@ def add_approved_records():
                 record_id=record_id,
                 payload_json=json.dumps(record.to_json()),
             )
+            try:
+                client.mark_published(submission_id, record_id=record_id)
+            except IntakeApiError as exc:
+                current_app.logger.warning(
+                    "Could not mark submission %s as published: %s",
+                    submission_id,
+                    exc,
+                )
             created += 1
     except IntakeApiError as exc:
         flash(f"Intake API error: {exc}", "danger")

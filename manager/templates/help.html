@@ -70,34 +70,38 @@
 <section id="switch-manager" class="block" style="margin-bottom:2rem;">
     <h2 class="subtitle">Switch this Metadata Manager between dev and prod</h2>
     <p>
-        The Metadata Manager's active core is controlled by the <code>MODE</code> variable in its
-        <code>.env</code> file on the EC2 server. Changing it requires SSH access.
+        The server runs gunicorn directly inside a Python virtualenv — there is no Docker on this host.
+        The active core is controlled by <code>MODE</code> in the <code>.env</code> file.
+        Switching takes about 5 seconds and requires SSH access.
     </p>
 
-    <p style="margin-top:1rem;"><strong>To switch to dev:</strong></p>
+    <p style="margin-top:1rem;"><strong>To switch to dev core:</strong></p>
     <pre style="background:#f5f5f5; padding:1rem; border-radius:4px; overflow-x:auto;">ssh ubuntu@&lt;ec2-host&gt;
-cd /path/to/SDOHPlace-MetadataManager
-# Edit .env and set:
-#   MODE=dev
-nano .env
+cd /opt/metadata-manager/prod          # or wherever the repo lives
+nano .env                              # set MODE=dev, save and exit
 ./scripts/restart_flask.sh</pre>
 
-    <p style="margin-top:1rem;"><strong>To switch back to prod:</strong></p>
-    <pre style="background:#f5f5f5; padding:1rem; border-radius:4px; overflow-x:auto;">nano .env
-# Change MODE=dev  →  MODE=prod
+    <p style="margin-top:1rem;"><strong>To switch back to prod core:</strong></p>
+    <pre style="background:#f5f5f5; padding:1rem; border-radius:4px; overflow-x:auto;">nano .env                              # set MODE=prod, save and exit
 ./scripts/restart_flask.sh</pre>
 
     <p style="margin-top:.75rem;">
-        After restarting, reload this page — the navbar badge will update to reflect the new active core.
+        Reload this page after the restart — the navbar badge updates immediately to show the active core.
     </p>
 
+    <p style="margin-top:1rem;"><strong>To deploy updated code from git:</strong></p>
+    <pre style="background:#f5f5f5; padding:1rem; border-radius:4px; overflow-x:auto;">git pull
+source env/bin/activate               # activate the virtualenv
+pip install -e .                      # only needed if dependencies changed
+./scripts/restart_flask.sh</pre>
+
     <div class="notification is-info is-light" style="margin-top:1rem;">
-        <strong>No DNS or domain change needed.</strong> Both dev and prod modes use the same
-        <code>metadata.sdohplace.org</code> URL. Only the Solr core being written to changes.
+        <strong>No DNS or domain change needed.</strong> Both dev and prod modes serve from the same
+        URL. Only the Solr core that indexing buttons write to changes.
     </div>
     <div class="notification is-warning is-light" style="margin-top:.75rem;">
         <strong>When MODE=prod</strong>, the "Index — Prod" button is restricted to admin users only.
-        Non-admin users can still index to the dev core at any time via "Index — Dev".
+        All logged-in users can always index to the dev core via "Index — Dev".
     </div>
 </section>
 
