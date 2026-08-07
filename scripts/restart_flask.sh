@@ -3,8 +3,8 @@
 THIS_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
 echo "stopping..."
-source $THIS_DIR/stop_flask.sh
-sleep 1
+bash $THIS_DIR/stop_flask.sh
+sleep 2
 echo "starting..."
-source $THIS_DIR/start_flask.sh
+bash $THIS_DIR/start_flask.sh
 echo "done."

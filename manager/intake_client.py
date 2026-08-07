@@ -103,3 +103,13 @@ class IntakeClient:
             f"/submissions/{submission_id}/decision",
             json_payload=body,
         )
+
+    def mark_published(self, submission_id, record_id=None):
+        body = {}
+        if record_id:
+            body["record_id"] = record_id
+        return self._request(
+            "POST",
+            f"/submissions/{submission_id}/published",
+            json_payload=body,
+        )
