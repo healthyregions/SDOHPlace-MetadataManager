@@ -1,7 +1,5 @@
 import json
-import os
 from pathlib import Path
-from urllib.parse import quote, urlencode
 from flask import (
     Blueprint,
     current_app,
@@ -184,67 +182,6 @@ def _payload_title(payload, fallback):
         title = title[0] if title else ""
     return title or fallback
 
-def _frontend_submission_url(submission_id):
-    base_url = os.getenv("DISCOVERY_APP_URL", "").rstrip("/")
-    if not base_url or not submission_id:
-        return ""
-    return f"{base_url}/contribute/submissions/?id={quote(str(submission_id), safe='')}"
-
-def _render_email_template(template_name, **context):
-    text = render_template(f"email/{template_name}.txt", **context).strip()
-    lines = text.splitlines()
-    if lines and lines[0].startswith("Subject:"):
-        subject = lines[0].replace("Subject:", "", 1).strip()
-        body = "\n".join(lines[1:]).lstrip()
-        return subject, body
-    return "", text
-
-def _gmail_compose_url(email, subject, body):
-    return (
-        "https://mail.google.com/mail/?"
-        + urlencode(
-            {
-                "view": "cm",
-                "fs": "1",
-                "to": email,
-                "su": subject,
-                "body": body,
-            }
-        )
-    )
-
-def _email_template_name(status):
-    if status == "needs_changes":
-        return "submission_needs_changes"
-    if status == "rejected":
-        return "submission_rejected"
-    if status == "approved":
-        return "submission_approved"
-    return ""
-
-def _email_submitter_links(submission, payload, notes):
-    email = _submitter_email(submission)
-    if not email:
-        return {}
-    submission_id = submission.get("id") or submission.get("submission_id")
-    template_name = _email_template_name(submission.get("status"))
-    if not template_name:
-        return {}
-    title = _payload_title(
-        payload,
-        str(submission_id or "submission"),
-    )
-    subject, body = _render_email_template(
-        template_name,
-        title=title,
-        notes=notes,
-        submission_url=_frontend_submission_url(submission_id),
-        contact_email=os.getenv("CONTACT_EMAIL", ""),
-    )
-    return {
-        "gmail": _gmail_compose_url(email, subject, body),
-    }
-
 def _render_submission_detail(
     submission,
     submission_id,
@@ -260,9 +197,6 @@ def _render_submission_detail(
         review_notes = submission.get("review_notes", "")
     else:
         review_notes = ""
-    email_submitter_links = {}
-    if submission:
-        email_submitter_links = _email_submitter_links(submission, payload, review_notes)
     return render_template(
         "submissions/detail.html",
         submission=submission,
@@ -271,7 +205,6 @@ def _render_submission_detail(
         error=error,
         validation_errors=validation_errors or [],
         review_notes=review_notes,
-        email_submitter_links=email_submitter_links,
         **_record_form_context(payload),
     )
 
@@ -556,18 +489,11 @@ def submission_action(submission_id):
             )
             if action == "needs_changes":
                 flash(
-                    "Submission marked as needs_changes. Use Email Submitter to send the admin notes.",
+                    "Submission marked as needs_changes. The contributor has been notified by email.",
                     "success",
                 )
                 return redirect(url_for("submissions.view_submission", submission_id=submission_id))
-            email_links = _email_submitter_links(
-                decided_submission,
-                payload,
-                notes,
-            )
-            if email_links.get("gmail"):
-                return redirect(email_links["gmail"])
-            flash(f"Submission marked as {action}", "success")
+            flash(f"Submission marked as {action}. The contributor has been notified by email.", "success")
             return redirect(url_for("submissions.list_submissions"))
         flash("Unknown action", "danger")
         return redirect(url_for("submissions.view_submission", submission_id=submission_id))
