@@ -472,6 +472,18 @@ def submission_action(submission_id):
             flash("Submission approved. Add it from the Approved tab when ready.", "success")
             return redirect(url_for("submissions.list_submissions", status="approved"))
 
+        if action == "needs_changes" and not notes:
+            flash(
+                "Please add Admin Notes explaining what needs to change. The contributor receives these notes by email.",
+                "danger",
+            )
+            return _render_submission_detail(
+                submission={"id": submission_id, "status": "submitted"},
+                submission_id=submission_id,
+                payload=payload,
+                notes=notes,
+            )
+
         if action in ["needs_changes", "reject"]:
             decided_submission = client.decide_submission(
                 submission_id=submission_id,
