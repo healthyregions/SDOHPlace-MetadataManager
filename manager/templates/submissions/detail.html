@@ -59,9 +59,5 @@
   <p><strong>Name:</strong> {{ submission.submitter_name }}</p>
   {% endif %}
   <p><strong>Updated:</strong> {{ submission.updated_at if submission else '' }}</p>
-  {% if email_submitter_links.gmail %}
-  <p><a class="button is-link is-small" href="{{ email_submitter_links.gmail }}" target="_blank" rel="noopener">Open Gmail</a></p>
-  <p><small>{{ submission.submitter_email }}</small></p>
-  {% endif %}
 </div>
 {% endblock %}
