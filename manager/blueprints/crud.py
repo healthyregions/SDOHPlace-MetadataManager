@@ -19,12 +19,28 @@ from flask_login import (
 from werkzeug.exceptions import NotFound, Unauthorized
 
 from manager.blueprints.auth import is_admin_user
+from manager.intake_client import IntakeApiError, IntakeClient
 from manager.registry import Registry, Record
 from manager.solr import Solr
 
 load_dotenv()
 
 crud = Blueprint("manager", __name__)
+
+def _notify_record_deleted(record_id, submission_id=None):
+    try:
+        client = IntakeClient()
+        if not submission_id:
+            submission = client.find_submission_by_record_id(record_id)
+            if not submission:
+                return
+            submission_id = submission.get("id") or submission.get("submission_id")
+        if submission_id:
+            client.mark_record_deleted(submission_id)
+    except IntakeApiError as exc:
+        current_app.logger.warning(
+            "Could not notify submitter about deleted record %s: %s", record_id, exc
+        )
 
 registry = Registry()
 
@@ -166,7 +182,9 @@ def handle_record(id):
             record = registry.get_record(id)
             if not record:
                 raise NotFound
+            submission_id = (record.meta or {}).get("submission_id")
             record.file_path.unlink()
+            _notify_record_deleted(id, submission_id)
             flash(f"Deleted record {id}. Refresh Solr Index to remove it from search.", "success")
             return redirect(url_for("manager.index"))
         else:
