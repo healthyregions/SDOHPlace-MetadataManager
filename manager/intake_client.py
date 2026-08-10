@@ -72,9 +72,12 @@ class IntakeClient:
             body["submitter_name"] = submitter_name
         return self._request("PATCH", f"/submissions/{submission_id}", json_payload=body)
 
-    def delete_submission(self, submission_id):
+    def delete_submission(self, submission_id, actor="admin", reviewer=None):
+        params = {"actor": actor}
+        if reviewer:
+            params["reviewer"] = reviewer
         try:
-            self._request("DELETE", f"/submissions/{submission_id}")
+            self._request("DELETE", f"/submissions/{submission_id}", params=params)
             return {"deleted": True, "soft_deleted": False}
         except IntakeApiError as exc:
             if "405" not in str(exc):
@@ -113,3 +116,28 @@ class IntakeClient:
             f"/submissions/{submission_id}/published",
             json_payload=body,
         )
+
+    def mark_record_deleted(self, submission_id):
+        return self._request(
+            "POST",
+            f"/submissions/{submission_id}/record-deleted",
+        )
+
+    def find_submission_by_record_id(self, record_id):
+        if not record_id:
+            return None
+        payload = self.list_submissions()
+        items = payload if isinstance(payload, list) else []
+        if isinstance(payload, dict):
+            for key in ["items", "results", "submissions", "data"]:
+                value = payload.get(key)
+                if isinstance(value, list):
+                    items = value
+                    break
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            candidate = item.get("record_id") or (item.get("payload_json") or {}).get("id")
+            if candidate and str(candidate) == str(record_id):
+                return item
+        return None

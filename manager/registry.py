@@ -181,6 +181,7 @@ class Record:
         self.file_path = None
         self.schema = schema
         self.data = {}
+        self.meta = {}
 
     def load_from_file(self, file_path):
         self.file_path = file_path
@@ -217,15 +218,18 @@ class Record:
         else:
             css_color = "danger"
 
-        data = {
-            "_meta": {
-                "schema": self.schema.schema_json["id"],
-                "filled": required_filled,
-                "to_fill": len(rs_fields),
-                "filled_pct": filled_pct,
-                "progress_class": css_color,
-            }
+        meta = {
+            "schema": self.schema.schema_json["id"],
+            "filled": required_filled,
+            "to_fill": len(rs_fields),
+            "filled_pct": filled_pct,
+            "progress_class": css_color,
         }
+        submission_id = (self.meta or {}).get("submission_id")
+        if submission_id:
+            meta["submission_id"] = submission_id
+
+        data = {"_meta": meta}
 
         data.update(self.data)
 

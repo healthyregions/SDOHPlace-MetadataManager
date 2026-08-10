@@ -310,6 +310,7 @@ def add_approved_records():
             record = _record_from_payload(payload)
             record_id = _record_id_from_submission(submission, payload)
             record.data["id"] = record_id
+            record.meta = {**(record.meta or {}), "submission_id": str(submission_id)}
             record.file_path = Path(METADATA_DIR, "records", f"{record_id}.json")
             if record.file_path.exists():
                 skipped += 1
@@ -370,7 +371,7 @@ def delete_submission(submission_id):
     status = request.form.get("status") or request.args.get("status") or "submitted"
     reviewer = current_user.email if current_user.email else current_user.name
     try:
-        result = client.delete_submission(submission_id)
+        result = client.delete_submission(submission_id, actor="admin", reviewer=reviewer)
         _save_review_log(
             submission_id=submission_id,
             action="delete_submission",
