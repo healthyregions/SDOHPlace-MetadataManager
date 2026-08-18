@@ -20,6 +20,14 @@
             <a class="navbar-item" href="/table">
               Full table
           </a>
+            {% if is_admin_user() %}
+            <a class="navbar-item" href="/submissions">
+              Submissions
+            </a>
+            {% endif %}
+            <a class="navbar-item" href="/help">
+                Help
+            </a>
             <button class="navbar-item js-modal-trigger" data-target="modal-js-example">
                 <strong style="font-weight:700">About</strong>
             </button>
@@ -35,6 +43,20 @@
             </div>
         </div>
         <div class="navbar-end">
+            <div class="navbar-item">
+                <a href="/help#switch-env" title="Solr core: {{ solr.active_core }} — click to learn how to switch"
+                   style="text-decoration:none;">
+                    {% if solr.active_env == "prod" %}
+                    <span class="tag is-danger is-medium" style="font-weight:700; letter-spacing:.04em;">
+                        &#9888; SOLR: PROD
+                    </span>
+                    {% else %}
+                    <span class="tag is-success is-medium" style="font-weight:700; letter-spacing:.04em;">
+                        SOLR: DEV
+                    </span>
+                    {% endif %}
+                </a>
+            </div>
             <div class="navbar-item">
                 <div class="buttons">
                 {% if user.is_authenticated %}

@@ -24,6 +24,25 @@ Custom metadata schema for this project:
 - Mandela Gadri
 - Arli Coli
 - Camrin Garrett
+- Pengyin Shan
+
+## Contributor submissions and email
+
+Contributor submissions are not stored in this app. They live in the `sdohplace-intake-api` service (Netlify Blobs), which this app reads and writes through `manager/intake_client.py`. That service also sends every contributor and reviewer email over the Gmail API. This app no longer sends mail itself.
+
+Full data flow, the submission/record link, and the table of which email fires at which stage are documented in the intake API's README.
+
+Relevant environment:
+
+```env
+INTAKE_API_BASE_URL=https://sdohplace-intake-api.netlify.app
+INTAKE_API_TOKEN=<same token as the intake API>
+INTAKE_API_TIMEOUT=10
+```
+
+`INTAKE_API_TOKEN` must match the intake API exactly; a mismatch returns 401 on every call.
+
+When "Add Records" creates a record from an approved submission, the record's `_meta.submission_id` is set to the originating submission. Deleting that record uses this to notify the submitter without scanning every submission, so preserve `_meta.submission_id` in any code that rewrites record JSON.
 
 ## `manager` Flask App
 

@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 21,
-    "to_fill": 26,
-    "filled_pct": 80,
+    "filled": 22,
+    "to_fill": 27,
+    "filled_pct": 81,
     "progress_class": "warning"
   },
   "title": "Congressional District Health Dashboard",
@@ -11,7 +11,7 @@
     "Congressional District Health Dashboard"
   ],
   "description": [
-    "The Congressional District Health Dashboard provides actionable measures of health and its drivers calculated at the congressional district level, showing users how their district is doing on health outcomes, social and economic factors, and more. The Dashboard incorporates the 2022 redrawn district boundaries based on the 2020 census, corresponding to the 118th Congressional session that started in January 2023. Data are sourced by a team at the NYU Grossman School of Medicine\u2019s Department of Population Health from federal, state, and other datasets with rigorous standards for collection and analysis."
+    "The Congressional District Health Dashboard provides actionable measures of health and its drivers calculated at the congressional district level, showing users how their district is doing on health outcomes, social and economic factors, and more. The Dashboard incorporates the 2022 redrawn district boundaries based on the 2020 census, corresponding to the 118th Congressional session that started in January 2023. Data are sourced by a team at the NYU Grossman School of Medicine’s Department of Population Health from federal, state, and other datasets with rigorous standards for collection and analysis."
   ],
   "language": [
     "eng"
@@ -185,5 +185,6 @@
   ],
   "featured_variable": [],
   "preferred_citation": "Department of Population Health, NYU Langone Health. Congressional District Health Dashboard. https://www.congressionaldistricthealthdashboard.org/. Accessed [INSERT DATE OF ACCESS].",
-  "data_usage_notes": "These variables are primarily derived from sources such as the American Community Survey (ACS), Behavioral Risk Factor Surveillance System (BRFSS), Centers for Disease Control and Prevention (CDC), National Vital Statistics System (NVSS), and the U.S. Small-Area Life Expectancy Project (USALEEP). Many of these measures are aggregated from census tract or county data to estimate values at the congressional district level\u200b.\r\n"
+  "data_usage_notes": "These variables are primarily derived from sources such as the American Community Survey (ACS), Behavioral Risk Factor Surveillance System (BRFSS), Centers for Disease Control and Prevention (CDC), National Vital Statistics System (NVSS), and the U.S. Small-Area Life Expectancy Project (USALEEP). Many of these measures are aggregated from census tract or county data to estimate values at the congressional district level​.\r\n",
+  "contrubution_source": "manager"
 }

@@ -5,7 +5,7 @@ from flask import current_app
 
 SOLR_HOST = os.getenv("SOLR_HOST", "").rstrip("/")
 SOLR_CORE = os.getenv("SOLR_CORE", "").rstrip("/")  # Legacy support
-SOLR_CORE_STAGE = os.getenv("SOLR_CORE_STAGE", "blacklight-core-stage").rstrip("/")
+SOLR_CORE_DEV = os.getenv("SOLR_CORE_DEV", "blacklight-core-dev").rstrip("/")
 SOLR_CORE_PROD = os.getenv("SOLR_CORE_PROD", "blacklight-core-prod").rstrip("/")
 SOLR_USERNAME = os.getenv("SOLR_USERNAME", "")
 SOLR_PASSWORD = os.getenv("SOLR_PASSWORD", "")
@@ -16,22 +16,13 @@ SOLR_URL = f"{SOLR_HOST}/{SOLR_CORE}/" if SOLR_CORE else f"{SOLR_HOST}/{SOLR_COR
 
 class Solr:
     def __init__(self, environment="prod", verbose=False):
-        """
-        Initialize Solr client.
-        
-        Args:
-            environment: Either 'stage' or 'prod' to determine which core to use
-            verbose: Enable verbose logging
-        """
         self.environment = environment
-        
-        # Determine which core to use based on environment
-        if environment == "stage":
-            core = SOLR_CORE_STAGE
+
+        if environment == "dev":
+            core = SOLR_CORE_DEV
         elif environment == "prod":
             core = SOLR_CORE_PROD
         else:
-            # Fallback to legacy SOLR_CORE or prod
             core = SOLR_CORE if SOLR_CORE else SOLR_CORE_PROD
         
         self.core = core

@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 21,
-    "to_fill": 26,
-    "filled_pct": 80,
+    "filled": 22,
+    "to_fill": 27,
+    "filled_pct": 81,
     "progress_class": "warning"
   },
   "title": "US Social Determinants of Health",
@@ -2077,7 +2077,7 @@
     "Per capita income estimate",
     "Percentage of persons with no high school diploma (age 25+) estimate",
     "Percentage of single parent households with children under 18 estimate",
-    "Percentage of persons (age 5+) who speak English \u201cless than well\u201d estimate",
+    "Percentage of persons (age 5+) who speak English “less than well” estimate",
     "Percentage of households with more people than rooms estimate",
     "Percentage of households with no vehicle available estimate",
     "Percentage of renters estimate",
@@ -2099,7 +2099,7 @@
     "Per capita income estimate",
     "Percentage of persons with no high school diploma (age 25+) estimate",
     "Percentage of single parent households with children under 18 estimate",
-    "Percentage of persons (age 5+) who speak English \u201cless than well\u201d estimate",
+    "Percentage of persons (age 5+) who speak English “less than well” estimate",
     "Percentage of households with more people than rooms estimate",
     "Percentage of households with no vehicle available estimate",
     "Percentage of renters estimate",
@@ -2119,5 +2119,6 @@
     "Socioeconomic Advantage Index, Limited Mobility Index, Urban Core Opportunity Index, Mixed Immigrant, Cohesion, & Access Index, SDOH Cluster - 1:rural affordable, 2:suburban affluent, 3:suburban affordable, 4:extreme poverty, 5:multilingual working, 6:urban core opportunity, 7:sparse areas (see https://sdohatlas.github.io/)"
   ],
   "preferred_citation": "Kolak, Marynia, Bhatt, Jay, Park, Yoon Hong, Padron, Norma, and Molefe, Ayrin. \"Quantification of Neighborhood-Level Social Determinants of Health in the Continental United States.\" JAMA Network Open. 2020;3(1):e1919928. doi:10.1001/jamanetworkopen.2019.19928",
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

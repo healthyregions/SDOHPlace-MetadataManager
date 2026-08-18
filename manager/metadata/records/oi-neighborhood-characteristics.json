@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 23,
-    "to_fill": 26,
+    "filled": 24,
+    "to_fill": 27,
     "filled_pct": 88,
     "progress_class": "warning"
   },
@@ -12,7 +12,7 @@
     "Opportunity Insights Neighborhood Characteristics (The Opportunity Atlas: Mapping the Childhood Roots of Social Mobility)"
   ],
   "description": [
-    "The Child Opportunity Atlas maps the childhood roots of social mobility, and serves as a  publicly available atlas of children\u2019s outcomes in adulthood by census tract using anonymized longitudinal data covering nearly the entire U.S. population. The Neighborhood Characteristics dataset provides multiple levels (census tract, county, and commuting zone) covariates used throughout the paper or shown in the Opportunity Atlas as neighborhood characteristics. All variables other than czname are numeric. The statistics reported in this table have been cleared by the Census Bureau's Disclosure Review Board release authorization number CBDRB-FY18-319."
+    "The Child Opportunity Atlas maps the childhood roots of social mobility, and serves as a  publicly available atlas of children’s outcomes in adulthood by census tract using anonymized longitudinal data covering nearly the entire U.S. population. The Neighborhood Characteristics dataset provides multiple levels (census tract, county, and commuting zone) covariates used throughout the paper or shown in the Opportunity Atlas as neighborhood characteristics. All variables other than czname are numeric. The statistics reported in this table have been cleared by the Census Bureau's Disclosure Review Board release authorization number CBDRB-FY18-319."
   ],
   "language": [
     "eng"
@@ -103,7 +103,7 @@
     "Total number of people aged 25 or older",
     "Average annualized job growth rate",
     "Rate of employment computed as total employed population",
-    "Number of people aged 25 or older who have a bachelor\u2019s degree, master\u2019s degree, professional school degree, or doctorate degree",
+    "Number of people aged 25 or older who have a bachelor’s degree, master’s degree, professional school degree, or doctorate degree",
     "Number of jobs with earnings greater than $3,333 per month in own and neighboring tracts whose centroids fall within a radius of 5 miles",
     "Share of individuals in the tract below the federal poverty line",
     "Number of households with female heads (and no husband present) or male heads (and no wife present) with own children under 18 years old present",
@@ -127,5 +127,6 @@
   ],
   "featured_variable": [],
   "preferred_citation": "Chetty, R., Hendren, N., Friedman, J., Jones, M. R., & Porter, S. R. (2018, September 30). The Opportunity Atlas: Mapping the Childhood Roots of social mobility. Opportunity Insights. https://opportunityinsights.org/paper/the-opportunity-atlas/",
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

@@ -5,18 +5,21 @@
 {% block sidebar %}
 <h2 class="subtitle">Actions</h2>
 {% if user.is_authenticated %}
-<div class="buttons are-small has-addons">
-    <a href="{{ url_for('manager.handle_record', id=record.id) }}?edit=true" class="button" role="button">Edit</a>
-</div>
-<h2 class="subtitle">Index to Solr</h2>
+	<div class="buttons are-small has-addons">
+	    <a href="{{ url_for('manager.handle_record', id=record.id) }}?edit=true" class="button" role="button">Edit</a>
+	</div>
+    <form method="post" action="{{ url_for('manager.handle_record', id=record.id) }}?action=delete" onsubmit="return confirm('Delete this metadata record?');">
+        <button class="button is-danger is-small" type="submit">Delete Record</button>
+    </form>
+	<h2 class="subtitle">Index to Solr</h2>
 <div class="field is-grouped is-grouped-vertical">
     <div class="control">
         <button class="button is-info is-small index-btn"
-                data-env="stage"
-                data-core="{{ solr.core_stage }}"
+                data-env="dev"
+                data-core="{{ solr.core_dev }}"
                 data-record-id="{{ record.id }}"
-                title="Index to stage core ({{ solr.core_stage }})">
-            Index — Stage
+                title="Index to dev core ({{ solr.core_dev }})">
+            Index — Dev
         </button>
     </div>
     {% if user.name == "admin" %}

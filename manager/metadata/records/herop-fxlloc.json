@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 21,
-    "to_fill": 26,
-    "filled_pct": 80,
+    "filled": 22,
+    "to_fill": 27,
+    "filled_pct": 81,
     "progress_class": "warning"
   },
   "metadata_version": "SDOH PlaceProject",
@@ -108,6 +108,7 @@
     "AC Count"
   ],
   "featured_variable": [],
-  "preferred_citation": " Ahn, Yoonjung. 2025. \u201cZCTA-Level Summary of Residential Air Conditioning Prevalence.\u201d Harvard Dataverse. https://doi.org/10.7910/DVN/A0CGTX.",
-  "data_usage_notes": null
+  "preferred_citation": " Ahn, Yoonjung. 2025. “ZCTA-Level Summary of Residential Air Conditioning Prevalence.” Harvard Dataverse. https://doi.org/10.7910/DVN/A0CGTX.",
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

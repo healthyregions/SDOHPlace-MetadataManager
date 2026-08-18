@@ -162,3 +162,41 @@ details {
     min-height: 2em;
     vertical-align: middle;
 }
+
+.submission-nav {
+    margin-bottom: 16px;
+}
+
+.contributor-card {
+    margin-bottom: 16px;
+}
+
+.contributor-summary {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.contributor-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contributor-tags {
+    justify-content: flex-end;
+    margin-bottom: 0;
+}
+
+.contributor-content {
+    margin-top: 16px;
+}
+
+.contributor-update-form .control {
+    margin-top: 0;
+}
+
+.contributor-submissions-table td:last-child {
+    white-space: nowrap;
+}

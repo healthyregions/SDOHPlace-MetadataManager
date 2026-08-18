@@ -1,0 +1,36 @@
+<div class="tabs is-toggle is-small">
+    <ul>
+        {% for group in display_groups %}
+        <li><a href="#{{ group['name'] }}">{{ group['name'] }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="record-content">
+    {% for group in display_groups %}
+    <div style="background:light-grey;">
+        <div class="grouped-title">
+            <h2 id="{{ group['name'] }}" class="subtitle">{{ group['name'] }}</h2>
+            {% if group['help_text'] %}
+            <details class="content">
+                <summary>More about this group...</summary>
+                <ul style="margin-top: .25em;">
+                    {% for text in group['help_text'] %}
+                    <li>{{ text | safe }}</li>
+                    {% endfor %}
+                </ul>
+            </details>
+            {% endif %}
+        </div>
+        <div class="grouped-fields">
+        {% for field in group['fields'] %}
+            {% if field.widget %}
+                {% include 'crud/widgets/' + field.widget %}
+            {% else %}
+                <span><em>(no widget configured, using default)</em></span>
+                {% include 'crud/widgets/text-simple.html' %}
+            {% endif %}
+        {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>

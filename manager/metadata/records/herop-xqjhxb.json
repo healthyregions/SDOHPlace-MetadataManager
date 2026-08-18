@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 23,
-    "to_fill": 26,
+    "filled": 24,
+    "to_fill": 27,
     "filled_pct": 88,
     "progress_class": "warning"
   },
@@ -177,6 +177,7 @@
   "featured_variable": [
     "BRIC score"
   ],
-  "preferred_citation": "\u201cBaseline Resilience Indicators for Communities.\u201d University of South Carolina, McCausland College of Arts and Sciences, sc.edu/study/colleges_schools/artsandsciences/centers_and_institutes/hvri/data_and_resources/bric/. Accessed 15 Oct. 2025. ",
-  "data_usage_notes": null
+  "preferred_citation": "“Baseline Resilience Indicators for Communities.” University of South Carolina, McCausland College of Arts and Sciences, sc.edu/study/colleges_schools/artsandsciences/centers_and_institutes/hvri/data_and_resources/bric/. Accessed 15 Oct. 2025. ",
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

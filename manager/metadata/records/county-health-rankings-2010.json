@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 23,
-    "to_fill": 26,
+    "filled": 24,
+    "to_fill": 27,
     "filled_pct": 88,
     "progress_class": "warning"
   },
@@ -270,5 +270,6 @@
   ],
   "featured_variable": [],
   "preferred_citation": "University of Wisconsin Population Health Institute. County Health Rankings & Roadmaps 2024. www.countyhealthrankings.org. ",
-  "data_usage_notes": "The data contains a breakdown of the measures used in calculating outcomes, data elements, descriptions, and ranking for each country."
+  "data_usage_notes": "The data contains a breakdown of the measures used in calculating outcomes, data elements, descriptions, and ranking for each country.",
+  "contrubution_source": "manager"
 }

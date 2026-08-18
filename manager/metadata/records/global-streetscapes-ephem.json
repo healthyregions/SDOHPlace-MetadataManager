@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 21,
-    "to_fill": 26,
-    "filled_pct": 80,
+    "filled": 22,
+    "to_fill": 27,
+    "filled_pct": 81,
     "progress_class": "warning"
   },
   "title": "Global Streetscapes (Ephem)",
@@ -106,6 +106,7 @@
     "Unique image ID, Source (Mapillary or KartaView), Orginal ID (by Mapillary or KartaView), Timezone, UTC offset in seconds, Calculated day or night, Hours after sunrise, Hours after sunset"
   ],
   "featured_variable": [],
-  "preferred_citation": "Hou Y, Quintana M, Khomiakov M, Yap W, Ouyang J, Ito K, Wang Z, Zhao T, Biljecki F (2024): Global Streetscapes \u2014 A comprehensive dataset of 10 million street-level images across 688 cities for urban science and analytics. ISPRS Journal of Photogrammetry and Remote Sensing 215: 216-238. doi:10.1016/j.isprsjprs.2024.06.023",
-  "data_usage_notes": null
+  "preferred_citation": "Hou Y, Quintana M, Khomiakov M, Yap W, Ouyang J, Ito K, Wang Z, Zhao T, Biljecki F (2024): Global Streetscapes — A comprehensive dataset of 10 million street-level images across 688 cities for urban science and analytics. ISPRS Journal of Photogrammetry and Remote Sensing 215: 216-238. doi:10.1016/j.isprsjprs.2024.06.023",
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

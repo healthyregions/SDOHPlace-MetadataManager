@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+
+{% block page_title %}Help: Switching Solr Instances{% endblock %}
+
+{% block sidebar %}
+<h2 class="subtitle">On this page</h2>
+<ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#current-config">Current Configuration</a></li>
+    <li><a href="#switch-manager">Switch this Metadata Manager</a></li>
+    <li><a href="#switch-discovery">Switch the Discovery App</a></li>
+    <li><a href="#index-records">Index records to a core</a></li>
+</ul>
+{% endblock %}
+
+{% block main_content %}
+
+<section id="overview" class="block" style="margin-bottom:2rem;">
+    <h2 class="subtitle">Overview</h2>
+    <p>
+        There are two Solr cores. The navbar badge at the top right always shows which one this
+        Metadata Manager is currently treating as active.
+    </p>
+    <table class="table is-bordered is-striped is-narrow" style="margin-top:.75rem;">
+        <thead>
+            <tr>
+                <th>Core</th>
+                <th>Name</th>
+                <th>Used for</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="tag is-success">DEV</span></td>
+                <td><code>{{ solr.core_dev }}</code></td>
+                <td>Development and testing — safe to write/reindex freely</td>
+            </tr>
+            <tr>
+                <td><span class="tag is-danger">PROD</span></td>
+                <td><code>{{ solr.core_prod }}</code></td>
+                <td>Live search at <a href="https://search.sdohplace.org" target="_blank">search.sdohplace.org</a> — only admins can index here</td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="margin-top:.75rem;">Both cores live on the same host: <code>{{ solr.host }}</code></p>
+</section>
+
+<section id="current-config" class="block" style="margin-bottom:2rem;">
+    <h2 class="subtitle">Current Configuration</h2>
+    <table class="table is-bordered is-narrow">
+        <tbody>
+            <tr>
+                <td><strong>Active core (this app)</strong></td>
+                <td>
+                    {% if solr.active_env == "prod" %}
+                    <span class="tag is-danger">PROD</span> <code>{{ solr.active_core }}</code>
+                    {% else %}
+                    <span class="tag is-success">DEV</span> <code>{{ solr.active_core }}</code>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Controlled by</strong></td>
+                <td><code>MODE</code> in <code>.env</code> on the server</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="switch-manager" class="block" style="margin-bottom:2rem;">
+    <h2 class="subtitle">Switch this Metadata Manager between dev and prod</h2>
+    <p>
+        The server runs gunicorn directly inside a Python virtualenv — there is no Docker on this host.
+        The active core is controlled by <code>MODE</code> in the <code>.env</code> file.
+        Switching takes about 5 seconds and requires SSH access.
+    </p>
+
+    <p style="margin-top:1rem;"><strong>To switch to dev core:</strong></p>
+    <pre style="background:#f5f5f5; padding:1rem; border-radius:4px; overflow-x:auto;">ssh ubuntu@&lt;ec2-host&gt;
+cd /opt/metadata-manager/prod          # or wherever the repo lives
+nano .env                              # set MODE=dev, save and exit
+./scripts/restart_flask.sh</pre>
+
+    <p style="margin-top:1rem;"><strong>To switch back to prod core:</strong></p>
+    <pre style="background:#f5f5f5; padding:1rem; border-radius:4px; overflow-x:auto;">nano .env                              # set MODE=prod, save and exit
+./scripts/restart_flask.sh</pre>
+
+    <p style="margin-top:.75rem;">
+        Reload this page after the restart — the navbar badge updates immediately to show the active core.
+    </p>
+
+    <p style="margin-top:1rem;"><strong>To deploy updated code from git:</strong></p>
+    <pre style="background:#f5f5f5; padding:1rem; border-radius:4px; overflow-x:auto;">git pull
+source env/bin/activate               # activate the virtualenv
+pip install -e .                      # only needed if dependencies changed
+./scripts/restart_flask.sh</pre>
+
+    <div class="notification is-info is-light" style="margin-top:1rem;">
+        <strong>No DNS or domain change needed.</strong> Both dev and prod modes serve from the same
+        URL. Only the Solr core that indexing buttons write to changes.
+    </div>
+    <div class="notification is-warning is-light" style="margin-top:.75rem;">
+        <strong>When MODE=prod</strong>, the "Index — Prod" button is restricted to admin users only.
+        All logged-in users can always index to the dev core via "Index — Dev".
+    </div>
+</section>
+
+<section id="switch-discovery" class="block" style="margin-bottom:2rem;">
+    <h2 class="subtitle">Switch the Discovery App to read from dev</h2>
+    <p>
+        The discovery frontend (<code>sdohplace-data-discovery</code>) reads from whichever Solr core
+        its <code>NEXT_PUBLIC_SOLR_URL</code> points to. Change this one variable to switch cores —
+        no Metadata Manager restart needed.
+    </p>
+
+    <p style="margin-top:1rem;"><strong>For a Netlify deployment</strong> — set in the Netlify site's
+    Environment Variables panel, then trigger a redeploy:</p>
+    <table class="table is-bordered is-narrow" style="margin-top:.5rem;">
+        <thead><tr><th>Target</th><th>NEXT_PUBLIC_SOLR_URL</th></tr></thead>
+        <tbody>
+            <tr>
+                <td><span class="tag is-success">DEV</span></td>
+                <td><code>https://solr.sdohplace.org/solr/{{ solr.core_dev }}</code></td>
+            </tr>
+            <tr>
+                <td><span class="tag is-danger">PROD</span></td>
+                <td><code>https://solr.sdohplace.org/solr/{{ solr.core_prod }}</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p style="margin-top:1rem;"><strong>For local development</strong> — edit <code>.env</code> in the
+    discovery app repo and restart <code>npm run dev</code>:</p>
+    <pre style="background:#f5f5f5; padding:1rem; border-radius:4px; overflow-x:auto;"># Point at dev core
+NEXT_PUBLIC_SOLR_URL=https://solr.sdohplace.org/solr/{{ solr.core_dev }}
+
+# Point at prod core
+NEXT_PUBLIC_SOLR_URL=https://solr.sdohplace.org/solr/{{ solr.core_prod }}</pre>
+</section>
+
+<section id="index-records" class="block" style="margin-bottom:2rem;">
+    <h2 class="subtitle">Index records to a core</h2>
+    <p>
+        Changing <code>MODE</code> only affects the active core label — it does not automatically
+        copy records between cores. Use the buttons below or the CLI to populate a core.
+    </p>
+
+    <p style="margin-top:1rem;"><strong>Per-record (UI)</strong> — on each record's view page, the sidebar has:</p>
+    <ul style="margin-left:1.5rem; list-style:disc; margin-top:.5rem;">
+        <li><strong>Index — Dev</strong> (blue): always available to logged-in users, writes to <code>{{ solr.core_dev }}</code></li>
+        <li><strong>Index — Prod</strong> (yellow): admin only, writes to <code>{{ solr.core_prod }}</code></li>
+    </ul>
+
+    <p style="margin-top:1rem;"><strong>All records at once (CLI)</strong> — SSH into the server and run:</p>
+    <pre style="background:#f5f5f5; padding:1rem; border-radius:4px; overflow-x:auto;"># Full refresh of dev core
+flask registry index --clean --env dev
+
+# Full refresh of prod core (admin action)
+flask registry index --clean --env prod</pre>
+    <p style="margin-top:.5rem;">
+        The <code>--clean</code> flag deletes all existing documents in the core before re-indexing.
+        Omit it to only add/update without removing stale records.
+    </p>
+</section>
+
+{% endblock %}

@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 21,
-    "to_fill": 26,
-    "filled_pct": 80,
+    "filled": 22,
+    "to_fill": 27,
+    "filled_pct": 81,
     "progress_class": "warning"
   },
   "title": "County Health Rankings (2013)",
@@ -191,5 +191,6 @@
   ],
   "featured_variable": [],
   "preferred_citation": null,
-  "data_usage_notes": "The data contains a breakdown of the measures used in calculating outcomes, data elements, descriptions, and ranking for each country."
+  "data_usage_notes": "The data contains a breakdown of the measures used in calculating outcomes, data elements, descriptions, and ranking for each country.",
+  "contrubution_source": "manager"
 }

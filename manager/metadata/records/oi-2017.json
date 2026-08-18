@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 20,
-    "to_fill": 26,
-    "filled_pct": 76,
+    "filled": 21,
+    "to_fill": 27,
+    "filled_pct": 77,
     "progress_class": "warning"
   },
   "title": "Opportunity Index 2017",
@@ -16,10 +16,10 @@
   ],
   "display_note": [],
   "creator": [
-    "Child Trends and the Forum for Youth Investment\u2019s Opportunity Nation campaign"
+    "Child Trends and the Forum for Youth Investment’s Opportunity Nation campaign"
   ],
   "publisher": [
-    "Child Trends and the Forum for Youth Investment\u2019s Opportunity Nation campaign"
+    "Child Trends and the Forum for Youth Investment’s Opportunity Nation campaign"
   ],
   "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
@@ -105,7 +105,7 @@
     "Deaths attributed to alcohol or drug poisoning or suicide (age-adjusted rate per 100,000 population)",
     "Percentage of adults (ages 18 and older) who reported they volunteered during the previous year [national and state-level only]",
     "Percentage of adults ages 18 and older who are registered to vote [national and state-level only]",
-    " Percentage of youth (ages 16\u201324) not in school and not working",
+    " Percentage of youth (ages 16–24) not in school and not working",
     "Incidents of violent crime reported to law enforcement agencies (per 100,000 population)",
     "Number of primary care physicians (per 100,000 population)",
     "Number of grocery stores and produce vendors (per 10,000 population)",
@@ -113,5 +113,6 @@
   ],
   "featured_variable": [],
   "preferred_citation": null,
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

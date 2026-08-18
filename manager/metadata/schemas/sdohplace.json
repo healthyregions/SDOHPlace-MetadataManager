@@ -827,7 +827,26 @@
             "display_group": "Admin",
             "slug": "metadata-version",
             "widget": "select.html",
-            "id": "metadata_version"
+            "id": "metadata_version",
+            "default": "SDOH PlaceProject"
+        },
+        {
+            "label": "Contribution Source",
+            "uri": "sdoh_contrubution_source_s",
+            "data_type": "string",
+            "multiple": false,
+            "obligation": "required",
+            "controlled": true,
+            "controlled_options": [
+                "manager",
+                "contributor"
+            ],
+            "schema": "SDOH Place",
+            "display_group": "Admin",
+            "slug": "contrubution-source",
+            "widget": "select.html",
+            "id": "contrubution_source",
+            "default": "manager"
         },
         {
             "label": "Suppressed",

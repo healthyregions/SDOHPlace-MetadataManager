@@ -14,8 +14,6 @@ from .registry import Registry
 from .models import db, User
 from .utils import METADATA_DIR, batch_list
 
-from .coverage.coverage import check_coverage
-
 registry = Registry()
 
 user_grp = AppGroup("user", help="A set of commands for managing users.")
@@ -131,7 +129,7 @@ def validate_records(id, verbose):
 @click.option("--id")
 @click.option("--clean", is_flag=True, default=False)
 @click.option("--verbose", is_flag=True, default=False)
-@click.option("--env", type=click.Choice(['stage', 'prod'], case_sensitive=False), default='prod', help="Target environment: stage or prod")
+@click.option("--env", type=click.Choice(['dev', 'prod'], case_sensitive=False), default='prod', help="Target environment: dev or prod")
 def index(id, clean, verbose, env):
     """Reindex all Solr records from database content."""
 
@@ -254,6 +252,7 @@ coverage_grp = AppGroup(
     help="name of field in input file that has FIPS, GEOID, or HEROPID in it",
 )
 def generate_highlight_ids(input_file, geography, id_field, apply_to):
+    from .coverage.coverage import check_coverage
 
     highlight_ids = check_coverage(input_file, geography, id_field)
 
