@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 23,
-    "to_fill": 26,
+    "filled": 24,
+    "to_fill": 27,
     "filled_pct": 88,
     "progress_class": "warning"
   },
@@ -12,7 +12,7 @@
     "Environmental Justice Index"
   ],
   "description": [
-    "The Environmental Justice Index (EJI), which is a part of the EPA\u2019s EJSCREEN platform, is a data-driven tool designed to identify and analyze environmental justice concerns across the United States. The EJI combines environmental, demographic, and health data to assess communities disproportionately impacted by environmental burdens and social vulnerabilities.",
+    "The Environmental Justice Index (EJI), which is a part of the EPA’s EJSCREEN platform, is a data-driven tool designed to identify and analyze environmental justice concerns across the United States. The EJI combines environmental, demographic, and health data to assess communities disproportionately impacted by environmental burdens and social vulnerabilities.",
     "Indicators include air quality, proximity to hazardous facilities, and exposure to pollutants, along with demographic factors like income, race, and linguistic isolation. In addition to the core EJI, the EPA incorporates Supplemental Indexes to enhance its analytical capabilities. These indexes include the Climate Change Index, which identifies communities vulnerable to the impacts of climate change, and the Health Disparities Index, which highlights areas with existing health challenges that may exacerbate environmental risks.",
     "While both EJI and EJSCREEN are tools for assessing environmental justice, they are designed for slightly different purposes. EJSCREEN is a screening and mapping tool primarily intended for community engagement, highlighting potential environmental and demographic concerns to guide further investigation. The EJI, on the other hand, goes beyond screening by integrating additional health and climate vulnerability data to create indexes tailored for more in-depth analysis and decision-making."
   ],
@@ -108,5 +108,6 @@
     "Environmental Justice Index for PM2.5 (Particulate Matter); Environmental Justice Index for ozone levels; Environmental Justice Index for nitrogen dioxide levels; Environmental Justice Index for diesel particulate matter levels; Environmental Justice Index for toxic releases to air; Environmental Justice Index for traffic proximity and volume; Environmental Justice Index for lead paint exposure risk; Environmental Justice Index for Superfund site proximity; Environmental Justice Index for Risk Management Plan (RMP) facility proximity; Environmental Justice Index for hazardous waste facility proximity; Environmental Justice Index for underground storage tank proximity; Environmental Justice Index for wastewater discharge proximity; Environmental Justice Index for drinking water non-compliance."
   ],
   "preferred_citation": "Centers for Disease Control and Prevention and Agency for Toxic Substances Disease Registry. [Year] Environmental Justice Index. Accessed [Date]. https://atsdr.cdc.gov/place-health/php/eji/index.html",
-  "data_usage_notes": "The EJI can be used to:\r\n\r\nIdentify and prioritize areas that may require special attention or additional action to improve health and health equity\r\nEducate and inform the public about their community\r\nAnalyze the unique, local factors driving cumulative impacts on health to inform policy and decision-making\r\nEstablish meaningful goals and measure progress towards environmental justice and health equity"
+  "data_usage_notes": "The EJI can be used to:\r\n\r\nIdentify and prioritize areas that may require special attention or additional action to improve health and health equity\r\nEducate and inform the public about their community\r\nAnalyze the unique, local factors driving cumulative impacts on health to inform policy and decision-making\r\nEstablish meaningful goals and measure progress towards environmental justice and health equity",
+  "contrubution_source": "manager"
 }

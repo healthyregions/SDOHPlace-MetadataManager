@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 22,
-    "to_fill": 26,
-    "filled_pct": 84,
+    "filled": 23,
+    "to_fill": 27,
+    "filled_pct": 85,
     "progress_class": "warning"
   },
   "metadata_version": "SDOH PlaceProject",
@@ -12,7 +12,7 @@
     "AARP Livability Index"
   ],
   "description": [
-    "The AARP Livability Index takes every community in the United States and assigns a score based on services and amenities that affect people\u2019s lives the most. The AARP Livability Index provides users with a full view of the quality of a community based on the current and future needs of everyone. The AARP Livability Index aims its focus on seven crucial and distinct categories: housing, neighborhood, transportation, environment, health, engagement, and opportunity."
+    "The AARP Livability Index takes every community in the United States and assigns a score based on services and amenities that affect people’s lives the most. The AARP Livability Index provides users with a full view of the quality of a community based on the current and future needs of everyone. The AARP Livability Index aims its focus on seven crucial and distinct categories: housing, neighborhood, transportation, environment, health, engagement, and opportunity."
   ],
   "language": [
     "eng",
@@ -20,7 +20,7 @@
   ],
   "display_note": [
     "Information: This product is primarily a data dashboard and exploration platform. See original sources of data measures for downloadable datasets.",
-    "The AARP Livability Index\u2122 considers seven categories: housing, neighborhood, transportation, environment, health, engagement, and opportunity. For each category, the AARP Livability Index\u2122 evaluates current conditions as well as policies and programs that can enhance community livability over time.",
+    "The AARP Livability Index™ considers seven categories: housing, neighborhood, transportation, environment, health, engagement, and opportunity. For each category, the AARP Livability Index™ evaluates current conditions as well as policies and programs that can enhance community livability over time.",
     "The list of methodological variables presented here is not exhaustive; however, we have made every effort to incorporate as many relevant variables as possible within the scope of this study."
   ],
   "creator": [
@@ -113,7 +113,7 @@
     "State manufactured housing protections",
     "State foreclosure prevention and protection",
     "State accessory dwelling units support",
-    "Access to grocery stores and farmers\u2019 markets",
+    "Access to grocery stores and farmers’ markets",
     "Access to parks",
     "Access to libraries",
     "Access to jobs by transit",
@@ -190,7 +190,7 @@
     "State laws guaranteeing notice and/or first right of purchase to residents of manufactured housing communities prior to sale",
     "State policies and programs that protect homeowners from losing their homes to foreclosure",
     "State laws that facilitate the creation of local accessory dwelling units",
-    "Number of grocery stores and farmers\u2019 markets within a half mile",
+    "Number of grocery stores and farmers’ markets within a half mile",
     "Number of parks within a half-mile",
     "Number of libraries within a half-mile",
     "Number of jobs accessible within a 45-minute transit commute",
@@ -249,6 +249,7 @@
   "featured_variable": [
     "AARP Livability Score"
   ],
-  "preferred_citation": "AARP Public Policy Institute, Livable Communities. The AARP Livability Index\u2122 Categories Explained. Washington, DC: AARP Public Policy Institute, June 27, 2024. https://doi.org/10.26419/ppi.00230.000.",
-  "data_usage_notes": "The AARP Livability Index takes a holistic approach to understanding livability. It wasn\u2019t created to solely measure the quality of the built environment or the health of residents. It includes those elements, but it also considers engagement, opportunity, and the natural environment. It encourages policymakers and professionals to get outside their areas of expertise and understand the interrelated nature of livability."
+  "preferred_citation": "AARP Public Policy Institute, Livable Communities. The AARP Livability Index™ Categories Explained. Washington, DC: AARP Public Policy Institute, June 27, 2024. https://doi.org/10.26419/ppi.00230.000.",
+  "data_usage_notes": "The AARP Livability Index takes a holistic approach to understanding livability. It wasn’t created to solely measure the quality of the built environment or the health of residents. It includes those elements, but it also considers engagement, opportunity, and the natural environment. It encourages policymakers and professionals to get outside their areas of expertise and understand the interrelated nature of livability.",
+  "contrubution_source": "manager"
 }

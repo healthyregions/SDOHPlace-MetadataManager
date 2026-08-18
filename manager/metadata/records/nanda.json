@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 9,
-    "to_fill": 26,
-    "filled_pct": 34,
+    "filled": 10,
+    "to_fill": 27,
+    "filled_pct": 37,
     "progress_class": "danger"
   },
   "title": "NaNDA (National Neighborhood Data Archive)",
@@ -72,5 +72,6 @@
   "data_variables": [],
   "featured_variable": [],
   "preferred_citation": null,
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

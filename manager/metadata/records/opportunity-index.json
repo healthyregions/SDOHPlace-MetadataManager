@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 25,
-    "to_fill": 26,
+    "filled": 26,
+    "to_fill": 27,
     "filled_pct": 96,
     "progress_class": "success"
   },
@@ -17,10 +17,10 @@
   ],
   "display_note": [],
   "creator": [
-    "Child Trends and the Forum for Youth Investment\u2019s Opportunity Nation campaign"
+    "Child Trends and the Forum for Youth Investment’s Opportunity Nation campaign"
   ],
   "publisher": [
-    "Child Trends and the Forum for Youth Investment\u2019s Opportunity Nation campaign"
+    "Child Trends and the Forum for Youth Investment’s Opportunity Nation campaign"
   ],
   "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
@@ -103,7 +103,7 @@
     "Number of grocery stores and produce vendors (per 10,000 population)",
     "Number of primary care physicians (per 100,000 population)",
     "Incidents of violent crime reported to law enforcement agencies (per 100,000 population)",
-    "Percentage of youth (ages 16\u201324) not in school and not working",
+    "Percentage of youth (ages 16–24) not in school and not working",
     "Percentage of adults ages 18 and older who are registered to vote [national and state-level only]",
     "Percentage of adults (ages 18 and older) who reported they volunteered during the previous year [national and state-level only]",
     "Deaths attributed to alcohol or drug poisoning, or to suicide (age-adjusted rate per 100,000 population)",
@@ -129,7 +129,7 @@
     "Number of grocery stores and produce vendors (per 10,000 population)",
     "Number of primary care physicians (per 100,000 population)",
     "Incidents of violent crime reported to law enforcement agencies (per 100,000 population)",
-    "Percentage of youth (ages 16\u201324) not in school and not working",
+    "Percentage of youth (ages 16–24) not in school and not working",
     "Percentage of adults ages 18 and older who are registered to vote [national and state-level only]",
     "Percentage of adults (ages 18 and older) who reported they volunteered during the previous year [national and state-level only]",
     "Deaths attributed to alcohol or drug poisoning, or to suicide (age-adjusted rate per 100,000 population)",
@@ -150,5 +150,6 @@
     "Opportunity Score"
   ],
   "preferred_citation": "Opportunity Index. (2013, July 30). Opportunity Index. https://opportunityindex.org/",
-  "data_usage_notes": "In 2017, there was a structural change to the Index, affecting its indicators and dimensions. With the structural change, composite opportunity and dimension scores from 2011 to 2015 should not be compared with those from 2016 and forward.\r\n\r\nThe Opportunity Index continues to incorporate the important structural updates made in 2017, including the newest dimension (Health), and indicator updates (detailed information on those updates can be found in the 2017 Technical Supplement). The 2023 Opportunity Index also disaggregated 11 individual indicators by race, ethnicity, and gender at the national level. This analysis provides an examination of what disparities persist across the various facets of opportunity.  "
+  "data_usage_notes": "In 2017, there was a structural change to the Index, affecting its indicators and dimensions. With the structural change, composite opportunity and dimension scores from 2011 to 2015 should not be compared with those from 2016 and forward.\r\n\r\nThe Opportunity Index continues to incorporate the important structural updates made in 2017, including the newest dimension (Health), and indicator updates (detailed information on those updates can be found in the 2017 Technical Supplement). The 2023 Opportunity Index also disaggregated 11 individual indicators by race, ethnicity, and gender at the national level. This analysis provides an examination of what disparities persist across the various facets of opportunity.  ",
+  "contrubution_source": "manager"
 }

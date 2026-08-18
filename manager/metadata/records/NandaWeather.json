@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 23,
-    "to_fill": 26,
+    "filled": 24,
+    "to_fill": 27,
     "filled_pct": 88,
     "progress_class": "warning"
   },
@@ -200,5 +200,6 @@
   ],
   "featured_variable": [],
   "preferred_citation": "Gronlund, Carina, Melendez, Robert, Gypin, Lindsay, and Clarke, Philippa. National Neighborhood Data Archive (NaNDA): Weather by County, United States, 2003-2016. Inter-university Consortium for Political and Social Research [distributor], 2023-09-14. https://doi.org/10.3886/ICPSR38858.v1",
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block page_title %}Submission Review{% endblock %}
+
+{% block main_content %}
+{% set active_status = status %}
+{% include 'submissions/_nav.html' %}
+
+{% if error %}
+<div class="notification is-danger">{{ error }}</div>
+{% endif %}
+
+{% if status == 'approved' and submissions|length > 0 and not error %}
+<form method="post" action="{{ url_for('submissions.add_approved_records') }}" style="margin-bottom: 16px;" onsubmit="return confirm('Add all approved submissions as metadata records?');">
+  <button class="button is-success" type="submit">Add All Records</button>
+</form>
+{% endif %}
+
+<table class="table table-striped is-fullwidth">
+  <thead>
+    <tr>
+      <th>Submission ID</th>
+      <th>Title</th>
+      <th>Record ID</th>
+      <th>Status</th>
+      <th>Submitter</th>
+      <th>Updated</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in submissions %}
+    <tr>
+      <td>{{ item.id or item.submission_id }}</td>
+      <td>{{ item.payload_json.title if item.payload_json and item.payload_json.title else '' }}</td>
+      <td>{{ item.record_id or item.payload_json.id if item.payload_json else item.record_id or '' }}</td>
+      <td>{{ item.status }}</td>
+      <td>{{ item.submitter_email or item.email or '' }}</td>
+      <td>{{ item.updated_at or item.submitted_at or '' }}</td>
+      <td>
+        <div class="buttons are-small">
+          <a class="button" href="{{ url_for('submissions.view_submission', submission_id=(item.id or item.submission_id)) }}">Review</a>
+          <form method="post" action="{{ url_for('submissions.delete_submission', submission_id=(item.id or item.submission_id)) }}" onsubmit="return confirm('Delete this submission?');">
+            <input type="hidden" name="status" value="{{ status }}">
+            <button class="button is-danger" type="submit">Remove</button>
+          </form>
+        </div>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% if submissions|length == 0 and not error %}
+<div class="notification is-warning">No submissions found for status '{{ status }}'.</div>
+{% endif %}
+{% endblock %}

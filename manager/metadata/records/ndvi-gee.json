@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 23,
-    "to_fill": 26,
+    "filled": 24,
+    "to_fill": 27,
     "filled_pct": 88,
     "progress_class": "warning"
   },
@@ -129,5 +129,6 @@
     "NDVI"
   ],
   "preferred_citation": "NASA LP DAAC. (2017). MODIS MCD43A4.006 Nadir BRDF-Adjusted Reflectance (NBAR) [Dataset]. NASA EOSDIS Land Processes DAAC. https://doi.org/10.5067/MODIS/MCD43A4.006",
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

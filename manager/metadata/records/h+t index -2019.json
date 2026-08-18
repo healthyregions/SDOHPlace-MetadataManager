@@ -1,15 +1,15 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 23,
-    "to_fill": 26,
+    "filled": 24,
+    "to_fill": 27,
     "filled_pct": 88,
     "progress_class": "warning"
   },
   "title": "Housing + Transportation Index 2019",
   "alternative_title": [],
   "description": [
-    "The Housing and Transportation (H+T\u00ae) Affordability Index provides a comprehensive view of affordability, one that includes the cost of housing and transportation at the neighborhood level. The Index is part of a broader effort to explore urban sustainability through location efficiency"
+    "The Housing and Transportation (H+T®) Affordability Index provides a comprehensive view of affordability, one that includes the cost of housing and transportation at the neighborhood level. The Index is part of a broader effort to explore urban sustainability through location efficiency"
   ],
   "language": [
     "eng"
@@ -189,5 +189,6 @@
   ],
   "featured_variable": [],
   "preferred_citation": null,
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

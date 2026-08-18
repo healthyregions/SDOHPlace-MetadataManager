@@ -10,8 +10,9 @@ BACKUP_DIR="${BACKUP_DIR:-./backups}"
 LOG_FILE="${LOG_FILE:-${BACKUP_DIR}/restore.log}"
 
 # Directories to restore to
-SOLR_DATA_DIR="./solr-data"
-MANAGER_DB="./manager/data.db"
+SOLR_DATA_DIR="${SOLR_DATA_DIR:-./solr-data}"
+MANAGER_DB="${MANAGER_DB:-./manager/data.db}"
+RECORDS_HISTORY_DIR="${RECORDS_HISTORY_DIR:-./manager/metadata/records-history}"
 
 # Colors for output
 RED='\033[0;31m'
@@ -145,6 +146,11 @@ backup_current_data() {
         mkdir -p "${pre_restore_backup}/manager"
         cp "${MANAGER_DB}" "${pre_restore_backup}/manager/data.db" || log_warn "Could not backup current database"
     fi
+
+    if [ -d "${RECORDS_HISTORY_DIR}" ]; then
+        mkdir -p "${pre_restore_backup}/manager/metadata/records-history"
+        cp -r "${RECORDS_HISTORY_DIR}"/* "${pre_restore_backup}/manager/metadata/records-history/" || log_warn "Could not backup current records history"
+    fi
     
     log_info "Current data backed up to: ${pre_restore_backup}"
 }
@@ -203,6 +209,32 @@ restore_database() {
     }
     
     log_info "SQLite database restored successfully"
+}
+
+restore_records_history() {
+    local backup_name=$1
+    local backup_path="${BACKUP_DIR}/${backup_name}"
+
+    log_info "Restoring records history..."
+
+    if [ ! -d "${backup_path}/manager/metadata/records-history" ]; then
+        log_warn "No records history found in backup"
+        return 0
+    fi
+
+    mkdir -p "$(dirname "${RECORDS_HISTORY_DIR}")"
+
+    if [ -d "${RECORDS_HISTORY_DIR}" ]; then
+        rm -rf "${RECORDS_HISTORY_DIR}"
+    fi
+
+    mkdir -p "${RECORDS_HISTORY_DIR}"
+    cp -r "${backup_path}/manager/metadata/records-history"/* "${RECORDS_HISTORY_DIR}/" || {
+        log_error "Failed to restore records history"
+        exit 1
+    }
+
+    log_info "Records history restored successfully"
 }
 
 # Display backup metadata
@@ -274,6 +306,7 @@ main() {
     # Perform restore
     restore_solr "${backup_name}"
     restore_database "${backup_name}"
+    restore_records_history "${backup_name}"
     
     log_info "========================================="
     log_info "Restore completed successfully!"
@@ -283,4 +316,3 @@ main() {
 
 # Run main function
 main "$@"
-

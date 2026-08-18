@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 23,
-    "to_fill": 26,
+    "filled": 24,
+    "to_fill": 27,
     "filled_pct": 88,
     "progress_class": "warning"
   },
@@ -181,8 +181,8 @@
     "Intersection density in terms of multi-modal intersections having four or more legs per square mile",
     "Intersection density in terms of pedestrian-oriented intersections having three legs per square mile",
     "Intersection density in terms of pedestrian-oriented intersections having four or more legs per square mile",
-    "Proportion of CBG employment within \u00bc mile of fixedguideway transit stop",
-    "Proportion of CBG employment within \u00bd mile of fixedguideway transit stop",
+    "Proportion of CBG employment within ¼ mile of fixedguideway transit stop",
+    "Proportion of CBG employment within ½ mile of fixedguideway transit stop",
     "D4c- Aggregate frequency of transit service within 0.25 miles of CBG boundary per hour during evening peak period",
     "Aggregate frequency of transit service [D4c] per square mile",
     "Aggregate frequency of transit service [D4c] per capita",
@@ -191,13 +191,13 @@
     "Jobs within 45-minute transit commute, distance decay (walk network travel time, GTFS schedules) weighted",
     "Working age population within 45-minute transit commute, time decay (walk network travel time, GTFS schedules) weighted",
     "D5cr- Proportional Accessibility to Regional Destinations -Auto: Employment accessibility expressed as a ratio of total CBSA accessibility",
-    "Regional Centrality Index \u2013 Auto: CBG [D5cr] scorerelative to max CBSA [D5cr] score",
+    "Regional Centrality Index – Auto: CBG [D5cr] scorerelative to max CBSA [D5cr] score",
     "D5ce- Proportional Accessibility to Regional Destinations -Auto: Working age population accessibility expressed as a ratio of total CBSA accessibility",
-    "Regional Centrality Index \u2013 Auto: CBG [D5ce] score relative to max CBSA [D5ce] score",
+    "Regional Centrality Index – Auto: CBG [D5ce] score relative to max CBSA [D5ce] score",
     "D5dr- Proportional Accessibility of Regional Destinations -Transit: Employment accessibility expressed as a ratio of total MSA accessibility",
-    "Regional Centrality Index \u2013 Transit: CBG [D5dr] score relative to max CBSA [D5dr] score",
+    "Regional Centrality Index – Transit: CBG [D5dr] score relative to max CBSA [D5dr] score",
     "D5de - Proportional Accessibility of Regional Destinations -Transit: Working age population accessibility expressed as a ratio of total MSA accessibility",
-    "Regional Centrality Index \u2013 Transit: CBG [D5de] score relative to max CBSA [D5de] score",
+    "Regional Centrality Index – Transit: CBG [D5de] score relative to max CBSA [D5de] score",
     "5-tier employment entropy (denominator set to observed employment types in the CBG)",
     "5-tier employment entropy (denominator set to the static 5 employment types in the CBG)",
     "8-tier employment entropy (denominator set to observed employment types in the CBG)",
@@ -216,5 +216,6 @@
   ],
   "featured_variable": [],
   "preferred_citation": "United States Environmental Protection Agency. (2021). Smart Location Database (Version 3.0). Retrieved January 8, 2026, from https://www.epa.gov/smartgrowth/smart-location-mapping. ",
-  "data_usage_notes": "The Smart Location Database summarizes more than 90 different indicators associated with the built environment and location efficiency. The Access to Jobs and Workers Via Transit Tool provides indicators of accessibility to destinations by public transit.The National Walkability Index provides walkability scores based on a simple formula that ranks selected indicators from the Smart Location Database that have been demonstrated to affect the propensity of walk trips."
+  "data_usage_notes": "The Smart Location Database summarizes more than 90 different indicators associated with the built environment and location efficiency. The Access to Jobs and Workers Via Transit Tool provides indicators of accessibility to destinations by public transit.The National Walkability Index provides walkability scores based on a simple formula that ranks selected indicators from the Smart Location Database that have been demonstrated to affect the propensity of walk trips.",
+  "contrubution_source": "manager"
 }

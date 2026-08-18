@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 22,
-    "to_fill": 26,
-    "filled_pct": 84,
+    "filled": 23,
+    "to_fill": 27,
+    "filled_pct": 85,
     "progress_class": "warning"
   },
   "metadata_version": "SDOH PlaceProject",
@@ -12,7 +12,7 @@
     "PLACES: Local Data for Better Health"
   ],
   "description": [
-    "This dataset contains four levels (county, census tract, ZCTA, place) of social determinants of health (SDOH) measures from the American Community Survey 5-year data for the entire United States\u201450 states and the District of Columbia.  Data were downloaded from data.census.gov using Census API and processed by the Centers for Disease Control and Prevention (CDC), Division of Population Health, Epidemiology and Surveillance Branch. These measures complement existing PLACES measures, including PLACES SDOH measures (e.g., health insurance, routine check-up). These data can be used together with PLACES data to identify which health and SDOH issues overlap in a community to help inform public health planning."
+    "This dataset contains four levels (county, census tract, ZCTA, place) of social determinants of health (SDOH) measures from the American Community Survey 5-year data for the entire United States—50 states and the District of Columbia.  Data were downloaded from data.census.gov using Census API and processed by the Centers for Disease Control and Prevention (CDC), Division of Population Health, Epidemiology and Surveillance Branch. These measures complement existing PLACES measures, including PLACES SDOH measures (e.g., health insurance, routine check-up). These data can be used together with PLACES data to identify which health and SDOH issues overlap in a community to help inform public health planning."
   ],
   "language": [
     "eng"
@@ -104,17 +104,17 @@
     "Depression among adults",
     "Diagnosed diabetes among adults",
     "Obesity among adults",
-    "All teeth lost among adults aged \u226565 years",
+    "All teeth lost among adults aged ≥65 years",
     "Stroke among adults",
-    "Lack of health insurance among adults aged 18\u201364 years",
+    "Lack of health insurance among adults aged 18–64 years",
     "Routine checkup within the past year among adults",
     "Visited dentist or dental clinic in the past year among adults",
     "Taking medicine to control high blood pressure among adults with high blood pressure",
     "Cholesterol screening among adults",
     "Mammography use among women aged 50-74 years",
-    "Cervical cancer screening among women aged 21\u201365 years",
-    "Colorectal cancer screening among adults aged 45\u201375 years",
-    "Older adults aged \u226565 years who are up to date on a core set of clinical preventive services by sex",
+    "Cervical cancer screening among women aged 21–65 years",
+    "Colorectal cancer screening among adults aged 45–75 years",
+    "Older adults aged ≥65 years who are up to date on a core set of clinical preventive services by sex",
     "Binge drinking among adults",
     "Current cigarette smoking among adults",
     "No leisure-time physical activity among adults",
@@ -137,15 +137,15 @@
     "Utility services threat in the past 12 months among adults",
     "Lack of reliable transportation in the past 12 months among adults",
     "Lack of social and emotional support among adults",
-    "Persons aged \u2265 65 years",
+    "Persons aged ≥ 65 years",
     "No broadband internet subscription among households",
     "Crowding among housing units",
     "Housing cost burden among households",
-    "No high school diploma among adults aged \u2265 25 years",
+    "No high school diploma among adults aged ≥ 25 years",
     "Persons living below 150% of the poverty level",
     "Persons of racial or ethnic minority status",
     "Single-parent households",
-    "Unemployment among people \u2265 16 years in the labor force"
+    "Unemployment among people ≥ 16 years in the labor force"
   ],
   "data_variables": [
     "Total population of census 2022 estimates",
@@ -164,17 +164,17 @@
     "Depression among adults",
     "Diagnosed diabetes among adults",
     "Obesity among adults",
-    "All teeth lost among adults aged \u226565 years",
+    "All teeth lost among adults aged ≥65 years",
     "Stroke among adults",
-    "Lack of health insurance among adults aged 18\u201364 years",
+    "Lack of health insurance among adults aged 18–64 years",
     "Routine checkup within the past year among adults",
     "Visited dentist or dental clinic in the past year among adults",
     "Taking medicine to control high blood pressure among adults with high blood pressure",
     "Cholesterol screening among adults",
     "Mammography use among women aged 50-74 years",
-    "Cervical cancer screening among women aged 21\u201365 years",
-    "Colorectal cancer screening among adults aged 45\u201375 years",
-    "Older adults aged \u226565 years who are up to date on a core set of clinical preventive services by sex",
+    "Cervical cancer screening among women aged 21–65 years",
+    "Colorectal cancer screening among adults aged 45–75 years",
+    "Older adults aged ≥65 years who are up to date on a core set of clinical preventive services by sex",
     "Binge drinking among adults",
     "Current cigarette smoking among adults",
     "No leisure-time physical activity among adults",
@@ -197,17 +197,18 @@
     "Utility services threat in the past 12 months among adults",
     "Lack of reliable transportation in the past 12 months among adults",
     "Lack of social and emotional support among adults",
-    "Persons aged \u2265 65 years",
+    "Persons aged ≥ 65 years",
     "No broadband internet subscription among households",
     "Crowding among housing units",
     "Housing cost burden among households",
-    "No high school diploma among adults aged \u2265 25 years",
+    "No high school diploma among adults aged ≥ 25 years",
     "Persons living below 150% of the poverty level",
     "Persons of racial or ethnic minority status",
     "Single-parent households",
-    "Unemployment among people \u2265 16 years in the labor force"
+    "Unemployment among people ≥ 16 years in the labor force"
   ],
   "featured_variable": [],
   "preferred_citation": " Centers for Disease Control and Prevention. PLACES: Local Data for Better Health. Accessed [date]. https://www.cdc.gov/places",
-  "data_usage_notes": "Because these are modeled and not direct estimates, the data should not be used for ranking the overall health of any county, place, census tract, or ZCTA.\r\nPLACES does not provide a weighted composite score for the included counties, places, census tracts, or ZCTAs. Therefore, the data should not be used to rank the overall health of a local area.\r\nHowever, counties, places, census tracts, or ZCTAs can be compared on individual measures."
+  "data_usage_notes": "Because these are modeled and not direct estimates, the data should not be used for ranking the overall health of any county, place, census tract, or ZCTA.\r\nPLACES does not provide a weighted composite score for the included counties, places, census tracts, or ZCTAs. Therefore, the data should not be used to rank the overall health of a local area.\r\nHowever, counties, places, census tracts, or ZCTAs can be compared on individual measures.",
+  "contrubution_source": "manager"
 }

@@ -1,10 +1,12 @@
 import csv
 import sys
+from datetime import datetime
 from flask_login import UserMixin
 from dotenv import load_dotenv
 
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy import DateTime, Text
 
 
 csv.field_size_limit(sys.maxsize)
@@ -19,6 +21,17 @@ class User(UserMixin, db.Model):
     name: Mapped[str] = mapped_column(unique=True)
     password: Mapped[str]
     email: Mapped[str]
+
+
+class SubmissionReviewLog(db.Model):
+    id: Mapped[int] = mapped_column(primary_key=True)
+    submission_id: Mapped[str] = mapped_column(index=True)
+    action: Mapped[str]
+    reviewer: Mapped[str]
+    record_id: Mapped[str] = mapped_column(nullable=True)
+    notes: Mapped[str] = mapped_column(Text, nullable=True)
+    payload_json: Mapped[str] = mapped_column(Text, nullable=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
 
 """

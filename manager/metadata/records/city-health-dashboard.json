@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 24,
-    "to_fill": 26,
+    "filled": 25,
+    "to_fill": 27,
     "filled_pct": 92,
     "progress_class": "success"
   },
@@ -10,7 +10,7 @@
   "title": "City Health Dashboard",
   "alternative_title": [],
   "description": [
-    "The City Health Dashboard provides communities and city leaders with an array of regularly updated data specific to neighborhood and/or city boundaries\u2014such as life expectancy, park access, and children in poverty, that may serve to improve the health and well-being of everyone in the community. The database and interactive web tool enables exploration of the factors that shape health and the drivers of health equity in the city level."
+    "The City Health Dashboard provides communities and city leaders with an array of regularly updated data specific to neighborhood and/or city boundaries—such as life expectancy, park access, and children in poverty, that may serve to improve the health and well-being of everyone in the community. The database and interactive web tool enables exploration of the factors that shape health and the drivers of health equity in the city level."
   ],
   "language": [
     "eng"
@@ -30408,5 +30408,6 @@
   ],
   "featured_variable": [],
   "preferred_citation": "Department of Population Health, NYU Langone Health. City Health Dashboard. https://www.cityhealthdashboard.com/. Accessed [INSERT DATE OF ACCESS].",
-  "data_usage_notes": "Error margins are not displayed on the dashboard. However, they are available in the downloadable data files and in the tabular view of the city data. Estimates of similar metrics may differ between the Dashboard and other resources due to different data sources and analytic techniques. When comparing the Dashboard\u2019s estimates to other similar metrics on similar sites, please use caution and refer to the City Health Dashboard Technical Document to understand all potential sources of difference."
+  "data_usage_notes": "Error margins are not displayed on the dashboard. However, they are available in the downloadable data files and in the tabular view of the city data. Estimates of similar metrics may differ between the Dashboard and other resources due to different data sources and analytic techniques. When comparing the Dashboard’s estimates to other similar metrics on similar sites, please use caution and refer to the City Health Dashboard Technical Document to understand all potential sources of difference.",
+  "contrubution_source": "manager"
 }

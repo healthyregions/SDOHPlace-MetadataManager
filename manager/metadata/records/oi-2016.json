@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 20,
-    "to_fill": 26,
-    "filled_pct": 76,
+    "filled": 21,
+    "to_fill": 27,
+    "filled_pct": 77,
     "progress_class": "warning"
   },
   "title": "Opportunity Index 2016",
@@ -16,10 +16,10 @@
   ],
   "display_note": [],
   "creator": [
-    "Child Trends and the Forum for Youth Investment\u2019s Opportunity Nation campaign"
+    "Child Trends and the Forum for Youth Investment’s Opportunity Nation campaign"
   ],
   "publisher": [
-    "Child Trends and the Forum for Youth Investment\u2019s Opportunity Nation campaign"
+    "Child Trends and the Forum for Youth Investment’s Opportunity Nation campaign"
   ],
   "provider": "Healthy Regions & Policies Lab, University of Illinois, Urbana-Champaign",
   "resource_class": [
@@ -98,7 +98,7 @@
     "High-speed Internet (% of households for states; 5-level categories for counties)",
     "Preschool (% ages 3 and 4 in school)",
     "On-time high school graduation (% of freshmen who graduate in four years)",
-    "Associate\u2019s degree or higher (% of adults 25 and older)",
+    "Associate’s degree or higher (% of adults 25 and older)",
     "Percentage of adults ages 18 and over-involved in social, civic, sports, and religious groups",
     "Percentage of adults ages 18 and older who did volunteer work any time in the previous year",
     "Young people not in school and not working (% ages 16-24)",
@@ -108,5 +108,6 @@
   ],
   "featured_variable": [],
   "preferred_citation": null,
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 23,
-    "to_fill": 26,
+    "filled": 24,
+    "to_fill": 27,
     "filled_pct": 88,
     "progress_class": "warning"
   },
@@ -1443,5 +1443,6 @@
     "Low-income and low-access tracts at 1 mile for urban areas and 10 miles for rural areas; Low-income and low-access tracts at 1/2 mile for urban areas and 10 miles for rural areas; Low-income and low-access tracts at 1 mile for urban areas and 20 miles for rural areas; Tracts with low vehicle access and low income at 20 miles in rural areas."
   ],
   "preferred_citation": "Economic Research Service (ERS), U.S. Department of Agriculture (USDA). Food Access Research Atlas, https://www.ers.usda.gov/data-products/food-access-research-atlas/",
-  "data_usage_notes": "Estimates in the Atlas for 2019 are based on a 2019 list of supermarkets, the 2010 Decennial Census, and the 2014-18 American Community Survey (ACS). The estimates for 2015 are based on a 2015 list of supermarkets, the 2010 Decennial Census, and the 2010-14 ACS."
+  "data_usage_notes": "Estimates in the Atlas for 2019 are based on a 2019 list of supermarkets, the 2010 Decennial Census, and the 2014-18 American Community Survey (ACS). The estimates for 2015 are based on a 2015 list of supermarkets, the 2010 Decennial Census, and the 2010-14 ACS.",
+  "contrubution_source": "manager"
 }

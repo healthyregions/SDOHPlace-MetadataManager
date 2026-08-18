@@ -1,8 +1,8 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 23,
-    "to_fill": 26,
+    "filled": 24,
+    "to_fill": 27,
     "filled_pct": 88,
     "progress_class": "warning"
   },
@@ -185,7 +185,7 @@
     "Median household income of all households",
     "Percentage of individuals living in households with incomes below 100% of the federal poverty limit, reversed",
     "Percentage of households receiving cash public assistance or Food Stamps/Supplemental Nutrition Assistance Program, reversed",
-    "Percentage of individuals with master\u2019s, professional or doctoral degrees",
+    "Percentage of individuals with master’s, professional or doctoral degrees",
     "Percentage of households with incomes at or above $125,000",
     "Percentage of individuals without a high school degree, reversed",
     "Percentage of households with incomes below $20,000, reversed",
@@ -203,5 +203,6 @@
     "Child Opportunity Index"
   ],
   "preferred_citation": "Diversity Data Kids. (n.d.). Child opportunity index. The Institute for Child, Youth, and Family Policy. Retrieved [Date], from https://www.diversitydatakids.org/child-opportunity-index",
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }

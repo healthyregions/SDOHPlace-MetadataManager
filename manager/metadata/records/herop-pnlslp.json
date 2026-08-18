@@ -1,9 +1,9 @@
 {
   "_meta": {
     "schema": "sdohplace",
-    "filled": 19,
-    "to_fill": 26,
-    "filled_pct": 73,
+    "filled": 20,
+    "to_fill": 27,
+    "filled_pct": 74,
     "progress_class": "danger"
   },
   "metadata_version": "SDOH PlaceProject",
@@ -167,5 +167,6 @@
     "SRD Score"
   ],
   "preferred_citation": "Debarchana Ghosh, Sabina Bhandari, and Cheryl Knott. A Measure for Place-Based Structural Racism and Discrimination Over Time: Version 1.0 SRD Index. 2025.",
-  "data_usage_notes": null
+  "data_usage_notes": null,
+  "contrubution_source": "manager"
 }
