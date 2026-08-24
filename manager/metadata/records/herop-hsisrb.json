@@ -115,7 +115,8 @@
   "wxs_indentifier": null,
   "id": "herop-hsisrb",
   "identifier": [],
-  "modified": "2026-01-06T20:12:27Z",
+  "modified": "2026-08-21T22:47:53Z",
+  "contrubution_source": "manager",
   "suppressed": false,
   "spatial_resolution": [
     "County",
@@ -339,7 +340,7 @@
     "African American South",
     "Hypersegregated Cities",
     "Native American & Tribal Lands",
-    "Percent Persons aged 25 years and over with a bachelor’s degree as their highest level of education",
+    "Percent Persons aged 25 years and over with a bachelor\u2019s degree as their highest level of education",
     "Percent Population aged 25 years and over whose highest educational attainment is a high school diploma (or equivalent)",
     "Percent Population aged 25 years and over with less than a high school diploma",
     "Proportion of the population aged 5+ who speak a language other than English at home but are proficient in English",
@@ -429,6 +430,5 @@
   ],
   "featured_variable": [],
   "preferred_citation": "Adam Cox, Ashlynn Wimer, Sara Lambert, Susan Paykin, Dylan Halpern, Qinyun Lin, Moksha Menghaney, Angela Li, Rachel Vigil, Margot Bolanos Gamez, Alexa Jin, Ally Muszynski, and Marynia Kolak. (2024). healthyregions/oeps: Opioid Environment Policy Scan (OEPS) Data Warehouse (v2.0). Zenodo. https://doi.org/10.5281/zenodo.5842465",
-  "data_usage_notes": null,
-  "contrubution_source": "manager"
+  "data_usage_notes": null
 }
