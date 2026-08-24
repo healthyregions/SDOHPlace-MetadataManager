@@ -35,11 +35,7 @@
     "Raster data"
   ],
   "subject": [
-    "Natural Environment",
-    "Food Environment",
-    "Greenspaces",
-    "Health and Healthcare",
-    "Neighborhood and Built Environment"
+    "Greenspaces"
   ],
   "theme": [
     "Land Cover"
@@ -90,7 +86,8 @@
   "wxs_indentifier": null,
   "id": "herop-eflmqc",
   "identifier": [],
-  "modified": "2026-01-08T16:12:16Z",
+  "modified": "2026-08-21T20:27:52Z",
+  "contrubution_source": "manager",
   "suppressed": false,
   "spatial_resolution": [
     "City",
@@ -129,6 +126,5 @@
     "NDVI"
   ],
   "preferred_citation": "NASA LP DAAC. (2017). MODIS MCD43A4.006 Nadir BRDF-Adjusted Reflectance (NBAR) [Dataset]. NASA EOSDIS Land Processes DAAC. https://doi.org/10.5067/MODIS/MCD43A4.006",
-  "data_usage_notes": null,
-  "contrubution_source": "manager"
+  "data_usage_notes": null
 }
