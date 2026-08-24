@@ -7,10 +7,51 @@
 <h2 class="subtitle">Actions</h2>
 <div class="buttons are-small">
     <a href="{{ url_for('manager.create_record')}}" class="button">Create New Record</a>
-    <form style="width:100%" action="{{ url_for('manager.handle_solr', id='reindex-all') }}" method="post">
-        <button class="button" style="width:100%"  name="index-btn" value="index" title="Clean and recreate the entire Solr index from current records">Refresh Solr Index</button>
+    {% if is_admin_user() %}
+    <form style="width:100%" action="{{ url_for('manager.handle_solr', id='reindex-all') }}" method="post" id="reindex-all-form">
+        <button class="button" style="width:100%" type="button" id="reindex-all-btn" title="Clean and recreate the entire Solr index ({{ solr.core_prod }}) from current records">Refresh Solr Index</button>
     </form>
+    {% else %}
+    <button class="button" style="width:100%" disabled title="Only admin users can refresh the production index">Refresh Solr Index (admin only)</button>
+    {% endif %}
 </div>
+
+{% if is_admin_user() %}
+<div id="reindex-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Confirm Full Reindex</p>
+            <button class="delete" aria-label="close" onclick="closeReindexModal()"></button>
+        </header>
+        <section class="modal-card-body">
+            <p>This clears the entire <strong>{{ solr.core_prod }}</strong> index and rebuilds it from all current records.</p>
+            <p>Search results will be unavailable while the rebuild runs.</p>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-danger" id="confirm-reindex">Yes, Refresh Index</button>
+            <button class="button" onclick="closeReindexModal()">Cancel</button>
+        </footer>
+    </div>
+</div>
+
+<script>
+document.getElementById('reindex-all-btn').addEventListener('click', function() {
+    document.getElementById('reindex-modal').classList.add('is-active');
+});
+
+document.getElementById('confirm-reindex').addEventListener('click', function() {
+    this.classList.add('is-loading');
+    document.getElementById('reindex-all-form').submit();
+});
+
+function closeReindexModal() {
+    document.getElementById('reindex-modal').classList.remove('is-active');
+}
+
+document.querySelector('#reindex-modal .modal-background').addEventListener('click', closeReindexModal);
+</script>
+{% endif %}
 {% endif %}
 {% endblock %}
 
