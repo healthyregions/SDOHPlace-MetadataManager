@@ -22,7 +22,7 @@
             Index — Dev
         </button>
     </div>
-    {% if user.name == "admin" %}
+    {% if is_admin_user() %}
     <div class="control">
         <button class="button is-warning is-small index-btn"
                 data-env="prod"
