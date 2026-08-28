@@ -13,6 +13,72 @@
 {% endblock %}
 
 {% block main_content %}
+{% if create_new %}
+<div class="box">
+    <h2 class="subtitle" style="margin-bottom:0.5rem;">Step 1: Generate geospatial metadata</h2>
+    <p class="help" style="margin-bottom:0.75rem;">
+        Upload the data CSV first. The spatial pipeline derives geometry, bounding box,
+        centroid, coverage, and highlight IDs and fills them into the form below,
+        so you do not have to hand-fill them before completing the rest of the record.
+    </p>
+    <form id="spatial-form"
+          hx-post="{{ url_for('manager.generate_spatial', id=record.id) }}"
+          hx-encoding="multipart/form-data"
+          hx-target="#spatial-result"
+          hx-swap="innerHTML">
+        <div class="field is-grouped is-grouped-multiline">
+            {# Geo uploads (shapefile zip / GeoJSON) hidden until the Lambda can derive
+               highlight_ids + spatial_coverage for them; re-add an upload_kind radio then #}
+            <div class="control">
+                <div class="file is-small has-name">
+                    <label class="file-label">
+                        <input class="file-input" type="file" name="spatial_file" accept=".csv">
+                        <span class="file-cta"><span class="file-label">Choose a CSV…</span></span>
+                        <span class="file-name" id="spatial-file-name">No file selected</span>
+                    </label>
+                </div>
+            </div>
+            <div class="control spatial-csv-only">
+                <div class="select is-small">
+                    <select name="boundary_year" title="Boundary year">
+                        <option value="2018">2018</option>
+                        <option value="2010">2010</option>
+                    </select>
+                </div>
+            </div>
+            <div class="control spatial-csv-only">
+                <div class="select is-small">
+                    <select name="spatial_level" title="Spatial level">
+                        {% for label in spatial_levels %}
+                        <option value="{{ label }}">{{ label }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="control spatial-csv-only">
+                <input class="input is-small" type="text" name="geo_id_column" value="GEOID"
+                       title="Geographic ID column" placeholder="Auto-detected if blank">
+            </div>
+            <div class="control">
+                <button class="button is-primary is-small" type="submit">Generate geospatial metadata</button>
+            </div>
+        </div>
+    </form>
+    <div id="spatial-result"></div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const spatialForm = document.getElementById('spatial-form');
+    spatialForm.querySelector('.file-input').addEventListener('change', function() {
+        document.getElementById('spatial-file-name').textContent =
+            this.files.length ? this.files[0].name : 'No file selected';
+    });
+    const spatialBtn = spatialForm.querySelector('button[type="submit"]');
+    spatialForm.addEventListener('htmx:beforeRequest', () => spatialBtn.classList.add('is-loading'));
+    spatialForm.addEventListener('htmx:afterRequest', () => spatialBtn.classList.remove('is-loading'));
+});
+</script>
+{% endif %}
 <form action="{{ url_for('manager.handle_record', id=record.id) }}?action=save" method="post" id="edit-form">
         {% include 'crud/_record_fields.html' %}
         <input type="submit" id="validate-edit-form" class="hidden"
