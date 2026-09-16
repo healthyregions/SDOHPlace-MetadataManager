@@ -1,7 +1,25 @@
 import os
 import requests
 
+SPATIAL_LEVEL_MAP = {
+    "State": "state",
+    "County": "county",
+    "Census Tract": "tract",
+    "Census Block Group": "bg",
+    "Zip Code Tabulation Area (ZCTA)": "zcta",
+}
+
+BOUNDARY_YEARS = ("2018", "2010")
+
+UPLOAD_KINDS = {
+    "csv": (".csv",),
+    "geo": (".zip", ".geojson", ".json"),
+}
+
 class IntakeApiError(Exception):
+    pass
+
+class SpatialPipelineError(IntakeApiError):
     pass
 
 class IntakeClient:
@@ -9,6 +27,7 @@ class IntakeClient:
         self.base_url = os.getenv("INTAKE_API_BASE_URL", "").rstrip("/")
         self.token = os.getenv("INTAKE_API_TOKEN", "")
         self.timeout = int(os.getenv("INTAKE_API_TIMEOUT", "10"))
+        self.upload_timeout = int(os.getenv("INTAKE_UPLOAD_TIMEOUT", "300"))
 
     def _headers(self):
         headers = {"Content-Type": "application/json"}
@@ -121,6 +140,53 @@ class IntakeClient:
         return self._request(
             "POST",
             f"/submissions/{submission_id}/record-deleted",
+        )
+
+    def spatial_upload_url(self, record_id, filename):
+        return self._request(
+            "POST",
+            "/spatial/upload-url",
+            json_payload={"record_id": record_id, "filename": filename},
+        )
+
+    def spatial_upload_file(self, upload_url, fileobj, content_type="text/csv"):
+        try:
+            response = requests.put(
+                upload_url,
+                data=fileobj,
+                headers={"Content-Type": content_type},
+                timeout=self.upload_timeout,
+            )
+        except requests.RequestException as exc:
+            raise SpatialPipelineError(f"S3 upload failed: {exc}") from exc
+        if not response.ok:
+            raise SpatialPipelineError(
+                f"S3 upload failed: {response.status_code} {response.reason}"
+            )
+
+    def spatial_start(
+        self,
+        record_id,
+        s3_key,
+        boundary_year,
+        spatial_level,
+        geo_id_column=None,
+    ):
+        body = {
+            "record_id": record_id,
+            "s3_key": s3_key,
+            "boundary_year": boundary_year,
+            "spatial_level": spatial_level,
+        }
+        if geo_id_column:
+            body["geo_id_column"] = geo_id_column
+        return self._request("POST", "/spatial/start", json_payload=body)
+
+    def spatial_status(self, record_id, s3_key):
+        return self._request(
+            "GET",
+            "/spatial/status",
+            params={"record_id": record_id, "key": s3_key},
         )
 
     def find_submission_by_record_id(self, record_id):

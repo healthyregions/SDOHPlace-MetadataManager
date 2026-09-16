@@ -20,16 +20,15 @@ from markupsafe import escape
 from werkzeug.exceptions import NotFound, Unauthorized
 from werkzeug.utils import secure_filename
 from manager.blueprints.auth import is_admin_user
-from manager.intake_client import IntakeApiError, IntakeClient
-from manager.registry import Registry, Record
-from manager.solr import Solr
-from manager.spatial_client import (
+from manager.intake_client import (
     BOUNDARY_YEARS,
     SPATIAL_LEVEL_MAP,
     UPLOAD_KINDS,
-    SpatialClient,
-    SpatialPipelineError,
+    IntakeApiError,
+    IntakeClient,
 )
+from manager.registry import Registry, Record
+from manager.solr import Solr
 
 load_dotenv()
 
@@ -261,14 +260,15 @@ def _spatial_polling_fragment(record_id, s3_key, attempt):
         "</div>"
     )
 
+def _spatial_failure_fragment(status):
+    code = escape(str(status.get("error_code", "unknown")))
+    message = escape(str(status.get("message", "")))
+    return (
+        f'<div class="notification is-danger">'
+        f"<strong>Pipeline failed ({code}).</strong> {message}</div>"
+    )
+
 def _spatial_result_fragment(result):
-    if not result.get("ok"):
-        code = escape(str(result.get("error_code", "unknown")))
-        message = escape(str(result.get("message", "")))
-        return (
-            f'<div class="notification is-danger">'
-            f"<strong>Pipeline failed ({code}).</strong> {message}</div>"
-        )
     geometry = str(result.get("geometry") or "")
     geometry_preview = geometry[:120] + ("…" if len(geometry) > 120 else "")
     highlight_ids = result.get("highlight_ids") or []
@@ -339,20 +339,19 @@ def generate_spatial(id):
     if spatial_level_label not in SPATIAL_LEVEL_MAP:
         return _spatial_error("Choose a spatial level for the CSV join.")
 
-    client = SpatialClient()
-    s3_key = client.new_job_key(id, filename)
-    payload = client.build_payload(
-        record_id=id,
-        s3_key=s3_key,
-        upload_kind=upload_kind,
-        boundary_year=boundary_year,
-        spatial_level=SPATIAL_LEVEL_MAP.get(spatial_level_label),
-        geo_id_column=geo_id_column,
-    )
+    client = IntakeClient()
     try:
-        client.upload_fileobj(upload, s3_key)
-        client.invoke(payload)
-    except SpatialPipelineError as exc:
+        job = client.spatial_upload_url(record_id=id, filename=filename)
+        s3_key = job["s3_key"]
+        client.spatial_upload_file(job["upload_url"], upload, job.get("content_type", "text/csv"))
+        client.spatial_start(
+            record_id=id,
+            s3_key=s3_key,
+            boundary_year=boundary_year,
+            spatial_level=spatial_level_label,
+            geo_id_column=geo_id_column,
+        )
+    except (IntakeApiError, KeyError) as exc:
         current_app.logger.error(f"spatial pipeline start failed for {id}: {exc}")
         return _spatial_error(f"Could not start the spatial pipeline: {exc}")
 
@@ -369,19 +368,20 @@ def generate_spatial_status(id):
         attempt = int(request.args.get("attempt", "1"))
     except ValueError:
         attempt = 1
-    client = SpatialClient()
+    client = IntakeClient()
     try:
-        result = client.fetch_result(client.result_key(s3_key))
-    except SpatialPipelineError as exc:
+        status = client.spatial_status(record_id=id, s3_key=s3_key)
+    except IntakeApiError as exc:
         current_app.logger.error(f"spatial pipeline poll failed for {id}: {exc}")
         return _spatial_error(f"Could not check the pipeline result: {exc}")
-    if result is None:
+    if status.get("status") == "failed":
+        return _spatial_failure_fragment(status)
+    if status.get("status") != "ready":
         if attempt >= SPATIAL_POLL_MAX_ATTEMPTS:
             return (
                 '<div class="notification is-warning">'
                 "The pipeline is still running after 15 minutes (the Lambda maximum). "
-                f"Check s3://{escape(client.bucket)}/{escape(client.result_key(s3_key))} "
-                "later, or re-run Generate.</div>"
+                "Re-run Generate, or check with the team if this keeps happening.</div>"
             )
         return _spatial_polling_fragment(id, s3_key, attempt + 1)
-    return _spatial_result_fragment(result)
+    return _spatial_result_fragment(status.get("result") or {})

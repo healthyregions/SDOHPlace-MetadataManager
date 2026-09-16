@@ -13,6 +13,5 @@ setup(
         "python-dotenv",
         "geopandas",
         "gunicorn",
-        "boto3",
     ],
 )
