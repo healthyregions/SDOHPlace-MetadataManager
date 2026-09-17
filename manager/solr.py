@@ -1,3 +1,4 @@
+import json
 import os
 import pysolr
 
@@ -41,9 +42,30 @@ class Solr:
         current_app.logger.debug(f"Solr add document: {doc['id']}")
         return self.solr.add([doc])
 
-    def multi_add(self, arr):
+    def multi_add(self, arr, max_batch_bytes=500_000, max_batch_docs=25):
         current_app.logger.debug(f"Solr adding {len(arr)} documents.")
-        return self.solr.add(arr)
+        results = []
+        batch = []
+        batch_bytes = 0
+        for doc in arr:
+            doc_bytes = len(json.dumps(doc, default=str).encode("utf-8"))
+            too_many = len(batch) >= max_batch_docs
+            too_large = batch and (batch_bytes + doc_bytes) > max_batch_bytes
+            if too_many or too_large:
+                current_app.logger.debug(
+                    f"Solr adding batch of {len(batch)} documents ({batch_bytes} bytes)"
+                )
+                results.append(self.solr.add(batch))
+                batch = []
+                batch_bytes = 0
+            batch.append(doc)
+            batch_bytes += doc_bytes
+        if batch:
+            current_app.logger.debug(
+                f"Solr adding final batch of {len(batch)} documents ({batch_bytes} bytes)"
+            )
+            results.append(self.solr.add(batch))
+        return results
 
     def search(self, query, filters=None):
         return self.solr.search(query, **filters)

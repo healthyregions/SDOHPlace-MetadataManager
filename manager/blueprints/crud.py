@@ -1,5 +1,6 @@
 import json
 import logging
+import os
 from dotenv import load_dotenv
 from flask import (
     Blueprint,
@@ -24,20 +25,51 @@ from manager.intake_client import (
     BOUNDARY_YEARS,
     SPATIAL_LEVEL_MAP,
     UPLOAD_KINDS,
+    MAX_UPLOAD_BYTES,
     IntakeApiError,
     IntakeClient,
+    format_bytes,
+    upload_kind_for_filename,
 )
 from manager.registry import Registry, Record
 from manager.solr import Solr
 
 load_dotenv()
 
+MODE = os.getenv("MODE", "prod").lower()
+
 crud = Blueprint("manager", __name__)
 
 SPATIAL_POLL_SECONDS = 3
 SPATIAL_POLL_MAX_ATTEMPTS = 300  # 15 minutes
 
-def _notify_record_deleted(record_id, submission_id=None):
+PUBLISHED_STATUSES = ("published",)
+
+def _notify_record_indexed(record_id, environment):
+    try:
+        client = IntakeClient()
+        submission = client.find_submission_by_record_id(record_id)
+        if not submission:
+            return False
+        if submission.get("status") in PUBLISHED_STATUSES:
+            return False
+        submission_id = submission.get("id") or submission.get("submission_id")
+        if not submission_id:
+            return False
+        client.mark_published(
+            submission_id,
+            record_id=record_id,
+            index_env=environment,
+            notify=True,
+        )
+        return True
+    except IntakeApiError as exc:
+        current_app.logger.warning(
+            "Could not notify submitter about indexed record %s: %s", record_id, exc
+        )
+        return False
+
+def _notify_record_deleted(record_id, submission_id=None, environment=None):
     try:
         client = IntakeClient()
         if not submission_id:
@@ -46,7 +78,7 @@ def _notify_record_deleted(record_id, submission_id=None):
                 return
             submission_id = submission.get("id") or submission.get("submission_id")
         if submission_id:
-            client.mark_record_deleted(submission_id)
+            client.mark_record_deleted(submission_id, index_env=environment)
     except IntakeApiError as exc:
         current_app.logger.warning(
             "Could not notify submitter about deleted record %s: %s", record_id, exc
@@ -195,8 +227,30 @@ def handle_record(id):
                 raise NotFound
             submission_id = (record.meta or {}).get("submission_id")
             record.file_path.unlink()
-            _notify_record_deleted(id, submission_id)
-            flash(f"Deleted record {id}. Refresh Solr Index to remove it from search.", "success")
+            removed_from = []
+            for environment in ("dev", "prod"):
+                if environment == "prod" and MODE == "dev":
+                    continue
+                try:
+                    Solr(environment=environment).delete(id)
+                    removed_from.append(environment)
+                except Exception as exc:
+                    current_app.logger.warning(
+                        "Could not remove record %s from the %s index: %s", id, environment, exc
+                    )
+            _notify_record_deleted(id, submission_id, environment=MODE)
+            if removed_from:
+                flash(
+                    f"Deleted record {id} and removed it from the "
+                    f"{' and '.join(removed_from)} index.",
+                    "success",
+                )
+            else:
+                flash(
+                    f"Deleted record {id}, but it could not be removed from Solr. "
+                    "Refresh the Solr Index to clear it from search.",
+                    "warning",
+                )
             return redirect(url_for("manager.index"))
         else:
             raise Unauthorized
@@ -214,7 +268,12 @@ def handle_solr(id):
     if environment == "prod" and not is_admin_user():
         current_app.logger.warning(f"User {current_user.name} attempted to index to production without admin privileges")
         return f'<div class="notification is-danger">Only admin users can index to production. Please use dev instead.</div>'
-    
+    if environment == "prod" and MODE == "dev":
+        current_app.logger.warning("Blocked production indexing while the manager is in dev mode")
+        return (
+            '<div class="notification is-danger">This manager is running in dev mode, '
+            'so indexing to production is disabled. Set MODE=prod to enable it.</div>'
+        )
     s = Solr(environment=environment)
     
     if request.method == "POST":
@@ -226,6 +285,15 @@ def handle_solr(id):
             registry = Registry()
             records = [i.to_solr() for i in registry.records]
             s.multi_add(records)
+            notified = 0
+            for record in registry.records:
+                record_id = record.data.get("id")
+                if record_id and _notify_record_indexed(record_id, environment):
+                    notified += 1
+            if notified:
+                current_app.logger.info(
+                    "notified %s contributor(s) about newly published records", notified
+                )
             return redirect("/")
         else:
             current_app.logger.info(f"indexing {id} to {environment}")
@@ -238,7 +306,9 @@ def handle_solr(id):
                 current_app.logger.info(f"record {id} indexed successfully to {environment}")
                 current_app.logger.debug(result["document"])
                 env_label = "dev" if environment == "dev" else "production"
-                return f'<div class="notification is-success">{record.data["title"]} indexed to {env_label} successfully</div>'
+                notified = _notify_record_indexed(id, environment)
+                notice = " Contributor notified." if notified else ""
+                return f'<div class="notification is-success">{record.data["title"]} indexed to {env_label} successfully.{notice}</div>'
             else:
                 current_app.logger.error(result["error"])
                 return f'<div class="notification is-danger">Error while indexing record: {result["error"]}</div>'
@@ -327,26 +397,41 @@ def generate_spatial(id):
     if not filename:
         return _spatial_error("That file name cannot be used. Rename the file and try again.")
     
-    upload_kind = "csv"
-    if not filename.lower().endswith(UPLOAD_KINDS[upload_kind]):
-        return _spatial_error("Upload a .csv file.")
+    upload_kind = upload_kind_for_filename(filename)
+    if not upload_kind:
+        return _spatial_error(
+            "Upload a .csv, a zipped shapefile, .geojson, or .gpkg file."
+        )
+    upload.stream.seek(0, os.SEEK_END)
+    file_size = upload.stream.tell()
+    upload.stream.seek(0)
+    if file_size > MAX_UPLOAD_BYTES:
+        return _spatial_error(
+            f"That file is {format_bytes(file_size)}, over the "
+            f"{format_bytes(MAX_UPLOAD_BYTES)} limit. Remove columns or features that are not "
+            "needed, or load it directly on the server."
+        )
 
     boundary_year = request.form.get("boundary_year", "")
     spatial_level_label = request.form.get("spatial_level", "")
     geo_id_column = request.form.get("geo_id_column", "").strip()
-    if boundary_year not in BOUNDARY_YEARS:
-        return _spatial_error("Choose a boundary year (2018 or 2010).")
-    if spatial_level_label not in SPATIAL_LEVEL_MAP:
-        return _spatial_error("Choose a spatial level for the CSV join.")
+    if upload_kind == "csv":
+        if boundary_year not in BOUNDARY_YEARS:
+            return _spatial_error("Choose a boundary year (2018 or 2010).")
+        if spatial_level_label not in SPATIAL_LEVEL_MAP:
+            return _spatial_error("Choose a spatial level for the CSV join.")
 
     client = IntakeClient()
     try:
-        job = client.spatial_upload_url(record_id=id, filename=filename)
+        job = client.spatial_upload_url(record_id=id, filename=filename, file_size=file_size)
         s3_key = job["s3_key"]
-        client.spatial_upload_file(job["upload_url"], upload, job.get("content_type", "text/csv"))
+        client.spatial_upload_file(
+            job["upload_url"], upload, job.get("content_type", "application/octet-stream")
+        )
         client.spatial_start(
             record_id=id,
             s3_key=s3_key,
+            upload_kind=job.get("upload_kind", upload_kind),
             boundary_year=boundary_year,
             spatial_level=spatial_level_label,
             geo_id_column=geo_id_column,
@@ -380,8 +465,10 @@ def generate_spatial_status(id):
         if attempt >= SPATIAL_POLL_MAX_ATTEMPTS:
             return (
                 '<div class="notification is-warning">'
-                "The pipeline is still running after 15 minutes (the Lambda maximum). "
-                "Re-run Generate, or check with the team if this keeps happening.</div>"
+                "<strong>This is taking longer than 15 minutes, so we stopped waiting.</strong> "
+                "Nothing is lost: the upload was saved and the job may still finish in the "
+                "background. Wait a few minutes and click Generate again to pick up the result, "
+                "or check with the team if a large file never completes.</div>"
             )
         return _spatial_polling_fragment(id, s3_key, attempt + 1)
     return _spatial_result_fragment(status.get("result") or {})

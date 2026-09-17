@@ -325,12 +325,10 @@ def add_approved_records():
                 "reviewer": reviewer,
             }
             record.save(history=True, history_event=event)
-            client.decide_submission(
+            client.update_submission(
                 submission_id=submission_id,
-                decision="approve",
+                payload_json=record.to_json(),
                 record_id=record_id,
-                reviewed_by=reviewer,
-                reviewed_payload=record.to_json(),
             )
             _save_review_log(
                 submission_id=submission_id,
@@ -339,20 +337,16 @@ def add_approved_records():
                 record_id=record_id,
                 payload_json=json.dumps(record.to_json()),
             )
-            try:
-                client.mark_published(submission_id, record_id=record_id)
-            except IntakeApiError as exc:
-                current_app.logger.warning(
-                    "Could not mark submission %s as published: %s",
-                    submission_id,
-                    exc,
-                )
             created += 1
     except IntakeApiError as exc:
         flash(f"Intake API error: {exc}", "danger")
         return redirect(url_for("submissions.list_submissions", status="approved"))
     if created:
-        flash(f"Added {created} approved record{'s' if created != 1 else ''}", "success")
+        flash(
+            f"Added {created} approved record{'s' if created != 1 else ''}. "
+            "Index them to Solr to publish them and notify the contributors.",
+            "success",
+        )
     if skipped:
         flash(f"Skipped {skipped} approved record{'s' if skipped != 1 else ''} that already exist", "warning")
     for error in failed:

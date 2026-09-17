@@ -42,6 +42,23 @@ INTAKE_API_TIMEOUT=10
 
 `INTAKE_API_TOKEN` must match the intake API exactly; a mismatch returns 401 on every call.
 
+### Publishing and dev mode
+
+Adding an approved submission as a record does not publish it. The submission
+becomes `published`, and the contributor is emailed that their dataset is live,
+only when the record is indexed to Solr, from either the per-record Index button
+or a full Refresh. That check is idempotent, so a repeated reindex emails nobody
+twice, and records authored directly here have no submission and email no one.
+
+Deleting a record removes it from the Solr cores as well as from disk, sets the
+submission to `unpublished`, and emails the contributor.
+
+`MODE` decides which core this app treats as active. While `MODE=dev`, indexing
+to production is disabled in the UI and refused by the server, so a local
+instance pointed at a dev core cannot write to the live index. Emails still send
+in dev mode, with `[DEV ONLY]` prefixed to the subject line for demos and
+testing.
+
 When "Add Records" creates a record from an approved submission, the record's `_meta.submission_id` is set to the originating submission. Deleting that record uses this to notify the submitter without scanning every submission, so preserve `_meta.submission_id` in any code that rewrites record JSON.
 
 ## `manager` Flask App

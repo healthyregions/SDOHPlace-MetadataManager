@@ -17,9 +17,14 @@
 <div class="box">
     <h2 class="subtitle" style="margin-bottom:0.5rem;">Step 1: Generate geospatial metadata</h2>
     <p class="help" style="margin-bottom:0.75rem;">
-        Upload the data CSV first. The spatial pipeline derives geometry, bounding box,
+        Upload the data file first. The spatial pipeline derives geometry, bounding box,
         centroid, coverage, and highlight IDs and fills them into the form below,
         so you do not have to hand-fill them before completing the rest of the record.
+        Accepts a CSV, a zipped shapefile (.shp, .shx, .dbf and .prj together in one .zip),
+        GeoJSON (named .geojson), or GeoPackage, up to 500 MB. The boundary year and spatial
+        level below apply to CSV uploads only; spatial files carry their own geometry.
+        Most files finish in under a minute; large ones can take several, and polling stops
+        after 15 minutes.
     </p>
     <form id="spatial-form"
           hx-post="{{ url_for('manager.generate_spatial', id=record.id) }}"
@@ -27,13 +32,12 @@
           hx-target="#spatial-result"
           hx-swap="innerHTML">
         <div class="field is-grouped is-grouped-multiline">
-            {# Geo uploads (shapefile zip / GeoJSON) hidden until the Lambda can derive
-               highlight_ids + spatial_coverage for them; re-add an upload_kind radio then #}
             <div class="control">
                 <div class="file is-small has-name">
                     <label class="file-label">
-                        <input class="file-input" type="file" name="spatial_file" accept=".csv">
-                        <span class="file-cta"><span class="file-label">Choose a CSV…</span></span>
+                        <input class="file-input" type="file" name="spatial_file"
+                               accept=".csv,.zip,.geojson,.gpkg">
+                        <span class="file-cta"><span class="file-label">Choose a file…</span></span>
                         <span class="file-name" id="spatial-file-name">No file selected</span>
                     </label>
                 </div>
@@ -69,10 +73,17 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const spatialForm = document.getElementById('spatial-form');
+    const csvOnly = spatialForm.querySelectorAll('.spatial-csv-only');
+    function syncCsvOnlyFields(filename) {
+        const isCsv = filename.toLowerCase().endsWith('.csv');
+        csvOnly.forEach((el) => { el.style.display = isCsv ? '' : 'none'; });
+    }
     spatialForm.querySelector('.file-input').addEventListener('change', function() {
-        document.getElementById('spatial-file-name').textContent =
-            this.files.length ? this.files[0].name : 'No file selected';
+        const name = this.files.length ? this.files[0].name : '';
+        document.getElementById('spatial-file-name').textContent = name || 'No file selected';
+        syncCsvOnlyFields(name);
     });
+    syncCsvOnlyFields('.csv');
     const spatialBtn = spatialForm.querySelector('button[type="submit"]');
     spatialForm.addEventListener('htmx:beforeRequest', () => spatialBtn.classList.add('is-loading'));
     spatialForm.addEventListener('htmx:afterRequest', () => spatialBtn.classList.remove('is-loading'));
