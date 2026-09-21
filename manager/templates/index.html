@@ -8,8 +8,8 @@
 <div class="buttons are-small">
     <a href="{{ url_for('manager.create_record')}}" class="button">Create New Record</a>
     {% if is_admin_user() %}
-    <form style="width:100%" action="{{ url_for('manager.handle_solr', id='reindex-all') }}" method="post" id="reindex-all-form">
-        <button class="button" style="width:100%" type="button" id="reindex-all-btn" title="Clean and recreate the entire Solr index ({{ solr.core_prod }}) from current records">Refresh Solr Index</button>
+    <form style="width:100%" action="{{ url_for('manager.handle_solr', id='reindex-all', env=solr.active_env) }}" method="post" id="reindex-all-form">
+        <button class="button" style="width:100%" type="button" id="reindex-all-btn" title="Clean and recreate the {{ solr.active_env }} Solr index ({{ solr.active_core }}) from current records">Refresh Solr Index ({{ solr.active_env }})</button>
     </form>
     {% else %}
     <button class="button" style="width:100%" disabled title="Only admin users can refresh the production index">Refresh Solr Index (admin only)</button>
@@ -25,8 +25,9 @@
             <button class="delete" aria-label="close" onclick="closeReindexModal()"></button>
         </header>
         <section class="modal-card-body">
-            <p>This clears the entire <strong>{{ solr.core_prod }}</strong> index and rebuilds it from all current records.</p>
+            <p>This clears the entire <strong>{{ solr.active_core }}</strong> ({{ solr.active_env }}) index and rebuilds it from all current records.</p>
             <p>Search results will be unavailable while the rebuild runs.</p>
+            <p>Contributors whose records become searchable for the first time are emailed.</p>
         </section>
         <footer class="modal-card-foot">
             <button class="button is-danger" id="confirm-reindex">Yes, Refresh Index</button>

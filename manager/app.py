@@ -9,6 +9,7 @@ from manager.blueprints.crud import crud
 from manager.blueprints.auth import auth, is_admin_user, is_keycloak_configured
 from manager.blueprints.submissions import submissions
 from manager.models import db, User
+from manager.intake_client import MAX_UPLOAD_BYTES, format_bytes
 from manager.commands import (
     user_grp,
     registry_grp,
@@ -59,11 +60,19 @@ app.cli.add_command(registry_grp)
 app.cli.add_command(coverage_grp)
 
 app.config["DEBUG"] = True
+app.config["MAX_CONTENT_LENGTH"] = MAX_UPLOAD_BYTES
 
 app.register_blueprint(auth)
 app.register_blueprint(crud)
 app.register_blueprint(submissions)
 
+@app.errorhandler(413)
+def handle_upload_too_large(error):
+    message = (
+        f"That file is over the {format_bytes(MAX_UPLOAD_BYTES)} upload limit. "
+        "Remove columns or features that are not needed, or load it directly on the server."
+    )
+    return f'<div class="notification is-danger">{message}</div>', 413
 
 @app.context_processor
 def get_context():
