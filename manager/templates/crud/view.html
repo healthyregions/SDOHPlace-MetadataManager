@@ -22,7 +22,14 @@
             Index — Dev
         </button>
     </div>
-    {% if is_admin_user() %}
+    {% if solr.active_env != 'prod' %}
+    <div class="control">
+        <button class="button is-warning is-small" disabled
+                title="This manager is running in dev mode. Set MODE=prod to index to production.">
+            Index — Prod (dev mode)
+        </button>
+    </div>
+    {% elif is_admin_user() %}
     <div class="control">
         <button class="button is-warning is-small index-btn"
                 data-env="prod"
