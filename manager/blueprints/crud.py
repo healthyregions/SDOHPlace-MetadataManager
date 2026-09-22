@@ -167,6 +167,7 @@ def handle_record(id):
                     relations_choices=relations_choices,
                     link_list=link_list,
                     display_groups=record.schema.display_groups,
+                    spatial_levels=list(SPATIAL_LEVEL_MAP),
                 )
             else:
                 return render_template(

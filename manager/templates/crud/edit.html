@@ -13,9 +13,17 @@
 {% endblock %}
 
 {% block main_content %}
-{% if create_new %}
 <div class="box">
-    <h2 class="subtitle" style="margin-bottom:0.5rem;">Step 1: Generate geospatial metadata</h2>
+    <h2 class="subtitle" style="margin-bottom:0.5rem;">
+        {% if create_new %}Step 1: Generate geospatial metadata{% else %}Regenerate geospatial metadata{% endif %}
+    </h2>
+    {% if not create_new %}
+    <div class="notification is-warning is-light" style="margin-bottom:0.75rem;">
+        <strong>This record already has values.</strong> Generating will overwrite geometry,
+        bounding box, centroid, coverage, and highlight IDs in the form below. Nothing is saved
+        until you Validate and Save, so you can cancel to keep the current values.
+    </div>
+    {% endif %}
     <p class="help" style="margin-bottom:0.75rem;">
         Upload the data file first. The spatial pipeline derives geometry, bounding box,
         centroid, coverage, and highlight IDs and fills them into the form below,
@@ -89,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
     spatialForm.addEventListener('htmx:afterRequest', () => spatialBtn.classList.remove('is-loading'));
 });
 </script>
-{% endif %}
 <form action="{{ url_for('manager.handle_record', id=record.id) }}?action=save" method="post" id="edit-form">
         {% include 'crud/_record_fields.html' %}
         <input type="submit" id="validate-edit-form" class="hidden"
