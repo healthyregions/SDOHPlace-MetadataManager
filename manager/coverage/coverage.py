@@ -25,7 +25,7 @@ spatial_resolution_prefix_map = {
     },
     'bg': {
         'prefix': '150US',
-        'shp_url': 'https://oeps-geodata.s3.us-east-2.amazonaws.com/census/bg-2018-500k-shp.zip',
+        'shp_url': 'https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k-shp.zip',
         'id_length': 12,
     },
     'zcta': {
