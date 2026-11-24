@@ -10,27 +10,27 @@ import geopandas as gpd
 spatial_resolution_prefix_map = {
     'state': {
         'prefix': '040US',
-        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k-shp.zip',
+        'shp_url': 'https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k-shp.zip',
         'id_length': 2,
     },
     'county': {
         'prefix': '050US',
-        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k-shp.zip',
+        'shp_url': 'https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k-shp.zip',
         'id_length': 5,
     },
     'tract': {
         'prefix': '140US',
-        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k-shp.zip',
+        'shp_url': 'https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k-shp.zip',
         'id_length': 11,
     },
     'bg': {
         'prefix': '150US',
-        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k-shp.zip',
+        'shp_url': 'https://oeps-geodata.s3.us-east-2.amazonaws.com/census/bg-2018-500k-shp.zip',
         'id_length': 12,
     },
     'zcta': {
         'prefix': '860US',
-        'shp_url': 'https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k-shp.zip',
+        'shp_url': 'https://oeps-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k-shp.zip',
         'id_length': 5,
     },
 }
